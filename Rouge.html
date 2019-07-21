@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Rouge
+  
+    &mdash; Documentation by YARD 0.9.20
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Rouge";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (R)</a> &raquo;
+    
+    
+    <span class="title">Rouge</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Rouge
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/rouge.rb<span class="defines">,<br />
+  lib/rouge/cli.rb,<br /> lib/rouge/util.rb,<br /> lib/rouge/lexer.rb,<br /> lib/rouge/theme.rb,<br /> lib/rouge/token.rb,<br /> lib/rouge/guesser.rb,<br /> lib/rouge/version.rb,<br /> lib/rouge/lexers/c.rb,<br /> lib/rouge/lexers/d.rb,<br /> lib/rouge/lexers/q.rb,<br /> lib/rouge/lexers/r.rb,<br /> lib/rouge/formatter.rb,<br /> lib/rouge/lexers/go.rb,<br /> lib/rouge/lexers/io.rb,<br /> lib/rouge/lexers/vb.rb,<br /> lib/rouge/themes/bw.rb,<br /> lib/rouge/lexers/awk.rb,<br /> lib/rouge/lexers/bpf.rb,<br /> lib/rouge/lexers/bsl.rb,<br /> lib/rouge/lexers/coq.rb,<br /> lib/rouge/lexers/cpp.rb,<br /> lib/rouge/lexers/css.rb,<br /> lib/rouge/lexers/dot.rb,<br /> lib/rouge/lexers/elm.rb,<br /> lib/rouge/lexers/erb.rb,<br /> lib/rouge/lexers/hcl.rb,<br /> lib/rouge/lexers/ini.rb,<br /> lib/rouge/lexers/irb.rb,<br /> lib/rouge/lexers/jsp.rb,<br /> lib/rouge/lexers/jsx.rb,<br /> lib/rouge/lexers/lua.rb,<br /> lib/rouge/lexers/nim.rb,<br /> lib/rouge/lexers/nix.rb,<br /> lib/rouge/lexers/php.rb,<br /> lib/rouge/lexers/qml.rb,<br /> lib/rouge/lexers/sed.rb,<br /> lib/rouge/lexers/sml.rb,<br /> lib/rouge/lexers/sqf.rb,<br /> lib/rouge/lexers/sql.rb,<br /> lib/rouge/lexers/tap.rb,<br /> lib/rouge/lexers/tcl.rb,<br /> lib/rouge/lexers/tex.rb,<br /> lib/rouge/lexers/tsx.rb,<br /> lib/rouge/lexers/vue.rb,<br /> lib/rouge/lexers/xml.rb,<br /> lib/rouge/lexers/abap.rb,<br /> lib/rouge/lexers/biml.rb,<br /> lib/rouge/lexers/conf.rb,<br /> lib/rouge/lexers/dart.rb,<br /> lib/rouge/lexers/diff.rb,<br /> lib/rouge/lexers/glsl.rb,<br /> lib/rouge/lexers/hack.rb,<br /> lib/rouge/lexers/haml.rb,<br /> lib/rouge/lexers/html.rb,<br /> lib/rouge/lexers/http.rb,<br /> lib/rouge/lexers/java.rb,<br /> lib/rouge/lexers/json.rb,<br /> lib/rouge/lexers/llvm.rb,<br /> lib/rouge/lexers/m68k.rb,<br /> lib/rouge/lexers/make.rb,<br /> lib/rouge/lexers/mxml.rb,<br /> lib/rouge/lexers/nasm.rb,<br /> lib/rouge/lexers/perl.rb,<br /> lib/rouge/lexers/pony.rb,<br /> lib/rouge/lexers/ruby.rb,<br /> lib/rouge/lexers/rust.rb,<br /> lib/rouge/lexers/sass.rb,<br /> lib/rouge/lexers/scss.rb,<br /> lib/rouge/lexers/slim.rb,<br /> lib/rouge/lexers/toml.rb,<br /> lib/rouge/lexers/twig.rb,<br /> lib/rouge/lexers/vala.rb,<br /> lib/rouge/lexers/vhdl.rb,<br /> lib/rouge/lexers/viml.rb,<br /> lib/rouge/lexers/xojo.rb,<br /> lib/rouge/lexers/yaml.rb,<br /> lib/rouge/regex_lexer.rb,<br /> lib/rouge/lexers/cmake.rb,<br /> lib/rouge/lexers/jinja.rb,<br /> lib/rouge/lexers/julia.rb,<br /> lib/rouge/lexers/lasso.rb,<br /> lib/rouge/lexers/magik.rb,<br /> lib/rouge/lexers/mosel.rb,<br /> lib/rouge/lexers/nginx.rb,<br /> lib/rouge/lexers/ocaml.rb,<br /> lib/rouge/lexers/plist.rb,<br /> lib/rouge/lexers/praat.rb,<br /> lib/rouge/lexers/scala.rb,<br /> lib/rouge/lexers/shell.rb,<br /> lib/rouge/lexers/sieve.rb,<br /> lib/rouge/lexers/swift.rb,<br /> lib/rouge/lexers/tulip.rb,<br /> lib/rouge/lexers/xpath.rb,<br /> lib/rouge/themes/tulip.rb,<br /> lib/rouge/guessers/util.rb,<br /> lib/rouge/lexers/apache.rb,<br /> lib/rouge/lexers/ceylon.rb,<br /> lib/rouge/lexers/csharp.rb,<br /> lib/rouge/lexers/digdag.rb,<br /> lib/rouge/lexers/docker.rb,<br /> lib/rouge/lexers/eiffel.rb,<br /> lib/rouge/lexers/elixir.rb,<br /> lib/rouge/lexers/erlang.rb,<br /> lib/rouge/lexers/escape.rb,<br /> lib/rouge/lexers/factor.rb,<br /> lib/rouge/lexers/fsharp.rb,<br /> lib/rouge/lexers/gradle.rb,<br /> lib/rouge/lexers/groovy.rb,<br /> lib/rouge/lexers/hylang.rb,<br /> lib/rouge/lexers/idlang.rb,<br /> lib/rouge/lexers/kotlin.rb,<br /> lib/rouge/lexers/liquid.rb,<br /> lib/rouge/lexers/matlab.rb,<br /> lib/rouge/lexers/pascal.rb,<br /> lib/rouge/lexers/prolog.rb,<br /> lib/rouge/lexers/puppet.rb,<br /> lib/rouge/lexers/python.rb,<br /> lib/rouge/lexers/racket.rb,<br /> lib/rouge/lexers/scheme.rb,<br /> lib/rouge/lexers/smarty.rb,<br /> lib/rouge/lexers/turtle.rb,<br /> lib/rouge/lexers/wollok.rb,<br /> lib/rouge/lexers/xquery.rb,<br /> lib/rouge/text_analyzer.rb,<br /> lib/rouge/themes/base16.rb,<br /> lib/rouge/themes/github.rb,<br /> lib/rouge/themes/pastie.rb,<br /> lib/rouge/formatters/tex.rb,<br /> lib/rouge/lexers/clojure.rb,<br /> lib/rouge/lexers/console.rb,<br /> lib/rouge/lexers/crystal.rb,<br /> lib/rouge/lexers/fortran.rb,<br /> lib/rouge/lexers/gherkin.rb,<br /> lib/rouge/lexers/graphql.rb,<br /> lib/rouge/lexers/haskell.rb,<br /> lib/rouge/lexers/igorpro.rb,<br /> lib/rouge/lexers/jsonnet.rb,<br /> lib/rouge/lexers/verilog.rb,<br /> lib/rouge/template_lexer.rb,<br /> lib/rouge/themes/gruvbox.rb,<br /> lib/rouge/themes/molokai.rb,<br /> lib/rouge/themes/monokai.rb,<br /> lib/rouge/formatters/html.rb,<br /> lib/rouge/formatters/null.rb,<br /> lib/rouge/guessers/source.rb,<br /> lib/rouge/lexers/cfscript.rb,<br /> lib/rouge/lexers/json_doc.rb,<br /> lib/rouge/lexers/markdown.rb,<br /> lib/rouge/lexers/openedge.rb,<br /> lib/rouge/lexers/protobuf.rb,<br /> lib/rouge/themes/colorful.rb,<br /> lib/rouge/themes/igor_pro.rb,<br /> lib/rouge/themes/magritte.rb,<br /> lib/rouge/lexers/brainfuck.rb,<br /> lib/rouge/lexers/smalltalk.rb,<br /> lib/rouge/lexers/terraform.rb,<br /> lib/rouge/guessers/filename.rb,<br /> lib/rouge/guessers/mimetype.rb,<br /> lib/rouge/guessers/modeline.rb,<br /> lib/rouge/lexers/handlebars.rb,<br /> lib/rouge/lexers/javascript.rb,<br /> lib/rouge/lexers/moonscript.rb,<br /> lib/rouge/lexers/plain_text.rb,<br /> lib/rouge/lexers/powershell.rb,<br /> lib/rouge/lexers/prometheus.rb,<br /> lib/rouge/lexers/properties.rb,<br /> lib/rouge/lexers/typescript.rb,<br /> lib/rouge/plugins/redcarpet.rb,<br /> lib/rouge/lexers/common_lisp.rb,<br /> lib/rouge/lexers/mathematica.rb,<br /> lib/rouge/lexers/objective_c.rb,<br /> lib/rouge/lexers/sass/common.rb,<br /> lib/rouge/tex_theme_renderer.rb,<br /> lib/rouge/lexers/actionscript.rb,<br /> lib/rouge/lexers/apiblueprint.rb,<br /> lib/rouge/lexers/apple_script.rb,<br /> lib/rouge/lexers/coffeescript.rb,<br /> lib/rouge/lexers/lua/builtins.rb,<br /> lib/rouge/lexers/php/builtins.rb,<br /> lib/rouge/lexers/sqf/commands.rb,<br /> lib/rouge/lexers/supercollider.rb,<br /> lib/rouge/lexers/viml/keywords.rb,<br /> lib/rouge/themes/thankful_eyes.rb,<br /> lib/rouge/formatters/html_table.rb,<br /> lib/rouge/guessers/glob_mapping.rb,<br /> lib/rouge/formatters/html_inline.rb,<br /> lib/rouge/formatters/html_legacy.rb,<br /> lib/rouge/formatters/terminal256.rb,<br /> lib/rouge/lexers/matlab/builtins.rb,<br /> lib/rouge/themes/monokai_sublime.rb,<br /> lib/rouge/guessers/disambiguation.rb,<br /> lib/rouge/lexers/gherkin/keywords.rb,<br /> lib/rouge/lexers/literate_haskell.rb,<br /> lib/rouge/formatters/html_linewise.rb,<br /> lib/rouge/formatters/html_pygments.rb,<br /> lib/rouge/lexers/typescript/common.rb,<br /> lib/rouge/formatters/html_line_table.rb,<br /> lib/rouge/lexers/mathematica/builtins.rb,<br /> lib/rouge/lexers/literate_coffeescript.rb</span>
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>automatically generated by <code>rake builtins:mathematica</code></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Rouge/Formatters.html" title="Rouge::Formatters (module)">Formatters</a></span>, <span class='object_link'><a href="Rouge/Guessers.html" title="Rouge::Guessers (module)">Guessers</a></span>, <span class='object_link'><a href="Rouge/HasModes.html" title="Rouge::HasModes (module)">HasModes</a></span>, <span class='object_link'><a href="Rouge/Indentation.html" title="Rouge::Indentation (module)">Indentation</a></span>, <span class='object_link'><a href="Rouge/Lexers.html" title="Rouge::Lexers (module)">Lexers</a></span>, <span class='object_link'><a href="Rouge/Plugins.html" title="Rouge::Plugins (module)">Plugins</a></span>, <span class='object_link'><a href="Rouge/Themes.html" title="Rouge::Themes (module)">Themes</a></span>
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Rouge/CLI.html" title="Rouge::CLI (class)">CLI</a></span>, <span class='object_link'><a href="Rouge/CSSTheme.html" title="Rouge::CSSTheme (class)">CSSTheme</a></span>, <span class='object_link'><a href="Rouge/FileReader.html" title="Rouge::FileReader (class)">FileReader</a></span>, <span class='object_link'><a href="Rouge/Formatter.html" title="Rouge::Formatter (class)">Formatter</a></span>, <span class='object_link'><a href="Rouge/Guesser.html" title="Rouge::Guesser (class)">Guesser</a></span>, <span class='object_link'><a href="Rouge/InheritableHash.html" title="Rouge::InheritableHash (class)">InheritableHash</a></span>, <span class='object_link'><a href="Rouge/InheritableList.html" title="Rouge::InheritableList (class)">InheritableList</a></span>, <span class='object_link'><a href="Rouge/Lexer.html" title="Rouge::Lexer (class)">Lexer</a></span>, <span class='object_link'><a href="Rouge/RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span>, <span class='object_link'><a href="Rouge/TemplateLexer.html" title="Rouge::TemplateLexer (class)">TemplateLexer</a></span>, <span class='object_link'><a href="Rouge/TexThemeRenderer.html" title="Rouge::TexThemeRenderer (class)">TexThemeRenderer</a></span>, <span class='object_link'><a href="Rouge/TextAnalyzer.html" title="Rouge::TextAnalyzer (class)">TextAnalyzer</a></span>, <span class='object_link'><a href="Rouge/Theme.html" title="Rouge::Theme (class)">Theme</a></span>, <span class='object_link'><a href="Rouge/Token.html" title="Rouge::Token (class)">Token</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#highlight-class_method" title="highlight (class method)">.<strong>highlight</strong>(text, lexer, formatter, &amp;b)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Highlight some text with a given lexer and formatter.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reload!-class_method" title="reload! (class method)">.<strong>reload!</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#version-class_method" title="version (class method)">.<strong>version</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="highlight-class_method">
+  
+    .<strong>highlight</strong>(text, lexer, formatter, &amp;b)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Highlight some text with a given lexer and formatter.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Rouge (module)">Rouge</a></span></span><span class='period'>.</span><span class='id identifier rubyid_highlight'>highlight</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>@foo = 1</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ruby</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>html</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='const'><span class='object_link'><a href="" title="Rouge (module)">Rouge</a></span></span><span class='period'>.</span><span class='id identifier rubyid_highlight'>highlight</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>var foo = 1;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>js</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>terminal256</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+<span class='comment'># streaming - chunks become available as they are lexed
+</span><span class='const'><span class='object_link'><a href="" title="Rouge (module)">Rouge</a></span></span><span class='period'>.</span><span class='id identifier rubyid_highlight'>highlight</span><span class='lparen'>(</span><span class='id identifier rubyid_large_string'>large_string</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ruby</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>html</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_chunk'>chunk</span><span class='op'>|</span>
+  <span class='gvar'>$stdout</span><span class='period'>.</span><span class='id identifier rubyid_print'>print</span> <span class='id identifier rubyid_chunk'>chunk</span>
+<span class='kw'>end</span></code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27
+28
+29
+30
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge.rb', line 25</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_highlight'>highlight</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='comma'>,</span> <span class='id identifier rubyid_lexer'>lexer</span><span class='comma'>,</span> <span class='id identifier rubyid_formatter'>formatter</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_lexer'>lexer</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Rouge/Lexer.html" title="Rouge::Lexer (class)">Lexer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'><span class='object_link'><a href="Rouge/Lexer.html#find-class_method" title="Rouge::Lexer.find (method)">find</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_lexer'>lexer</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_lexer'>lexer</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span> <span class='symbol'>:lex</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>unknown lexer </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_lexer'>lexer</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_lexer'>lexer</span>
+
+  <span class='id identifier rubyid_formatter'>formatter</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Rouge/Formatter.html" title="Rouge::Formatter (class)">Formatter</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'><span class='object_link'><a href="Rouge/Formatter.html#find-class_method" title="Rouge::Formatter.find (method)">find</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_formatter'>formatter</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_formatter'>formatter</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span> <span class='symbol'>:format</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>unknown formatter </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_formatter'>formatter</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_formatter'>formatter</span>
+
+  <span class='id identifier rubyid_formatter'>formatter</span><span class='period'>.</span><span class='id identifier rubyid_format'>format</span><span class='lparen'>(</span><span class='id identifier rubyid_lexer'>lexer</span><span class='period'>.</span><span class='id identifier rubyid_lex'>lex</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reload!-class_method">
+  
+    .<strong>reload!</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12
+13</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge.rb', line 10</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reload!'>reload!</span>
+  <span class='const'>Object</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span> <span class='symbol'>:remove_const</span><span class='comma'>,</span> <span class='symbol'>:Rouge</span>
+  <span class='id identifier rubyid_load'>load</span> <span class='kw'>__FILE__</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="version-class_method">
+  
+    .<strong>version</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5
+6
+7</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/version.rb', line 5</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_version'>version</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>3.6.0</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Jul 22 08:49:54 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.20 (ruby-2.6.3).
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Rouge::Lexers::OpenEdge
+  
+    &mdash; Documentation by YARD 0.9.20
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Rouge::Lexers::OpenEdge";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (O)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Rouge.html" title="Rouge (module)">Rouge</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Lexers.html" title="Rouge::Lexers (module)">Lexers</a></span></span>
+     &raquo; 
+    <span class="title">OpenEdge</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Rouge::Lexers::OpenEdge
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></li>
+          
+            <li class="next">Rouge::Lexers::OpenEdge</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/rouge/lexers/openedge.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RegexLexer.html#MAX_NULL_SCANS-constant" title="Rouge::RegexLexer::MAX_NULL_SCANS (constant)">RegexLexer::MAX_NULL_SCANS</a></span></p>
+
+  
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="../Token/Tokens.html" title="Rouge::Token::Tokens (module)">Token::Tokens</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Token/Tokens.html#Num-constant" title="Rouge::Token::Tokens::Num (constant)">Token::Tokens::Num</a></span>, <span class='object_link'><a href="../Token/Tokens.html#Str-constant" title="Rouge::Token::Tokens::Str (constant)">Token::Tokens::Str</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lexer.html#options-instance_method" title="Rouge::Lexer#options (method)">#options</a></span></p>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#keywords-class_method" title="keywords (class method)">.<strong>keywords</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#keywords_type-class_method" title="keywords_type (class method)">.<strong>keywords_type</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RegexLexer.html#append-class_method" title="Rouge::RegexLexer.append (method)">append</a></span>, <span class='object_link'><a href="../RegexLexer.html#delegate-instance_method" title="Rouge::RegexLexer#delegate (method)">#delegate</a></span>, <span class='object_link'><a href="../RegexLexer.html#goto-instance_method" title="Rouge::RegexLexer#goto (method)">#goto</a></span>, <span class='object_link'><a href="../RegexLexer.html#group-instance_method" title="Rouge::RegexLexer#group (method)">#group</a></span>, <span class='object_link'><a href="../RegexLexer.html#groups-instance_method" title="Rouge::RegexLexer#groups (method)">#groups</a></span>, <span class='object_link'><a href="../RegexLexer.html#in_state%3F-instance_method" title="Rouge::RegexLexer#in_state? (method)">#in_state?</a></span>, <span class='object_link'><a href="../RegexLexer.html#pop!-instance_method" title="Rouge::RegexLexer#pop! (method)">#pop!</a></span>, <span class='object_link'><a href="../RegexLexer.html#prepend-class_method" title="Rouge::RegexLexer.prepend (method)">prepend</a></span>, <span class='object_link'><a href="../RegexLexer.html#push-instance_method" title="Rouge::RegexLexer#push (method)">#push</a></span>, <span class='object_link'><a href="../RegexLexer.html#recurse-instance_method" title="Rouge::RegexLexer#recurse (method)">#recurse</a></span>, <span class='object_link'><a href="../RegexLexer.html#replace_state-class_method" title="Rouge::RegexLexer.replace_state (method)">replace_state</a></span>, <span class='object_link'><a href="../RegexLexer.html#reset!-instance_method" title="Rouge::RegexLexer#reset! (method)">#reset!</a></span>, <span class='object_link'><a href="../RegexLexer.html#reset_stack-instance_method" title="Rouge::RegexLexer#reset_stack (method)">#reset_stack</a></span>, <span class='object_link'><a href="../RegexLexer.html#stack-instance_method" title="Rouge::RegexLexer#stack (method)">#stack</a></span>, <span class='object_link'><a href="../RegexLexer.html#start-class_method" title="Rouge::RegexLexer.start (method)">start</a></span>, <span class='object_link'><a href="../RegexLexer.html#start_procs-class_method" title="Rouge::RegexLexer.start_procs (method)">start_procs</a></span>, <span class='object_link'><a href="../RegexLexer.html#state-class_method" title="Rouge::RegexLexer.state (method)">state</a></span>, <span class='object_link'><a href="../RegexLexer.html#state-instance_method" title="Rouge::RegexLexer#state (method)">#state</a></span>, <span class='object_link'><a href="../RegexLexer.html#state%3F-instance_method" title="Rouge::RegexLexer#state? (method)">#state?</a></span>, <span class='object_link'><a href="../RegexLexer.html#state_definitions-class_method" title="Rouge::RegexLexer.state_definitions (method)">state_definitions</a></span>, <span class='object_link'><a href="../RegexLexer.html#states-class_method" title="Rouge::RegexLexer.states (method)">states</a></span>, <span class='object_link'><a href="../RegexLexer.html#step-instance_method" title="Rouge::RegexLexer#step (method)">#step</a></span>, <span class='object_link'><a href="../RegexLexer.html#stream_tokens-instance_method" title="Rouge::RegexLexer#stream_tokens (method)">#stream_tokens</a></span>, <span class='object_link'><a href="../RegexLexer.html#token-instance_method" title="Rouge::RegexLexer#token (method)">#token</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lexer.html#aliases-class_method" title="Rouge::Lexer.aliases (method)">aliases</a></span>, <span class='object_link'><a href="../Lexer.html#all-class_method" title="Rouge::Lexer.all (method)">all</a></span>, <span class='object_link'><a href="../Lexer.html#as_bool-instance_method" title="Rouge::Lexer#as_bool (method)">#as_bool</a></span>, <span class='object_link'><a href="../Lexer.html#as_lexer-instance_method" title="Rouge::Lexer#as_lexer (method)">#as_lexer</a></span>, <span class='object_link'><a href="../Lexer.html#as_list-instance_method" title="Rouge::Lexer#as_list (method)">#as_list</a></span>, <span class='object_link'><a href="../Lexer.html#as_string-instance_method" title="Rouge::Lexer#as_string (method)">#as_string</a></span>, <span class='object_link'><a href="../Lexer.html#as_token-instance_method" title="Rouge::Lexer#as_token (method)">#as_token</a></span>, <span class='object_link'><a href="../Lexer.html#bool_option-instance_method" title="Rouge::Lexer#bool_option (method)">#bool_option</a></span>, <span class='object_link'><a href="../Lexer.html#continue_lex-class_method" title="Rouge::Lexer.continue_lex (method)">continue_lex</a></span>, <span class='object_link'><a href="../Lexer.html#continue_lex-instance_method" title="Rouge::Lexer#continue_lex (method)">#continue_lex</a></span>, <span class='object_link'><a href="../Lexer.html#debug_enabled%3F-class_method" title="Rouge::Lexer.debug_enabled? (method)">debug_enabled?</a></span>, <span class='object_link'><a href="../Lexer.html#demo-class_method" title="Rouge::Lexer.demo (method)">demo</a></span>, <span class='object_link'><a href="../Lexer.html#demo_file-class_method" title="Rouge::Lexer.demo_file (method)">demo_file</a></span>, <span class='object_link'><a href="../Lexer.html#desc-class_method" title="Rouge::Lexer.desc (method)">desc</a></span>, <span class='object_link'><a href="../Lexer.html#detect%3F-class_method" title="Rouge::Lexer.detect? (method)">detect?</a></span>, <span class='object_link'><a href="../Lexer.html#detectable%3F-class_method" title="Rouge::Lexer.detectable? (method)">detectable?</a></span>, <span class='object_link'><a href="../Lexer.html#disable_debug!-class_method" title="Rouge::Lexer.disable_debug! (method)">disable_debug!</a></span>, <span class='object_link'><a href="../Lexer.html#enable_debug!-class_method" title="Rouge::Lexer.enable_debug! (method)">enable_debug!</a></span>, <span class='object_link'><a href="../Lexer.html#filenames-class_method" title="Rouge::Lexer.filenames (method)">filenames</a></span>, <span class='object_link'><a href="../Lexer.html#find-class_method" title="Rouge::Lexer.find (method)">find</a></span>, <span class='object_link'><a href="../Lexer.html#find_fancy-class_method" title="Rouge::Lexer.find_fancy (method)">find_fancy</a></span>, <span class='object_link'><a href="../Lexer.html#guess-class_method" title="Rouge::Lexer.guess (method)">guess</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_filename-class_method" title="Rouge::Lexer.guess_by_filename (method)">guess_by_filename</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_mimetype-class_method" title="Rouge::Lexer.guess_by_mimetype (method)">guess_by_mimetype</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_source-class_method" title="Rouge::Lexer.guess_by_source (method)">guess_by_source</a></span>, <span class='object_link'><a href="../Lexer.html#guesses-class_method" title="Rouge::Lexer.guesses (method)">guesses</a></span>, <span class='object_link'><a href="../Lexer.html#hash_option-instance_method" title="Rouge::Lexer#hash_option (method)">#hash_option</a></span>, <span class='object_link'><a href="../Lexer.html#initialize-instance_method" title="Rouge::Lexer#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Lexer.html#lex-class_method" title="Rouge::Lexer.lex (method)">lex</a></span>, <span class='object_link'><a href="../Lexer.html#lex-instance_method" title="Rouge::Lexer#lex (method)">#lex</a></span>, <span class='object_link'><a href="../Lexer.html#lexer_option-instance_method" title="Rouge::Lexer#lexer_option (method)">#lexer_option</a></span>, <span class='object_link'><a href="../Lexer.html#list_option-instance_method" title="Rouge::Lexer#list_option (method)">#list_option</a></span>, <span class='object_link'><a href="../Lexer.html#mimetypes-class_method" title="Rouge::Lexer.mimetypes (method)">mimetypes</a></span>, <span class='object_link'><a href="../Lexer.html#option-class_method" title="Rouge::Lexer.option (method)">option</a></span>, <span class='object_link'><a href="../Lexer.html#option_docs-class_method" title="Rouge::Lexer.option_docs (method)">option_docs</a></span>, <span class='object_link'><a href="../Lexer.html#reset!-instance_method" title="Rouge::Lexer#reset! (method)">#reset!</a></span>, <span class='object_link'><a href="../Lexer.html#stream_tokens-instance_method" title="Rouge::Lexer#stream_tokens (method)">#stream_tokens</a></span>, <span class='object_link'><a href="../Lexer.html#string_option-instance_method" title="Rouge::Lexer#string_option (method)">#string_option</a></span>, <span class='object_link'><a href="../Lexer.html#tag-class_method" title="Rouge::Lexer.tag (method)">tag</a></span>, <span class='object_link'><a href="../Lexer.html#tag-instance_method" title="Rouge::Lexer#tag (method)">#tag</a></span>, <span class='object_link'><a href="../Lexer.html#title-class_method" title="Rouge::Lexer.title (method)">title</a></span>, <span class='object_link'><a href="../Lexer.html#token_option-instance_method" title="Rouge::Lexer#token_option (method)">#token_option</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Token/Tokens.html" title="Rouge::Token::Tokens (module)">Token::Tokens</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Token/Tokens.html#token-class_method" title="Rouge::Token::Tokens.token (method)">token</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Lexer.html#initialize-instance_method" title="Rouge::Lexer#initialize (method)">Rouge::Lexer</a></span></p>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="keywords-class_method">
+  
+    .<strong>keywords</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/openedge.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>
+  <span class='ivar'>@keywords</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>&amp;ELSE</span><span class='words_sep'> </span><span class='tstring_content'>&amp;ELSEIF</span><span class='words_sep'> </span><span class='tstring_content'>&amp;ENDIF</span><span class='words_sep'> </span><span class='tstring_content'>&amp;GLOB</span><span class='words_sep'> </span><span class='tstring_content'>&amp;GLOBAL-DEFINE</span><span class='words_sep'> </span><span class='tstring_content'>&amp;IF</span><span class='words_sep'> </span><span class='tstring_content'>&amp;MESSAGE</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SCOP</span><span class='words_sep'>
+    </span><span class='tstring_content'>&amp;SCOPED-DEFINE</span><span class='words_sep'> </span><span class='tstring_content'>&amp;THEN</span><span class='words_sep'> </span><span class='tstring_content'>&amp;UNDEF</span><span class='words_sep'> </span><span class='tstring_content'>&amp;UNDEFINE</span><span class='words_sep'> </span><span class='tstring_content'>&amp;WEBSTREAM</span><span class='words_sep'> </span><span class='tstring_content'>@</span><span class='words_sep'> </span><span class='tstring_content'>{&amp;BATCH}</span><span class='words_sep'>
+    </span><span class='tstring_content'>{&amp;BATCH-MODE}</span><span class='words_sep'> </span><span class='tstring_content'>{&amp;FILE-NAME}</span><span class='words_sep'> </span><span class='tstring_content'>{&amp;LINE-NUMBE}</span><span class='words_sep'> </span><span class='tstring_content'>{&amp;LINE-NUMBER}</span><span class='words_sep'> </span><span class='tstring_content'>{&amp;OPSYS}</span><span class='words_sep'>
+    </span><span class='tstring_content'>{&amp;PROCESS-ARCHITECTURE}</span><span class='words_sep'> </span><span class='tstring_content'>{&amp;SEQUENCE}</span><span class='words_sep'> </span><span class='tstring_content'>{&amp;WINDOW-SYS}</span><span class='words_sep'> </span><span class='tstring_content'>{&amp;WINDOW-SYSTEM}</span><span class='words_sep'> </span><span class='tstring_content'>ABS</span><span class='words_sep'>
+    </span><span class='tstring_content'>ABSOLUTE</span><span class='words_sep'> </span><span class='tstring_content'>ABSTRACT</span><span class='words_sep'> </span><span class='tstring_content'>ACCELERATOR</span><span class='words_sep'> </span><span class='tstring_content'>ACCUM</span><span class='words_sep'> </span><span class='tstring_content'>ACCUM</span><span class='words_sep'> </span><span class='tstring_content'>ACCUMULATE</span><span class='words_sep'> </span><span class='tstring_content'>ACTIVE-FORM</span><span class='words_sep'>
+    </span><span class='tstring_content'>ACTIVE-WINDOW</span><span class='words_sep'> </span><span class='tstring_content'>ADD</span><span class='words_sep'> </span><span class='tstring_content'>ADD-BUFFER</span><span class='words_sep'> </span><span class='tstring_content'>ADD-CALC-COLUMN</span><span class='words_sep'> </span><span class='tstring_content'>ADD-COLUMNS-FROM</span><span class='words_sep'>
+    </span><span class='tstring_content'>ADD-EVENTS-PROCEDURE</span><span class='words_sep'> </span><span class='tstring_content'>ADD-FIELDS-FROM</span><span class='words_sep'> </span><span class='tstring_content'>ADD-FIRST</span><span class='words_sep'> </span><span class='tstring_content'>ADD-INDEX-FIELD</span><span class='words_sep'>
+    </span><span class='tstring_content'>ADD-LAST</span><span class='words_sep'> </span><span class='tstring_content'>ADD-LIKE-COLUMN</span><span class='words_sep'> </span><span class='tstring_content'>ADD-LIKE-FIELD</span><span class='words_sep'> </span><span class='tstring_content'>ADD-LIKE-INDEX</span><span class='words_sep'> </span><span class='tstring_content'>ADD-NEW-FIELD</span><span class='words_sep'>
+    </span><span class='tstring_content'>ADD-NEW-INDEX</span><span class='words_sep'> </span><span class='tstring_content'>ADD-SCHEMA-LOCATION</span><span class='words_sep'> </span><span class='tstring_content'>ADD-SUPER-PROCEDURE</span><span class='words_sep'> </span><span class='tstring_content'>ADM-DATA</span><span class='words_sep'> </span><span class='tstring_content'>ADVISE</span><span class='words_sep'>
+    </span><span class='tstring_content'>ALERT-BOX</span><span class='words_sep'> </span><span class='tstring_content'>ALIAS</span><span class='words_sep'> </span><span class='tstring_content'>ALL</span><span class='words_sep'> </span><span class='tstring_content'>ALLOW-COLUMN-SEARCHING</span><span class='words_sep'> </span><span class='tstring_content'>ALLOW-REPLICATION</span><span class='words_sep'> </span><span class='tstring_content'>ALTER</span><span class='words_sep'>
+    </span><span class='tstring_content'>ALWAYS-ON-TOP</span><span class='words_sep'> </span><span class='tstring_content'>AMBIG</span><span class='words_sep'> </span><span class='tstring_content'>AMBIGUOUS</span><span class='words_sep'> </span><span class='tstring_content'>ANALYZ</span><span class='words_sep'> </span><span class='tstring_content'>ANALYZE</span><span class='words_sep'> </span><span class='tstring_content'>AND</span><span class='words_sep'> </span><span class='tstring_content'>ANSI-ONLY</span><span class='words_sep'> </span><span class='tstring_content'>ANY</span><span class='words_sep'>
+    </span><span class='tstring_content'>ANYWHERE</span><span class='words_sep'> </span><span class='tstring_content'>APPEND</span><span class='words_sep'> </span><span class='tstring_content'>APPL-ALERT</span><span class='words_sep'> </span><span class='tstring_content'>APPL-ALERT-BOXES</span><span class='words_sep'> </span><span class='tstring_content'>APPL-CONTEXT-ID</span><span class='words_sep'>
+    </span><span class='tstring_content'>APPLICATION</span><span class='words_sep'> </span><span class='tstring_content'>APPLY</span><span class='words_sep'> </span><span class='tstring_content'>APPSERVER-INFO</span><span class='words_sep'> </span><span class='tstring_content'>APPSERVER-PASSWORD</span><span class='words_sep'> </span><span class='tstring_content'>APPSERVER-USERID</span><span class='words_sep'>
+    </span><span class='tstring_content'>ARRAY-MESSAGE</span><span class='words_sep'> </span><span class='tstring_content'>AS</span><span class='words_sep'> </span><span class='tstring_content'>ASC</span><span class='words_sep'> </span><span class='tstring_content'>ASCENDING</span><span class='words_sep'> </span><span class='tstring_content'>ASK-OVERWRITE</span><span class='words_sep'> </span><span class='tstring_content'>ASSEMBLY</span><span class='words_sep'> </span><span class='tstring_content'>ASSIGN</span><span class='words_sep'>
+    </span><span class='tstring_content'>ASYNCHRONOUS</span><span class='words_sep'> </span><span class='tstring_content'>ASYNC-REQUEST-COUNT</span><span class='words_sep'> </span><span class='tstring_content'>ASYNC-REQUEST-HANDLE</span><span class='words_sep'> </span><span class='tstring_content'>AT</span><span class='words_sep'>
+    </span><span class='tstring_content'>ATTACHED-PAIRLIST</span><span class='words_sep'> </span><span class='tstring_content'>ATTR</span><span class='words_sep'> </span><span class='tstring_content'>ATTR-SPACE</span><span class='words_sep'> </span><span class='tstring_content'>AUDIT-CONTROL</span><span class='words_sep'> </span><span class='tstring_content'>AUDIT-ENABLED</span><span class='words_sep'>
+    </span><span class='tstring_content'>AUDIT-EVENT-CONTEXT</span><span class='words_sep'> </span><span class='tstring_content'>AUDIT-POLICY</span><span class='words_sep'> </span><span class='tstring_content'>AUTHENTICATION-FAILED</span><span class='words_sep'> </span><span class='tstring_content'>AUTHORIZATION</span><span class='words_sep'>
+    </span><span class='tstring_content'>AUTO-COMP</span><span class='words_sep'> </span><span class='tstring_content'>AUTO-COMPLETION</span><span class='words_sep'> </span><span class='tstring_content'>AUTO-ENDKEY</span><span class='words_sep'> </span><span class='tstring_content'>AUTO-END-KEY</span><span class='words_sep'> </span><span class='tstring_content'>AUTO-GO</span><span class='words_sep'> </span><span class='tstring_content'>AUTO-IND</span><span class='words_sep'>
+    </span><span class='tstring_content'>AUTO-INDENT</span><span class='words_sep'> </span><span class='tstring_content'>AUTOMATIC</span><span class='words_sep'> </span><span class='tstring_content'>AUTO-RESIZE</span><span class='words_sep'> </span><span class='tstring_content'>AUTO-RET</span><span class='words_sep'> </span><span class='tstring_content'>AUTO-RETURN</span><span class='words_sep'>
+    </span><span class='tstring_content'>AUTO-SYNCHRONIZE</span><span class='words_sep'> </span><span class='tstring_content'>AUTO-Z</span><span class='words_sep'> </span><span class='tstring_content'>AUTO-ZAP</span><span class='words_sep'> </span><span class='tstring_content'>AVAIL</span><span class='words_sep'> </span><span class='tstring_content'>AVAILABLE</span><span class='words_sep'> </span><span class='tstring_content'>AVAILABLE-FORMATS</span><span class='words_sep'> </span><span class='tstring_content'>AVE</span><span class='words_sep'>
+    </span><span class='tstring_content'>AVERAGE</span><span class='words_sep'> </span><span class='tstring_content'>AVG</span><span class='words_sep'> </span><span class='tstring_content'>BACK</span><span class='words_sep'> </span><span class='tstring_content'>BACKGROUND</span><span class='words_sep'> </span><span class='tstring_content'>BACKWARD</span><span class='words_sep'> </span><span class='tstring_content'>BACKWARDS</span><span class='words_sep'> </span><span class='tstring_content'>BASE64-DECODE</span><span class='words_sep'>
+    </span><span class='tstring_content'>BASE64-ENCODE</span><span class='words_sep'> </span><span class='tstring_content'>BASE-ADE</span><span class='words_sep'> </span><span class='tstring_content'>BASE-KEY</span><span class='words_sep'> </span><span class='tstring_content'>BATCH</span><span class='words_sep'> </span><span class='tstring_content'>BATCH-MODE</span><span class='words_sep'> </span><span class='tstring_content'>BATCH-SIZE</span><span class='words_sep'> </span><span class='tstring_content'>BEFORE-H</span><span class='words_sep'>
+    </span><span class='tstring_content'>BEFORE-HIDE</span><span class='words_sep'> </span><span class='tstring_content'>BEGIN-EVENT-GROUP</span><span class='words_sep'> </span><span class='tstring_content'>BEGINS</span><span class='words_sep'> </span><span class='tstring_content'>BELL</span><span class='words_sep'> </span><span class='tstring_content'>BETWEEN</span><span class='words_sep'> </span><span class='tstring_content'>BGC</span><span class='words_sep'> </span><span class='tstring_content'>BGCOLOR</span><span class='words_sep'>
+    </span><span class='tstring_content'>BIG-ENDIAN</span><span class='words_sep'> </span><span class='tstring_content'>BINARY</span><span class='words_sep'> </span><span class='tstring_content'>BIND</span><span class='words_sep'> </span><span class='tstring_content'>BIND-WHERE</span><span class='words_sep'> </span><span class='tstring_content'>BLANK</span><span class='words_sep'> </span><span class='tstring_content'>BLOCK-ITERATION-DISPLAY</span><span class='words_sep'>
+    </span><span class='tstring_content'>BLOCK-LEV</span><span class='words_sep'> </span><span class='tstring_content'>BLOCK-LEVEL</span><span class='words_sep'> </span><span class='tstring_content'>BORDER-B</span><span class='words_sep'> </span><span class='tstring_content'>BORDER-BOTTOM-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>BORDER-BOTTOM-P</span><span class='words_sep'>
+    </span><span class='tstring_content'>BORDER-BOTTOM-PIXELS</span><span class='words_sep'> </span><span class='tstring_content'>BORDER-L</span><span class='words_sep'> </span><span class='tstring_content'>BORDER-LEFT-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>BORDER-LEFT-P</span><span class='words_sep'>
+    </span><span class='tstring_content'>BORDER-LEFT-PIXELS</span><span class='words_sep'> </span><span class='tstring_content'>BORDER-R</span><span class='words_sep'> </span><span class='tstring_content'>BORDER-RIGHT-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>BORDER-RIGHT-P</span><span class='words_sep'>
+    </span><span class='tstring_content'>BORDER-RIGHT-PIXELS</span><span class='words_sep'> </span><span class='tstring_content'>BORDER-T</span><span class='words_sep'> </span><span class='tstring_content'>BORDER-TOP-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>BORDER-TOP-P</span><span class='words_sep'>
+    </span><span class='tstring_content'>BORDER-TOP-PIXELS</span><span class='words_sep'> </span><span class='tstring_content'>BOX</span><span class='words_sep'> </span><span class='tstring_content'>BOX-SELECT</span><span class='words_sep'> </span><span class='tstring_content'>BOX-SELECTABLE</span><span class='words_sep'> </span><span class='tstring_content'>BREAK</span><span class='words_sep'> </span><span class='tstring_content'>BROWSE</span><span class='words_sep'> </span><span class='tstring_content'>BUFFER</span><span class='words_sep'>
+    </span><span class='tstring_content'>BUFFER-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>BUFFER-COMPARE</span><span class='words_sep'> </span><span class='tstring_content'>BUFFER-COPY</span><span class='words_sep'> </span><span class='tstring_content'>BUFFER-CREATE</span><span class='words_sep'> </span><span class='tstring_content'>BUFFER-DELETE</span><span class='words_sep'>
+    </span><span class='tstring_content'>BUFFER-FIELD</span><span class='words_sep'> </span><span class='tstring_content'>BUFFER-HANDLE</span><span class='words_sep'> </span><span class='tstring_content'>BUFFER-LINES</span><span class='words_sep'> </span><span class='tstring_content'>BUFFER-NAME</span><span class='words_sep'>
+    </span><span class='tstring_content'>BUFFER-PARTITION-ID</span><span class='words_sep'> </span><span class='tstring_content'>BUFFER-RELEASE</span><span class='words_sep'> </span><span class='tstring_content'>BUFFER-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>BUTTON</span><span class='words_sep'> </span><span class='tstring_content'>BUTTON</span><span class='words_sep'> </span><span class='tstring_content'>BUTTONS</span><span class='words_sep'>
+    </span><span class='tstring_content'>BY</span><span class='words_sep'> </span><span class='tstring_content'>BY-POINTER</span><span class='words_sep'> </span><span class='tstring_content'>BY-VARIANT-POINTER</span><span class='words_sep'> </span><span class='tstring_content'>CACHE</span><span class='words_sep'> </span><span class='tstring_content'>CACHE-SIZE</span><span class='words_sep'> </span><span class='tstring_content'>CALL</span><span class='words_sep'> </span><span class='tstring_content'>CALL-NAME</span><span class='words_sep'>
+    </span><span class='tstring_content'>CALL-TYPE</span><span class='words_sep'> </span><span class='tstring_content'>CANCEL-BREAK</span><span class='words_sep'> </span><span class='tstring_content'>CANCEL-BUTTON</span><span class='words_sep'> </span><span class='tstring_content'>CAN-CREATE</span><span class='words_sep'> </span><span class='tstring_content'>CAN-DELETE</span><span class='words_sep'> </span><span class='tstring_content'>CAN-DO</span><span class='words_sep'>
+    </span><span class='tstring_content'>CAN-DO-DOMAIN-SUPPORT</span><span class='words_sep'> </span><span class='tstring_content'>CAN-FIND</span><span class='words_sep'> </span><span class='tstring_content'>CAN-QUERY</span><span class='words_sep'> </span><span class='tstring_content'>CAN-READ</span><span class='words_sep'> </span><span class='tstring_content'>CAN-SET</span><span class='words_sep'> </span><span class='tstring_content'>CAN-WRITE</span><span class='words_sep'>
+    </span><span class='tstring_content'>CAPS</span><span class='words_sep'> </span><span class='tstring_content'>CAREFUL-PAINT</span><span class='words_sep'> </span><span class='tstring_content'>CASE</span><span class='words_sep'> </span><span class='tstring_content'>CASE-SEN</span><span class='words_sep'> </span><span class='tstring_content'>CASE-SENSITIVE</span><span class='words_sep'> </span><span class='tstring_content'>CAST</span><span class='words_sep'> </span><span class='tstring_content'>CATCH</span><span class='words_sep'> </span><span class='tstring_content'>CDECL</span><span class='words_sep'>
+    </span><span class='tstring_content'>CENTER</span><span class='words_sep'> </span><span class='tstring_content'>CENTERED</span><span class='words_sep'> </span><span class='tstring_content'>CHAINED</span><span class='words_sep'> </span><span class='tstring_content'>CHARACTER_LENGTH</span><span class='words_sep'> </span><span class='tstring_content'>CHARSET</span><span class='words_sep'> </span><span class='tstring_content'>CHECK</span><span class='words_sep'> </span><span class='tstring_content'>CHECKED</span><span class='words_sep'> </span><span class='tstring_content'>CHOOSE</span><span class='words_sep'>
+    </span><span class='tstring_content'>CHR</span><span class='words_sep'> </span><span class='tstring_content'>CLASS</span><span class='words_sep'> </span><span class='tstring_content'>CLASS-TYPE</span><span class='words_sep'> </span><span class='tstring_content'>CLEAR</span><span class='words_sep'> </span><span class='tstring_content'>CLEAR-APPL-CONTEXT</span><span class='words_sep'> </span><span class='tstring_content'>CLEAR-LOG</span><span class='words_sep'> </span><span class='tstring_content'>CLEAR-SELECT</span><span class='words_sep'>
+    </span><span class='tstring_content'>CLEAR-SELECTION</span><span class='words_sep'> </span><span class='tstring_content'>CLEAR-SORT-ARROW</span><span class='words_sep'> </span><span class='tstring_content'>CLEAR-SORT-ARROWS</span><span class='words_sep'>
+    </span><span class='tstring_content'>CLIENT-CONNECTION-ID</span><span class='words_sep'> </span><span class='tstring_content'>CLIENT-PRINCIPAL</span><span class='words_sep'> </span><span class='tstring_content'>CLIENT-TTY</span><span class='words_sep'> </span><span class='tstring_content'>CLIENT-TYPE</span><span class='words_sep'>
+    </span><span class='tstring_content'>CLIENT-WORKSTATION</span><span class='words_sep'> </span><span class='tstring_content'>CLIPBOARD</span><span class='words_sep'> </span><span class='tstring_content'>CLOSE</span><span class='words_sep'> </span><span class='tstring_content'>CLOSE-LOG</span><span class='words_sep'> </span><span class='tstring_content'>CODE</span><span class='words_sep'> </span><span class='tstring_content'>CODEBASE-LOCATOR</span><span class='words_sep'>
+    </span><span class='tstring_content'>CODEPAGE</span><span class='words_sep'> </span><span class='tstring_content'>CODEPAGE-CONVERT</span><span class='words_sep'> </span><span class='tstring_content'>COL</span><span class='words_sep'> </span><span class='tstring_content'>COLLATE</span><span class='words_sep'> </span><span class='tstring_content'>COL-OF</span><span class='words_sep'> </span><span class='tstring_content'>COLON</span><span class='words_sep'> </span><span class='tstring_content'>COLON-ALIGN</span><span class='words_sep'>
+    </span><span class='tstring_content'>COLON-ALIGNED</span><span class='words_sep'> </span><span class='tstring_content'>COLOR</span><span class='words_sep'> </span><span class='tstring_content'>COLOR-TABLE</span><span class='words_sep'> </span><span class='tstring_content'>COLUMN</span><span class='words_sep'> </span><span class='tstring_content'>COLUMN-BGCOLOR</span><span class='words_sep'> </span><span class='tstring_content'>COLUMN-DCOLOR</span><span class='words_sep'>
+    </span><span class='tstring_content'>COLUMN-FGCOLOR</span><span class='words_sep'> </span><span class='tstring_content'>COLUMN-FONT</span><span class='words_sep'> </span><span class='tstring_content'>COLUMN-LAB</span><span class='words_sep'> </span><span class='tstring_content'>COLUMN-LABEL</span><span class='words_sep'> </span><span class='tstring_content'>COLUMN-MOVABLE</span><span class='words_sep'>
+    </span><span class='tstring_content'>COLUMN-OF</span><span class='words_sep'> </span><span class='tstring_content'>COLUMN-PFCOLOR</span><span class='words_sep'> </span><span class='tstring_content'>COLUMN-READ-ONLY</span><span class='words_sep'> </span><span class='tstring_content'>COLUMN-RESIZABLE</span><span class='words_sep'> </span><span class='tstring_content'>COLUMNS</span><span class='words_sep'>
+    </span><span class='tstring_content'>COLUMN-SCROLLING</span><span class='words_sep'> </span><span class='tstring_content'>COMBO-BOX</span><span class='words_sep'> </span><span class='tstring_content'>COM-HANDLE</span><span class='words_sep'> </span><span class='tstring_content'>COMMAND</span><span class='words_sep'> </span><span class='tstring_content'>COMPARES</span><span class='words_sep'> </span><span class='tstring_content'>COMPILE</span><span class='words_sep'>
+    </span><span class='tstring_content'>COMPILER</span><span class='words_sep'> </span><span class='tstring_content'>COMPLETE</span><span class='words_sep'> </span><span class='tstring_content'>COM-SELF</span><span class='words_sep'> </span><span class='tstring_content'>CONFIG-NAME</span><span class='words_sep'> </span><span class='tstring_content'>CONNECT</span><span class='words_sep'> </span><span class='tstring_content'>CONNECTED</span><span class='words_sep'> </span><span class='tstring_content'>CONSTRUCTOR</span><span class='words_sep'>
+    </span><span class='tstring_content'>CONTAINS</span><span class='words_sep'> </span><span class='tstring_content'>CONTENTS</span><span class='words_sep'> </span><span class='tstring_content'>CONTEXT</span><span class='words_sep'> </span><span class='tstring_content'>CONTEXT-HELP</span><span class='words_sep'> </span><span class='tstring_content'>CONTEXT-HELP-FILE</span><span class='words_sep'>
+    </span><span class='tstring_content'>CONTEXT-HELP-ID</span><span class='words_sep'> </span><span class='tstring_content'>CONTEXT-POPUP</span><span class='words_sep'> </span><span class='tstring_content'>CONTROL</span><span class='words_sep'> </span><span class='tstring_content'>CONTROL-BOX</span><span class='words_sep'> </span><span class='tstring_content'>CONTROL-FRAME</span><span class='words_sep'>
+    </span><span class='tstring_content'>CONVERT</span><span class='words_sep'> </span><span class='tstring_content'>CONVERT-3D-COLORS</span><span class='words_sep'> </span><span class='tstring_content'>CONVERT-TO-OFFS</span><span class='words_sep'> </span><span class='tstring_content'>CONVERT-TO-OFFSET</span><span class='words_sep'>
+    </span><span class='tstring_content'>COPY-DATASET</span><span class='words_sep'> </span><span class='tstring_content'>COPY-LOB</span><span class='words_sep'> </span><span class='tstring_content'>COPY-SAX-ATTRIBUTES</span><span class='words_sep'> </span><span class='tstring_content'>COPY-TEMP-TABLE</span><span class='words_sep'> </span><span class='tstring_content'>COUNT</span><span class='words_sep'>
+    </span><span class='tstring_content'>COUNT-OF</span><span class='words_sep'> </span><span class='tstring_content'>CPCASE</span><span class='words_sep'> </span><span class='tstring_content'>CPCOLL</span><span class='words_sep'> </span><span class='tstring_content'>CPINTERNAL</span><span class='words_sep'> </span><span class='tstring_content'>CPLOG</span><span class='words_sep'> </span><span class='tstring_content'>CPPRINT</span><span class='words_sep'> </span><span class='tstring_content'>CPRCODEIN</span><span class='words_sep'> </span><span class='tstring_content'>CPRCODEOUT</span><span class='words_sep'>
+    </span><span class='tstring_content'>CPSTREAM</span><span class='words_sep'> </span><span class='tstring_content'>CPTERM</span><span class='words_sep'> </span><span class='tstring_content'>CRC-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>CREATE</span><span class='words_sep'> </span><span class='tstring_content'>CREATE-LIKE</span><span class='words_sep'> </span><span class='tstring_content'>CREATE-LIKE-SEQUENTIAL</span><span class='words_sep'>
+    </span><span class='tstring_content'>CREATE-NODE-NAMESPACE</span><span class='words_sep'> </span><span class='tstring_content'>CREATE-RESULT-LIST-ENTRY</span><span class='words_sep'> </span><span class='tstring_content'>CREATE-TEST-FILE</span><span class='words_sep'>
+    </span><span class='tstring_content'>CURRENT</span><span class='words_sep'> </span><span class='tstring_content'>CURRENT_DATE</span><span class='words_sep'> </span><span class='tstring_content'>CURRENT_DATE</span><span class='words_sep'> </span><span class='tstring_content'>CURRENT-CHANGED</span><span class='words_sep'> </span><span class='tstring_content'>CURRENT-COLUMN</span><span class='words_sep'>
+    </span><span class='tstring_content'>CURRENT-ENV</span><span class='words_sep'> </span><span class='tstring_content'>CURRENT-ENVIRONMENT</span><span class='words_sep'> </span><span class='tstring_content'>CURRENT-ITERATION</span><span class='words_sep'> </span><span class='tstring_content'>CURRENT-LANG</span><span class='words_sep'>
+    </span><span class='tstring_content'>CURRENT-LANGUAGE</span><span class='words_sep'> </span><span class='tstring_content'>CURRENT-QUERY</span><span class='words_sep'> </span><span class='tstring_content'>CURRENT-REQUEST-INFO</span><span class='words_sep'>
+    </span><span class='tstring_content'>CURRENT-RESPONSE-INFO</span><span class='words_sep'> </span><span class='tstring_content'>CURRENT-RESULT-ROW</span><span class='words_sep'> </span><span class='tstring_content'>CURRENT-ROW-MODIFIED</span><span class='words_sep'>
+    </span><span class='tstring_content'>CURRENT-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>CURRENT-WINDOW</span><span class='words_sep'> </span><span class='tstring_content'>CURS</span><span class='words_sep'> </span><span class='tstring_content'>CURSOR</span><span class='words_sep'> </span><span class='tstring_content'>CURSOR-CHAR</span><span class='words_sep'> </span><span class='tstring_content'>CURSOR-LINE</span><span class='words_sep'>
+    </span><span class='tstring_content'>CURSOR-OFFSET</span><span class='words_sep'> </span><span class='tstring_content'>DATABASE</span><span class='words_sep'> </span><span class='tstring_content'>DATA-BIND</span><span class='words_sep'> </span><span class='tstring_content'>DATA-ENTRY-RET</span><span class='words_sep'> </span><span class='tstring_content'>DATA-ENTRY-RETURN</span><span class='words_sep'>
+    </span><span class='tstring_content'>DATA-REL</span><span class='words_sep'> </span><span class='tstring_content'>DATA-RELATION</span><span class='words_sep'> </span><span class='tstring_content'>DATASERVERS</span><span class='words_sep'> </span><span class='tstring_content'>DATASET</span><span class='words_sep'> </span><span class='tstring_content'>DATASET-HANDLE</span><span class='words_sep'> </span><span class='tstring_content'>DATA-SOURCE</span><span class='words_sep'>
+    </span><span class='tstring_content'>DATA-SOURCE-COMPLETE-MAP</span><span class='words_sep'> </span><span class='tstring_content'>DATA-SOURCE-MODIFIED</span><span class='words_sep'> </span><span class='tstring_content'>DATA-SOURCE-ROWID</span><span class='words_sep'> </span><span class='tstring_content'>DATA-T</span><span class='words_sep'>
+    </span><span class='tstring_content'>DATA-TYPE</span><span class='words_sep'> </span><span class='tstring_content'>DATE-F</span><span class='words_sep'> </span><span class='tstring_content'>DATE-FORMAT</span><span class='words_sep'> </span><span class='tstring_content'>DAY</span><span class='words_sep'> </span><span class='tstring_content'>DBCODEPAGE</span><span class='words_sep'> </span><span class='tstring_content'>DBCOLLATION</span><span class='words_sep'> </span><span class='tstring_content'>DB-CONTEXT</span><span class='words_sep'>
+    </span><span class='tstring_content'>DBNAME</span><span class='words_sep'> </span><span class='tstring_content'>DBPARAM</span><span class='words_sep'> </span><span class='tstring_content'>DB-REFERENCES</span><span class='words_sep'> </span><span class='tstring_content'>DBREST</span><span class='words_sep'> </span><span class='tstring_content'>DBRESTRICTIONS</span><span class='words_sep'> </span><span class='tstring_content'>DBTASKID</span><span class='words_sep'> </span><span class='tstring_content'>DBTYPE</span><span class='words_sep'>
+    </span><span class='tstring_content'>DBVERS</span><span class='words_sep'> </span><span class='tstring_content'>DBVERSION</span><span class='words_sep'> </span><span class='tstring_content'>DCOLOR</span><span class='words_sep'> </span><span class='tstring_content'>DDE</span><span class='words_sep'> </span><span class='tstring_content'>DDE-ERROR</span><span class='words_sep'> </span><span class='tstring_content'>DDE-I</span><span class='words_sep'> </span><span class='tstring_content'>DDE-ID</span><span class='words_sep'> </span><span class='tstring_content'>DDE-ITEM</span><span class='words_sep'> </span><span class='tstring_content'>DDE-NAME</span><span class='words_sep'>
+    </span><span class='tstring_content'>DDE-TOPIC</span><span class='words_sep'> </span><span class='tstring_content'>DEBLANK</span><span class='words_sep'> </span><span class='tstring_content'>DEBU</span><span class='words_sep'> </span><span class='tstring_content'>DEBUG</span><span class='words_sep'> </span><span class='tstring_content'>DEBUG-ALERT</span><span class='words_sep'> </span><span class='tstring_content'>DEBUGGER</span><span class='words_sep'> </span><span class='tstring_content'>DEBUG-LIST</span><span class='words_sep'> </span><span class='tstring_content'>DECIMALS</span><span class='words_sep'>
+    </span><span class='tstring_content'>DECLARE</span><span class='words_sep'> </span><span class='tstring_content'>DECLARE-NAMESPACE</span><span class='words_sep'> </span><span class='tstring_content'>DECRYPT</span><span class='words_sep'> </span><span class='tstring_content'>DEF</span><span class='words_sep'> </span><span class='tstring_content'>DEFAULT</span><span class='words_sep'> </span><span class='tstring_content'>DEFAULT-BUFFER-HANDLE</span><span class='words_sep'>
+    </span><span class='tstring_content'>DEFAULT-BUTTON</span><span class='words_sep'> </span><span class='tstring_content'>DEFAULT-COMMIT</span><span class='words_sep'> </span><span class='tstring_content'>DEFAULT-EX</span><span class='words_sep'> </span><span class='tstring_content'>DEFAULT-EXTENSION</span><span class='words_sep'>
+    </span><span class='tstring_content'>DEFAULT-NOXL</span><span class='words_sep'> </span><span class='tstring_content'>DEFAULT-NOXLATE</span><span class='words_sep'> </span><span class='tstring_content'>DEFAULT-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>DEFAULT-WINDOW</span><span class='words_sep'> </span><span class='tstring_content'>DEFAUT-B</span><span class='words_sep'>
+    </span><span class='tstring_content'>DEFINE</span><span class='words_sep'> </span><span class='tstring_content'>DEFINED</span><span class='words_sep'> </span><span class='tstring_content'>DEFINE-USER-EVENT-MANAGER</span><span class='words_sep'> </span><span class='tstring_content'>DEL</span><span class='words_sep'> </span><span class='tstring_content'>DELEGATE</span><span class='words_sep'> </span><span class='tstring_content'>DELETE</span><span class='words_sep'> </span><span class='tstring_content'>DELETE</span><span class='words_sep'>
+    </span><span class='tstring_content'>PROCEDURE</span><span class='words_sep'> </span><span class='tstring_content'>DELETE-CHAR</span><span class='words_sep'> </span><span class='tstring_content'>DELETE-CURRENT-ROW</span><span class='words_sep'> </span><span class='tstring_content'>DELETE-LINE</span><span class='words_sep'>
+    </span><span class='tstring_content'>DELETE-RESULT-LIST-ENTRY</span><span class='words_sep'> </span><span class='tstring_content'>DELETE-SELECTED-ROW</span><span class='words_sep'> </span><span class='tstring_content'>DELETE-SELECTED-ROWS</span><span class='words_sep'>
+    </span><span class='tstring_content'>DELIMITER</span><span class='words_sep'> </span><span class='tstring_content'>DESC</span><span class='words_sep'> </span><span class='tstring_content'>DESCENDING</span><span class='words_sep'> </span><span class='tstring_content'>DESELECT-FOCUSED-ROW</span><span class='words_sep'> </span><span class='tstring_content'>DESELECTION</span><span class='words_sep'>
+    </span><span class='tstring_content'>DESELECT-ROWS</span><span class='words_sep'> </span><span class='tstring_content'>DESELECT-SELECTED-ROW</span><span class='words_sep'> </span><span class='tstring_content'>DESTRUCTOR</span><span class='words_sep'> </span><span class='tstring_content'>DIALOG-BOX</span><span class='words_sep'> </span><span class='tstring_content'>DICT</span><span class='words_sep'>
+    </span><span class='tstring_content'>DICTIONARY</span><span class='words_sep'> </span><span class='tstring_content'>DIR</span><span class='words_sep'> </span><span class='tstring_content'>DISABLE</span><span class='words_sep'> </span><span class='tstring_content'>DISABLE-AUTO-ZAP</span><span class='words_sep'> </span><span class='tstring_content'>DISABLED</span><span class='words_sep'> </span><span class='tstring_content'>DISABLE-DUMP-TRIGGERS</span><span class='words_sep'>
+    </span><span class='tstring_content'>DISABLE-LOAD-TRIGGERS</span><span class='words_sep'> </span><span class='tstring_content'>DISCON</span><span class='words_sep'> </span><span class='tstring_content'>DISCONNECT</span><span class='words_sep'> </span><span class='tstring_content'>DISP</span><span class='words_sep'> </span><span class='tstring_content'>DISPLAY</span><span class='words_sep'> </span><span class='tstring_content'>DISPLAY-MESSAGE</span><span class='words_sep'>
+    </span><span class='tstring_content'>DISPLAY-T</span><span class='words_sep'> </span><span class='tstring_content'>DISPLAY-TYPE</span><span class='words_sep'> </span><span class='tstring_content'>DISTINCT</span><span class='words_sep'> </span><span class='tstring_content'>DO</span><span class='words_sep'> </span><span class='tstring_content'>DOMAIN-DESCRIPTION</span><span class='words_sep'> </span><span class='tstring_content'>DOMAIN-NAME</span><span class='words_sep'>
+    </span><span class='tstring_content'>DOMAIN-TYPE</span><span class='words_sep'> </span><span class='tstring_content'>DOS</span><span class='words_sep'> </span><span class='tstring_content'>DOUBLE</span><span class='words_sep'> </span><span class='tstring_content'>DOWN</span><span class='words_sep'> </span><span class='tstring_content'>DRAG-ENABLED</span><span class='words_sep'> </span><span class='tstring_content'>DROP</span><span class='words_sep'> </span><span class='tstring_content'>DROP-DOWN</span><span class='words_sep'> </span><span class='tstring_content'>DROP-DOWN-LIST</span><span class='words_sep'>
+    </span><span class='tstring_content'>DROP-FILE-NOTIFY</span><span class='words_sep'> </span><span class='tstring_content'>DROP-TARGET</span><span class='words_sep'> </span><span class='tstring_content'>ds-close-cursor</span><span class='words_sep'> </span><span class='tstring_content'>DSLOG-MANAGER</span><span class='words_sep'> </span><span class='tstring_content'>DUMP</span><span class='words_sep'>
+    </span><span class='tstring_content'>DYNAMIC</span><span class='words_sep'> </span><span class='tstring_content'>DYNAMIC-ENUM</span><span class='words_sep'> </span><span class='tstring_content'>DYNAMIC-FUNCTION</span><span class='words_sep'> </span><span class='tstring_content'>DYNAMIC-INVOKE</span><span class='words_sep'> </span><span class='tstring_content'>EACH</span><span class='words_sep'> </span><span class='tstring_content'>ECHO</span><span class='words_sep'> </span><span class='tstring_content'>EDGE</span><span class='words_sep'>
+    </span><span class='tstring_content'>EDGE-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>EDGE-P</span><span class='words_sep'> </span><span class='tstring_content'>EDGE-PIXELS</span><span class='words_sep'> </span><span class='tstring_content'>EDIT-CAN-PASTE</span><span class='words_sep'> </span><span class='tstring_content'>EDIT-CAN-UNDO</span><span class='words_sep'> </span><span class='tstring_content'>EDIT-CLEAR</span><span class='words_sep'>
+    </span><span class='tstring_content'>EDIT-COPY</span><span class='words_sep'> </span><span class='tstring_content'>EDIT-CUT</span><span class='words_sep'> </span><span class='tstring_content'>EDITING</span><span class='words_sep'> </span><span class='tstring_content'>EDITOR</span><span class='words_sep'> </span><span class='tstring_content'>EDIT-PASTE</span><span class='words_sep'> </span><span class='tstring_content'>EDIT-UNDO</span><span class='words_sep'> </span><span class='tstring_content'>ELSE</span><span class='words_sep'> </span><span class='tstring_content'>EMPTY</span><span class='words_sep'>
+    </span><span class='tstring_content'>EMPTY-TEMP-TABLE</span><span class='words_sep'> </span><span class='tstring_content'>ENABLE</span><span class='words_sep'> </span><span class='tstring_content'>ENABLED-FIELDS</span><span class='words_sep'> </span><span class='tstring_content'>ENCODE</span><span class='words_sep'> </span><span class='tstring_content'>ENCRYPT</span><span class='words_sep'>
+    </span><span class='tstring_content'>ENCRYPT-AUDIT-MAC-KEY</span><span class='words_sep'> </span><span class='tstring_content'>ENCRYPTION-SALT</span><span class='words_sep'> </span><span class='tstring_content'>END</span><span class='words_sep'> </span><span class='tstring_content'>END-DOCUMENT</span><span class='words_sep'> </span><span class='tstring_content'>END-ELEMENT</span><span class='words_sep'>
+    </span><span class='tstring_content'>END-EVENT-GROUP</span><span class='words_sep'> </span><span class='tstring_content'>END-FILE-DROP</span><span class='words_sep'> </span><span class='tstring_content'>ENDKEY</span><span class='words_sep'> </span><span class='tstring_content'>END-KEY</span><span class='words_sep'> </span><span class='tstring_content'>END-MOVE</span><span class='words_sep'> </span><span class='tstring_content'>END-RESIZE</span><span class='words_sep'>
+    </span><span class='tstring_content'>END-ROW-RESIZE</span><span class='words_sep'> </span><span class='tstring_content'>END-USER-PROMPT</span><span class='words_sep'> </span><span class='tstring_content'>ENTERED</span><span class='words_sep'> </span><span class='tstring_content'>ENTITY-EXPANSION-LIMIT</span><span class='words_sep'> </span><span class='tstring_content'>ENTRY</span><span class='words_sep'>
+    </span><span class='tstring_content'>ENUM</span><span class='words_sep'> </span><span class='tstring_content'>EQ</span><span class='words_sep'> </span><span class='tstring_content'>ERROR</span><span class='words_sep'> </span><span class='tstring_content'>ERROR-COL</span><span class='words_sep'> </span><span class='tstring_content'>ERROR-COLUMN</span><span class='words_sep'> </span><span class='tstring_content'>ERROR-ROW</span><span class='words_sep'> </span><span class='tstring_content'>ERROR-STACK-TRACE</span><span class='words_sep'>
+    </span><span class='tstring_content'>ERROR-STAT</span><span class='words_sep'> </span><span class='tstring_content'>ERROR-STATUS</span><span class='words_sep'> </span><span class='tstring_content'>ESCAPE</span><span class='words_sep'> </span><span class='tstring_content'>ETIME</span><span class='words_sep'> </span><span class='tstring_content'>EVENT</span><span class='words_sep'> </span><span class='tstring_content'>EVENT-GROUP-ID</span><span class='words_sep'>
+    </span><span class='tstring_content'>EVENT-PROCEDURE</span><span class='words_sep'> </span><span class='tstring_content'>EVENT-PROCEDURE-CONTEXT</span><span class='words_sep'> </span><span class='tstring_content'>EVENTS</span><span class='words_sep'> </span><span class='tstring_content'>EVENT-T</span><span class='words_sep'> </span><span class='tstring_content'>EVENT-TYPE</span><span class='words_sep'>
+    </span><span class='tstring_content'>EXCEPT</span><span class='words_sep'> </span><span class='tstring_content'>EXCLUSIVE</span><span class='words_sep'> </span><span class='tstring_content'>EXCLUSIVE-ID</span><span class='words_sep'> </span><span class='tstring_content'>EXCLUSIVE-LOCK</span><span class='words_sep'> </span><span class='tstring_content'>EXCLUSIVE-WEB-USER</span><span class='words_sep'>
+    </span><span class='tstring_content'>EXECUTE</span><span class='words_sep'> </span><span class='tstring_content'>EXISTS</span><span class='words_sep'> </span><span class='tstring_content'>EXP</span><span class='words_sep'> </span><span class='tstring_content'>EXPAND</span><span class='words_sep'> </span><span class='tstring_content'>EXPANDABLE</span><span class='words_sep'> </span><span class='tstring_content'>EXPLICIT</span><span class='words_sep'> </span><span class='tstring_content'>EXPORT</span><span class='words_sep'> </span><span class='tstring_content'>EXPORT-PRINCIPAL</span><span class='words_sep'>
+    </span><span class='tstring_content'>EXTENDED</span><span class='words_sep'> </span><span class='tstring_content'>EXTENT</span><span class='words_sep'> </span><span class='tstring_content'>EXTERNAL</span><span class='words_sep'> </span><span class='tstring_content'>FALSE</span><span class='words_sep'> </span><span class='tstring_content'>FETCH</span><span class='words_sep'> </span><span class='tstring_content'>FETCH-SELECTED-ROW</span><span class='words_sep'> </span><span class='tstring_content'>FGC</span><span class='words_sep'> </span><span class='tstring_content'>FGCOLOR</span><span class='words_sep'>
+    </span><span class='tstring_content'>FIELD</span><span class='words_sep'> </span><span class='tstring_content'>FIELD</span><span class='words_sep'> </span><span class='tstring_content'>FIELDS</span><span class='words_sep'> </span><span class='tstring_content'>FILE</span><span class='words_sep'> </span><span class='tstring_content'>FILE-CREATE-DATE</span><span class='words_sep'> </span><span class='tstring_content'>FILE-CREATE-TIME</span><span class='words_sep'> </span><span class='tstring_content'>FILE-INFO</span><span class='words_sep'>
+    </span><span class='tstring_content'>FILE-INFORMATION</span><span class='words_sep'> </span><span class='tstring_content'>FILE-MOD-DATE</span><span class='words_sep'> </span><span class='tstring_content'>FILE-MOD-TIME</span><span class='words_sep'> </span><span class='tstring_content'>FILENAME</span><span class='words_sep'> </span><span class='tstring_content'>FILE-NAME</span><span class='words_sep'>
+    </span><span class='tstring_content'>FILE-OFF</span><span class='words_sep'> </span><span class='tstring_content'>FILE-OFFSET</span><span class='words_sep'> </span><span class='tstring_content'>FILE-SIZE</span><span class='words_sep'> </span><span class='tstring_content'>FILE-TYPE</span><span class='words_sep'> </span><span class='tstring_content'>FILL</span><span class='words_sep'> </span><span class='tstring_content'>FILLED</span><span class='words_sep'> </span><span class='tstring_content'>FILL-IN</span><span class='words_sep'> </span><span class='tstring_content'>FILTERS</span><span class='words_sep'>
+    </span><span class='tstring_content'>FINAL</span><span class='words_sep'> </span><span class='tstring_content'>FINALLY</span><span class='words_sep'> </span><span class='tstring_content'>FIND</span><span class='words_sep'> </span><span class='tstring_content'>FIND-BY-ROWID</span><span class='words_sep'> </span><span class='tstring_content'>FIND-CASE-SENSITIVE</span><span class='words_sep'> </span><span class='tstring_content'>FIND-CURRENT</span><span class='words_sep'>
+    </span><span class='tstring_content'>FINDER</span><span class='words_sep'> </span><span class='tstring_content'>FIND-FIRST</span><span class='words_sep'> </span><span class='tstring_content'>FIND-GLOBAL</span><span class='words_sep'> </span><span class='tstring_content'>FIND-LAST</span><span class='words_sep'> </span><span class='tstring_content'>FIND-NEXT-OCCURRENCE</span><span class='words_sep'>
+    </span><span class='tstring_content'>FIND-PREV-OCCURRENCE</span><span class='words_sep'> </span><span class='tstring_content'>FIND-SELECT</span><span class='words_sep'> </span><span class='tstring_content'>FIND-UNIQUE</span><span class='words_sep'> </span><span class='tstring_content'>FIND-WRAP-AROUND</span><span class='words_sep'> </span><span class='tstring_content'>FIRST</span><span class='words_sep'>
+    </span><span class='tstring_content'>FIRST-ASYNCH-REQUEST</span><span class='words_sep'> </span><span class='tstring_content'>FIRST-CHILD</span><span class='words_sep'> </span><span class='tstring_content'>FIRST-COLUMN</span><span class='words_sep'> </span><span class='tstring_content'>FIRST-FORM</span><span class='words_sep'> </span><span class='tstring_content'>FIRST-OBJECT</span><span class='words_sep'>
+    </span><span class='tstring_content'>FIRST-OF</span><span class='words_sep'> </span><span class='tstring_content'>FIRST-PROC</span><span class='words_sep'> </span><span class='tstring_content'>FIRST-PROCEDURE</span><span class='words_sep'> </span><span class='tstring_content'>FIRST-SERVER</span><span class='words_sep'> </span><span class='tstring_content'>FIRST-TAB-I</span><span class='words_sep'>
+    </span><span class='tstring_content'>FIRST-TAB-ITEM</span><span class='words_sep'> </span><span class='tstring_content'>FIT-LAST-COLUMN</span><span class='words_sep'> </span><span class='tstring_content'>FIXED-ONLY</span><span class='words_sep'> </span><span class='tstring_content'>FLAT-BUTTON</span><span class='words_sep'> </span><span class='tstring_content'>FLOAT</span><span class='words_sep'> </span><span class='tstring_content'>FOCUS</span><span class='words_sep'>
+    </span><span class='tstring_content'>FOCUSED-ROW</span><span class='words_sep'> </span><span class='tstring_content'>FOCUSED-ROW-SELECTED</span><span class='words_sep'> </span><span class='tstring_content'>FONT</span><span class='words_sep'> </span><span class='tstring_content'>FONT-TABLE</span><span class='words_sep'> </span><span class='tstring_content'>FOR</span><span class='words_sep'> </span><span class='tstring_content'>FORCE-FILE</span><span class='words_sep'> </span><span class='tstring_content'>FORE</span><span class='words_sep'>
+    </span><span class='tstring_content'>FOREGROUND</span><span class='words_sep'> </span><span class='tstring_content'>FORM</span><span class='words_sep'> </span><span class='tstring_content'>FORMAT</span><span class='words_sep'> </span><span class='tstring_content'>FORMATTE</span><span class='words_sep'> </span><span class='tstring_content'>FORMATTED</span><span class='words_sep'> </span><span class='tstring_content'>FORM-LONG-INPUT</span><span class='words_sep'> </span><span class='tstring_content'>FORWARD</span><span class='words_sep'>
+    </span><span class='tstring_content'>FORWARD</span><span class='words_sep'> </span><span class='tstring_content'>FORWARDS</span><span class='words_sep'> </span><span class='tstring_content'>FRAGMEN</span><span class='words_sep'> </span><span class='tstring_content'>FRAGMENT</span><span class='words_sep'> </span><span class='tstring_content'>FRAM</span><span class='words_sep'> </span><span class='tstring_content'>FRAME</span><span class='words_sep'> </span><span class='tstring_content'>FRAME-COL</span><span class='words_sep'> </span><span class='tstring_content'>FRAME-DB</span><span class='words_sep'>
+    </span><span class='tstring_content'>FRAME-DOWN</span><span class='words_sep'> </span><span class='tstring_content'>FRAME-FIELD</span><span class='words_sep'> </span><span class='tstring_content'>FRAME-FILE</span><span class='words_sep'> </span><span class='tstring_content'>FRAME-INDE</span><span class='words_sep'> </span><span class='tstring_content'>FRAME-INDEX</span><span class='words_sep'> </span><span class='tstring_content'>FRAME-LINE</span><span class='words_sep'>
+    </span><span class='tstring_content'>FRAME-NAME</span><span class='words_sep'> </span><span class='tstring_content'>FRAME-ROW</span><span class='words_sep'> </span><span class='tstring_content'>FRAME-SPA</span><span class='words_sep'> </span><span class='tstring_content'>FRAME-SPACING</span><span class='words_sep'> </span><span class='tstring_content'>FRAME-VAL</span><span class='words_sep'> </span><span class='tstring_content'>FRAME-VALUE</span><span class='words_sep'>
+    </span><span class='tstring_content'>FRAME-X</span><span class='words_sep'> </span><span class='tstring_content'>FRAME-Y</span><span class='words_sep'> </span><span class='tstring_content'>FREQUENCY</span><span class='words_sep'> </span><span class='tstring_content'>FROM</span><span class='words_sep'> </span><span class='tstring_content'>FROM-C</span><span class='words_sep'> </span><span class='tstring_content'>FROM-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>FROM-CUR</span><span class='words_sep'> </span><span class='tstring_content'>FROM-CURRENT</span><span class='words_sep'>
+    </span><span class='tstring_content'>FROM-P</span><span class='words_sep'> </span><span class='tstring_content'>FROM-PIXELS</span><span class='words_sep'> </span><span class='tstring_content'>FULL-HEIGHT</span><span class='words_sep'> </span><span class='tstring_content'>FULL-HEIGHT-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>FULL-HEIGHT-P</span><span class='words_sep'>
+    </span><span class='tstring_content'>FULL-HEIGHT-PIXELS</span><span class='words_sep'> </span><span class='tstring_content'>FULL-PATHN</span><span class='words_sep'> </span><span class='tstring_content'>FULL-PATHNAME</span><span class='words_sep'> </span><span class='tstring_content'>FULL-WIDTH</span><span class='words_sep'>
+    </span><span class='tstring_content'>FULL-WIDTH-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>FULL-WIDTH-P</span><span class='words_sep'> </span><span class='tstring_content'>FULL-WIDTH-PIXELS</span><span class='words_sep'> </span><span class='tstring_content'>FUNCTION</span><span class='words_sep'>
+    </span><span class='tstring_content'>FUNCTION-CALL-TYPE</span><span class='words_sep'> </span><span class='tstring_content'>GATEWAY</span><span class='words_sep'> </span><span class='tstring_content'>GATEWAYS</span><span class='words_sep'> </span><span class='tstring_content'>GE</span><span class='words_sep'> </span><span class='tstring_content'>GENERATE-MD5</span><span class='words_sep'> </span><span class='tstring_content'>GENERATE-PBE-KEY</span><span class='words_sep'>
+    </span><span class='tstring_content'>GENERATE-PBE-SALT</span><span class='words_sep'> </span><span class='tstring_content'>GENERATE-RANDOM-KEY</span><span class='words_sep'> </span><span class='tstring_content'>GENERATE-UUID</span><span class='words_sep'> </span><span class='tstring_content'>GET</span><span class='words_sep'>
+    </span><span class='tstring_content'>GET-ATTR-CALL-TYPE</span><span class='words_sep'> </span><span class='tstring_content'>GET-ATTRIBUTE-NODE</span><span class='words_sep'> </span><span class='tstring_content'>GET-BINARY-DATA</span><span class='words_sep'> </span><span class='tstring_content'>GET-BLUE</span><span class='words_sep'>
+    </span><span class='tstring_content'>GET-BLUE-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>GET-BROWSE-COLUMN</span><span class='words_sep'> </span><span class='tstring_content'>GET-BUFFER-HANDLE</span><span class='words_sep'> </span><span class='tstring_content'>GETBYTE</span><span class='words_sep'> </span><span class='tstring_content'>GET-BYTE</span><span class='words_sep'>
+    </span><span class='tstring_content'>GET-CALLBACK-PROC-CONTEXT</span><span class='words_sep'> </span><span class='tstring_content'>GET-CALLBACK-PROC-NAME</span><span class='words_sep'> </span><span class='tstring_content'>GET-CGI-LIST</span><span class='words_sep'>
+    </span><span class='tstring_content'>GET-CGI-LONG-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>GET-CGI-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>GET-CLASS</span><span class='words_sep'> </span><span class='tstring_content'>GET-CODEPAGES</span><span class='words_sep'>
+    </span><span class='tstring_content'>GET-COLLATIONS</span><span class='words_sep'> </span><span class='tstring_content'>GET-CONFIG-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>GET-CURRENT</span><span class='words_sep'> </span><span class='tstring_content'>GET-DOUBLE</span><span class='words_sep'>
+    </span><span class='tstring_content'>GET-DROPPED-FILE</span><span class='words_sep'> </span><span class='tstring_content'>GET-DYNAMIC</span><span class='words_sep'> </span><span class='tstring_content'>GET-ERROR-COLUMN</span><span class='words_sep'> </span><span class='tstring_content'>GET-ERROR-ROW</span><span class='words_sep'> </span><span class='tstring_content'>GET-FILE</span><span class='words_sep'>
+    </span><span class='tstring_content'>GET-FILE-NAME</span><span class='words_sep'> </span><span class='tstring_content'>GET-FILE-OFFSE</span><span class='words_sep'> </span><span class='tstring_content'>GET-FILE-OFFSET</span><span class='words_sep'> </span><span class='tstring_content'>GET-FIRST</span><span class='words_sep'> </span><span class='tstring_content'>GET-FLOAT</span><span class='words_sep'>
+    </span><span class='tstring_content'>GET-GREEN</span><span class='words_sep'> </span><span class='tstring_content'>GET-GREEN-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>GET-INDEX-BY-NAMESPACE-NAME</span><span class='words_sep'>
+    </span><span class='tstring_content'>GET-INDEX-BY-QNAME</span><span class='words_sep'> </span><span class='tstring_content'>GET-INT64</span><span class='words_sep'> </span><span class='tstring_content'>GET-ITERATION</span><span class='words_sep'>  </span><span class='tstring_content'>GET-KEY-VAL</span><span class='words_sep'> </span><span class='tstring_content'>GET-KEY-VALUE</span><span class='words_sep'>
+    </span><span class='tstring_content'>GET-LAST</span><span class='words_sep'> </span><span class='tstring_content'>GET-LOCALNAME-BY-INDEX</span><span class='words_sep'> </span><span class='tstring_content'>GET-LONG</span><span class='words_sep'> </span><span class='tstring_content'>GET-MESSAGE</span><span class='words_sep'> </span><span class='tstring_content'>GET-NEXT</span><span class='words_sep'>
+    </span><span class='tstring_content'>GET-NUMBER</span><span class='words_sep'> </span><span class='tstring_content'>GET-POINTER-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>GET-PREV</span><span class='words_sep'> </span><span class='tstring_content'>GET-PRINTERS</span><span class='words_sep'> </span><span class='tstring_content'>GET-PROPERTY</span><span class='words_sep'>
+    </span><span class='tstring_content'>GET-QNAME-BY-INDEX</span><span class='words_sep'> </span><span class='tstring_content'>GET-RED</span><span class='words_sep'> </span><span class='tstring_content'>GET-RED-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>GET-REPOSITIONED-ROW</span><span class='words_sep'>
+    </span><span class='tstring_content'>GET-RGB-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>GET-SELECTED</span><span class='words_sep'> </span><span class='tstring_content'>GET-SELECTED-WIDGET</span><span class='words_sep'> </span><span class='tstring_content'>GET-SHORT</span><span class='words_sep'> </span><span class='tstring_content'>GET-SIGNATURE</span><span class='words_sep'>
+    </span><span class='tstring_content'>GET-SIZE</span><span class='words_sep'> </span><span class='tstring_content'>GET-STRING</span><span class='words_sep'> </span><span class='tstring_content'>GET-TAB-ITEM</span><span class='words_sep'> </span><span class='tstring_content'>GET-TEXT-HEIGHT</span><span class='words_sep'> </span><span class='tstring_content'>GET-TEXT-HEIGHT-CHARS</span><span class='words_sep'>
+    </span><span class='tstring_content'>GET-TEXT-HEIGHT-P</span><span class='words_sep'> </span><span class='tstring_content'>GET-TEXT-HEIGHT-PIXELS</span><span class='words_sep'> </span><span class='tstring_content'>GET-TEXT-WIDTH</span><span class='words_sep'>
+    </span><span class='tstring_content'>GET-TEXT-WIDTH-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>GET-TEXT-WIDTH-P</span><span class='words_sep'> </span><span class='tstring_content'>GET-TEXT-WIDTH-PIXELS</span><span class='words_sep'>
+    </span><span class='tstring_content'>GET-TYPE-BY-INDEX</span><span class='words_sep'> </span><span class='tstring_content'>GET-TYPE-BY-NAMESPACE-NAME</span><span class='words_sep'> </span><span class='tstring_content'>GET-TYPE-BY-QNAME</span><span class='words_sep'>
+    </span><span class='tstring_content'>GET-UNSIGNED-LONG</span><span class='words_sep'> </span><span class='tstring_content'>GET-UNSIGNED-SHORT</span><span class='words_sep'> </span><span class='tstring_content'>GET-URI-BY-INDEX</span><span class='words_sep'>
+    </span><span class='tstring_content'>GET-VALUE-BY-INDEX</span><span class='words_sep'> </span><span class='tstring_content'>GET-VALUE-BY-NAMESPACE-NAME</span><span class='words_sep'> </span><span class='tstring_content'>GET-VALUE-BY-QNAME</span><span class='words_sep'>
+    </span><span class='tstring_content'>GET-WAIT-STATE</span><span class='words_sep'> </span><span class='tstring_content'>GLOBAL</span><span class='words_sep'> </span><span class='tstring_content'>GO-ON</span><span class='words_sep'> </span><span class='tstring_content'>GO-PEND</span><span class='words_sep'> </span><span class='tstring_content'>GO-PENDING</span><span class='words_sep'> </span><span class='tstring_content'>GRANT</span><span class='words_sep'> </span><span class='tstring_content'>GRAPHIC-E</span><span class='words_sep'>
+    </span><span class='tstring_content'>GRAPHIC-EDGE</span><span class='words_sep'> </span><span class='tstring_content'>GRID-FACTOR-H</span><span class='words_sep'> </span><span class='tstring_content'>GRID-FACTOR-HORIZONTAL</span><span class='words_sep'> </span><span class='tstring_content'>GRID-FACTOR-V</span><span class='words_sep'>
+    </span><span class='tstring_content'>GRID-FACTOR-VERTICAL</span><span class='words_sep'> </span><span class='tstring_content'>GRID-SNAP</span><span class='words_sep'> </span><span class='tstring_content'>GRID-UNIT-HEIGHT</span><span class='words_sep'> </span><span class='tstring_content'>GRID-UNIT-HEIGHT-CHARS</span><span class='words_sep'>
+    </span><span class='tstring_content'>GRID-UNIT-HEIGHT-P</span><span class='words_sep'> </span><span class='tstring_content'>GRID-UNIT-HEIGHT-PIXELS</span><span class='words_sep'> </span><span class='tstring_content'>GRID-UNIT-WIDTH</span><span class='words_sep'>
+    </span><span class='tstring_content'>GRID-UNIT-WIDTH-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>GRID-UNIT-WIDTH-P</span><span class='words_sep'> </span><span class='tstring_content'>GRID-UNIT-WIDTH-PIXELS</span><span class='words_sep'>
+    </span><span class='tstring_content'>GRID-VISIBLE</span><span class='words_sep'> </span><span class='tstring_content'>GROUP</span><span class='words_sep'> </span><span class='tstring_content'>GT</span><span class='words_sep'> </span><span class='tstring_content'>GUID</span><span class='words_sep'> </span><span class='tstring_content'>HANDLER</span><span class='words_sep'> </span><span class='tstring_content'>HAS-RECORDS</span><span class='words_sep'> </span><span class='tstring_content'>HAVING</span><span class='words_sep'> </span><span class='tstring_content'>HEADER</span><span class='words_sep'> </span><span class='tstring_content'>HEIGHT</span><span class='words_sep'>
+    </span><span class='tstring_content'>HEIGHT</span><span class='words_sep'> </span><span class='tstring_content'>HEIGHT-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>HEIGHT-P</span><span class='words_sep'> </span><span class='tstring_content'>HEIGHT-P</span><span class='words_sep'> </span><span class='tstring_content'>HEIGHT-PIXELS</span><span class='words_sep'> </span><span class='tstring_content'>HELP</span><span class='words_sep'> </span><span class='tstring_content'>HEX-DECODE</span><span class='words_sep'>
+    </span><span class='tstring_content'>HEX-ENCODE</span><span class='words_sep'> </span><span class='tstring_content'>HIDDEN</span><span class='words_sep'> </span><span class='tstring_content'>HIDE</span><span class='words_sep'> </span><span class='tstring_content'>HORI</span><span class='words_sep'> </span><span class='tstring_content'>HORIZONTAL</span><span class='words_sep'> </span><span class='tstring_content'>HOST-BYTE-ORDER</span><span class='words_sep'> </span><span class='tstring_content'>HTML-CHARSET</span><span class='words_sep'>
+    </span><span class='tstring_content'>HTML-END-OF-LINE</span><span class='words_sep'> </span><span class='tstring_content'>HTML-END-OF-PAGE</span><span class='words_sep'> </span><span class='tstring_content'>HTML-FRAME-BEGIN</span><span class='words_sep'> </span><span class='tstring_content'>HTML-FRAME-END</span><span class='words_sep'>
+    </span><span class='tstring_content'>HTML-HEADER-BEGIN</span><span class='words_sep'> </span><span class='tstring_content'>HTML-HEADER-END</span><span class='words_sep'> </span><span class='tstring_content'>HTML-TITLE-BEGIN</span><span class='words_sep'> </span><span class='tstring_content'>HTML-TITLE-END</span><span class='words_sep'> </span><span class='tstring_content'>HWND</span><span class='words_sep'>
+    </span><span class='tstring_content'>ICON</span><span class='words_sep'> </span><span class='tstring_content'>IF</span><span class='words_sep'> </span><span class='tstring_content'>IMAGE</span><span class='words_sep'> </span><span class='tstring_content'>IMAGE-DOWN</span><span class='words_sep'> </span><span class='tstring_content'>IMAGE-INSENSITIVE</span><span class='words_sep'> </span><span class='tstring_content'>IMAGE-SIZE</span><span class='words_sep'> </span><span class='tstring_content'>IMAGE-SIZE-C</span><span class='words_sep'>
+    </span><span class='tstring_content'>IMAGE-SIZE-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>IMAGE-SIZE-P</span><span class='words_sep'> </span><span class='tstring_content'>IMAGE-SIZE-PIXELS</span><span class='words_sep'> </span><span class='tstring_content'>IMAGE-UP</span><span class='words_sep'>
+    </span><span class='tstring_content'>IMMEDIATE-DISPLAY</span><span class='words_sep'> </span><span class='tstring_content'>IMPLEMENTS</span><span class='words_sep'> </span><span class='tstring_content'>IMPORT</span><span class='words_sep'> </span><span class='tstring_content'>IMPORT-PRINCIPAL</span><span class='words_sep'> </span><span class='tstring_content'>IN</span><span class='words_sep'>
+    </span><span class='tstring_content'>INCREMENT-EXCLUSIVE-ID</span><span class='words_sep'> </span><span class='tstring_content'>INDEX</span><span class='words_sep'> </span><span class='tstring_content'>INDEXED-REPOSITION</span><span class='words_sep'> </span><span class='tstring_content'>INDEX-HINT</span><span class='words_sep'>
+    </span><span class='tstring_content'>INDEX-INFORMATION</span><span class='words_sep'> </span><span class='tstring_content'>INDICATOR</span><span class='words_sep'> </span><span class='tstring_content'>INFO</span><span class='words_sep'> </span><span class='tstring_content'>INFORMATION</span><span class='words_sep'> </span><span class='tstring_content'>IN-HANDLE</span><span class='words_sep'> </span><span class='tstring_content'>INHERIT-BGC</span><span class='words_sep'>
+    </span><span class='tstring_content'>INHERIT-BGCOLOR</span><span class='words_sep'> </span><span class='tstring_content'>INHERIT-FGC</span><span class='words_sep'> </span><span class='tstring_content'>INHERIT-FGCOLOR</span><span class='words_sep'> </span><span class='tstring_content'>INHERITS</span><span class='words_sep'> </span><span class='tstring_content'>INIT</span><span class='words_sep'> </span><span class='tstring_content'>INITIAL</span><span class='words_sep'>
+    </span><span class='tstring_content'>INITIAL-DIR</span><span class='words_sep'> </span><span class='tstring_content'>INITIAL-FILTER</span><span class='words_sep'> </span><span class='tstring_content'>INITIALIZE-DOCUMENT-TYPE</span><span class='words_sep'> </span><span class='tstring_content'>INITIATE</span><span class='words_sep'>
+    </span><span class='tstring_content'>INNER-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>INNER-LINES</span><span class='words_sep'> </span><span class='tstring_content'>INPUT</span><span class='words_sep'> </span><span class='tstring_content'>INPUT-O</span><span class='words_sep'> </span><span class='tstring_content'>INPUT-OUTPUT</span><span class='words_sep'> </span><span class='tstring_content'>INPUT-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>INSERT</span><span class='words_sep'>
+    </span><span class='tstring_content'>INSERT-ATTRIBUTE</span><span class='words_sep'> </span><span class='tstring_content'>INSERT-B</span><span class='words_sep'> </span><span class='tstring_content'>INSERT-BACKTAB</span><span class='words_sep'> </span><span class='tstring_content'>INSERT-FILE</span><span class='words_sep'> </span><span class='tstring_content'>INSERT-ROW</span><span class='words_sep'>
+    </span><span class='tstring_content'>INSERT-STRING</span><span class='words_sep'> </span><span class='tstring_content'>INSERT-T</span><span class='words_sep'> </span><span class='tstring_content'>INSERT-TAB</span><span class='words_sep'> </span><span class='tstring_content'>INTERFACE</span><span class='words_sep'> </span><span class='tstring_content'>INTERNAL-ENTRIES</span><span class='words_sep'> </span><span class='tstring_content'>INTO</span><span class='words_sep'>
+    </span><span class='tstring_content'>INVOKE</span><span class='words_sep'> </span><span class='tstring_content'>IS</span><span class='words_sep'> </span><span class='tstring_content'>IS-ATTR</span><span class='words_sep'> </span><span class='tstring_content'>IS-ATTR</span><span class='words_sep'> </span><span class='tstring_content'>IS-ATTR-SPACE</span><span class='words_sep'> </span><span class='tstring_content'>IS-CLAS</span><span class='words_sep'> </span><span class='tstring_content'>IS-CLASS</span><span class='words_sep'> </span><span class='tstring_content'>IS-JSON</span><span class='words_sep'>
+    </span><span class='tstring_content'>IS-LEAD-BYTE</span><span class='words_sep'> </span><span class='tstring_content'>IS-OPEN</span><span class='words_sep'> </span><span class='tstring_content'>IS-PARAMETER-SET</span><span class='words_sep'> </span><span class='tstring_content'>IS-PARTITIONE</span><span class='words_sep'> </span><span class='tstring_content'>IS-PARTITIONED</span><span class='words_sep'>
+    </span><span class='tstring_content'>IS-ROW-SELECTED</span><span class='words_sep'> </span><span class='tstring_content'>IS-SELECTED</span><span class='words_sep'> </span><span class='tstring_content'>IS-XML</span><span class='words_sep'> </span><span class='tstring_content'>ITEM</span><span class='words_sep'> </span><span class='tstring_content'>ITEMS-PER-ROW</span><span class='words_sep'> </span><span class='tstring_content'>JOIN</span><span class='words_sep'>
+    </span><span class='tstring_content'>JOIN-BY-SQLDB</span><span class='words_sep'> </span><span class='tstring_content'>KBLABEL</span><span class='words_sep'> </span><span class='tstring_content'>KEEP-CONNECTION-OPEN</span><span class='words_sep'> </span><span class='tstring_content'>KEEP-FRAME-Z</span><span class='words_sep'>
+    </span><span class='tstring_content'>KEEP-FRAME-Z-ORDER</span><span class='words_sep'> </span><span class='tstring_content'>KEEP-MESSAGES</span><span class='words_sep'> </span><span class='tstring_content'>KEEP-SECURITY-CACHE</span><span class='words_sep'> </span><span class='tstring_content'>KEEP-TAB-ORDER</span><span class='words_sep'>
+    </span><span class='tstring_content'>KEY</span><span class='words_sep'> </span><span class='tstring_content'>KEYCODE</span><span class='words_sep'> </span><span class='tstring_content'>KEY-CODE</span><span class='words_sep'> </span><span class='tstring_content'>KEYFUNC</span><span class='words_sep'> </span><span class='tstring_content'>KEY-FUNC</span><span class='words_sep'> </span><span class='tstring_content'>KEYFUNCTION</span><span class='words_sep'> </span><span class='tstring_content'>KEY-FUNCTION</span><span class='words_sep'>
+    </span><span class='tstring_content'>KEYLABEL</span><span class='words_sep'> </span><span class='tstring_content'>KEY-LABEL</span><span class='words_sep'> </span><span class='tstring_content'>KEYS</span><span class='words_sep'> </span><span class='tstring_content'>KEYWORD</span><span class='words_sep'> </span><span class='tstring_content'>KEYWORD-ALL</span><span class='words_sep'> </span><span class='tstring_content'>LABEL</span><span class='words_sep'> </span><span class='tstring_content'>LABEL-BGC</span><span class='words_sep'>
+    </span><span class='tstring_content'>LABEL-BGCOLOR</span><span class='words_sep'> </span><span class='tstring_content'>LABEL-DC</span><span class='words_sep'> </span><span class='tstring_content'>LABEL-DCOLOR</span><span class='words_sep'> </span><span class='tstring_content'>LABEL-FGC</span><span class='words_sep'> </span><span class='tstring_content'>LABEL-FGCOLOR</span><span class='words_sep'> </span><span class='tstring_content'>LABEL-FONT</span><span class='words_sep'>
+    </span><span class='tstring_content'>LABEL-PFC</span><span class='words_sep'> </span><span class='tstring_content'>LABEL-PFCOLOR</span><span class='words_sep'> </span><span class='tstring_content'>LABELS</span><span class='words_sep'> </span><span class='tstring_content'>LABELS-HAVE-COLONS</span><span class='words_sep'> </span><span class='tstring_content'>LANDSCAPE</span><span class='words_sep'> </span><span class='tstring_content'>LANGUAGE</span><span class='words_sep'>
+    </span><span class='tstring_content'>LANGUAGES</span><span class='words_sep'> </span><span class='tstring_content'>LARGE</span><span class='words_sep'> </span><span class='tstring_content'>LARGE-TO-SMALL</span><span class='words_sep'> </span><span class='tstring_content'>LAST</span><span class='words_sep'> </span><span class='tstring_content'>LAST-ASYNCH-REQUEST</span><span class='words_sep'> </span><span class='tstring_content'>LAST-BATCH</span><span class='words_sep'>
+    </span><span class='tstring_content'>LAST-CHILD</span><span class='words_sep'> </span><span class='tstring_content'>LAST-EVEN</span><span class='words_sep'> </span><span class='tstring_content'>LAST-EVENT</span><span class='words_sep'> </span><span class='tstring_content'>LAST-FORM</span><span class='words_sep'> </span><span class='tstring_content'>LASTKEY</span><span class='words_sep'> </span><span class='tstring_content'>LAST-KEY</span><span class='words_sep'> </span><span class='tstring_content'>LAST-OBJECT</span><span class='words_sep'>
+    </span><span class='tstring_content'>LAST-OF</span><span class='words_sep'> </span><span class='tstring_content'>LAST-PROCE</span><span class='words_sep'> </span><span class='tstring_content'>LAST-PROCEDURE</span><span class='words_sep'> </span><span class='tstring_content'>LAST-SERVER</span><span class='words_sep'> </span><span class='tstring_content'>LAST-TAB-I</span><span class='words_sep'> </span><span class='tstring_content'>LAST-TAB-ITEM</span><span class='words_sep'>
+    </span><span class='tstring_content'>LC</span><span class='words_sep'> </span><span class='tstring_content'>LDBNAME</span><span class='words_sep'> </span><span class='tstring_content'>LE</span><span class='words_sep'> </span><span class='tstring_content'>LEAVE</span><span class='words_sep'> </span><span class='tstring_content'>LEFT-ALIGN</span><span class='words_sep'> </span><span class='tstring_content'>LEFT-ALIGNED</span><span class='words_sep'> </span><span class='tstring_content'>LEFT-TRIM</span><span class='words_sep'> </span><span class='tstring_content'>LENGTH</span><span class='words_sep'> </span><span class='tstring_content'>LIBRARY</span><span class='words_sep'>
+    </span><span class='tstring_content'>LIKE</span><span class='words_sep'> </span><span class='tstring_content'>LIKE-SEQUENTIAL</span><span class='words_sep'> </span><span class='tstring_content'>LINE</span><span class='words_sep'> </span><span class='tstring_content'>LINE-COUNT</span><span class='words_sep'> </span><span class='tstring_content'>LINE-COUNTER</span><span class='words_sep'> </span><span class='tstring_content'>LIST-EVENTS</span><span class='words_sep'> </span><span class='tstring_content'>LISTI</span><span class='words_sep'>
+    </span><span class='tstring_content'>LISTING</span><span class='words_sep'> </span><span class='tstring_content'>LIST-ITEM-PAIRS</span><span class='words_sep'> </span><span class='tstring_content'>LIST-ITEMS</span><span class='words_sep'> </span><span class='tstring_content'>LIST-PROPERTY-NAMES</span><span class='words_sep'>
+    </span><span class='tstring_content'>LIST-QUERY-ATTRS</span><span class='words_sep'> </span><span class='tstring_content'>LIST-SET-ATTRS</span><span class='words_sep'> </span><span class='tstring_content'>LIST-WIDGETS</span><span class='words_sep'> </span><span class='tstring_content'>LITERAL-QUESTION</span><span class='words_sep'>
+    </span><span class='tstring_content'>LITTLE-ENDIAN</span><span class='words_sep'> </span><span class='tstring_content'>LOAD</span><span class='words_sep'> </span><span class='tstring_content'>LOAD-DOMAINS</span><span class='words_sep'> </span><span class='tstring_content'>LOAD-ICON</span><span class='words_sep'> </span><span class='tstring_content'>LOAD-IMAGE</span><span class='words_sep'> </span><span class='tstring_content'>LOAD-IMAGE-DOWN</span><span class='words_sep'>
+    </span><span class='tstring_content'>LOAD-IMAGE-INSENSITIVE</span><span class='words_sep'> </span><span class='tstring_content'>LOAD-IMAGE-UP</span><span class='words_sep'> </span><span class='tstring_content'>LOAD-MOUSE-P</span><span class='words_sep'> </span><span class='tstring_content'>LOAD-MOUSE-POINTER</span><span class='words_sep'>
+    </span><span class='tstring_content'>LOAD-PICTURE</span><span class='words_sep'> </span><span class='tstring_content'>LOAD-SMALL-ICON</span><span class='words_sep'> </span><span class='tstring_content'>LOCAL-NAME</span><span class='words_sep'> </span><span class='tstring_content'>LOCAL-VERSION-INFO</span><span class='words_sep'>
+    </span><span class='tstring_content'>LOCATOR-COLUMN-NUMBER</span><span class='words_sep'> </span><span class='tstring_content'>LOCATOR-LINE-NUMBER</span><span class='words_sep'> </span><span class='tstring_content'>LOCATOR-PUBLIC-ID</span><span class='words_sep'>
+    </span><span class='tstring_content'>LOCATOR-SYSTEM-ID</span><span class='words_sep'> </span><span class='tstring_content'>LOCATOR-TYPE</span><span class='words_sep'> </span><span class='tstring_content'>LOCKED</span><span class='words_sep'> </span><span class='tstring_content'>LOCK-REGISTRATION</span><span class='words_sep'> </span><span class='tstring_content'>LOG</span><span class='words_sep'>
+    </span><span class='tstring_content'>LOG-AUDIT-EVENT</span><span class='words_sep'> </span><span class='tstring_content'>LOGIN-EXPIRATION-TIMESTAMP</span><span class='words_sep'> </span><span class='tstring_content'>LOGIN-HOST</span><span class='words_sep'> </span><span class='tstring_content'>LOGIN-STATE</span><span class='words_sep'>
+    </span><span class='tstring_content'>LOG-MANAGER</span><span class='words_sep'> </span><span class='tstring_content'>LOGOUT</span><span class='words_sep'> </span><span class='tstring_content'>LOOKAHEAD</span><span class='words_sep'> </span><span class='tstring_content'>LOOKUP</span><span class='words_sep'> </span><span class='tstring_content'>LT</span><span class='words_sep'> </span><span class='tstring_content'>MACHINE-CLASS</span><span class='words_sep'> </span><span class='tstring_content'>MANDATORY</span><span class='words_sep'>
+    </span><span class='tstring_content'>MANUAL-HIGHLIGHT</span><span class='words_sep'> </span><span class='tstring_content'>MAP</span><span class='words_sep'> </span><span class='tstring_content'>MARGIN-EXTRA</span><span class='words_sep'> </span><span class='tstring_content'>MARGIN-HEIGHT</span><span class='words_sep'> </span><span class='tstring_content'>MARGIN-HEIGHT-CHARS</span><span class='words_sep'>
+    </span><span class='tstring_content'>MARGIN-HEIGHT-P</span><span class='words_sep'> </span><span class='tstring_content'>MARGIN-HEIGHT-PIXELS</span><span class='words_sep'> </span><span class='tstring_content'>MARGIN-WIDTH</span><span class='words_sep'> </span><span class='tstring_content'>MARGIN-WIDTH-CHARS</span><span class='words_sep'>
+    </span><span class='tstring_content'>MARGIN-WIDTH-P</span><span class='words_sep'> </span><span class='tstring_content'>MARGIN-WIDTH-PIXELS</span><span class='words_sep'> </span><span class='tstring_content'>MARK-NEW</span><span class='words_sep'> </span><span class='tstring_content'>MARK-ROW-STATE</span><span class='words_sep'> </span><span class='tstring_content'>MATCHES</span><span class='words_sep'> </span><span class='tstring_content'>MAX</span><span class='words_sep'>
+    </span><span class='tstring_content'>MAX</span><span class='words_sep'> </span><span class='tstring_content'>MAX-BUTTON</span><span class='words_sep'> </span><span class='tstring_content'>MAX-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>MAX-DATA-GUESS</span><span class='words_sep'> </span><span class='tstring_content'>MAX-HEIGHT</span><span class='words_sep'> </span><span class='tstring_content'>MAX-HEIGHT-C</span><span class='words_sep'>
+    </span><span class='tstring_content'>MAX-HEIGHT-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>MAX-HEIGHT-P</span><span class='words_sep'> </span><span class='tstring_content'>MAX-HEIGHT-PIXELS</span><span class='words_sep'> </span><span class='tstring_content'>MAXIMIZE</span><span class='words_sep'> </span><span class='tstring_content'>MAXIMUM</span><span class='words_sep'>
+    </span><span class='tstring_content'>MAXIMUM-LEVEL</span><span class='words_sep'> </span><span class='tstring_content'>MAX-ROWS</span><span class='words_sep'> </span><span class='tstring_content'>MAX-SIZE</span><span class='words_sep'> </span><span class='tstring_content'>MAX-VAL</span><span class='words_sep'> </span><span class='tstring_content'>MAX-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>MAX-WIDTH</span><span class='words_sep'> </span><span class='tstring_content'>MAX-WIDTH</span><span class='words_sep'>
+    </span><span class='tstring_content'>MAX-WIDTH-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>MAX-WIDTH-P</span><span class='words_sep'> </span><span class='tstring_content'>MAX-WIDTH-PIXELS</span><span class='words_sep'> </span><span class='tstring_content'>MD5-DIGEST</span><span class='words_sep'> </span><span class='tstring_content'>MEMBER</span><span class='words_sep'>
+    </span><span class='tstring_content'>MEMPTR-TO-NODE-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>MENU</span><span class='words_sep'> </span><span class='tstring_content'>MENUBAR</span><span class='words_sep'> </span><span class='tstring_content'>MENU-BAR</span><span class='words_sep'> </span><span class='tstring_content'>MENU-ITEM</span><span class='words_sep'> </span><span class='tstring_content'>MENU-K</span><span class='words_sep'> </span><span class='tstring_content'>MENU-KEY</span><span class='words_sep'>
+    </span><span class='tstring_content'>MENU-M</span><span class='words_sep'> </span><span class='tstring_content'>MENU-MOUSE</span><span class='words_sep'> </span><span class='tstring_content'>MERGE-BY-FIELD</span><span class='words_sep'> </span><span class='tstring_content'>MESSAGE</span><span class='words_sep'> </span><span class='tstring_content'>MESSAGE-AREA</span><span class='words_sep'>
+    </span><span class='tstring_content'>MESSAGE-AREA-FONT</span><span class='words_sep'> </span><span class='tstring_content'>MESSAGE-LINES</span><span class='words_sep'> </span><span class='tstring_content'>METHOD</span><span class='words_sep'> </span><span class='tstring_content'>MIN</span><span class='words_sep'> </span><span class='tstring_content'>MIN</span><span class='words_sep'> </span><span class='tstring_content'>MIN-BUTTON</span><span class='words_sep'>
+    </span><span class='tstring_content'>MIN-COLUMN-WIDTH-C</span><span class='words_sep'> </span><span class='tstring_content'>MIN-COLUMN-WIDTH-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>MIN-COLUMN-WIDTH-P</span><span class='words_sep'>
+    </span><span class='tstring_content'>MIN-COLUMN-WIDTH-PIXELS</span><span class='words_sep'> </span><span class='tstring_content'>MIN-HEIGHT</span><span class='words_sep'> </span><span class='tstring_content'>MIN-HEIGHT-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>MIN-HEIGHT-P</span><span class='words_sep'>
+    </span><span class='tstring_content'>MIN-HEIGHT-PIXELS</span><span class='words_sep'> </span><span class='tstring_content'>MINIMUM</span><span class='words_sep'> </span><span class='tstring_content'>MIN-SIZE</span><span class='words_sep'> </span><span class='tstring_content'>MIN-VAL</span><span class='words_sep'> </span><span class='tstring_content'>MIN-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>MIN-WIDTH</span><span class='words_sep'>
+    </span><span class='tstring_content'>MIN-WIDTH-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>MIN-WIDTH-P</span><span class='words_sep'> </span><span class='tstring_content'>MIN-WIDTH-PIXELS</span><span class='words_sep'> </span><span class='tstring_content'>MOD</span><span class='words_sep'> </span><span class='tstring_content'>MODIFIED</span><span class='words_sep'> </span><span class='tstring_content'>MODULO</span><span class='words_sep'> </span><span class='tstring_content'>MONTH</span><span class='words_sep'>
+    </span><span class='tstring_content'>MOUSE</span><span class='words_sep'> </span><span class='tstring_content'>MOUSE-P</span><span class='words_sep'> </span><span class='tstring_content'>MOUSE-POINTER</span><span class='words_sep'> </span><span class='tstring_content'>MOVABLE</span><span class='words_sep'> </span><span class='tstring_content'>MOVE-AFTER</span><span class='words_sep'> </span><span class='tstring_content'>MOVE-AFTER-TAB-ITEM</span><span class='words_sep'>
+    </span><span class='tstring_content'>MOVE-BEFOR</span><span class='words_sep'> </span><span class='tstring_content'>MOVE-BEFORE-TAB-ITEM</span><span class='words_sep'> </span><span class='tstring_content'>MOVE-COL</span><span class='words_sep'> </span><span class='tstring_content'>MOVE-COLUMN</span><span class='words_sep'> </span><span class='tstring_content'>MOVE-TO-B</span><span class='words_sep'>
+    </span><span class='tstring_content'>MOVE-TO-BOTTOM</span><span class='words_sep'> </span><span class='tstring_content'>MOVE-TO-EOF</span><span class='words_sep'> </span><span class='tstring_content'>MOVE-TO-T</span><span class='words_sep'> </span><span class='tstring_content'>MOVE-TO-TOP</span><span class='words_sep'> </span><span class='tstring_content'>MPE</span><span class='words_sep'> </span><span class='tstring_content'>MTIME</span><span class='words_sep'>
+    </span><span class='tstring_content'>MULTI-COMPILE</span><span class='words_sep'> </span><span class='tstring_content'>MULTIPLE</span><span class='words_sep'> </span><span class='tstring_content'>MULTIPLE-KEY</span><span class='words_sep'> </span><span class='tstring_content'>MULTITASKING-INTERVAL</span><span class='words_sep'> </span><span class='tstring_content'>MUST-EXIST</span><span class='words_sep'>
+    </span><span class='tstring_content'>NAME</span><span class='words_sep'> </span><span class='tstring_content'>NAMESPACE-PREFIX</span><span class='words_sep'> </span><span class='tstring_content'>NAMESPACE-URI</span><span class='words_sep'> </span><span class='tstring_content'>NATIVE</span><span class='words_sep'> </span><span class='tstring_content'>NE</span><span class='words_sep'> </span><span class='tstring_content'>NEEDS-APPSERVER-PROMPT</span><span class='words_sep'>
+    </span><span class='tstring_content'>NEEDS-PROMPT</span><span class='words_sep'> </span><span class='tstring_content'>NEW</span><span class='words_sep'> </span><span class='tstring_content'>NEW-INSTANCE</span><span class='words_sep'> </span><span class='tstring_content'>NEW-ROW</span><span class='words_sep'> </span><span class='tstring_content'>NEXT</span><span class='words_sep'> </span><span class='tstring_content'>NEXT-COLUMN</span><span class='words_sep'> </span><span class='tstring_content'>NEXT-PROMPT</span><span class='words_sep'>
+    </span><span class='tstring_content'>NEXT-ROWID</span><span class='words_sep'> </span><span class='tstring_content'>NEXT-SIBLING</span><span class='words_sep'> </span><span class='tstring_content'>NEXT-TAB-I</span><span class='words_sep'> </span><span class='tstring_content'>NEXT-TAB-ITEM</span><span class='words_sep'> </span><span class='tstring_content'>NEXT-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>NO</span><span class='words_sep'>
+    </span><span class='tstring_content'>NO-APPLY</span><span class='words_sep'> </span><span class='tstring_content'>NO-ARRAY-MESSAGE</span><span class='words_sep'> </span><span class='tstring_content'>NO-ASSIGN</span><span class='words_sep'> </span><span class='tstring_content'>NO-ATTR</span><span class='words_sep'> </span><span class='tstring_content'>NO-ATTR</span><span class='words_sep'> </span><span class='tstring_content'>NO-ATTR-LIST</span><span class='words_sep'>
+    </span><span class='tstring_content'>NO-ATTR-SPACE</span><span class='words_sep'> </span><span class='tstring_content'>NO-AUTO-VALIDATE</span><span class='words_sep'> </span><span class='tstring_content'>NO-BIND-WHERE</span><span class='words_sep'> </span><span class='tstring_content'>NO-BOX</span><span class='words_sep'> </span><span class='tstring_content'>NO-CONSOLE</span><span class='words_sep'>
+    </span><span class='tstring_content'>NO-CONVERT</span><span class='words_sep'> </span><span class='tstring_content'>NO-CONVERT-3D-COLORS</span><span class='words_sep'> </span><span class='tstring_content'>NO-CURRENT-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>NO-DEBUG</span><span class='words_sep'>
+    </span><span class='tstring_content'>NODE-VALUE-TO-MEMPTR</span><span class='words_sep'> </span><span class='tstring_content'>NO-DRAG</span><span class='words_sep'> </span><span class='tstring_content'>NO-ECHO</span><span class='words_sep'> </span><span class='tstring_content'>NO-EMPTY-SPACE</span><span class='words_sep'> </span><span class='tstring_content'>NO-ERROR</span><span class='words_sep'> </span><span class='tstring_content'>NO-F</span><span class='words_sep'>
+    </span><span class='tstring_content'>NO-FILL</span><span class='words_sep'> </span><span class='tstring_content'>NO-FOCUS</span><span class='words_sep'> </span><span class='tstring_content'>NO-HELP</span><span class='words_sep'> </span><span class='tstring_content'>NO-HIDE</span><span class='words_sep'> </span><span class='tstring_content'>NO-INDEX-HINT</span><span class='words_sep'> </span><span class='tstring_content'>NO-INHERIT-BGC</span><span class='words_sep'>
+    </span><span class='tstring_content'>NO-INHERIT-BGCOLOR</span><span class='words_sep'> </span><span class='tstring_content'>NO-INHERIT-FGC</span><span class='words_sep'> </span><span class='tstring_content'>NO-INHERIT-FGCOLOR</span><span class='words_sep'> </span><span class='tstring_content'>NO-JOIN-BY-SQLDB</span><span class='words_sep'>
+    </span><span class='tstring_content'>NO-LABEL</span><span class='words_sep'> </span><span class='tstring_content'>NO-LABELS</span><span class='words_sep'> </span><span class='tstring_content'>NO-LOBS</span><span class='words_sep'> </span><span class='tstring_content'>NO-LOCK</span><span class='words_sep'> </span><span class='tstring_content'>NO-LOOKAHEAD</span><span class='words_sep'> </span><span class='tstring_content'>NO-MAP</span><span class='words_sep'> </span><span class='tstring_content'>NO-MES</span><span class='words_sep'>
+    </span><span class='tstring_content'>NO-MESSAGE</span><span class='words_sep'> </span><span class='tstring_content'>NONAMESPACE-SCHEMA-LOCATION</span><span class='words_sep'> </span><span class='tstring_content'>NONE</span><span class='words_sep'> </span><span class='tstring_content'>NO-PAUSE</span><span class='words_sep'> </span><span class='tstring_content'>NO-PREFE</span><span class='words_sep'>
+    </span><span class='tstring_content'>NO-PREFETCH</span><span class='words_sep'> </span><span class='tstring_content'>NORMALIZE</span><span class='words_sep'> </span><span class='tstring_content'>NO-ROW-MARKERS</span><span class='words_sep'> </span><span class='tstring_content'>NO-SCROLLBAR-VERTICAL</span><span class='words_sep'>
+    </span><span class='tstring_content'>NO-SEPARATE-CONNECTION</span><span class='words_sep'> </span><span class='tstring_content'>NO-SEPARATORS</span><span class='words_sep'> </span><span class='tstring_content'>NOT</span><span class='words_sep'> </span><span class='tstring_content'>NO-TAB-STOP</span><span class='words_sep'> </span><span class='tstring_content'>NOT-ACTIVE</span><span class='words_sep'> </span><span class='tstring_content'>NO-UND</span><span class='words_sep'>
+    </span><span class='tstring_content'>NO-UNDERLINE</span><span class='words_sep'> </span><span class='tstring_content'>NO-UNDO</span><span class='words_sep'> </span><span class='tstring_content'>NO-VAL</span><span class='words_sep'> </span><span class='tstring_content'>NO-VALIDATE</span><span class='words_sep'> </span><span class='tstring_content'>NOW</span><span class='words_sep'> </span><span class='tstring_content'>NO-WAIT</span><span class='words_sep'> </span><span class='tstring_content'>NO-WORD-WRAP</span><span class='words_sep'> </span><span class='tstring_content'>NULL</span><span class='words_sep'>
+    </span><span class='tstring_content'>NUM-ALI</span><span class='words_sep'> </span><span class='tstring_content'>NUM-ALIASES</span><span class='words_sep'> </span><span class='tstring_content'>NUM-BUFFERS</span><span class='words_sep'> </span><span class='tstring_content'>NUM-BUT</span><span class='words_sep'> </span><span class='tstring_content'>NUM-BUTTONS</span><span class='words_sep'> </span><span class='tstring_content'>NUM-COL</span><span class='words_sep'>
+    </span><span class='tstring_content'>NUM-COLUMNS</span><span class='words_sep'> </span><span class='tstring_content'>NUM-COPIES</span><span class='words_sep'> </span><span class='tstring_content'>NUM-DBS</span><span class='words_sep'> </span><span class='tstring_content'>NUM-DROPPED-FILES</span><span class='words_sep'> </span><span class='tstring_content'>NUM-ENTRIES</span><span class='words_sep'> </span><span class='tstring_content'>NUMERIC</span><span class='words_sep'>
+    </span><span class='tstring_content'>NUMERIC-F</span><span class='words_sep'> </span><span class='tstring_content'>NUMERIC-FORMAT</span><span class='words_sep'> </span><span class='tstring_content'>NUM-FIELDS</span><span class='words_sep'> </span><span class='tstring_content'>NUM-FORMATS</span><span class='words_sep'> </span><span class='tstring_content'>NUM-ITEMS</span><span class='words_sep'>
+    </span><span class='tstring_content'>NUM-ITERATIONS</span><span class='words_sep'> </span><span class='tstring_content'>NUM-LINES</span><span class='words_sep'> </span><span class='tstring_content'>NUM-LOCKED-COL</span><span class='words_sep'> </span><span class='tstring_content'>NUM-LOCKED-COLUMNS</span><span class='words_sep'>
+    </span><span class='tstring_content'>NUM-MESSAGES</span><span class='words_sep'> </span><span class='tstring_content'>NUM-PARAMETERS</span><span class='words_sep'> </span><span class='tstring_content'>NUM-REFERENCES</span><span class='words_sep'> </span><span class='tstring_content'>NUM-REPLACED</span><span class='words_sep'> </span><span class='tstring_content'>NUM-RESULTS</span><span class='words_sep'>
+    </span><span class='tstring_content'>NUM-SELECTED</span><span class='words_sep'> </span><span class='tstring_content'>NUM-SELECTED-ROWS</span><span class='words_sep'> </span><span class='tstring_content'>NUM-SELECTED-WIDGETS</span><span class='words_sep'> </span><span class='tstring_content'>NUM-TABS</span><span class='words_sep'>
+    </span><span class='tstring_content'>NUM-TO-RETAIN</span><span class='words_sep'> </span><span class='tstring_content'>NUM-VISIBLE-COLUMNS</span><span class='words_sep'> </span><span class='tstring_content'>OBJECT</span><span class='words_sep'> </span><span class='tstring_content'>OCTET-LENGTH</span><span class='words_sep'> </span><span class='tstring_content'>OF</span><span class='words_sep'> </span><span class='tstring_content'>OFF</span><span class='words_sep'> </span><span class='tstring_content'>OK</span><span class='words_sep'>
+    </span><span class='tstring_content'>OK-CANCEL</span><span class='words_sep'> </span><span class='tstring_content'>OLD</span><span class='words_sep'> </span><span class='tstring_content'>ON</span><span class='words_sep'> </span><span class='tstring_content'>ON-FRAME</span><span class='words_sep'> </span><span class='tstring_content'>ON-FRAME-BORDER</span><span class='words_sep'> </span><span class='tstring_content'>OPEN</span><span class='words_sep'> </span><span class='tstring_content'>OPSYS</span><span class='words_sep'> </span><span class='tstring_content'>OPTION</span><span class='words_sep'> </span><span class='tstring_content'>OR</span><span class='words_sep'>
+    </span><span class='tstring_content'>ORDERED-JOIN</span><span class='words_sep'> </span><span class='tstring_content'>ORDINAL</span><span class='words_sep'> </span><span class='tstring_content'>OS-APPEND</span><span class='words_sep'> </span><span class='tstring_content'>OS-COMMAND</span><span class='words_sep'> </span><span class='tstring_content'>OS-COPY</span><span class='words_sep'> </span><span class='tstring_content'>OS-CREATE-DIR</span><span class='words_sep'>
+    </span><span class='tstring_content'>OS-DELETE</span><span class='words_sep'> </span><span class='tstring_content'>OS-DIR</span><span class='words_sep'> </span><span class='tstring_content'>OS-DRIVE</span><span class='words_sep'> </span><span class='tstring_content'>OS-DRIVES</span><span class='words_sep'> </span><span class='tstring_content'>OS-ERROR</span><span class='words_sep'> </span><span class='tstring_content'>OS-GETENV</span><span class='words_sep'> </span><span class='tstring_content'>OS-RENAME</span><span class='words_sep'>
+    </span><span class='tstring_content'>OTHERWISE</span><span class='words_sep'> </span><span class='tstring_content'>OUTPUT</span><span class='words_sep'> </span><span class='tstring_content'>OVERLAY</span><span class='words_sep'> </span><span class='tstring_content'>OVERRIDE</span><span class='words_sep'> </span><span class='tstring_content'>OWNER</span><span class='words_sep'> </span><span class='tstring_content'>PAGE</span><span class='words_sep'> </span><span class='tstring_content'>PAGE-BOT</span><span class='words_sep'> </span><span class='tstring_content'>PAGE-BOTTOM</span><span class='words_sep'>
+    </span><span class='tstring_content'>PAGED</span><span class='words_sep'> </span><span class='tstring_content'>PAGE-NUM</span><span class='words_sep'> </span><span class='tstring_content'>PAGE-NUMBER</span><span class='words_sep'> </span><span class='tstring_content'>PAGE-SIZE</span><span class='words_sep'> </span><span class='tstring_content'>PAGE-TOP</span><span class='words_sep'> </span><span class='tstring_content'>PAGE-WID</span><span class='words_sep'> </span><span class='tstring_content'>PAGE-WIDTH</span><span class='words_sep'>
+    </span><span class='tstring_content'>PARAM</span><span class='words_sep'> </span><span class='tstring_content'>PARAMETER</span><span class='words_sep'> </span><span class='tstring_content'>PARENT</span><span class='words_sep'> </span><span class='tstring_content'>PARSE-STATUS</span><span class='words_sep'> </span><span class='tstring_content'>PARTIAL-KEY</span><span class='words_sep'> </span><span class='tstring_content'>PASCAL</span><span class='words_sep'> </span><span class='tstring_content'>PASSWORD-FIELD</span><span class='words_sep'>
+    </span><span class='tstring_content'>PATHNAME</span><span class='words_sep'> </span><span class='tstring_content'>PAUSE</span><span class='words_sep'> </span><span class='tstring_content'>PBE-HASH-ALG</span><span class='words_sep'> </span><span class='tstring_content'>PBE-HASH-ALGORITHM</span><span class='words_sep'> </span><span class='tstring_content'>PBE-KEY-ROUNDS</span><span class='words_sep'> </span><span class='tstring_content'>PDBNAME</span><span class='words_sep'>
+    </span><span class='tstring_content'>PERSIST</span><span class='words_sep'> </span><span class='tstring_content'>PERSISTENT</span><span class='words_sep'> </span><span class='tstring_content'>PERSISTENT-CACHE-DISABLED</span><span class='words_sep'> </span><span class='tstring_content'>PFC</span><span class='words_sep'> </span><span class='tstring_content'>PFCOLOR</span><span class='words_sep'> </span><span class='tstring_content'>PIXELS</span><span class='words_sep'>
+    </span><span class='tstring_content'>PIXELS-PER-COL</span><span class='words_sep'> </span><span class='tstring_content'>PIXELS-PER-COLUMN</span><span class='words_sep'> </span><span class='tstring_content'>PIXELS-PER-ROW</span><span class='words_sep'> </span><span class='tstring_content'>POPUP-M</span><span class='words_sep'> </span><span class='tstring_content'>POPUP-MENU</span><span class='words_sep'>
+    </span><span class='tstring_content'>POPUP-O</span><span class='words_sep'> </span><span class='tstring_content'>POPUP-ONLY</span><span class='words_sep'> </span><span class='tstring_content'>PORTRAIT</span><span class='words_sep'> </span><span class='tstring_content'>POSITION</span><span class='words_sep'> </span><span class='tstring_content'>PRECISION</span><span class='words_sep'> </span><span class='tstring_content'>PREFER-DATASET</span><span class='words_sep'> </span><span class='tstring_content'>PREPARED</span><span class='words_sep'>
+    </span><span class='tstring_content'>PREPARE-STRING</span><span class='words_sep'> </span><span class='tstring_content'>PREPROC</span><span class='words_sep'> </span><span class='tstring_content'>PREPROCESS</span><span class='words_sep'> </span><span class='tstring_content'>PRESEL</span><span class='words_sep'> </span><span class='tstring_content'>PRESELECT</span><span class='words_sep'> </span><span class='tstring_content'>PREV</span><span class='words_sep'> </span><span class='tstring_content'>PREV-COLUMN</span><span class='words_sep'>
+    </span><span class='tstring_content'>PREV-SIBLING</span><span class='words_sep'> </span><span class='tstring_content'>PREV-TAB-I</span><span class='words_sep'> </span><span class='tstring_content'>PREV-TAB-ITEM</span><span class='words_sep'> </span><span class='tstring_content'>PRIMARY</span><span class='words_sep'> </span><span class='tstring_content'>PRINTER</span><span class='words_sep'>
+    </span><span class='tstring_content'>PRINTER-CONTROL-HANDLE</span><span class='words_sep'> </span><span class='tstring_content'>PRINTER-HDC</span><span class='words_sep'> </span><span class='tstring_content'>PRINTER-NAME</span><span class='words_sep'> </span><span class='tstring_content'>PRINTER-PORT</span><span class='words_sep'>
+    </span><span class='tstring_content'>PRINTER-SETUP</span><span class='words_sep'> </span><span class='tstring_content'>PRIVATE</span><span class='words_sep'> </span><span class='tstring_content'>PRIVATE-D</span><span class='words_sep'> </span><span class='tstring_content'>PRIVATE-DATA</span><span class='words_sep'> </span><span class='tstring_content'>PRIVILEGES</span><span class='words_sep'> </span><span class='tstring_content'>PROCE</span><span class='words_sep'>
+    </span><span class='tstring_content'>PROCEDURE</span><span class='words_sep'> </span><span class='tstring_content'>PROCEDURE-CALL-TYPE</span><span class='words_sep'> </span><span class='tstring_content'>PROCEDURE-TYPE</span><span class='words_sep'> </span><span class='tstring_content'>PROCESS</span><span class='words_sep'> </span><span class='tstring_content'>PROC-HA</span><span class='words_sep'>
+    </span><span class='tstring_content'>PROC-HANDLE</span><span class='words_sep'> </span><span class='tstring_content'>PROC-ST</span><span class='words_sep'> </span><span class='tstring_content'>PROC-STATUS</span><span class='words_sep'> </span><span class='tstring_content'>proc-text</span><span class='words_sep'> </span><span class='tstring_content'>proc-text-buffer</span><span class='words_sep'> </span><span class='tstring_content'>PROFILER</span><span class='words_sep'>
+    </span><span class='tstring_content'>PROGRAM-NAME</span><span class='words_sep'> </span><span class='tstring_content'>PROGRESS</span><span class='words_sep'> </span><span class='tstring_content'>PROGRESS-S</span><span class='words_sep'> </span><span class='tstring_content'>PROGRESS-SOURCE</span><span class='words_sep'> </span><span class='tstring_content'>PROMPT</span><span class='words_sep'> </span><span class='tstring_content'>PROMPT-F</span><span class='words_sep'>
+    </span><span class='tstring_content'>PROMPT-FOR</span><span class='words_sep'> </span><span class='tstring_content'>PROMSGS</span><span class='words_sep'> </span><span class='tstring_content'>PROPATH</span><span class='words_sep'> </span><span class='tstring_content'>PROPERTY</span><span class='words_sep'> </span><span class='tstring_content'>PROTECTED</span><span class='words_sep'> </span><span class='tstring_content'>PROVERS</span><span class='words_sep'> </span><span class='tstring_content'>PROVERSION</span><span class='words_sep'> </span><span class='tstring_content'>PROXY</span><span class='words_sep'>
+    </span><span class='tstring_content'>PROXY-PASSWORD</span><span class='words_sep'> </span><span class='tstring_content'>PROXY-USERID</span><span class='words_sep'> </span><span class='tstring_content'>PUBLIC</span><span class='words_sep'> </span><span class='tstring_content'>PUBLIC-ID</span><span class='words_sep'> </span><span class='tstring_content'>PUBLISH</span><span class='words_sep'> </span><span class='tstring_content'>PUBLISHED-EVENTS</span><span class='words_sep'>
+    </span><span class='tstring_content'>PUT</span><span class='words_sep'> </span><span class='tstring_content'>PUTBYTE</span><span class='words_sep'> </span><span class='tstring_content'>PUT-BYTE</span><span class='words_sep'> </span><span class='tstring_content'>PUT-DOUBLE</span><span class='words_sep'> </span><span class='tstring_content'>PUT-FLOAT</span><span class='words_sep'> </span><span class='tstring_content'>PUT-INT64</span><span class='words_sep'> </span><span class='tstring_content'>PUT-KEY-VAL</span><span class='words_sep'>
+    </span><span class='tstring_content'>PUT-KEY-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>PUT-LONG</span><span class='words_sep'> </span><span class='tstring_content'>PUT-SHORT</span><span class='words_sep'> </span><span class='tstring_content'>PUT-STRING</span><span class='words_sep'> </span><span class='tstring_content'>PUT-UNSIGNED-LONG</span><span class='words_sep'> </span><span class='tstring_content'>QUERY</span><span class='words_sep'>
+    </span><span class='tstring_content'>QUERY-CLOSE</span><span class='words_sep'> </span><span class='tstring_content'>QUERY-OFF-END</span><span class='words_sep'> </span><span class='tstring_content'>QUERY-OPEN</span><span class='words_sep'> </span><span class='tstring_content'>QUERY-PREPARE</span><span class='words_sep'> </span><span class='tstring_content'>QUERY-TUNING</span><span class='words_sep'>
+    </span><span class='tstring_content'>QUESTION</span><span class='words_sep'> </span><span class='tstring_content'>QUIT</span><span class='words_sep'> </span><span class='tstring_content'>QUOTER</span><span class='words_sep'> </span><span class='tstring_content'>RADIO-BUTTONS</span><span class='words_sep'> </span><span class='tstring_content'>RADIO-SET</span><span class='words_sep'> </span><span class='tstring_content'>RANDOM</span><span class='words_sep'> </span><span class='tstring_content'>RAW-TRANSFER</span><span class='words_sep'>
+    </span><span class='tstring_content'>RCODE-INFO</span><span class='words_sep'> </span><span class='tstring_content'>RCODE-INFORMATION</span><span class='words_sep'> </span><span class='tstring_content'>READ-AVAILABLE</span><span class='words_sep'> </span><span class='tstring_content'>READ-EXACT-NUM</span><span class='words_sep'> </span><span class='tstring_content'>READ-FILE</span><span class='words_sep'>
+    </span><span class='tstring_content'>READ-JSON</span><span class='words_sep'> </span><span class='tstring_content'>READKEY</span><span class='words_sep'> </span><span class='tstring_content'>READ-ONLY</span><span class='words_sep'> </span><span class='tstring_content'>READ-XML</span><span class='words_sep'> </span><span class='tstring_content'>REAL</span><span class='words_sep'> </span><span class='tstring_content'>RECORD-LENGTH</span><span class='words_sep'> </span><span class='tstring_content'>RECT</span><span class='words_sep'> </span><span class='tstring_content'>RECTANGLE</span><span class='words_sep'>
+    </span><span class='tstring_content'>RECURSIVE</span><span class='words_sep'> </span><span class='tstring_content'>REFERENCE-ONLY</span><span class='words_sep'> </span><span class='tstring_content'>REFRESH</span><span class='words_sep'> </span><span class='tstring_content'>REFRESHABLE</span><span class='words_sep'> </span><span class='tstring_content'>REFRESH-AUDIT-POLICY</span><span class='words_sep'>
+    </span><span class='tstring_content'>REGISTER-DOMAIN</span><span class='words_sep'> </span><span class='tstring_content'>RELEASE</span><span class='words_sep'> </span><span class='tstring_content'>REMOTE</span><span class='words_sep'> </span><span class='tstring_content'>REMOVE-EVENTS-PROCEDURE</span><span class='words_sep'>
+    </span><span class='tstring_content'>REMOVE-SUPER-PROCEDURE</span><span class='words_sep'> </span><span class='tstring_content'>REPEAT</span><span class='words_sep'> </span><span class='tstring_content'>REPLACE</span><span class='words_sep'> </span><span class='tstring_content'>REPLACE-SELECTION-TEXT</span><span class='words_sep'>
+    </span><span class='tstring_content'>REPOSITION</span><span class='words_sep'> </span><span class='tstring_content'>REPOSITION-BACKWARD</span><span class='words_sep'> </span><span class='tstring_content'>REPOSITION-FORWARD</span><span class='words_sep'> </span><span class='tstring_content'>REPOSITION-MODE</span><span class='words_sep'>
+    </span><span class='tstring_content'>REPOSITION-TO-ROW</span><span class='words_sep'> </span><span class='tstring_content'>REPOSITION-TO-ROWID</span><span class='words_sep'> </span><span class='tstring_content'>REQUEST</span><span class='words_sep'> </span><span class='tstring_content'>REQUEST-INFO</span><span class='words_sep'> </span><span class='tstring_content'>RESET</span><span class='words_sep'>
+    </span><span class='tstring_content'>RESIZA</span><span class='words_sep'> </span><span class='tstring_content'>RESIZABLE</span><span class='words_sep'> </span><span class='tstring_content'>RESIZE</span><span class='words_sep'> </span><span class='tstring_content'>RESPONSE-INFO</span><span class='words_sep'> </span><span class='tstring_content'>RESTART-ROW</span><span class='words_sep'> </span><span class='tstring_content'>RESTART-ROWID</span><span class='words_sep'> </span><span class='tstring_content'>RETAIN</span><span class='words_sep'>
+    </span><span class='tstring_content'>RETAIN-SHAPE</span><span class='words_sep'> </span><span class='tstring_content'>RETRY</span><span class='words_sep'> </span><span class='tstring_content'>RETRY-CANCEL</span><span class='words_sep'> </span><span class='tstring_content'>RETURN</span><span class='words_sep'> </span><span class='tstring_content'>RETURN-ALIGN</span><span class='words_sep'> </span><span class='tstring_content'>RETURN-INS</span><span class='words_sep'>
+    </span><span class='tstring_content'>RETURN-INSERTED</span><span class='words_sep'> </span><span class='tstring_content'>RETURNS</span><span class='words_sep'> </span><span class='tstring_content'>RETURN-TO-START-DI</span><span class='words_sep'> </span><span class='tstring_content'>RETURN-TO-START-DIR</span><span class='words_sep'>
+    </span><span class='tstring_content'>RETURN-VAL</span><span class='words_sep'> </span><span class='tstring_content'>RETURN-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>RETURN-VALUE-DATA-TYPE</span><span class='words_sep'> </span><span class='tstring_content'>REVERSE-FROM</span><span class='words_sep'> </span><span class='tstring_content'>REVERT</span><span class='words_sep'>
+    </span><span class='tstring_content'>REVOKE</span><span class='words_sep'> </span><span class='tstring_content'>RGB-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>RIGHT-ALIGNED</span><span class='words_sep'> </span><span class='tstring_content'>RIGHT-TRIM</span><span class='words_sep'> </span><span class='tstring_content'>R-INDEX</span><span class='words_sep'> </span><span class='tstring_content'>ROLES</span><span class='words_sep'> </span><span class='tstring_content'>ROUND</span><span class='words_sep'>
+    </span><span class='tstring_content'>ROUTINE-LEVEL</span><span class='words_sep'> </span><span class='tstring_content'>ROW</span><span class='words_sep'> </span><span class='tstring_content'>ROW-HEIGHT-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>ROW-HEIGHT-PIXELS</span><span class='words_sep'> </span><span class='tstring_content'>ROW-MARKERS</span><span class='words_sep'>
+    </span><span class='tstring_content'>ROW-OF</span><span class='words_sep'> </span><span class='tstring_content'>ROW-RESIZABLE</span><span class='words_sep'> </span><span class='tstring_content'>RULE</span><span class='words_sep'> </span><span class='tstring_content'>RUN</span><span class='words_sep'> </span><span class='tstring_content'>RUN-PROCEDURE</span><span class='words_sep'> </span><span class='tstring_content'>SAVE</span><span class='words_sep'> </span><span class='tstring_content'>SAVE</span><span class='words_sep'> </span><span class='tstring_content'>CACHE</span><span class='words_sep'> </span><span class='tstring_content'>SAVE-AS</span><span class='words_sep'>
+    </span><span class='tstring_content'>SAVE-FILE</span><span class='words_sep'> </span><span class='tstring_content'>SAX-COMPLE</span><span class='words_sep'> </span><span class='tstring_content'>SAX-COMPLETE</span><span class='words_sep'> </span><span class='tstring_content'>SAX-PARSE</span><span class='words_sep'> </span><span class='tstring_content'>SAX-PARSE-FIRST</span><span class='words_sep'>
+    </span><span class='tstring_content'>SAX-PARSE-NEXT</span><span class='words_sep'> </span><span class='tstring_content'>SAX-PARSER-ERROR</span><span class='words_sep'> </span><span class='tstring_content'>SAX-RUNNING</span><span class='words_sep'> </span><span class='tstring_content'>SAX-UNINITIALIZED</span><span class='words_sep'>
+    </span><span class='tstring_content'>SAX-WRITE-BEGIN</span><span class='words_sep'> </span><span class='tstring_content'>SAX-WRITE-COMPLETE</span><span class='words_sep'> </span><span class='tstring_content'>SAX-WRITE-CONTENT</span><span class='words_sep'> </span><span class='tstring_content'>SAX-WRITE-ELEMENT</span><span class='words_sep'>
+    </span><span class='tstring_content'>SAX-WRITE-ERROR</span><span class='words_sep'> </span><span class='tstring_content'>SAX-WRITE-IDLE</span><span class='words_sep'> </span><span class='tstring_content'>SAX-WRITER</span><span class='words_sep'> </span><span class='tstring_content'>SAX-WRITE-TAG</span><span class='words_sep'> </span><span class='tstring_content'>SCHEMA</span><span class='words_sep'>
+    </span><span class='tstring_content'>SCHEMA-LOCATION</span><span class='words_sep'> </span><span class='tstring_content'>SCHEMA-MARSHAL</span><span class='words_sep'> </span><span class='tstring_content'>SCHEMA-PATH</span><span class='words_sep'> </span><span class='tstring_content'>SCREEN</span><span class='words_sep'> </span><span class='tstring_content'>SCREEN-IO</span><span class='words_sep'>
+    </span><span class='tstring_content'>SCREEN-LINES</span><span class='words_sep'> </span><span class='tstring_content'>SCREEN-VAL</span><span class='words_sep'> </span><span class='tstring_content'>SCREEN-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>SCROLL</span><span class='words_sep'> </span><span class='tstring_content'>SCROLLABLE</span><span class='words_sep'> </span><span class='tstring_content'>SCROLLBAR-H</span><span class='words_sep'>
+    </span><span class='tstring_content'>SCROLLBAR-HORIZONTAL</span><span class='words_sep'> </span><span class='tstring_content'>SCROLL-BARS</span><span class='words_sep'> </span><span class='tstring_content'>SCROLLBAR-V</span><span class='words_sep'> </span><span class='tstring_content'>SCROLLBAR-VERTICAL</span><span class='words_sep'>
+    </span><span class='tstring_content'>SCROLL-DELTA</span><span class='words_sep'> </span><span class='tstring_content'>SCROLLED-ROW-POS</span><span class='words_sep'> </span><span class='tstring_content'>SCROLLED-ROW-POSITION</span><span class='words_sep'> </span><span class='tstring_content'>SCROLLING</span><span class='words_sep'>
+    </span><span class='tstring_content'>SCROLL-OFFSET</span><span class='words_sep'> </span><span class='tstring_content'>SCROLL-TO-CURRENT-ROW</span><span class='words_sep'> </span><span class='tstring_content'>SCROLL-TO-I</span><span class='words_sep'> </span><span class='tstring_content'>SCROLL-TO-ITEM</span><span class='words_sep'>
+    </span><span class='tstring_content'>SCROLL-TO-SELECTED-ROW</span><span class='words_sep'> </span><span class='tstring_content'>SDBNAME</span><span class='words_sep'> </span><span class='tstring_content'>SEAL</span><span class='words_sep'> </span><span class='tstring_content'>SEAL-TIMESTAMP</span><span class='words_sep'> </span><span class='tstring_content'>SEARCH</span><span class='words_sep'> </span><span class='tstring_content'>SEARCH-SELF</span><span class='words_sep'>
+    </span><span class='tstring_content'>SEARCH-TARGER</span><span class='words_sep'> </span><span class='tstring_content'>SECTION</span><span class='words_sep'> </span><span class='tstring_content'>SECURITY-POLICY</span><span class='words_sep'> </span><span class='tstring_content'>SEEK</span><span class='words_sep'> </span><span class='tstring_content'>SELECT</span><span class='words_sep'> </span><span class='tstring_content'>SELECTABLE</span><span class='words_sep'>
+    </span><span class='tstring_content'>SELECT-ALL</span><span class='words_sep'> </span><span class='tstring_content'>SELECTED</span><span class='words_sep'> </span><span class='tstring_content'>SELECT-FOCUSED-ROW</span><span class='words_sep'> </span><span class='tstring_content'>SELECTION</span><span class='words_sep'> </span><span class='tstring_content'>SELECTION-END</span><span class='words_sep'>
+    </span><span class='tstring_content'>SELECTION-LIST</span><span class='words_sep'> </span><span class='tstring_content'>SELECTION-START</span><span class='words_sep'> </span><span class='tstring_content'>SELECTION-TEXT</span><span class='words_sep'> </span><span class='tstring_content'>SELECT-NEXT-ROW</span><span class='words_sep'>
+    </span><span class='tstring_content'>SELECT-PREV-ROW</span><span class='words_sep'> </span><span class='tstring_content'>SELECT-ROW</span><span class='words_sep'> </span><span class='tstring_content'>SELF</span><span class='words_sep'> </span><span class='tstring_content'>SEND</span><span class='words_sep'> </span><span class='tstring_content'>send-sql</span><span class='words_sep'> </span><span class='tstring_content'>send-sql-statement</span><span class='words_sep'>
+    </span><span class='tstring_content'>SENSITIVE</span><span class='words_sep'> </span><span class='tstring_content'>SEPARATE-CONNECTION</span><span class='words_sep'> </span><span class='tstring_content'>SEPARATOR-FGCOLOR</span><span class='words_sep'> </span><span class='tstring_content'>SEPARATORS</span><span class='words_sep'>
+    </span><span class='tstring_content'>SERIALIZABLE</span><span class='words_sep'> </span><span class='tstring_content'>SERIALIZE-HIDDEN</span><span class='words_sep'> </span><span class='tstring_content'>SERIALIZE-NAME</span><span class='words_sep'> </span><span class='tstring_content'>SERVER</span><span class='words_sep'>
+    </span><span class='tstring_content'>SERVER-CONNECTION-BOUND</span><span class='words_sep'> </span><span class='tstring_content'>SERVER-CONNECTION-BOUND-REQUEST</span><span class='words_sep'>
+    </span><span class='tstring_content'>SERVER-CONNECTION-CONTEXT</span><span class='words_sep'> </span><span class='tstring_content'>SERVER-CONNECTION-ID</span><span class='words_sep'> </span><span class='tstring_content'>SERVER-OPERATING-MODE</span><span class='words_sep'>
+    </span><span class='tstring_content'>SESSION</span><span class='words_sep'> </span><span class='tstring_content'>SESSION-IDSET</span><span class='words_sep'> </span><span class='tstring_content'>SET-APPL-CONTEXT</span><span class='words_sep'> </span><span class='tstring_content'>SET-ATTR-CALL-TYPE</span><span class='words_sep'>
+    </span><span class='tstring_content'>SET-ATTRIBUTE-NODE</span><span class='words_sep'> </span><span class='tstring_content'>SET-BLUE</span><span class='words_sep'> </span><span class='tstring_content'>SET-BLUE-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>SET-BREAK</span><span class='words_sep'> </span><span class='tstring_content'>SET-BUFFERS</span><span class='words_sep'>
+    </span><span class='tstring_content'>SET-CALLBACK</span><span class='words_sep'> </span><span class='tstring_content'>SET-CLIENT</span><span class='words_sep'> </span><span class='tstring_content'>SET-COMMIT</span><span class='words_sep'> </span><span class='tstring_content'>SET-CONTENTS</span><span class='words_sep'> </span><span class='tstring_content'>SET-CURRENT-VALUE</span><span class='words_sep'>
+    </span><span class='tstring_content'>SET-DB-CLIENT</span><span class='words_sep'> </span><span class='tstring_content'>SET-DYNAMIC</span><span class='words_sep'> </span><span class='tstring_content'>SET-EVENT-MANAGER-OPTION</span><span class='words_sep'> </span><span class='tstring_content'>SET-GREEN</span><span class='words_sep'>
+    </span><span class='tstring_content'>SET-GREEN-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>SET-INPUT-SOURCE</span><span class='words_sep'> </span><span class='tstring_content'>SET-OPTION</span><span class='words_sep'> </span><span class='tstring_content'>SET-OUTPUT-DESTINATION</span><span class='words_sep'>
+    </span><span class='tstring_content'>SET-PARAMETER</span><span class='words_sep'> </span><span class='tstring_content'>SET-POINTER-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>SET-PROPERTY</span><span class='words_sep'> </span><span class='tstring_content'>SET-RED</span><span class='words_sep'> </span><span class='tstring_content'>SET-RED-VALUE</span><span class='words_sep'>
+    </span><span class='tstring_content'>SET-REPOSITIONED-ROW</span><span class='words_sep'> </span><span class='tstring_content'>SET-RGB-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>SET-ROLLBACK</span><span class='words_sep'> </span><span class='tstring_content'>SET-SELECTION</span><span class='words_sep'> </span><span class='tstring_content'>SET-SIZE</span><span class='words_sep'>
+    </span><span class='tstring_content'>SET-SORT-ARROW</span><span class='words_sep'> </span><span class='tstring_content'>SETUSER</span><span class='words_sep'> </span><span class='tstring_content'>SETUSERID</span><span class='words_sep'> </span><span class='tstring_content'>SET-WAIT-STATE</span><span class='words_sep'> </span><span class='tstring_content'>SHA1-DIGEST</span><span class='words_sep'> </span><span class='tstring_content'>SHARE</span><span class='words_sep'>
+    </span><span class='tstring_content'>SHARED</span><span class='words_sep'> </span><span class='tstring_content'>SHARE-LOCK</span><span class='words_sep'> </span><span class='tstring_content'>SHOW-IN-TASKBAR</span><span class='words_sep'> </span><span class='tstring_content'>SHOW-STAT</span><span class='words_sep'> </span><span class='tstring_content'>SHOW-STATS</span><span class='words_sep'> </span><span class='tstring_content'>SIDE-LAB</span><span class='words_sep'>
+    </span><span class='tstring_content'>SIDE-LABEL-H</span><span class='words_sep'> </span><span class='tstring_content'>SIDE-LABEL-HANDLE</span><span class='words_sep'> </span><span class='tstring_content'>SIDE-LABELS</span><span class='words_sep'> </span><span class='tstring_content'>SIGNATURE</span><span class='words_sep'> </span><span class='tstring_content'>SILENT</span><span class='words_sep'> </span><span class='tstring_content'>SIMPLE</span><span class='words_sep'>
+    </span><span class='tstring_content'>SINGLE</span><span class='words_sep'> </span><span class='tstring_content'>SINGLE-RUN</span><span class='words_sep'> </span><span class='tstring_content'>SINGLETON</span><span class='words_sep'> </span><span class='tstring_content'>SIZE</span><span class='words_sep'> </span><span class='tstring_content'>SIZE-C</span><span class='words_sep'> </span><span class='tstring_content'>SIZE-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>SIZE-P</span><span class='words_sep'> </span><span class='tstring_content'>SIZE-PIXELS</span><span class='words_sep'>
+    </span><span class='tstring_content'>SKIP</span><span class='words_sep'> </span><span class='tstring_content'>SKIP-DELETED-RECORD</span><span class='words_sep'> </span><span class='tstring_content'>SLIDER</span><span class='words_sep'> </span><span class='tstring_content'>SMALL-ICON</span><span class='words_sep'> </span><span class='tstring_content'>SMALLINT</span><span class='words_sep'> </span><span class='tstring_content'>SMALL-TITLE</span><span class='words_sep'> </span><span class='tstring_content'>SOME</span><span class='words_sep'>
+    </span><span class='tstring_content'>SORT</span><span class='words_sep'> </span><span class='tstring_content'>SORT-ASCENDING</span><span class='words_sep'> </span><span class='tstring_content'>SORT-NUMBER</span><span class='words_sep'> </span><span class='tstring_content'>SOURCE</span><span class='words_sep'> </span><span class='tstring_content'>SOURCE-PROCEDURE</span><span class='words_sep'> </span><span class='tstring_content'>SPACE</span><span class='words_sep'> </span><span class='tstring_content'>SQL</span><span class='words_sep'> </span><span class='tstring_content'>SQRT</span><span class='words_sep'>
+    </span><span class='tstring_content'>SSL-SERVER-NAME</span><span class='words_sep'> </span><span class='tstring_content'>STANDALONE</span><span class='words_sep'> </span><span class='tstring_content'>START</span><span class='words_sep'> </span><span class='tstring_content'>START-DOCUMENT</span><span class='words_sep'> </span><span class='tstring_content'>START-ELEMENT</span><span class='words_sep'>
+    </span><span class='tstring_content'>START-MOVE</span><span class='words_sep'> </span><span class='tstring_content'>START-RESIZE</span><span class='words_sep'> </span><span class='tstring_content'>START-ROW-RESIZE</span><span class='words_sep'> </span><span class='tstring_content'>STATE-DETAIL</span><span class='words_sep'> </span><span class='tstring_content'>STATIC</span><span class='words_sep'> </span><span class='tstring_content'>STATUS</span><span class='words_sep'>
+    </span><span class='tstring_content'>STATUS-AREA</span><span class='words_sep'> </span><span class='tstring_content'>STATUS-AREA-FONT</span><span class='words_sep'> </span><span class='tstring_content'>STDCALL</span><span class='words_sep'> </span><span class='tstring_content'>STOP</span><span class='words_sep'> </span><span class='tstring_content'>STOP-AFTER</span><span class='words_sep'> </span><span class='tstring_content'>STOP-PARSING</span><span class='words_sep'>
+    </span><span class='tstring_content'>STOPPE</span><span class='words_sep'> </span><span class='tstring_content'>STOPPED</span><span class='words_sep'> </span><span class='tstring_content'>STORED-PROC</span><span class='words_sep'> </span><span class='tstring_content'>STORED-PROCEDURE</span><span class='words_sep'> </span><span class='tstring_content'>STREAM</span><span class='words_sep'> </span><span class='tstring_content'>STREAM-HANDLE</span><span class='words_sep'>
+    </span><span class='tstring_content'>STREAM-IO</span><span class='words_sep'> </span><span class='tstring_content'>STRETCH-TO-FIT</span><span class='words_sep'> </span><span class='tstring_content'>STRICT</span><span class='words_sep'> </span><span class='tstring_content'>STRICT-ENTITY-RESOLUTION</span><span class='words_sep'> </span><span class='tstring_content'>STRING</span><span class='words_sep'>
+    </span><span class='tstring_content'>STRING-VALUE</span><span class='words_sep'> </span><span class='tstring_content'>STRING-XREF</span><span class='words_sep'> </span><span class='tstring_content'>SUB-</span><span class='words_sep'> </span><span class='tstring_content'>SUB-AVE</span><span class='words_sep'> </span><span class='tstring_content'>SUB-AVERAGE</span><span class='words_sep'> </span><span class='tstring_content'>SUB-COUNT</span><span class='words_sep'>
+    </span><span class='tstring_content'>SUB-MAXIMUM</span><span class='words_sep'> </span><span class='tstring_content'>SUB-MENU</span><span class='words_sep'> </span><span class='tstring_content'>SUB-MIN</span><span class='words_sep'> </span><span class='tstring_content'>SUB-MINIMUM</span><span class='words_sep'> </span><span class='tstring_content'>SUBSCRIBE</span><span class='words_sep'> </span><span class='tstring_content'>SUBST</span><span class='words_sep'> </span><span class='tstring_content'>SUBSTITUTE</span><span class='words_sep'>
+    </span><span class='tstring_content'>SUBSTR</span><span class='words_sep'> </span><span class='tstring_content'>SUBSTRING</span><span class='words_sep'> </span><span class='tstring_content'>SUB-TOTAL</span><span class='words_sep'> </span><span class='tstring_content'>SUBTYPE</span><span class='words_sep'> </span><span class='tstring_content'>SUM</span><span class='words_sep'> </span><span class='tstring_content'>SUM-MAX</span><span class='words_sep'> </span><span class='tstring_content'>SUPER</span><span class='words_sep'> </span><span class='tstring_content'>SUPER-PROCEDURES</span><span class='words_sep'>
+    </span><span class='tstring_content'>SUPPRESS-NAMESPACE-PROCESSING</span><span class='words_sep'> </span><span class='tstring_content'>SUPPRESS-W</span><span class='words_sep'> </span><span class='tstring_content'>SUPPRESS-WARNINGS</span><span class='words_sep'>
+    </span><span class='tstring_content'>SYMMETRIC-ENCRYPTION-ALGORITHM</span><span class='words_sep'> </span><span class='tstring_content'>SYMMETRIC-ENCRYPTION-IV</span><span class='words_sep'>
+    </span><span class='tstring_content'>SYMMETRIC-ENCRYPTION-KEY</span><span class='words_sep'> </span><span class='tstring_content'>SYMMETRIC-SUPPORT</span><span class='words_sep'> </span><span class='tstring_content'>SYSTEM-ALERT</span><span class='words_sep'>
+    </span><span class='tstring_content'>SYSTEM-ALERT-BOXES</span><span class='words_sep'> </span><span class='tstring_content'>SYSTEM-DIALOG</span><span class='words_sep'> </span><span class='tstring_content'>SYSTEM-HELP</span><span class='words_sep'> </span><span class='tstring_content'>SYSTEM-ID</span><span class='words_sep'> </span><span class='tstring_content'>TABLE</span><span class='words_sep'>
+    </span><span class='tstring_content'>TABLE-HANDLE</span><span class='words_sep'> </span><span class='tstring_content'>TABLE-NUMBER</span><span class='words_sep'> </span><span class='tstring_content'>TABLE-SCAN</span><span class='words_sep'> </span><span class='tstring_content'>TAB-POSITION</span><span class='words_sep'> </span><span class='tstring_content'>TAB-STOP</span><span class='words_sep'> </span><span class='tstring_content'>TARGET</span><span class='words_sep'>
+    </span><span class='tstring_content'>TARGET-PROCEDURE</span><span class='words_sep'> </span><span class='tstring_content'>TEMP-DIR</span><span class='words_sep'> </span><span class='tstring_content'>TEMP-DIRECTORY</span><span class='words_sep'> </span><span class='tstring_content'>TEMP-TABLE</span><span class='words_sep'> </span><span class='tstring_content'>TEMP-TABLE-PREPARE</span><span class='words_sep'>
+    </span><span class='tstring_content'>TERM</span><span class='words_sep'> </span><span class='tstring_content'>TERMINAL</span><span class='words_sep'> </span><span class='tstring_content'>TERMINATETEXT</span><span class='words_sep'> </span><span class='tstring_content'>TEXT</span><span class='words_sep'> </span><span class='tstring_content'>TEXT-CURSOR</span><span class='words_sep'> </span><span class='tstring_content'>TEXT-SEG-GROW</span><span class='words_sep'>
+    </span><span class='tstring_content'>TEXT-SELECTED</span><span class='words_sep'> </span><span class='tstring_content'>THEN</span><span class='words_sep'> </span><span class='tstring_content'>THIS-OBJECT</span><span class='words_sep'> </span><span class='tstring_content'>THIS-PROCEDURE</span><span class='words_sep'> </span><span class='tstring_content'>THREAD-SAFE</span><span class='words_sep'> </span><span class='tstring_content'>THREE-D</span><span class='words_sep'>
+    </span><span class='tstring_content'>THROUGH</span><span class='words_sep'> </span><span class='tstring_content'>THROW</span><span class='words_sep'> </span><span class='tstring_content'>THRU</span><span class='words_sep'> </span><span class='tstring_content'>TIC-MARKS</span><span class='words_sep'> </span><span class='tstring_content'>TIME</span><span class='words_sep'> </span><span class='tstring_content'>TIME-SOURCE</span><span class='words_sep'> </span><span class='tstring_content'>TITLE</span><span class='words_sep'> </span><span class='tstring_content'>TITLE-BGC</span><span class='words_sep'>
+    </span><span class='tstring_content'>TITLE-BGCOLOR</span><span class='words_sep'> </span><span class='tstring_content'>TITLE-DC</span><span class='words_sep'> </span><span class='tstring_content'>TITLE-DCOLORTITLE-FGC</span><span class='words_sep'> </span><span class='tstring_content'>TITLE-FGCOLOR</span><span class='words_sep'> </span><span class='tstring_content'>TITLE-FO</span><span class='words_sep'>
+    </span><span class='tstring_content'>TITLE-FONT</span><span class='words_sep'> </span><span class='tstring_content'>TO</span><span class='words_sep'> </span><span class='tstring_content'>TODAY</span><span class='words_sep'> </span><span class='tstring_content'>TOGGLE-BOX</span><span class='words_sep'> </span><span class='tstring_content'>TOOLTIP</span><span class='words_sep'> </span><span class='tstring_content'>TOOLTIPS</span><span class='words_sep'> </span><span class='tstring_content'>TOPIC</span><span class='words_sep'> </span><span class='tstring_content'>TOP-NAV-QUERY</span><span class='words_sep'>
+    </span><span class='tstring_content'>TOP-ONLY</span><span class='words_sep'> </span><span class='tstring_content'>TO-ROWID</span><span class='words_sep'> </span><span class='tstring_content'>TOTAL</span><span class='words_sep'> </span><span class='tstring_content'>TRAILING</span><span class='words_sep'> </span><span class='tstring_content'>TRANS</span><span class='words_sep'> </span><span class='tstring_content'>TRANSACTION</span><span class='words_sep'> </span><span class='tstring_content'>TRANSACTION-MODE</span><span class='words_sep'>
+    </span><span class='tstring_content'>TRANS-INIT-PROCEDURE</span><span class='words_sep'> </span><span class='tstring_content'>TRANSPARENT</span><span class='words_sep'> </span><span class='tstring_content'>TRIGGER</span><span class='words_sep'> </span><span class='tstring_content'>TRIGGERS</span><span class='words_sep'> </span><span class='tstring_content'>TRIM</span><span class='words_sep'> </span><span class='tstring_content'>TRUE</span><span class='words_sep'> </span><span class='tstring_content'>TRUNC</span><span class='words_sep'>
+    </span><span class='tstring_content'>TRUNCATE</span><span class='words_sep'> </span><span class='tstring_content'>TYPE</span><span class='words_sep'> </span><span class='tstring_content'>TYPE-OF</span><span class='words_sep'> </span><span class='tstring_content'>UNBOX</span><span class='words_sep'> </span><span class='tstring_content'>UNBUFF</span><span class='words_sep'> </span><span class='tstring_content'>UNBUFFERED</span><span class='words_sep'> </span><span class='tstring_content'>UNDERL</span><span class='words_sep'> </span><span class='tstring_content'>UNDERLINE</span><span class='words_sep'> </span><span class='tstring_content'>UNDO</span><span class='words_sep'>
+    </span><span class='tstring_content'>UNFORM</span><span class='words_sep'> </span><span class='tstring_content'>UNFORMATTED</span><span class='words_sep'> </span><span class='tstring_content'>UNION</span><span class='words_sep'> </span><span class='tstring_content'>UNIQUE</span><span class='words_sep'> </span><span class='tstring_content'>UNIQUE-ID</span><span class='words_sep'> </span><span class='tstring_content'>UNIQUE-MATCH</span><span class='words_sep'> </span><span class='tstring_content'>UNIX</span><span class='words_sep'>
+    </span><span class='tstring_content'>UNLESS-HIDDEN</span><span class='words_sep'> </span><span class='tstring_content'>UNLOAD</span><span class='words_sep'> </span><span class='tstring_content'>UNSIGNED-LONG</span><span class='words_sep'> </span><span class='tstring_content'>UNSUBSCRIBE</span><span class='words_sep'> </span><span class='tstring_content'>UP</span><span class='words_sep'> </span><span class='tstring_content'>UPDATE</span><span class='words_sep'>
+    </span><span class='tstring_content'>UPDATE-ATTRIBUTE</span><span class='words_sep'> </span><span class='tstring_content'>URL</span><span class='words_sep'> </span><span class='tstring_content'>URL-DECODE</span><span class='words_sep'> </span><span class='tstring_content'>URL-ENCODE</span><span class='words_sep'> </span><span class='tstring_content'>URL-PASSWORD</span><span class='words_sep'> </span><span class='tstring_content'>URL-USERID</span><span class='words_sep'> </span><span class='tstring_content'>USE</span><span class='words_sep'>
+    </span><span class='tstring_content'>USE-DICT-EXPS</span><span class='words_sep'> </span><span class='tstring_content'>USE-FILENAME</span><span class='words_sep'> </span><span class='tstring_content'>USE-INDEX</span><span class='words_sep'> </span><span class='tstring_content'>USER</span><span class='words_sep'> </span><span class='tstring_content'>USE-REVVIDEO</span><span class='words_sep'> </span><span class='tstring_content'>USERID</span><span class='words_sep'> </span><span class='tstring_content'>USER-ID</span><span class='words_sep'>
+    </span><span class='tstring_content'>USE-TEXT</span><span class='words_sep'> </span><span class='tstring_content'>USE-UNDERLINE</span><span class='words_sep'> </span><span class='tstring_content'>USE-WIDGET-POOL</span><span class='words_sep'> </span><span class='tstring_content'>USING</span><span class='words_sep'> </span><span class='tstring_content'>V6DISPLAY</span><span class='words_sep'> </span><span class='tstring_content'>V6FRAME</span><span class='words_sep'>
+    </span><span class='tstring_content'>VALIDATE</span><span class='words_sep'> </span><span class='tstring_content'>VALIDATE-EXPRESSION</span><span class='words_sep'> </span><span class='tstring_content'>VALIDATE-MESSAGE</span><span class='words_sep'> </span><span class='tstring_content'>VALIDATE-SEAL</span><span class='words_sep'>
+    </span><span class='tstring_content'>VALIDATION-ENABLED</span><span class='words_sep'> </span><span class='tstring_content'>VALID-EVENT</span><span class='words_sep'> </span><span class='tstring_content'>VALID-HANDLE</span><span class='words_sep'> </span><span class='tstring_content'>VALID-OBJECT</span><span class='words_sep'> </span><span class='tstring_content'>VALUE</span><span class='words_sep'>
+    </span><span class='tstring_content'>VALUE-CHANGED</span><span class='words_sep'> </span><span class='tstring_content'>VALUES</span><span class='words_sep'> </span><span class='tstring_content'>VAR</span><span class='words_sep'> </span><span class='tstring_content'>VARIABLE</span><span class='words_sep'> </span><span class='tstring_content'>VERBOSE</span><span class='words_sep'> </span><span class='tstring_content'>VERSION</span><span class='words_sep'> </span><span class='tstring_content'>VERT</span><span class='words_sep'> </span><span class='tstring_content'>VERTICAL</span><span class='words_sep'> </span><span class='tstring_content'>VIEW</span><span class='words_sep'>
+    </span><span class='tstring_content'>VIEW-AS</span><span class='words_sep'> </span><span class='tstring_content'>VIEW-FIRST-COLUMN-ON-REOPEN</span><span class='words_sep'> </span><span class='tstring_content'>VIRTUAL-HEIGHT</span><span class='words_sep'>
+    </span><span class='tstring_content'>VIRTUAL-HEIGHT-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>VIRTUAL-HEIGHT-P</span><span class='words_sep'> </span><span class='tstring_content'>VIRTUAL-HEIGHT-PIXELS</span><span class='words_sep'>
+    </span><span class='tstring_content'>VIRTUAL-WIDTH</span><span class='words_sep'> </span><span class='tstring_content'>VIRTUAL-WIDTH-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>VIRTUAL-WIDTH-P</span><span class='words_sep'> </span><span class='tstring_content'>VIRTUAL-WIDTH-PIXELS</span><span class='words_sep'>
+    </span><span class='tstring_content'>VISIBLE</span><span class='words_sep'> </span><span class='tstring_content'>VOID</span><span class='words_sep'> </span><span class='tstring_content'>WAIT</span><span class='words_sep'> </span><span class='tstring_content'>WAIT-FOR</span><span class='words_sep'> </span><span class='tstring_content'>WARNING</span><span class='words_sep'> </span><span class='tstring_content'>WEB-CONTEXT</span><span class='words_sep'> </span><span class='tstring_content'>WEEKDAY</span><span class='words_sep'> </span><span class='tstring_content'>WHEN</span><span class='words_sep'> </span><span class='tstring_content'>WHERE</span><span class='words_sep'>
+    </span><span class='tstring_content'>WHILE</span><span class='words_sep'> </span><span class='tstring_content'>WIDGET</span><span class='words_sep'> </span><span class='tstring_content'>WIDGET-E</span><span class='words_sep'> </span><span class='tstring_content'>WIDGET-ENTER</span><span class='words_sep'> </span><span class='tstring_content'>WIDGET-ID</span><span class='words_sep'> </span><span class='tstring_content'>WIDGET-L</span><span class='words_sep'> </span><span class='tstring_content'>WIDGET-LEAVE</span><span class='words_sep'>
+    </span><span class='tstring_content'>WIDGET-POOL</span><span class='words_sep'> </span><span class='tstring_content'>WIDTH</span><span class='words_sep'> </span><span class='tstring_content'>WIDTH</span><span class='words_sep'> </span><span class='tstring_content'>WIDTH-CHARS</span><span class='words_sep'> </span><span class='tstring_content'>WIDTH-P</span><span class='words_sep'> </span><span class='tstring_content'>WIDTH-PIXELS</span><span class='words_sep'> </span><span class='tstring_content'>WINDOW</span><span class='words_sep'>
+    </span><span class='tstring_content'>WINDOW-MAXIM</span><span class='words_sep'> </span><span class='tstring_content'>WINDOW-MAXIMIZED</span><span class='words_sep'> </span><span class='tstring_content'>WINDOW-MINIM</span><span class='words_sep'> </span><span class='tstring_content'>WINDOW-MINIMIZED</span><span class='words_sep'>
+    </span><span class='tstring_content'>WINDOW-NAME</span><span class='words_sep'> </span><span class='tstring_content'>WINDOW-NORMAL</span><span class='words_sep'> </span><span class='tstring_content'>WINDOW-STA</span><span class='words_sep'> </span><span class='tstring_content'>WINDOW-STATE</span><span class='words_sep'> </span><span class='tstring_content'>WINDOW-SYSTEM</span><span class='words_sep'> </span><span class='tstring_content'>WITH</span><span class='words_sep'>
+    </span><span class='tstring_content'>WORD-INDEX</span><span class='words_sep'> </span><span class='tstring_content'>WORD-WRAP</span><span class='words_sep'> </span><span class='tstring_content'>WORK-AREA-HEIGHT-PIXELS</span><span class='words_sep'> </span><span class='tstring_content'>WORK-AREA-WIDTH-PIXELS</span><span class='words_sep'>
+    </span><span class='tstring_content'>WORK-AREA-X</span><span class='words_sep'> </span><span class='tstring_content'>WORK-AREA-Y</span><span class='words_sep'> </span><span class='tstring_content'>WORKFILE</span><span class='words_sep'> </span><span class='tstring_content'>WORK-TAB</span><span class='words_sep'> </span><span class='tstring_content'>WORK-TABLE</span><span class='words_sep'> </span><span class='tstring_content'>WRITE</span><span class='words_sep'> </span><span class='tstring_content'>WRITE-CDATA</span><span class='words_sep'>
+    </span><span class='tstring_content'>WRITE-CHARACTERS</span><span class='words_sep'> </span><span class='tstring_content'>WRITE-COMMENT</span><span class='words_sep'> </span><span class='tstring_content'>WRITE-DATA-ELEMENT</span><span class='words_sep'> </span><span class='tstring_content'>WRITE-EMPTY-ELEMENT</span><span class='words_sep'>
+    </span><span class='tstring_content'>WRITE-ENTITY-REF</span><span class='words_sep'> </span><span class='tstring_content'>WRITE-EXTERNAL-DTD</span><span class='words_sep'> </span><span class='tstring_content'>WRITE-FRAGMENT</span><span class='words_sep'> </span><span class='tstring_content'>WRITE-JSON</span><span class='words_sep'>
+    </span><span class='tstring_content'>WRITE-MESSAGE</span><span class='words_sep'> </span><span class='tstring_content'>WRITE-PROCESSING-INSTRUCTION</span><span class='words_sep'> </span><span class='tstring_content'>WRITE-STATUS</span><span class='words_sep'> </span><span class='tstring_content'>WRITE-XML</span><span class='words_sep'>
+    </span><span class='tstring_content'>WRITE-XMLSCHEMA</span><span class='words_sep'> </span><span class='tstring_content'>X</span><span class='words_sep'> </span><span class='tstring_content'>XCODE</span><span class='words_sep'> </span><span class='tstring_content'>XML-DATA-TYPE</span><span class='words_sep'> </span><span class='tstring_content'>XML-ENTITY-EXPANSION-LIMIT</span><span class='words_sep'>
+    </span><span class='tstring_content'>XML-NODE-TYPE</span><span class='words_sep'> </span><span class='tstring_content'>XML-SCHEMA-PATH</span><span class='words_sep'> </span><span class='tstring_content'>XML-STRICT-ENTITY-RESOLUTION</span><span class='words_sep'>
+    </span><span class='tstring_content'>XML-SUPPRESS-NAMESPACE-PROCESSING</span><span class='words_sep'> </span><span class='tstring_content'>X-OF</span><span class='words_sep'> </span><span class='tstring_content'>XREF</span><span class='words_sep'> </span><span class='tstring_content'>XREF-XML</span><span class='words_sep'> </span><span class='tstring_content'>Y</span><span class='words_sep'> </span><span class='tstring_content'>YEAR</span><span class='words_sep'>
+    </span><span class='tstring_content'>YEAR-OFFSET</span><span class='words_sep'> </span><span class='tstring_content'>YES</span><span class='words_sep'> </span><span class='tstring_content'>YES-NO</span><span class='words_sep'> </span><span class='tstring_content'>YES-NO-CANCEL</span><span class='words_sep'> </span><span class='tstring_content'>Y-OF</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="keywords_type-class_method">
+  
+    .<strong>keywords_type</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+351
+352
+353
+354
+355
+356
+357</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/openedge.rb', line 351</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords_type'>keywords_type</span>
+  <span class='ivar'>@keywords_type</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>BLOB</span><span class='words_sep'> </span><span class='tstring_content'>CHARACTER</span><span class='words_sep'> </span><span class='tstring_content'>CHAR</span><span class='words_sep'> </span><span class='tstring_content'>CLOB</span><span class='words_sep'> </span><span class='tstring_content'>COM-HANDLE</span><span class='words_sep'> </span><span class='tstring_content'>DATE</span><span class='words_sep'> </span><span class='tstring_content'>DATETIME</span><span class='words_sep'> </span><span class='tstring_content'>DATETIME-TZ</span><span class='words_sep'> </span><span class='tstring_content'>DECIMAL</span><span class='words_sep'>
+    </span><span class='tstring_content'>DEC</span><span class='words_sep'> </span><span class='tstring_content'>HANDLE</span><span class='words_sep'> </span><span class='tstring_content'>INT64</span><span class='words_sep'> </span><span class='tstring_content'>INTEGER</span><span class='words_sep'> </span><span class='tstring_content'>INT</span><span class='words_sep'> </span><span class='tstring_content'>LOGICAL</span><span class='words_sep'> </span><span class='tstring_content'>LONGCHAR</span><span class='words_sep'> </span><span class='tstring_content'>MEMPTR</span><span class='words_sep'> </span><span class='tstring_content'>RAW</span><span class='words_sep'> </span><span class='tstring_content'>RECID</span><span class='words_sep'> </span><span class='tstring_content'>ROWID</span><span class='words_sep'>
+    </span><span class='tstring_content'>WIDGET-HANDLE</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Jul 22 08:50:00 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.20 (ruby-2.6.3).
+</div>
+
+    </div>
+  </body>
+</html>

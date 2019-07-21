@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Rouge::Lexers::SAS
+  
+    &mdash; Documentation by YARD 0.9.20
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Rouge::Lexers::SAS";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Rouge.html" title="Rouge (module)">Rouge</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Lexers.html" title="Rouge::Lexers (module)">Lexers</a></span></span>
+     &raquo; 
+    <span class="title">SAS</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Rouge::Lexers::SAS
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></li>
+          
+            <li class="next">Rouge::Lexers::SAS</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/rouge/lexers/sas.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RegexLexer.html#MAX_NULL_SCANS-constant" title="Rouge::RegexLexer::MAX_NULL_SCANS (constant)">RegexLexer::MAX_NULL_SCANS</a></span></p>
+
+  
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="../Token/Tokens.html" title="Rouge::Token::Tokens (module)">Token::Tokens</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Token/Tokens.html#Num-constant" title="Rouge::Token::Tokens::Num (constant)">Token::Tokens::Num</a></span>, <span class='object_link'><a href="../Token/Tokens.html#Str-constant" title="Rouge::Token::Tokens::Str (constant)">Token::Tokens::Str</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lexer.html#options-instance_method" title="Rouge::Lexer#options (method)">#options</a></span></p>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#data_step_statements-class_method" title="data_step_statements (class method)">.<strong>data_step_statements</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#proc_keywords-class_method" title="proc_keywords (class method)">.<strong>proc_keywords</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sas_auto_macro_vars-class_method" title="sas_auto_macro_vars (class method)">.<strong>sas_auto_macro_vars</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sas_functions-class_method" title="sas_functions (class method)">.<strong>sas_functions</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sas_macro_functions-class_method" title="sas_macro_functions (class method)">.<strong>sas_macro_functions</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sas_macro_statements-class_method" title="sas_macro_statements (class method)">.<strong>sas_macro_statements</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sas_proc_names-class_method" title="sas_proc_names (class method)">.<strong>sas_proc_names</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RegexLexer.html#append-class_method" title="Rouge::RegexLexer.append (method)">append</a></span>, <span class='object_link'><a href="../RegexLexer.html#delegate-instance_method" title="Rouge::RegexLexer#delegate (method)">#delegate</a></span>, <span class='object_link'><a href="../RegexLexer.html#goto-instance_method" title="Rouge::RegexLexer#goto (method)">#goto</a></span>, <span class='object_link'><a href="../RegexLexer.html#group-instance_method" title="Rouge::RegexLexer#group (method)">#group</a></span>, <span class='object_link'><a href="../RegexLexer.html#groups-instance_method" title="Rouge::RegexLexer#groups (method)">#groups</a></span>, <span class='object_link'><a href="../RegexLexer.html#in_state%3F-instance_method" title="Rouge::RegexLexer#in_state? (method)">#in_state?</a></span>, <span class='object_link'><a href="../RegexLexer.html#pop!-instance_method" title="Rouge::RegexLexer#pop! (method)">#pop!</a></span>, <span class='object_link'><a href="../RegexLexer.html#prepend-class_method" title="Rouge::RegexLexer.prepend (method)">prepend</a></span>, <span class='object_link'><a href="../RegexLexer.html#push-instance_method" title="Rouge::RegexLexer#push (method)">#push</a></span>, <span class='object_link'><a href="../RegexLexer.html#recurse-instance_method" title="Rouge::RegexLexer#recurse (method)">#recurse</a></span>, <span class='object_link'><a href="../RegexLexer.html#replace_state-class_method" title="Rouge::RegexLexer.replace_state (method)">replace_state</a></span>, <span class='object_link'><a href="../RegexLexer.html#reset!-instance_method" title="Rouge::RegexLexer#reset! (method)">#reset!</a></span>, <span class='object_link'><a href="../RegexLexer.html#reset_stack-instance_method" title="Rouge::RegexLexer#reset_stack (method)">#reset_stack</a></span>, <span class='object_link'><a href="../RegexLexer.html#stack-instance_method" title="Rouge::RegexLexer#stack (method)">#stack</a></span>, <span class='object_link'><a href="../RegexLexer.html#start-class_method" title="Rouge::RegexLexer.start (method)">start</a></span>, <span class='object_link'><a href="../RegexLexer.html#start_procs-class_method" title="Rouge::RegexLexer.start_procs (method)">start_procs</a></span>, <span class='object_link'><a href="../RegexLexer.html#state-class_method" title="Rouge::RegexLexer.state (method)">state</a></span>, <span class='object_link'><a href="../RegexLexer.html#state-instance_method" title="Rouge::RegexLexer#state (method)">#state</a></span>, <span class='object_link'><a href="../RegexLexer.html#state%3F-instance_method" title="Rouge::RegexLexer#state? (method)">#state?</a></span>, <span class='object_link'><a href="../RegexLexer.html#state_definitions-class_method" title="Rouge::RegexLexer.state_definitions (method)">state_definitions</a></span>, <span class='object_link'><a href="../RegexLexer.html#states-class_method" title="Rouge::RegexLexer.states (method)">states</a></span>, <span class='object_link'><a href="../RegexLexer.html#step-instance_method" title="Rouge::RegexLexer#step (method)">#step</a></span>, <span class='object_link'><a href="../RegexLexer.html#stream_tokens-instance_method" title="Rouge::RegexLexer#stream_tokens (method)">#stream_tokens</a></span>, <span class='object_link'><a href="../RegexLexer.html#token-instance_method" title="Rouge::RegexLexer#token (method)">#token</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lexer.html#aliases-class_method" title="Rouge::Lexer.aliases (method)">aliases</a></span>, <span class='object_link'><a href="../Lexer.html#all-class_method" title="Rouge::Lexer.all (method)">all</a></span>, <span class='object_link'><a href="../Lexer.html#as_bool-instance_method" title="Rouge::Lexer#as_bool (method)">#as_bool</a></span>, <span class='object_link'><a href="../Lexer.html#as_lexer-instance_method" title="Rouge::Lexer#as_lexer (method)">#as_lexer</a></span>, <span class='object_link'><a href="../Lexer.html#as_list-instance_method" title="Rouge::Lexer#as_list (method)">#as_list</a></span>, <span class='object_link'><a href="../Lexer.html#as_string-instance_method" title="Rouge::Lexer#as_string (method)">#as_string</a></span>, <span class='object_link'><a href="../Lexer.html#as_token-instance_method" title="Rouge::Lexer#as_token (method)">#as_token</a></span>, <span class='object_link'><a href="../Lexer.html#bool_option-instance_method" title="Rouge::Lexer#bool_option (method)">#bool_option</a></span>, <span class='object_link'><a href="../Lexer.html#continue_lex-class_method" title="Rouge::Lexer.continue_lex (method)">continue_lex</a></span>, <span class='object_link'><a href="../Lexer.html#continue_lex-instance_method" title="Rouge::Lexer#continue_lex (method)">#continue_lex</a></span>, <span class='object_link'><a href="../Lexer.html#debug_enabled%3F-class_method" title="Rouge::Lexer.debug_enabled? (method)">debug_enabled?</a></span>, <span class='object_link'><a href="../Lexer.html#demo-class_method" title="Rouge::Lexer.demo (method)">demo</a></span>, <span class='object_link'><a href="../Lexer.html#demo_file-class_method" title="Rouge::Lexer.demo_file (method)">demo_file</a></span>, <span class='object_link'><a href="../Lexer.html#desc-class_method" title="Rouge::Lexer.desc (method)">desc</a></span>, <span class='object_link'><a href="../Lexer.html#detect%3F-class_method" title="Rouge::Lexer.detect? (method)">detect?</a></span>, <span class='object_link'><a href="../Lexer.html#detectable%3F-class_method" title="Rouge::Lexer.detectable? (method)">detectable?</a></span>, <span class='object_link'><a href="../Lexer.html#disable_debug!-class_method" title="Rouge::Lexer.disable_debug! (method)">disable_debug!</a></span>, <span class='object_link'><a href="../Lexer.html#enable_debug!-class_method" title="Rouge::Lexer.enable_debug! (method)">enable_debug!</a></span>, <span class='object_link'><a href="../Lexer.html#filenames-class_method" title="Rouge::Lexer.filenames (method)">filenames</a></span>, <span class='object_link'><a href="../Lexer.html#find-class_method" title="Rouge::Lexer.find (method)">find</a></span>, <span class='object_link'><a href="../Lexer.html#find_fancy-class_method" title="Rouge::Lexer.find_fancy (method)">find_fancy</a></span>, <span class='object_link'><a href="../Lexer.html#guess-class_method" title="Rouge::Lexer.guess (method)">guess</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_filename-class_method" title="Rouge::Lexer.guess_by_filename (method)">guess_by_filename</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_mimetype-class_method" title="Rouge::Lexer.guess_by_mimetype (method)">guess_by_mimetype</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_source-class_method" title="Rouge::Lexer.guess_by_source (method)">guess_by_source</a></span>, <span class='object_link'><a href="../Lexer.html#guesses-class_method" title="Rouge::Lexer.guesses (method)">guesses</a></span>, <span class='object_link'><a href="../Lexer.html#hash_option-instance_method" title="Rouge::Lexer#hash_option (method)">#hash_option</a></span>, <span class='object_link'><a href="../Lexer.html#initialize-instance_method" title="Rouge::Lexer#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Lexer.html#lex-class_method" title="Rouge::Lexer.lex (method)">lex</a></span>, <span class='object_link'><a href="../Lexer.html#lex-instance_method" title="Rouge::Lexer#lex (method)">#lex</a></span>, <span class='object_link'><a href="../Lexer.html#lexer_option-instance_method" title="Rouge::Lexer#lexer_option (method)">#lexer_option</a></span>, <span class='object_link'><a href="../Lexer.html#list_option-instance_method" title="Rouge::Lexer#list_option (method)">#list_option</a></span>, <span class='object_link'><a href="../Lexer.html#mimetypes-class_method" title="Rouge::Lexer.mimetypes (method)">mimetypes</a></span>, <span class='object_link'><a href="../Lexer.html#option-class_method" title="Rouge::Lexer.option (method)">option</a></span>, <span class='object_link'><a href="../Lexer.html#option_docs-class_method" title="Rouge::Lexer.option_docs (method)">option_docs</a></span>, <span class='object_link'><a href="../Lexer.html#reset!-instance_method" title="Rouge::Lexer#reset! (method)">#reset!</a></span>, <span class='object_link'><a href="../Lexer.html#stream_tokens-instance_method" title="Rouge::Lexer#stream_tokens (method)">#stream_tokens</a></span>, <span class='object_link'><a href="../Lexer.html#string_option-instance_method" title="Rouge::Lexer#string_option (method)">#string_option</a></span>, <span class='object_link'><a href="../Lexer.html#tag-class_method" title="Rouge::Lexer.tag (method)">tag</a></span>, <span class='object_link'><a href="../Lexer.html#tag-instance_method" title="Rouge::Lexer#tag (method)">#tag</a></span>, <span class='object_link'><a href="../Lexer.html#title-class_method" title="Rouge::Lexer.title (method)">title</a></span>, <span class='object_link'><a href="../Lexer.html#token_option-instance_method" title="Rouge::Lexer#token_option (method)">#token_option</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Token/Tokens.html" title="Rouge::Token::Tokens (module)">Token::Tokens</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Token/Tokens.html#token-class_method" title="Rouge::Token::Tokens.token (method)">token</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Lexer.html#initialize-instance_method" title="Rouge::Lexer#initialize (method)">Rouge::Lexer</a></span></p>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="data_step_statements-class_method">
+  
+    .<strong>data_step_statements</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/sas.rb', line 12</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_data_step_statements'>data_step_statements</span>
+  <span class='comment'># from Data step statements - SAS 9.4 Statements reference
+</span>  <span class='comment'># http://support.sas.com/documentation/cdl/en/lestmtsref/68024/PDF/default/lestmtsref.pdf
+</span>  <span class='ivar'>@data_step_statements</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>ABORT</span><span class='words_sep'> </span><span class='tstring_content'>ARRAY</span><span class='words_sep'> </span><span class='tstring_content'>ATTRIB</span><span class='words_sep'> </span><span class='tstring_content'>BY</span><span class='words_sep'> </span><span class='tstring_content'>CALL</span><span class='words_sep'> </span><span class='tstring_content'>CARDS</span><span class='words_sep'> </span><span class='tstring_content'>CARDS4</span><span class='words_sep'> </span><span class='tstring_content'>CATNAME</span><span class='words_sep'> </span><span class='tstring_content'>CHECKPOINT</span><span class='words_sep'> 
+    </span><span class='tstring_content'>EXECUTE_ALWAYS</span><span class='words_sep'> </span><span class='tstring_content'>CONTINUE</span><span class='words_sep'> </span><span class='tstring_content'>DATA</span><span class='words_sep'> </span><span class='tstring_content'>DATALINES</span><span class='words_sep'> </span><span class='tstring_content'>DATALINES4</span><span class='words_sep'> </span><span class='tstring_content'>DELETE</span><span class='words_sep'> </span><span class='tstring_content'>DESCRIBE</span><span class='words_sep'>
+    </span><span class='tstring_content'>DISPLAY</span><span class='words_sep'> </span><span class='tstring_content'>DM</span><span class='words_sep'> </span><span class='tstring_content'>DO</span><span class='words_sep'> </span><span class='tstring_content'>UNTIL</span><span class='words_sep'> </span><span class='tstring_content'>WHILE</span><span class='words_sep'> </span><span class='tstring_content'>DROP</span><span class='words_sep'> </span><span class='tstring_content'>END</span><span class='words_sep'> </span><span class='tstring_content'>ENDSAS</span><span class='words_sep'> </span><span class='tstring_content'>ERROR</span><span class='words_sep'> </span><span class='tstring_content'>EXECUTE</span><span class='words_sep'> </span><span class='tstring_content'>FILE</span><span class='words_sep'> </span><span class='tstring_content'>FILENAME</span><span class='words_sep'>
+    </span><span class='tstring_content'>FOOTNOTE</span><span class='words_sep'> </span><span class='tstring_content'>FORMAT</span><span class='words_sep'> </span><span class='tstring_content'>GO</span><span class='words_sep'> </span><span class='tstring_content'>TO</span><span class='words_sep'> </span><span class='tstring_content'>IF</span><span class='words_sep'> </span><span class='tstring_content'>THEN</span><span class='words_sep'> </span><span class='tstring_content'>ELSE</span><span class='words_sep'> </span><span class='tstring_content'>INFILE</span><span class='words_sep'> </span><span class='tstring_content'>INFORMAT</span><span class='words_sep'> </span><span class='tstring_content'>INPUT</span><span class='words_sep'>
+    </span><span class='tstring_content'>KEEP</span><span class='words_sep'> </span><span class='tstring_content'>LABEL</span><span class='words_sep'> </span><span class='tstring_content'>LEAVE</span><span class='words_sep'> </span><span class='tstring_content'>LENGTH</span><span class='words_sep'> </span><span class='tstring_content'>LIBNAME</span><span class='words_sep'> </span><span class='tstring_content'>LINK</span><span class='words_sep'> </span><span class='tstring_content'>LIST</span><span class='words_sep'> </span><span class='tstring_content'>LOCK</span><span class='words_sep'> </span><span class='tstring_content'>LOSTCARD</span><span class='words_sep'> </span><span class='tstring_content'>MERGE</span><span class='words_sep'>
+    </span><span class='tstring_content'>MISSING</span><span class='words_sep'> </span><span class='tstring_content'>MODIFY</span><span class='words_sep'> </span><span class='tstring_content'>OPTIONS</span><span class='words_sep'> </span><span class='tstring_content'>OUTPUT</span><span class='words_sep'> </span><span class='tstring_content'>PAGE</span><span class='words_sep'> </span><span class='tstring_content'>PUT</span><span class='words_sep'> </span><span class='tstring_content'>PUTLOG</span><span class='words_sep'> </span><span class='tstring_content'>REDIRECT</span><span class='words_sep'> </span><span class='tstring_content'>REMOVE</span><span class='words_sep'> </span><span class='tstring_content'>RENAME</span><span class='words_sep'>
+    </span><span class='tstring_content'>REPLACE</span><span class='words_sep'> </span><span class='tstring_content'>RESETLINE</span><span class='words_sep'> </span><span class='tstring_content'>RETAIN</span><span class='words_sep'> </span><span class='tstring_content'>RETURN</span><span class='words_sep'> </span><span class='tstring_content'>RUN</span><span class='words_sep'> </span><span class='tstring_content'>SASFILE</span><span class='words_sep'> </span><span class='tstring_content'>SELECT</span><span class='words_sep'> </span><span class='tstring_content'>SET</span><span class='words_sep'> </span><span class='tstring_content'>SKIP</span><span class='words_sep'> </span><span class='tstring_content'>STOP</span><span class='words_sep'>         
+    </span><span class='tstring_content'>SYSECHO</span><span class='words_sep'> </span><span class='tstring_content'>TITLE</span><span class='words_sep'> </span><span class='tstring_content'>UPDATE</span><span class='words_sep'> </span><span class='tstring_content'>WHERE</span><span class='words_sep'> </span><span class='tstring_content'>WINDOW</span><span class='words_sep'> </span><span class='tstring_content'>X</span><span class='words_sep'>
+   </span><span class='tstring_end'>)</span></span>
+<span class='comment'># label:
+</span><span class='comment'># Sum
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="proc_keywords-class_method">
+  
+    .<strong>proc_keywords</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/sas.rb', line 140</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_proc_keywords'>proc_keywords</span> 
+  <span class='comment'># Create a hash with keywords for common PROCs, keyed by PROC name
+</span>  <span class='ivar'>@proc_keywords</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+
+	<span class='ivar'>@proc_keywords</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SQL</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>ALTER</span><span class='words_sep'> </span><span class='tstring_content'>TABLE</span><span class='words_sep'> </span><span class='tstring_content'>CONNECT</span><span class='words_sep'> </span><span class='tstring_content'>CREATE</span><span class='words_sep'> </span><span class='tstring_content'>INDEX</span><span class='words_sep'> </span><span class='tstring_content'>VIEW</span><span class='words_sep'> </span><span class='tstring_content'>DELETE</span><span class='words_sep'> </span><span class='tstring_content'>DESCRIBE</span><span class='words_sep'> </span><span class='tstring_content'>DISCONNECT</span><span class='words_sep'> </span><span class='tstring_content'>DROP</span><span class='words_sep'> </span><span class='tstring_content'>EXECUTE</span><span class='words_sep'>
+      </span><span class='tstring_content'>INSERT</span><span class='words_sep'> </span><span class='tstring_content'>RESET</span><span class='words_sep'> </span><span class='tstring_content'>SELECT</span><span class='words_sep'> </span><span class='tstring_content'>UPDATE</span><span class='words_sep'> </span><span class='tstring_content'>VALIDATE</span><span class='words_sep'> </span><span class='tstring_content'>ADD</span><span class='words_sep'> </span><span class='tstring_content'>CONSTRAINT</span><span class='words_sep'> </span><span class='tstring_content'>DROP</span><span class='words_sep'> </span><span class='tstring_content'>FOREIGN</span><span class='words_sep'> </span><span class='tstring_content'>KEY</span><span class='words_sep'> </span><span class='tstring_content'>PRIMARY</span><span class='words_sep'>
+      </span><span class='tstring_content'>MODIFY</span><span class='words_sep'> </span><span class='tstring_content'>LIKE</span><span class='words_sep'> </span><span class='tstring_content'>AS</span><span class='words_sep'> </span><span class='tstring_content'>ORDER</span><span class='words_sep'> </span><span class='tstring_content'>BY</span><span class='words_sep'> </span><span class='tstring_content'>USING</span><span class='words_sep'> </span><span class='tstring_content'>FROM</span><span class='words_sep'> </span><span class='tstring_content'>INTO</span><span class='words_sep'> </span><span class='tstring_content'>SET</span><span class='words_sep'> </span><span class='tstring_content'>VALUES</span><span class='words_sep'> </span><span class='tstring_content'>RESET</span><span class='words_sep'> </span><span class='tstring_content'>DISTINCT</span><span class='words_sep'> </span><span class='tstring_content'>UNIQUE</span><span class='words_sep'>
+      </span><span class='tstring_content'>WHERE</span><span class='words_sep'> </span><span class='tstring_content'>GROUP</span><span class='words_sep'> </span><span class='tstring_content'>HAVING</span><span class='words_sep'> </span><span class='tstring_content'>LEFT</span><span class='words_sep'> </span><span class='tstring_content'>RIGHT</span><span class='words_sep'> </span><span class='tstring_content'>INNER</span><span class='words_sep'> </span><span class='tstring_content'>JOIN</span><span class='words_sep'> </span><span class='tstring_content'>ON</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+  <span class='comment'># from SAS 9.4 SQL Procedure User&#39;s Guide
+</span>
+	<span class='ivar'>@proc_keywords</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MEANS</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>BY</span><span class='words_sep'> </span><span class='tstring_content'>CLASS</span><span class='words_sep'> </span><span class='tstring_content'>FREQ</span><span class='words_sep'> </span><span class='tstring_content'>ID</span><span class='words_sep'> </span><span class='tstring_content'>OUTPUT</span><span class='words_sep'> </span><span class='tstring_content'>OUT</span><span class='words_sep'> </span><span class='tstring_content'>TYPES</span><span class='words_sep'> </span><span class='tstring_content'>VAR</span><span class='words_sep'> </span><span class='tstring_content'>WAYS</span><span class='words_sep'> </span><span class='tstring_content'>WEIGHT</span><span class='words_sep'>
+      </span><span class='tstring_content'>ATTRIB</span><span class='words_sep'> </span><span class='tstring_content'>FORMAT</span><span class='words_sep'> </span><span class='tstring_content'>LABEL</span><span class='words_sep'> </span><span class='tstring_content'>WHERE</span><span class='words_sep'>
+      </span><span class='tstring_content'>DESCENDING</span><span class='words_sep'> </span><span class='tstring_content'>NOTSORTED</span><span class='words_sep'> 
+      </span><span class='tstring_content'>NOTHREADS</span><span class='words_sep'> </span><span class='tstring_content'>NOTRAP</span><span class='words_sep'> </span><span class='tstring_content'>PCTLDEF</span><span class='words_sep'> </span><span class='tstring_content'>SUMSIZE</span><span class='words_sep'> </span><span class='tstring_content'>THREADS</span><span class='words_sep'> </span><span class='tstring_content'>CLASSDATA</span><span class='words_sep'> </span><span class='tstring_content'>COMPLETETYPES</span><span class='words_sep'>
+      </span><span class='tstring_content'>EXCLUSIVE</span><span class='words_sep'> </span><span class='tstring_content'>MISSING</span><span class='words_sep'> </span><span class='tstring_content'>FW</span><span class='words_sep'> </span><span class='tstring_content'>MAXDEC</span><span class='words_sep'> </span><span class='tstring_content'>NONOBS</span><span class='words_sep'> </span><span class='tstring_content'>NOPRINT</span><span class='words_sep'> </span><span class='tstring_content'>ORDER</span><span class='words_sep'> </span><span class='tstring_content'>FORMATTED</span><span class='words_sep'> </span><span class='tstring_content'>FREQ</span><span class='words_sep'>
+      </span><span class='tstring_content'>UNFORMATTED</span><span class='words_sep'> </span><span class='tstring_content'>PRINT</span><span class='words_sep'> </span><span class='tstring_content'>PRINTALLTYPES</span><span class='words_sep'> </span><span class='tstring_content'>PRINTIDVARS</span><span class='words_sep'> </span><span class='tstring_content'>STACKODSOUTPUT</span><span class='words_sep'>
+      </span><span class='tstring_content'>CHARTYPE</span><span class='words_sep'> </span><span class='tstring_content'>DESCENDTYPES</span><span class='words_sep'> </span><span class='tstring_content'>IDMIN</span><span class='words_sep'>
+      </span><span class='tstring_content'>ALPHA</span><span class='words_sep'> </span><span class='tstring_content'>EXCLNPWGT</span><span class='words_sep'> </span><span class='tstring_content'>QMARKERS</span><span class='words_sep'> </span><span class='tstring_content'>QMETHOD</span><span class='words_sep'> </span><span class='tstring_content'>QNTLDEF</span><span class='words_sep'> </span><span class='tstring_content'>VARDEF</span><span class='words_sep'>
+      </span><span class='tstring_content'>CLM</span><span class='words_sep'> </span><span class='tstring_content'>CSS</span><span class='words_sep'> </span><span class='tstring_content'>CV</span><span class='words_sep'> </span><span class='tstring_content'>KURTOSIS</span><span class='words_sep'> </span><span class='tstring_content'>KURT</span><span class='words_sep'> </span><span class='tstring_content'>LCLM</span><span class='words_sep'> </span><span class='tstring_content'>MAX</span><span class='words_sep'> </span><span class='tstring_content'>MEAN</span><span class='words_sep'> </span><span class='tstring_content'>MIN</span><span class='words_sep'> </span><span class='tstring_content'>MODE</span><span class='words_sep'> </span><span class='tstring_content'>N</span><span class='words_sep'>
+      </span><span class='tstring_content'>NMISS</span><span class='words_sep'> </span><span class='tstring_content'>RANGE</span><span class='words_sep'> </span><span class='tstring_content'>SKEWNESS</span><span class='words_sep'> </span><span class='tstring_content'>SKEW</span><span class='words_sep'> </span><span class='tstring_content'>STDDEV</span><span class='words_sep'> </span><span class='tstring_content'>STD</span><span class='words_sep'> </span><span class='tstring_content'>STDERR</span><span class='words_sep'> </span><span class='tstring_content'>SUM</span><span class='words_sep'> </span><span class='tstring_content'>SUMWGT</span><span class='words_sep'> </span><span class='tstring_content'>UCLM</span><span class='words_sep'> </span><span class='tstring_content'>USS</span><span class='words_sep'> </span><span class='tstring_content'>VAR</span><span class='words_sep'>
+      </span><span class='tstring_content'>MEDIAN</span><span class='words_sep'> </span><span class='tstring_content'>P50</span><span class='words_sep'> </span><span class='tstring_content'>Q1</span><span class='words_sep'> </span><span class='tstring_content'>P25</span><span class='words_sep'> </span><span class='tstring_content'>Q3</span><span class='words_sep'> </span><span class='tstring_content'>P75</span><span class='words_sep'> </span><span class='tstring_content'>P1</span><span class='words_sep'> </span><span class='tstring_content'>P90</span><span class='words_sep'> </span><span class='tstring_content'>P5</span><span class='words_sep'> </span><span class='tstring_content'>P95</span><span class='words_sep'> </span><span class='tstring_content'>P10</span><span class='words_sep'> </span><span class='tstring_content'>P99</span><span class='words_sep'> </span><span class='tstring_content'>P20</span><span class='words_sep'> </span><span class='tstring_content'>P30</span><span class='words_sep'> </span><span class='tstring_content'>P40</span><span class='words_sep'> </span><span class='tstring_content'>P60</span><span class='words_sep'> </span><span class='tstring_content'>P70</span><span class='words_sep'>
+      </span><span class='tstring_content'>P80</span><span class='words_sep'> </span><span class='tstring_content'>QRANGE</span><span class='words_sep'>
+      </span><span class='tstring_content'>PROBT</span><span class='words_sep'> </span><span class='tstring_content'>PRT</span><span class='words_sep'> </span><span class='tstring_content'>T</span><span class='words_sep'>
+      </span><span class='tstring_content'>ASCENDING</span><span class='words_sep'> </span><span class='tstring_content'>GROUPINTERNAL</span><span class='words_sep'> </span><span class='tstring_content'>MLF</span><span class='words_sep'> </span><span class='tstring_content'>PRELOADFMT</span><span class='words_sep'>
+      </span><span class='tstring_content'>MAXID</span><span class='words_sep'> </span><span class='tstring_content'>AUTOLABEL</span><span class='words_sep'> </span><span class='tstring_content'>AUTONAME</span><span class='words_sep'> </span><span class='tstring_content'>KEEPLEN</span><span class='words_sep'> </span><span class='tstring_content'>LEVELS</span><span class='words_sep'> </span><span class='tstring_content'>NOINHERIT</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+  <span class='comment'># from BASE SAS 9.4 Procedures Guide, Fifth Edition
+</span>
+	<span class='ivar'>@proc_keywords</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>DATASETS</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>AGE</span><span class='words_sep'> </span><span class='tstring_content'>APPEND</span><span class='words_sep'> </span><span class='tstring_content'>ATTRIB</span><span class='words_sep'> </span><span class='tstring_content'>AUDIT</span><span class='words_sep'> </span><span class='tstring_content'>CHANGE</span><span class='words_sep'> </span><span class='tstring_content'>CONTENTS</span><span class='words_sep'> </span><span class='tstring_content'>COPY</span><span class='words_sep'> </span><span class='tstring_content'>DELETE</span><span class='words_sep'> </span><span class='tstring_content'>EXCHANGE</span><span class='words_sep'>
+      </span><span class='tstring_content'>EXCLUDE</span><span class='words_sep'> </span><span class='tstring_content'>FORMAT</span><span class='words_sep'> </span><span class='tstring_content'>IC</span><span class='words_sep'> </span><span class='tstring_content'>CREATE</span><span class='words_sep'> </span><span class='tstring_content'>DELETE</span><span class='words_sep'> </span><span class='tstring_content'>REACTIVATE</span><span class='words_sep'> </span><span class='tstring_content'>INDEX</span><span class='words_sep'> </span><span class='tstring_content'>CENTILES</span><span class='words_sep'> </span><span class='tstring_content'>INFORMAT</span><span class='words_sep'>
+      </span><span class='tstring_content'>INITIATE</span><span class='words_sep'> </span><span class='tstring_content'>LABEL</span><span class='words_sep'> </span><span class='tstring_content'>LOG</span><span class='words_sep'> </span><span class='tstring_content'>MODIFY</span><span class='words_sep'> </span><span class='tstring_content'>REBUILD</span><span class='words_sep'> </span><span class='tstring_content'>RENAME</span><span class='words_sep'> </span><span class='tstring_content'>REPAIR</span><span class='words_sep'> </span><span class='tstring_content'>RESUME</span><span class='words_sep'> </span><span class='tstring_content'>SAVE</span><span class='words_sep'> </span><span class='tstring_content'>SELECT</span><span class='words_sep'>
+      </span><span class='tstring_content'>SUSPEND</span><span class='words_sep'> </span><span class='tstring_content'>TERMINATE</span><span class='words_sep'> </span><span class='tstring_content'>USER_VAR</span><span class='words_sep'> </span><span class='tstring_content'>XATTR</span><span class='words_sep'> </span><span class='tstring_content'>ADD</span><span class='words_sep'> </span><span class='tstring_content'>OPTIONS</span><span class='words_sep'> </span><span class='tstring_content'>REMOVE</span><span class='words_sep'> </span><span class='tstring_content'>SET</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+  <span class='comment'># from BASE SAS 9.4 Procedures Guide, Fifth Edition
+</span>
+	<span class='ivar'>@proc_keywords</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SORT</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>BY</span><span class='words_sep'> </span><span class='tstring_content'>DESCENDING</span><span class='words_sep'> </span><span class='tstring_content'>KEY</span><span class='words_sep'> </span><span class='tstring_content'>ASCENDING</span><span class='words_sep'> </span><span class='tstring_content'>ASC</span><span class='words_sep'> </span><span class='tstring_content'>DESC</span><span class='words_sep'> </span><span class='tstring_content'>DATECOPY</span><span class='words_sep'> </span><span class='tstring_content'>FORCE</span><span class='words_sep'> </span><span class='tstring_content'>OVERWRITE</span><span class='words_sep'> 
+      </span><span class='tstring_content'>PRESORTED</span><span class='words_sep'> </span><span class='tstring_content'>SORTSIZE</span><span class='words_sep'> </span><span class='tstring_content'>TAGSORT</span><span class='words_sep'> </span><span class='tstring_content'>DUPOUT</span><span class='words_sep'> </span><span class='tstring_content'>OUT</span><span class='words_sep'> </span><span class='tstring_content'>UNIQUEOUT</span><span class='words_sep'> </span><span class='tstring_content'>NODUPKEY</span><span class='words_sep'> </span><span class='tstring_content'>NOUNIQUEKEY</span><span class='words_sep'> 
+      </span><span class='tstring_content'>NOTHREADS</span><span class='words_sep'> </span><span class='tstring_content'>THREADS</span><span class='words_sep'> </span><span class='tstring_content'>EQUALS</span><span class='words_sep'> </span><span class='tstring_content'>NOEQUALS</span><span class='words_sep'>
+      </span><span class='tstring_content'>ATTRIB</span><span class='words_sep'> </span><span class='tstring_content'>FORMAT</span><span class='words_sep'> </span><span class='tstring_content'>LABEL</span><span class='words_sep'> </span><span class='tstring_content'>WHERE</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+  <span class='comment'># from BASE SAS 9.4 Procedures Guide, Fifth Edition
+</span>
+	<span class='ivar'>@proc_keywords</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PRINT</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>BY</span><span class='words_sep'> </span><span class='tstring_content'>DESCENDING</span><span class='words_sep'> </span><span class='tstring_content'>NOTSORTED</span><span class='words_sep'> </span><span class='tstring_content'>PAGEBY</span><span class='words_sep'> </span><span class='tstring_content'>SUMBY</span><span class='words_sep'> </span><span class='tstring_content'>ID</span><span class='words_sep'> </span><span class='tstring_content'>STYLE</span><span class='words_sep'> </span><span class='tstring_content'>SUM</span><span class='words_sep'> </span><span class='tstring_content'>VAR</span><span class='words_sep'> </span><span class='tstring_content'>CONTENTS</span><span class='words_sep'> </span><span class='tstring_content'>DATA</span><span class='words_sep'>
+      </span><span class='tstring_content'>GRANDTOTAL_LABEL</span><span class='words_sep'> </span><span class='tstring_content'>HEADING</span><span class='words_sep'> </span><span class='tstring_content'>LABEL</span><span class='words_sep'> </span><span class='tstring_content'>SPLIT</span><span class='words_sep'> </span><span class='tstring_content'>SUMLABEL</span><span class='words_sep'> </span><span class='tstring_content'>NOSUMLABEL</span><span class='words_sep'>
+      </span><span class='tstring_content'>BLANKLINE</span><span class='words_sep'> </span><span class='tstring_content'>COUNT</span><span class='words_sep'> </span><span class='tstring_content'>DOUBLE</span><span class='words_sep'> </span><span class='tstring_content'>N</span><span class='words_sep'> </span><span class='tstring_content'>NOOBS</span><span class='words_sep'> </span><span class='tstring_content'>OBS</span><span class='words_sep'> </span><span class='tstring_content'>ROUND</span><span class='words_sep'>
+      </span><span class='tstring_content'>ROWS</span><span class='words_sep'> </span><span class='tstring_content'>UNIFORM</span><span class='words_sep'> </span><span class='tstring_content'>WIDTH</span><span class='words_sep'>
+      </span><span class='tstring_content'>ATTRIB</span><span class='words_sep'> </span><span class='tstring_content'>FORMAT</span><span class='words_sep'> </span><span class='tstring_content'>LABEL</span><span class='words_sep'> </span><span class='tstring_content'>WHERE</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+  <span class='comment'># from BASE SAS 9.4 Procedures Guide, Fifth Edition
+</span>
+	<span class='ivar'>@proc_keywords</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>APPEND</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>BASE</span><span class='words_sep'> </span><span class='tstring_content'>APPENDVER</span><span class='words_sep'> </span><span class='tstring_content'>DATA</span><span class='words_sep'> </span><span class='tstring_content'>ENCRYPTKEY</span><span class='words_sep'> </span><span class='tstring_content'>FORCE</span><span class='words_sep'> </span><span class='tstring_content'>GETSORT</span><span class='words_sep'> </span><span class='tstring_content'>NOWARN</span><span class='words_sep'>
+      </span><span class='tstring_content'>ATTRIB</span><span class='words_sep'> </span><span class='tstring_content'>FORMAT</span><span class='words_sep'> </span><span class='tstring_content'>LABEL</span><span class='words_sep'> </span><span class='tstring_content'>WHERE</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+  <span class='comment'># from BASE SAS 9.4 Procedures Guide, Fifth Edition
+</span>
+	<span class='ivar'>@proc_keywords</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TRANSPOSE</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>DELIMITER</span><span class='words_sep'> </span><span class='tstring_content'>LABEL</span><span class='words_sep'> </span><span class='tstring_content'>LET</span><span class='words_sep'> </span><span class='tstring_content'>NAME</span><span class='words_sep'> </span><span class='tstring_content'>OUT</span><span class='words_sep'> </span><span class='tstring_content'>PREFIX</span><span class='words_sep'> </span><span class='tstring_content'>SUFFIX</span><span class='words_sep'> </span><span class='tstring_content'>BY</span><span class='words_sep'> </span><span class='tstring_content'>DESCENDING</span><span class='words_sep'> </span><span class='tstring_content'>NOTSORTED</span><span class='words_sep'>
+      </span><span class='tstring_content'>COPY</span><span class='words_sep'> </span><span class='tstring_content'>ID</span><span class='words_sep'> </span><span class='tstring_content'>IDLABEL</span><span class='words_sep'> </span><span class='tstring_content'>VAR</span><span class='words_sep'> </span><span class='tstring_content'>INDB</span><span class='words_sep'>
+      </span><span class='tstring_content'>ATTRIB</span><span class='words_sep'> </span><span class='tstring_content'>FORMAT</span><span class='words_sep'> </span><span class='tstring_content'>LABEL</span><span class='words_sep'> </span><span class='tstring_content'>WHERE</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+  <span class='comment'># from BASE SAS 9.4 Procedures Guide, Fifth Edition
+</span>
+	<span class='ivar'>@proc_keywords</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FREQ</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>BY</span><span class='words_sep'> </span><span class='tstring_content'>EXACT</span><span class='words_sep'> </span><span class='tstring_content'>OUTPUT</span><span class='words_sep'> </span><span class='tstring_content'>TABLES</span><span class='words_sep'> </span><span class='tstring_content'>TEST</span><span class='words_sep'> </span><span class='tstring_content'>WEIGHT</span><span class='words_sep'>
+      </span><span class='tstring_content'>COMPRESS</span><span class='words_sep'> </span><span class='tstring_content'>DATA</span><span class='words_sep'> </span><span class='tstring_content'>FORMCHAR</span><span class='words_sep'> </span><span class='tstring_content'>NLEVELS</span><span class='words_sep'> </span><span class='tstring_content'>NOPRINT</span><span class='words_sep'> </span><span class='tstring_content'>ORDER</span><span class='words_sep'> </span><span class='tstring_content'>PAGE</span><span class='words_sep'> </span><span class='tstring_content'>FORMATTED</span><span class='words_sep'> </span><span class='tstring_content'>FREQ</span><span class='words_sep'> 
+      </span><span class='tstring_content'>INTERNAL</span><span class='words_sep'>
+      </span><span class='tstring_content'>AGREE</span><span class='words_sep'> </span><span class='tstring_content'>BARNARD</span><span class='words_sep'> </span><span class='tstring_content'>BINOMIAL</span><span class='words_sep'> </span><span class='tstring_content'>BIN</span><span class='words_sep'> </span><span class='tstring_content'>CHISQ</span><span class='words_sep'> </span><span class='tstring_content'>COMOR</span><span class='words_sep'> </span><span class='tstring_content'>EQOR</span><span class='words_sep'> </span><span class='tstring_content'>ZELEN</span><span class='words_sep'> </span><span class='tstring_content'>FISHER</span><span class='words_sep'> </span><span class='tstring_content'>JT</span><span class='words_sep'> </span><span class='tstring_content'>KAPPA</span><span class='words_sep'>
+      </span><span class='tstring_content'>KENTB</span><span class='words_sep'> </span><span class='tstring_content'>TAUB</span><span class='words_sep'> </span><span class='tstring_content'>LRCHI</span><span class='words_sep'> </span><span class='tstring_content'>MCNEM</span><span class='words_sep'> </span><span class='tstring_content'>MEASURES</span><span class='words_sep'> </span><span class='tstring_content'>MHCHI</span><span class='words_sep'> </span><span class='tstring_content'>OR</span><span class='words_sep'> </span><span class='tstring_content'>ODDSRATIO</span><span class='words_sep'> </span><span class='tstring_content'>PCHI</span><span class='words_sep'> </span><span class='tstring_content'>PCORR</span><span class='words_sep'> </span><span class='tstring_content'>RELRISK</span><span class='words_sep'>
+      </span><span class='tstring_content'>RISKDIFF</span><span class='words_sep'> </span><span class='tstring_content'>SCORR</span><span class='words_sep'> </span><span class='tstring_content'>SMDCR</span><span class='words_sep'> </span><span class='tstring_content'>SMDRC</span><span class='words_sep'> </span><span class='tstring_content'>STUTC</span><span class='words_sep'> </span><span class='tstring_content'>TAUC</span><span class='words_sep'> </span><span class='tstring_content'>TREND</span><span class='words_sep'> </span><span class='tstring_content'>WTKAP</span><span class='words_sep'> </span><span class='tstring_content'>WTKAPPA</span><span class='words_sep'>
+      </span><span class='tstring_content'>OUT</span><span class='words_sep'> </span><span class='tstring_content'>AJCHI</span><span class='words_sep'> </span><span class='tstring_content'>ALL</span><span class='words_sep'> </span><span class='tstring_content'>BDCHI</span><span class='words_sep'> </span><span class='tstring_content'>CMH</span><span class='words_sep'> </span><span class='tstring_content'>CMH1</span><span class='words_sep'> </span><span class='tstring_content'>CMH2</span><span class='words_sep'> </span><span class='tstring_content'>CMHCOR</span><span class='words_sep'> </span><span class='tstring_content'>CMHGA</span><span class='words_sep'> </span><span class='tstring_content'>CMHRMS</span><span class='words_sep'> </span><span class='tstring_content'>COCHQ</span><span class='words_sep'> </span><span class='tstring_content'>CONTGY</span><span class='words_sep'>
+      </span><span class='tstring_content'>CRAMV</span><span class='words_sep'> </span><span class='tstring_content'>EQKAP</span><span class='words_sep'> </span><span class='tstring_content'>EQWKP</span><span class='words_sep'> </span><span class='tstring_content'>GAMMA</span><span class='words_sep'> </span><span class='tstring_content'>GS</span><span class='words_sep'> </span><span class='tstring_content'>GAILSIMON</span><span class='words_sep'> </span><span class='tstring_content'>LAMCR</span><span class='words_sep'> </span><span class='tstring_content'>LAMDAS</span><span class='words_sep'> </span><span class='tstring_content'>LAMRC</span><span class='words_sep'> </span><span class='tstring_content'>LGOR</span><span class='words_sep'> </span><span class='tstring_content'>LGRRC1</span><span class='words_sep'>
+      </span><span class='tstring_content'>LGRRC2</span><span class='words_sep'> </span><span class='tstring_content'>MHOR</span><span class='words_sep'> </span><span class='tstring_content'>MHRRC1</span><span class='words_sep'> </span><span class='tstring_content'>MHRRC2</span><span class='words_sep'> </span><span class='tstring_content'>N</span><span class='words_sep'> </span><span class='tstring_content'>NMISS</span><span class='words_sep'> </span><span class='tstring_content'>PHI</span><span class='words_sep'> </span><span class='tstring_content'>PLCORR</span><span class='words_sep'> </span><span class='tstring_content'>RDIF1</span><span class='words_sep'> </span><span class='tstring_content'>RDIF2</span><span class='words_sep'> </span><span class='tstring_content'>RISKDIFF1</span><span class='words_sep'>
+      </span><span class='tstring_content'>RISKDIFF2</span><span class='words_sep'> </span><span class='tstring_content'>RRC1</span><span class='words_sep'> </span><span class='tstring_content'>RELRISK1</span><span class='words_sep'> </span><span class='tstring_content'>RRC2</span><span class='words_sep'> </span><span class='tstring_content'>RELRISK2</span><span class='words_sep'> </span><span class='tstring_content'>RSK1</span><span class='words_sep'> </span><span class='tstring_content'>RISK1</span><span class='words_sep'> </span><span class='tstring_content'>RSK11</span><span class='words_sep'> </span><span class='tstring_content'>RISK11</span><span class='words_sep'> </span><span class='tstring_content'>RSK12</span><span class='words_sep'>
+      </span><span class='tstring_content'>RISK12</span><span class='words_sep'> </span><span class='tstring_content'>RSK21</span><span class='words_sep'> </span><span class='tstring_content'>RISK21</span><span class='words_sep'> </span><span class='tstring_content'>RSK22</span><span class='words_sep'> </span><span class='tstring_content'>RISK22</span><span class='words_sep'> </span><span class='tstring_content'>TSYMM</span><span class='words_sep'> </span><span class='tstring_content'>BOWKER</span><span class='words_sep'> </span><span class='tstring_content'>U</span><span class='words_sep'> </span><span class='tstring_content'>UCR</span><span class='words_sep'> </span><span class='tstring_content'>URC</span><span class='words_sep'>
+      </span><span class='tstring_content'>CELLCHI2</span><span class='words_sep'> </span><span class='tstring_content'>CUMCOL</span><span class='words_sep'> </span><span class='tstring_content'>DEVIATION</span><span class='words_sep'> </span><span class='tstring_content'>EXPECTED</span><span class='words_sep'> </span><span class='tstring_content'>MISSPRINT</span><span class='words_sep'> </span><span class='tstring_content'>PEARSONREF</span><span class='words_sep'> </span><span class='tstring_content'>PRINTWKTS</span><span class='words_sep'>
+      </span><span class='tstring_content'>SCOROUT</span><span class='words_sep'> </span><span class='tstring_content'>SPARSE</span><span class='words_sep'> </span><span class='tstring_content'>STDRES</span><span class='words_sep'> </span><span class='tstring_content'>TOTPCT</span><span class='words_sep'>
+      </span><span class='tstring_content'>CONTENTS</span><span class='words_sep'> </span><span class='tstring_content'>CROSSLIST</span><span class='words_sep'> </span><span class='tstring_content'>FORMAT</span><span class='words_sep'> </span><span class='tstring_content'>LIST</span><span class='words_sep'> </span><span class='tstring_content'>MAXLEVELS</span><span class='words_sep'> </span><span class='tstring_content'>NOCOL</span><span class='words_sep'> </span><span class='tstring_content'>NOCUM</span><span class='words_sep'> </span><span class='tstring_content'>NOFREQ</span><span class='words_sep'> </span><span class='tstring_content'>NOPERCENT</span><span class='words_sep'>
+      </span><span class='tstring_content'>NOPRINT</span><span class='words_sep'> </span><span class='tstring_content'>NOROW</span><span class='words_sep'> </span><span class='tstring_content'>NOSPARSE</span><span class='words_sep'> </span><span class='tstring_content'>NOWARN</span><span class='words_sep'> </span><span class='tstring_content'>PLOTS</span><span class='words_sep'> </span><span class='tstring_content'>OUT</span><span class='words_sep'> </span><span class='tstring_content'>OUTCUM</span><span class='words_sep'> </span><span class='tstring_content'>OUTEXPECT</span><span class='words_sep'> </span><span class='tstring_content'>OUTPCT</span><span class='words_sep'>
+      </span><span class='tstring_content'>ZEROS</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+  <span class='comment'># from Base SAS 9.4 Procedures Guide: Statistical Procedures, Fourth Edition
+</span>
+	<span class='ivar'>@proc_keywords</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CORR</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>BY</span><span class='words_sep'> </span><span class='tstring_content'>FREQ</span><span class='words_sep'> </span><span class='tstring_content'>ID</span><span class='words_sep'> </span><span class='tstring_content'>PARTIAL</span><span class='words_sep'> </span><span class='tstring_content'>VAR</span><span class='words_sep'> </span><span class='tstring_content'>WEIGHT</span><span class='words_sep'> </span><span class='tstring_content'>WITH</span><span class='words_sep'>
+      </span><span class='tstring_content'>DATA</span><span class='words_sep'> </span><span class='tstring_content'>OUTH</span><span class='words_sep'> </span><span class='tstring_content'>OUTK</span><span class='words_sep'> </span><span class='tstring_content'>OUTP</span><span class='words_sep'> </span><span class='tstring_content'>OUTPLC</span><span class='words_sep'> </span><span class='tstring_content'>OUTPLS</span><span class='words_sep'> </span><span class='tstring_content'>OUTS</span><span class='words_sep'>
+      </span><span class='tstring_content'>EXCLNPWGHT</span><span class='words_sep'> </span><span class='tstring_content'>FISHER</span><span class='words_sep'> </span><span class='tstring_content'>HOEFFDING</span><span class='words_sep'> </span><span class='tstring_content'>KENDALL</span><span class='words_sep'> </span><span class='tstring_content'>NOMISS</span><span class='words_sep'> </span><span class='tstring_content'>PEARSON</span><span class='words_sep'> </span><span class='tstring_content'>POLYCHORIC</span><span class='words_sep'>
+      </span><span class='tstring_content'>POLYSERIAL</span><span class='words_sep'> </span><span class='tstring_content'>ALPHA</span><span class='words_sep'> </span><span class='tstring_content'>COV</span><span class='words_sep'> </span><span class='tstring_content'>CSSCP</span><span class='words_sep'> </span><span class='tstring_content'>SINGULAR</span><span class='words_sep'> </span><span class='tstring_content'>SSCP</span><span class='words_sep'> </span><span class='tstring_content'>VARDEF</span><span class='words_sep'> </span><span class='tstring_content'>PLOTS</span><span class='words_sep'> </span><span class='tstring_content'>MATRIX</span><span class='words_sep'> </span><span class='tstring_content'>SCATTER</span><span class='words_sep'>
+      </span><span class='tstring_content'>BEST</span><span class='words_sep'> </span><span class='tstring_content'>NOCORR</span><span class='words_sep'> </span><span class='tstring_content'>NOPRINT</span><span class='words_sep'> </span><span class='tstring_content'>NOPROB</span><span class='words_sep'> </span><span class='tstring_content'>NOSIMPLE</span><span class='words_sep'> </span><span class='tstring_content'>RANK</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+  <span class='comment'># from Base SAS 9.4 Procedures Guide: Statistical Procedures, Fourth Edition
+</span>
+	<span class='ivar'>@proc_keywords</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>REPORT</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>BREAK</span><span class='words_sep'> </span><span class='tstring_content'>BY</span><span class='words_sep'> </span><span class='tstring_content'>DESCENDING</span><span class='words_sep'> </span><span class='tstring_content'>NOTSORTED</span><span class='words_sep'> </span><span class='tstring_content'>COLUMN</span><span class='words_sep'> </span><span class='tstring_content'>COMPUTE</span><span class='words_sep'> </span><span class='tstring_content'>STYLE</span><span class='words_sep'> </span><span class='tstring_content'>LINE</span><span class='words_sep'> </span><span class='tstring_content'>ENDCOMP</span><span class='words_sep'>
+      </span><span class='tstring_content'>CALL</span><span class='words_sep'> </span><span class='tstring_content'>DEFINE</span><span class='words_sep'> </span><span class='tstring_content'>_ROW_</span><span class='words_sep'> </span><span class='tstring_content'>FREQ</span><span class='words_sep'> </span><span class='tstring_content'>RBREAK</span><span class='words_sep'> </span><span class='tstring_content'>WEIGHT</span><span class='words_sep'>
+      </span><span class='tstring_content'>ATTRIB</span><span class='words_sep'> </span><span class='tstring_content'>FORMAT</span><span class='words_sep'> </span><span class='tstring_content'>LABEL</span><span class='words_sep'> </span><span class='tstring_content'>WHERE</span><span class='words_sep'>
+      </span><span class='tstring_content'>DATA</span><span class='words_sep'> </span><span class='tstring_content'>NOALIAS</span><span class='words_sep'> </span><span class='tstring_content'>NOCENTER</span><span class='words_sep'> </span><span class='tstring_content'>NOCOMPLETECOLS</span><span class='words_sep'> </span><span class='tstring_content'>NOCOMPLETEROWS</span><span class='words_sep'> </span><span class='tstring_content'>NOTHREADS</span><span class='words_sep'> 
+      </span><span class='tstring_content'>NOWINDOWS</span><span class='words_sep'> </span><span class='tstring_content'>OUT</span><span class='words_sep'> </span><span class='tstring_content'>PCTLDEF</span><span class='words_sep'> </span><span class='tstring_content'>THREADS</span><span class='words_sep'> </span><span class='tstring_content'>WINDOWS</span><span class='words_sep'> </span><span class='tstring_content'>COMPLETECOLS</span><span class='words_sep'> </span><span class='tstring_content'>NOCOMPLETECOLS</span><span class='words_sep'>
+      </span><span class='tstring_content'>COMPLETEROWS</span><span class='words_sep'> </span><span class='tstring_content'>NOCOMPLETEROWS</span><span class='words_sep'> </span><span class='tstring_content'>CONTENTS</span><span class='words_sep'> </span><span class='tstring_content'>SPANROWS</span><span class='words_sep'> </span><span class='tstring_content'>COMMAND</span><span class='words_sep'> </span><span class='tstring_content'>HELP</span><span class='words_sep'> </span><span class='tstring_content'>PROMPT</span><span class='words_sep'>
+      </span><span class='tstring_content'>BOX</span><span class='words_sep'> </span><span class='tstring_content'>BYPAGENO</span><span class='words_sep'> </span><span class='tstring_content'>CENTER</span><span class='words_sep'> </span><span class='tstring_content'>NOCENTER</span><span class='words_sep'> </span><span class='tstring_content'>COLWIDTH</span><span class='words_sep'> </span><span class='tstring_content'>FORMCHAR</span><span class='words_sep'> </span><span class='tstring_content'>LS</span><span class='words_sep'> </span><span class='tstring_content'>MISSING</span><span class='words_sep'> </span><span class='tstring_content'>PANELS</span><span class='words_sep'> </span><span class='tstring_content'>PS</span><span class='words_sep'>
+      </span><span class='tstring_content'>PSPACE</span><span class='words_sep'> </span><span class='tstring_content'>SHOWALL</span><span class='words_sep'> </span><span class='tstring_content'>SPACING</span><span class='words_sep'> </span><span class='tstring_content'>WRAP</span><span class='words_sep'> </span><span class='tstring_content'>EXCLNPWGT</span><span class='words_sep'> </span><span class='tstring_content'>QMARKERS</span><span class='words_sep'> </span><span class='tstring_content'>QMETHOD</span><span class='words_sep'> </span><span class='tstring_content'>QNTLDEF</span><span class='words_sep'> </span><span class='tstring_content'>VARDEF</span><span class='words_sep'>
+      </span><span class='tstring_content'>NAMED</span><span class='words_sep'> </span><span class='tstring_content'>NOHEADER</span><span class='words_sep'> </span><span class='tstring_content'>SPLIT</span><span class='words_sep'> </span><span class='tstring_content'>HEADLINE</span><span class='words_sep'> </span><span class='tstring_content'>HEADSKIP</span><span class='words_sep'> </span><span class='tstring_content'>LIST</span><span class='words_sep'> </span><span class='tstring_content'>NOEXEC</span><span class='words_sep'> </span><span class='tstring_content'>OUTREPT</span><span class='words_sep'> </span><span class='tstring_content'>PROFILE</span><span class='words_sep'>
+      </span><span class='tstring_content'>REPORT</span><span class='words_sep'>
+      </span><span class='tstring_content'>COLOR</span><span class='words_sep'> </span><span class='tstring_content'>DOL</span><span class='words_sep'> </span><span class='tstring_content'>DUL</span><span class='words_sep'> </span><span class='tstring_content'>OL</span><span class='words_sep'> </span><span class='tstring_content'>PAGE</span><span class='words_sep'> </span><span class='tstring_content'>SKIP</span><span class='words_sep'> </span><span class='tstring_content'>SUMMARIZE</span><span class='words_sep'> </span><span class='tstring_content'>SUPPRESS</span><span class='words_sep'> </span><span class='tstring_content'>UL</span><span class='words_sep'>
+      </span><span class='tstring_content'>BLINK</span><span class='words_sep'> </span><span class='tstring_content'>COMMAND</span><span class='words_sep'> </span><span class='tstring_content'>HIGHLIGHT</span><span class='words_sep'> </span><span class='tstring_content'>RVSVIDEO</span><span class='words_sep'> </span><span class='tstring_content'>MERGE</span><span class='words_sep'> </span><span class='tstring_content'>REPLACE</span><span class='words_sep'> </span><span class='tstring_content'>URL</span><span class='words_sep'> </span><span class='tstring_content'>URLBP</span><span class='words_sep'> </span><span class='tstring_content'>URLP</span><span class='words_sep'>
+      </span><span class='tstring_content'>AFTER</span><span class='words_sep'> </span><span class='tstring_content'>BEFORE</span><span class='words_sep'> </span><span class='tstring_content'>_PAGE_</span><span class='words_sep'> </span><span class='tstring_content'>LEFT</span><span class='words_sep'> </span><span class='tstring_content'>RIGHT</span><span class='words_sep'> </span><span class='tstring_content'>CHARACTER</span><span class='words_sep'> </span><span class='tstring_content'>LENGTH</span><span class='words_sep'>
+      </span><span class='tstring_content'>EXCLUSIVE</span><span class='words_sep'> </span><span class='tstring_content'>MISSING</span><span class='words_sep'> </span><span class='tstring_content'>MLF</span><span class='words_sep'> </span><span class='tstring_content'>ORDER</span><span class='words_sep'> </span><span class='tstring_content'>DATA</span><span class='words_sep'> </span><span class='tstring_content'>FORMATTED</span><span class='words_sep'> </span><span class='tstring_content'>FREQ</span><span class='words_sep'> </span><span class='tstring_content'>INTERNAL</span><span class='words_sep'> </span><span class='tstring_content'>PRELOADFMT</span><span class='words_sep'>
+      </span><span class='tstring_content'>WIDTH</span><span class='words_sep'>
+      </span><span class='tstring_content'>ACROSS</span><span class='words_sep'> </span><span class='tstring_content'>ANALYSIS</span><span class='words_sep'> </span><span class='tstring_content'>COMPUTED</span><span class='words_sep'> </span><span class='tstring_content'>DISPLAY</span><span class='words_sep'> </span><span class='tstring_content'>GROUP</span><span class='words_sep'> </span><span class='tstring_content'>ORDER</span><span class='words_sep'>
+      </span><span class='tstring_content'>CONTENTS</span><span class='words_sep'> </span><span class='tstring_content'>FLOW</span><span class='words_sep'> </span><span class='tstring_content'>ID</span><span class='words_sep'> </span><span class='tstring_content'>NOPRINT</span><span class='words_sep'> </span><span class='tstring_content'>NOZERO</span><span class='words_sep'> </span><span class='tstring_content'>PAGE</span><span class='words_sep'>
+      </span><span class='tstring_content'>CSS</span><span class='words_sep'> </span><span class='tstring_content'>CV</span><span class='words_sep'> </span><span class='tstring_content'>MAX</span><span class='words_sep'> </span><span class='tstring_content'>MEAN</span><span class='words_sep'> </span><span class='tstring_content'>MIN</span><span class='words_sep'> </span><span class='tstring_content'>MODE</span><span class='words_sep'> </span><span class='tstring_content'>N</span><span class='words_sep'> </span><span class='tstring_content'>NMISS</span><span class='words_sep'> </span><span class='tstring_content'>PCTN</span><span class='words_sep'> </span><span class='tstring_content'>PCTSUM</span><span class='words_sep'> </span><span class='tstring_content'>RANGE</span><span class='words_sep'> </span><span class='tstring_content'>STD</span><span class='words_sep'> </span><span class='tstring_content'>STDERR</span><span class='words_sep'> </span><span class='tstring_content'>SUM</span><span class='words_sep'>
+      </span><span class='tstring_content'>SUMWGT</span><span class='words_sep'> </span><span class='tstring_content'>USS</span><span class='words_sep'> </span><span class='tstring_content'>VAR</span><span class='words_sep'>
+      </span><span class='tstring_content'>MEDIAN</span><span class='words_sep'> </span><span class='tstring_content'>P50</span><span class='words_sep'> </span><span class='tstring_content'>Q1</span><span class='words_sep'> </span><span class='tstring_content'>P25</span><span class='words_sep'> </span><span class='tstring_content'>Q3</span><span class='words_sep'> </span><span class='tstring_content'>P75</span><span class='words_sep'> </span><span class='tstring_content'>P1</span><span class='words_sep'> </span><span class='tstring_content'>P90</span><span class='words_sep'> </span><span class='tstring_content'>P5</span><span class='words_sep'> </span><span class='tstring_content'>P95</span><span class='words_sep'> </span><span class='tstring_content'>P10</span><span class='words_sep'> </span><span class='tstring_content'>P99</span><span class='words_sep'> </span><span class='tstring_content'>P20</span><span class='words_sep'> </span><span class='tstring_content'>P30</span><span class='words_sep'> </span><span class='tstring_content'>P40</span><span class='words_sep'> </span><span class='tstring_content'>P60</span><span class='words_sep'> </span><span class='tstring_content'>P70</span><span class='words_sep'>
+      </span><span class='tstring_content'>P80</span><span class='words_sep'> </span><span class='tstring_content'>QRANGE</span><span class='words_sep'>
+      </span><span class='tstring_content'>PROBT</span><span class='words_sep'> </span><span class='tstring_content'>PRT</span><span class='words_sep'> </span><span class='tstring_content'>T</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+  <span class='comment'># from BASE SAS 9.4 Procedures Guide, Fifth Edition
+</span>
+	<span class='ivar'>@proc_keywords</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>METALIB</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>OMR</span><span class='words_sep'> </span><span class='tstring_content'>DBAUTH</span><span class='words_sep'> </span><span class='tstring_content'>DBUSER</span><span class='words_sep'> </span><span class='tstring_content'>DBPASSWORD</span><span class='words_sep'> </span><span class='tstring_content'>EXCLUDE</span><span class='words_sep'> </span><span class='tstring_content'>SELECT</span><span class='words_sep'> </span><span class='tstring_content'>READ</span><span class='words_sep'> </span><span class='tstring_content'>FOLDER</span><span class='words_sep'> </span><span class='tstring_content'>FOLDERID</span><span class='words_sep'>
+      </span><span class='tstring_content'>IMPACT_LIMIT</span><span class='words_sep'> </span><span class='tstring_content'>NOEXEC</span><span class='words_sep'> </span><span class='tstring_content'>PREFIX</span><span class='words_sep'> </span><span class='tstring_content'>REPORT</span><span class='words_sep'> </span><span class='tstring_content'>UPDATE_RULE</span><span class='words_sep'> </span><span class='tstring_content'>DELETE</span><span class='words_sep'> </span><span class='tstring_content'>NOADD</span><span class='words_sep'> </span><span class='tstring_content'>NODELDUP</span><span class='words_sep'>
+      </span><span class='tstring_content'>NOUPDATE</span><span class='words_sep'>
+      </span><span class='tstring_content'>LIBID</span><span class='words_sep'> </span><span class='tstring_content'>LIBRARY</span><span class='words_sep'> </span><span class='tstring_content'>LIBURI</span><span class='words_sep'>
+      </span><span class='tstring_content'>TYPE</span><span class='words_sep'> </span><span class='tstring_content'>DETAIL</span><span class='words_sep'> </span><span class='tstring_content'>SUMMARY</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+  <span class='comment'># from SAS 9.4 Language Interfaces to Metadata, Third Edition
+</span>
+	<span class='ivar'>@proc_keywords</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GCHART</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>DATA</span><span class='words_sep'> </span><span class='tstring_content'>ANNOTATE</span><span class='words_sep'> </span><span class='tstring_content'>GOUT</span><span class='words_sep'> </span><span class='tstring_content'>IMAGEMAP</span><span class='words_sep'> </span><span class='tstring_content'>BLOCK</span><span class='words_sep'> </span><span class='tstring_content'>HBAR</span><span class='words_sep'> </span><span class='tstring_content'>HBAR3D</span><span class='words_sep'> </span><span class='tstring_content'>VBAR</span><span class='words_sep'> </span><span class='tstring_content'>VBAR3D</span><span class='words_sep'> </span><span class='tstring_content'>PIE</span><span class='words_sep'> </span><span class='tstring_content'>PIE3D</span><span class='words_sep'>
+      </span><span class='tstring_content'>DONUT</span><span class='words_sep'> </span><span class='tstring_content'>STAR</span><span class='words_sep'> </span><span class='tstring_content'>ANNO</span><span class='words_sep'>
+      </span><span class='tstring_content'>BY</span><span class='words_sep'> </span><span class='tstring_content'>NOTE</span><span class='words_sep'> </span><span class='tstring_content'>FORMAT</span><span class='words_sep'> </span><span class='tstring_content'>LABEL</span><span class='words_sep'> </span><span class='tstring_content'>WHERE</span><span class='words_sep'>
+      </span><span class='tstring_content'>BLOCKMAX</span><span class='words_sep'> </span><span class='tstring_content'>CAXIS</span><span class='words_sep'> </span><span class='tstring_content'>COUTLINE</span><span class='words_sep'> </span><span class='tstring_content'>CTEXT</span><span class='words_sep'> </span><span class='tstring_content'>LEGEND</span><span class='words_sep'> </span><span class='tstring_content'>NOHEADING</span><span class='words_sep'> </span><span class='tstring_content'>NOLEGEND</span><span class='words_sep'> </span><span class='tstring_content'>PATTERNID</span><span class='words_sep'>
+      </span><span class='tstring_content'>GROUP</span><span class='words_sep'> </span><span class='tstring_content'>MIDPOINT</span><span class='words_sep'> </span><span class='tstring_content'>SUBGROUP</span><span class='words_sep'> </span><span class='tstring_content'>WOUTLINE</span><span class='words_sep'> </span><span class='tstring_content'>DESCRIPTION</span><span class='words_sep'> </span><span class='tstring_content'>NAME</span><span class='words_sep'> </span><span class='tstring_content'>DISCRETE</span><span class='words_sep'> </span><span class='tstring_content'>LEVELS</span><span class='words_sep'>
+      </span><span class='tstring_content'>OLD</span><span class='words_sep'> </span><span class='tstring_content'>MISSING</span><span class='words_sep'> </span><span class='tstring_content'>HTML_LEGEND</span><span class='words_sep'> </span><span class='tstring_content'>HTML</span><span class='words_sep'> </span><span class='tstring_content'>URL</span><span class='words_sep'> </span><span class='tstring_content'>FREQ</span><span class='words_sep'> </span><span class='tstring_content'>G100</span><span class='words_sep'> </span><span class='tstring_content'>SUMVAR</span><span class='words_sep'> </span><span class='tstring_content'>TYPE</span><span class='words_sep'>
+      </span><span class='tstring_content'>CAUTOREF</span><span class='words_sep'> </span><span class='tstring_content'>CERROR</span><span class='words_sep'> </span><span class='tstring_content'>CFRAME</span><span class='words_sep'> </span><span class='tstring_content'>CLM</span><span class='words_sep'> </span><span class='tstring_content'>CREF</span><span class='words_sep'> </span><span class='tstring_content'>FRAME</span><span class='words_sep'> </span><span class='tstring_content'>NOFRAME</span><span class='words_sep'> </span><span class='tstring_content'>GSPACE</span><span class='words_sep'> </span><span class='tstring_content'>IFRAME</span><span class='words_sep'>
+      </span><span class='tstring_content'>IMAGESTYLE</span><span class='words_sep'> </span><span class='tstring_content'>TILE</span><span class='words_sep'> </span><span class='tstring_content'>FIT</span><span class='words_sep'> </span><span class='tstring_content'>LAUTOREF</span><span class='words_sep'> </span><span class='tstring_content'>NOSYMBOL</span><span class='words_sep'> </span><span class='tstring_content'>PATTERNID</span><span class='words_sep'> </span><span class='tstring_content'>SHAPE</span><span class='words_sep'> </span><span class='tstring_content'>SPACE</span><span class='words_sep'>
+      </span><span class='tstring_content'>SUBOUTSIDE</span><span class='words_sep'> </span><span class='tstring_content'>WAUTOREF</span><span class='words_sep'> </span><span class='tstring_content'>WIDTH</span><span class='words_sep'> </span><span class='tstring_content'>WOUTLINE</span><span class='words_sep'> </span><span class='tstring_content'>WREF</span><span class='words_sep'>
+      </span><span class='tstring_content'>ASCENDING</span><span class='words_sep'> </span><span class='tstring_content'>AUTOREF</span><span class='words_sep'> </span><span class='tstring_content'>CLIPREF</span><span class='words_sep'> </span><span class='tstring_content'>DESCENDING</span><span class='words_sep'> </span><span class='tstring_content'>FRONTREF</span><span class='words_sep'> </span><span class='tstring_content'>GAXIS</span><span class='words_sep'> </span><span class='tstring_content'>MAXIS</span><span class='words_sep'> </span><span class='tstring_content'>MINOR</span><span class='words_sep'>
+      </span><span class='tstring_content'>NOAXIS</span><span class='words_sep'> </span><span class='tstring_content'>NOBASEREF</span><span class='words_sep'> </span><span class='tstring_content'>NOZERO</span><span class='words_sep'> </span><span class='tstring_content'>RANGE</span><span class='words_sep'> </span><span class='tstring_content'>AXIS</span><span class='words_sep'> </span><span class='tstring_content'>REF</span><span class='words_sep'> </span><span class='tstring_content'>CFREQ</span><span class='words_sep'> </span><span class='tstring_content'>CFREQLABEL</span><span class='words_sep'> </span><span class='tstring_content'>NONE</span><span class='words_sep'> </span><span class='tstring_content'>CPERCENT</span><span class='words_sep'>
+      </span><span class='tstring_content'>CPERCENTLABEL</span><span class='words_sep'> </span><span class='tstring_content'>ERRORBAR</span><span class='words_sep'> </span><span class='tstring_content'>BARS</span><span class='words_sep'> </span><span class='tstring_content'>BOTH</span><span class='words_sep'> </span><span class='tstring_content'>TOP</span><span class='words_sep'> </span><span class='tstring_content'>FREQLABEL</span><span class='words_sep'> </span><span class='tstring_content'>INSIDE</span><span class='words_sep'> </span><span class='tstring_content'>MEAN</span><span class='words_sep'> </span><span class='tstring_content'>MEANLABEL</span><span class='words_sep'>
+      </span><span class='tstring_content'>NOSTATS</span><span class='words_sep'> </span><span class='tstring_content'>OUTSIDE</span><span class='words_sep'> </span><span class='tstring_content'>PERCENT</span><span class='words_sep'> </span><span class='tstring_content'>PERCENTLABEL</span><span class='words_sep'> </span><span class='tstring_content'>PERCENTSUM</span><span class='words_sep'> </span><span class='tstring_content'>SUM</span><span class='words_sep'>
+      </span><span class='tstring_content'>CFILL</span><span class='words_sep'> </span><span class='tstring_content'>COUTLINE</span><span class='words_sep'> </span><span class='tstring_content'>DETAIL_RADIUS</span><span class='words_sep'> </span><span class='tstring_content'>EXPLODE</span><span class='words_sep'> </span><span class='tstring_content'>FILL</span><span class='words_sep'> </span><span class='tstring_content'>SOLID</span><span class='words_sep'> </span><span class='tstring_content'>X</span><span class='words_sep'> </span><span class='tstring_content'>INVISIBLE</span><span class='words_sep'> </span><span class='tstring_content'>NOHEADING</span><span class='words_sep'>
+      </span><span class='tstring_content'>RADIUS</span><span class='words_sep'> </span><span class='tstring_content'>WOUTLINE</span><span class='words_sep'> </span><span class='tstring_content'>DETAIL_THRESHOLD</span><span class='words_sep'> </span><span class='tstring_content'>DETAIL_PERCENT</span><span class='words_sep'> </span><span class='tstring_content'>DETAIL_SLICE</span><span class='words_sep'>
+      </span><span class='tstring_content'>DETAIL_VALUE</span><span class='words_sep'> </span><span class='tstring_content'>DONUTPCT</span><span class='words_sep'> </span><span class='tstring_content'>LABEL</span><span class='words_sep'> </span><span class='tstring_content'>ACROSS</span><span class='words_sep'> </span><span class='tstring_content'>DOWN</span><span class='words_sep'> </span><span class='tstring_content'>GROUP</span><span class='words_sep'> </span><span class='tstring_content'>NOGROUPHEADING</span><span class='words_sep'> </span><span class='tstring_content'>SUBGROUP</span><span class='words_sep'>
+      </span><span class='tstring_content'>MATCHCOLOR</span><span class='words_sep'> </span><span class='tstring_content'>OTHERCOLOR</span><span class='words_sep'> </span><span class='tstring_content'>OTHERLABEL</span><span class='words_sep'> </span><span class='tstring_content'>PERCENT</span><span class='words_sep'> </span><span class='tstring_content'>ARROW</span><span class='words_sep'> </span><span class='tstring_content'>PLABEL</span><span class='words_sep'> </span><span class='tstring_content'>PPERCENT</span><span class='words_sep'> </span><span class='tstring_content'>SLICE</span><span class='words_sep'>
+      </span><span class='tstring_content'>VALUE</span><span class='words_sep'>
+      </span><span class='tstring_content'>ANGLE</span><span class='words_sep'> </span><span class='tstring_content'>ASCENDING</span><span class='words_sep'> </span><span class='tstring_content'>CLOCKWISE</span><span class='words_sep'> </span><span class='tstring_content'>DESCENDING</span><span class='words_sep'> </span><span class='tstring_content'>JSTYLE</span><span class='words_sep'>
+      </span><span class='tstring_content'>NOCONNECT</span><span class='words_sep'> </span><span class='tstring_content'>STARMAX</span><span class='words_sep'> </span><span class='tstring_content'>STARMIN</span><span class='words_sep'> 
+    </span><span class='tstring_end'>)</span></span>
+  <span class='comment'># from SAS GRAPH 9.4 Reference, Fourth Edition
+</span>
+	<span class='ivar'>@proc_keywords</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GPLOT</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>DATA</span><span class='words_sep'> </span><span class='tstring_content'>ANNOTATE</span><span class='words_sep'> </span><span class='tstring_content'>GOUT</span><span class='words_sep'> </span><span class='tstring_content'>IMAGEMAP</span><span class='words_sep'> </span><span class='tstring_content'>UNIFORM</span><span class='words_sep'> </span><span class='tstring_content'>BUBBLE</span><span class='words_sep'> </span><span class='tstring_content'>BUBBLE2</span><span class='words_sep'> </span><span class='tstring_content'>PLOT</span><span class='words_sep'> </span><span class='tstring_content'>PLOT2</span><span class='words_sep'>
+      </span><span class='tstring_content'>BCOLOR</span><span class='words_sep'> </span><span class='tstring_content'>BFILL</span><span class='words_sep'> </span><span class='tstring_content'>BFONT</span><span class='words_sep'> </span><span class='tstring_content'>BLABEL</span><span class='words_sep'> </span><span class='tstring_content'>BSCALE</span><span class='words_sep'> </span><span class='tstring_content'>AREA</span><span class='words_sep'> </span><span class='tstring_content'>RADIUS</span><span class='words_sep'> </span><span class='tstring_content'>BSIZE</span><span class='words_sep'> </span><span class='tstring_content'>DESCRIPTION</span><span class='words_sep'> </span><span class='tstring_content'>NAME</span><span class='words_sep'>
+      </span><span class='tstring_content'>AUTOHREF</span><span class='words_sep'> </span><span class='tstring_content'>CAUTOHREF</span><span class='words_sep'> </span><span class='tstring_content'>CHREF</span><span class='words_sep'> </span><span class='tstring_content'>HAXIS</span><span class='words_sep'> </span><span class='tstring_content'>HMINOR</span><span class='words_sep'> </span><span class='tstring_content'>HREF</span><span class='words_sep'> </span><span class='tstring_content'>HREVERSE</span><span class='words_sep'> </span><span class='tstring_content'>HZERO</span><span class='words_sep'> </span><span class='tstring_content'>LAUTOHREF</span><span class='words_sep'>
+      </span><span class='tstring_content'>LHREF</span><span class='words_sep'> </span><span class='tstring_content'>WAUTOHREF</span><span class='words_sep'> </span><span class='tstring_content'>WHREF</span><span class='words_sep'> </span><span class='tstring_content'>HTML</span><span class='words_sep'> </span><span class='tstring_content'>URL</span><span class='words_sep'>
+      </span><span class='tstring_content'>CAXIS</span><span class='words_sep'> </span><span class='tstring_content'>CFRAME</span><span class='words_sep'> </span><span class='tstring_content'>CTEXT</span><span class='words_sep'> </span><span class='tstring_content'>DATAORDER</span><span class='words_sep'> </span><span class='tstring_content'>FRAME</span><span class='words_sep'> </span><span class='tstring_content'>NOFRAME</span><span class='words_sep'> </span><span class='tstring_content'>FRONTREF</span><span class='words_sep'> </span><span class='tstring_content'>GRID</span><span class='words_sep'> </span><span class='tstring_content'>IFRAME</span><span class='words_sep'>
+      </span><span class='tstring_content'>IMAGESTYLE</span><span class='words_sep'> </span><span class='tstring_content'>TILE</span><span class='words_sep'> </span><span class='tstring_content'>FIT</span><span class='words_sep'> </span><span class='tstring_content'>NOAXIS</span><span class='words_sep'>
+      </span><span class='tstring_content'>AUTOVREF</span><span class='words_sep'> </span><span class='tstring_content'>CAUTOVREF</span><span class='words_sep'> </span><span class='tstring_content'>CVREF</span><span class='words_sep'> </span><span class='tstring_content'>LAUTOVREF</span><span class='words_sep'> </span><span class='tstring_content'>LVREF</span><span class='words_sep'> </span><span class='tstring_content'>VAXIS</span><span class='words_sep'> </span><span class='tstring_content'>VMINOR</span><span class='words_sep'> </span><span class='tstring_content'>VREF</span><span class='words_sep'> </span><span class='tstring_content'>VREVERSE</span><span class='words_sep'>
+      </span><span class='tstring_content'>VZERO</span><span class='words_sep'> </span><span class='tstring_content'>WAUTOVREF</span><span class='words_sep'> </span><span class='tstring_content'>WVREF</span><span class='words_sep'>
+      </span><span class='tstring_content'>CBASELINE</span><span class='words_sep'> </span><span class='tstring_content'>COUTLINE</span><span class='words_sep'>
+      </span><span class='tstring_content'>AREAS</span><span class='words_sep'> </span><span class='tstring_content'>GRID</span><span class='words_sep'> </span><span class='tstring_content'>LEGEND</span><span class='words_sep'> </span><span class='tstring_content'>NOLASTAREA</span><span class='words_sep'> </span><span class='tstring_content'>NOLEGEND</span><span class='words_sep'> </span><span class='tstring_content'>OVERLAY</span><span class='words_sep'> </span><span class='tstring_content'>REGEQN</span><span class='words_sep'> </span><span class='tstring_content'>SKIPMISS</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+  <span class='comment'># from SAS GRAPH 9.4 Reference, Fourth Edition
+</span>
+	<span class='ivar'>@proc_keywords</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>REG</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>MODEL</span><span class='words_sep'> </span><span class='tstring_content'>BY</span><span class='words_sep'> </span><span class='tstring_content'>FREQ</span><span class='words_sep'> </span><span class='tstring_content'>ID</span><span class='words_sep'> </span><span class='tstring_content'>VAR</span><span class='words_sep'> </span><span class='tstring_content'>WEIGHT</span><span class='words_sep'> </span><span class='tstring_content'>ADD</span><span class='words_sep'> </span><span class='tstring_content'>CODE</span><span class='words_sep'> </span><span class='tstring_content'>DELETE</span><span class='words_sep'> </span><span class='tstring_content'>MTEST</span><span class='words_sep'> </span><span class='tstring_content'>OUTPUT</span><span class='words_sep'> </span><span class='tstring_content'>PAINT</span><span class='words_sep'>
+      </span><span class='tstring_content'>PLOT</span><span class='words_sep'> </span><span class='tstring_content'>PRINT</span><span class='words_sep'> </span><span class='tstring_content'>REFIT</span><span class='words_sep'> </span><span class='tstring_content'>RESTRICT</span><span class='words_sep'> </span><span class='tstring_content'>REWEIGHT</span><span class='words_sep'> </span><span class='tstring_content'>STORE</span><span class='words_sep'> </span><span class='tstring_content'>TEST</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+   <span class='comment'># from SAS/STAT 15.1 User&#39;s Guide
+</span>
+	<span class='ivar'>@proc_keywords</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SGPLOT</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>STYLEATTRS</span><span class='words_sep'> </span><span class='tstring_content'>BAND</span><span class='words_sep'> </span><span class='tstring_content'>X</span><span class='words_sep'> </span><span class='tstring_content'>Y</span><span class='words_sep'> </span><span class='tstring_content'>UPPER</span><span class='words_sep'> </span><span class='tstring_content'>LOWER</span><span class='words_sep'> </span><span class='tstring_content'>BLOCK</span><span class='words_sep'> </span><span class='tstring_content'>BUBBLE</span><span class='words_sep'> </span><span class='tstring_content'>DENSITY</span><span class='words_sep'> </span><span class='tstring_content'>DOT</span><span class='words_sep'> </span><span class='tstring_content'>DROPLINE</span><span class='words_sep'>
+      </span><span class='tstring_content'>ELLIPSE</span><span class='words_sep'> </span><span class='tstring_content'>ELLIPSEPARM</span><span class='words_sep'> </span><span class='tstring_content'>FRINGE</span><span class='words_sep'> </span><span class='tstring_content'>GRADLEGEND</span><span class='words_sep'> </span><span class='tstring_content'>HBAR</span><span class='words_sep'> </span><span class='tstring_content'>HBARBASIC</span><span class='words_sep'> </span><span class='tstring_content'>HBARPARM</span><span class='words_sep'>
+      </span><span class='tstring_content'>HBOX</span><span class='words_sep'> </span><span class='tstring_content'>HEATMAP</span><span class='words_sep'> </span><span class='tstring_content'>HEATMAPPARM</span><span class='words_sep'> </span><span class='tstring_content'>HIGHLOW</span><span class='words_sep'> </span><span class='tstring_content'>HISTOGRAM</span><span class='words_sep'> </span><span class='tstring_content'>HLINE</span><span class='words_sep'> </span><span class='tstring_content'>INSET</span><span class='words_sep'> </span><span class='tstring_content'>KEYLEGEND</span><span class='words_sep'>
+      </span><span class='tstring_content'>LINEPARM</span><span class='words_sep'> </span><span class='tstring_content'>LOESS</span><span class='words_sep'> </span><span class='tstring_content'>NEEDLE</span><span class='words_sep'> </span><span class='tstring_content'>PBSPLINE</span><span class='words_sep'> </span><span class='tstring_content'>POLYGON</span><span class='words_sep'> </span><span class='tstring_content'>REFLINE</span><span class='words_sep'> </span><span class='tstring_content'>REG</span><span class='words_sep'> </span><span class='tstring_content'>SCATTER</span><span class='words_sep'> </span><span class='tstring_content'>SERIES</span><span class='words_sep'>
+      </span><span class='tstring_content'>SPLINE</span><span class='words_sep'> </span><span class='tstring_content'>STEP</span><span class='words_sep'> </span><span class='tstring_content'>SYMBOLCHAR</span><span class='words_sep'> </span><span class='tstring_content'>SYMBOLIMAGE</span><span class='words_sep'> </span><span class='tstring_content'>TEXT</span><span class='words_sep'> </span><span class='tstring_content'>VBAR</span><span class='words_sep'> </span><span class='tstring_content'>VBARBASIC</span><span class='words_sep'> </span><span class='tstring_content'>VBARPARM</span><span class='words_sep'>
+      </span><span class='tstring_content'>VBOX</span><span class='words_sep'> </span><span class='tstring_content'>VECTOR</span><span class='words_sep'> </span><span class='tstring_content'>VLINE</span><span class='words_sep'> </span><span class='tstring_content'>WATERFALL</span><span class='words_sep'> </span><span class='tstring_content'>XAXIS</span><span class='words_sep'> </span><span class='tstring_content'>X2AXIS</span><span class='words_sep'> </span><span class='tstring_content'>XAXISTABLE</span><span class='words_sep'> </span><span class='tstring_content'>YAXIS</span><span class='words_sep'> </span><span class='tstring_content'>Y2AXIS</span><span class='words_sep'>
+      </span><span class='tstring_content'>YAXISTABLE</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+   <span class='comment'># from ODS Graphics: Procedures Guide, Sixth Edition
+</span>  <span class='kw'>return</span> <span class='ivar'>@proc_keywords</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sas_auto_macro_vars-class_method">
+  
+    .<strong>sas_auto_macro_vars</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/sas.rb', line 122</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_sas_auto_macro_vars'>sas_auto_macro_vars</span>
+  <span class='comment'># from SAS 9.4 Macro Language Reference
+</span>  <span class='comment'># Chapter 12
+</span>
+  <span class='ivar'>@sas_auto_macro_vars</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>&amp;SYSADDRBITS</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSBUFFR</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSCC</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSCHARWIDTH</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSCMD</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSDATASTEPPHASE</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSDATE</span><span class='words_sep'>
+    </span><span class='tstring_content'>&amp;SYSDATE9</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSDAY</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSDEVIC</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSDMG</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSDSN</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSENCODING</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSENDIAN</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSENV</span><span class='words_sep'>
+    </span><span class='tstring_content'>&amp;SYSERR</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSERRORTEXT</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSFILRC</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSHOSTINFOLONG</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSHOSTNAME</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSINDEX</span><span class='words_sep'>
+    </span><span class='tstring_content'>&amp;SYSINFO</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSJOBID</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSLAST</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSLCKRC</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSLIBRC</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSLOGAPPLNAME</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSMACRONAME</span><span class='words_sep'>
+    </span><span class='tstring_content'>&amp;SYSMENV</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSMSG</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSNCPU</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSNOBS</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSODSESCAPECHAR</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSODSPATH</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSPARM</span><span class='words_sep'>
+    </span><span class='tstring_content'>&amp;SYSPBUFF</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSPRINTTOLIST</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSPRINTTOLOG</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSPROCESSID</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSPROCESSMODE</span><span class='words_sep'>
+    </span><span class='tstring_content'>&amp;SYSPROCESSNAME</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSPROCNAME</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSRC</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSSCP</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSSCPL</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSSITE</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSSIZEOFLONG</span><span class='words_sep'>
+    </span><span class='tstring_content'>&amp;SYSSIZEOFPTR</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSSIZEOFUNICODE</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSSTARTID</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSSTARTNAME</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSTCPIPHOSTNAME</span><span class='words_sep'>
+    </span><span class='tstring_content'>&amp;SYSTIME</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSTIMEZONE</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSTIMEZONEIDENT</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSTIMEZONEOFFSET</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSUSERID</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSVER</span><span class='words_sep'>
+    </span><span class='tstring_content'>&amp;SYSVLONG</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSVLONG4</span><span class='words_sep'> </span><span class='tstring_content'>&amp;SYSWARNINGTEXT</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sas_functions-class_method">
+  
+    .<strong>sas_functions</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/sas.rb', line 29</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_sas_functions'>sas_functions</span>
+  <span class='comment'># from SAS 9.4 Functions and CALL Routines reference
+</span>  <span class='comment'># http://support.sas.com/documentation/cdl/en/lefunctionsref/67960/PDF/default/lefunctionsref.pdf
+</span>  <span class='ivar'>@sas_functions</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>ABS</span><span class='words_sep'> </span><span class='tstring_content'>ADDR</span><span class='words_sep'> </span><span class='tstring_content'>ADDRLONG</span><span class='words_sep'> </span><span class='tstring_content'>AIRY</span><span class='words_sep'> </span><span class='tstring_content'>ALLCOMB</span><span class='words_sep'> </span><span class='tstring_content'>ALLPERM</span><span class='words_sep'> </span><span class='tstring_content'>ANYALNUM</span><span class='words_sep'> </span><span class='tstring_content'>ANYALPHA</span><span class='words_sep'> </span><span class='tstring_content'>ANYCNTRL</span><span class='words_sep'>
+    </span><span class='tstring_content'>ANYDIGIT</span><span class='words_sep'> </span><span class='tstring_content'>ANYFIRST</span><span class='words_sep'> </span><span class='tstring_content'>ANYGRAPH</span><span class='words_sep'> </span><span class='tstring_content'>ANYLOWER</span><span class='words_sep'> </span><span class='tstring_content'>ANYNAME</span><span class='words_sep'> </span><span class='tstring_content'>ANYPRINT</span><span class='words_sep'> </span><span class='tstring_content'>ANYPUNCT</span><span class='words_sep'>
+    </span><span class='tstring_content'>ANYSPACE</span><span class='words_sep'> </span><span class='tstring_content'>ANYUPPER</span><span class='words_sep'> </span><span class='tstring_content'>ANYXDIGIT</span><span class='words_sep'> </span><span class='tstring_content'>ARCOS</span><span class='words_sep'> </span><span class='tstring_content'>ARCOSH</span><span class='words_sep'> </span><span class='tstring_content'>ARSIN</span><span class='words_sep'> </span><span class='tstring_content'>ARSINH</span><span class='words_sep'> </span><span class='tstring_content'>ARTANH</span><span class='words_sep'> </span><span class='tstring_content'>ATAN</span><span class='words_sep'>
+    </span><span class='tstring_content'>ATAN2</span><span class='words_sep'> </span><span class='tstring_content'>ATTRC</span><span class='words_sep'> </span><span class='tstring_content'>ATTRN</span><span class='words_sep'> </span><span class='tstring_content'>BAND</span><span class='words_sep'> </span><span class='tstring_content'>BETA</span><span class='words_sep'> </span><span class='tstring_content'>BETAINV</span><span class='words_sep'> </span><span class='tstring_content'>BLACKCLPRC</span><span class='words_sep'> </span><span class='tstring_content'>BLACKPTPRC</span><span class='words_sep'>
+    </span><span class='tstring_content'>BLKSHCLPRC</span><span class='words_sep'> </span><span class='tstring_content'>BLKSHPTPRC</span><span class='words_sep'> </span><span class='tstring_content'>BLSHIFT</span><span class='words_sep'> </span><span class='tstring_content'>BNOT</span><span class='words_sep'> </span><span class='tstring_content'>BOR</span><span class='words_sep'> </span><span class='tstring_content'>BRSHIFT</span><span class='words_sep'> </span><span class='tstring_content'>BXOR</span><span class='words_sep'> </span><span class='tstring_content'>BYTE</span><span class='words_sep'> </span><span class='tstring_content'>CAT</span><span class='words_sep'> </span><span class='tstring_content'>CATQ</span><span class='words_sep'>
+    </span><span class='tstring_content'>CATS</span><span class='words_sep'> </span><span class='tstring_content'>CATT</span><span class='words_sep'> </span><span class='tstring_content'>CATX</span><span class='words_sep'> </span><span class='tstring_content'>CDF</span><span class='words_sep'> </span><span class='tstring_content'>CEIL</span><span class='words_sep'> </span><span class='tstring_content'>CEILZ</span><span class='words_sep'> </span><span class='tstring_content'>CEXIST</span><span class='words_sep'> </span><span class='tstring_content'>CHAR</span><span class='words_sep'> </span><span class='tstring_content'>CHOOSEC</span><span class='words_sep'> </span><span class='tstring_content'>CHOOSEN</span><span class='words_sep'> </span><span class='tstring_content'>CINV</span><span class='words_sep'>
+    </span><span class='tstring_content'>CLOSE</span><span class='words_sep'> </span><span class='tstring_content'>CMISS</span><span class='words_sep'> </span><span class='tstring_content'>CNONCT</span><span class='words_sep'> </span><span class='tstring_content'>COALESCE</span><span class='words_sep'> </span><span class='tstring_content'>COALESCEC</span><span class='words_sep'> </span><span class='tstring_content'>COLLATE</span><span class='words_sep'> </span><span class='tstring_content'>COMB</span><span class='words_sep'> </span><span class='tstring_content'>COMPARE</span><span class='words_sep'> </span><span class='tstring_content'>COMPBL</span><span class='words_sep'>
+    </span><span class='tstring_content'>COMPFUZZ</span><span class='words_sep'> </span><span class='tstring_content'>COMPGED</span><span class='words_sep'> </span><span class='tstring_content'>COMPLEV</span><span class='words_sep'> </span><span class='tstring_content'>COMPOUND</span><span class='words_sep'> </span><span class='tstring_content'>COMPRESS</span><span class='words_sep'> </span><span class='tstring_content'>CONSTANT</span><span class='words_sep'> </span><span class='tstring_content'>CONVX</span><span class='words_sep'> </span><span class='tstring_content'>CONVXP</span><span class='words_sep'>
+    </span><span class='tstring_content'>COS</span><span class='words_sep'> </span><span class='tstring_content'>COSH</span><span class='words_sep'> </span><span class='tstring_content'>COT</span><span class='words_sep'> </span><span class='tstring_content'>COUNT</span><span class='words_sep'> </span><span class='tstring_content'>COUNTC</span><span class='words_sep'> </span><span class='tstring_content'>COUNTW</span><span class='words_sep'> </span><span class='tstring_content'>CSC</span><span class='words_sep'> </span><span class='tstring_content'>CSS</span><span class='words_sep'> </span><span class='tstring_content'>CUMIPMT</span><span class='words_sep'> </span><span class='tstring_content'>CUMPRINC</span><span class='words_sep'> </span><span class='tstring_content'>CUROBS</span><span class='words_sep'>
+    </span><span class='tstring_content'>CV</span><span class='words_sep'> </span><span class='tstring_content'>DACCDB</span><span class='words_sep'> </span><span class='tstring_content'>DACCDBSL</span><span class='words_sep'> </span><span class='tstring_content'>DACCSL</span><span class='words_sep'> </span><span class='tstring_content'>DACCSYD</span><span class='words_sep'> </span><span class='tstring_content'>DACCTAB</span><span class='words_sep'> </span><span class='tstring_content'>DAIRY</span><span class='words_sep'> </span><span class='tstring_content'>DATDIF</span><span class='words_sep'> </span><span class='tstring_content'>DATE</span><span class='words_sep'>
+    </span><span class='tstring_content'>DATEJUL</span><span class='words_sep'> </span><span class='tstring_content'>DATEPART</span><span class='words_sep'> </span><span class='tstring_content'>DATETIME</span><span class='words_sep'> </span><span class='tstring_content'>DAY</span><span class='words_sep'> </span><span class='tstring_content'>DCLOSE</span><span class='words_sep'> </span><span class='tstring_content'>DCREATE</span><span class='words_sep'> </span><span class='tstring_content'>DEPDB</span><span class='words_sep'> </span><span class='tstring_content'>DEPDBSL</span><span class='words_sep'> </span><span class='tstring_content'>DEPSL</span><span class='words_sep'>
+    </span><span class='tstring_content'>DEPSYD</span><span class='words_sep'> </span><span class='tstring_content'>DEPTAB</span><span class='words_sep'> </span><span class='tstring_content'>DEQUOTE</span><span class='words_sep'> </span><span class='tstring_content'>DEVIANCE</span><span class='words_sep'> </span><span class='tstring_content'>DHMS</span><span class='words_sep'> </span><span class='tstring_content'>DIF</span><span class='words_sep'> </span><span class='tstring_content'>DIGAMMA</span><span class='words_sep'> </span><span class='tstring_content'>DIM</span><span class='words_sep'> </span><span class='tstring_content'>DINFO</span><span class='words_sep'> </span><span class='tstring_content'>DIVIDE</span><span class='words_sep'>
+    </span><span class='tstring_content'>DNUM</span><span class='words_sep'> </span><span class='tstring_content'>DOPEN</span><span class='words_sep'> </span><span class='tstring_content'>DOPTNAME</span><span class='words_sep'> </span><span class='tstring_content'>DOPTNUM</span><span class='words_sep'> </span><span class='tstring_content'>DOSUBL</span><span class='words_sep'> </span><span class='tstring_content'>DREAD</span><span class='words_sep'> </span><span class='tstring_content'>DROPNOTE</span><span class='words_sep'> </span><span class='tstring_content'>DSNAME</span><span class='words_sep'>
+    </span><span class='tstring_content'>DSNCATLGD</span><span class='words_sep'> </span><span class='tstring_content'>DUR</span><span class='words_sep'> </span><span class='tstring_content'>DURP</span><span class='words_sep'> </span><span class='tstring_content'>EFFRATE</span><span class='words_sep'> </span><span class='tstring_content'>ENVLEN</span><span class='words_sep'> </span><span class='tstring_content'>ERF</span><span class='words_sep'> </span><span class='tstring_content'>ERFC</span><span class='words_sep'> </span><span class='tstring_content'>EUCLID</span><span class='words_sep'> </span><span class='tstring_content'>EXIST</span><span class='words_sep'> </span><span class='tstring_content'>EXP</span><span class='words_sep'> </span><span class='tstring_content'>FACT</span><span class='words_sep'>
+    </span><span class='tstring_content'>FAPPEND</span><span class='words_sep'> </span><span class='tstring_content'>FCLOSE</span><span class='words_sep'> </span><span class='tstring_content'>FCOL</span><span class='words_sep'> </span><span class='tstring_content'>FCOPY</span><span class='words_sep'> </span><span class='tstring_content'>FDELETE</span><span class='words_sep'> </span><span class='tstring_content'>FETCH</span><span class='words_sep'> </span><span class='tstring_content'>FETCHOBS</span><span class='words_sep'> </span><span class='tstring_content'>FEXIST</span><span class='words_sep'> </span><span class='tstring_content'>FGET</span><span class='words_sep'>
+    </span><span class='tstring_content'>FILEEXIST</span><span class='words_sep'> </span><span class='tstring_content'>FILENAME</span><span class='words_sep'> </span><span class='tstring_content'>FILEREF</span><span class='words_sep'> </span><span class='tstring_content'>FINANCE</span><span class='words_sep'> </span><span class='tstring_content'>FIND</span><span class='words_sep'> </span><span class='tstring_content'>FINDC</span><span class='words_sep'> </span><span class='tstring_content'>FINDW</span><span class='words_sep'> </span><span class='tstring_content'>FINFO</span><span class='words_sep'> </span><span class='tstring_content'>FINV</span><span class='words_sep'>
+    </span><span class='tstring_content'>FIPNAME</span><span class='words_sep'> </span><span class='tstring_content'>FIPNAMEL</span><span class='words_sep'> </span><span class='tstring_content'>FIPSTATE</span><span class='words_sep'> </span><span class='tstring_content'>FIRST</span><span class='words_sep'> </span><span class='tstring_content'>FLOOR</span><span class='words_sep'> </span><span class='tstring_content'>FLOORZ</span><span class='words_sep'> </span><span class='tstring_content'>FMTINFO</span><span class='words_sep'> </span><span class='tstring_content'>FNONCT</span><span class='words_sep'> </span><span class='tstring_content'>FNOTE</span><span class='words_sep'>
+    </span><span class='tstring_content'>FOPEN</span><span class='words_sep'> </span><span class='tstring_content'>FOPTNAME</span><span class='words_sep'> </span><span class='tstring_content'>FOPTNUM</span><span class='words_sep'> </span><span class='tstring_content'>FPOINT</span><span class='words_sep'> </span><span class='tstring_content'>FPOS</span><span class='words_sep'> </span><span class='tstring_content'>FPUT</span><span class='words_sep'> </span><span class='tstring_content'>FREAD</span><span class='words_sep'> </span><span class='tstring_content'>FREWIND</span><span class='words_sep'> </span><span class='tstring_content'>FRLEN</span><span class='words_sep'> </span><span class='tstring_content'>FSEP</span><span class='words_sep'>
+    </span><span class='tstring_content'>FUZZ</span><span class='words_sep'> </span><span class='tstring_content'>FWRITE</span><span class='words_sep'> </span><span class='tstring_content'>GAMINV</span><span class='words_sep'> </span><span class='tstring_content'>GAMMA</span><span class='words_sep'> </span><span class='tstring_content'>GARKHCLPRC</span><span class='words_sep'> </span><span class='tstring_content'>GARKHPTPRC</span><span class='words_sep'> </span><span class='tstring_content'>GCD</span><span class='words_sep'> </span><span class='tstring_content'>GEODIST</span><span class='words_sep'>
+    </span><span class='tstring_content'>GEOMEAN</span><span class='words_sep'> </span><span class='tstring_content'>GEOMEANZ</span><span class='words_sep'> </span><span class='tstring_content'>GETOPTION</span><span class='words_sep'> </span><span class='tstring_content'>GETVARC</span><span class='words_sep'> </span><span class='tstring_content'>GETVARN</span><span class='words_sep'> </span><span class='tstring_content'>GRAYCODE</span><span class='words_sep'> </span><span class='tstring_content'>HARMEAN</span><span class='words_sep'>
+    </span><span class='tstring_content'>HARMEANZ</span><span class='words_sep'> </span><span class='tstring_content'>HBOUND</span><span class='words_sep'> </span><span class='tstring_content'>HMS</span><span class='words_sep'> </span><span class='tstring_content'>HOLIDAY</span><span class='words_sep'> </span><span class='tstring_content'>HOLIDAYCK</span><span class='words_sep'> </span><span class='tstring_content'>HOLIDAYCOUNT</span><span class='words_sep'> </span><span class='tstring_content'>HOLIDAYNAME</span><span class='words_sep'>
+    </span><span class='tstring_content'>HOLIDAYNX</span><span class='words_sep'> </span><span class='tstring_content'>HOLIDAYNY</span><span class='words_sep'> </span><span class='tstring_content'>HOLIDAYTEST</span><span class='words_sep'> </span><span class='tstring_content'>HOUR</span><span class='words_sep'> </span><span class='tstring_content'>HTMLDECODE</span><span class='words_sep'> </span><span class='tstring_content'>HTMLENCODE</span><span class='words_sep'>
+    </span><span class='tstring_content'>IBESSEL</span><span class='words_sep'> </span><span class='tstring_content'>IFC</span><span class='words_sep'> </span><span class='tstring_content'>IFN</span><span class='words_sep'> </span><span class='tstring_content'>INDEX</span><span class='words_sep'> </span><span class='tstring_content'>INDEXC</span><span class='words_sep'> </span><span class='tstring_content'>INDEXW</span><span class='words_sep'> </span><span class='tstring_content'>INPUT</span><span class='words_sep'> </span><span class='tstring_content'>INPUTC</span><span class='words_sep'> </span><span class='tstring_content'>INPUTN</span><span class='words_sep'> </span><span class='tstring_content'>INT</span><span class='words_sep'>
+    </span><span class='tstring_content'>INTCINDEX</span><span class='words_sep'> </span><span class='tstring_content'>INTCK</span><span class='words_sep'> </span><span class='tstring_content'>INTCYCLE</span><span class='words_sep'> </span><span class='tstring_content'>INTFIT</span><span class='words_sep'> </span><span class='tstring_content'>INTFMT</span><span class='words_sep'> </span><span class='tstring_content'>INTGET</span><span class='words_sep'> </span><span class='tstring_content'>INTINDEX</span><span class='words_sep'> </span><span class='tstring_content'>INTNX</span><span class='words_sep'>
+    </span><span class='tstring_content'>INTRR</span><span class='words_sep'> </span><span class='tstring_content'>INTSEAS</span><span class='words_sep'> </span><span class='tstring_content'>INTSHIFT</span><span class='words_sep'> </span><span class='tstring_content'>INTTEST</span><span class='words_sep'> </span><span class='tstring_content'>INTZ</span><span class='words_sep'> </span><span class='tstring_content'>IORCMSG</span><span class='words_sep'> </span><span class='tstring_content'>IPMT</span><span class='words_sep'> </span><span class='tstring_content'>IQR</span><span class='words_sep'> </span><span class='tstring_content'>IRR</span><span class='words_sep'> </span><span class='tstring_content'>JBESSEL</span><span class='words_sep'>
+    </span><span class='tstring_content'>JULDATE</span><span class='words_sep'> </span><span class='tstring_content'>JULDATE7</span><span class='words_sep'> </span><span class='tstring_content'>KURTOSIS</span><span class='words_sep'> </span><span class='tstring_content'>LAG</span><span class='words_sep'> </span><span class='tstring_content'>LARGEST</span><span class='words_sep'> </span><span class='tstring_content'>LBOUND</span><span class='words_sep'> </span><span class='tstring_content'>LCM</span><span class='words_sep'> </span><span class='tstring_content'>LCOMB</span><span class='words_sep'> </span><span class='tstring_content'>LEFT</span><span class='words_sep'>
+    </span><span class='tstring_content'>LENGTH</span><span class='words_sep'> </span><span class='tstring_content'>LENGTHC</span><span class='words_sep'> </span><span class='tstring_content'>LENGTHM</span><span class='words_sep'> </span><span class='tstring_content'>LENGTHN</span><span class='words_sep'> </span><span class='tstring_content'>LEXCOMB</span><span class='words_sep'> </span><span class='tstring_content'>LEXCOMBI</span><span class='words_sep'> </span><span class='tstring_content'>LEXPERK</span><span class='words_sep'> </span><span class='tstring_content'>LEXPERM</span><span class='words_sep'>
+    </span><span class='tstring_content'>LFACT</span><span class='words_sep'> </span><span class='tstring_content'>LGAMMA</span><span class='words_sep'> </span><span class='tstring_content'>LIBNAME</span><span class='words_sep'> </span><span class='tstring_content'>LIBREF</span><span class='words_sep'> </span><span class='tstring_content'>LOG</span><span class='words_sep'> </span><span class='tstring_content'>LOG1PX</span><span class='words_sep'> </span><span class='tstring_content'>LOG10</span><span class='words_sep'> </span><span class='tstring_content'>LOG2</span><span class='words_sep'> </span><span class='tstring_content'>LOGBETA</span><span class='words_sep'> </span><span class='tstring_content'>LOGCDF</span><span class='words_sep'>
+    </span><span class='tstring_content'>LOGISTIC</span><span class='words_sep'> </span><span class='tstring_content'>LOGPDF</span><span class='words_sep'> </span><span class='tstring_content'>LOGSDF</span><span class='words_sep'> </span><span class='tstring_content'>LOWCASE</span><span class='words_sep'> </span><span class='tstring_content'>LPERM</span><span class='words_sep'> </span><span class='tstring_content'>LPNORM</span><span class='words_sep'> </span><span class='tstring_content'>MAD</span><span class='words_sep'> </span><span class='tstring_content'>MARGRCLPRC</span><span class='words_sep'>
+    </span><span class='tstring_content'>MARGRPTPRC</span><span class='words_sep'> </span><span class='tstring_content'>MAX</span><span class='words_sep'> </span><span class='tstring_content'>MD5</span><span class='words_sep'> </span><span class='tstring_content'>MDY</span><span class='words_sep'> </span><span class='tstring_content'>MEAN</span><span class='words_sep'> </span><span class='tstring_content'>MEDIAN</span><span class='words_sep'> </span><span class='tstring_content'>MIN</span><span class='words_sep'> </span><span class='tstring_content'>MINUTE</span><span class='words_sep'> </span><span class='tstring_content'>MISSING</span><span class='words_sep'> </span><span class='tstring_content'>MOD</span><span class='words_sep'>
+    </span><span class='tstring_content'>MODEXIST</span><span class='words_sep'> </span><span class='tstring_content'>MODULE</span><span class='words_sep'> </span><span class='tstring_content'>MODULEC</span><span class='words_sep'> </span><span class='tstring_content'>MODULEN</span><span class='words_sep'> </span><span class='tstring_content'>MODZ</span><span class='words_sep'> </span><span class='tstring_content'>MONTH</span><span class='words_sep'> </span><span class='tstring_content'>MOPEN</span><span class='words_sep'> </span><span class='tstring_content'>MORT</span><span class='words_sep'> </span><span class='tstring_content'>MSPLINT</span><span class='words_sep'>
+    </span><span class='tstring_content'>MVALID</span><span class='words_sep'> </span><span class='tstring_content'>N</span><span class='words_sep'> </span><span class='tstring_content'>NETPV</span><span class='words_sep'> </span><span class='tstring_content'>NLITERAL</span><span class='words_sep'> </span><span class='tstring_content'>NMISS</span><span class='words_sep'> </span><span class='tstring_content'>NOMRATE</span><span class='words_sep'> </span><span class='tstring_content'>NORMAL</span><span class='words_sep'> </span><span class='tstring_content'>NOTALNUM</span><span class='words_sep'> </span><span class='tstring_content'>NOTALPHA</span><span class='words_sep'>
+    </span><span class='tstring_content'>NOTCNTRL</span><span class='words_sep'> </span><span class='tstring_content'>NOTDIGIT</span><span class='words_sep'> </span><span class='tstring_content'>NOTE</span><span class='words_sep'> </span><span class='tstring_content'>NOTFIRST</span><span class='words_sep'> </span><span class='tstring_content'>NOTGRAPH</span><span class='words_sep'> </span><span class='tstring_content'>NOTLOWER</span><span class='words_sep'> </span><span class='tstring_content'>NOTNAME</span><span class='words_sep'>
+    </span><span class='tstring_content'>NOTPRINT</span><span class='words_sep'> </span><span class='tstring_content'>NOTPUNCT</span><span class='words_sep'> </span><span class='tstring_content'>NOTSPACE</span><span class='words_sep'> </span><span class='tstring_content'>NOTUPPER</span><span class='words_sep'> </span><span class='tstring_content'>NOTXDIGIT</span><span class='words_sep'> </span><span class='tstring_content'>NPV</span><span class='words_sep'> </span><span class='tstring_content'>NVALID</span><span class='words_sep'> </span><span class='tstring_content'>NWKDOM</span><span class='words_sep'>
+    </span><span class='tstring_content'>OPEN</span><span class='words_sep'> </span><span class='tstring_content'>ORDINAL</span><span class='words_sep'> </span><span class='tstring_content'>PATHNAME</span><span class='words_sep'> </span><span class='tstring_content'>PCTL</span><span class='words_sep'> </span><span class='tstring_content'>PDF</span><span class='words_sep'> </span><span class='tstring_content'>PEEK</span><span class='words_sep'> </span><span class='tstring_content'>PEEKC</span><span class='words_sep'> </span><span class='tstring_content'>PEEKCLONG</span><span class='words_sep'> </span><span class='tstring_content'>PEEKLONG</span><span class='words_sep'> </span><span class='tstring_content'>PERM</span><span class='words_sep'>
+    </span><span class='tstring_content'>PMT</span><span class='words_sep'> </span><span class='tstring_content'>POINT</span><span class='words_sep'> </span><span class='tstring_content'>POISSON</span><span class='words_sep'> </span><span class='tstring_content'>PPMT</span><span class='words_sep'> </span><span class='tstring_content'>PROBBETA</span><span class='words_sep'> </span><span class='tstring_content'>PROBBNML</span><span class='words_sep'> </span><span class='tstring_content'>PROBBNRM</span><span class='words_sep'> </span><span class='tstring_content'>PROBCHI</span><span class='words_sep'> </span><span class='tstring_content'>PROBF</span><span class='words_sep'>
+    </span><span class='tstring_content'>PROBGAM</span><span class='words_sep'> </span><span class='tstring_content'>PROBHYPR</span><span class='words_sep'> </span><span class='tstring_content'>PROBIT</span><span class='words_sep'> </span><span class='tstring_content'>PROBMC</span><span class='words_sep'> </span><span class='tstring_content'>PROBNEGB</span><span class='words_sep'> </span><span class='tstring_content'>PROBNORM</span><span class='words_sep'> </span><span class='tstring_content'>PROBT</span><span class='words_sep'> </span><span class='tstring_content'>PROPCASE</span><span class='words_sep'>
+    </span><span class='tstring_content'>PRXCHANGE</span><span class='words_sep'> </span><span class='tstring_content'>PRXMATCH</span><span class='words_sep'> </span><span class='tstring_content'>PRXPAREN</span><span class='words_sep'> </span><span class='tstring_content'>PRXPARSE</span><span class='words_sep'> </span><span class='tstring_content'>PRXPOSN</span><span class='words_sep'> </span><span class='tstring_content'>PTRLONGADD</span><span class='words_sep'> </span><span class='tstring_content'>PUT</span><span class='words_sep'> </span><span class='tstring_content'>PUTC</span><span class='words_sep'>
+    </span><span class='tstring_content'>PUTN</span><span class='words_sep'> </span><span class='tstring_content'>PVP</span><span class='words_sep'> </span><span class='tstring_content'>QTR</span><span class='words_sep'> </span><span class='tstring_content'>QUANTILE</span><span class='words_sep'> </span><span class='tstring_content'>QUOTE</span><span class='words_sep'> </span><span class='tstring_content'>RANBIN</span><span class='words_sep'> </span><span class='tstring_content'>RANCAU</span><span class='words_sep'> </span><span class='tstring_content'>RAND</span><span class='words_sep'> </span><span class='tstring_content'>RANEXP</span><span class='words_sep'> </span><span class='tstring_content'>RANGAM</span><span class='words_sep'>
+    </span><span class='tstring_content'>RANGE</span><span class='words_sep'> </span><span class='tstring_content'>RANK</span><span class='words_sep'> </span><span class='tstring_content'>RANNOR</span><span class='words_sep'> </span><span class='tstring_content'>RANPOI</span><span class='words_sep'> </span><span class='tstring_content'>RANTBL</span><span class='words_sep'> </span><span class='tstring_content'>RANTRI</span><span class='words_sep'> </span><span class='tstring_content'>RANUNI</span><span class='words_sep'> </span><span class='tstring_content'>RENAME</span><span class='words_sep'> </span><span class='tstring_content'>REPEAT</span><span class='words_sep'>
+    </span><span class='tstring_content'>RESOLVE</span><span class='words_sep'> </span><span class='tstring_content'>REVERSE</span><span class='words_sep'> </span><span class='tstring_content'>REWIND</span><span class='words_sep'> </span><span class='tstring_content'>RIGHT</span><span class='words_sep'> </span><span class='tstring_content'>RMS</span><span class='words_sep'> </span><span class='tstring_content'>ROUND</span><span class='words_sep'> </span><span class='tstring_content'>ROUNDE</span><span class='words_sep'> </span><span class='tstring_content'>ROUNDZ</span><span class='words_sep'> </span><span class='tstring_content'>SAVING</span><span class='words_sep'>
+    </span><span class='tstring_content'>SAVINGS</span><span class='words_sep'> </span><span class='tstring_content'>SCAN</span><span class='words_sep'> </span><span class='tstring_content'>SDF</span><span class='words_sep'> </span><span class='tstring_content'>SEC</span><span class='words_sep'> </span><span class='tstring_content'>SECOND</span><span class='words_sep'> </span><span class='tstring_content'>SHA256</span><span class='words_sep'> </span><span class='tstring_content'>SHA256HEX</span><span class='words_sep'> </span><span class='tstring_content'>SHA256HMACHEX</span><span class='words_sep'> </span><span class='tstring_content'>SIGN</span><span class='words_sep'>
+    </span><span class='tstring_content'>SIN</span><span class='words_sep'> </span><span class='tstring_content'>SINH</span><span class='words_sep'> </span><span class='tstring_content'>SKEWNESS</span><span class='words_sep'> </span><span class='tstring_content'>SLEEP</span><span class='words_sep'> </span><span class='tstring_content'>SMALLEST</span><span class='words_sep'> </span><span class='tstring_content'>SOAPWEB</span><span class='words_sep'> </span><span class='tstring_content'>SOAPWEBMETA</span><span class='words_sep'>
+    </span><span class='tstring_content'>SOAPWIPSERVICE</span><span class='words_sep'> </span><span class='tstring_content'>SOAPWIPSRS</span><span class='words_sep'> </span><span class='tstring_content'>SOAPWS</span><span class='words_sep'> </span><span class='tstring_content'>SOAPWSMETA</span><span class='words_sep'> </span><span class='tstring_content'>SOUNDEX</span><span class='words_sep'> </span><span class='tstring_content'>SPEDIS</span><span class='words_sep'> </span><span class='tstring_content'>SQRT</span><span class='words_sep'>
+    </span><span class='tstring_content'>SQUANTILE</span><span class='words_sep'> </span><span class='tstring_content'>STD</span><span class='words_sep'> </span><span class='tstring_content'>STDERR</span><span class='words_sep'> </span><span class='tstring_content'>STFIPS</span><span class='words_sep'> </span><span class='tstring_content'>STNAME</span><span class='words_sep'> </span><span class='tstring_content'>STNAMEL</span><span class='words_sep'> </span><span class='tstring_content'>STRIP</span><span class='words_sep'> </span><span class='tstring_content'>SUBPAD</span><span class='words_sep'> </span><span class='tstring_content'>SUBSTR</span><span class='words_sep'>
+    </span><span class='tstring_content'>SUBSTRN</span><span class='words_sep'> </span><span class='tstring_content'>SUM</span><span class='words_sep'> </span><span class='tstring_content'>SUMABS</span><span class='words_sep'> </span><span class='tstring_content'>SYMEXIST</span><span class='words_sep'> </span><span class='tstring_content'>SYMGET</span><span class='words_sep'> </span><span class='tstring_content'>SYMGLOBL</span><span class='words_sep'> </span><span class='tstring_content'>SYMLOCAL</span><span class='words_sep'> </span><span class='tstring_content'>SYSEXIST</span><span class='words_sep'>
+    </span><span class='tstring_content'>SYSGET</span><span class='words_sep'> </span><span class='tstring_content'>SYSMSG</span><span class='words_sep'> </span><span class='tstring_content'>SYSPARM</span><span class='words_sep'> </span><span class='tstring_content'>SYSPROCESSID</span><span class='words_sep'> </span><span class='tstring_content'>SYSPROCESSNAME</span><span class='words_sep'> </span><span class='tstring_content'>SYSPROD</span><span class='words_sep'> </span><span class='tstring_content'>SYSRC</span><span class='words_sep'>
+    </span><span class='tstring_content'>SYSTEM</span><span class='words_sep'> </span><span class='tstring_content'>TAN</span><span class='words_sep'> </span><span class='tstring_content'>TANH</span><span class='words_sep'> </span><span class='tstring_content'>TIME</span><span class='words_sep'> </span><span class='tstring_content'>TIMEPART</span><span class='words_sep'> </span><span class='tstring_content'>TIMEVALUE</span><span class='words_sep'> </span><span class='tstring_content'>TINV</span><span class='words_sep'> </span><span class='tstring_content'>TNONCT</span><span class='words_sep'> </span><span class='tstring_content'>TODAY</span><span class='words_sep'>
+    </span><span class='tstring_content'>TRANSLATE</span><span class='words_sep'> </span><span class='tstring_content'>TRANSTRN</span><span class='words_sep'> </span><span class='tstring_content'>TRANWRD</span><span class='words_sep'> </span><span class='tstring_content'>TRIGAMMA</span><span class='words_sep'> </span><span class='tstring_content'>TRIM</span><span class='words_sep'> </span><span class='tstring_content'>TRIMN</span><span class='words_sep'> </span><span class='tstring_content'>TRUNC</span><span class='words_sep'> </span><span class='tstring_content'>TSO</span><span class='words_sep'> </span><span class='tstring_content'>TYPEOF</span><span class='words_sep'>
+    </span><span class='tstring_content'>TZONEID</span><span class='words_sep'> </span><span class='tstring_content'>TZONENAME</span><span class='words_sep'> </span><span class='tstring_content'>TZONEOFF</span><span class='words_sep'> </span><span class='tstring_content'>TZONES2U</span><span class='words_sep'> </span><span class='tstring_content'>TZONEU2S</span><span class='words_sep'> </span><span class='tstring_content'>UNIFORM</span><span class='words_sep'> </span><span class='tstring_content'>UPCASE</span><span class='words_sep'>
+    </span><span class='tstring_content'>URLDECODE</span><span class='words_sep'> </span><span class='tstring_content'>URLENCODE</span><span class='words_sep'> </span><span class='tstring_content'>USS</span><span class='words_sep'> </span><span class='tstring_content'>UUIDGEN</span><span class='words_sep'> </span><span class='tstring_content'>VAR</span><span class='words_sep'> </span><span class='tstring_content'>VARFMT</span><span class='words_sep'> </span><span class='tstring_content'>VARINFMT</span><span class='words_sep'> </span><span class='tstring_content'>VARLABEL</span><span class='words_sep'>
+    </span><span class='tstring_content'>VARLEN</span><span class='words_sep'> </span><span class='tstring_content'>VARNAME</span><span class='words_sep'> </span><span class='tstring_content'>VARNUM</span><span class='words_sep'> </span><span class='tstring_content'>VARRAY</span><span class='words_sep'> </span><span class='tstring_content'>VARRAYX</span><span class='words_sep'> </span><span class='tstring_content'>VARTYPE</span><span class='words_sep'> </span><span class='tstring_content'>VERIFY</span><span class='words_sep'> </span><span class='tstring_content'>VFORMAT</span><span class='words_sep'>
+    </span><span class='tstring_content'>VFORMATD</span><span class='words_sep'> </span><span class='tstring_content'>VFORMATDX</span><span class='words_sep'> </span><span class='tstring_content'>VFORMATN</span><span class='words_sep'> </span><span class='tstring_content'>VFORMATNX</span><span class='words_sep'> </span><span class='tstring_content'>VFORMATW</span><span class='words_sep'> </span><span class='tstring_content'>VFORMATWX</span><span class='words_sep'> </span><span class='tstring_content'>VFORMATX</span><span class='words_sep'>
+    </span><span class='tstring_content'>VINARRAY</span><span class='words_sep'> </span><span class='tstring_content'>VINARRAYX</span><span class='words_sep'> </span><span class='tstring_content'>VINFORMAT</span><span class='words_sep'> </span><span class='tstring_content'>VINFORMATD</span><span class='words_sep'> </span><span class='tstring_content'>VINFORMATDX</span><span class='words_sep'> </span><span class='tstring_content'>VINFORMATN</span><span class='words_sep'>
+    </span><span class='tstring_content'>VINFORMATNX</span><span class='words_sep'> </span><span class='tstring_content'>VINFORMATW</span><span class='words_sep'> </span><span class='tstring_content'>VINFORMATWX</span><span class='words_sep'> </span><span class='tstring_content'>VINFORMATX</span><span class='words_sep'> </span><span class='tstring_content'>VLABEL</span><span class='words_sep'> </span><span class='tstring_content'>VLABELX</span><span class='words_sep'>
+    </span><span class='tstring_content'>VLENGTH</span><span class='words_sep'> </span><span class='tstring_content'>VLENGTHX</span><span class='words_sep'> </span><span class='tstring_content'>VNAME</span><span class='words_sep'> </span><span class='tstring_content'>VNAMEX</span><span class='words_sep'> </span><span class='tstring_content'>VTYPE</span><span class='words_sep'> </span><span class='tstring_content'>VTYPEX</span><span class='words_sep'> </span><span class='tstring_content'>VVALUE</span><span class='words_sep'> </span><span class='tstring_content'>VVALUEX</span><span class='words_sep'> </span><span class='tstring_content'>WEEK</span><span class='words_sep'>
+    </span><span class='tstring_content'>WEEKDAY</span><span class='words_sep'> </span><span class='tstring_content'>WHICHC</span><span class='words_sep'> </span><span class='tstring_content'>WHICHN</span><span class='words_sep'> </span><span class='tstring_content'>WTO</span><span class='words_sep'> </span><span class='tstring_content'>YEAR</span><span class='words_sep'> </span><span class='tstring_content'>YIELDP</span><span class='words_sep'> </span><span class='tstring_content'>YRDIF</span><span class='words_sep'> </span><span class='tstring_content'>YYQ</span><span class='words_sep'> </span><span class='tstring_content'>ZIPCITY</span><span class='words_sep'>
+    </span><span class='tstring_content'>ZIPCITYDISTANCE</span><span class='words_sep'> </span><span class='tstring_content'>ZIPFIPS</span><span class='words_sep'> </span><span class='tstring_content'>ZIPNAME</span><span class='words_sep'> </span><span class='tstring_content'>ZIPNAMEL</span><span class='words_sep'> </span><span class='tstring_content'>ZIPSTATE</span><span class='words_sep'>
+   </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sas_macro_functions-class_method">
+  
+    .<strong>sas_macro_functions</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/sas.rb', line 109</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_sas_macro_functions'>sas_macro_functions</span>
+  <span class='comment'># from SAS 9.4 Macro Language Reference
+</span>  <span class='comment'># Chapter 12
+</span>
+  <span class='ivar'>@sas_macro_functions</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>%BQUOTE</span><span class='words_sep'> </span><span class='tstring_content'>%NRBQUOTE</span><span class='words_sep'> </span><span class='tstring_content'>%EVAL</span><span class='words_sep'> </span><span class='tstring_content'>%INDEX</span><span class='words_sep'> </span><span class='tstring_content'>%LENGTH</span><span class='words_sep'> </span><span class='tstring_content'>%QUOTE</span><span class='words_sep'> </span><span class='tstring_content'>%NRQUOTE</span><span class='words_sep'> </span><span class='tstring_content'>%SCAN</span><span class='words_sep'>
+    </span><span class='tstring_content'>%QSCAN</span><span class='words_sep'> </span><span class='tstring_content'>%STR</span><span class='words_sep'> </span><span class='tstring_content'>%NRSTR</span><span class='words_sep'> </span><span class='tstring_content'>%SUBSTR</span><span class='words_sep'> </span><span class='tstring_content'>%QSUBSTR</span><span class='words_sep'> </span><span class='tstring_content'>%SUPERQ</span><span class='words_sep'> </span><span class='tstring_content'>%SYMEXIST</span><span class='words_sep'> </span><span class='tstring_content'>%SYMGLOBL</span><span class='words_sep'>
+    </span><span class='tstring_content'>%SYMLOCAL</span><span class='words_sep'> </span><span class='tstring_content'>%SYSEVALF</span><span class='words_sep'> </span><span class='tstring_content'>%SYSFUNC</span><span class='words_sep'> </span><span class='tstring_content'>%QSYSFUNC</span><span class='words_sep'> </span><span class='tstring_content'>%SYSGET</span><span class='words_sep'> </span><span class='tstring_content'>%SYSMACEXEC</span><span class='words_sep'>
+    </span><span class='tstring_content'>%SYSMACEXIST</span><span class='words_sep'> </span><span class='tstring_content'>%SYSMEXECDEPTH</span><span class='words_sep'> </span><span class='tstring_content'>%SYSMEXECNAME</span><span class='words_sep'> </span><span class='tstring_content'>%SYSPROD</span><span class='words_sep'> </span><span class='tstring_content'>%UNQUOTE</span><span class='words_sep'>
+    </span><span class='tstring_content'>%UPCASE</span><span class='words_sep'> </span><span class='tstring_content'>%QUPCASE</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sas_macro_statements-class_method">
+  
+    .<strong>sas_macro_statements</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/sas.rb', line 94</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_sas_macro_statements'>sas_macro_statements</span>
+  <span class='comment'># from SAS 9.4 Macro Language Reference
+</span>  <span class='comment'># Chapter 12
+</span>  <span class='ivar'>@sas_macro_statements</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>%COPY</span><span class='words_sep'> </span><span class='tstring_content'>%DISPLAY</span><span class='words_sep'> </span><span class='tstring_content'>%GLOBAL</span><span class='words_sep'> </span><span class='tstring_content'>%INPUT</span><span class='words_sep'> </span><span class='tstring_content'>%LET</span><span class='words_sep'> </span><span class='tstring_content'>%MACRO</span><span class='words_sep'> </span><span class='tstring_content'>%PUT</span><span class='words_sep'> </span><span class='tstring_content'>%SYMDEL</span><span class='words_sep'> </span><span class='tstring_content'>%SYSCALL</span><span class='words_sep'>
+    </span><span class='tstring_content'>%SYSEXEC</span><span class='words_sep'> </span><span class='tstring_content'>%SYSLPUT</span><span class='words_sep'> </span><span class='tstring_content'>%SYSMACDELETE</span><span class='words_sep'> </span><span class='tstring_content'>%SYSMSTORECLEAR</span><span class='words_sep'> </span><span class='tstring_content'>%SYSRPUT</span><span class='words_sep'> </span><span class='tstring_content'>%WINDOW</span><span class='words_sep'>
+    </span><span class='tstring_content'>%ABORT</span><span class='words_sep'> </span><span class='tstring_content'>%DO</span><span class='words_sep'> </span><span class='tstring_content'>%TO</span><span class='words_sep'> </span><span class='tstring_content'>%UNTIL</span><span class='words_sep'> </span><span class='tstring_content'>%WHILE</span><span class='words_sep'> </span><span class='tstring_content'>%END</span><span class='words_sep'> </span><span class='tstring_content'>%GOTO</span><span class='words_sep'> </span><span class='tstring_content'>%IF</span><span class='words_sep'> </span><span class='tstring_content'>%THEN</span><span class='words_sep'> </span><span class='tstring_content'>%ELSE</span><span class='words_sep'> </span><span class='tstring_content'>%LOCAL</span><span class='words_sep'>
+    </span><span class='tstring_content'>%RETURN</span><span class='words_sep'>
+    </span><span class='tstring_content'>%INCLUDE</span><span class='words_sep'> </span><span class='tstring_content'>%LIST</span><span class='words_sep'> </span><span class='tstring_content'>%RUN</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+  <span class='comment'># Omitted:
+</span>  <span class='comment'># %label: Identifies the destination of a %GOTO statement.
+</span>  <span class='comment'># %MEND
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sas_proc_names-class_method">
+  
+    .<strong>sas_proc_names</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/sas.rb', line 330</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_sas_proc_names'>sas_proc_names</span>
+  <span class='comment'># from SAS Procedures by Name
+</span>  <span class='comment'># http://support.sas.com/documentation/cdl/en/allprodsproc/68038/HTML/default/viewer.htm#procedures.htm
+</span>
+  <span class='ivar'>@sas_proc_names</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>ACCESS</span><span class='words_sep'> </span><span class='tstring_content'>ACECLUS</span><span class='words_sep'> </span><span class='tstring_content'>ADAPTIVEREG</span><span class='words_sep'> </span><span class='tstring_content'>ALLELE</span><span class='words_sep'> </span><span class='tstring_content'>ANOM</span><span class='words_sep'> </span><span class='tstring_content'>ANOVA</span><span class='words_sep'> </span><span class='tstring_content'>APPEND</span><span class='words_sep'> </span><span class='tstring_content'>APPSRV</span><span class='words_sep'> </span><span class='tstring_content'>ARIMA</span><span class='words_sep'>
+    </span><span class='tstring_content'>AUTHLIB</span><span class='words_sep'> </span><span class='tstring_content'>AUTOREG</span><span class='words_sep'> </span><span class='tstring_content'>BCHOICE</span><span class='words_sep'> </span><span class='tstring_content'>BOM</span><span class='words_sep'> </span><span class='tstring_content'>BOXPLOT</span><span class='words_sep'> </span><span class='tstring_content'>BTL</span><span class='words_sep'> </span><span class='tstring_content'>BUILD</span><span class='words_sep'> </span><span class='tstring_content'>CALENDAR</span><span class='words_sep'> </span><span class='tstring_content'>CALIS</span><span class='words_sep'> </span><span class='tstring_content'>CALLRFC</span><span class='words_sep'>
+    </span><span class='tstring_content'>CANCORR</span><span class='words_sep'> </span><span class='tstring_content'>CANDISC</span><span class='words_sep'> </span><span class='tstring_content'>CAPABILITY</span><span class='words_sep'> </span><span class='tstring_content'>CASECONTROL</span><span class='words_sep'> </span><span class='tstring_content'>CATALOG</span><span class='words_sep'> </span><span class='tstring_content'>CATMOD</span><span class='words_sep'> </span><span class='tstring_content'>CDISC</span><span class='words_sep'> </span><span class='tstring_content'>CDISC</span><span class='words_sep'>
+    </span><span class='tstring_content'>CHART</span><span class='words_sep'> </span><span class='tstring_content'>CIMPORT</span><span class='words_sep'> </span><span class='tstring_content'>CLP</span><span class='words_sep'> </span><span class='tstring_content'>CLUSTER</span><span class='words_sep'> </span><span class='tstring_content'>COMPARE</span><span class='words_sep'> </span><span class='tstring_content'>COMPILE</span><span class='words_sep'> </span><span class='tstring_content'>COMPUTAB</span><span class='words_sep'> </span><span class='tstring_content'>CONTENTS</span><span class='words_sep'> </span><span class='tstring_content'>CONVERT</span><span class='words_sep'>
+    </span><span class='tstring_content'>COPULA</span><span class='words_sep'> </span><span class='tstring_content'>COPY</span><span class='words_sep'> </span><span class='tstring_content'>CORR</span><span class='words_sep'> </span><span class='tstring_content'>CORRESP</span><span class='words_sep'> </span><span class='tstring_content'>COUNTREG</span><span class='words_sep'> </span><span class='tstring_content'>CPM</span><span class='words_sep'> </span><span class='tstring_content'>CPORT</span><span class='words_sep'> </span><span class='tstring_content'>CUSUM</span><span class='words_sep'> </span><span class='tstring_content'>CV2VIEW</span><span class='words_sep'> </span><span class='tstring_content'>DATEKEYS</span><span class='words_sep'>
+    </span><span class='tstring_content'>DATASETS</span><span class='words_sep'> </span><span class='tstring_content'>DATASOURCE</span><span class='words_sep'> </span><span class='tstring_content'>DB2EXT</span><span class='words_sep'> </span><span class='tstring_content'>DB2UTIL</span><span class='words_sep'> </span><span class='tstring_content'>DBCSTAB</span><span class='words_sep'> </span><span class='tstring_content'>DBF</span><span class='words_sep'> </span><span class='tstring_content'>DBLOAD</span><span class='words_sep'> </span><span class='tstring_content'>DELETE</span><span class='words_sep'> </span><span class='tstring_content'>DIF</span><span class='words_sep'>
+    </span><span class='tstring_content'>DISCRIM</span><span class='words_sep'> </span><span class='tstring_content'>DISPLAY</span><span class='words_sep'> </span><span class='tstring_content'>DISTANCE</span><span class='words_sep'> </span><span class='tstring_content'>DMSRVADM</span><span class='words_sep'> </span><span class='tstring_content'>DMSRVDATASVC</span><span class='words_sep'> </span><span class='tstring_content'>DMSRVPROCESSSVC</span><span class='words_sep'>
+    </span><span class='tstring_content'>DOCUMENT</span><span class='words_sep'> </span><span class='tstring_content'>DOWNLOAD</span><span class='words_sep'> </span><span class='tstring_content'>DQLOCLST</span><span class='words_sep'> </span><span class='tstring_content'>DQMATCH</span><span class='words_sep'> </span><span class='tstring_content'>DQSCHEME</span><span class='words_sep'> </span><span class='tstring_content'>DS2</span><span class='words_sep'> </span><span class='tstring_content'>DTREE</span><span class='words_sep'> </span><span class='tstring_content'>ENTROPY</span><span class='words_sep'> </span><span class='tstring_content'>ESM</span><span class='words_sep'>
+    </span><span class='tstring_content'>EXPAND</span><span class='words_sep'> </span><span class='tstring_content'>EXPLODE</span><span class='words_sep'> </span><span class='tstring_content'>EXPORT</span><span class='words_sep'> </span><span class='tstring_content'>FACTEX</span><span class='words_sep'> </span><span class='tstring_content'>FACTOR</span><span class='words_sep'> </span><span class='tstring_content'>FAMILY</span><span class='words_sep'> </span><span class='tstring_content'>FASTCLUS</span><span class='words_sep'> </span><span class='tstring_content'>FCMP</span><span class='words_sep'> </span><span class='tstring_content'>FEDSQL</span><span class='words_sep'> </span><span class='tstring_content'>FMM</span><span class='words_sep'>
+    </span><span class='tstring_content'>FONTREG</span><span class='words_sep'> </span><span class='tstring_content'>FORECAST</span><span class='words_sep'> </span><span class='tstring_content'>FORMAT</span><span class='words_sep'> </span><span class='tstring_content'>FORMS</span><span class='words_sep'> </span><span class='tstring_content'>FREQ</span><span class='words_sep'> </span><span class='tstring_content'>FSBROWSE</span><span class='words_sep'> </span><span class='tstring_content'>FSEDIT</span><span class='words_sep'> </span><span class='tstring_content'>FSLETTER</span><span class='words_sep'> </span><span class='tstring_content'>FSLIST</span><span class='words_sep'>
+    </span><span class='tstring_content'>FSVIEW</span><span class='words_sep'> </span><span class='tstring_content'>G3D</span><span class='words_sep'> </span><span class='tstring_content'>G3GRID</span><span class='words_sep'> </span><span class='tstring_content'>GA</span><span class='words_sep'> </span><span class='tstring_content'>GAM</span><span class='words_sep'> </span><span class='tstring_content'>GAMPL</span><span class='words_sep'> </span><span class='tstring_content'>GANNO</span><span class='words_sep'> </span><span class='tstring_content'>GANTT</span><span class='words_sep'> </span><span class='tstring_content'>GAREABAR</span><span class='words_sep'> </span><span class='tstring_content'>GBARLINE</span><span class='words_sep'> </span><span class='tstring_content'>GCHART</span><span class='words_sep'>
+    </span><span class='tstring_content'>GCONTOUR</span><span class='words_sep'> </span><span class='tstring_content'>GDEVICE</span><span class='words_sep'> </span><span class='tstring_content'>GEE</span><span class='words_sep'> </span><span class='tstring_content'>GENESELECT</span><span class='words_sep'> </span><span class='tstring_content'>GENMOD</span><span class='words_sep'> </span><span class='tstring_content'>GEOCODE</span><span class='words_sep'> </span><span class='tstring_content'>GFONT</span><span class='words_sep'> </span><span class='tstring_content'>GINSIDE</span><span class='words_sep'> </span><span class='tstring_content'>GIS</span><span class='words_sep'> </span><span class='tstring_content'>GKPI</span><span class='words_sep'>
+    </span><span class='tstring_content'>GLIMMIX</span><span class='words_sep'> </span><span class='tstring_content'>GLM</span><span class='words_sep'> </span><span class='tstring_content'>GLMMOD</span><span class='words_sep'> </span><span class='tstring_content'>GLMPOWER</span><span class='words_sep'> </span><span class='tstring_content'>GLMSELECT</span><span class='words_sep'> </span><span class='tstring_content'>GMAP</span><span class='words_sep'> </span><span class='tstring_content'>GOPTIONS</span><span class='words_sep'> </span><span class='tstring_content'>GPLOT</span><span class='words_sep'> </span><span class='tstring_content'>GPROJECT</span><span class='words_sep'>
+    </span><span class='tstring_content'>GRADAR</span><span class='words_sep'> </span><span class='tstring_content'>GREDUCE</span><span class='words_sep'> </span><span class='tstring_content'>GREMOVE</span><span class='words_sep'> </span><span class='tstring_content'>GREPLAY</span><span class='words_sep'> </span><span class='tstring_content'>GROOVY</span><span class='words_sep'> </span><span class='tstring_content'>GSLIDE</span><span class='words_sep'> </span><span class='tstring_content'>GTILE</span><span class='words_sep'> </span><span class='tstring_content'>HADOOP</span><span class='words_sep'> </span><span class='tstring_content'>HAPLOTYPE</span><span class='words_sep'>
+    </span><span class='tstring_content'>HDMD</span><span class='words_sep'> </span><span class='tstring_content'>HPBIN</span><span class='words_sep'> </span><span class='tstring_content'>HPCANDISC</span><span class='words_sep'> </span><span class='tstring_content'>HPCDM</span><span class='words_sep'> </span><span class='tstring_content'>HPCOPULA</span><span class='words_sep'> </span><span class='tstring_content'>HPCORR</span><span class='words_sep'> </span><span class='tstring_content'>HPCOUNTREG</span><span class='words_sep'> </span><span class='tstring_content'>HPDMDB</span><span class='words_sep'> </span><span class='tstring_content'>HPDS2</span><span class='words_sep'>
+    </span><span class='tstring_content'>HPFMM</span><span class='words_sep'> </span><span class='tstring_content'>HPGENSELECT</span><span class='words_sep'> </span><span class='tstring_content'>HPIMPUTE</span><span class='words_sep'> </span><span class='tstring_content'>HPLMIXED</span><span class='words_sep'> </span><span class='tstring_content'>HPLOGISTIC</span><span class='words_sep'> </span><span class='tstring_content'>HPMIXED</span><span class='words_sep'> </span><span class='tstring_content'>HPNLMOD</span><span class='words_sep'>
+    </span><span class='tstring_content'>HPPANEL</span><span class='words_sep'> </span><span class='tstring_content'>HPPLS</span><span class='words_sep'> </span><span class='tstring_content'>HPPRINCOMP</span><span class='words_sep'> </span><span class='tstring_content'>HPQUANTSELECT</span><span class='words_sep'> </span><span class='tstring_content'>HPQLIM</span><span class='words_sep'> </span><span class='tstring_content'>HPREG</span><span class='words_sep'> </span><span class='tstring_content'>HPSAMPLE</span><span class='words_sep'>
+    </span><span class='tstring_content'>HPSEVERITY</span><span class='words_sep'> </span><span class='tstring_content'>HPSPLIT</span><span class='words_sep'> </span><span class='tstring_content'>HPSUMMARY</span><span class='words_sep'> </span><span class='tstring_content'>HTSNP</span><span class='words_sep'> </span><span class='tstring_content'>HTTP</span><span class='words_sep'> </span><span class='tstring_content'>ICLIFETEST</span><span class='words_sep'> </span><span class='tstring_content'>ICPHREG</span><span class='words_sep'> </span><span class='tstring_content'>IML</span><span class='words_sep'> </span><span class='tstring_content'>IMPORT</span><span class='words_sep'>
+    </span><span class='tstring_content'>IMSTAT</span><span class='words_sep'> </span><span class='tstring_content'>IMXFER</span><span class='words_sep'> </span><span class='tstring_content'>INBREED</span><span class='words_sep'> </span><span class='tstring_content'>INFOMAPS</span><span class='words_sep'> </span><span class='tstring_content'>INTPOINT</span><span class='words_sep'> </span><span class='tstring_content'>IOMOPERATE</span><span class='words_sep'> </span><span class='tstring_content'>IRT</span><span class='words_sep'> </span><span class='tstring_content'>ISHIKAWA</span><span class='words_sep'> </span><span class='tstring_content'>ITEMS</span><span class='words_sep'>
+    </span><span class='tstring_content'>JAVAINFO</span><span class='words_sep'> </span><span class='tstring_content'>JSON</span><span class='words_sep'> </span><span class='tstring_content'>KDE</span><span class='words_sep'> </span><span class='tstring_content'>KRIGE2D</span><span class='words_sep'> </span><span class='tstring_content'>LASR</span><span class='words_sep'> </span><span class='tstring_content'>LATTICE</span><span class='words_sep'> </span><span class='tstring_content'>LIFEREG</span><span class='words_sep'> </span><span class='tstring_content'>LIFETEST</span><span class='words_sep'> </span><span class='tstring_content'>LOAN</span><span class='words_sep'>
+    </span><span class='tstring_content'>LOCALEDATA</span><span class='words_sep'> </span><span class='tstring_content'>LOESS</span><span class='words_sep'> </span><span class='tstring_content'>LOGISTIC</span><span class='words_sep'> </span><span class='tstring_content'>LP</span><span class='words_sep'> </span><span class='tstring_content'>LUA</span><span class='words_sep'> </span><span class='tstring_content'>MACONTROL</span><span class='words_sep'> </span><span class='tstring_content'>MAPIMPORT</span><span class='words_sep'> </span><span class='tstring_content'>MCMC</span><span class='words_sep'> </span><span class='tstring_content'>MDC</span><span class='words_sep'> </span><span class='tstring_content'>MDDB</span><span class='words_sep'>
+    </span><span class='tstring_content'>MDS</span><span class='words_sep'> </span><span class='tstring_content'>MEANS</span><span class='words_sep'> </span><span class='tstring_content'>METADATA</span><span class='words_sep'> </span><span class='tstring_content'>METALIB</span><span class='words_sep'> </span><span class='tstring_content'>METAOPERATE</span><span class='words_sep'> </span><span class='tstring_content'>MI</span><span class='words_sep'> </span><span class='tstring_content'>MIANALYZE</span><span class='words_sep'> </span><span class='tstring_content'>MIGRATE</span><span class='words_sep'> </span><span class='tstring_content'>MIXED</span><span class='words_sep'>
+    </span><span class='tstring_content'>MODECLUS</span><span class='words_sep'> </span><span class='tstring_content'>MODEL</span><span class='words_sep'> </span><span class='tstring_content'>MSCHART</span><span class='words_sep'> </span><span class='tstring_content'>MULTTEST</span><span class='words_sep'> </span><span class='tstring_content'>MVPDIAGNOSE</span><span class='words_sep'> </span><span class='tstring_content'>MVPMODEL</span><span class='words_sep'> </span><span class='tstring_content'>MVPMONITOR</span><span class='words_sep'>
+    </span><span class='tstring_content'>NESTED</span><span class='words_sep'> </span><span class='tstring_content'>NETDRAW</span><span class='words_sep'> </span><span class='tstring_content'>NETFLOW</span><span class='words_sep'> </span><span class='tstring_content'>NLIN</span><span class='words_sep'> </span><span class='tstring_content'>NLMIXED</span><span class='words_sep'> </span><span class='tstring_content'>NLP</span><span class='words_sep'> </span><span class='tstring_content'>NPAR1WAY</span><span class='words_sep'> </span><span class='tstring_content'>ODSLIST</span><span class='words_sep'> </span><span class='tstring_content'>ODSTABLE</span><span class='words_sep'>
+    </span><span class='tstring_content'>ODSTEXT</span><span class='words_sep'> </span><span class='tstring_content'>OLAP</span><span class='words_sep'> </span><span class='tstring_content'>OLAPCONTENTS</span><span class='words_sep'> </span><span class='tstring_content'>OLAPOPERATE</span><span class='words_sep'> </span><span class='tstring_content'>OPERATE</span><span class='words_sep'> </span><span class='tstring_content'>OPTEX</span><span class='words_sep'> </span><span class='tstring_content'>OPTGRAPH</span><span class='words_sep'> </span><span class='tstring_content'>OPTIONS</span><span class='words_sep'>
+    </span><span class='tstring_content'>OPTLOAD</span><span class='words_sep'> </span><span class='tstring_content'>OPTLP</span><span class='words_sep'> </span><span class='tstring_content'>OPTLSO</span><span class='words_sep'> </span><span class='tstring_content'>OPTMILP</span><span class='words_sep'> </span><span class='tstring_content'>OPTMODEL</span><span class='words_sep'> </span><span class='tstring_content'>OPTNET</span><span class='words_sep'> </span><span class='tstring_content'>OPTQP</span><span class='words_sep'> </span><span class='tstring_content'>OPTSAVE</span><span class='words_sep'> </span><span class='tstring_content'>ORTHOREG</span><span class='words_sep'>
+    </span><span class='tstring_content'>PANEL</span><span class='words_sep'> </span><span class='tstring_content'>PARETO</span><span class='words_sep'> </span><span class='tstring_content'>PDLREG</span><span class='words_sep'> </span><span class='tstring_content'>PDS</span><span class='words_sep'> </span><span class='tstring_content'>PDSCOPY</span><span class='words_sep'> </span><span class='tstring_content'>PHREG</span><span class='words_sep'> </span><span class='tstring_content'>PLAN</span><span class='words_sep'> </span><span class='tstring_content'>PLM</span><span class='words_sep'> </span><span class='tstring_content'>PLOT</span><span class='words_sep'> </span><span class='tstring_content'>PLS</span><span class='words_sep'> </span><span class='tstring_content'>PM</span><span class='words_sep'> </span><span class='tstring_content'>PMENU</span><span class='words_sep'>
+    </span><span class='tstring_content'>POWER</span><span class='words_sep'> </span><span class='tstring_content'>PRESENV</span><span class='words_sep'> </span><span class='tstring_content'>PRINCOMP</span><span class='words_sep'> </span><span class='tstring_content'>PRINQUAL</span><span class='words_sep'> </span><span class='tstring_content'>PRINT</span><span class='words_sep'> </span><span class='tstring_content'>PRINTTO</span><span class='words_sep'> </span><span class='tstring_content'>PROBIT</span><span class='words_sep'> </span><span class='tstring_content'>PROTO</span><span class='words_sep'> </span><span class='tstring_content'>PRTDEF</span><span class='words_sep'>
+    </span><span class='tstring_content'>PRTEXP</span><span class='words_sep'> </span><span class='tstring_content'>PSMOOTH</span><span class='words_sep'> </span><span class='tstring_content'>PWENCODE</span><span class='words_sep'> </span><span class='tstring_content'>QDEVICE</span><span class='words_sep'> </span><span class='tstring_content'>QLIM</span><span class='words_sep'> </span><span class='tstring_content'>QUANTLIFE</span><span class='words_sep'> </span><span class='tstring_content'>QUANTREG</span><span class='words_sep'> </span><span class='tstring_content'>QUANTSELECT</span><span class='words_sep'>
+    </span><span class='tstring_content'>QUEST</span><span class='words_sep'> </span><span class='tstring_content'>RANK</span><span class='words_sep'> </span><span class='tstring_content'>RAREEVENTS</span><span class='words_sep'> </span><span class='tstring_content'>RDC</span><span class='words_sep'> </span><span class='tstring_content'>RDPOOL</span><span class='words_sep'> </span><span class='tstring_content'>RDSEC</span><span class='words_sep'> </span><span class='tstring_content'>RECOMMEND</span><span class='words_sep'> </span><span class='tstring_content'>REG</span><span class='words_sep'> </span><span class='tstring_content'>REGISTRY</span><span class='words_sep'> </span><span class='tstring_content'>RELEASE</span><span class='words_sep'>
+    </span><span class='tstring_content'>RELIABILITY</span><span class='words_sep'> </span><span class='tstring_content'>REPORT</span><span class='words_sep'> </span><span class='tstring_content'>RISK</span><span class='words_sep'> </span><span class='tstring_content'>ROBUSTREG</span><span class='words_sep'> </span><span class='tstring_content'>RSREG</span><span class='words_sep'> </span><span class='tstring_content'>SCAPROC</span><span class='words_sep'> </span><span class='tstring_content'>SCORE</span><span class='words_sep'> </span><span class='tstring_content'>SEQDESIGN</span><span class='words_sep'>
+    </span><span class='tstring_content'>SEQTEST</span><span class='words_sep'> </span><span class='tstring_content'>SERVER</span><span class='words_sep'> </span><span class='tstring_content'>SEVERITY</span><span class='words_sep'> </span><span class='tstring_content'>SGDESIGN</span><span class='words_sep'> </span><span class='tstring_content'>SGPANEL</span><span class='words_sep'> </span><span class='tstring_content'>SGPLOT</span><span class='words_sep'> </span><span class='tstring_content'>SGRENDER</span><span class='words_sep'> </span><span class='tstring_content'>SGSCATTER</span><span class='words_sep'>
+    </span><span class='tstring_content'>SHEWHART</span><span class='words_sep'> </span><span class='tstring_content'>SIM2D</span><span class='words_sep'> </span><span class='tstring_content'>SIMILARITY</span><span class='words_sep'> </span><span class='tstring_content'>SIMLIN</span><span class='words_sep'> </span><span class='tstring_content'>SIMNORMAL</span><span class='words_sep'> </span><span class='tstring_content'>SOAP</span><span class='words_sep'> </span><span class='tstring_content'>SORT</span><span class='words_sep'> </span><span class='tstring_content'>SOURCE</span><span class='words_sep'> </span><span class='tstring_content'>SPECTRA</span><span class='words_sep'>
+    </span><span class='tstring_content'>SPP</span><span class='words_sep'> </span><span class='tstring_content'>SQL</span><span class='words_sep'> </span><span class='tstring_content'>SQOOP</span><span class='words_sep'> </span><span class='tstring_content'>SSM</span><span class='words_sep'> </span><span class='tstring_content'>STANDARD</span><span class='words_sep'> </span><span class='tstring_content'>STATESPACE</span><span class='words_sep'> </span><span class='tstring_content'>STDIZE</span><span class='words_sep'> </span><span class='tstring_content'>STDRATE</span><span class='words_sep'> </span><span class='tstring_content'>STEPDISC</span><span class='words_sep'> </span><span class='tstring_content'>STP</span><span class='words_sep'>
+    </span><span class='tstring_content'>STREAM</span><span class='words_sep'> </span><span class='tstring_content'>SUMMARY</span><span class='words_sep'> </span><span class='tstring_content'>SURVEYFREQ</span><span class='words_sep'> </span><span class='tstring_content'>SURVEYIMPUTE</span><span class='words_sep'> </span><span class='tstring_content'>SURVEYLOGISTIC</span><span class='words_sep'> </span><span class='tstring_content'>SURVEYMEANS</span><span class='words_sep'>
+    </span><span class='tstring_content'>SURVEYPHREG</span><span class='words_sep'> </span><span class='tstring_content'>SURVEYREG</span><span class='words_sep'> </span><span class='tstring_content'>SURVEYSELECT</span><span class='words_sep'> </span><span class='tstring_content'>SYSLIN</span><span class='words_sep'> </span><span class='tstring_content'>TABULATE</span><span class='words_sep'> </span><span class='tstring_content'>TAPECOPY</span><span class='words_sep'> </span><span class='tstring_content'>TAPELABEL</span><span class='words_sep'>
+    </span><span class='tstring_content'>TEMPLATE</span><span class='words_sep'> </span><span class='tstring_content'>TIMEDATA</span><span class='words_sep'> </span><span class='tstring_content'>TIMEID</span><span class='words_sep'> </span><span class='tstring_content'>TIMEPLOT</span><span class='words_sep'> </span><span class='tstring_content'>TIMESERIES</span><span class='words_sep'> </span><span class='tstring_content'>TPSPLINE</span><span class='words_sep'> </span><span class='tstring_content'>TRANSPOSE</span><span class='words_sep'>
+    </span><span class='tstring_content'>TRANSREG</span><span class='words_sep'> </span><span class='tstring_content'>TRANTAB</span><span class='words_sep'> </span><span class='tstring_content'>TREE</span><span class='words_sep'> </span><span class='tstring_content'>TSCSREG</span><span class='words_sep'> </span><span class='tstring_content'>TTEST</span><span class='words_sep'> </span><span class='tstring_content'>UCM</span><span class='words_sep'> </span><span class='tstring_content'>UNIVARIATE</span><span class='words_sep'> </span><span class='tstring_content'>UPLOAD</span><span class='words_sep'> </span><span class='tstring_content'>VARCLUS</span><span class='words_sep'>
+    </span><span class='tstring_content'>VARCOMP</span><span class='words_sep'> </span><span class='tstring_content'>VARIOGRAM</span><span class='words_sep'> </span><span class='tstring_content'>VARMAX</span><span class='words_sep'> </span><span class='tstring_content'>VASMP</span><span class='words_sep'> </span><span class='tstring_content'>X11</span><span class='words_sep'> </span><span class='tstring_content'>X12</span><span class='words_sep'> </span><span class='tstring_content'>X13</span><span class='words_sep'> </span><span class='tstring_content'>XSL</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Jul 22 08:42:43 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.20 (ruby-2.6.3).
+</div>
+
+    </div>
+  </body>
+</html>

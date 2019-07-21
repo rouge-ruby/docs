@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Rouge::Lexers::Factor
+  
+    &mdash; Documentation by YARD 0.9.20
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Rouge::Lexers::Factor";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (F)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Rouge.html" title="Rouge (module)">Rouge</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Lexers.html" title="Rouge::Lexers (module)">Lexers</a></span></span>
+     &raquo; 
+    <span class="title">Factor</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Rouge::Lexers::Factor
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></li>
+          
+            <li class="next">Rouge::Lexers::Factor</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/rouge/lexers/factor.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RegexLexer.html#MAX_NULL_SCANS-constant" title="Rouge::RegexLexer::MAX_NULL_SCANS (constant)">RegexLexer::MAX_NULL_SCANS</a></span></p>
+
+  
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="../Token/Tokens.html" title="Rouge::Token::Tokens (module)">Token::Tokens</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Token/Tokens.html#Num-constant" title="Rouge::Token::Tokens::Num (constant)">Token::Tokens::Num</a></span>, <span class='object_link'><a href="../Token/Tokens.html#Str-constant" title="Rouge::Token::Tokens::Str (constant)">Token::Tokens::Str</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lexer.html#options-instance_method" title="Rouge::Lexer#options (method)">#options</a></span></p>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#builtins-class_method" title="builtins (class method)">.<strong>builtins</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#detect%3F-class_method" title="detect? (class method)">.<strong>detect?</strong>(text)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RegexLexer.html#append-class_method" title="Rouge::RegexLexer.append (method)">append</a></span>, <span class='object_link'><a href="../RegexLexer.html#delegate-instance_method" title="Rouge::RegexLexer#delegate (method)">#delegate</a></span>, <span class='object_link'><a href="../RegexLexer.html#goto-instance_method" title="Rouge::RegexLexer#goto (method)">#goto</a></span>, <span class='object_link'><a href="../RegexLexer.html#group-instance_method" title="Rouge::RegexLexer#group (method)">#group</a></span>, <span class='object_link'><a href="../RegexLexer.html#groups-instance_method" title="Rouge::RegexLexer#groups (method)">#groups</a></span>, <span class='object_link'><a href="../RegexLexer.html#in_state%3F-instance_method" title="Rouge::RegexLexer#in_state? (method)">#in_state?</a></span>, <span class='object_link'><a href="../RegexLexer.html#pop!-instance_method" title="Rouge::RegexLexer#pop! (method)">#pop!</a></span>, <span class='object_link'><a href="../RegexLexer.html#prepend-class_method" title="Rouge::RegexLexer.prepend (method)">prepend</a></span>, <span class='object_link'><a href="../RegexLexer.html#push-instance_method" title="Rouge::RegexLexer#push (method)">#push</a></span>, <span class='object_link'><a href="../RegexLexer.html#recurse-instance_method" title="Rouge::RegexLexer#recurse (method)">#recurse</a></span>, <span class='object_link'><a href="../RegexLexer.html#replace_state-class_method" title="Rouge::RegexLexer.replace_state (method)">replace_state</a></span>, <span class='object_link'><a href="../RegexLexer.html#reset!-instance_method" title="Rouge::RegexLexer#reset! (method)">#reset!</a></span>, <span class='object_link'><a href="../RegexLexer.html#reset_stack-instance_method" title="Rouge::RegexLexer#reset_stack (method)">#reset_stack</a></span>, <span class='object_link'><a href="../RegexLexer.html#stack-instance_method" title="Rouge::RegexLexer#stack (method)">#stack</a></span>, <span class='object_link'><a href="../RegexLexer.html#start-class_method" title="Rouge::RegexLexer.start (method)">start</a></span>, <span class='object_link'><a href="../RegexLexer.html#start_procs-class_method" title="Rouge::RegexLexer.start_procs (method)">start_procs</a></span>, <span class='object_link'><a href="../RegexLexer.html#state-class_method" title="Rouge::RegexLexer.state (method)">state</a></span>, <span class='object_link'><a href="../RegexLexer.html#state-instance_method" title="Rouge::RegexLexer#state (method)">#state</a></span>, <span class='object_link'><a href="../RegexLexer.html#state%3F-instance_method" title="Rouge::RegexLexer#state? (method)">#state?</a></span>, <span class='object_link'><a href="../RegexLexer.html#state_definitions-class_method" title="Rouge::RegexLexer.state_definitions (method)">state_definitions</a></span>, <span class='object_link'><a href="../RegexLexer.html#states-class_method" title="Rouge::RegexLexer.states (method)">states</a></span>, <span class='object_link'><a href="../RegexLexer.html#step-instance_method" title="Rouge::RegexLexer#step (method)">#step</a></span>, <span class='object_link'><a href="../RegexLexer.html#stream_tokens-instance_method" title="Rouge::RegexLexer#stream_tokens (method)">#stream_tokens</a></span>, <span class='object_link'><a href="../RegexLexer.html#token-instance_method" title="Rouge::RegexLexer#token (method)">#token</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lexer.html#aliases-class_method" title="Rouge::Lexer.aliases (method)">aliases</a></span>, <span class='object_link'><a href="../Lexer.html#all-class_method" title="Rouge::Lexer.all (method)">all</a></span>, <span class='object_link'><a href="../Lexer.html#as_bool-instance_method" title="Rouge::Lexer#as_bool (method)">#as_bool</a></span>, <span class='object_link'><a href="../Lexer.html#as_lexer-instance_method" title="Rouge::Lexer#as_lexer (method)">#as_lexer</a></span>, <span class='object_link'><a href="../Lexer.html#as_list-instance_method" title="Rouge::Lexer#as_list (method)">#as_list</a></span>, <span class='object_link'><a href="../Lexer.html#as_string-instance_method" title="Rouge::Lexer#as_string (method)">#as_string</a></span>, <span class='object_link'><a href="../Lexer.html#as_token-instance_method" title="Rouge::Lexer#as_token (method)">#as_token</a></span>, <span class='object_link'><a href="../Lexer.html#bool_option-instance_method" title="Rouge::Lexer#bool_option (method)">#bool_option</a></span>, <span class='object_link'><a href="../Lexer.html#continue_lex-class_method" title="Rouge::Lexer.continue_lex (method)">continue_lex</a></span>, <span class='object_link'><a href="../Lexer.html#continue_lex-instance_method" title="Rouge::Lexer#continue_lex (method)">#continue_lex</a></span>, <span class='object_link'><a href="../Lexer.html#debug_enabled%3F-class_method" title="Rouge::Lexer.debug_enabled? (method)">debug_enabled?</a></span>, <span class='object_link'><a href="../Lexer.html#demo-class_method" title="Rouge::Lexer.demo (method)">demo</a></span>, <span class='object_link'><a href="../Lexer.html#demo_file-class_method" title="Rouge::Lexer.demo_file (method)">demo_file</a></span>, <span class='object_link'><a href="../Lexer.html#desc-class_method" title="Rouge::Lexer.desc (method)">desc</a></span>, <span class='object_link'><a href="../Lexer.html#detectable%3F-class_method" title="Rouge::Lexer.detectable? (method)">detectable?</a></span>, <span class='object_link'><a href="../Lexer.html#disable_debug!-class_method" title="Rouge::Lexer.disable_debug! (method)">disable_debug!</a></span>, <span class='object_link'><a href="../Lexer.html#enable_debug!-class_method" title="Rouge::Lexer.enable_debug! (method)">enable_debug!</a></span>, <span class='object_link'><a href="../Lexer.html#filenames-class_method" title="Rouge::Lexer.filenames (method)">filenames</a></span>, <span class='object_link'><a href="../Lexer.html#find-class_method" title="Rouge::Lexer.find (method)">find</a></span>, <span class='object_link'><a href="../Lexer.html#find_fancy-class_method" title="Rouge::Lexer.find_fancy (method)">find_fancy</a></span>, <span class='object_link'><a href="../Lexer.html#guess-class_method" title="Rouge::Lexer.guess (method)">guess</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_filename-class_method" title="Rouge::Lexer.guess_by_filename (method)">guess_by_filename</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_mimetype-class_method" title="Rouge::Lexer.guess_by_mimetype (method)">guess_by_mimetype</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_source-class_method" title="Rouge::Lexer.guess_by_source (method)">guess_by_source</a></span>, <span class='object_link'><a href="../Lexer.html#guesses-class_method" title="Rouge::Lexer.guesses (method)">guesses</a></span>, <span class='object_link'><a href="../Lexer.html#hash_option-instance_method" title="Rouge::Lexer#hash_option (method)">#hash_option</a></span>, <span class='object_link'><a href="../Lexer.html#initialize-instance_method" title="Rouge::Lexer#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Lexer.html#lex-class_method" title="Rouge::Lexer.lex (method)">lex</a></span>, <span class='object_link'><a href="../Lexer.html#lex-instance_method" title="Rouge::Lexer#lex (method)">#lex</a></span>, <span class='object_link'><a href="../Lexer.html#lexer_option-instance_method" title="Rouge::Lexer#lexer_option (method)">#lexer_option</a></span>, <span class='object_link'><a href="../Lexer.html#list_option-instance_method" title="Rouge::Lexer#list_option (method)">#list_option</a></span>, <span class='object_link'><a href="../Lexer.html#mimetypes-class_method" title="Rouge::Lexer.mimetypes (method)">mimetypes</a></span>, <span class='object_link'><a href="../Lexer.html#option-class_method" title="Rouge::Lexer.option (method)">option</a></span>, <span class='object_link'><a href="../Lexer.html#option_docs-class_method" title="Rouge::Lexer.option_docs (method)">option_docs</a></span>, <span class='object_link'><a href="../Lexer.html#reset!-instance_method" title="Rouge::Lexer#reset! (method)">#reset!</a></span>, <span class='object_link'><a href="../Lexer.html#stream_tokens-instance_method" title="Rouge::Lexer#stream_tokens (method)">#stream_tokens</a></span>, <span class='object_link'><a href="../Lexer.html#string_option-instance_method" title="Rouge::Lexer#string_option (method)">#string_option</a></span>, <span class='object_link'><a href="../Lexer.html#tag-class_method" title="Rouge::Lexer.tag (method)">tag</a></span>, <span class='object_link'><a href="../Lexer.html#tag-instance_method" title="Rouge::Lexer#tag (method)">#tag</a></span>, <span class='object_link'><a href="../Lexer.html#title-class_method" title="Rouge::Lexer.title (method)">title</a></span>, <span class='object_link'><a href="../Lexer.html#token_option-instance_method" title="Rouge::Lexer#token_option (method)">#token_option</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Token/Tokens.html" title="Rouge::Token::Tokens (module)">Token::Tokens</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Token/Tokens.html#token-class_method" title="Rouge::Token::Tokens.token (method)">token</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Lexer.html#initialize-instance_method" title="Rouge::Lexer#initialize (method)">Rouge::Lexer</a></span></p>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="builtins-class_method">
+  
+    .<strong>builtins</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/factor.rb', line 17</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_builtins'>builtins</span>
+  <span class='ivar'>@builtins</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_tap'>tap</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_builtins'>builtins</span><span class='op'>|</span>
+    <span class='id identifier rubyid_builtins'>builtins</span><span class='lbracket'>[</span><span class='symbol'>:kernel</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>or</span><span class='words_sep'> </span><span class='tstring_content'>2bi</span><span class='words_sep'> </span><span class='tstring_content'>2tri</span><span class='words_sep'> </span><span class='tstring_content'>while</span><span class='words_sep'> </span><span class='tstring_content'>wrapper</span><span class='words_sep'> </span><span class='tstring_content'>nip</span><span class='words_sep'> </span><span class='tstring_content'>4dip</span><span class='words_sep'> </span><span class='tstring_content'>wrapper?</span><span class='words_sep'> </span><span class='tstring_content'>bi*</span><span class='words_sep'>
+      </span><span class='tstring_content'>callstack&gt;array</span><span class='words_sep'> </span><span class='tstring_content'>both?</span><span class='words_sep'> </span><span class='tstring_content'>hashcode</span><span class='words_sep'> </span><span class='tstring_content'>die</span><span class='words_sep'> </span><span class='tstring_content'>dupd</span><span class='words_sep'> </span><span class='tstring_content'>callstack</span><span class='words_sep'>
+      </span><span class='tstring_content'>callstack?</span><span class='words_sep'> </span><span class='tstring_content'>3dup</span><span class='words_sep'> </span><span class='tstring_content'>tri@</span><span class='words_sep'> </span><span class='tstring_content'>pick</span><span class='words_sep'> </span><span class='tstring_content'>curry</span><span class='words_sep'> </span><span class='tstring_content'>build</span><span class='words_sep'> </span><span class='tstring_content'>?execute</span><span class='words_sep'> </span><span class='tstring_content'>3bi</span><span class='words_sep'> </span><span class='tstring_content'>prepose</span><span class='words_sep'>
+      </span><span class='tstring_content'>&gt;boolean</span><span class='words_sep'> </span><span class='tstring_content'>if</span><span class='words_sep'> </span><span class='tstring_content'>clone</span><span class='words_sep'> </span><span class='tstring_content'>eq?</span><span class='words_sep'> </span><span class='tstring_content'>tri*</span><span class='words_sep'> </span><span class='tstring_content'>?</span><span class='words_sep'> </span><span class='tstring_content'>=</span><span class='words_sep'> </span><span class='tstring_content'>swapd</span><span class='words_sep'> </span><span class='tstring_content'>2over</span><span class='words_sep'> </span><span class='tstring_content'>2keep</span><span class='words_sep'> </span><span class='tstring_content'>3keep</span><span class='words_sep'> </span><span class='tstring_content'>clear</span><span class='words_sep'>
+      </span><span class='tstring_content'>2dup</span><span class='words_sep'> </span><span class='tstring_content'>when</span><span class='words_sep'> </span><span class='tstring_content'>not</span><span class='words_sep'> </span><span class='tstring_content'>tuple?</span><span class='words_sep'> </span><span class='tstring_content'>dup</span><span class='words_sep'> </span><span class='tstring_content'>2bi*</span><span class='words_sep'> </span><span class='tstring_content'>2tri*</span><span class='words_sep'> </span><span class='tstring_content'>call</span><span class='words_sep'> </span><span class='tstring_content'>tri-curry</span><span class='words_sep'> </span><span class='tstring_content'>object</span><span class='words_sep'> </span><span class='tstring_content'>bi@</span><span class='words_sep'>
+      </span><span class='tstring_content'>do</span><span class='words_sep'> </span><span class='tstring_content'>unless*</span><span class='words_sep'> </span><span class='tstring_content'>if*</span><span class='words_sep'> </span><span class='tstring_content'>loop</span><span class='words_sep'> </span><span class='tstring_content'>bi-curry*</span><span class='words_sep'> </span><span class='tstring_content'>drop</span><span class='words_sep'> </span><span class='tstring_content'>when*</span><span class='words_sep'> </span><span class='tstring_content'>assert=</span><span class='words_sep'> </span><span class='tstring_content'>retainstack</span><span class='words_sep'>
+      </span><span class='tstring_content'>assert?</span><span class='words_sep'> </span><span class='tstring_content'>-rot</span><span class='words_sep'> </span><span class='tstring_content'>execute</span><span class='words_sep'> </span><span class='tstring_content'>2bi@</span><span class='words_sep'> </span><span class='tstring_content'>2tri@</span><span class='words_sep'> </span><span class='tstring_content'>boa</span><span class='words_sep'> </span><span class='tstring_content'>with</span><span class='words_sep'> </span><span class='tstring_content'>either?</span><span class='words_sep'> </span><span class='tstring_content'>3drop</span><span class='words_sep'> </span><span class='tstring_content'>bi</span><span class='words_sep'>
+      </span><span class='tstring_content'>curry?</span><span class='words_sep'>  </span><span class='tstring_content'>datastack</span><span class='words_sep'> </span><span class='tstring_content'>until</span><span class='words_sep'> </span><span class='tstring_content'>3dip</span><span class='words_sep'> </span><span class='tstring_content'>over</span><span class='words_sep'> </span><span class='tstring_content'>3curry</span><span class='words_sep'> </span><span class='tstring_content'>tri-curry*</span><span class='words_sep'> </span><span class='tstring_content'>tri-curry@</span><span class='words_sep'>
+      </span><span class='tstring_content'>swap</span><span class='words_sep'> </span><span class='tstring_content'>and</span><span class='words_sep'> </span><span class='tstring_content'>2nip</span><span class='words_sep'> </span><span class='tstring_content'>throw</span><span class='words_sep'> </span><span class='tstring_content'>bi-curry</span><span class='words_sep'> </span><span class='tstring_content'>(clone)</span><span class='words_sep'> </span><span class='tstring_content'>hashcode*</span><span class='words_sep'> </span><span class='tstring_content'>compose</span><span class='words_sep'> </span><span class='tstring_content'>2dip</span><span class='words_sep'> </span><span class='tstring_content'>if</span><span class='words_sep'>
+      </span><span class='tstring_content'>3tri</span><span class='words_sep'> </span><span class='tstring_content'>unless</span><span class='words_sep'> </span><span class='tstring_content'>compose?</span><span class='words_sep'> </span><span class='tstring_content'>tuple</span><span class='words_sep'> </span><span class='tstring_content'>keep</span><span class='words_sep'> </span><span class='tstring_content'>2curry</span><span class='words_sep'> </span><span class='tstring_content'>equal?</span><span class='words_sep'> </span><span class='tstring_content'>assert</span><span class='words_sep'> </span><span class='tstring_content'>tri</span><span class='words_sep'> </span><span class='tstring_content'>2drop</span><span class='words_sep'>
+      </span><span class='tstring_content'>most</span><span class='words_sep'> </span><span class='tstring_content'>&lt;wrapper&gt;</span><span class='words_sep'> </span><span class='tstring_content'>boolean?</span><span class='words_sep'> </span><span class='tstring_content'>identity-hashcode</span><span class='words_sep'> </span><span class='tstring_content'>identity-tuple?</span><span class='words_sep'>
+      </span><span class='tstring_content'>null</span><span class='words_sep'> </span><span class='tstring_content'>new</span><span class='words_sep'> </span><span class='tstring_content'>dip</span><span class='words_sep'> </span><span class='tstring_content'>bi-curry@</span><span class='words_sep'> </span><span class='tstring_content'>rot</span><span class='words_sep'> </span><span class='tstring_content'>xor</span><span class='words_sep'> </span><span class='tstring_content'>identity-tuple</span><span class='words_sep'> </span><span class='tstring_content'>boolean</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+
+    <span class='id identifier rubyid_builtins'>builtins</span><span class='lbracket'>[</span><span class='symbol'>:assocs</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>?at</span><span class='words_sep'> </span><span class='tstring_content'>assoc?</span><span class='words_sep'> </span><span class='tstring_content'>assoc-clone-like</span><span class='words_sep'> </span><span class='tstring_content'>assoc=</span><span class='words_sep'> </span><span class='tstring_content'>delete-at*</span><span class='words_sep'> </span><span class='tstring_content'>assoc-partition</span><span class='words_sep'>
+      </span><span class='tstring_content'>extract-keys</span><span class='words_sep'> </span><span class='tstring_content'>new-assoc</span><span class='words_sep'> </span><span class='tstring_content'>value?</span><span class='words_sep'> </span><span class='tstring_content'>assoc-size</span><span class='words_sep'> </span><span class='tstring_content'>map&gt;assoc</span><span class='words_sep'> </span><span class='tstring_content'>push-at</span><span class='words_sep'>
+      </span><span class='tstring_content'>assoc-like</span><span class='words_sep'> </span><span class='tstring_content'>key?</span><span class='words_sep'> </span><span class='tstring_content'>assoc-intersect</span><span class='words_sep'> </span><span class='tstring_content'>assoc-refine</span><span class='words_sep'> </span><span class='tstring_content'>update</span><span class='words_sep'>
+      </span><span class='tstring_content'>assoc-union</span><span class='words_sep'> </span><span class='tstring_content'>assoc-combine</span><span class='words_sep'> </span><span class='tstring_content'>at*</span><span class='words_sep'> </span><span class='tstring_content'>assoc-empty?</span><span class='words_sep'> </span><span class='tstring_content'>at+</span><span class='words_sep'> </span><span class='tstring_content'>set-at</span><span class='words_sep'>
+      </span><span class='tstring_content'>assoc-all?</span><span class='words_sep'> </span><span class='tstring_content'>assoc-subset?</span><span class='words_sep'>  </span><span class='tstring_content'>assoc-hashcode</span><span class='words_sep'> </span><span class='tstring_content'>change-at</span><span class='words_sep'> </span><span class='tstring_content'>assoc-each</span><span class='words_sep'>
+      </span><span class='tstring_content'>assoc-diff</span><span class='words_sep'> </span><span class='tstring_content'>zip</span><span class='words_sep'> </span><span class='tstring_content'>values</span><span class='words_sep'> </span><span class='tstring_content'>value-at</span><span class='words_sep'> </span><span class='tstring_content'>rename-at</span><span class='words_sep'> </span><span class='tstring_content'>inc-at</span><span class='words_sep'> </span><span class='tstring_content'>enum?</span><span class='words_sep'> </span><span class='tstring_content'>at</span><span class='words_sep'> </span><span class='tstring_content'>cache</span><span class='words_sep'>
+      </span><span class='tstring_content'>assoc&gt;map</span><span class='words_sep'> </span><span class='tstring_content'>&lt;enum&gt;</span><span class='words_sep'> </span><span class='tstring_content'>assoc</span><span class='words_sep'> </span><span class='tstring_content'>assoc-map</span><span class='words_sep'> </span><span class='tstring_content'>enum</span><span class='words_sep'> </span><span class='tstring_content'>value-at*</span><span class='words_sep'> </span><span class='tstring_content'>assoc-map-as</span><span class='words_sep'>
+      </span><span class='tstring_content'>&gt;alist</span><span class='words_sep'> </span><span class='tstring_content'>assoc-filter-as</span><span class='words_sep'> </span><span class='tstring_content'>clear-assoc</span><span class='words_sep'> </span><span class='tstring_content'>assoc-stack</span><span class='words_sep'> </span><span class='tstring_content'>maybe-set-at</span><span class='words_sep'>
+      </span><span class='tstring_content'>substitute</span><span class='words_sep'> </span><span class='tstring_content'>assoc-filter</span><span class='words_sep'> </span><span class='tstring_content'>2cache</span><span class='words_sep'> </span><span class='tstring_content'>delete-at</span><span class='words_sep'> </span><span class='tstring_content'>assoc-find</span><span class='words_sep'> </span><span class='tstring_content'>keys</span><span class='words_sep'>
+      </span><span class='tstring_content'>assoc-any?</span><span class='words_sep'> </span><span class='tstring_content'>unzip</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+
+    <span class='id identifier rubyid_builtins'>builtins</span><span class='lbracket'>[</span><span class='symbol'>:combinators</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>case</span><span class='words_sep'> </span><span class='tstring_content'>execute-effect</span><span class='words_sep'> </span><span class='tstring_content'>no-cond</span><span class='words_sep'> </span><span class='tstring_content'>no-case?</span><span class='words_sep'> </span><span class='tstring_content'>3cleave&gt;quot</span><span class='words_sep'> </span><span class='tstring_content'>2cleave</span><span class='words_sep'>
+      </span><span class='tstring_content'>cond&gt;quot</span><span class='words_sep'> </span><span class='tstring_content'>wrong-values?</span><span class='words_sep'> </span><span class='tstring_content'>no-cond?</span><span class='words_sep'> </span><span class='tstring_content'>cleave&gt;quot</span><span class='words_sep'> </span><span class='tstring_content'>no-case</span><span class='words_sep'> </span><span class='tstring_content'>case&gt;quot</span><span class='words_sep'>
+      </span><span class='tstring_content'>3cleave</span><span class='words_sep'> </span><span class='tstring_content'>wrong-values</span><span class='words_sep'> </span><span class='tstring_content'>to-fixed-point</span><span class='words_sep'> </span><span class='tstring_content'>alist&gt;quot</span><span class='words_sep'> </span><span class='tstring_content'>case-find</span><span class='words_sep'>
+      </span><span class='tstring_content'>cond</span><span class='words_sep'> </span><span class='tstring_content'>cleave</span><span class='words_sep'> </span><span class='tstring_content'>call-effect</span><span class='words_sep'> </span><span class='tstring_content'>2cleave&gt;quot</span><span class='words_sep'> </span><span class='tstring_content'>recursive-hashcode</span><span class='words_sep'>
+      </span><span class='tstring_content'>linear-case-quot</span><span class='words_sep'> </span><span class='tstring_content'>spread</span><span class='words_sep'> </span><span class='tstring_content'>spread&gt;quot</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+
+    <span class='id identifier rubyid_builtins'>builtins</span><span class='lbracket'>[</span><span class='symbol'>:math</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>number=</span><span class='words_sep'> </span><span class='tstring_content'>if-zero</span><span class='words_sep'> </span><span class='tstring_content'>next-power-of-2</span><span class='words_sep'> </span><span class='tstring_content'>each-integer</span><span class='words_sep'> </span><span class='tstring_content'>?1+</span><span class='words_sep'>
+      </span><span class='tstring_content'>fp-special?</span><span class='words_sep'> </span><span class='tstring_content'>imaginary-part</span><span class='words_sep'> </span><span class='tstring_content'>unless-zero</span><span class='words_sep'> </span><span class='tstring_content'>float&gt;bits</span><span class='words_sep'> </span><span class='tstring_content'>number?</span><span class='words_sep'>
+      </span><span class='tstring_content'>fp-infinity?</span><span class='words_sep'> </span><span class='tstring_content'>bignum?</span><span class='words_sep'> </span><span class='tstring_content'>fp-snan?</span><span class='words_sep'> </span><span class='tstring_content'>denominator</span><span class='words_sep'> </span><span class='tstring_content'>fp-bitwise=</span><span class='words_sep'> </span><span class='tstring_content'>*</span><span class='words_sep'>
+      </span><span class='tstring_content'>+</span><span class='words_sep'> </span><span class='tstring_content'>power-of-2?</span><span class='words_sep'> </span><span class='tstring_content'>-</span><span class='words_sep'> </span><span class='tstring_content'>u&gt;=</span><span class='words_sep'> </span><span class='tstring_content'>/</span><span class='words_sep'> </span><span class='tstring_content'>&gt;=</span><span class='words_sep'> </span><span class='tstring_content'>bitand</span><span class='words_sep'> </span><span class='tstring_content'>log2-expects-positive</span><span class='words_sep'> </span><span class='tstring_content'>&lt;</span><span class='words_sep'>
+      </span><span class='tstring_content'>log2</span><span class='words_sep'> </span><span class='tstring_content'>&gt;</span><span class='words_sep'> </span><span class='tstring_content'>integer?</span><span class='words_sep'> </span><span class='tstring_content'>number</span><span class='words_sep'> </span><span class='tstring_content'>bits&gt;double</span><span class='words_sep'> </span><span class='tstring_content'>2/</span><span class='words_sep'> </span><span class='tstring_content'>zero?</span><span class='words_sep'> </span><span class='tstring_content'>(find-integer)</span><span class='words_sep'>
+      </span><span class='tstring_content'>bits&gt;float</span><span class='words_sep'> </span><span class='tstring_content'>float?</span><span class='words_sep'> </span><span class='tstring_content'>shift</span><span class='words_sep'> </span><span class='tstring_content'>ratio?</span><span class='words_sep'> </span><span class='tstring_content'>even?</span><span class='words_sep'> </span><span class='tstring_content'>ratio</span><span class='words_sep'> </span><span class='tstring_content'>fp-sign</span><span class='words_sep'> </span><span class='tstring_content'>bitnot</span><span class='words_sep'>
+      </span><span class='tstring_content'>&gt;fixnum</span><span class='words_sep'> </span><span class='tstring_content'>complex?</span><span class='words_sep'> </span><span class='tstring_content'>/i</span><span class='words_sep'> </span><span class='tstring_content'>/f</span><span class='words_sep'> </span><span class='tstring_content'>byte-array&gt;bignum</span><span class='words_sep'> </span><span class='tstring_content'>when-zero</span><span class='words_sep'> </span><span class='tstring_content'>sgn</span><span class='words_sep'> </span><span class='tstring_content'>&gt;bignum</span><span class='words_sep'>
+      </span><span class='tstring_content'>next-float</span><span class='words_sep'> </span><span class='tstring_content'>u&lt;</span><span class='words_sep'> </span><span class='tstring_content'>u&gt;</span><span class='words_sep'> </span><span class='tstring_content'>mod</span><span class='words_sep'> </span><span class='tstring_content'>recip</span><span class='words_sep'> </span><span class='tstring_content'>rational</span><span class='words_sep'> </span><span class='tstring_content'>find-last-integer</span><span class='words_sep'> </span><span class='tstring_content'>&gt;float</span><span class='words_sep'>
+      </span><span class='tstring_content'>(all-integers?)</span><span class='words_sep'> </span><span class='tstring_content'>2^</span><span class='words_sep'> </span><span class='tstring_content'>times</span><span class='words_sep'> </span><span class='tstring_content'>integer</span><span class='words_sep'> </span><span class='tstring_content'>fixnum?</span><span class='words_sep'> </span><span class='tstring_content'>neg</span><span class='words_sep'> </span><span class='tstring_content'>fixnum</span><span class='words_sep'> </span><span class='tstring_content'>sq</span><span class='words_sep'> </span><span class='tstring_content'>bignum</span><span class='words_sep'>
+      </span><span class='tstring_content'>(each-integer)</span><span class='words_sep'> </span><span class='tstring_content'>bit?</span><span class='words_sep'> </span><span class='tstring_content'>fp-qnan?</span><span class='words_sep'> </span><span class='tstring_content'>find-integer</span><span class='words_sep'> </span><span class='tstring_content'>complex</span><span class='words_sep'> </span><span class='tstring_content'>&lt;fp-nan&gt;</span><span class='words_sep'>
+      </span><span class='tstring_content'>real</span><span class='words_sep'> </span><span class='tstring_content'>double&gt;bits</span><span class='words_sep'> </span><span class='tstring_content'>bitor</span><span class='words_sep'> </span><span class='tstring_content'>rem</span><span class='words_sep'> </span><span class='tstring_content'>fp-nan-payload</span><span class='words_sep'> </span><span class='tstring_content'>all-integers?</span><span class='words_sep'>
+      </span><span class='tstring_content'>real-part</span><span class='words_sep'> </span><span class='tstring_content'>log2-expects-positive?</span><span class='words_sep'> </span><span class='tstring_content'>prev-float</span><span class='words_sep'> </span><span class='tstring_content'>align</span><span class='words_sep'> </span><span class='tstring_content'>unordered?</span><span class='words_sep'>
+      </span><span class='tstring_content'>float</span><span class='words_sep'> </span><span class='tstring_content'>fp-nan?</span><span class='words_sep'> </span><span class='tstring_content'>abs</span><span class='words_sep'> </span><span class='tstring_content'>bitxor</span><span class='words_sep'> </span><span class='tstring_content'>u&lt;=</span><span class='words_sep'> </span><span class='tstring_content'>odd?</span><span class='words_sep'> </span><span class='tstring_content'>&lt;=</span><span class='words_sep'> </span><span class='tstring_content'>/mod</span><span class='words_sep'> </span><span class='tstring_content'>rational?</span><span class='words_sep'> </span><span class='tstring_content'>&gt;integer</span><span class='words_sep'>
+      </span><span class='tstring_content'>real?</span><span class='words_sep'> </span><span class='tstring_content'>numerator</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+
+    <span class='id identifier rubyid_builtins'>builtins</span><span class='lbracket'>[</span><span class='symbol'>:sequences</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>member-eq?</span><span class='words_sep'> </span><span class='tstring_content'>append</span><span class='words_sep'> </span><span class='tstring_content'>assert-sequence=</span><span class='words_sep'> </span><span class='tstring_content'>find-last-from</span><span class='words_sep'>
+      </span><span class='tstring_content'>trim-head-slice</span><span class='words_sep'> </span><span class='tstring_content'>clone-like</span><span class='words_sep'> </span><span class='tstring_content'>3sequence</span><span class='words_sep'> </span><span class='tstring_content'>assert-sequence?</span><span class='words_sep'> </span><span class='tstring_content'>map-as</span><span class='words_sep'>
+      </span><span class='tstring_content'>last-index-from</span><span class='words_sep'> </span><span class='tstring_content'>reversed</span><span class='words_sep'> </span><span class='tstring_content'>index-from</span><span class='words_sep'> </span><span class='tstring_content'>cut*</span><span class='words_sep'> </span><span class='tstring_content'>pad-tail</span><span class='words_sep'>
+      </span><span class='tstring_content'>remove-eq!</span><span class='words_sep'> </span><span class='tstring_content'>concat-as</span><span class='words_sep'> </span><span class='tstring_content'>but-last</span><span class='words_sep'> </span><span class='tstring_content'>snip</span><span class='words_sep'> </span><span class='tstring_content'>trim-tail</span><span class='words_sep'> </span><span class='tstring_content'>nths</span><span class='words_sep'>
+      </span><span class='tstring_content'>nth</span><span class='words_sep'> </span><span class='tstring_content'>2selector</span><span class='words_sep'> </span><span class='tstring_content'>sequence</span><span class='words_sep'> </span><span class='tstring_content'>slice?</span><span class='words_sep'>  </span><span class='tstring_content'>&lt;slice&gt;</span><span class='words_sep'> </span><span class='tstring_content'>partition</span><span class='words_sep'>
+      </span><span class='tstring_content'>remove-nth</span><span class='words_sep'> </span><span class='tstring_content'>tail-slice</span><span class='words_sep'> </span><span class='tstring_content'>empty?</span><span class='words_sep'> </span><span class='tstring_content'>tail*</span><span class='words_sep'> </span><span class='tstring_content'>if-empty</span><span class='words_sep'>
+      </span><span class='tstring_content'>find-from</span><span class='words_sep'> </span><span class='tstring_content'>virtual-sequence?</span><span class='words_sep'> </span><span class='tstring_content'>member?</span><span class='words_sep'> </span><span class='tstring_content'>set-length</span><span class='words_sep'>
+      </span><span class='tstring_content'>drop-prefix</span><span class='words_sep'> </span><span class='tstring_content'>unclip</span><span class='words_sep'> </span><span class='tstring_content'>unclip-last-slice</span><span class='words_sep'> </span><span class='tstring_content'>iota</span><span class='words_sep'> </span><span class='tstring_content'>map-sum</span><span class='words_sep'>
+      </span><span class='tstring_content'>bounds-error?</span><span class='words_sep'> </span><span class='tstring_content'>sequence-hashcode-step</span><span class='words_sep'> </span><span class='tstring_content'>selector-for</span><span class='words_sep'>
+      </span><span class='tstring_content'>accumulate-as</span><span class='words_sep'> </span><span class='tstring_content'>map</span><span class='words_sep'> </span><span class='tstring_content'>start</span><span class='words_sep'> </span><span class='tstring_content'>midpoint@</span><span class='words_sep'> </span><span class='tstring_content'>(accumulate)</span><span class='words_sep'> </span><span class='tstring_content'>rest-slice</span><span class='words_sep'>
+      </span><span class='tstring_content'>prepend</span><span class='words_sep'> </span><span class='tstring_content'>fourth</span><span class='words_sep'> </span><span class='tstring_content'>sift</span><span class='words_sep'> </span><span class='tstring_content'>accumulate!</span><span class='words_sep'> </span><span class='tstring_content'>new-sequence</span><span class='words_sep'> </span><span class='tstring_content'>follow</span><span class='words_sep'> </span><span class='tstring_content'>map!</span><span class='words_sep'> </span><span class='tstring_content'>like</span><span class='words_sep'>
+      </span><span class='tstring_content'>first4</span><span class='words_sep'> </span><span class='tstring_content'>1sequence</span><span class='words_sep'> </span><span class='tstring_content'>reverse</span><span class='words_sep'> </span><span class='tstring_content'>slice</span><span class='words_sep'> </span><span class='tstring_content'>unless-empty</span><span class='words_sep'> </span><span class='tstring_content'>padding</span><span class='words_sep'> </span><span class='tstring_content'>virtual@</span><span class='words_sep'>
+      </span><span class='tstring_content'>repetition?</span><span class='words_sep'> </span><span class='tstring_content'>set-last</span><span class='words_sep'> </span><span class='tstring_content'>index</span><span class='words_sep'> </span><span class='tstring_content'>4sequence</span><span class='words_sep'> </span><span class='tstring_content'>max-length</span><span class='words_sep'> </span><span class='tstring_content'>set-second</span><span class='words_sep'>
+      </span><span class='tstring_content'>immutable-sequence</span><span class='words_sep'> </span><span class='tstring_content'>first2</span><span class='words_sep'> </span><span class='tstring_content'>first3</span><span class='words_sep'> </span><span class='tstring_content'>replicate-as</span><span class='words_sep'> </span><span class='tstring_content'>reduce-index</span><span class='words_sep'>
+      </span><span class='tstring_content'>unclip-slice</span><span class='words_sep'> </span><span class='tstring_content'>supremum</span><span class='words_sep'> </span><span class='tstring_content'>suffix!</span><span class='words_sep'> </span><span class='tstring_content'>insert-nth</span><span class='words_sep'> </span><span class='tstring_content'>trim-tail-slice</span><span class='words_sep'>
+      </span><span class='tstring_content'>tail</span><span class='words_sep'> </span><span class='tstring_content'>3append</span><span class='words_sep'> </span><span class='tstring_content'>short</span><span class='words_sep'> </span><span class='tstring_content'>count</span><span class='words_sep'> </span><span class='tstring_content'>suffix</span><span class='words_sep'> </span><span class='tstring_content'>concat</span><span class='words_sep'> </span><span class='tstring_content'>flip</span><span class='words_sep'> </span><span class='tstring_content'>filter</span><span class='words_sep'> </span><span class='tstring_content'>sum</span><span class='words_sep'>
+      </span><span class='tstring_content'>immutable?</span><span class='words_sep'> </span><span class='tstring_content'>reverse!</span><span class='words_sep'> </span><span class='tstring_content'>2sequence</span><span class='words_sep'> </span><span class='tstring_content'>map-integers</span><span class='words_sep'> </span><span class='tstring_content'>delete-all</span><span class='words_sep'> </span><span class='tstring_content'>start*</span><span class='words_sep'>
+      </span><span class='tstring_content'>indices</span><span class='words_sep'> </span><span class='tstring_content'>snip-slice</span><span class='words_sep'> </span><span class='tstring_content'>check-slice</span><span class='words_sep'> </span><span class='tstring_content'>sequence?</span><span class='words_sep'>  </span><span class='tstring_content'>head</span><span class='words_sep'> </span><span class='tstring_content'>map-find</span><span class='words_sep'>
+      </span><span class='tstring_content'>filter!</span><span class='words_sep'> </span><span class='tstring_content'>append-as</span><span class='words_sep'> </span><span class='tstring_content'>reduce</span><span class='words_sep'> </span><span class='tstring_content'>sequence=</span><span class='words_sep'> </span><span class='tstring_content'>halves</span><span class='words_sep'> </span><span class='tstring_content'>collapse-slice</span><span class='words_sep'>
+      </span><span class='tstring_content'>interleave</span><span class='words_sep'> </span><span class='tstring_content'>2map</span><span class='words_sep'> </span><span class='tstring_content'>filter-as</span><span class='words_sep'> </span><span class='tstring_content'>binary-reduce</span><span class='words_sep'> </span><span class='tstring_content'>slice-error?</span><span class='words_sep'> </span><span class='tstring_content'>product</span><span class='words_sep'>
+      </span><span class='tstring_content'>bounds-check?</span><span class='words_sep'> </span><span class='tstring_content'>bounds-check</span><span class='words_sep'> </span><span class='tstring_content'>harvest</span><span class='words_sep'> </span><span class='tstring_content'>immutable</span><span class='words_sep'> </span><span class='tstring_content'>virtual-exemplar</span><span class='words_sep'>
+      </span><span class='tstring_content'>find</span><span class='words_sep'> </span><span class='tstring_content'>produce</span><span class='words_sep'> </span><span class='tstring_content'>remove</span><span class='words_sep'> </span><span class='tstring_content'>pad-head</span><span class='words_sep'> </span><span class='tstring_content'>last</span><span class='words_sep'> </span><span class='tstring_content'>replicate</span><span class='words_sep'> </span><span class='tstring_content'>set-fourth</span><span class='words_sep'>
+      </span><span class='tstring_content'>remove-eq</span><span class='words_sep'> </span><span class='tstring_content'>shorten</span><span class='words_sep'> </span><span class='tstring_content'>reversed?</span><span class='words_sep'>  </span><span class='tstring_content'>map-find-last</span><span class='words_sep'> </span><span class='tstring_content'>3map-as</span><span class='words_sep'>
+      </span><span class='tstring_content'>2unclip-slice</span><span class='words_sep'> </span><span class='tstring_content'>shorter?</span><span class='words_sep'> </span><span class='tstring_content'>3map</span><span class='words_sep'> </span><span class='tstring_content'>find-last</span><span class='words_sep'> </span><span class='tstring_content'>head-slice</span><span class='words_sep'> </span><span class='tstring_content'>pop*</span><span class='words_sep'> </span><span class='tstring_content'>2map-as</span><span class='words_sep'>
+      </span><span class='tstring_content'>tail-slice*</span><span class='words_sep'> </span><span class='tstring_content'>but-last-slice</span><span class='words_sep'> </span><span class='tstring_content'>2map-reduce</span><span class='words_sep'> </span><span class='tstring_content'>iota?</span><span class='words_sep'> </span><span class='tstring_content'>collector-for</span><span class='words_sep'>
+      </span><span class='tstring_content'>accumulate</span><span class='words_sep'> </span><span class='tstring_content'>each</span><span class='words_sep'> </span><span class='tstring_content'>selector</span><span class='words_sep'> </span><span class='tstring_content'>append!</span><span class='words_sep'> </span><span class='tstring_content'>new-resizable</span><span class='words_sep'> </span><span class='tstring_content'>cut-slice</span><span class='words_sep'>
+      </span><span class='tstring_content'>each-index</span><span class='words_sep'> </span><span class='tstring_content'>head-slice*</span><span class='words_sep'> </span><span class='tstring_content'>2reverse-each</span><span class='words_sep'> </span><span class='tstring_content'>sequence-hashcode</span><span class='words_sep'>
+      </span><span class='tstring_content'>pop</span><span class='words_sep'> </span><span class='tstring_content'>set-nth</span><span class='words_sep'> </span><span class='tstring_content'>?nth</span><span class='words_sep'> </span><span class='tstring_content'>&lt;flat-slice&gt;</span><span class='words_sep'> </span><span class='tstring_content'>second</span><span class='words_sep'> </span><span class='tstring_content'>join</span><span class='words_sep'> </span><span class='tstring_content'>when-empty</span><span class='words_sep'>
+      </span><span class='tstring_content'>collector</span><span class='words_sep'> </span><span class='tstring_content'>immutable-sequence?</span><span class='words_sep'> </span><span class='tstring_content'>&lt;reversed&gt;</span><span class='words_sep'> </span><span class='tstring_content'>all?</span><span class='words_sep'> </span><span class='tstring_content'>3append-as</span><span class='words_sep'>
+      </span><span class='tstring_content'>virtual-sequence</span><span class='words_sep'> </span><span class='tstring_content'>subseq?</span><span class='words_sep'> </span><span class='tstring_content'>remove-nth!</span><span class='words_sep'> </span><span class='tstring_content'>push-either</span><span class='words_sep'> </span><span class='tstring_content'>new-like</span><span class='words_sep'>
+      </span><span class='tstring_content'>length</span><span class='words_sep'> </span><span class='tstring_content'>last-index</span><span class='words_sep'> </span><span class='tstring_content'>push-if</span><span class='words_sep'> </span><span class='tstring_content'>2all?</span><span class='words_sep'> </span><span class='tstring_content'>lengthen</span><span class='words_sep'> </span><span class='tstring_content'>assert-sequence</span><span class='words_sep'>
+      </span><span class='tstring_content'>copy</span><span class='words_sep'> </span><span class='tstring_content'>map-reduce</span><span class='words_sep'> </span><span class='tstring_content'>move</span><span class='words_sep'> </span><span class='tstring_content'>third</span><span class='words_sep'> </span><span class='tstring_content'>first</span><span class='words_sep'> </span><span class='tstring_content'>3each</span><span class='words_sep'> </span><span class='tstring_content'>tail?</span><span class='words_sep'> </span><span class='tstring_content'>set-first</span><span class='words_sep'> </span><span class='tstring_content'>prefix</span><span class='words_sep'>
+      </span><span class='tstring_content'>bounds-error</span><span class='words_sep'> </span><span class='tstring_content'>any?</span><span class='words_sep'> </span><span class='tstring_content'>&lt;repetition&gt;</span><span class='words_sep'> </span><span class='tstring_content'>trim-slice</span><span class='words_sep'> </span><span class='tstring_content'>exchange</span><span class='words_sep'> </span><span class='tstring_content'>surround</span><span class='words_sep'>
+      </span><span class='tstring_content'>2reduce</span><span class='words_sep'> </span><span class='tstring_content'>cut</span><span class='words_sep'> </span><span class='tstring_content'>change-nth</span><span class='words_sep'> </span><span class='tstring_content'>min-length</span><span class='words_sep'> </span><span class='tstring_content'>set-third</span><span class='words_sep'> </span><span class='tstring_content'>produce-as</span><span class='words_sep'>
+      </span><span class='tstring_content'>push-all</span><span class='words_sep'> </span><span class='tstring_content'>head?</span><span class='words_sep'> </span><span class='tstring_content'>delete-slice</span><span class='words_sep'> </span><span class='tstring_content'>rest</span><span class='words_sep'> </span><span class='tstring_content'>sum-lengths</span><span class='words_sep'> </span><span class='tstring_content'>2each</span><span class='words_sep'> </span><span class='tstring_content'>head*</span><span class='words_sep'>
+      </span><span class='tstring_content'>infimum</span><span class='words_sep'> </span><span class='tstring_content'>remove!</span><span class='words_sep'> </span><span class='tstring_content'>glue</span><span class='words_sep'> </span><span class='tstring_content'>slice-error</span><span class='words_sep'> </span><span class='tstring_content'>subseq</span><span class='words_sep'> </span><span class='tstring_content'>trim</span><span class='words_sep'> </span><span class='tstring_content'>replace-slice</span><span class='words_sep'>
+      </span><span class='tstring_content'>push</span><span class='words_sep'> </span><span class='tstring_content'>repetition</span><span class='words_sep'> </span><span class='tstring_content'>map-index</span><span class='words_sep'> </span><span class='tstring_content'>trim-head</span><span class='words_sep'> </span><span class='tstring_content'>unclip-last</span><span class='words_sep'> </span><span class='tstring_content'>mismatch</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+
+    <span class='id identifier rubyid_builtins'>builtins</span><span class='lbracket'>[</span><span class='symbol'>:namespaces</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>global</span><span class='words_sep'> </span><span class='tstring_content'>+@</span><span class='words_sep'> </span><span class='tstring_content'>change</span><span class='words_sep'> </span><span class='tstring_content'>set-namestack</span><span class='words_sep'> </span><span class='tstring_content'>change-global</span><span class='words_sep'> </span><span class='tstring_content'>init-namespaces</span><span class='words_sep'>
+      </span><span class='tstring_content'>on</span><span class='words_sep'> </span><span class='tstring_content'>off</span><span class='words_sep'> </span><span class='tstring_content'>set-global</span><span class='words_sep'> </span><span class='tstring_content'>namespace</span><span class='words_sep'> </span><span class='tstring_content'>set</span><span class='words_sep'> </span><span class='tstring_content'>with-scope</span><span class='words_sep'> </span><span class='tstring_content'>bind</span><span class='words_sep'> </span><span class='tstring_content'>with-variable</span><span class='words_sep'>
+      </span><span class='tstring_content'>inc</span><span class='words_sep'> </span><span class='tstring_content'>dec</span><span class='words_sep'> </span><span class='tstring_content'>counter</span><span class='words_sep'> </span><span class='tstring_content'>initialize</span><span class='words_sep'> </span><span class='tstring_content'>namestack</span><span class='words_sep'> </span><span class='tstring_content'>get</span><span class='words_sep'> </span><span class='tstring_content'>get-global</span><span class='words_sep'> </span><span class='tstring_content'>make-assoc</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+
+    <span class='id identifier rubyid_builtins'>builtins</span><span class='lbracket'>[</span><span class='symbol'>:arrays</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>&lt;array&gt;</span><span class='words_sep'> </span><span class='tstring_content'>2array</span><span class='words_sep'> </span><span class='tstring_content'>3array</span><span class='words_sep'> </span><span class='tstring_content'>pair</span><span class='words_sep'> </span><span class='tstring_content'>&gt;array</span><span class='words_sep'> </span><span class='tstring_content'>1array</span><span class='words_sep'> </span><span class='tstring_content'>4array</span><span class='words_sep'> </span><span class='tstring_content'>pair?</span><span class='words_sep'>
+      </span><span class='tstring_content'>array</span><span class='words_sep'> </span><span class='tstring_content'>resize-array</span><span class='words_sep'> </span><span class='tstring_content'>array?</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+
+    <span class='id identifier rubyid_builtins'>builtins</span><span class='lbracket'>[</span><span class='symbol'>:io</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>+character+</span><span class='words_sep'> </span><span class='tstring_content'>bad-seek-type?</span><span class='words_sep'> </span><span class='tstring_content'>readln</span><span class='words_sep'> </span><span class='tstring_content'>each-morsel</span><span class='words_sep'>
+      </span><span class='tstring_content'>stream-seek</span><span class='words_sep'> </span><span class='tstring_content'>read</span><span class='words_sep'> </span><span class='tstring_content'>print</span><span class='words_sep'> </span><span class='tstring_content'>with-output-stream</span><span class='words_sep'> </span><span class='tstring_content'>contents</span><span class='words_sep'>
+      </span><span class='tstring_content'>write1</span><span class='words_sep'> </span><span class='tstring_content'>stream-write1</span><span class='words_sep'> </span><span class='tstring_content'>stream-copy</span><span class='words_sep'> </span><span class='tstring_content'>stream-element-type</span><span class='words_sep'>
+      </span><span class='tstring_content'>with-input-stream</span><span class='words_sep'> </span><span class='tstring_content'>stream-print</span><span class='words_sep'> </span><span class='tstring_content'>stream-read</span><span class='words_sep'> </span><span class='tstring_content'>stream-contents</span><span class='words_sep'>
+      </span><span class='tstring_content'>stream-tell</span><span class='words_sep'> </span><span class='tstring_content'>tell-output</span><span class='words_sep'> </span><span class='tstring_content'>bl</span><span class='words_sep'> </span><span class='tstring_content'>seek-output</span><span class='words_sep'> </span><span class='tstring_content'>bad-seek-type</span><span class='words_sep'> </span><span class='tstring_content'>nl</span><span class='words_sep'>
+      </span><span class='tstring_content'>stream-nl</span><span class='words_sep'> </span><span class='tstring_content'>write</span><span class='words_sep'> </span><span class='tstring_content'>flush</span><span class='words_sep'> </span><span class='tstring_content'>stream-lines</span><span class='words_sep'> </span><span class='tstring_content'>+byte+</span><span class='words_sep'> </span><span class='tstring_content'>stream-flush</span><span class='words_sep'>
+      </span><span class='tstring_content'>read1</span><span class='words_sep'> </span><span class='tstring_content'>seek-absolute?</span><span class='words_sep'> </span><span class='tstring_content'>stream-read1</span><span class='words_sep'> </span><span class='tstring_content'>lines</span><span class='words_sep'> </span><span class='tstring_content'>stream-readln</span><span class='words_sep'>
+      </span><span class='tstring_content'>stream-read-until</span><span class='words_sep'> </span><span class='tstring_content'>each-line</span><span class='words_sep'> </span><span class='tstring_content'>seek-end</span><span class='words_sep'> </span><span class='tstring_content'>with-output-stream*</span><span class='words_sep'>
+      </span><span class='tstring_content'>seek-absolute</span><span class='words_sep'> </span><span class='tstring_content'>with-streams</span><span class='words_sep'> </span><span class='tstring_content'>seek-input</span><span class='words_sep'> </span><span class='tstring_content'>seek-relative?</span><span class='words_sep'>
+      </span><span class='tstring_content'>input-stream</span><span class='words_sep'> </span><span class='tstring_content'>stream-write</span><span class='words_sep'> </span><span class='tstring_content'>read-partial</span><span class='words_sep'> </span><span class='tstring_content'>seek-end?</span><span class='words_sep'>
+      </span><span class='tstring_content'>seek-relative</span><span class='words_sep'> </span><span class='tstring_content'>error-stream</span><span class='words_sep'> </span><span class='tstring_content'>read-until</span><span class='words_sep'> </span><span class='tstring_content'>with-input-stream*</span><span class='words_sep'>
+      </span><span class='tstring_content'>with-streams*</span><span class='words_sep'> </span><span class='tstring_content'>tell-input</span><span class='words_sep'> </span><span class='tstring_content'>each-block</span><span class='words_sep'> </span><span class='tstring_content'>output-stream</span><span class='words_sep'>
+      </span><span class='tstring_content'>stream-read-partial</span><span class='words_sep'> </span><span class='tstring_content'>each-stream-block</span><span class='words_sep'> </span><span class='tstring_content'>each-stream-line</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+
+    <span class='id identifier rubyid_builtins'>builtins</span><span class='lbracket'>[</span><span class='symbol'>:strings</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>resize-string</span><span class='words_sep'> </span><span class='tstring_content'>&gt;string</span><span class='words_sep'> </span><span class='tstring_content'>&lt;string&gt;</span><span class='words_sep'> </span><span class='tstring_content'>1string</span><span class='words_sep'> </span><span class='tstring_content'>string</span><span class='words_sep'> </span><span class='tstring_content'>string?</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+
+    <span class='id identifier rubyid_builtins'>builtins</span><span class='lbracket'>[</span><span class='symbol'>:vectors</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>with-return</span><span class='words_sep'> </span><span class='tstring_content'>restarts</span><span class='words_sep'> </span><span class='tstring_content'>return-continuation</span><span class='words_sep'> </span><span class='tstring_content'>with-datastack</span><span class='words_sep'>
+      </span><span class='tstring_content'>recover</span><span class='words_sep'> </span><span class='tstring_content'>rethrow-restarts</span><span class='words_sep'> </span><span class='tstring_content'>&lt;restart&gt;</span><span class='words_sep'> </span><span class='tstring_content'>ifcc</span><span class='words_sep'> </span><span class='tstring_content'>set-catchstack</span><span class='words_sep'>
+      </span><span class='tstring_content'>&gt;continuation&lt;</span><span class='words_sep'> </span><span class='tstring_content'>cleanup</span><span class='words_sep'> </span><span class='tstring_content'>ignore-errors</span><span class='words_sep'> </span><span class='tstring_content'>restart?</span><span class='words_sep'>
+      </span><span class='tstring_content'>compute-restarts</span><span class='words_sep'> </span><span class='tstring_content'>attempt-all-error</span><span class='words_sep'> </span><span class='tstring_content'>error-thread</span><span class='words_sep'>
+      </span><span class='tstring_content'>continue</span><span class='words_sep'> </span><span class='tstring_content'>&lt;continuation&gt;</span><span class='words_sep'> </span><span class='tstring_content'>attempt-all-error?</span><span class='words_sep'> </span><span class='tstring_content'>condition?</span><span class='words_sep'>
+      </span><span class='tstring_content'>&lt;condition&gt;</span><span class='words_sep'> </span><span class='tstring_content'>throw-restarts</span><span class='words_sep'> </span><span class='tstring_content'>error</span><span class='words_sep'> </span><span class='tstring_content'>catchstack</span><span class='words_sep'> </span><span class='tstring_content'>continue-with</span><span class='words_sep'>
+      </span><span class='tstring_content'>thread-error-hook</span><span class='words_sep'> </span><span class='tstring_content'>continuation</span><span class='words_sep'> </span><span class='tstring_content'>rethrow</span><span class='words_sep'> </span><span class='tstring_content'>callcc1</span><span class='words_sep'>
+      </span><span class='tstring_content'>error-continuation</span><span class='words_sep'> </span><span class='tstring_content'>callcc0</span><span class='words_sep'> </span><span class='tstring_content'>attempt-all</span><span class='words_sep'> </span><span class='tstring_content'>condition</span><span class='words_sep'>
+      </span><span class='tstring_content'>continuation?</span><span class='words_sep'> </span><span class='tstring_content'>restart</span><span class='words_sep'> </span><span class='tstring_content'>return</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+
+    <span class='id identifier rubyid_builtins'>builtins</span><span class='lbracket'>[</span><span class='symbol'>:continuations</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+      </span><span class='tstring_content'>with-return</span><span class='words_sep'> </span><span class='tstring_content'>restarts</span><span class='words_sep'> </span><span class='tstring_content'>return-continuation</span><span class='words_sep'> </span><span class='tstring_content'>with-datastack</span><span class='words_sep'>
+      </span><span class='tstring_content'>recover</span><span class='words_sep'> </span><span class='tstring_content'>rethrow-restarts</span><span class='words_sep'> </span><span class='tstring_content'>&lt;restart&gt;</span><span class='words_sep'> </span><span class='tstring_content'>ifcc</span><span class='words_sep'> </span><span class='tstring_content'>set-catchstack</span><span class='words_sep'>
+      </span><span class='tstring_content'>&gt;continuation&lt;</span><span class='words_sep'> </span><span class='tstring_content'>cleanup</span><span class='words_sep'> </span><span class='tstring_content'>ignore-errors</span><span class='words_sep'> </span><span class='tstring_content'>restart?</span><span class='words_sep'>
+      </span><span class='tstring_content'>compute-restarts</span><span class='words_sep'> </span><span class='tstring_content'>attempt-all-error</span><span class='words_sep'> </span><span class='tstring_content'>error-thread</span><span class='words_sep'>
+      </span><span class='tstring_content'>continue</span><span class='words_sep'> </span><span class='tstring_content'>&lt;continuation&gt;</span><span class='words_sep'> </span><span class='tstring_content'>attempt-all-error?</span><span class='words_sep'> </span><span class='tstring_content'>condition?</span><span class='words_sep'>
+      </span><span class='tstring_content'>&lt;condition&gt;</span><span class='words_sep'> </span><span class='tstring_content'>throw-restarts</span><span class='words_sep'> </span><span class='tstring_content'>error</span><span class='words_sep'> </span><span class='tstring_content'>catchstack</span><span class='words_sep'> </span><span class='tstring_content'>continue-with</span><span class='words_sep'>
+      </span><span class='tstring_content'>thread-error-hook</span><span class='words_sep'> </span><span class='tstring_content'>continuation</span><span class='words_sep'> </span><span class='tstring_content'>rethrow</span><span class='words_sep'> </span><span class='tstring_content'>callcc1</span><span class='words_sep'>
+      </span><span class='tstring_content'>error-continuation</span><span class='words_sep'> </span><span class='tstring_content'>callcc0</span><span class='words_sep'> </span><span class='tstring_content'>attempt-all</span><span class='words_sep'> </span><span class='tstring_content'>condition</span><span class='words_sep'>
+      </span><span class='tstring_content'>continuation?</span><span class='words_sep'> </span><span class='tstring_content'>restart</span><span class='words_sep'> </span><span class='tstring_content'>return</span><span class='words_sep'>
+    </span><span class='tstring_end'>)</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="detect?-class_method">
+  
+    .<strong>detect?</strong>(text)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/factor.rb', line 13</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_detect?'>detect?</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_text'>text</span><span class='period'>.</span><span class='id identifier rubyid_shebang?'>shebang?</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>factor</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Jul 22 08:49:58 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.20 (ruby-2.6.3).
+</div>
+
+    </div>
+  </body>
+</html>

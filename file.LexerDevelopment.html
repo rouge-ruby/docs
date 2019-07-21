@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: Lexer Development
+  
+    &mdash; Documentation by YARD 0.9.20
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "LexerDevelopment";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="file_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: Lexer Development</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'><h1>Lexer Development</h1>
+
+<h2>Overview</h2>
+
+<p>A critical concept in the design of Rouge is the &quot;lexer&quot;. A lexer converts
+ordinary text into a series of tokens that Rouge can then process.</p>
+
+<p>Rouge supports the languages it does by having a separate lexer for each
+language. Lexer development is important both for fixing Rouge when syntax
+isn&#39;t being highlighted properly and for adding languages that Rouge doesn&#39;t
+support.</p>
+
+<p>The remainder of this document explains how to develop a lexer for Rouge.</p>
+
+<p class="note">
+  Please don't submit lexers that are largely copy-pasted from other files. 
+  These submissions will be rejected.
+</p>
+
+<h2>Getting Started</h2>
+
+<h3>Development Environment</h3>
+
+<p>To develop a lexer, you need to have set up a development environment. If you
+haven&#39;t done that yet, we&#39;ve got <a href="file.DevEnvironment.html" title="a guide">a guide</a> that can
+help.</p>
+
+<p>The rest of this guide assumes that you have set up such an environment and,
+importantly, that you have installed the gems on which Rouge depends to a
+directory within the repository (we recommend <code>vendor/</code>).</p>
+
+<h3>File Location</h3>
+
+<p>Rouge automatically loads lexers saved in the <code>lib/rouge/lexers/</code> directory and
+so if you&#39;re submitting a new lexer, that&#39;s the right place to put it. The
+filename should match the name of your lexer, with the Ruby filename extension
+<code>.rb</code> appended. If the name of your language is <code>Example</code>, the lexer would be
+saved as <code>lib/rouge/lexers/example.rb</code>.</p>
+
+<h3>Subclassing <code>RegexLexer</code></h3>
+
+<p>Your lexer needs to be a subclass of the <span class='object_link'><a href="Rouge/Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span> abstract class.  Most
+lexers are in fact subclassed from <span class='object_link'><a href="Rouge/RegexLexer.html" title="Rouge::RegexLexer (class)">Rouge::RegexLexer</a></span> as the simplest way to
+define the states of a lexer is to use rules consisting of regular expressions.
+The remainder of this guide assumes your lexer is subclassed from
+<span class='object_link'><a href="Rouge/RegexLexer.html" title="Rouge::RegexLexer (class)">Rouge::RegexLexer</a></span>.</p>
+
+<h2>How to Structure</h2>
+
+<p>Basically, a lexer consists of two parts:</p>
+
+<ol>
+<li>a series of properties that are usually declared at the top of the lexer;
+and</li>
+<li>a collection of one or more states, each of which has one or more rules.</li>
+</ol>
+
+<p>There are some additional features that a lexer can implement and we&#39;ll cover
+those at the end.</p>
+
+<p>For the remainder of this guide, we&#39;ll use <a href="https://github.com/rouge-ruby/rouge/blob/master/lib/rouge/lexers/json.rb">the JSON lexer</a> as an
+example. The lexer is relatively simple and is for a language with which many
+people will at least have some level of familiarity.</p>
+
+<h3>Lexer Properties</h3>
+
+<p>To be usable by Rouge, a lexer should declare a <strong>title</strong>, a <strong>description</strong>, a
+<strong>tag</strong>, any <strong>aliases</strong>, associated <strong>filenames</strong> and associated
+<strong>mimetypes</strong>.</p>
+
+<h4>Title</h4>
+
+<pre class="code rb"><code class="rb">title &quot;JSON&quot;
+</code></pre>
+
+<p>The title of the lexer. It is declared using the <span class='object_link'><a href="Rouge/Lexer.html#title-class_method" title="Rouge::Lexer.title (method)">Rouge::Lexer.title</a></span> method.</p>
+
+<p>Note: As a subclass of <span class='object_link'><a href="Rouge/RegexLexer.html" title="Rouge::RegexLexer (class)">Rouge::RegexLexer</a></span>, the JSON lexer inherits this method
+(and its inherited methods) into its namespace and can call those methods
+without needing to prefix each with <code>Rouge::Lexer</code>.  This is the case with all
+of the property defining methods.</p>
+
+<h4>Description</h4>
+
+<pre class="code rb"><code class="rb">desc &quot;JavaScript Object Notation (json.org)&quot;
+</code></pre>
+
+<p>The description of the lexer. It is declared using the <span class='object_link'><a href="Rouge/Lexer.html#desc-class_method" title="Rouge::Lexer.desc (method)">Rouge::Lexer.desc</a></span>
+method.</p>
+
+<h4>Tag</h4>
+
+<pre class="code rb"><code class="rb">tag &quot;json&quot;
+</code></pre>
+
+<p>The tag associated with the lexer. It is declared using the <span class='object_link'><a href="Rouge/Lexer.html#tag-class_method" title="Rouge::Lexer.tag (method)">Rouge::Lexer.tag</a></span>
+method.</p>
+
+<p>A tag provides a way to specify the lexer that should apply to text within a
+given code block. In various flavours of Markdown, it&#39;s used after the opening
+of a code block, such as in the following example:</p>
+
+<pre class="code ruby"><code class="ruby">```ruby
+puts &quot;This is some Ruby&quot;
+```
+</code></pre>
+
+<p>The <code>ruby</code> tag is defined in <a href="https://github.com/rouge-ruby/rouge/blob/master/lib/rouge/lexers/ruby.rb">the Ruby lexer</a>.</p>
+
+<h4>Aliases</h4>
+
+<p>The aliases associated with a lexer. These are declared using the
+<span class='object_link'><a href="Rouge/Lexer.html#aliases-class_method" title="Rouge::Lexer.aliases (method)">Rouge::Lexer.aliases</a></span>  method. Aliases are alternative ways that the lexer can
+be identified.</p>
+
+<p>The JSON lexer does not define any aliases but <a href="https://github.com/rouge-ruby/rouge/blob/master/lib/rouge/lexers/ruby.rb">the Ruby one</a> does.
+We can see how it could be used by looking at another example in Markdown. This
+time, instead of specifying the tag after the opening of the code block, we&#39;ll
+use an alias instead:</p>
+
+<pre class="code ruby"><code class="ruby">```rb
+puts &quot;This is still some Ruby&quot;
+```
+</code></pre>
+
+<h4>Filenames</h4>
+
+<pre class="code rb"><code class="rb">filenames &quot;*.json&quot;
+</code></pre>
+
+<p>The filename(s) associated with a lexer. These are declared using the
+<span class='object_link'><a href="Rouge/Lexer.html#filenames-class_method" title="Rouge::Lexer.filenames (method)">Rouge::Lexer.filenames</a></span>  method.</p>
+
+<p>Filenames are declared as &quot;globs&quot; that will match a particular pattern. A
+&quot;glob&quot; may be merely the specific name of a file (eg. <code>Rakefile</code>) or it could
+include one or more wildcards (eg. <code>*.json</code>).</p>
+
+<h4>Mimetypes</h4>
+
+<pre class="code rb"><code class="rb">mimetypes &quot;application/json&quot;, &quot;application/vnd.api+json&quot;, &quot;application/hal+json&quot;
+</code></pre>
+
+<p>The mimetype(s) associated with a lexer. These are declared using the
+<span class='object_link'><a href="Rouge/Lexer.html#mimetypes-class_method" title="Rouge::Lexer.mimetypes (method)">Rouge::Lexer.mimetypes</a></span> method.</p>
+
+<h3>Lexer States</h3>
+
+<p>The other major element of a lexer is the collection of one or more states.
+For lexers that subclass <span class='object_link'><a href="Rouge/RegexLexer.html" title="Rouge::RegexLexer (class)">Rouge::RegexLexer</a></span>, a state will consist
+of one or more rules with a rule consisting of a regular expression and an
+action. The action yields tokens and manipulates the <em>state stack</em>.</p>
+
+<h4>The State Stack</h4>
+
+<p>The state stack represents an ordered sequence of states the lexer is currently
+processing. States are added and removed from the &quot;top&quot; of the stack. The
+oldest state is on the bottom of the stack and the newest state is on the top.</p>
+
+<p>The initial (and therefore bottommost) state is the <code>:root</code> state. The lexer
+works by looking at the rules that are in the state that is on top of the
+stack. These are tried <em>in order</em> until a match is found. At this point, the
+action defined in the rule is run, the head of the input stream is advanced
+and the process is repeated with the state that is now on top of the stack.</p>
+
+<p>Now that we&#39;ve explained the concepts, let&#39;s look at how you actually define
+these elements in your lexer.</p>
+
+<h4>States</h4>
+
+<pre class="code rb"><code class="rb">state :root do 
+  ... # do some stuff
+end
+</code></pre>
+
+<p>A state is defined using the <span class='object_link'><a href="Rouge/RegexLexer.html#state-class_method" title="Rouge::RegexLexer.state (method)">Rouge::RegexLexer.state</a></span> method.
+The method consists of the name of the state as a <code>Symbol</code> and a block
+specifying the rules that Rouge will try to match as it parses the text.</p>
+
+<h4>Rules</h4>
+
+<p>A rule is defined using the <span class='object_link'><a href="Rouge/RegexLexer/StateDSL.html#rule-instance_method" title="Rouge::RegexLexer::StateDSL#rule (method)">Rouge::RegexLexer::StateDSL#rule</a></span> method. The
+<code>rule</code> method can define either &quot;simple&quot; rules or &quot;complex&quot; rules.</p>
+
+<p><em>Simple Rules</em></p>
+
+<pre class="code rb"><code class="rb">rule /\s+/m, Text::Whitespace
+rule /&quot;/, Str::Double, :string
+</code></pre>
+
+<p>A simple rule takes:</p>
+
+<ol>
+<li>a regular expression to match against;</li>
+<li>a token to yield if the regular expression matches; and</li>
+<li>an optional new state to push onto the state stack if the regular expression
+matches.</li>
+</ol>
+
+<p>In the above example, there are two rules. The first rule yields the token
+<code>Text::Whitespace</code> but does not do anything to the state stack. The second rule
+yields the token <code>Str::Double</code> and adds the new state <code>:string</code> to the top of
+the state stack. The text being parsed after this point will now be processed
+by the rules in the <code>:string</code> state.</p>
+
+<p>The following code shows the definition for this state and the rules that are
+defined within it:</p>
+
+<pre class="code rb"><code class="rb">state :string do
+  rule /[^\\&quot;]+/, Str::Double 
+  rule /\\./, Str::Escape 
+  rule /&quot;/, Str::Double, :pop!
+end
+</code></pre>
+
+<p>The last rule features the &quot;special state&quot; <code>:pop!</code>. This is not really a state,
+rather it is an instruction to the lexer to remove the current state from the
+top of the state stack. In the JSON lexer, when we encounter the double
+quotation mark <code>&quot;</code> we enter into the state of being &quot;in a string&quot; and when we
+next encounter the double quotation mark, we leave the string and return to the
+previous state (in this case, the <code>:root</code> state).</p>
+
+<p><em>Complex Rules</em></p>
+
+<p>It is possible to define more complex rules for a lexer by calling <code>rule</code> with:</p>
+
+<ol>
+<li>a regular expression to match against; and</li>
+<li>a block to call if the regular expression matches.</li>
+</ol>
+
+<p>The block called can take one argument, usually written as <code>m</code>, that contains
+the regular expression match object.</p>
+
+<p>These kind of rules allow for more fine-grained control of the state stack.
+Inside a complex rule&#39;s block, it&#39;s possible to call <span class='object_link'><a href="Rouge/RegexLexer.html#push-instance_method" title="Rouge::RegexLexer#push (method)">Rouge::RegexLexer#push</a></span>,
+<span class='object_link'><a href="Rouge/RegexLexer.html#pop!-instance_method" title="Rouge::RegexLexer#pop! (method)">Rouge::RegexLexer#pop!</a></span>, <span class='object_link'><a href="Rouge/RegexLexer.html#token-instance_method" title="Rouge::RegexLexer#token (method)">Rouge::RegexLexer#token</a></span> and
+<span class='object_link'><a href="Rouge/RegexLexer.html#delegate-instance_method" title="Rouge::RegexLexer#delegate (method)">Rouge::RegexLexer#delegate</a></span>.</p>
+
+<p>You can see an example of these more complex rules in <a href="https://github.com/rouge-ruby/rouge/blob/master/lib/rouge/lexers/ruby.rb">the Ruby
+lexer</a>.</p>
+
+<h3>Additional Features</h3>
+
+<p>While the properties and states are the minimum elements of a lexer that need
+to be implemented, a lexer can include additional features.</p>
+
+<h4>Source Detection</h4>
+
+<pre class="code rb"><code class="rb">def self.detect?(text)
+  return true if text.shebang? &#39;ruby&#39;
+end 
+</code></pre>
+
+<p>Rouge will attempt to guess the appropriate lexer if it is not otherwise clear.
+If Rouge is unable to do this on the basis of any tag, associated filename or
+associated mimetype, it will try to detect the appropriate lexer on the basis of
+the text itself (the source). This is done by calling <code>self.detect?</code> on the
+possible lexer (a default <code>self.detect?</code> method is defined in <span class='object_link'><a href="Rouge/Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span>
+and simply returns <code>false</code>).</p>
+
+<p>A lexer can implement its own <code>self.detect?</code> method that takes a
+<span class='object_link'><a href="Rouge/TextAnalyzer.html" title="Rouge::TextAnalyzer (class)">Rouge::TextAnalyzer</a></span> object as a parameter. If the <code>self.detect?</code> method
+returns true, the lexer will be selected as the appropriate lexer.</p>
+
+<p>It is important to note that <code>self.detect?</code> should <em>only</em> return <code>true</code> if it
+is 100% sure that the language is detected. The most common ways for source
+code to identify the language it&#39;s written in is with a shebang or a doctype
+and Rouge provides the <span class='object_link'><a href="Rouge/TextAnalyzer.html#shebang-instance_method" title="Rouge::TextAnalyzer#shebang (method)">Rouge::TextAnalyzer#shebang</a></span> method and the
+<span class='object_link'><a href="Rouge/TextAnalyzer.html#doctype-instance_method" title="Rouge::TextAnalyzer#doctype (method)">Rouge::TextAnalyzer#doctype</a></span> method specifically for use with <code>self.detect?</code>
+to make these checks easy to perform.</p>
+
+<p>For more general disambiguation between different lexers, see <a href="#Conflicting_Filename_Globs">Conflicting
+Filename Globs</a> below.</p>
+
+<h4>Special Words</h4>
+
+<p>Every programming language reserves certain words for use as identifiers that
+have a special meaning in the language. To make regular expressions that search
+for these words easier, many lexers will put the applicable keywords in an
+array and make them available in a particular way (be it as a local variable,
+an instance variable or what have you).</p>
+
+<p>For performance and safety, we strongly recommend lexers use a class method:</p>
+
+<pre class="code rb"><code class="rb">module Rouge
+  module Lexers
+    class YetAnotherLanguage &lt; RegexLexer
+    ...
+
+    def self.keywords
+      @keywords ||= Set.new %w(key words used in this language)
+    end
+
+    ...
+  end
+end
+</code></pre>
+
+<p>These keywords can then be used like so:</p>
+
+<pre class="code rb"><code class="rb">rule /\w+/ do |m|
+  if self.class.keywords.include?(m[0])
+    token Keyword
+  elsif
+    token Name
+  end
+end
+</code></pre>
+
+<p>In some cases, you may want to interpolate your keywords into a regular
+expression. <strong>We strongly recommend you avoid doing this.</strong> Having a large
+number of rules that are searching for particular words is not as performant as
+a rule with a generic pattern with a block that checks whether the pattern is a
+member of a predefined set and assigns tokens, pushes new states, etc.</p>
+
+<p>If you do need to use interpolation, be careful to use the <code>\b</code> anchor to avoid
+inadvertently matching part of a longer word (eg. <code>if</code> matching <code>iff</code>)::</p>
+
+<pre class="code rb"><code class="rb">rule /\b(#{keywords.join(&#39;|&#39;)})\b/, Keyword
+</code></pre>
+
+<h4>Startup</h4>
+
+<pre class="code rb"><code class="rb">start do
+  push :expr_start
+  @heredoc_queue = []
+end
+</code></pre>
+
+<p>The <span class='object_link'><a href="Rouge/RegexLexer.html#start-class_method" title="Rouge::RegexLexer.start (method)">Rouge::RegexLexer.start</a></span> method can take a block that will be called when
+the lexer commences lexing. This provides a way to enter into a special state
+&quot;before&quot; entering into the <code>:root</code> state (the <code>:root</code> state is still the
+bottommost state in the state stack; the state pushed by <code>start</code> sits &quot;on top&quot;
+but is the state in which the lexer begins.</p>
+
+<p>Why would you want to do this? In some languages, there may be language
+structures that can appear at the beginning of a file.
+<span class='object_link'><a href="Rouge/RegexLexer.html#start-class_method" title="Rouge::RegexLexer.start (method)">Rouge::RegexLexer.start</a></span> provides a way to parse these structures without
+needing a special rule in your <code>:root</code> state that has to keep track of whether
+you are processing things for the first time.</p>
+
+<h3>Subclassing</h3>
+
+<p>If a lexer is for a language that is very similar to a language with an
+existing lexer, it&#39;s possible to subclass the existing lexer. See <a href="https://github.com/rouge-ruby/rouge/blob/master/lib/rouge/lexers/cpp.rb">the C++
+lexer</a> and <a href="https://github.com/rouge-ruby/rouge/blob/master/lib/rouge/lexers/jsx.rb">the JSX lexer</a> for examples.</p>
+
+<h3>Gotchas</h3>
+
+<h4>Conflicting Filename Globs</h4>
+
+<p>If two or more lexers define the same filename glob, this will cause an
+<span class='object_link'><a href="Rouge/Guesser/Ambiguous.html" title="Rouge::Guesser::Ambiguous (class)">Rouge::Guesser::Ambiguous</a></span> error to be raised by certain guessing methods
+(including the one used by the <code>assert_guess</code> method used in your spec).</p>
+
+<p>The solution to this is to define a disambiguation procedure in the
+<span class='object_link'><a href="Rouge/Guessers/Disambiguation.html" title="Rouge::Guessers::Disambiguation (class)">Rouge::Guessers::Disambiguation</a></span> class. Here&#39;s the procedure for the <code>*.pl</code>
+filename glob as an example:</p>
+
+<pre class="code rb"><code class="rb">disambiguate &quot;*.pl&quot; do
+  next Perl if contains?(&quot;my $&quot;)
+  next Prolog if contains?(&quot;:-&quot;)
+  next Prolog if matches?(/\A\w+(\(\w+\,\s*\w+\))*\./)
+end
+</code></pre>
+
+<p>Then, in <a href="#Specs">your spec</a>, include a <code>:source</code> parameter when calling
+<code>assert_guess</code>:</p>
+
+<pre class="code rb"><code class="rb">it &quot;guesses by filename&quot; do
+  # *.pl needs source hints because it&#39;s also used by Prolog
+  assert_guess :filename =&gt; &quot;foo.pl&quot;, :source =&gt; &quot;my $foo = 1&quot;
+end
+</code></pre>
+
+<h2>How to Test</h2>
+
+<p>When developing a lexer, it is important to have ways to test it. Rouge provides
+support for three types of test files:</p>
+
+<ol>
+<li>a <strong>spec</strong> that will run as part of Rouge&#39;s test suite;</li>
+<li>a <strong>demo</strong> that will be tested as part of Rouge&#39;s test suite; and;</li>
+<li>a <strong>visual sample</strong> of the various language constructs.</li>
+</ol>
+
+<p>When you submit a lexer, you must also include these test files.</p>
+
+<p>Before we look at how to run these tests, let&#39;s look at the files themselves. </p>
+
+<h3>Specs</h3>
+
+<p>A spec is a list of expectations that are tested as part of the test suite.
+Rouge uses the Minitest library for defining these expectations. For more
+information about Minitest, refer to <a href="http://docs.seattlerb.org/minitest/">the documentation</a>.</p>
+
+<p>Your spec should at a minimum test how your lexer interacts with Rouge&#39;s
+guessing algorithm. In particular, you should check:</p>
+
+<ul>
+<li>the associated filenames;</li>
+<li>the associated mimetypes; and</li>
+<li>the associated sources (if any).</li>
+</ul>
+
+<p>Your spec must be saved to <code>spec/lexers/&lt;name_of_your_lexer&gt;_spec.rb</code>.</p>
+
+<h4>Filenames</h4>
+
+<pre class="code rb"><code class="rb">it &quot;guesses by filename&quot; do
+  assert_guess :filename =&gt; &quot;foo.rb&quot;
+end
+</code></pre>
+
+<p>Each of the filename globs that are declared in the lexer should be tested in
+the spec. <a href="#Conflicting_Filename_Globs">As discussed above</a>, if the associated filename glob
+conflicts with a filename glob defined in another lexer, you will need to write
+a disambiguation.</p>
+
+<h4>Mimetypes</h4>
+
+<pre class="code rb"><code class="rb">it &quot;guesses by mimetype&quot; do
+  assert_guess :mimetype =&gt; &quot;text/x-ruby&quot;
+end
+</code></pre>
+
+<p>Each of the mimetypes that are declared in the lexer should be tested in the
+spec.</p>
+
+<h4>Sources</h4>
+
+<pre class="code rb"><code class="rb">it &quot;guesses by source&quot; do
+  assert_guess :source =&gt; &quot;#!/usr/local/bin/ruby&quot;
+end
+</code></pre>
+
+<p>If the lexer implements the <code>self.detect?</code> method, then each predicate that
+returns true should be tested.</p>
+
+<h3>Demos</h3>
+
+<p>The demo file is tested automatically as part of Rouge&#39;s test suite. The file
+should be able to be parsed without producing any <code>Error</code> tokens.</p>
+
+<p>The demo is also used on <a href="http://rouge.jneen.net/">rouge.jneen.net</a> as the default text to display
+when a lexer is chosen. It should be short (less than 20 lines if possible).</p>
+
+<p>Your demo must be saved to <code>lib/rouge/demos/&lt;name_of_your_lexer&gt;</code>. Please note
+that there is no file extension.</p>
+
+<h3>Visual Samples</h3>
+
+<p>A visual sample is a file that includes a representive sample of the syntax of
+your language. The sample should be long enough to reasonably demonstrate the
+correct lexing of the language but does not need to offer complete coverage.
+While it can be tempting to copy and paste code found online, please refrain
+from doing this. If you need to copy code, indicate in a comment (using the
+appropriate syntax for your lexer&#39;s language) the source of the code.  Avoid
+including code that is duplicative of the other code in the sample.</p>
+
+<p>If you are adding or fixing rules in the lexer, please add some examples of the
+expressions that will be highlighted differently to the visual sample if
+they&#39;re not already present. This greatly assists in reviewing your lexer
+submission.</p>
+
+<p>Your visual sample must be saved to <code>spec/visual/sample/&lt;name_of_your_lexer&gt;</code>.
+As with the demo file, there is no file extension.</p>
+
+<h3>Running the Tests</h3>
+
+<p>The spec and the demo can be run using the <code>rake</code> command. You can run this by
+typing <code>bundle exec rake</code> at the command line. If everything works, you should
+see a series of dots. If you have an error, this will appear here, too.</p>
+
+<p>To see your visual sample, launch Rouge&#39;s visual test app by running <code>bundle
+exec rackup</code>. You can choose your sample from the complete list by going to
+<a href="http://localhost:9292">http://localhost:9292</a>.</p>
+
+<h2>How to Submit</h2>
+
+<p>So you&#39;ve developed a lexer (or fixed an existing one)—that&#39;s great! The basic
+workflow for a lexer to be submitted is:</p>
+
+<ol>
+<li>you make a pull request;</li>
+<li>a maintainer reviews the lexer;</li>
+<li>the maintainer suggests any changes that need to be made;</li>
+<li>you make the necessary changes;</li>
+<li>the maintainer accepts the request and merges in the code; and</li>
+<li>the lexer is included in a future release of the Rouge gem.</li>
+</ol>
+
+<p>Now you&#39;re on your way to fame and glory! (Maybe.)</p>
+
+<p>If you haven&#39;t submitted a pull request before, GitHub has <a href="https://help.github.com/en/articles/about-pull-requests">excellent
+documentation</a> that will help you get accustomed to the workflow.</p>
+
+<p>We&#39;re looking forward to seeing your code!</p>
+
+<p>You can learn a lot by reading through some of the existing lexers. A good
+example that&#39;s not too long is <a href="https://github.com/rouge-ruby/rouge/blob/master/lib/rouge/lexers/json.rb">the JSON lexer</a>.</p>
+</div></div>
+
+      <div id="footer">
+  Generated on Mon Jul 22 08:49:54 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.20 (ruby-2.6.3).
+</div>
+
+    </div>
+  </body>
+</html>

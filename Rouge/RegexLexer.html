@@ -1,0 +1,2098 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Rouge::RegexLexer
+  
+    &mdash; Documentation by YARD 0.9.20
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Rouge::RegexLexer";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (R)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Rouge.html" title="Rouge (module)">Rouge</a></span></span>
+     &raquo; 
+    <span class="title">RegexLexer</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Rouge::RegexLexer
+  <span class="abstract note title">Abstract</span>
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="Lexer.html" title="Rouge::Lexer (class)">Lexer</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="Lexer.html" title="Rouge::Lexer (class)">Lexer</a></span></li>
+          
+            <li class="next">Rouge::RegexLexer</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/rouge/regex_lexer.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <div class="note abstract">
+  <strong>This class is abstract.</strong>
+  <div class='inline'></div>
+</div>
+<p>A stateful lexer that uses sets of regular expressions to
+tokenize a string.  Most lexers are instances of RegexLexer.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="Lexers/ABAP.html" title="Rouge::Lexers::ABAP (class)">Lexers::ABAP</a></span>, <span class='object_link'><a href="Lexers/Actionscript.html" title="Rouge::Lexers::Actionscript (class)">Lexers::Actionscript</a></span>, <span class='object_link'><a href="Lexers/Apache.html" title="Rouge::Lexers::Apache (class)">Lexers::Apache</a></span>, <span class='object_link'><a href="Lexers/AppleScript.html" title="Rouge::Lexers::AppleScript (class)">Lexers::AppleScript</a></span>, <span class='object_link'><a href="Lexers/Awk.html" title="Rouge::Lexers::Awk (class)">Lexers::Awk</a></span>, <span class='object_link'><a href="Lexers/BPF.html" title="Rouge::Lexers::BPF (class)">Lexers::BPF</a></span>, <span class='object_link'><a href="Lexers/Brainfuck.html" title="Rouge::Lexers::Brainfuck (class)">Lexers::Brainfuck</a></span>, <span class='object_link'><a href="Lexers/Bsl.html" title="Rouge::Lexers::Bsl (class)">Lexers::Bsl</a></span>, <span class='object_link'><a href="Lexers/C.html" title="Rouge::Lexers::C (class)">Lexers::C</a></span>, <span class='object_link'><a href="Lexers/CMake.html" title="Rouge::Lexers::CMake (class)">Lexers::CMake</a></span>, <span class='object_link'><a href="Lexers/CSS.html" title="Rouge::Lexers::CSS (class)">Lexers::CSS</a></span>, <span class='object_link'><a href="Lexers/CSharp.html" title="Rouge::Lexers::CSharp (class)">Lexers::CSharp</a></span>, <span class='object_link'><a href="Lexers/Ceylon.html" title="Rouge::Lexers::Ceylon (class)">Lexers::Ceylon</a></span>, <span class='object_link'><a href="Lexers/Cfscript.html" title="Rouge::Lexers::Cfscript (class)">Lexers::Cfscript</a></span>, <span class='object_link'><a href="Lexers/Clojure.html" title="Rouge::Lexers::Clojure (class)">Lexers::Clojure</a></span>, <span class='object_link'><a href="Lexers/Coffeescript.html" title="Rouge::Lexers::Coffeescript (class)">Lexers::Coffeescript</a></span>, <span class='object_link'><a href="Lexers/CommonLisp.html" title="Rouge::Lexers::CommonLisp (class)">Lexers::CommonLisp</a></span>, <span class='object_link'><a href="Lexers/Conf.html" title="Rouge::Lexers::Conf (class)">Lexers::Conf</a></span>, <span class='object_link'><a href="Lexers/Coq.html" title="Rouge::Lexers::Coq (class)">Lexers::Coq</a></span>, <span class='object_link'><a href="Lexers/Crystal.html" title="Rouge::Lexers::Crystal (class)">Lexers::Crystal</a></span>, <span class='object_link'><a href="Lexers/D.html" title="Rouge::Lexers::D (class)">Lexers::D</a></span>, <span class='object_link'><a href="Lexers/Dart.html" title="Rouge::Lexers::Dart (class)">Lexers::Dart</a></span>, <span class='object_link'><a href="Lexers/Diff.html" title="Rouge::Lexers::Diff (class)">Lexers::Diff</a></span>, <span class='object_link'><a href="Lexers/Docker.html" title="Rouge::Lexers::Docker (class)">Lexers::Docker</a></span>, <span class='object_link'><a href="Lexers/Dot.html" title="Rouge::Lexers::Dot (class)">Lexers::Dot</a></span>, <span class='object_link'><a href="Lexers/Eiffel.html" title="Rouge::Lexers::Eiffel (class)">Lexers::Eiffel</a></span>, <span class='object_link'><a href="Lexers/Elixir.html" title="Rouge::Lexers::Elixir (class)">Lexers::Elixir</a></span>, <span class='object_link'><a href="Lexers/Elm.html" title="Rouge::Lexers::Elm (class)">Lexers::Elm</a></span>, <span class='object_link'><a href="Lexers/Erlang.html" title="Rouge::Lexers::Erlang (class)">Lexers::Erlang</a></span>, <span class='object_link'><a href="Lexers/FSharp.html" title="Rouge::Lexers::FSharp (class)">Lexers::FSharp</a></span>, <span class='object_link'><a href="Lexers/Factor.html" title="Rouge::Lexers::Factor (class)">Lexers::Factor</a></span>, <span class='object_link'><a href="Lexers/Fortran.html" title="Rouge::Lexers::Fortran (class)">Lexers::Fortran</a></span>, <span class='object_link'><a href="Lexers/Gherkin.html" title="Rouge::Lexers::Gherkin (class)">Lexers::Gherkin</a></span>, <span class='object_link'><a href="Lexers/Go.html" title="Rouge::Lexers::Go (class)">Lexers::Go</a></span>, <span class='object_link'><a href="Lexers/GraphQL.html" title="Rouge::Lexers::GraphQL (class)">Lexers::GraphQL</a></span>, <span class='object_link'><a href="Lexers/Groovy.html" title="Rouge::Lexers::Groovy (class)">Lexers::Groovy</a></span>, <span class='object_link'><a href="Lexers/HTML.html" title="Rouge::Lexers::HTML (class)">Lexers::HTML</a></span>, <span class='object_link'><a href="Lexers/HTTP.html" title="Rouge::Lexers::HTTP (class)">Lexers::HTTP</a></span>, <span class='object_link'><a href="Lexers/Haml.html" title="Rouge::Lexers::Haml (class)">Lexers::Haml</a></span>, <span class='object_link'><a href="Lexers/Haskell.html" title="Rouge::Lexers::Haskell (class)">Lexers::Haskell</a></span>, <span class='object_link'><a href="Lexers/Hcl.html" title="Rouge::Lexers::Hcl (class)">Lexers::Hcl</a></span>, <span class='object_link'><a href="Lexers/HyLang.html" title="Rouge::Lexers::HyLang (class)">Lexers::HyLang</a></span>, <span class='object_link'><a href="Lexers/IDLang.html" title="Rouge::Lexers::IDLang (class)">Lexers::IDLang</a></span>, <span class='object_link'><a href="Lexers/INI.html" title="Rouge::Lexers::INI (class)">Lexers::INI</a></span>, <span class='object_link'><a href="Lexers/IO.html" title="Rouge::Lexers::IO (class)">Lexers::IO</a></span>, <span class='object_link'><a href="Lexers/IgorPro.html" title="Rouge::Lexers::IgorPro (class)">Lexers::IgorPro</a></span>, <span class='object_link'><a href="Lexers/JSON.html" title="Rouge::Lexers::JSON (class)">Lexers::JSON</a></span>, <span class='object_link'><a href="Lexers/Java.html" title="Rouge::Lexers::Java (class)">Lexers::Java</a></span>, <span class='object_link'><a href="Lexers/Javascript.html" title="Rouge::Lexers::Javascript (class)">Lexers::Javascript</a></span>, <span class='object_link'><a href="Lexers/Jsonnet.html" title="Rouge::Lexers::Jsonnet (class)">Lexers::Jsonnet</a></span>, <span class='object_link'><a href="Lexers/Julia.html" title="Rouge::Lexers::Julia (class)">Lexers::Julia</a></span>, <span class='object_link'><a href="Lexers/Kotlin.html" title="Rouge::Lexers::Kotlin (class)">Lexers::Kotlin</a></span>, <span class='object_link'><a href="Lexers/LLVM.html" title="Rouge::Lexers::LLVM (class)">Lexers::LLVM</a></span>, <span class='object_link'><a href="Lexers/Liquid.html" title="Rouge::Lexers::Liquid (class)">Lexers::Liquid</a></span>, <span class='object_link'><a href="Lexers/LiterateCoffeescript.html" title="Rouge::Lexers::LiterateCoffeescript (class)">Lexers::LiterateCoffeescript</a></span>, <span class='object_link'><a href="Lexers/LiterateHaskell.html" title="Rouge::Lexers::LiterateHaskell (class)">Lexers::LiterateHaskell</a></span>, <span class='object_link'><a href="Lexers/Lua.html" title="Rouge::Lexers::Lua (class)">Lexers::Lua</a></span>, <span class='object_link'><a href="Lexers/M68k.html" title="Rouge::Lexers::M68k (class)">Lexers::M68k</a></span>, <span class='object_link'><a href="Lexers/MXML.html" title="Rouge::Lexers::MXML (class)">Lexers::MXML</a></span>, <span class='object_link'><a href="Lexers/Magik.html" title="Rouge::Lexers::Magik (class)">Lexers::Magik</a></span>, <span class='object_link'><a href="Lexers/Make.html" title="Rouge::Lexers::Make (class)">Lexers::Make</a></span>, <span class='object_link'><a href="Lexers/Markdown.html" title="Rouge::Lexers::Markdown (class)">Lexers::Markdown</a></span>, <span class='object_link'><a href="Lexers/Mathematica.html" title="Rouge::Lexers::Mathematica (class)">Lexers::Mathematica</a></span>, <span class='object_link'><a href="Lexers/Matlab.html" title="Rouge::Lexers::Matlab (class)">Lexers::Matlab</a></span>, <span class='object_link'><a href="Lexers/Moonscript.html" title="Rouge::Lexers::Moonscript (class)">Lexers::Moonscript</a></span>, <span class='object_link'><a href="Lexers/Mosel.html" title="Rouge::Lexers::Mosel (class)">Lexers::Mosel</a></span>, <span class='object_link'><a href="Lexers/Nasm.html" title="Rouge::Lexers::Nasm (class)">Lexers::Nasm</a></span>, <span class='object_link'><a href="Lexers/Nginx.html" title="Rouge::Lexers::Nginx (class)">Lexers::Nginx</a></span>, <span class='object_link'><a href="Lexers/Nim.html" title="Rouge::Lexers::Nim (class)">Lexers::Nim</a></span>, <span class='object_link'><a href="Lexers/Nix.html" title="Rouge::Lexers::Nix (class)">Lexers::Nix</a></span>, <span class='object_link'><a href="Lexers/OCaml.html" title="Rouge::Lexers::OCaml (class)">Lexers::OCaml</a></span>, <span class='object_link'><a href="Lexers/OpenEdge.html" title="Rouge::Lexers::OpenEdge (class)">Lexers::OpenEdge</a></span>, <span class='object_link'><a href="Lexers/Pascal.html" title="Rouge::Lexers::Pascal (class)">Lexers::Pascal</a></span>, <span class='object_link'><a href="Lexers/Perl.html" title="Rouge::Lexers::Perl (class)">Lexers::Perl</a></span>, <span class='object_link'><a href="Lexers/Plist.html" title="Rouge::Lexers::Plist (class)">Lexers::Plist</a></span>, <span class='object_link'><a href="Lexers/Pony.html" title="Rouge::Lexers::Pony (class)">Lexers::Pony</a></span>, <span class='object_link'><a href="Lexers/Powershell.html" title="Rouge::Lexers::Powershell (class)">Lexers::Powershell</a></span>, <span class='object_link'><a href="Lexers/Praat.html" title="Rouge::Lexers::Praat (class)">Lexers::Praat</a></span>, <span class='object_link'><a href="Lexers/Prolog.html" title="Rouge::Lexers::Prolog (class)">Lexers::Prolog</a></span>, <span class='object_link'><a href="Lexers/Prometheus.html" title="Rouge::Lexers::Prometheus (class)">Lexers::Prometheus</a></span>, <span class='object_link'><a href="Lexers/Properties.html" title="Rouge::Lexers::Properties (class)">Lexers::Properties</a></span>, <span class='object_link'><a href="Lexers/Protobuf.html" title="Rouge::Lexers::Protobuf (class)">Lexers::Protobuf</a></span>, <span class='object_link'><a href="Lexers/Puppet.html" title="Rouge::Lexers::Puppet (class)">Lexers::Puppet</a></span>, <span class='object_link'><a href="Lexers/Python.html" title="Rouge::Lexers::Python (class)">Lexers::Python</a></span>, <span class='object_link'><a href="Lexers/Q.html" title="Rouge::Lexers::Q (class)">Lexers::Q</a></span>, <span class='object_link'><a href="Lexers/R.html" title="Rouge::Lexers::R (class)">Lexers::R</a></span>, <span class='object_link'><a href="Lexers/Racket.html" title="Rouge::Lexers::Racket (class)">Lexers::Racket</a></span>, <span class='object_link'><a href="Lexers/Ruby.html" title="Rouge::Lexers::Ruby (class)">Lexers::Ruby</a></span>, <span class='object_link'><a href="Lexers/Rust.html" title="Rouge::Lexers::Rust (class)">Lexers::Rust</a></span>, <span class='object_link'><a href="Lexers/SML.html" title="Rouge::Lexers::SML (class)">Lexers::SML</a></span>, <span class='object_link'><a href="Lexers/SQF.html" title="Rouge::Lexers::SQF (class)">Lexers::SQF</a></span>, <span class='object_link'><a href="Lexers/SQL.html" title="Rouge::Lexers::SQL (class)">Lexers::SQL</a></span>, <span class='object_link'><a href="Lexers/SassCommon.html" title="Rouge::Lexers::SassCommon (class)">Lexers::SassCommon</a></span>, <span class='object_link'><a href="Lexers/Scala.html" title="Rouge::Lexers::Scala (class)">Lexers::Scala</a></span>, <span class='object_link'><a href="Lexers/Scheme.html" title="Rouge::Lexers::Scheme (class)">Lexers::Scheme</a></span>, <span class='object_link'><a href="Lexers/Sed.html" title="Rouge::Lexers::Sed (class)">Lexers::Sed</a></span>, <span class='object_link'><a href="Lexers/Sed/Regex.html" title="Rouge::Lexers::Sed::Regex (class)">Lexers::Sed::Regex</a></span>, <span class='object_link'><a href="Lexers/Sed/Replacement.html" title="Rouge::Lexers::Sed::Replacement (class)">Lexers::Sed::Replacement</a></span>, <span class='object_link'><a href="Lexers/Shell.html" title="Rouge::Lexers::Shell (class)">Lexers::Shell</a></span>, <span class='object_link'><a href="Lexers/Sieve.html" title="Rouge::Lexers::Sieve (class)">Lexers::Sieve</a></span>, <span class='object_link'><a href="Lexers/Slim.html" title="Rouge::Lexers::Slim (class)">Lexers::Slim</a></span>, <span class='object_link'><a href="Lexers/Smalltalk.html" title="Rouge::Lexers::Smalltalk (class)">Lexers::Smalltalk</a></span>, <span class='object_link'><a href="Lexers/SuperCollider.html" title="Rouge::Lexers::SuperCollider (class)">Lexers::SuperCollider</a></span>, <span class='object_link'><a href="Lexers/Swift.html" title="Rouge::Lexers::Swift (class)">Lexers::Swift</a></span>, <span class='object_link'><a href="Lexers/TCL.html" title="Rouge::Lexers::TCL (class)">Lexers::TCL</a></span>, <span class='object_link'><a href="Lexers/TOML.html" title="Rouge::Lexers::TOML (class)">Lexers::TOML</a></span>, <span class='object_link'><a href="Lexers/Tap.html" title="Rouge::Lexers::Tap (class)">Lexers::Tap</a></span>, <span class='object_link'><a href="Lexers/TeX.html" title="Rouge::Lexers::TeX (class)">Lexers::TeX</a></span>, <span class='object_link'><a href="Lexers/Tulip.html" title="Rouge::Lexers::Tulip (class)">Lexers::Tulip</a></span>, <span class='object_link'><a href="Lexers/Turtle.html" title="Rouge::Lexers::Turtle (class)">Lexers::Turtle</a></span>, <span class='object_link'><a href="Lexers/VHDL.html" title="Rouge::Lexers::VHDL (class)">Lexers::VHDL</a></span>, <span class='object_link'><a href="Lexers/Vala.html" title="Rouge::Lexers::Vala (class)">Lexers::Vala</a></span>, <span class='object_link'><a href="Lexers/Verilog.html" title="Rouge::Lexers::Verilog (class)">Lexers::Verilog</a></span>, <span class='object_link'><a href="Lexers/VimL.html" title="Rouge::Lexers::VimL (class)">Lexers::VimL</a></span>, <span class='object_link'><a href="Lexers/VisualBasic.html" title="Rouge::Lexers::VisualBasic (class)">Lexers::VisualBasic</a></span>, <span class='object_link'><a href="Lexers/Wollok.html" title="Rouge::Lexers::Wollok (class)">Lexers::Wollok</a></span>, <span class='object_link'><a href="Lexers/XML.html" title="Rouge::Lexers::XML (class)">Lexers::XML</a></span>, <span class='object_link'><a href="Lexers/XPath.html" title="Rouge::Lexers::XPath (class)">Lexers::XPath</a></span>, <span class='object_link'><a href="Lexers/Xojo.html" title="Rouge::Lexers::Xojo (class)">Lexers::Xojo</a></span>, <span class='object_link'><a href="Lexers/YAML.html" title="Rouge::Lexers::YAML (class)">Lexers::YAML</a></span>, <span class='object_link'><a href="TemplateLexer.html" title="Rouge::TemplateLexer (class)">TemplateLexer</a></span></p>
+</div>
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="RegexLexer/Rule.html" title="Rouge::RegexLexer::Rule (class)">Rule</a></span>, <span class='object_link'><a href="RegexLexer/State.html" title="Rouge::RegexLexer::State (class)">State</a></span>, <span class='object_link'><a href="RegexLexer/StateDSL.html" title="Rouge::RegexLexer::StateDSL (class)">StateDSL</a></span>
+    
+  
+</p>
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="MAX_NULL_SCANS-constant" class="">MAX_NULL_SCANS =
+          <div class="docstring">
+  <div class="discussion">
+    <p>The number of successive scans permitted without consuming
+the input stream.  If this is exceeded, the match fails.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>5</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+  
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="Token/Tokens.html" title="Rouge::Token::Tokens (module)">Token::Tokens</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Token/Tokens.html#Num-constant" title="Rouge::Token::Tokens::Num (constant)">Token::Tokens::Num</a></span>, <span class='object_link'><a href="Token/Tokens.html#Str-constant" title="Rouge::Token::Tokens::Str (constant)">Token::Tokens::Str</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="Lexer.html" title="Rouge::Lexer (class)">Lexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Lexer.html#options-instance_method" title="Rouge::Lexer#options (method)">#options</a></span></p>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#append-class_method" title="append (class method)">.<strong>append</strong>(name, &amp;b)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#prepend-class_method" title="prepend (class method)">.<strong>prepend</strong>(name, &amp;b)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#replace_state-class_method" title="replace_state (class method)">.<strong>replace_state</strong>(name, new_defn)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start-class_method" title="start (class method)">.<strong>start</strong>(&amp;b)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Specify an action to be run every fresh lex.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start_procs-class_method" title="start_procs (class method)">.<strong>start_procs</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The routines to run at the beginning of a fresh lex.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#state-class_method" title="state (class method)">.<strong>state</strong>(name, &amp;b)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Define a new state for this lexer with the given name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#state_definitions-class_method" title="state_definitions (class method)">.<strong>state_definitions</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#states-class_method" title="states (class method)">.<strong>states</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The states hash for this lexer.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delegate-instance_method" title="#delegate (instance method)">#<strong>delegate</strong>(lexer, text = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Delegate the lex to another lexer.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#goto-instance_method" title="#goto (instance method)">#<strong>goto</strong>(state_name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>replace the head of the stack with the given state.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#group-instance_method" title="#group (instance method)">#<strong>group</strong>(tok)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#groups-instance_method" title="#groups (instance method)">#<strong>groups</strong>(*tokens)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Yield tokens corresponding to the matched groups of the current match.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#in_state%3F-instance_method" title="#in_state? (instance method)">#<strong>in_state?</strong>(state_name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Check if <code>state_name</code> is in the state stack.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pop!-instance_method" title="#pop! (instance method)">#<strong>pop!</strong>(times = 1)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Pop the state stack.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#push-instance_method" title="#push (instance method)">#<strong>push</strong>(state_name = nil, &amp;b)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Push a state onto the stack.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#recurse-instance_method" title="#recurse (instance method)">#<strong>recurse</strong>(text = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reset!-instance_method" title="#reset! (instance method)">#<strong>reset!</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>reset this lexer to its initial state.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reset_stack-instance_method" title="#reset_stack (instance method)">#<strong>reset_stack</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>reset the stack back to <code>[:root]</code>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stack-instance_method" title="#stack (instance method)">#<strong>stack</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The state stack.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#state-instance_method" title="#state (instance method)">#<strong>state</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The current state - i.e.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#state%3F-instance_method" title="#state? (instance method)">#<strong>state?</strong>(state_name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Check if <code>state_name</code> is the state on top of the state stack.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#step-instance_method" title="#step (instance method)">#<strong>step</strong>(state, stream)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Runs one step of the lex.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stream_tokens-instance_method" title="#stream_tokens (instance method)">#<strong>stream_tokens</strong>(str, &amp;b)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>This implements the lexer protocol, by yielding [token, value] pairs.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#token-instance_method" title="#token (instance method)">#<strong>token</strong>(tok, val = @current_stream[0])  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Yield a token.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Lexer.html" title="Rouge::Lexer (class)">Lexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Lexer.html#aliases-class_method" title="Rouge::Lexer.aliases (method)">aliases</a></span>, <span class='object_link'><a href="Lexer.html#all-class_method" title="Rouge::Lexer.all (method)">all</a></span>, <span class='object_link'><a href="Lexer.html#as_bool-instance_method" title="Rouge::Lexer#as_bool (method)">#as_bool</a></span>, <span class='object_link'><a href="Lexer.html#as_lexer-instance_method" title="Rouge::Lexer#as_lexer (method)">#as_lexer</a></span>, <span class='object_link'><a href="Lexer.html#as_list-instance_method" title="Rouge::Lexer#as_list (method)">#as_list</a></span>, <span class='object_link'><a href="Lexer.html#as_string-instance_method" title="Rouge::Lexer#as_string (method)">#as_string</a></span>, <span class='object_link'><a href="Lexer.html#as_token-instance_method" title="Rouge::Lexer#as_token (method)">#as_token</a></span>, <span class='object_link'><a href="Lexer.html#bool_option-instance_method" title="Rouge::Lexer#bool_option (method)">#bool_option</a></span>, <span class='object_link'><a href="Lexer.html#continue_lex-class_method" title="Rouge::Lexer.continue_lex (method)">continue_lex</a></span>, <span class='object_link'><a href="Lexer.html#continue_lex-instance_method" title="Rouge::Lexer#continue_lex (method)">#continue_lex</a></span>, <span class='object_link'><a href="Lexer.html#debug_enabled%3F-class_method" title="Rouge::Lexer.debug_enabled? (method)">debug_enabled?</a></span>, <span class='object_link'><a href="Lexer.html#demo-class_method" title="Rouge::Lexer.demo (method)">demo</a></span>, <span class='object_link'><a href="Lexer.html#demo_file-class_method" title="Rouge::Lexer.demo_file (method)">demo_file</a></span>, <span class='object_link'><a href="Lexer.html#desc-class_method" title="Rouge::Lexer.desc (method)">desc</a></span>, <span class='object_link'><a href="Lexer.html#detect%3F-class_method" title="Rouge::Lexer.detect? (method)">detect?</a></span>, <span class='object_link'><a href="Lexer.html#detectable%3F-class_method" title="Rouge::Lexer.detectable? (method)">detectable?</a></span>, <span class='object_link'><a href="Lexer.html#disable_debug!-class_method" title="Rouge::Lexer.disable_debug! (method)">disable_debug!</a></span>, <span class='object_link'><a href="Lexer.html#enable_debug!-class_method" title="Rouge::Lexer.enable_debug! (method)">enable_debug!</a></span>, <span class='object_link'><a href="Lexer.html#filenames-class_method" title="Rouge::Lexer.filenames (method)">filenames</a></span>, <span class='object_link'><a href="Lexer.html#find-class_method" title="Rouge::Lexer.find (method)">find</a></span>, <span class='object_link'><a href="Lexer.html#find_fancy-class_method" title="Rouge::Lexer.find_fancy (method)">find_fancy</a></span>, <span class='object_link'><a href="Lexer.html#guess-class_method" title="Rouge::Lexer.guess (method)">guess</a></span>, <span class='object_link'><a href="Lexer.html#guess_by_filename-class_method" title="Rouge::Lexer.guess_by_filename (method)">guess_by_filename</a></span>, <span class='object_link'><a href="Lexer.html#guess_by_mimetype-class_method" title="Rouge::Lexer.guess_by_mimetype (method)">guess_by_mimetype</a></span>, <span class='object_link'><a href="Lexer.html#guess_by_source-class_method" title="Rouge::Lexer.guess_by_source (method)">guess_by_source</a></span>, <span class='object_link'><a href="Lexer.html#guesses-class_method" title="Rouge::Lexer.guesses (method)">guesses</a></span>, <span class='object_link'><a href="Lexer.html#hash_option-instance_method" title="Rouge::Lexer#hash_option (method)">#hash_option</a></span>, <span class='object_link'><a href="Lexer.html#initialize-instance_method" title="Rouge::Lexer#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="Lexer.html#lex-class_method" title="Rouge::Lexer.lex (method)">lex</a></span>, <span class='object_link'><a href="Lexer.html#lex-instance_method" title="Rouge::Lexer#lex (method)">#lex</a></span>, <span class='object_link'><a href="Lexer.html#lexer_option-instance_method" title="Rouge::Lexer#lexer_option (method)">#lexer_option</a></span>, <span class='object_link'><a href="Lexer.html#list_option-instance_method" title="Rouge::Lexer#list_option (method)">#list_option</a></span>, <span class='object_link'><a href="Lexer.html#mimetypes-class_method" title="Rouge::Lexer.mimetypes (method)">mimetypes</a></span>, <span class='object_link'><a href="Lexer.html#option-class_method" title="Rouge::Lexer.option (method)">option</a></span>, <span class='object_link'><a href="Lexer.html#option_docs-class_method" title="Rouge::Lexer.option_docs (method)">option_docs</a></span>, <span class='object_link'><a href="Lexer.html#string_option-instance_method" title="Rouge::Lexer#string_option (method)">#string_option</a></span>, <span class='object_link'><a href="Lexer.html#tag-class_method" title="Rouge::Lexer.tag (method)">tag</a></span>, <span class='object_link'><a href="Lexer.html#tag-instance_method" title="Rouge::Lexer#tag (method)">#tag</a></span>, <span class='object_link'><a href="Lexer.html#title-class_method" title="Rouge::Lexer.title (method)">title</a></span>, <span class='object_link'><a href="Lexer.html#token_option-instance_method" title="Rouge::Lexer#token_option (method)">#token_option</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Token/Tokens.html" title="Rouge::Token::Tokens (module)">Token::Tokens</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Token/Tokens.html#token-class_method" title="Rouge::Token::Tokens.token (method)">token</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="Lexer.html#initialize-instance_method" title="Rouge::Lexer#initialize (method)">Rouge::Lexer</a></span></p>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="append-class_method">
+  
+    .<strong>append</strong>(name, &amp;b)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+196
+197
+198
+199
+200</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 196</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_append'>append</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
+  <span class='id identifier rubyid_dsl'>dsl</span> <span class='op'>=</span> <span class='id identifier rubyid_state_definitions'>state_definitions</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='kw'>or</span> <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no such state </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_replace_state'>replace_state</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_dsl'>dsl</span><span class='period'>.</span><span class='id identifier rubyid_appended'>appended</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="prepend-class_method">
+  
+    .<strong>prepend</strong>(name, &amp;b)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+190
+191
+192
+193
+194</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 190</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_prepend'>prepend</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
+  <span class='id identifier rubyid_dsl'>dsl</span> <span class='op'>=</span> <span class='id identifier rubyid_state_definitions'>state_definitions</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='kw'>or</span> <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no such state </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_replace_state'>replace_state</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_dsl'>dsl</span><span class='period'>.</span><span class='id identifier rubyid_prepended'>prepended</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="replace_state-class_method">
+  
+    .<strong>replace_state</strong>(name, new_defn)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+163
+164
+165
+166</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 163</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_replace_state'>replace_state</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_new_defn'>new_defn</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_states'>states</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='id identifier rubyid_state_definitions'>state_definitions</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_new_defn'>new_defn</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start-class_method">
+  
+    .<strong>start</strong>(&amp;b)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Specify an action to be run every fresh lex.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_start'>start</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>I&#39;m lexing a new string!</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span></code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+179
+180
+181</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 179</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_start_procs'>start_procs</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_b'>b</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start_procs-class_method">
+  
+    .<strong>start_procs</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The routines to run at the beginning of a fresh lex.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#start-class_method" title="Rouge::RegexLexer.start (method)">start</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+170
+171
+172</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 170</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_start_procs'>start_procs</span>
+  <span class='ivar'>@start_procs</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="InheritableList.html" title="Rouge::InheritableList (class)">InheritableList</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="InheritableList.html#initialize-instance_method" title="Rouge::InheritableList#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_superclass'>superclass</span><span class='period'>.</span><span class='id identifier rubyid_start_procs'>start_procs</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="state-class_method">
+  
+    .<strong>state</strong>(name, &amp;b)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Define a new state for this lexer with the given name.
+The block will be evaluated in the context of a <span class='object_link'><a href="RegexLexer/StateDSL.html" title="Rouge::RegexLexer::StateDSL (class)">StateDSL</a></span>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+185
+186
+187
+188</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 185</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_state'>state</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
+  <span class='id identifier rubyid_state_definitions'>state_definitions</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="RegexLexer/StateDSL.html" title="Rouge::RegexLexer::StateDSL (class)">StateDSL</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="RegexLexer/StateDSL.html#initialize-instance_method" title="Rouge::RegexLexer::StateDSL#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="state_definitions-class_method">
+  
+    .<strong>state_definitions</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+158
+159
+160</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 158</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_state_definitions'>state_definitions</span>
+  <span class='ivar'>@state_definitions</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="InheritableHash.html" title="Rouge::InheritableHash (class)">InheritableHash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="InheritableHash.html#initialize-instance_method" title="Rouge::InheritableHash#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_superclass'>superclass</span><span class='period'>.</span><span class='id identifier rubyid_state_definitions'>state_definitions</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="states-class_method">
+  
+    .<strong>states</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The states hash for this lexer.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#state-class_method" title="Rouge::RegexLexer.state (method)">state</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+154
+155
+156</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 154</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_states'>states</span>
+  <span class='ivar'>@states</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="delegate-instance_method">
+  
+    #<strong>delegate</strong>(lexer, text = nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Delegate the lex to another lexer. We use the <code>continue_lex</code> method
+so that #reset! will not be called.  In this way, a single lexer
+can be repeatedly delegated to while maintaining its own internal
+state stack.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>lexer</span>
+      
+      
+        <span class='type'>(<tt>#<span class='object_link'><a href="Lexer.html#lex-class_method" title="Rouge::Lexer.lex (method)">lex</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The lexer or lexer class to delegate to</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>text</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The text to delegate.  This defaults to the last matched string.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+365
+366
+367
+368
+369
+370
+371
+372
+373</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 365</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delegate'>delegate</span><span class='lparen'>(</span><span class='id identifier rubyid_lexer'>lexer</span><span class='comma'>,</span> <span class='id identifier rubyid_text'>text</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    delegating to: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_lexer'>lexer</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@debug</span>
+  <span class='id identifier rubyid_text'>text</span> <span class='op'>||=</span> <span class='ivar'>@current_stream</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_lexer'>lexer</span><span class='period'>.</span><span class='id identifier rubyid_continue_lex'>continue_lex</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='op'>|</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    delegated token: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tok'>tok</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@debug</span>
+    <span class='id identifier rubyid_yield_token'>yield_token</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="goto-instance_method">
+  
+    #<strong>goto</strong>(state_name)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>replace the head of the stack with the given state</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+409
+410
+411
+412
+413
+414</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 409</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_goto'>goto</span><span class='lparen'>(</span><span class='id identifier rubyid_state_name'>state_name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>empty stack!</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_stack'>stack</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    going to: state :</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_state_name'>state_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@debug</span>
+  <span class='id identifier rubyid_stack'>stack</span><span class='lbracket'>[</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_get_state'>get_state</span><span class='lparen'>(</span><span class='id identifier rubyid_state_name'>state_name</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="group-instance_method">
+  
+    #<strong>group</strong>(tok)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'></div></div>
+<p>Yield a token with the next matched group.  Subsequent calls
+to this method will yield subsequent groups.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+344
+345
+346</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 344</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_group'>group</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RegexLexer#group is deprecated: use #groups instead</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="groups-instance_method">
+  
+    #<strong>groups</strong>(*tokens)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Yield tokens corresponding to the matched groups of the current
+match.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+350
+351
+352
+353
+354</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 350</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_groups'>groups</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_tokens'>tokens</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_tokens'>tokens</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+    <span class='id identifier rubyid_yield_token'>yield_token</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='ivar'>@current_stream</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='op'>+</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="in_state?-instance_method">
+  
+    #<strong>in_state?</strong>(state_name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Check if <code>state_name</code> is in the state stack.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+424
+425
+426
+427
+428
+429</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 424</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_in_state?'>in_state?</span><span class='lparen'>(</span><span class='id identifier rubyid_state_name'>state_name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_state_name'>state_name</span> <span class='op'>=</span> <span class='id identifier rubyid_state_name'>state_name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
+  <span class='id identifier rubyid_stack'>stack</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_state'>state</span><span class='op'>|</span>
+    <span class='id identifier rubyid_state'>state</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>==</span> <span class='id identifier rubyid_state_name'>state_name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pop!-instance_method">
+  
+    #<strong>pop!</strong>(times = 1)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Pop the state stack.  If a number is passed in, it will be popped
+that number of times.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+398
+399
+400
+401
+402
+403
+404
+405
+406</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 398</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pop!'>pop!</span><span class='lparen'>(</span><span class='id identifier rubyid_times'>times</span><span class='op'>=</span><span class='int'>1</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>empty stack!</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_stack'>stack</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    popping stack: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_times'>times</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@debug</span>
+
+  <span class='id identifier rubyid_stack'>stack</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span><span class='lparen'>(</span><span class='id identifier rubyid_times'>times</span><span class='rparen'>)</span>
+
+  <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="push-instance_method">
+  
+    #<strong>push</strong>(state_name = nil, &amp;b)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Push a state onto the stack.  If no state name is given and you&#39;ve
+passed a block, a state will be dynamically created using the
+<span class='object_link'><a href="RegexLexer/StateDSL.html" title="Rouge::RegexLexer::StateDSL (class)">StateDSL</a></span>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 382</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_state_name'>state_name</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_push_state'>push_state</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_state_name'>state_name</span>
+    <span class='id identifier rubyid_get_state'>get_state</span><span class='lparen'>(</span><span class='id identifier rubyid_state_name'>state_name</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+    <span class='const'><span class='object_link'><a href="RegexLexer/StateDSL.html" title="Rouge::RegexLexer::StateDSL (class)">StateDSL</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="RegexLexer/StateDSL.html#initialize-instance_method" title="Rouge::RegexLexer::StateDSL#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_b'>b</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_state'><span class='object_link'><a href="RegexLexer/StateDSL.html#to_state-instance_method" title="Rouge::RegexLexer::StateDSL#to_state (method)">to_state</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='comment'># use the top of the stack by default
+</span>    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_state'>state</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    pushing: :</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_push_state'>push_state</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@debug</span>
+  <span class='id identifier rubyid_stack'>stack</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_push_state'>push_state</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="recurse-instance_method">
+  
+    #<strong>recurse</strong>(text = nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+375
+376
+377</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 375</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_recurse'>recurse</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_delegate'>delegate</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='comma'>,</span> <span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reset!-instance_method">
+  
+    #<strong>reset!</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>reset this lexer to its initial state.  This runs all of the
+start_procs.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+234
+235
+236
+237
+238
+239
+240
+241
+242</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 234</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reset!'>reset!</span>
+  <span class='ivar'>@stack</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@current_stream</span> <span class='op'>=</span> <span class='kw'>nil</span>
+
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>start blocks</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@debug</span> <span class='op'>&amp;&amp;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_start_procs'>start_procs</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_start_procs'>start_procs</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_pr'>pr</span><span class='op'>|</span>
+    <span class='id identifier rubyid_instance_eval'>instance_eval</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_pr'>pr</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reset_stack-instance_method">
+  
+    #<strong>reset_stack</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>reset the stack back to <code>[:root]</code>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+417
+418
+419
+420
+421</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 417</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reset_stack'>reset_stack</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>    resetting stack</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='ivar'>@debug</span>
+  <span class='id identifier rubyid_stack'>stack</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+  <span class='id identifier rubyid_stack'>stack</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='id identifier rubyid_get_state'>get_state</span><span class='lparen'>(</span><span class='symbol'>:root</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="stack-instance_method">
+  
+    #<strong>stack</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The state stack.  This is initially the single state <code>[:root]</code>.
+It is an error for this stack to be empty.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#state-instance_method" title="Rouge::RegexLexer#state (method)">#state</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+220
+221
+222</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 220</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_stack'>stack</span>
+  <span class='ivar'>@stack</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_get_state'>get_state</span><span class='lparen'>(</span><span class='symbol'>:root</span><span class='rparen'>)</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="state-instance_method">
+  
+    #<strong>state</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The current state - i.e. one on top of the state stack.</p>
+
+<p>NB: if the state stack is empty, this will throw an error rather
+than returning nil.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+228
+229
+230</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 228</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_state'>state</span>
+  <span class='id identifier rubyid_stack'>stack</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span> <span class='kw'>or</span> <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>empty stack!</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="state?-instance_method">
+  
+    #<strong>state?</strong>(state_name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Check if <code>state_name</code> is the state on top of the state stack.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+432
+433
+434</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 432</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_state?'>state?</span><span class='lparen'>(</span><span class='id identifier rubyid_state_name'>state_name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_state_name'>state_name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span> <span class='op'>==</span> <span class='id identifier rubyid_state'>state</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="step-instance_method">
+  
+    #<strong>step</strong>(state, stream)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Runs one step of the lex.  Rules in the current state are tried
+until one matches, at which point its callback is called.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>true if a rule was tried successfully</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 290</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_step'>step</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='comma'>,</span> <span class='id identifier rubyid_stream'>stream</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_state'>state</span><span class='period'>.</span><span class='id identifier rubyid_rules'>rules</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_rule'>rule</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_rule'>rule</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="RegexLexer/State.html" title="Rouge::RegexLexer::State (class)">State</a></span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  entering: mixin :</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_rule'>rule</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@debug</span>
+      <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_step'>step</span><span class='lparen'>(</span><span class='id identifier rubyid_rule'>rule</span><span class='comma'>,</span> <span class='id identifier rubyid_stream'>stream</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  exiting: mixin :</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_rule'>rule</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@debug</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  trying: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_rule'>rule</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@debug</span>
+
+      <span class='comment'># XXX HACK XXX
+</span>      <span class='comment'># StringScanner&#39;s implementation of ^ is b0rken.
+</span>      <span class='comment'># see http://bugs.ruby-lang.org/issues/7092
+</span>      <span class='comment'># TODO: this doesn&#39;t cover cases like /(a|^b)/, but it&#39;s
+</span>      <span class='comment'># the most common, for now...
+</span>      <span class='kw'>next</span> <span class='kw'>if</span> <span class='id identifier rubyid_rule'>rule</span><span class='period'>.</span><span class='id identifier rubyid_beginning_of_line'>beginning_of_line</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_stream'>stream</span><span class='period'>.</span><span class='id identifier rubyid_beginning_of_line?'>beginning_of_line?</span>
+
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_size'>size</span> <span class='op'>=</span> <span class='id identifier rubyid_stream'>stream</span><span class='period'>.</span><span class='id identifier rubyid_skip'>skip</span><span class='lparen'>(</span><span class='id identifier rubyid_rule'>rule</span><span class='period'>.</span><span class='id identifier rubyid_re'>re</span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    got: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_stream'>stream</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@debug</span>
+
+        <span class='id identifier rubyid_instance_exec'>instance_exec</span><span class='lparen'>(</span><span class='id identifier rubyid_stream'>stream</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_rule'>rule</span><span class='period'>.</span><span class='id identifier rubyid_callback'>callback</span><span class='rparen'>)</span>
+
+        <span class='kw'>if</span> <span class='id identifier rubyid_size'>size</span><span class='period'>.</span><span class='id identifier rubyid_zero?'>zero?</span>
+          <span class='ivar'>@null_steps</span> <span class='op'>+=</span> <span class='int'>1</span>
+          <span class='kw'>if</span> <span class='ivar'>@null_steps</span> <span class='op'>&gt;</span> <span class='const'><span class='object_link'><a href="#MAX_NULL_SCANS-constant" title="Rouge::RegexLexer::MAX_NULL_SCANS (constant)">MAX_NULL_SCANS</a></span></span>
+            <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    warning: too many scans without consuming the string!</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@debug</span>
+            <span class='kw'>return</span> <span class='kw'>false</span>
+          <span class='kw'>end</span>
+        <span class='kw'>else</span>
+          <span class='ivar'>@null_steps</span> <span class='op'>=</span> <span class='int'>0</span>
+        <span class='kw'>end</span>
+
+        <span class='kw'>return</span> <span class='kw'>true</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="stream_tokens-instance_method">
+  
+    #<strong>stream_tokens</strong>(str, &amp;b)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>This implements the lexer protocol, by yielding [token, value] pairs.</p>
+
+<p>The process for lexing works as follows, until the stream is empty:</p>
+
+<ol>
+<li>We look at the state on top of the stack (which by default is
+<code>[:root]</code>).</li>
+<li>Each rule in that state is tried until one is successful.  If one
+is found, that rule&#39;s callback is evaluated - which may yield
+tokens and manipulate the state stack.  Otherwise, one character
+is consumed with an <code>&#39;Error&#39;</code> token, and we continue at (1.)</li>
+</ol>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#step-instance_method" title="Rouge::RegexLexer#step (method)">#step (where (2.) is implemented)</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 256</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_stream_tokens'>stream_tokens</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_stream'>stream</span> <span class='op'>=</span> <span class='const'>StringScanner</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@current_stream</span> <span class='op'>=</span> <span class='id identifier rubyid_stream'>stream</span>
+  <span class='ivar'>@output_stream</span>  <span class='op'>=</span> <span class='id identifier rubyid_b'>b</span>
+  <span class='ivar'>@states</span>         <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_states'>states</span>
+  <span class='ivar'>@null_steps</span>     <span class='op'>=</span> <span class='int'>0</span>
+
+  <span class='kw'>until</span> <span class='id identifier rubyid_stream'>stream</span><span class='period'>.</span><span class='id identifier rubyid_eos?'>eos?</span>
+    <span class='kw'>if</span> <span class='ivar'>@debug</span>
+      <span class='id identifier rubyid_puts'>puts</span>
+      <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>lexer: </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_tag'>tag</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+      <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>stack: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_stack'>stack</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_sym</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+      <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>stream: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_stream'>stream</span><span class='period'>.</span><span class='id identifier rubyid_peek'>peek</span><span class='lparen'>(</span><span class='int'>20</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_success'>success</span> <span class='op'>=</span> <span class='id identifier rubyid_step'>step</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='comma'>,</span> <span class='id identifier rubyid_stream'>stream</span><span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_success'>success</span>
+      <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    no match, yielding Error</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@debug</span>
+      <span class='id identifier rubyid_b'>b</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Token.html" title="Rouge::Token (class)">Token</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Token/Tokens.html" title="Rouge::Token::Tokens (module)">Tokens</a></span></span><span class='op'>::</span><span class='const'>Error</span><span class='comma'>,</span> <span class='id identifier rubyid_stream'>stream</span><span class='period'>.</span><span class='id identifier rubyid_getch'>getch</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="token-instance_method">
+  
+    #<strong>token</strong>(tok, val = @current_stream[0])  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Yield a token.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>tok</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the token type</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>val</span>
+      
+      
+        <span class='type'></span>
+      
+      
+        <em class="default">(defaults to: <tt>@current_stream[0]</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>(optional) the string value to yield.  If absent, this defaults
+to the entire last match.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+336
+337
+338</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 336</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_token'>token</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='op'>=</span><span class='ivar'>@current_stream</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_yield_token'>yield_token</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Jul 22 08:49:57 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.20 (ruby-2.6.3).
+</div>
+
+    </div>
+  </body>
+</html>

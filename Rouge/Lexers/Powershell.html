@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Rouge::Lexers::Powershell
+  
+    &mdash; Documentation by YARD 0.9.20
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Rouge::Lexers::Powershell";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (P)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Rouge.html" title="Rouge (module)">Rouge</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Lexers.html" title="Rouge::Lexers (module)">Lexers</a></span></span>
+     &raquo; 
+    <span class="title">Powershell</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Rouge::Lexers::Powershell
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></li>
+          
+            <li class="next">Rouge::Lexers::Powershell</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/rouge/lexers/powershell.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="ATTRIBUTES-constant" class="">ATTRIBUTES =
+          <div class="docstring">
+  <div class="discussion">
+    <p><a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_functions_cmdletbindingattribute?view=powershell-6">https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_functions_cmdletbindingattribute?view=powershell-6</a></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='qwords_beg'>%w(</span><span class='words_sep'>
+  </span><span class='tstring_content'>ConfirmImpact</span><span class='words_sep'> </span><span class='tstring_content'>DefaultParameterSetName</span><span class='words_sep'> </span><span class='tstring_content'>HelpURI</span><span class='words_sep'> </span><span class='tstring_content'>PositionalBinding</span><span class='words_sep'>
+  </span><span class='tstring_content'>SupportsPaging</span><span class='words_sep'> </span><span class='tstring_content'>SupportsShouldProcess</span><span class='words_sep'>
+</span><span class='tstring_end'>)</span></span></pre></dd>
+      
+        <dt id="AUTO_VARS-constant" class="">AUTO_VARS =
+          <div class="docstring">
+  <div class="discussion">
+    <p><a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_automatic_variables?view=powershell-6">https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_automatic_variables?view=powershell-6</a></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='qwords_beg'>%w(</span><span class='words_sep'>
+  </span><span class='tstring_content'>\$\$</span><span class='words_sep'> </span><span class='tstring_content'>\$\?</span><span class='words_sep'> </span><span class='tstring_content'>\$\^</span><span class='words_sep'> </span><span class='tstring_content'>\$_</span><span class='words_sep'>
+  </span><span class='tstring_content'>\$args</span><span class='words_sep'> </span><span class='tstring_content'>\$ConsoleFileName</span><span class='words_sep'> </span><span class='tstring_content'>\$Error</span><span class='words_sep'> </span><span class='tstring_content'>\$Event</span><span class='words_sep'> </span><span class='tstring_content'>\$EventArgs</span><span class='words_sep'> </span><span class='tstring_content'>\$EventSubscriber</span><span class='words_sep'>
+  </span><span class='tstring_content'>\$ExecutionContext</span><span class='words_sep'> </span><span class='tstring_content'>\$false</span><span class='words_sep'> </span><span class='tstring_content'>\$foreach</span><span class='words_sep'> </span><span class='tstring_content'>\$HOME</span><span class='words_sep'> </span><span class='tstring_content'>\$Host</span><span class='words_sep'> </span><span class='tstring_content'>\$input</span><span class='words_sep'> </span><span class='tstring_content'>\$IsCoreCLR</span><span class='words_sep'>
+  </span><span class='tstring_content'>\$IsLinux</span><span class='words_sep'> </span><span class='tstring_content'>\$IsMacOS</span><span class='words_sep'> </span><span class='tstring_content'>\$IsWindows</span><span class='words_sep'> </span><span class='tstring_content'>\$LastExitCode</span><span class='words_sep'> </span><span class='tstring_content'>\$Matches</span><span class='words_sep'> </span><span class='tstring_content'>\$MyInvocation</span><span class='words_sep'>
+  </span><span class='tstring_content'>\$NestedPromptLevel</span><span class='words_sep'> </span><span class='tstring_content'>\$null</span><span class='words_sep'> </span><span class='tstring_content'>\$PID</span><span class='words_sep'> </span><span class='tstring_content'>\$PROFILE</span><span class='words_sep'> </span><span class='tstring_content'>\$PSBoundParameters</span><span class='words_sep'> </span><span class='tstring_content'>\$PSCmdlet</span><span class='words_sep'>
+  </span><span class='tstring_content'>\$PSCommandPath</span><span class='words_sep'> </span><span class='tstring_content'>\$PSCulture</span><span class='words_sep'> </span><span class='tstring_content'>\$PSDebugContext</span><span class='words_sep'> </span><span class='tstring_content'>\$PSHOME</span><span class='words_sep'> </span><span class='tstring_content'>\$PSItem</span><span class='words_sep'>
+  </span><span class='tstring_content'>\$PSScriptRoot</span><span class='words_sep'> </span><span class='tstring_content'>\$PSSenderInfo</span><span class='words_sep'> </span><span class='tstring_content'>\$PSUICulture</span><span class='words_sep'> </span><span class='tstring_content'>\$PSVersionTable</span><span class='words_sep'> </span><span class='tstring_content'>\$PWD</span><span class='words_sep'>
+  </span><span class='tstring_content'>\$REPORTERRORSHOWEXCEPTIONCLASS</span><span class='words_sep'> </span><span class='tstring_content'>\$REPORTERRORSHOWINNEREXCEPTION</span><span class='words_sep'>
+  </span><span class='tstring_content'>\$REPORTERRORSHOWSOURCE</span><span class='words_sep'> </span><span class='tstring_content'>\$REPORTERRORSHOWSTACKTRACE</span><span class='words_sep'>
+  </span><span class='tstring_content'>\$SENDER</span><span class='words_sep'> </span><span class='tstring_content'>\$ShellId</span><span class='words_sep'> </span><span class='tstring_content'>\$StackTrace</span><span class='words_sep'> </span><span class='tstring_content'>\$switch</span><span class='words_sep'> </span><span class='tstring_content'>\$this</span><span class='words_sep'> </span><span class='tstring_content'>\$true</span><span class='words_sep'>
+</span><span class='tstring_end'>)</span></span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>|</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="KEYWORDS-constant" class="">KEYWORDS =
+          <div class="docstring">
+  <div class="discussion">
+    <p><a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_reserved_words?view=powershell-6">https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_reserved_words?view=powershell-6</a></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='qwords_beg'>%w(</span><span class='words_sep'>
+  </span><span class='tstring_content'>assembly</span><span class='words_sep'> </span><span class='tstring_content'>exit</span><span class='words_sep'> </span><span class='tstring_content'>process</span><span class='words_sep'> </span><span class='tstring_content'>base</span><span class='words_sep'> </span><span class='tstring_content'>filter</span><span class='words_sep'> </span><span class='tstring_content'>public</span><span class='words_sep'> </span><span class='tstring_content'>begin</span><span class='words_sep'> </span><span class='tstring_content'>finally</span><span class='words_sep'> </span><span class='tstring_content'>return</span><span class='words_sep'> </span><span class='tstring_content'>break</span><span class='words_sep'> </span><span class='tstring_content'>for</span><span class='words_sep'>
+  </span><span class='tstring_content'>sequence</span><span class='words_sep'> </span><span class='tstring_content'>catch</span><span class='words_sep'> </span><span class='tstring_content'>foreach</span><span class='words_sep'> </span><span class='tstring_content'>static</span><span class='words_sep'> </span><span class='tstring_content'>class</span><span class='words_sep'> </span><span class='tstring_content'>from</span><span class='words_sep'> </span><span class='tstring_content'>switch</span><span class='words_sep'> </span><span class='tstring_content'>command</span><span class='words_sep'> </span><span class='tstring_content'>function</span><span class='words_sep'> </span><span class='tstring_content'>throw</span><span class='words_sep'>
+  </span><span class='tstring_content'>configuration</span><span class='words_sep'> </span><span class='tstring_content'>hidden</span><span class='words_sep'> </span><span class='tstring_content'>trap</span><span class='words_sep'> </span><span class='tstring_content'>continue</span><span class='words_sep'> </span><span class='tstring_content'>if</span><span class='words_sep'> </span><span class='tstring_content'>try</span><span class='words_sep'> </span><span class='tstring_content'>data</span><span class='words_sep'> </span><span class='tstring_content'>in</span><span class='words_sep'> </span><span class='tstring_content'>type</span><span class='words_sep'> </span><span class='tstring_content'>define</span><span class='words_sep'>
+  </span><span class='tstring_content'>inlinescript</span><span class='words_sep'> </span><span class='tstring_content'>until</span><span class='words_sep'> </span><span class='tstring_content'>do</span><span class='words_sep'> </span><span class='tstring_content'>interface</span><span class='words_sep'> </span><span class='tstring_content'>using</span><span class='words_sep'> </span><span class='tstring_content'>dynamicparam</span><span class='words_sep'> </span><span class='tstring_content'>module</span><span class='words_sep'> </span><span class='tstring_content'>var</span><span class='words_sep'> </span><span class='tstring_content'>else</span><span class='words_sep'>
+  </span><span class='tstring_content'>namespace</span><span class='words_sep'> </span><span class='tstring_content'>while</span><span class='words_sep'> </span><span class='tstring_content'>elseif</span><span class='words_sep'> </span><span class='tstring_content'>parallel</span><span class='words_sep'> </span><span class='tstring_content'>workflow</span><span class='words_sep'> </span><span class='tstring_content'>end</span><span class='words_sep'> </span><span class='tstring_content'>param</span><span class='words_sep'> </span><span class='tstring_content'>enum</span><span class='words_sep'> </span><span class='tstring_content'>private</span><span class='words_sep'>
+</span><span class='tstring_end'>)</span></span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>|</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="KEYWORDS_TYPE-constant" class="">KEYWORDS_TYPE =
+          <div class="docstring">
+  <div class="discussion">
+    <p><a href="https://devblogs.microsoft.com/scripting/powertip-find-a-list-of-powershell-type-accelerators/">https://devblogs.microsoft.com/scripting/powertip-find-a-list-of-powershell-type-accelerators/</a>
+([PSObject].Assembly.GetType(&quot;System.Management.Automation.TypeAccelerators&quot;)::Get).Keys -join &#39; &#39;</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='qwords_beg'>%w(</span><span class='words_sep'>
+  </span><span class='tstring_content'>Alias</span><span class='words_sep'> </span><span class='tstring_content'>AllowEmptyCollection</span><span class='words_sep'> </span><span class='tstring_content'>AllowEmptyString</span><span class='words_sep'> </span><span class='tstring_content'>AllowNull</span><span class='words_sep'> </span><span class='tstring_content'>ArgumentCompleter</span><span class='words_sep'>
+  </span><span class='tstring_content'>array</span><span class='words_sep'> </span><span class='tstring_content'>bool</span><span class='words_sep'> </span><span class='tstring_content'>byte</span><span class='words_sep'> </span><span class='tstring_content'>char</span><span class='words_sep'> </span><span class='tstring_content'>CmdletBinding</span><span class='words_sep'> </span><span class='tstring_content'>datetime</span><span class='words_sep'> </span><span class='tstring_content'>decimal</span><span class='words_sep'> </span><span class='tstring_content'>double</span><span class='words_sep'> </span><span class='tstring_content'>DscResource</span><span class='words_sep'>
+  </span><span class='tstring_content'>float</span><span class='words_sep'> </span><span class='tstring_content'>single</span><span class='words_sep'> </span><span class='tstring_content'>guid</span><span class='words_sep'> </span><span class='tstring_content'>hashtable</span><span class='words_sep'> </span><span class='tstring_content'>int</span><span class='words_sep'> </span><span class='tstring_content'>int32</span><span class='words_sep'> </span><span class='tstring_content'>int16</span><span class='words_sep'> </span><span class='tstring_content'>long</span><span class='words_sep'> </span><span class='tstring_content'>int64</span><span class='words_sep'> </span><span class='tstring_content'>ciminstance</span><span class='words_sep'>
+  </span><span class='tstring_content'>cimclass</span><span class='words_sep'> </span><span class='tstring_content'>cimtype</span><span class='words_sep'> </span><span class='tstring_content'>cimconverter</span><span class='words_sep'> </span><span class='tstring_content'>IPEndpoint</span><span class='words_sep'> </span><span class='tstring_content'>NullString</span><span class='words_sep'> </span><span class='tstring_content'>OutputType</span><span class='words_sep'>
+  </span><span class='tstring_content'>ObjectSecurity</span><span class='words_sep'> </span><span class='tstring_content'>Parameter</span><span class='words_sep'> </span><span class='tstring_content'>PhysicalAddress</span><span class='words_sep'> </span><span class='tstring_content'>pscredential</span><span class='words_sep'> </span><span class='tstring_content'>PSDefaultValue</span><span class='words_sep'>
+  </span><span class='tstring_content'>pslistmodifier</span><span class='words_sep'> </span><span class='tstring_content'>psobject</span><span class='words_sep'> </span><span class='tstring_content'>pscustomobject</span><span class='words_sep'> </span><span class='tstring_content'>psprimitivedictionary</span><span class='words_sep'> </span><span class='tstring_content'>ref</span><span class='words_sep'>
+  </span><span class='tstring_content'>PSTypeNameAttribute</span><span class='words_sep'> </span><span class='tstring_content'>regex</span><span class='words_sep'> </span><span class='tstring_content'>DscProperty</span><span class='words_sep'> </span><span class='tstring_content'>sbyte</span><span class='words_sep'> </span><span class='tstring_content'>string</span><span class='words_sep'> </span><span class='tstring_content'>SupportsWildcards</span><span class='words_sep'>
+  </span><span class='tstring_content'>switch</span><span class='words_sep'> </span><span class='tstring_content'>cultureinfo</span><span class='words_sep'> </span><span class='tstring_content'>bigint</span><span class='words_sep'> </span><span class='tstring_content'>securestring</span><span class='words_sep'> </span><span class='tstring_content'>timespan</span><span class='words_sep'> </span><span class='tstring_content'>uint16</span><span class='words_sep'> </span><span class='tstring_content'>uint32</span><span class='words_sep'> </span><span class='tstring_content'>uint64</span><span class='words_sep'>
+  </span><span class='tstring_content'>uri</span><span class='words_sep'> </span><span class='tstring_content'>ValidateCount</span><span class='words_sep'> </span><span class='tstring_content'>ValidateDrive</span><span class='words_sep'> </span><span class='tstring_content'>ValidateLength</span><span class='words_sep'> </span><span class='tstring_content'>ValidateNotNull</span><span class='words_sep'>
+  </span><span class='tstring_content'>ValidateNotNullOrEmpty</span><span class='words_sep'> </span><span class='tstring_content'>ValidatePattern</span><span class='words_sep'> </span><span class='tstring_content'>ValidateRange</span><span class='words_sep'> </span><span class='tstring_content'>ValidateScript</span><span class='words_sep'>
+  </span><span class='tstring_content'>ValidateSet</span><span class='words_sep'> </span><span class='tstring_content'>ValidateTrustedData</span><span class='words_sep'> </span><span class='tstring_content'>ValidateUserDrive</span><span class='words_sep'> </span><span class='tstring_content'>version</span><span class='words_sep'> </span><span class='tstring_content'>void</span><span class='words_sep'>
+  </span><span class='tstring_content'>ipaddress</span><span class='words_sep'> </span><span class='tstring_content'>DscLocalConfigurationManager</span><span class='words_sep'> </span><span class='tstring_content'>WildcardPattern</span><span class='words_sep'> </span><span class='tstring_content'>X509Certificate</span><span class='words_sep'>
+  </span><span class='tstring_content'>X500DistinguishedName</span><span class='words_sep'> </span><span class='tstring_content'>xml</span><span class='words_sep'> </span><span class='tstring_content'>CimSession</span><span class='words_sep'> </span><span class='tstring_content'>adsi</span><span class='words_sep'> </span><span class='tstring_content'>adsisearcher</span><span class='words_sep'> </span><span class='tstring_content'>wmiclass</span><span class='words_sep'> </span><span class='tstring_content'>wmi</span><span class='words_sep'>
+  </span><span class='tstring_content'>wmisearcher</span><span class='words_sep'> </span><span class='tstring_content'>mailaddress</span><span class='words_sep'> </span><span class='tstring_content'>scriptblock</span><span class='words_sep'> </span><span class='tstring_content'>psvariable</span><span class='words_sep'> </span><span class='tstring_content'>type</span><span class='words_sep'> </span><span class='tstring_content'>psmoduleinfo</span><span class='words_sep'>
+  </span><span class='tstring_content'>powershell</span><span class='words_sep'> </span><span class='tstring_content'>runspacefactory</span><span class='words_sep'> </span><span class='tstring_content'>runspace</span><span class='words_sep'> </span><span class='tstring_content'>initialsessionstate</span><span class='words_sep'> </span><span class='tstring_content'>psscriptmethod</span><span class='words_sep'>
+  </span><span class='tstring_content'>psscriptproperty</span><span class='words_sep'> </span><span class='tstring_content'>psnoteproperty</span><span class='words_sep'> </span><span class='tstring_content'>psaliasproperty</span><span class='words_sep'> </span><span class='tstring_content'>psvariableproperty</span><span class='words_sep'>
+</span><span class='tstring_end'>)</span></span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>|</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="OPERATORS-constant" class="">OPERATORS =
+          
+        </dt>
+        <dd><pre class="code"><span class='qwords_beg'>%w(</span><span class='words_sep'>
+  </span><span class='tstring_content'>-split</span><span class='words_sep'> </span><span class='tstring_content'>-isplit</span><span class='words_sep'> </span><span class='tstring_content'>-csplit</span><span class='words_sep'> </span><span class='tstring_content'>-join</span><span class='words_sep'> </span><span class='tstring_content'>-is</span><span class='words_sep'> </span><span class='tstring_content'>-isnot</span><span class='words_sep'> </span><span class='tstring_content'>-as</span><span class='words_sep'> </span><span class='tstring_content'>-eq</span><span class='words_sep'> </span><span class='tstring_content'>-ieq</span><span class='words_sep'> </span><span class='tstring_content'>-ceq</span><span class='words_sep'> </span><span class='tstring_content'>-ne</span><span class='words_sep'> </span><span class='tstring_content'>-ine</span><span class='words_sep'> </span><span class='tstring_content'>-cne</span><span class='words_sep'>
+  </span><span class='tstring_content'>-gt</span><span class='words_sep'> </span><span class='tstring_content'>-igt</span><span class='words_sep'> </span><span class='tstring_content'>-cgt</span><span class='words_sep'> </span><span class='tstring_content'>-ge</span><span class='words_sep'> </span><span class='tstring_content'>-ige</span><span class='words_sep'> </span><span class='tstring_content'>-cge</span><span class='words_sep'> </span><span class='tstring_content'>-lt</span><span class='words_sep'> </span><span class='tstring_content'>-ilt</span><span class='words_sep'> </span><span class='tstring_content'>-clt</span><span class='words_sep'> </span><span class='tstring_content'>-le</span><span class='words_sep'> </span><span class='tstring_content'>-ile</span><span class='words_sep'> </span><span class='tstring_content'>-cle</span><span class='words_sep'> </span><span class='tstring_content'>-like</span><span class='words_sep'> </span><span class='tstring_content'>-ilike</span><span class='words_sep'>
+  </span><span class='tstring_content'>-clike</span><span class='words_sep'> </span><span class='tstring_content'>-notlike</span><span class='words_sep'> </span><span class='tstring_content'>-inotlike</span><span class='words_sep'> </span><span class='tstring_content'>-cnotlike</span><span class='words_sep'> </span><span class='tstring_content'>-match</span><span class='words_sep'> </span><span class='tstring_content'>-imatch</span><span class='words_sep'> </span><span class='tstring_content'>-cmatch</span><span class='words_sep'> </span><span class='tstring_content'>-notmatch</span><span class='words_sep'>
+  </span><span class='tstring_content'>-inotmatch</span><span class='words_sep'> </span><span class='tstring_content'>-cnotmatch</span><span class='words_sep'> </span><span class='tstring_content'>-contains</span><span class='words_sep'> </span><span class='tstring_content'>-icontains</span><span class='words_sep'> </span><span class='tstring_content'>-ccontains</span><span class='words_sep'> </span><span class='tstring_content'>-notcontains</span><span class='words_sep'>
+  </span><span class='tstring_content'>-inotcontains</span><span class='words_sep'> </span><span class='tstring_content'>-cnotcontains</span><span class='words_sep'> </span><span class='tstring_content'>-replace</span><span class='words_sep'> </span><span class='tstring_content'>-ireplace</span><span class='words_sep'> </span><span class='tstring_content'>-creplace</span><span class='words_sep'> </span><span class='tstring_content'>-shl</span><span class='words_sep'> </span><span class='tstring_content'>-shr</span><span class='words_sep'> </span><span class='tstring_content'>-band</span><span class='words_sep'>
+  </span><span class='tstring_content'>-bor</span><span class='words_sep'> </span><span class='tstring_content'>-bxor</span><span class='words_sep'> </span><span class='tstring_content'>-and</span><span class='words_sep'> </span><span class='tstring_content'>-or</span><span class='words_sep'> </span><span class='tstring_content'>-xor</span><span class='words_sep'> </span><span class='tstring_content'>-not</span><span class='words_sep'> </span><span class='tstring_content'>\+=</span><span class='words_sep'> </span><span class='tstring_content'>-=</span><span class='words_sep'> </span><span class='tstring_content'>\*=</span><span class='words_sep'> </span><span class='tstring_content'>\/=</span><span class='words_sep'> </span><span class='tstring_content'>%=</span><span class='words_sep'>
+</span><span class='tstring_end'>)</span></span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>|</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="MULTILINE_KEYWORDS-constant" class="">MULTILINE_KEYWORDS =
+          
+        </dt>
+        <dd><pre class="code"><span class='qwords_beg'>%w(</span><span class='words_sep'>
+  </span><span class='tstring_content'>synopsis</span><span class='words_sep'> </span><span class='tstring_content'>description</span><span class='words_sep'> </span><span class='tstring_content'>parameter</span><span class='words_sep'> </span><span class='tstring_content'>example</span><span class='words_sep'> </span><span class='tstring_content'>inputs</span><span class='words_sep'> </span><span class='tstring_content'>outputs</span><span class='words_sep'> </span><span class='tstring_content'>notes</span><span class='words_sep'> </span><span class='tstring_content'>link</span><span class='words_sep'>
+  </span><span class='tstring_content'>component</span><span class='words_sep'> </span><span class='tstring_content'>role</span><span class='words_sep'> </span><span class='tstring_content'>functionality</span><span class='words_sep'> </span><span class='tstring_content'>forwardhelptargetname</span><span class='words_sep'> </span><span class='tstring_content'>forwardhelpcategory</span><span class='words_sep'>
+  </span><span class='tstring_content'>remotehelprunspace</span><span class='words_sep'> </span><span class='tstring_content'>externalhelp</span><span class='words_sep'>
+</span><span class='tstring_end'>)</span></span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>|</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+  
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RegexLexer.html#MAX_NULL_SCANS-constant" title="Rouge::RegexLexer::MAX_NULL_SCANS (constant)">RegexLexer::MAX_NULL_SCANS</a></span></p>
+
+  
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="../Token/Tokens.html" title="Rouge::Token::Tokens (module)">Token::Tokens</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Token/Tokens.html#Num-constant" title="Rouge::Token::Tokens::Num (constant)">Token::Tokens::Num</a></span>, <span class='object_link'><a href="../Token/Tokens.html#Str-constant" title="Rouge::Token::Tokens::Str (constant)">Token::Tokens::Str</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lexer.html#options-instance_method" title="Rouge::Lexer#options (method)">#options</a></span></p>
+
+
+
+  
+  
+  
+  
+  
+  
+  <h2>Method Summary</h2>
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RegexLexer.html#append-class_method" title="Rouge::RegexLexer.append (method)">append</a></span>, <span class='object_link'><a href="../RegexLexer.html#delegate-instance_method" title="Rouge::RegexLexer#delegate (method)">#delegate</a></span>, <span class='object_link'><a href="../RegexLexer.html#goto-instance_method" title="Rouge::RegexLexer#goto (method)">#goto</a></span>, <span class='object_link'><a href="../RegexLexer.html#group-instance_method" title="Rouge::RegexLexer#group (method)">#group</a></span>, <span class='object_link'><a href="../RegexLexer.html#groups-instance_method" title="Rouge::RegexLexer#groups (method)">#groups</a></span>, <span class='object_link'><a href="../RegexLexer.html#in_state%3F-instance_method" title="Rouge::RegexLexer#in_state? (method)">#in_state?</a></span>, <span class='object_link'><a href="../RegexLexer.html#pop!-instance_method" title="Rouge::RegexLexer#pop! (method)">#pop!</a></span>, <span class='object_link'><a href="../RegexLexer.html#prepend-class_method" title="Rouge::RegexLexer.prepend (method)">prepend</a></span>, <span class='object_link'><a href="../RegexLexer.html#push-instance_method" title="Rouge::RegexLexer#push (method)">#push</a></span>, <span class='object_link'><a href="../RegexLexer.html#recurse-instance_method" title="Rouge::RegexLexer#recurse (method)">#recurse</a></span>, <span class='object_link'><a href="../RegexLexer.html#replace_state-class_method" title="Rouge::RegexLexer.replace_state (method)">replace_state</a></span>, <span class='object_link'><a href="../RegexLexer.html#reset!-instance_method" title="Rouge::RegexLexer#reset! (method)">#reset!</a></span>, <span class='object_link'><a href="../RegexLexer.html#reset_stack-instance_method" title="Rouge::RegexLexer#reset_stack (method)">#reset_stack</a></span>, <span class='object_link'><a href="../RegexLexer.html#stack-instance_method" title="Rouge::RegexLexer#stack (method)">#stack</a></span>, <span class='object_link'><a href="../RegexLexer.html#start-class_method" title="Rouge::RegexLexer.start (method)">start</a></span>, <span class='object_link'><a href="../RegexLexer.html#start_procs-class_method" title="Rouge::RegexLexer.start_procs (method)">start_procs</a></span>, <span class='object_link'><a href="../RegexLexer.html#state-class_method" title="Rouge::RegexLexer.state (method)">state</a></span>, <span class='object_link'><a href="../RegexLexer.html#state-instance_method" title="Rouge::RegexLexer#state (method)">#state</a></span>, <span class='object_link'><a href="../RegexLexer.html#state%3F-instance_method" title="Rouge::RegexLexer#state? (method)">#state?</a></span>, <span class='object_link'><a href="../RegexLexer.html#state_definitions-class_method" title="Rouge::RegexLexer.state_definitions (method)">state_definitions</a></span>, <span class='object_link'><a href="../RegexLexer.html#states-class_method" title="Rouge::RegexLexer.states (method)">states</a></span>, <span class='object_link'><a href="../RegexLexer.html#step-instance_method" title="Rouge::RegexLexer#step (method)">#step</a></span>, <span class='object_link'><a href="../RegexLexer.html#stream_tokens-instance_method" title="Rouge::RegexLexer#stream_tokens (method)">#stream_tokens</a></span>, <span class='object_link'><a href="../RegexLexer.html#token-instance_method" title="Rouge::RegexLexer#token (method)">#token</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lexer.html#aliases-class_method" title="Rouge::Lexer.aliases (method)">aliases</a></span>, <span class='object_link'><a href="../Lexer.html#all-class_method" title="Rouge::Lexer.all (method)">all</a></span>, <span class='object_link'><a href="../Lexer.html#as_bool-instance_method" title="Rouge::Lexer#as_bool (method)">#as_bool</a></span>, <span class='object_link'><a href="../Lexer.html#as_lexer-instance_method" title="Rouge::Lexer#as_lexer (method)">#as_lexer</a></span>, <span class='object_link'><a href="../Lexer.html#as_list-instance_method" title="Rouge::Lexer#as_list (method)">#as_list</a></span>, <span class='object_link'><a href="../Lexer.html#as_string-instance_method" title="Rouge::Lexer#as_string (method)">#as_string</a></span>, <span class='object_link'><a href="../Lexer.html#as_token-instance_method" title="Rouge::Lexer#as_token (method)">#as_token</a></span>, <span class='object_link'><a href="../Lexer.html#bool_option-instance_method" title="Rouge::Lexer#bool_option (method)">#bool_option</a></span>, <span class='object_link'><a href="../Lexer.html#continue_lex-class_method" title="Rouge::Lexer.continue_lex (method)">continue_lex</a></span>, <span class='object_link'><a href="../Lexer.html#continue_lex-instance_method" title="Rouge::Lexer#continue_lex (method)">#continue_lex</a></span>, <span class='object_link'><a href="../Lexer.html#debug_enabled%3F-class_method" title="Rouge::Lexer.debug_enabled? (method)">debug_enabled?</a></span>, <span class='object_link'><a href="../Lexer.html#demo-class_method" title="Rouge::Lexer.demo (method)">demo</a></span>, <span class='object_link'><a href="../Lexer.html#demo_file-class_method" title="Rouge::Lexer.demo_file (method)">demo_file</a></span>, <span class='object_link'><a href="../Lexer.html#desc-class_method" title="Rouge::Lexer.desc (method)">desc</a></span>, <span class='object_link'><a href="../Lexer.html#detect%3F-class_method" title="Rouge::Lexer.detect? (method)">detect?</a></span>, <span class='object_link'><a href="../Lexer.html#detectable%3F-class_method" title="Rouge::Lexer.detectable? (method)">detectable?</a></span>, <span class='object_link'><a href="../Lexer.html#disable_debug!-class_method" title="Rouge::Lexer.disable_debug! (method)">disable_debug!</a></span>, <span class='object_link'><a href="../Lexer.html#enable_debug!-class_method" title="Rouge::Lexer.enable_debug! (method)">enable_debug!</a></span>, <span class='object_link'><a href="../Lexer.html#filenames-class_method" title="Rouge::Lexer.filenames (method)">filenames</a></span>, <span class='object_link'><a href="../Lexer.html#find-class_method" title="Rouge::Lexer.find (method)">find</a></span>, <span class='object_link'><a href="../Lexer.html#find_fancy-class_method" title="Rouge::Lexer.find_fancy (method)">find_fancy</a></span>, <span class='object_link'><a href="../Lexer.html#guess-class_method" title="Rouge::Lexer.guess (method)">guess</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_filename-class_method" title="Rouge::Lexer.guess_by_filename (method)">guess_by_filename</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_mimetype-class_method" title="Rouge::Lexer.guess_by_mimetype (method)">guess_by_mimetype</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_source-class_method" title="Rouge::Lexer.guess_by_source (method)">guess_by_source</a></span>, <span class='object_link'><a href="../Lexer.html#guesses-class_method" title="Rouge::Lexer.guesses (method)">guesses</a></span>, <span class='object_link'><a href="../Lexer.html#hash_option-instance_method" title="Rouge::Lexer#hash_option (method)">#hash_option</a></span>, <span class='object_link'><a href="../Lexer.html#initialize-instance_method" title="Rouge::Lexer#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Lexer.html#lex-class_method" title="Rouge::Lexer.lex (method)">lex</a></span>, <span class='object_link'><a href="../Lexer.html#lex-instance_method" title="Rouge::Lexer#lex (method)">#lex</a></span>, <span class='object_link'><a href="../Lexer.html#lexer_option-instance_method" title="Rouge::Lexer#lexer_option (method)">#lexer_option</a></span>, <span class='object_link'><a href="../Lexer.html#list_option-instance_method" title="Rouge::Lexer#list_option (method)">#list_option</a></span>, <span class='object_link'><a href="../Lexer.html#mimetypes-class_method" title="Rouge::Lexer.mimetypes (method)">mimetypes</a></span>, <span class='object_link'><a href="../Lexer.html#option-class_method" title="Rouge::Lexer.option (method)">option</a></span>, <span class='object_link'><a href="../Lexer.html#option_docs-class_method" title="Rouge::Lexer.option_docs (method)">option_docs</a></span>, <span class='object_link'><a href="../Lexer.html#reset!-instance_method" title="Rouge::Lexer#reset! (method)">#reset!</a></span>, <span class='object_link'><a href="../Lexer.html#stream_tokens-instance_method" title="Rouge::Lexer#stream_tokens (method)">#stream_tokens</a></span>, <span class='object_link'><a href="../Lexer.html#string_option-instance_method" title="Rouge::Lexer#string_option (method)">#string_option</a></span>, <span class='object_link'><a href="../Lexer.html#tag-class_method" title="Rouge::Lexer.tag (method)">tag</a></span>, <span class='object_link'><a href="../Lexer.html#tag-instance_method" title="Rouge::Lexer#tag (method)">#tag</a></span>, <span class='object_link'><a href="../Lexer.html#title-class_method" title="Rouge::Lexer.title (method)">title</a></span>, <span class='object_link'><a href="../Lexer.html#token_option-instance_method" title="Rouge::Lexer#token_option (method)">#token_option</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Token/Tokens.html" title="Rouge::Token::Tokens (module)">Token::Tokens</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Token/Tokens.html#token-class_method" title="Rouge::Token::Tokens.token (method)">token</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Lexer.html#initialize-instance_method" title="Rouge::Lexer#initialize (method)">Rouge::Lexer</a></span></p>
+  
+</div>
+
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Jul 22 08:50:00 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.20 (ruby-2.6.3).
+</div>
+
+    </div>
+  </body>
+</html>

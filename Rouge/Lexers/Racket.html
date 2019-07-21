@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Rouge::Lexers::Racket
+  
+    &mdash; Documentation by YARD 0.9.20
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Rouge::Lexers::Racket";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (R)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Rouge.html" title="Rouge (module)">Rouge</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Lexers.html" title="Rouge::Lexers (module)">Lexers</a></span></span>
+     &raquo; 
+    <span class="title">Racket</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Rouge::Lexers::Racket
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></li>
+          
+            <li class="next">Rouge::Lexers::Racket</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/rouge/lexers/racket.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RegexLexer.html#MAX_NULL_SCANS-constant" title="Rouge::RegexLexer::MAX_NULL_SCANS (constant)">RegexLexer::MAX_NULL_SCANS</a></span></p>
+
+  
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="../Token/Tokens.html" title="Rouge::Token::Tokens (module)">Token::Tokens</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Token/Tokens.html#Num-constant" title="Rouge::Token::Tokens::Num (constant)">Token::Tokens::Num</a></span>, <span class='object_link'><a href="../Token/Tokens.html#Str-constant" title="Rouge::Token::Tokens::Str (constant)">Token::Tokens::Str</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lexer.html#options-instance_method" title="Rouge::Lexer#options (method)">#options</a></span></p>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#builtins-class_method" title="builtins (class method)">.<strong>builtins</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#detect%3F-class_method" title="detect? (class method)">.<strong>detect?</strong>(text)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#keywords-class_method" title="keywords (class method)">.<strong>keywords</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RegexLexer.html#append-class_method" title="Rouge::RegexLexer.append (method)">append</a></span>, <span class='object_link'><a href="../RegexLexer.html#delegate-instance_method" title="Rouge::RegexLexer#delegate (method)">#delegate</a></span>, <span class='object_link'><a href="../RegexLexer.html#goto-instance_method" title="Rouge::RegexLexer#goto (method)">#goto</a></span>, <span class='object_link'><a href="../RegexLexer.html#group-instance_method" title="Rouge::RegexLexer#group (method)">#group</a></span>, <span class='object_link'><a href="../RegexLexer.html#groups-instance_method" title="Rouge::RegexLexer#groups (method)">#groups</a></span>, <span class='object_link'><a href="../RegexLexer.html#in_state%3F-instance_method" title="Rouge::RegexLexer#in_state? (method)">#in_state?</a></span>, <span class='object_link'><a href="../RegexLexer.html#pop!-instance_method" title="Rouge::RegexLexer#pop! (method)">#pop!</a></span>, <span class='object_link'><a href="../RegexLexer.html#prepend-class_method" title="Rouge::RegexLexer.prepend (method)">prepend</a></span>, <span class='object_link'><a href="../RegexLexer.html#push-instance_method" title="Rouge::RegexLexer#push (method)">#push</a></span>, <span class='object_link'><a href="../RegexLexer.html#recurse-instance_method" title="Rouge::RegexLexer#recurse (method)">#recurse</a></span>, <span class='object_link'><a href="../RegexLexer.html#replace_state-class_method" title="Rouge::RegexLexer.replace_state (method)">replace_state</a></span>, <span class='object_link'><a href="../RegexLexer.html#reset!-instance_method" title="Rouge::RegexLexer#reset! (method)">#reset!</a></span>, <span class='object_link'><a href="../RegexLexer.html#reset_stack-instance_method" title="Rouge::RegexLexer#reset_stack (method)">#reset_stack</a></span>, <span class='object_link'><a href="../RegexLexer.html#stack-instance_method" title="Rouge::RegexLexer#stack (method)">#stack</a></span>, <span class='object_link'><a href="../RegexLexer.html#start-class_method" title="Rouge::RegexLexer.start (method)">start</a></span>, <span class='object_link'><a href="../RegexLexer.html#start_procs-class_method" title="Rouge::RegexLexer.start_procs (method)">start_procs</a></span>, <span class='object_link'><a href="../RegexLexer.html#state-class_method" title="Rouge::RegexLexer.state (method)">state</a></span>, <span class='object_link'><a href="../RegexLexer.html#state-instance_method" title="Rouge::RegexLexer#state (method)">#state</a></span>, <span class='object_link'><a href="../RegexLexer.html#state%3F-instance_method" title="Rouge::RegexLexer#state? (method)">#state?</a></span>, <span class='object_link'><a href="../RegexLexer.html#state_definitions-class_method" title="Rouge::RegexLexer.state_definitions (method)">state_definitions</a></span>, <span class='object_link'><a href="../RegexLexer.html#states-class_method" title="Rouge::RegexLexer.states (method)">states</a></span>, <span class='object_link'><a href="../RegexLexer.html#step-instance_method" title="Rouge::RegexLexer#step (method)">#step</a></span>, <span class='object_link'><a href="../RegexLexer.html#stream_tokens-instance_method" title="Rouge::RegexLexer#stream_tokens (method)">#stream_tokens</a></span>, <span class='object_link'><a href="../RegexLexer.html#token-instance_method" title="Rouge::RegexLexer#token (method)">#token</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lexer.html#aliases-class_method" title="Rouge::Lexer.aliases (method)">aliases</a></span>, <span class='object_link'><a href="../Lexer.html#all-class_method" title="Rouge::Lexer.all (method)">all</a></span>, <span class='object_link'><a href="../Lexer.html#as_bool-instance_method" title="Rouge::Lexer#as_bool (method)">#as_bool</a></span>, <span class='object_link'><a href="../Lexer.html#as_lexer-instance_method" title="Rouge::Lexer#as_lexer (method)">#as_lexer</a></span>, <span class='object_link'><a href="../Lexer.html#as_list-instance_method" title="Rouge::Lexer#as_list (method)">#as_list</a></span>, <span class='object_link'><a href="../Lexer.html#as_string-instance_method" title="Rouge::Lexer#as_string (method)">#as_string</a></span>, <span class='object_link'><a href="../Lexer.html#as_token-instance_method" title="Rouge::Lexer#as_token (method)">#as_token</a></span>, <span class='object_link'><a href="../Lexer.html#bool_option-instance_method" title="Rouge::Lexer#bool_option (method)">#bool_option</a></span>, <span class='object_link'><a href="../Lexer.html#continue_lex-class_method" title="Rouge::Lexer.continue_lex (method)">continue_lex</a></span>, <span class='object_link'><a href="../Lexer.html#continue_lex-instance_method" title="Rouge::Lexer#continue_lex (method)">#continue_lex</a></span>, <span class='object_link'><a href="../Lexer.html#debug_enabled%3F-class_method" title="Rouge::Lexer.debug_enabled? (method)">debug_enabled?</a></span>, <span class='object_link'><a href="../Lexer.html#demo-class_method" title="Rouge::Lexer.demo (method)">demo</a></span>, <span class='object_link'><a href="../Lexer.html#demo_file-class_method" title="Rouge::Lexer.demo_file (method)">demo_file</a></span>, <span class='object_link'><a href="../Lexer.html#desc-class_method" title="Rouge::Lexer.desc (method)">desc</a></span>, <span class='object_link'><a href="../Lexer.html#detectable%3F-class_method" title="Rouge::Lexer.detectable? (method)">detectable?</a></span>, <span class='object_link'><a href="../Lexer.html#disable_debug!-class_method" title="Rouge::Lexer.disable_debug! (method)">disable_debug!</a></span>, <span class='object_link'><a href="../Lexer.html#enable_debug!-class_method" title="Rouge::Lexer.enable_debug! (method)">enable_debug!</a></span>, <span class='object_link'><a href="../Lexer.html#filenames-class_method" title="Rouge::Lexer.filenames (method)">filenames</a></span>, <span class='object_link'><a href="../Lexer.html#find-class_method" title="Rouge::Lexer.find (method)">find</a></span>, <span class='object_link'><a href="../Lexer.html#find_fancy-class_method" title="Rouge::Lexer.find_fancy (method)">find_fancy</a></span>, <span class='object_link'><a href="../Lexer.html#guess-class_method" title="Rouge::Lexer.guess (method)">guess</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_filename-class_method" title="Rouge::Lexer.guess_by_filename (method)">guess_by_filename</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_mimetype-class_method" title="Rouge::Lexer.guess_by_mimetype (method)">guess_by_mimetype</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_source-class_method" title="Rouge::Lexer.guess_by_source (method)">guess_by_source</a></span>, <span class='object_link'><a href="../Lexer.html#guesses-class_method" title="Rouge::Lexer.guesses (method)">guesses</a></span>, <span class='object_link'><a href="../Lexer.html#hash_option-instance_method" title="Rouge::Lexer#hash_option (method)">#hash_option</a></span>, <span class='object_link'><a href="../Lexer.html#initialize-instance_method" title="Rouge::Lexer#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Lexer.html#lex-class_method" title="Rouge::Lexer.lex (method)">lex</a></span>, <span class='object_link'><a href="../Lexer.html#lex-instance_method" title="Rouge::Lexer#lex (method)">#lex</a></span>, <span class='object_link'><a href="../Lexer.html#lexer_option-instance_method" title="Rouge::Lexer#lexer_option (method)">#lexer_option</a></span>, <span class='object_link'><a href="../Lexer.html#list_option-instance_method" title="Rouge::Lexer#list_option (method)">#list_option</a></span>, <span class='object_link'><a href="../Lexer.html#mimetypes-class_method" title="Rouge::Lexer.mimetypes (method)">mimetypes</a></span>, <span class='object_link'><a href="../Lexer.html#option-class_method" title="Rouge::Lexer.option (method)">option</a></span>, <span class='object_link'><a href="../Lexer.html#option_docs-class_method" title="Rouge::Lexer.option_docs (method)">option_docs</a></span>, <span class='object_link'><a href="../Lexer.html#reset!-instance_method" title="Rouge::Lexer#reset! (method)">#reset!</a></span>, <span class='object_link'><a href="../Lexer.html#stream_tokens-instance_method" title="Rouge::Lexer#stream_tokens (method)">#stream_tokens</a></span>, <span class='object_link'><a href="../Lexer.html#string_option-instance_method" title="Rouge::Lexer#string_option (method)">#string_option</a></span>, <span class='object_link'><a href="../Lexer.html#tag-class_method" title="Rouge::Lexer.tag (method)">tag</a></span>, <span class='object_link'><a href="../Lexer.html#tag-instance_method" title="Rouge::Lexer#tag (method)">#tag</a></span>, <span class='object_link'><a href="../Lexer.html#title-class_method" title="Rouge::Lexer.title (method)">title</a></span>, <span class='object_link'><a href="../Lexer.html#token_option-instance_method" title="Rouge::Lexer#token_option (method)">#token_option</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Token/Tokens.html" title="Rouge::Token::Tokens (module)">Token::Tokens</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Token/Tokens.html#token-class_method" title="Rouge::Token::Tokens.token (method)">token</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Lexer.html#initialize-instance_method" title="Rouge::Lexer#initialize (method)">Rouge::Lexer</a></span></p>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="builtins-class_method">
+  
+    .<strong>builtins</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/racket.rb', line 65</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_builtins'>builtins</span>
+  <span class='ivar'>@builtins</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>*</span><span class='words_sep'> </span><span class='tstring_content'>+</span><span class='words_sep'> </span><span class='tstring_content'>-</span><span class='words_sep'> </span><span class='tstring_content'>/</span><span class='words_sep'> </span><span class='tstring_content'>&lt;</span><span class='words_sep'> </span><span class='tstring_content'>&lt;=</span><span class='words_sep'> </span><span class='tstring_content'>=</span><span class='words_sep'> </span><span class='tstring_content'>&gt;</span><span class='words_sep'> </span><span class='tstring_content'>&gt;=</span><span class='words_sep'>
+    </span><span class='tstring_content'>abort-current-continuation</span><span class='words_sep'> </span><span class='tstring_content'>abs</span><span class='words_sep'> </span><span class='tstring_content'>absolute-path?</span><span class='words_sep'> </span><span class='tstring_content'>acos</span><span class='words_sep'> </span><span class='tstring_content'>add1</span><span class='words_sep'>
+    </span><span class='tstring_content'>alarm-evt</span><span class='words_sep'> </span><span class='tstring_content'>always-evt</span><span class='words_sep'> </span><span class='tstring_content'>andmap</span><span class='words_sep'> </span><span class='tstring_content'>angle</span><span class='words_sep'> </span><span class='tstring_content'>append</span><span class='words_sep'> </span><span class='tstring_content'>apply</span><span class='words_sep'>
+    </span><span class='tstring_content'>arithmetic-shift</span><span class='words_sep'> </span><span class='tstring_content'>arity-at-least</span><span class='words_sep'> </span><span class='tstring_content'>arity-at-least-value</span><span class='words_sep'>
+    </span><span class='tstring_content'>arity-at-least?</span><span class='words_sep'> </span><span class='tstring_content'>asin</span><span class='words_sep'> </span><span class='tstring_content'>assoc</span><span class='words_sep'> </span><span class='tstring_content'>assq</span><span class='words_sep'> </span><span class='tstring_content'>assv</span><span class='words_sep'> </span><span class='tstring_content'>atan</span><span class='words_sep'> </span><span class='tstring_content'>banner</span><span class='words_sep'> </span><span class='tstring_content'>bitwise-and</span><span class='words_sep'>
+    </span><span class='tstring_content'>bitwise-bit-field</span><span class='words_sep'> </span><span class='tstring_content'>bitwise-bit-set?</span><span class='words_sep'> </span><span class='tstring_content'>bitwise-ior</span><span class='words_sep'> </span><span class='tstring_content'>bitwise-not</span><span class='words_sep'>
+    </span><span class='tstring_content'>bitwise-xor</span><span class='words_sep'> </span><span class='tstring_content'>boolean?</span><span class='words_sep'> </span><span class='tstring_content'>bound-identifier=?</span><span class='words_sep'> </span><span class='tstring_content'>box</span><span class='words_sep'> </span><span class='tstring_content'>box-cas!</span><span class='words_sep'>
+    </span><span class='tstring_content'>box-immutable</span><span class='words_sep'> </span><span class='tstring_content'>box?</span><span class='words_sep'> </span><span class='tstring_content'>break-enabled</span><span class='words_sep'> </span><span class='tstring_content'>break-thread</span><span class='words_sep'> </span><span class='tstring_content'>build-path</span><span class='words_sep'>
+    </span><span class='tstring_content'>build-path/convention-type</span><span class='words_sep'> </span><span class='tstring_content'>byte-pregexp</span><span class='words_sep'> </span><span class='tstring_content'>byte-pregexp?</span><span class='words_sep'>
+    </span><span class='tstring_content'>byte-ready?</span><span class='words_sep'> </span><span class='tstring_content'>byte-regexp</span><span class='words_sep'> </span><span class='tstring_content'>byte-regexp?</span><span class='words_sep'> </span><span class='tstring_content'>byte?</span><span class='words_sep'> </span><span class='tstring_content'>bytes</span><span class='words_sep'>
+    </span><span class='tstring_content'>bytes-&gt;immutable-bytes</span><span class='words_sep'> </span><span class='tstring_content'>bytes-&gt;list</span><span class='words_sep'> </span><span class='tstring_content'>bytes-&gt;path</span><span class='words_sep'>
+    </span><span class='tstring_content'>bytes-&gt;path-element</span><span class='words_sep'> </span><span class='tstring_content'>bytes-&gt;string/latin-1</span><span class='words_sep'>
+    </span><span class='tstring_content'>bytes-&gt;string/locale</span><span class='words_sep'> </span><span class='tstring_content'>bytes-&gt;string/utf-8</span><span class='words_sep'> </span><span class='tstring_content'>bytes-append</span><span class='words_sep'>
+    </span><span class='tstring_content'>bytes-close-converter</span><span class='words_sep'> </span><span class='tstring_content'>bytes-convert</span><span class='words_sep'> </span><span class='tstring_content'>bytes-convert-end</span><span class='words_sep'>
+    </span><span class='tstring_content'>bytes-converter?</span><span class='words_sep'> </span><span class='tstring_content'>bytes-copy</span><span class='words_sep'> </span><span class='tstring_content'>bytes-copy!</span><span class='words_sep'>
+    </span><span class='tstring_content'>bytes-environment-variable-name?</span><span class='words_sep'> </span><span class='tstring_content'>bytes-fill!</span><span class='words_sep'> </span><span class='tstring_content'>bytes-length</span><span class='words_sep'>
+    </span><span class='tstring_content'>bytes-open-converter</span><span class='words_sep'> </span><span class='tstring_content'>bytes-ref</span><span class='words_sep'> </span><span class='tstring_content'>bytes-set!</span><span class='words_sep'> </span><span class='tstring_content'>bytes-utf-8-index</span><span class='words_sep'>
+    </span><span class='tstring_content'>bytes-utf-8-length</span><span class='words_sep'> </span><span class='tstring_content'>bytes-utf-8-ref</span><span class='words_sep'> </span><span class='tstring_content'>bytes&lt;?</span><span class='words_sep'> </span><span class='tstring_content'>bytes=?</span><span class='words_sep'> </span><span class='tstring_content'>bytes&gt;?</span><span class='words_sep'>
+    </span><span class='tstring_content'>bytes?</span><span class='words_sep'> </span><span class='tstring_content'>caaaar</span><span class='words_sep'> </span><span class='tstring_content'>caaadr</span><span class='words_sep'> </span><span class='tstring_content'>caaar</span><span class='words_sep'> </span><span class='tstring_content'>caadar</span><span class='words_sep'> </span><span class='tstring_content'>caaddr</span><span class='words_sep'> </span><span class='tstring_content'>caadr</span><span class='words_sep'> </span><span class='tstring_content'>caar</span><span class='words_sep'> </span><span class='tstring_content'>cadaar</span><span class='words_sep'>
+    </span><span class='tstring_content'>cadadr</span><span class='words_sep'> </span><span class='tstring_content'>cadar</span><span class='words_sep'> </span><span class='tstring_content'>caddar</span><span class='words_sep'> </span><span class='tstring_content'>cadddr</span><span class='words_sep'> </span><span class='tstring_content'>caddr</span><span class='words_sep'> </span><span class='tstring_content'>cadr</span><span class='words_sep'> </span><span class='tstring_content'>call-in-nested-thread</span><span class='words_sep'>
+    </span><span class='tstring_content'>call-with-break-parameterization</span><span class='words_sep'>
+    </span><span class='tstring_content'>call-with-composable-continuation</span><span class='words_sep'>
+    </span><span class='tstring_content'>call-with-continuation-barrier</span><span class='words_sep'> </span><span class='tstring_content'>call-with-continuation-prompt</span><span class='words_sep'>
+    </span><span class='tstring_content'>call-with-current-continuation</span><span class='words_sep'>
+    </span><span class='tstring_content'>call-with-default-reading-parameterization</span><span class='words_sep'>
+    </span><span class='tstring_content'>call-with-escape-continuation</span><span class='words_sep'> </span><span class='tstring_content'>call-with-exception-handler</span><span class='words_sep'>
+    </span><span class='tstring_content'>call-with-immediate-continuation-mark</span><span class='words_sep'> </span><span class='tstring_content'>call-with-input-file</span><span class='words_sep'>
+    </span><span class='tstring_content'>call-with-output-file</span><span class='words_sep'> </span><span class='tstring_content'>call-with-parameterization</span><span class='words_sep'>
+    </span><span class='tstring_content'>call-with-semaphore</span><span class='words_sep'> </span><span class='tstring_content'>call-with-semaphore/enable-break</span><span class='words_sep'>
+    </span><span class='tstring_content'>call-with-values</span><span class='words_sep'> </span><span class='tstring_content'>call/cc</span><span class='words_sep'> </span><span class='tstring_content'>call/ec</span><span class='words_sep'> </span><span class='tstring_content'>car</span><span class='words_sep'> </span><span class='tstring_content'>cdaaar</span><span class='words_sep'> </span><span class='tstring_content'>cdaadr</span><span class='words_sep'> </span><span class='tstring_content'>cdaar</span><span class='words_sep'>
+    </span><span class='tstring_content'>cdadar</span><span class='words_sep'> </span><span class='tstring_content'>cdaddr</span><span class='words_sep'> </span><span class='tstring_content'>cdadr</span><span class='words_sep'> </span><span class='tstring_content'>cdar</span><span class='words_sep'> </span><span class='tstring_content'>cddaar</span><span class='words_sep'> </span><span class='tstring_content'>cddadr</span><span class='words_sep'> </span><span class='tstring_content'>cddar</span><span class='words_sep'> </span><span class='tstring_content'>cdddar</span><span class='words_sep'> </span><span class='tstring_content'>cddddr</span><span class='words_sep'>
+    </span><span class='tstring_content'>cdddr</span><span class='words_sep'> </span><span class='tstring_content'>cddr</span><span class='words_sep'> </span><span class='tstring_content'>cdr</span><span class='words_sep'> </span><span class='tstring_content'>ceiling</span><span class='words_sep'> </span><span class='tstring_content'>channel-get</span><span class='words_sep'> </span><span class='tstring_content'>channel-put</span><span class='words_sep'>
+    </span><span class='tstring_content'>channel-put-evt</span><span class='words_sep'> </span><span class='tstring_content'>channel-put-evt?</span><span class='words_sep'> </span><span class='tstring_content'>channel-try-get</span><span class='words_sep'> </span><span class='tstring_content'>channel?</span><span class='words_sep'>
+    </span><span class='tstring_content'>chaperone-box</span><span class='words_sep'> </span><span class='tstring_content'>chaperone-continuation-mark-key</span><span class='words_sep'> </span><span class='tstring_content'>chaperone-evt</span><span class='words_sep'>
+    </span><span class='tstring_content'>chaperone-hash</span><span class='words_sep'> </span><span class='tstring_content'>chaperone-of?</span><span class='words_sep'> </span><span class='tstring_content'>chaperone-procedure</span><span class='words_sep'>
+    </span><span class='tstring_content'>chaperone-prompt-tag</span><span class='words_sep'> </span><span class='tstring_content'>chaperone-struct</span><span class='words_sep'> </span><span class='tstring_content'>chaperone-struct-type</span><span class='words_sep'>
+    </span><span class='tstring_content'>chaperone-vector</span><span class='words_sep'> </span><span class='tstring_content'>chaperone?</span><span class='words_sep'> </span><span class='tstring_content'>char-&gt;integer</span><span class='words_sep'> </span><span class='tstring_content'>char-alphabetic?</span><span class='words_sep'>
+    </span><span class='tstring_content'>char-blank?</span><span class='words_sep'> </span><span class='tstring_content'>char-ci&lt;=?</span><span class='words_sep'> </span><span class='tstring_content'>char-ci&lt;?</span><span class='words_sep'> </span><span class='tstring_content'>char-ci=?</span><span class='words_sep'> </span><span class='tstring_content'>char-ci&gt;=?</span><span class='words_sep'>
+    </span><span class='tstring_content'>char-ci&gt;?</span><span class='words_sep'> </span><span class='tstring_content'>char-downcase</span><span class='words_sep'> </span><span class='tstring_content'>char-foldcase</span><span class='words_sep'> </span><span class='tstring_content'>char-general-category</span><span class='words_sep'>
+    </span><span class='tstring_content'>char-graphic?</span><span class='words_sep'> </span><span class='tstring_content'>char-iso-control?</span><span class='words_sep'> </span><span class='tstring_content'>char-lower-case?</span><span class='words_sep'>
+    </span><span class='tstring_content'>char-numeric?</span><span class='words_sep'> </span><span class='tstring_content'>char-punctuation?</span><span class='words_sep'> </span><span class='tstring_content'>char-ready?</span><span class='words_sep'> </span><span class='tstring_content'>char-symbolic?</span><span class='words_sep'>
+    </span><span class='tstring_content'>char-title-case?</span><span class='words_sep'> </span><span class='tstring_content'>char-titlecase</span><span class='words_sep'> </span><span class='tstring_content'>char-upcase</span><span class='words_sep'> </span><span class='tstring_content'>char-upper-case?</span><span class='words_sep'>
+    </span><span class='tstring_content'>char-utf-8-length</span><span class='words_sep'> </span><span class='tstring_content'>char-whitespace?</span><span class='words_sep'> </span><span class='tstring_content'>char&lt;=?</span><span class='words_sep'> </span><span class='tstring_content'>char&lt;?</span><span class='words_sep'> </span><span class='tstring_content'>char=?</span><span class='words_sep'>
+    </span><span class='tstring_content'>char&gt;=?</span><span class='words_sep'> </span><span class='tstring_content'>char&gt;?</span><span class='words_sep'> </span><span class='tstring_content'>char?</span><span class='words_sep'> </span><span class='tstring_content'>check-duplicate-identifier</span><span class='words_sep'>
+    </span><span class='tstring_content'>checked-procedure-check-and-extract</span><span class='words_sep'> </span><span class='tstring_content'>choice-evt</span><span class='words_sep'> </span><span class='tstring_content'>cleanse-path</span><span class='words_sep'>
+    </span><span class='tstring_content'>close-input-port</span><span class='words_sep'> </span><span class='tstring_content'>close-output-port</span><span class='words_sep'> </span><span class='tstring_content'>collect-garbage</span><span class='words_sep'>
+    </span><span class='tstring_content'>collection-file-path</span><span class='words_sep'> </span><span class='tstring_content'>collection-path</span><span class='words_sep'> </span><span class='tstring_content'>compile</span><span class='words_sep'>
+    </span><span class='tstring_content'>compile-allow-set!-undefined</span><span class='words_sep'>
+    </span><span class='tstring_content'>compile-context-preservation-enabled</span><span class='words_sep'>
+    </span><span class='tstring_content'>compile-enforce-module-constants</span><span class='words_sep'> </span><span class='tstring_content'>compile-syntax</span><span class='words_sep'>
+    </span><span class='tstring_content'>compiled-expression?</span><span class='words_sep'> </span><span class='tstring_content'>compiled-module-expression?</span><span class='words_sep'>
+    </span><span class='tstring_content'>complete-path?</span><span class='words_sep'> </span><span class='tstring_content'>complex?</span><span class='words_sep'> </span><span class='tstring_content'>cons</span><span class='words_sep'> </span><span class='tstring_content'>continuation-mark-key?</span><span class='words_sep'>
+    </span><span class='tstring_content'>continuation-mark-set-&gt;context</span><span class='words_sep'> </span><span class='tstring_content'>continuation-mark-set-&gt;list</span><span class='words_sep'>
+    </span><span class='tstring_content'>continuation-mark-set-&gt;list*</span><span class='words_sep'> </span><span class='tstring_content'>continuation-mark-set-first</span><span class='words_sep'>
+    </span><span class='tstring_content'>continuation-mark-set?</span><span class='words_sep'> </span><span class='tstring_content'>continuation-marks</span><span class='words_sep'>
+    </span><span class='tstring_content'>continuation-prompt-available?</span><span class='words_sep'> </span><span class='tstring_content'>continuation-prompt-tag?</span><span class='words_sep'>
+    </span><span class='tstring_content'>continuation?</span><span class='words_sep'> </span><span class='tstring_content'>copy-file</span><span class='words_sep'> </span><span class='tstring_content'>cos</span><span class='words_sep'> </span><span class='tstring_content'>current-break-parameterization</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-code-inspector</span><span class='words_sep'> </span><span class='tstring_content'>current-command-line-arguments</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-compile</span><span class='words_sep'> </span><span class='tstring_content'>current-compiled-file-roots</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-continuation-marks</span><span class='words_sep'> </span><span class='tstring_content'>current-custodian</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-directory</span><span class='words_sep'> </span><span class='tstring_content'>current-directory-for-user</span><span class='words_sep'> </span><span class='tstring_content'>current-drive</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-environment-variables</span><span class='words_sep'> </span><span class='tstring_content'>current-error-port</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-eval</span><span class='words_sep'> </span><span class='tstring_content'>current-evt-pseudo-random-generator</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-gc-milliseconds</span><span class='words_sep'> </span><span class='tstring_content'>current-get-interaction-input-port</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-inexact-milliseconds</span><span class='words_sep'> </span><span class='tstring_content'>current-input-port</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-inspector</span><span class='words_sep'> </span><span class='tstring_content'>current-library-collection-paths</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-load</span><span class='words_sep'> </span><span class='tstring_content'>current-load-extension</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-load-relative-directory</span><span class='words_sep'> </span><span class='tstring_content'>current-load/use-compiled</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-locale</span><span class='words_sep'> </span><span class='tstring_content'>current-memory-use</span><span class='words_sep'> </span><span class='tstring_content'>current-milliseconds</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-module-declare-name</span><span class='words_sep'> </span><span class='tstring_content'>current-module-declare-source</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-module-name-resolver</span><span class='words_sep'> </span><span class='tstring_content'>current-module-path-for-load</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-namespace</span><span class='words_sep'> </span><span class='tstring_content'>current-output-port</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-parameterization</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-preserved-thread-cell-values</span><span class='words_sep'> </span><span class='tstring_content'>current-print</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-process-milliseconds</span><span class='words_sep'> </span><span class='tstring_content'>current-prompt-read</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-pseudo-random-generator</span><span class='words_sep'> </span><span class='tstring_content'>current-read-interaction</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-reader-guard</span><span class='words_sep'> </span><span class='tstring_content'>current-readtable</span><span class='words_sep'> </span><span class='tstring_content'>current-seconds</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-security-guard</span><span class='words_sep'> </span><span class='tstring_content'>current-subprocess-custodian-mode</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-thread</span><span class='words_sep'> </span><span class='tstring_content'>current-thread-group</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-thread-initial-stack-size</span><span class='words_sep'>
+    </span><span class='tstring_content'>current-write-relative-directory</span><span class='words_sep'> </span><span class='tstring_content'>custodian-box-value</span><span class='words_sep'>
+    </span><span class='tstring_content'>custodian-box?</span><span class='words_sep'> </span><span class='tstring_content'>custodian-limit-memory</span><span class='words_sep'> </span><span class='tstring_content'>custodian-managed-list</span><span class='words_sep'>
+    </span><span class='tstring_content'>custodian-memory-accounting-available?</span><span class='words_sep'>
+    </span><span class='tstring_content'>custodian-require-memory</span><span class='words_sep'> </span><span class='tstring_content'>custodian-shutdown-all</span><span class='words_sep'> </span><span class='tstring_content'>custodian?</span><span class='words_sep'>
+    </span><span class='tstring_content'>custom-print-quotable-accessor</span><span class='words_sep'> </span><span class='tstring_content'>custom-print-quotable?</span><span class='words_sep'>
+    </span><span class='tstring_content'>custom-write-accessor</span><span class='words_sep'> </span><span class='tstring_content'>custom-write?</span><span class='words_sep'> </span><span class='tstring_content'>date</span><span class='words_sep'> </span><span class='tstring_content'>date*</span><span class='words_sep'>
+    </span><span class='tstring_content'>date*-nanosecond</span><span class='words_sep'> </span><span class='tstring_content'>date*-time-zone-name</span><span class='words_sep'> </span><span class='tstring_content'>date*?</span><span class='words_sep'> </span><span class='tstring_content'>date-day</span><span class='words_sep'>
+    </span><span class='tstring_content'>date-dst?</span><span class='words_sep'> </span><span class='tstring_content'>date-hour</span><span class='words_sep'> </span><span class='tstring_content'>date-minute</span><span class='words_sep'> </span><span class='tstring_content'>date-month</span><span class='words_sep'> </span><span class='tstring_content'>date-second</span><span class='words_sep'>
+    </span><span class='tstring_content'>date-time-zone-offset</span><span class='words_sep'> </span><span class='tstring_content'>date-week-day</span><span class='words_sep'> </span><span class='tstring_content'>date-year</span><span class='words_sep'> </span><span class='tstring_content'>date-year-day</span><span class='words_sep'>
+    </span><span class='tstring_content'>date?</span><span class='words_sep'> </span><span class='tstring_content'>datum-intern-literal</span><span class='words_sep'> </span><span class='tstring_content'>default-continuation-prompt-tag</span><span class='words_sep'>
+    </span><span class='tstring_content'>delete-directory</span><span class='words_sep'> </span><span class='tstring_content'>delete-file</span><span class='words_sep'> </span><span class='tstring_content'>denominator</span><span class='words_sep'> </span><span class='tstring_content'>directory-exists?</span><span class='words_sep'>
+    </span><span class='tstring_content'>directory-list</span><span class='words_sep'> </span><span class='tstring_content'>display</span><span class='words_sep'> </span><span class='tstring_content'>displayln</span><span class='words_sep'> </span><span class='tstring_content'>dump-memory-stats</span><span class='words_sep'>
+    </span><span class='tstring_content'>dynamic-require</span><span class='words_sep'> </span><span class='tstring_content'>dynamic-require-for-syntax</span><span class='words_sep'> </span><span class='tstring_content'>dynamic-wind</span><span class='words_sep'>
+    </span><span class='tstring_content'>environment-variables-copy</span><span class='words_sep'> </span><span class='tstring_content'>environment-variables-names</span><span class='words_sep'>
+    </span><span class='tstring_content'>environment-variables-ref</span><span class='words_sep'> </span><span class='tstring_content'>environment-variables-set!</span><span class='words_sep'>
+    </span><span class='tstring_content'>environment-variables?</span><span class='words_sep'> </span><span class='tstring_content'>eof</span><span class='words_sep'> </span><span class='tstring_content'>eof-object?</span><span class='words_sep'> </span><span class='tstring_content'>ephemeron-value</span><span class='words_sep'>
+    </span><span class='tstring_content'>ephemeron?</span><span class='words_sep'> </span><span class='tstring_content'>eprintf</span><span class='words_sep'> </span><span class='tstring_content'>eq-hash-code</span><span class='words_sep'> </span><span class='tstring_content'>eq?</span><span class='words_sep'> </span><span class='tstring_content'>equal-hash-code</span><span class='words_sep'>
+    </span><span class='tstring_content'>equal-secondary-hash-code</span><span class='words_sep'> </span><span class='tstring_content'>equal?</span><span class='words_sep'> </span><span class='tstring_content'>equal?/recur</span><span class='words_sep'> </span><span class='tstring_content'>eqv-hash-code</span><span class='words_sep'>
+    </span><span class='tstring_content'>eqv?</span><span class='words_sep'> </span><span class='tstring_content'>error</span><span class='words_sep'> </span><span class='tstring_content'>error-display-handler</span><span class='words_sep'> </span><span class='tstring_content'>error-escape-handler</span><span class='words_sep'>
+    </span><span class='tstring_content'>error-print-context-length</span><span class='words_sep'> </span><span class='tstring_content'>error-print-source-location</span><span class='words_sep'>
+    </span><span class='tstring_content'>error-print-width</span><span class='words_sep'> </span><span class='tstring_content'>error-value-&gt;string-handler</span><span class='words_sep'> </span><span class='tstring_content'>eval</span><span class='words_sep'>
+    </span><span class='tstring_content'>eval-jit-enabled</span><span class='words_sep'> </span><span class='tstring_content'>eval-syntax</span><span class='words_sep'> </span><span class='tstring_content'>even?</span><span class='words_sep'> </span><span class='tstring_content'>evt?</span><span class='words_sep'> </span><span class='tstring_content'>exact-&gt;inexact</span><span class='words_sep'>
+    </span><span class='tstring_content'>exact-integer?</span><span class='words_sep'> </span><span class='tstring_content'>exact-nonnegative-integer?</span><span class='words_sep'>
+    </span><span class='tstring_content'>exact-positive-integer?</span><span class='words_sep'> </span><span class='tstring_content'>exact?</span><span class='words_sep'> </span><span class='tstring_content'>executable-yield-handler</span><span class='words_sep'> </span><span class='tstring_content'>exit</span><span class='words_sep'>
+    </span><span class='tstring_content'>exit-handler</span><span class='words_sep'> </span><span class='tstring_content'>exn</span><span class='words_sep'> </span><span class='tstring_content'>exn-continuation-marks</span><span class='words_sep'> </span><span class='tstring_content'>exn-message</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:break</span><span class='words_sep'> </span><span class='tstring_content'>exn:break-continuation</span><span class='words_sep'> </span><span class='tstring_content'>exn:break:hang-up</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:break:hang-up?</span><span class='words_sep'> </span><span class='tstring_content'>exn:break:terminate</span><span class='words_sep'> </span><span class='tstring_content'>exn:break:terminate?</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:break?</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail:contract</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:contract:arity</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail:contract:arity?</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:contract:continuation</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:contract:continuation?</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:contract:divide-by-zero</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:contract:divide-by-zero?</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:contract:non-fixnum-result</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:contract:non-fixnum-result?</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:contract:variable</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail:contract:variable-id</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:contract:variable?</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail:contract?</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:filesystem</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail:filesystem:errno</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:filesystem:errno-errno</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail:filesystem:errno?</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:filesystem:exists</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail:filesystem:exists?</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:filesystem:missing-module</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:filesystem:missing-module-path</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:filesystem:missing-module?</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:filesystem:version</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail:filesystem:version?</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:filesystem?</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail:network</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail:network:errno</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:network:errno-errno</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail:network:errno?</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:network?</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail:out-of-memory</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:out-of-memory?</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail:read</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail:read-srclocs</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:read:eof</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail:read:eof?</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail:read:non-char</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:read:non-char?</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail:read?</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail:syntax</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:syntax-exprs</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail:syntax:missing-module</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:syntax:missing-module-path</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:syntax:missing-module?</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail:syntax:unbound</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:syntax:unbound?</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail:syntax?</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:unsupported</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail:unsupported?</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail:user</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:fail:user?</span><span class='words_sep'> </span><span class='tstring_content'>exn:fail?</span><span class='words_sep'> </span><span class='tstring_content'>exn:missing-module-accessor</span><span class='words_sep'>
+    </span><span class='tstring_content'>exn:missing-module?</span><span class='words_sep'> </span><span class='tstring_content'>exn:srclocs-accessor</span><span class='words_sep'> </span><span class='tstring_content'>exn:srclocs?</span><span class='words_sep'> </span><span class='tstring_content'>exn?</span><span class='words_sep'>
+    </span><span class='tstring_content'>exp</span><span class='words_sep'> </span><span class='tstring_content'>expand</span><span class='words_sep'> </span><span class='tstring_content'>expand-once</span><span class='words_sep'> </span><span class='tstring_content'>expand-syntax</span><span class='words_sep'> </span><span class='tstring_content'>expand-syntax-once</span><span class='words_sep'>
+    </span><span class='tstring_content'>expand-syntax-to-top-form</span><span class='words_sep'> </span><span class='tstring_content'>expand-to-top-form</span><span class='words_sep'>
+    </span><span class='tstring_content'>expand-user-path</span><span class='words_sep'> </span><span class='tstring_content'>explode-path</span><span class='words_sep'> </span><span class='tstring_content'>expt</span><span class='words_sep'> </span><span class='tstring_content'>file-exists?</span><span class='words_sep'>
+    </span><span class='tstring_content'>file-or-directory-identity</span><span class='words_sep'> </span><span class='tstring_content'>file-or-directory-modify-seconds</span><span class='words_sep'>
+    </span><span class='tstring_content'>file-or-directory-permissions</span><span class='words_sep'> </span><span class='tstring_content'>file-position</span><span class='words_sep'> </span><span class='tstring_content'>file-position*</span><span class='words_sep'>
+    </span><span class='tstring_content'>file-size</span><span class='words_sep'> </span><span class='tstring_content'>file-stream-buffer-mode</span><span class='words_sep'> </span><span class='tstring_content'>file-stream-port?</span><span class='words_sep'>
+    </span><span class='tstring_content'>file-truncate</span><span class='words_sep'> </span><span class='tstring_content'>filesystem-change-evt</span><span class='words_sep'>
+    </span><span class='tstring_content'>filesystem-change-evt-cancel</span><span class='words_sep'> </span><span class='tstring_content'>filesystem-change-evt?</span><span class='words_sep'>
+    </span><span class='tstring_content'>filesystem-root-list</span><span class='words_sep'> </span><span class='tstring_content'>find-executable-path</span><span class='words_sep'>
+    </span><span class='tstring_content'>find-library-collection-paths</span><span class='words_sep'> </span><span class='tstring_content'>find-system-path</span><span class='words_sep'> </span><span class='tstring_content'>fixnum?</span><span class='words_sep'>
+    </span><span class='tstring_content'>floating-point-bytes-&gt;real</span><span class='words_sep'> </span><span class='tstring_content'>flonum?</span><span class='words_sep'> </span><span class='tstring_content'>floor</span><span class='words_sep'> </span><span class='tstring_content'>flush-output</span><span class='words_sep'>
+    </span><span class='tstring_content'>for-each</span><span class='words_sep'> </span><span class='tstring_content'>format</span><span class='words_sep'> </span><span class='tstring_content'>fprintf</span><span class='words_sep'> </span><span class='tstring_content'>free-identifier=?</span><span class='words_sep'> </span><span class='tstring_content'>gcd</span><span class='words_sep'>
+    </span><span class='tstring_content'>generate-temporaries</span><span class='words_sep'> </span><span class='tstring_content'>gensym</span><span class='words_sep'> </span><span class='tstring_content'>get-output-bytes</span><span class='words_sep'>
+    </span><span class='tstring_content'>get-output-string</span><span class='words_sep'> </span><span class='tstring_content'>getenv</span><span class='words_sep'> </span><span class='tstring_content'>global-port-print-handler</span><span class='words_sep'> </span><span class='tstring_content'>guard-evt</span><span class='words_sep'>
+    </span><span class='tstring_content'>handle-evt</span><span class='words_sep'> </span><span class='tstring_content'>handle-evt?</span><span class='words_sep'> </span><span class='tstring_content'>hash</span><span class='words_sep'> </span><span class='tstring_content'>hash-equal?</span><span class='words_sep'> </span><span class='tstring_content'>hash-eqv?</span><span class='words_sep'>
+    </span><span class='tstring_content'>hash-has-key?</span><span class='words_sep'> </span><span class='tstring_content'>hash-placeholder?</span><span class='words_sep'> </span><span class='tstring_content'>hash-ref!</span><span class='words_sep'> </span><span class='tstring_content'>hasheq</span><span class='words_sep'> </span><span class='tstring_content'>hasheqv</span><span class='words_sep'>
+    </span><span class='tstring_content'>identifier-binding</span><span class='words_sep'> </span><span class='tstring_content'>identifier-binding-symbol</span><span class='words_sep'>
+    </span><span class='tstring_content'>identifier-label-binding</span><span class='words_sep'> </span><span class='tstring_content'>identifier-prune-lexical-context</span><span class='words_sep'>
+    </span><span class='tstring_content'>identifier-prune-to-source-module</span><span class='words_sep'>
+    </span><span class='tstring_content'>identifier-remove-from-definition-context</span><span class='words_sep'>
+    </span><span class='tstring_content'>identifier-template-binding</span><span class='words_sep'> </span><span class='tstring_content'>identifier-transformer-binding</span><span class='words_sep'>
+    </span><span class='tstring_content'>identifier?</span><span class='words_sep'> </span><span class='tstring_content'>imag-part</span><span class='words_sep'> </span><span class='tstring_content'>immutable?</span><span class='words_sep'> </span><span class='tstring_content'>impersonate-box</span><span class='words_sep'>
+    </span><span class='tstring_content'>impersonate-continuation-mark-key</span><span class='words_sep'> </span><span class='tstring_content'>impersonate-hash</span><span class='words_sep'>
+    </span><span class='tstring_content'>impersonate-procedure</span><span class='words_sep'> </span><span class='tstring_content'>impersonate-prompt-tag</span><span class='words_sep'>
+    </span><span class='tstring_content'>impersonate-struct</span><span class='words_sep'> </span><span class='tstring_content'>impersonate-vector</span><span class='words_sep'> </span><span class='tstring_content'>impersonator-ephemeron</span><span class='words_sep'>
+    </span><span class='tstring_content'>impersonator-of?</span><span class='words_sep'> </span><span class='tstring_content'>impersonator-prop:application-mark</span><span class='words_sep'>
+    </span><span class='tstring_content'>impersonator-property-accessor-procedure?</span><span class='words_sep'>
+    </span><span class='tstring_content'>impersonator-property?</span><span class='words_sep'> </span><span class='tstring_content'>impersonator?</span><span class='words_sep'> </span><span class='tstring_content'>inexact-&gt;exact</span><span class='words_sep'>
+    </span><span class='tstring_content'>inexact-real?</span><span class='words_sep'> </span><span class='tstring_content'>inexact?</span><span class='words_sep'> </span><span class='tstring_content'>input-port?</span><span class='words_sep'> </span><span class='tstring_content'>inspector?</span><span class='words_sep'> </span><span class='tstring_content'>integer-&gt;char</span><span class='words_sep'>
+    </span><span class='tstring_content'>integer-&gt;integer-bytes</span><span class='words_sep'> </span><span class='tstring_content'>integer-bytes-&gt;integer</span><span class='words_sep'> </span><span class='tstring_content'>integer-length</span><span class='words_sep'>
+    </span><span class='tstring_content'>integer-sqrt</span><span class='words_sep'> </span><span class='tstring_content'>integer-sqrt/remainder</span><span class='words_sep'> </span><span class='tstring_content'>integer?</span><span class='words_sep'>
+    </span><span class='tstring_content'>internal-definition-context-seal</span><span class='words_sep'>
+    </span><span class='tstring_content'>internal-definition-context?</span><span class='words_sep'> </span><span class='tstring_content'>keyword-&gt;string</span><span class='words_sep'> </span><span class='tstring_content'>keyword&lt;?</span><span class='words_sep'>
+    </span><span class='tstring_content'>keyword?</span><span class='words_sep'> </span><span class='tstring_content'>kill-thread</span><span class='words_sep'> </span><span class='tstring_content'>lcm</span><span class='words_sep'> </span><span class='tstring_content'>length</span><span class='words_sep'> </span><span class='tstring_content'>liberal-define-context?</span><span class='words_sep'>
+    </span><span class='tstring_content'>link-exists?</span><span class='words_sep'> </span><span class='tstring_content'>list</span><span class='words_sep'> </span><span class='tstring_content'>list*</span><span class='words_sep'> </span><span class='tstring_content'>list-&gt;bytes</span><span class='words_sep'> </span><span class='tstring_content'>list-&gt;string</span><span class='words_sep'>
+    </span><span class='tstring_content'>list-&gt;vector</span><span class='words_sep'> </span><span class='tstring_content'>list-ref</span><span class='words_sep'> </span><span class='tstring_content'>list-tail</span><span class='words_sep'> </span><span class='tstring_content'>list?</span><span class='words_sep'> </span><span class='tstring_content'>load</span><span class='words_sep'> </span><span class='tstring_content'>load-extension</span><span class='words_sep'>
+    </span><span class='tstring_content'>load-on-demand-enabled</span><span class='words_sep'> </span><span class='tstring_content'>load-relative</span><span class='words_sep'> </span><span class='tstring_content'>load-relative-extension</span><span class='words_sep'>
+    </span><span class='tstring_content'>load/cd</span><span class='words_sep'> </span><span class='tstring_content'>load/use-compiled</span><span class='words_sep'> </span><span class='tstring_content'>local-expand</span><span class='words_sep'>
+    </span><span class='tstring_content'>local-expand/capture-lifts</span><span class='words_sep'> </span><span class='tstring_content'>local-transformer-expand</span><span class='words_sep'>
+    </span><span class='tstring_content'>local-transformer-expand/capture-lifts</span><span class='words_sep'>
+    </span><span class='tstring_content'>locale-string-encoding</span><span class='words_sep'> </span><span class='tstring_content'>log</span><span class='words_sep'> </span><span class='tstring_content'>log-max-level</span><span class='words_sep'> </span><span class='tstring_content'>magnitude</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-arity-at-least</span><span class='words_sep'> </span><span class='tstring_content'>make-bytes</span><span class='words_sep'> </span><span class='tstring_content'>make-channel</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-continuation-mark-key</span><span class='words_sep'> </span><span class='tstring_content'>make-continuation-prompt-tag</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-custodian</span><span class='words_sep'> </span><span class='tstring_content'>make-custodian-box</span><span class='words_sep'> </span><span class='tstring_content'>make-date</span><span class='words_sep'> </span><span class='tstring_content'>make-date*</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-derived-parameter</span><span class='words_sep'> </span><span class='tstring_content'>make-directory</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-environment-variables</span><span class='words_sep'> </span><span class='tstring_content'>make-ephemeron</span><span class='words_sep'> </span><span class='tstring_content'>make-exn</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-exn:break</span><span class='words_sep'> </span><span class='tstring_content'>make-exn:break:hang-up</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-exn:break:terminate</span><span class='words_sep'> </span><span class='tstring_content'>make-exn:fail</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-exn:fail:contract</span><span class='words_sep'> </span><span class='tstring_content'>make-exn:fail:contract:arity</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-exn:fail:contract:continuation</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-exn:fail:contract:divide-by-zero</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-exn:fail:contract:non-fixnum-result</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-exn:fail:contract:variable</span><span class='words_sep'> </span><span class='tstring_content'>make-exn:fail:filesystem</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-exn:fail:filesystem:errno</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-exn:fail:filesystem:exists</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-exn:fail:filesystem:missing-module</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-exn:fail:filesystem:version</span><span class='words_sep'> </span><span class='tstring_content'>make-exn:fail:network</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-exn:fail:network:errno</span><span class='words_sep'> </span><span class='tstring_content'>make-exn:fail:out-of-memory</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-exn:fail:read</span><span class='words_sep'> </span><span class='tstring_content'>make-exn:fail:read:eof</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-exn:fail:read:non-char</span><span class='words_sep'> </span><span class='tstring_content'>make-exn:fail:syntax</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-exn:fail:syntax:missing-module</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-exn:fail:syntax:unbound</span><span class='words_sep'> </span><span class='tstring_content'>make-exn:fail:unsupported</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-exn:fail:user</span><span class='words_sep'> </span><span class='tstring_content'>make-file-or-directory-link</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-hash-placeholder</span><span class='words_sep'> </span><span class='tstring_content'>make-hasheq-placeholder</span><span class='words_sep'> </span><span class='tstring_content'>make-hasheqv</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-hasheqv-placeholder</span><span class='words_sep'> </span><span class='tstring_content'>make-immutable-hasheqv</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-impersonator-property</span><span class='words_sep'> </span><span class='tstring_content'>make-input-port</span><span class='words_sep'> </span><span class='tstring_content'>make-inspector</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-known-char-range-list</span><span class='words_sep'> </span><span class='tstring_content'>make-output-port</span><span class='words_sep'> </span><span class='tstring_content'>make-parameter</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-phantom-bytes</span><span class='words_sep'> </span><span class='tstring_content'>make-pipe</span><span class='words_sep'> </span><span class='tstring_content'>make-placeholder</span><span class='words_sep'> </span><span class='tstring_content'>make-polar</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-prefab-struct</span><span class='words_sep'> </span><span class='tstring_content'>make-pseudo-random-generator</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-reader-graph</span><span class='words_sep'> </span><span class='tstring_content'>make-readtable</span><span class='words_sep'> </span><span class='tstring_content'>make-rectangular</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-rename-transformer</span><span class='words_sep'> </span><span class='tstring_content'>make-resolved-module-path</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-security-guard</span><span class='words_sep'> </span><span class='tstring_content'>make-semaphore</span><span class='words_sep'> </span><span class='tstring_content'>make-set!-transformer</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-shared-bytes</span><span class='words_sep'> </span><span class='tstring_content'>make-sibling-inspector</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-special-comment</span><span class='words_sep'> </span><span class='tstring_content'>make-srcloc</span><span class='words_sep'> </span><span class='tstring_content'>make-string</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-struct-field-accessor</span><span class='words_sep'> </span><span class='tstring_content'>make-struct-field-mutator</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-struct-type</span><span class='words_sep'> </span><span class='tstring_content'>make-struct-type-property</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-syntax-delta-introducer</span><span class='words_sep'> </span><span class='tstring_content'>make-syntax-introducer</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-thread-cell</span><span class='words_sep'> </span><span class='tstring_content'>make-thread-group</span><span class='words_sep'> </span><span class='tstring_content'>make-vector</span><span class='words_sep'> </span><span class='tstring_content'>make-weak-box</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-weak-hasheqv</span><span class='words_sep'> </span><span class='tstring_content'>make-will-executor</span><span class='words_sep'> </span><span class='tstring_content'>map</span><span class='words_sep'> </span><span class='tstring_content'>max</span><span class='words_sep'> </span><span class='tstring_content'>mcar</span><span class='words_sep'> </span><span class='tstring_content'>mcdr</span><span class='words_sep'> </span><span class='tstring_content'>mcons</span><span class='words_sep'>
+    </span><span class='tstring_content'>member</span><span class='words_sep'> </span><span class='tstring_content'>memq</span><span class='words_sep'> </span><span class='tstring_content'>memv</span><span class='words_sep'> </span><span class='tstring_content'>min</span><span class='words_sep'> </span><span class='tstring_content'>module-&gt;exports</span><span class='words_sep'> </span><span class='tstring_content'>module-&gt;imports</span><span class='words_sep'>
+    </span><span class='tstring_content'>module-&gt;language-info</span><span class='words_sep'> </span><span class='tstring_content'>module-&gt;namespace</span><span class='words_sep'>
+    </span><span class='tstring_content'>module-compiled-cross-phase-persistent?</span><span class='words_sep'>
+    </span><span class='tstring_content'>module-compiled-exports</span><span class='words_sep'> </span><span class='tstring_content'>module-compiled-imports</span><span class='words_sep'>
+    </span><span class='tstring_content'>module-compiled-language-info</span><span class='words_sep'> </span><span class='tstring_content'>module-compiled-name</span><span class='words_sep'>
+    </span><span class='tstring_content'>module-compiled-submodules</span><span class='words_sep'> </span><span class='tstring_content'>module-declared?</span><span class='words_sep'>
+    </span><span class='tstring_content'>module-path-index-join</span><span class='words_sep'> </span><span class='tstring_content'>module-path-index-resolve</span><span class='words_sep'>
+    </span><span class='tstring_content'>module-path-index-split</span><span class='words_sep'> </span><span class='tstring_content'>module-path-index-submodule</span><span class='words_sep'>
+    </span><span class='tstring_content'>module-path-index?</span><span class='words_sep'> </span><span class='tstring_content'>module-path?</span><span class='words_sep'> </span><span class='tstring_content'>module-predefined?</span><span class='words_sep'>
+    </span><span class='tstring_content'>module-provide-protected?</span><span class='words_sep'> </span><span class='tstring_content'>modulo</span><span class='words_sep'> </span><span class='tstring_content'>mpair?</span><span class='words_sep'> </span><span class='tstring_content'>nack-guard-evt</span><span class='words_sep'>
+    </span><span class='tstring_content'>namespace-attach-module</span><span class='words_sep'> </span><span class='tstring_content'>namespace-attach-module-declaration</span><span class='words_sep'>
+    </span><span class='tstring_content'>namespace-base-phase</span><span class='words_sep'> </span><span class='tstring_content'>namespace-mapped-symbols</span><span class='words_sep'>
+    </span><span class='tstring_content'>namespace-module-identifier</span><span class='words_sep'> </span><span class='tstring_content'>namespace-module-registry</span><span class='words_sep'>
+    </span><span class='tstring_content'>namespace-require</span><span class='words_sep'> </span><span class='tstring_content'>namespace-require/constant</span><span class='words_sep'>
+    </span><span class='tstring_content'>namespace-require/copy</span><span class='words_sep'> </span><span class='tstring_content'>namespace-require/expansion-time</span><span class='words_sep'>
+    </span><span class='tstring_content'>namespace-set-variable-value!</span><span class='words_sep'> </span><span class='tstring_content'>namespace-symbol-&gt;identifier</span><span class='words_sep'>
+    </span><span class='tstring_content'>namespace-syntax-introduce</span><span class='words_sep'> </span><span class='tstring_content'>namespace-undefine-variable!</span><span class='words_sep'>
+    </span><span class='tstring_content'>namespace-unprotect-module</span><span class='words_sep'> </span><span class='tstring_content'>namespace-variable-value</span><span class='words_sep'>
+    </span><span class='tstring_content'>namespace?</span><span class='words_sep'> </span><span class='tstring_content'>negative?</span><span class='words_sep'> </span><span class='tstring_content'>never-evt</span><span class='words_sep'> </span><span class='tstring_content'>newline</span><span class='words_sep'> </span><span class='tstring_content'>normal-case-path</span><span class='words_sep'> </span><span class='tstring_content'>not</span><span class='words_sep'>
+    </span><span class='tstring_content'>null</span><span class='words_sep'> </span><span class='tstring_content'>null?</span><span class='words_sep'> </span><span class='tstring_content'>number-&gt;string</span><span class='words_sep'> </span><span class='tstring_content'>number?</span><span class='words_sep'> </span><span class='tstring_content'>numerator</span><span class='words_sep'> </span><span class='tstring_content'>object-name</span><span class='words_sep'> </span><span class='tstring_content'>odd?</span><span class='words_sep'>
+    </span><span class='tstring_content'>open-input-bytes</span><span class='words_sep'> </span><span class='tstring_content'>open-input-file</span><span class='words_sep'> </span><span class='tstring_content'>open-input-output-file</span><span class='words_sep'>
+    </span><span class='tstring_content'>open-input-string</span><span class='words_sep'> </span><span class='tstring_content'>open-output-bytes</span><span class='words_sep'> </span><span class='tstring_content'>open-output-file</span><span class='words_sep'>
+    </span><span class='tstring_content'>open-output-string</span><span class='words_sep'> </span><span class='tstring_content'>ormap</span><span class='words_sep'> </span><span class='tstring_content'>output-port?</span><span class='words_sep'> </span><span class='tstring_content'>pair?</span><span class='words_sep'>
+    </span><span class='tstring_content'>parameter-procedure=?</span><span class='words_sep'> </span><span class='tstring_content'>parameter?</span><span class='words_sep'> </span><span class='tstring_content'>parameterization?</span><span class='words_sep'>
+    </span><span class='tstring_content'>path-&gt;bytes</span><span class='words_sep'> </span><span class='tstring_content'>path-&gt;complete-path</span><span class='words_sep'> </span><span class='tstring_content'>path-&gt;directory-path</span><span class='words_sep'>
+    </span><span class='tstring_content'>path-&gt;string</span><span class='words_sep'> </span><span class='tstring_content'>path-add-suffix</span><span class='words_sep'> </span><span class='tstring_content'>path-convention-type</span><span class='words_sep'>
+    </span><span class='tstring_content'>path-element-&gt;bytes</span><span class='words_sep'> </span><span class='tstring_content'>path-element-&gt;string</span><span class='words_sep'>
+    </span><span class='tstring_content'>path-for-some-system?</span><span class='words_sep'> </span><span class='tstring_content'>path-list-string-&gt;path-list</span><span class='words_sep'>
+    </span><span class='tstring_content'>path-replace-suffix</span><span class='words_sep'> </span><span class='tstring_content'>path-string?</span><span class='words_sep'> </span><span class='tstring_content'>path?</span><span class='words_sep'> </span><span class='tstring_content'>peek-byte</span><span class='words_sep'>
+    </span><span class='tstring_content'>peek-byte-or-special</span><span class='words_sep'> </span><span class='tstring_content'>peek-bytes</span><span class='words_sep'> </span><span class='tstring_content'>peek-bytes!</span><span class='words_sep'>
+    </span><span class='tstring_content'>peek-bytes-avail!</span><span class='words_sep'> </span><span class='tstring_content'>peek-bytes-avail!*</span><span class='words_sep'>
+    </span><span class='tstring_content'>peek-bytes-avail!/enable-break</span><span class='words_sep'> </span><span class='tstring_content'>peek-char</span><span class='words_sep'>
+    </span><span class='tstring_content'>peek-char-or-special</span><span class='words_sep'> </span><span class='tstring_content'>peek-string</span><span class='words_sep'> </span><span class='tstring_content'>peek-string!</span><span class='words_sep'> </span><span class='tstring_content'>phantom-bytes?</span><span class='words_sep'>
+    </span><span class='tstring_content'>pipe-content-length</span><span class='words_sep'> </span><span class='tstring_content'>placeholder-get</span><span class='words_sep'> </span><span class='tstring_content'>placeholder-set!</span><span class='words_sep'>
+    </span><span class='tstring_content'>placeholder?</span><span class='words_sep'> </span><span class='tstring_content'>poll-guard-evt</span><span class='words_sep'> </span><span class='tstring_content'>port-closed-evt</span><span class='words_sep'> </span><span class='tstring_content'>port-closed?</span><span class='words_sep'>
+    </span><span class='tstring_content'>port-commit-peeked</span><span class='words_sep'> </span><span class='tstring_content'>port-count-lines!</span><span class='words_sep'>
+    </span><span class='tstring_content'>port-count-lines-enabled</span><span class='words_sep'> </span><span class='tstring_content'>port-counts-lines?</span><span class='words_sep'>
+    </span><span class='tstring_content'>port-display-handler</span><span class='words_sep'> </span><span class='tstring_content'>port-file-identity</span><span class='words_sep'> </span><span class='tstring_content'>port-file-unlock</span><span class='words_sep'>
+    </span><span class='tstring_content'>port-next-location</span><span class='words_sep'> </span><span class='tstring_content'>port-print-handler</span><span class='words_sep'> </span><span class='tstring_content'>port-progress-evt</span><span class='words_sep'>
+    </span><span class='tstring_content'>port-provides-progress-evts?</span><span class='words_sep'> </span><span class='tstring_content'>port-read-handler</span><span class='words_sep'>
+    </span><span class='tstring_content'>port-try-file-lock?</span><span class='words_sep'> </span><span class='tstring_content'>port-write-handler</span><span class='words_sep'> </span><span class='tstring_content'>port-writes-atomic?</span><span class='words_sep'>
+    </span><span class='tstring_content'>port-writes-special?</span><span class='words_sep'> </span><span class='tstring_content'>port?</span><span class='words_sep'> </span><span class='tstring_content'>positive?</span><span class='words_sep'> </span><span class='tstring_content'>prefab-key-&gt;struct-type</span><span class='words_sep'>
+    </span><span class='tstring_content'>prefab-key?</span><span class='words_sep'> </span><span class='tstring_content'>prefab-struct-key</span><span class='words_sep'> </span><span class='tstring_content'>pregexp</span><span class='words_sep'> </span><span class='tstring_content'>pregexp?</span><span class='words_sep'>
+    </span><span class='tstring_content'>primitive-closure?</span><span class='words_sep'> </span><span class='tstring_content'>primitive-result-arity</span><span class='words_sep'> </span><span class='tstring_content'>primitive?</span><span class='words_sep'> </span><span class='tstring_content'>print</span><span class='words_sep'>
+    </span><span class='tstring_content'>print-as-expression</span><span class='words_sep'> </span><span class='tstring_content'>print-boolean-long-form</span><span class='words_sep'> </span><span class='tstring_content'>print-box</span><span class='words_sep'>
+    </span><span class='tstring_content'>print-graph</span><span class='words_sep'> </span><span class='tstring_content'>print-hash-table</span><span class='words_sep'> </span><span class='tstring_content'>print-mpair-curly-braces</span><span class='words_sep'>
+    </span><span class='tstring_content'>print-pair-curly-braces</span><span class='words_sep'> </span><span class='tstring_content'>print-reader-abbreviations</span><span class='words_sep'>
+    </span><span class='tstring_content'>print-struct</span><span class='words_sep'> </span><span class='tstring_content'>print-syntax-width</span><span class='words_sep'> </span><span class='tstring_content'>print-unreadable</span><span class='words_sep'>
+    </span><span class='tstring_content'>print-vector-length</span><span class='words_sep'> </span><span class='tstring_content'>printf</span><span class='words_sep'> </span><span class='tstring_content'>procedure-&gt;method</span><span class='words_sep'> </span><span class='tstring_content'>procedure-arity</span><span class='words_sep'>
+    </span><span class='tstring_content'>procedure-arity-includes?</span><span class='words_sep'> </span><span class='tstring_content'>procedure-arity?</span><span class='words_sep'>
+    </span><span class='tstring_content'>procedure-closure-contents-eq?</span><span class='words_sep'> </span><span class='tstring_content'>procedure-extract-target</span><span class='words_sep'>
+    </span><span class='tstring_content'>procedure-reduce-arity</span><span class='words_sep'> </span><span class='tstring_content'>procedure-rename</span><span class='words_sep'>
+    </span><span class='tstring_content'>procedure-struct-type?</span><span class='words_sep'> </span><span class='tstring_content'>procedure?</span><span class='words_sep'> </span><span class='tstring_content'>progress-evt?</span><span class='words_sep'>
+    </span><span class='tstring_content'>prop:arity-string</span><span class='words_sep'> </span><span class='tstring_content'>prop:checked-procedure</span><span class='words_sep'>
+    </span><span class='tstring_content'>prop:custom-print-quotable</span><span class='words_sep'> </span><span class='tstring_content'>prop:custom-write</span><span class='words_sep'> </span><span class='tstring_content'>prop:equal+hash</span><span class='words_sep'>
+    </span><span class='tstring_content'>prop:evt</span><span class='words_sep'> </span><span class='tstring_content'>prop:exn:missing-module</span><span class='words_sep'> </span><span class='tstring_content'>prop:exn:srclocs</span><span class='words_sep'>
+    </span><span class='tstring_content'>prop:impersonator-of</span><span class='words_sep'> </span><span class='tstring_content'>prop:input-port</span><span class='words_sep'>
+    </span><span class='tstring_content'>prop:liberal-define-context</span><span class='words_sep'> </span><span class='tstring_content'>prop:output-port</span><span class='words_sep'> </span><span class='tstring_content'>prop:procedure</span><span class='words_sep'>
+    </span><span class='tstring_content'>prop:rename-transformer</span><span class='words_sep'> </span><span class='tstring_content'>prop:set!-transformer</span><span class='words_sep'>
+    </span><span class='tstring_content'>pseudo-random-generator-&gt;vector</span><span class='words_sep'>
+    </span><span class='tstring_content'>pseudo-random-generator-vector?</span><span class='words_sep'> </span><span class='tstring_content'>pseudo-random-generator?</span><span class='words_sep'>
+    </span><span class='tstring_content'>putenv</span><span class='words_sep'> </span><span class='tstring_content'>quotient</span><span class='words_sep'> </span><span class='tstring_content'>quotient/remainder</span><span class='words_sep'> </span><span class='tstring_content'>raise</span><span class='words_sep'>
+    </span><span class='tstring_content'>raise-argument-error</span><span class='words_sep'> </span><span class='tstring_content'>raise-arguments-error</span><span class='words_sep'> </span><span class='tstring_content'>raise-arity-error</span><span class='words_sep'>
+    </span><span class='tstring_content'>raise-mismatch-error</span><span class='words_sep'> </span><span class='tstring_content'>raise-range-error</span><span class='words_sep'> </span><span class='tstring_content'>raise-result-error</span><span class='words_sep'>
+    </span><span class='tstring_content'>raise-syntax-error</span><span class='words_sep'> </span><span class='tstring_content'>raise-type-error</span><span class='words_sep'> </span><span class='tstring_content'>raise-user-error</span><span class='words_sep'> </span><span class='tstring_content'>random</span><span class='words_sep'>
+    </span><span class='tstring_content'>random-seed</span><span class='words_sep'> </span><span class='tstring_content'>rational?</span><span class='words_sep'> </span><span class='tstring_content'>rationalize</span><span class='words_sep'> </span><span class='tstring_content'>read</span><span class='words_sep'> </span><span class='tstring_content'>read-accept-bar-quote</span><span class='words_sep'>
+    </span><span class='tstring_content'>read-accept-box</span><span class='words_sep'> </span><span class='tstring_content'>read-accept-compiled</span><span class='words_sep'> </span><span class='tstring_content'>read-accept-dot</span><span class='words_sep'>
+    </span><span class='tstring_content'>read-accept-graph</span><span class='words_sep'> </span><span class='tstring_content'>read-accept-infix-dot</span><span class='words_sep'> </span><span class='tstring_content'>read-accept-lang</span><span class='words_sep'>
+    </span><span class='tstring_content'>read-accept-quasiquote</span><span class='words_sep'> </span><span class='tstring_content'>read-accept-reader</span><span class='words_sep'> </span><span class='tstring_content'>read-byte</span><span class='words_sep'>
+    </span><span class='tstring_content'>read-byte-or-special</span><span class='words_sep'> </span><span class='tstring_content'>read-bytes</span><span class='words_sep'> </span><span class='tstring_content'>read-bytes!</span><span class='words_sep'>
+    </span><span class='tstring_content'>read-bytes-avail!</span><span class='words_sep'> </span><span class='tstring_content'>read-bytes-avail!*</span><span class='words_sep'>
+    </span><span class='tstring_content'>read-bytes-avail!/enable-break</span><span class='words_sep'> </span><span class='tstring_content'>read-bytes-line</span><span class='words_sep'>
+    </span><span class='tstring_content'>read-case-sensitive</span><span class='words_sep'> </span><span class='tstring_content'>read-char</span><span class='words_sep'> </span><span class='tstring_content'>read-char-or-special</span><span class='words_sep'>
+    </span><span class='tstring_content'>read-curly-brace-as-paren</span><span class='words_sep'> </span><span class='tstring_content'>read-decimal-as-inexact</span><span class='words_sep'>
+    </span><span class='tstring_content'>read-eval-print-loop</span><span class='words_sep'> </span><span class='tstring_content'>read-language</span><span class='words_sep'> </span><span class='tstring_content'>read-line</span><span class='words_sep'>
+    </span><span class='tstring_content'>read-on-demand-source</span><span class='words_sep'> </span><span class='tstring_content'>read-square-bracket-as-paren</span><span class='words_sep'>
+    </span><span class='tstring_content'>read-string</span><span class='words_sep'> </span><span class='tstring_content'>read-string!</span><span class='words_sep'> </span><span class='tstring_content'>read-syntax</span><span class='words_sep'> </span><span class='tstring_content'>read-syntax/recursive</span><span class='words_sep'>
+    </span><span class='tstring_content'>read/recursive</span><span class='words_sep'> </span><span class='tstring_content'>readtable-mapping</span><span class='words_sep'> </span><span class='tstring_content'>readtable?</span><span class='words_sep'>
+    </span><span class='tstring_content'>real-&gt;double-flonum</span><span class='words_sep'> </span><span class='tstring_content'>real-&gt;floating-point-bytes</span><span class='words_sep'>
+    </span><span class='tstring_content'>real-&gt;single-flonum</span><span class='words_sep'> </span><span class='tstring_content'>real-part</span><span class='words_sep'> </span><span class='tstring_content'>real?</span><span class='words_sep'> </span><span class='tstring_content'>regexp</span><span class='words_sep'> </span><span class='tstring_content'>regexp-match</span><span class='words_sep'>
+    </span><span class='tstring_content'>regexp-match-peek</span><span class='words_sep'> </span><span class='tstring_content'>regexp-match-peek-immediate</span><span class='words_sep'>
+    </span><span class='tstring_content'>regexp-match-peek-positions</span><span class='words_sep'>
+    </span><span class='tstring_content'>regexp-match-peek-positions-immediate</span><span class='words_sep'>
+    </span><span class='tstring_content'>regexp-match-peek-positions-immediate/end</span><span class='words_sep'>
+    </span><span class='tstring_content'>regexp-match-peek-positions/end</span><span class='words_sep'> </span><span class='tstring_content'>regexp-match-positions</span><span class='words_sep'>
+    </span><span class='tstring_content'>regexp-match-positions/end</span><span class='words_sep'> </span><span class='tstring_content'>regexp-match/end</span><span class='words_sep'> </span><span class='tstring_content'>regexp-match?</span><span class='words_sep'>
+    </span><span class='tstring_content'>regexp-max-lookbehind</span><span class='words_sep'> </span><span class='tstring_content'>regexp-replace</span><span class='words_sep'> </span><span class='tstring_content'>regexp-replace*</span><span class='words_sep'> </span><span class='tstring_content'>regexp?</span><span class='words_sep'>
+    </span><span class='tstring_content'>relative-path?</span><span class='words_sep'> </span><span class='tstring_content'>remainder</span><span class='words_sep'> </span><span class='tstring_content'>rename-file-or-directory</span><span class='words_sep'>
+    </span><span class='tstring_content'>rename-transformer-target</span><span class='words_sep'> </span><span class='tstring_content'>rename-transformer?</span><span class='words_sep'> </span><span class='tstring_content'>reroot-path</span><span class='words_sep'>
+    </span><span class='tstring_content'>resolve-path</span><span class='words_sep'> </span><span class='tstring_content'>resolved-module-path-name</span><span class='words_sep'> </span><span class='tstring_content'>resolved-module-path?</span><span class='words_sep'>
+    </span><span class='tstring_content'>reverse</span><span class='words_sep'> </span><span class='tstring_content'>round</span><span class='words_sep'> </span><span class='tstring_content'>seconds-&gt;date</span><span class='words_sep'> </span><span class='tstring_content'>security-guard?</span><span class='words_sep'>
+    </span><span class='tstring_content'>semaphore-peek-evt</span><span class='words_sep'> </span><span class='tstring_content'>semaphore-peek-evt?</span><span class='words_sep'> </span><span class='tstring_content'>semaphore-post</span><span class='words_sep'>
+    </span><span class='tstring_content'>semaphore-try-wait?</span><span class='words_sep'> </span><span class='tstring_content'>semaphore-wait</span><span class='words_sep'>
+    </span><span class='tstring_content'>semaphore-wait/enable-break</span><span class='words_sep'> </span><span class='tstring_content'>semaphore?</span><span class='words_sep'>
+    </span><span class='tstring_content'>set!-transformer-procedure</span><span class='words_sep'> </span><span class='tstring_content'>set!-transformer?</span><span class='words_sep'> </span><span class='tstring_content'>set-box!</span><span class='words_sep'>
+    </span><span class='tstring_content'>set-mcar!</span><span class='words_sep'> </span><span class='tstring_content'>set-mcdr!</span><span class='words_sep'> </span><span class='tstring_content'>set-phantom-bytes!</span><span class='words_sep'>
+    </span><span class='tstring_content'>set-port-next-location!</span><span class='words_sep'> </span><span class='tstring_content'>shared-bytes</span><span class='words_sep'> </span><span class='tstring_content'>shell-execute</span><span class='words_sep'>
+    </span><span class='tstring_content'>simplify-path</span><span class='words_sep'> </span><span class='tstring_content'>sin</span><span class='words_sep'> </span><span class='tstring_content'>single-flonum?</span><span class='words_sep'> </span><span class='tstring_content'>sleep</span><span class='words_sep'> </span><span class='tstring_content'>special-comment-value</span><span class='words_sep'>
+    </span><span class='tstring_content'>special-comment?</span><span class='words_sep'> </span><span class='tstring_content'>split-path</span><span class='words_sep'> </span><span class='tstring_content'>sqrt</span><span class='words_sep'> </span><span class='tstring_content'>srcloc</span><span class='words_sep'> </span><span class='tstring_content'>srcloc-&gt;string</span><span class='words_sep'>
+    </span><span class='tstring_content'>srcloc-column</span><span class='words_sep'> </span><span class='tstring_content'>srcloc-line</span><span class='words_sep'> </span><span class='tstring_content'>srcloc-position</span><span class='words_sep'> </span><span class='tstring_content'>srcloc-source</span><span class='words_sep'>
+    </span><span class='tstring_content'>srcloc-span</span><span class='words_sep'> </span><span class='tstring_content'>srcloc?</span><span class='words_sep'> </span><span class='tstring_content'>string</span><span class='words_sep'> </span><span class='tstring_content'>string-&gt;bytes/latin-1</span><span class='words_sep'>
+    </span><span class='tstring_content'>string-&gt;bytes/locale</span><span class='words_sep'> </span><span class='tstring_content'>string-&gt;bytes/utf-8</span><span class='words_sep'>
+    </span><span class='tstring_content'>string-&gt;immutable-string</span><span class='words_sep'> </span><span class='tstring_content'>string-&gt;keyword</span><span class='words_sep'> </span><span class='tstring_content'>string-&gt;list</span><span class='words_sep'>
+    </span><span class='tstring_content'>string-&gt;number</span><span class='words_sep'> </span><span class='tstring_content'>string-&gt;path</span><span class='words_sep'> </span><span class='tstring_content'>string-&gt;path-element</span><span class='words_sep'>
+    </span><span class='tstring_content'>string-&gt;symbol</span><span class='words_sep'> </span><span class='tstring_content'>string-&gt;uninterned-symbol</span><span class='words_sep'>
+    </span><span class='tstring_content'>string-&gt;unreadable-symbol</span><span class='words_sep'> </span><span class='tstring_content'>string-append</span><span class='words_sep'> </span><span class='tstring_content'>string-ci&lt;=?</span><span class='words_sep'>
+    </span><span class='tstring_content'>string-ci&lt;?</span><span class='words_sep'> </span><span class='tstring_content'>string-ci=?</span><span class='words_sep'> </span><span class='tstring_content'>string-ci&gt;=?</span><span class='words_sep'> </span><span class='tstring_content'>string-ci&gt;?</span><span class='words_sep'> </span><span class='tstring_content'>string-copy</span><span class='words_sep'>
+    </span><span class='tstring_content'>string-copy!</span><span class='words_sep'> </span><span class='tstring_content'>string-downcase</span><span class='words_sep'>
+    </span><span class='tstring_content'>string-environment-variable-name?</span><span class='words_sep'> </span><span class='tstring_content'>string-fill!</span><span class='words_sep'>
+    </span><span class='tstring_content'>string-foldcase</span><span class='words_sep'> </span><span class='tstring_content'>string-length</span><span class='words_sep'> </span><span class='tstring_content'>string-locale-ci&lt;?</span><span class='words_sep'>
+    </span><span class='tstring_content'>string-locale-ci=?</span><span class='words_sep'> </span><span class='tstring_content'>string-locale-ci&gt;?</span><span class='words_sep'> </span><span class='tstring_content'>string-locale-downcase</span><span class='words_sep'>
+    </span><span class='tstring_content'>string-locale-upcase</span><span class='words_sep'> </span><span class='tstring_content'>string-locale&lt;?</span><span class='words_sep'> </span><span class='tstring_content'>string-locale=?</span><span class='words_sep'>
+    </span><span class='tstring_content'>string-locale&gt;?</span><span class='words_sep'> </span><span class='tstring_content'>string-normalize-nfc</span><span class='words_sep'> </span><span class='tstring_content'>string-normalize-nfd</span><span class='words_sep'>
+    </span><span class='tstring_content'>string-normalize-nfkc</span><span class='words_sep'> </span><span class='tstring_content'>string-normalize-nfkd</span><span class='words_sep'> </span><span class='tstring_content'>string-ref</span><span class='words_sep'>
+    </span><span class='tstring_content'>string-set!</span><span class='words_sep'> </span><span class='tstring_content'>string-titlecase</span><span class='words_sep'> </span><span class='tstring_content'>string-upcase</span><span class='words_sep'>
+    </span><span class='tstring_content'>string-utf-8-length</span><span class='words_sep'> </span><span class='tstring_content'>string&lt;=?</span><span class='words_sep'> </span><span class='tstring_content'>string&lt;?</span><span class='words_sep'> </span><span class='tstring_content'>string=?</span><span class='words_sep'> </span><span class='tstring_content'>string&gt;=?</span><span class='words_sep'>
+    </span><span class='tstring_content'>string&gt;?</span><span class='words_sep'> </span><span class='tstring_content'>string?</span><span class='words_sep'> </span><span class='tstring_content'>struct-&gt;vector</span><span class='words_sep'> </span><span class='tstring_content'>struct-accessor-procedure?</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct-constructor-procedure?</span><span class='words_sep'> </span><span class='tstring_content'>struct-info</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct-mutator-procedure?</span><span class='words_sep'> </span><span class='tstring_content'>struct-predicate-procedure?</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct-type-info</span><span class='words_sep'> </span><span class='tstring_content'>struct-type-make-constructor</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct-type-make-predicate</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct-type-property-accessor-procedure?</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct-type-property?</span><span class='words_sep'> </span><span class='tstring_content'>struct-type?</span><span class='words_sep'> </span><span class='tstring_content'>struct:arity-at-least</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct:date</span><span class='words_sep'> </span><span class='tstring_content'>struct:date*</span><span class='words_sep'> </span><span class='tstring_content'>struct:exn</span><span class='words_sep'> </span><span class='tstring_content'>struct:exn:break</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct:exn:break:hang-up</span><span class='words_sep'> </span><span class='tstring_content'>struct:exn:break:terminate</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct:exn:fail</span><span class='words_sep'> </span><span class='tstring_content'>struct:exn:fail:contract</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct:exn:fail:contract:arity</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct:exn:fail:contract:continuation</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct:exn:fail:contract:divide-by-zero</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct:exn:fail:contract:non-fixnum-result</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct:exn:fail:contract:variable</span><span class='words_sep'> </span><span class='tstring_content'>struct:exn:fail:filesystem</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct:exn:fail:filesystem:errno</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct:exn:fail:filesystem:exists</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct:exn:fail:filesystem:missing-module</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct:exn:fail:filesystem:version</span><span class='words_sep'> </span><span class='tstring_content'>struct:exn:fail:network</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct:exn:fail:network:errno</span><span class='words_sep'> </span><span class='tstring_content'>struct:exn:fail:out-of-memory</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct:exn:fail:read</span><span class='words_sep'> </span><span class='tstring_content'>struct:exn:fail:read:eof</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct:exn:fail:read:non-char</span><span class='words_sep'> </span><span class='tstring_content'>struct:exn:fail:syntax</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct:exn:fail:syntax:missing-module</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct:exn:fail:syntax:unbound</span><span class='words_sep'> </span><span class='tstring_content'>struct:exn:fail:unsupported</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct:exn:fail:user</span><span class='words_sep'> </span><span class='tstring_content'>struct:srcloc</span><span class='words_sep'> </span><span class='tstring_content'>struct?</span><span class='words_sep'> </span><span class='tstring_content'>sub1</span><span class='words_sep'> </span><span class='tstring_content'>subbytes</span><span class='words_sep'>
+    </span><span class='tstring_content'>subprocess</span><span class='words_sep'> </span><span class='tstring_content'>subprocess-group-enabled</span><span class='words_sep'> </span><span class='tstring_content'>subprocess-kill</span><span class='words_sep'>
+    </span><span class='tstring_content'>subprocess-pid</span><span class='words_sep'> </span><span class='tstring_content'>subprocess-status</span><span class='words_sep'> </span><span class='tstring_content'>subprocess-wait</span><span class='words_sep'> </span><span class='tstring_content'>subprocess?</span><span class='words_sep'>
+    </span><span class='tstring_content'>substring</span><span class='words_sep'> </span><span class='tstring_content'>symbol-&gt;string</span><span class='words_sep'> </span><span class='tstring_content'>symbol-interned?</span><span class='words_sep'> </span><span class='tstring_content'>symbol-unreadable?</span><span class='words_sep'>
+    </span><span class='tstring_content'>symbol?</span><span class='words_sep'> </span><span class='tstring_content'>sync</span><span class='words_sep'> </span><span class='tstring_content'>sync/enable-break</span><span class='words_sep'> </span><span class='tstring_content'>sync/timeout</span><span class='words_sep'>
+    </span><span class='tstring_content'>sync/timeout/enable-break</span><span class='words_sep'> </span><span class='tstring_content'>syntax-&gt;list</span><span class='words_sep'> </span><span class='tstring_content'>syntax-arm</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-column</span><span class='words_sep'> </span><span class='tstring_content'>syntax-disarm</span><span class='words_sep'> </span><span class='tstring_content'>syntax-e</span><span class='words_sep'> </span><span class='tstring_content'>syntax-line</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-local-bind-syntaxes</span><span class='words_sep'> </span><span class='tstring_content'>syntax-local-certifier</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-local-context</span><span class='words_sep'> </span><span class='tstring_content'>syntax-local-expand-expression</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-local-get-shadower</span><span class='words_sep'> </span><span class='tstring_content'>syntax-local-introduce</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-local-lift-context</span><span class='words_sep'> </span><span class='tstring_content'>syntax-local-lift-expression</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-local-lift-module-end-declaration</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-local-lift-provide</span><span class='words_sep'> </span><span class='tstring_content'>syntax-local-lift-require</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-local-lift-values-expression</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-local-make-definition-context</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-local-make-delta-introducer</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-local-module-defined-identifiers</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-local-module-exports</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-local-module-required-identifiers</span><span class='words_sep'> </span><span class='tstring_content'>syntax-local-name</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-local-phase-level</span><span class='words_sep'> </span><span class='tstring_content'>syntax-local-submodules</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-local-transforming-module-provides?</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-local-value</span><span class='words_sep'> </span><span class='tstring_content'>syntax-local-value/immediate</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-original?</span><span class='words_sep'> </span><span class='tstring_content'>syntax-position</span><span class='words_sep'> </span><span class='tstring_content'>syntax-property</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-property-symbol-keys</span><span class='words_sep'> </span><span class='tstring_content'>syntax-protect</span><span class='words_sep'> </span><span class='tstring_content'>syntax-rearm</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-recertify</span><span class='words_sep'> </span><span class='tstring_content'>syntax-shift-phase-level</span><span class='words_sep'> </span><span class='tstring_content'>syntax-source</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-source-module</span><span class='words_sep'> </span><span class='tstring_content'>syntax-span</span><span class='words_sep'> </span><span class='tstring_content'>syntax-taint</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-tainted?</span><span class='words_sep'> </span><span class='tstring_content'>syntax-track-origin</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-transforming-module-expression?</span><span class='words_sep'> </span><span class='tstring_content'>syntax-transforming?</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax?</span><span class='words_sep'> </span><span class='tstring_content'>system-big-endian?</span><span class='words_sep'> </span><span class='tstring_content'>system-idle-evt</span><span class='words_sep'>
+    </span><span class='tstring_content'>system-language+country</span><span class='words_sep'> </span><span class='tstring_content'>system-library-subpath</span><span class='words_sep'>
+    </span><span class='tstring_content'>system-path-convention-type</span><span class='words_sep'> </span><span class='tstring_content'>system-type</span><span class='words_sep'> </span><span class='tstring_content'>tan</span><span class='words_sep'> </span><span class='tstring_content'>terminal-port?</span><span class='words_sep'>
+    </span><span class='tstring_content'>thread</span><span class='words_sep'> </span><span class='tstring_content'>thread-cell-ref</span><span class='words_sep'> </span><span class='tstring_content'>thread-cell-set!</span><span class='words_sep'> </span><span class='tstring_content'>thread-cell-values?</span><span class='words_sep'>
+    </span><span class='tstring_content'>thread-cell?</span><span class='words_sep'> </span><span class='tstring_content'>thread-dead-evt</span><span class='words_sep'> </span><span class='tstring_content'>thread-dead?</span><span class='words_sep'> </span><span class='tstring_content'>thread-group?</span><span class='words_sep'>
+    </span><span class='tstring_content'>thread-resume</span><span class='words_sep'> </span><span class='tstring_content'>thread-resume-evt</span><span class='words_sep'> </span><span class='tstring_content'>thread-rewind-receive</span><span class='words_sep'>
+    </span><span class='tstring_content'>thread-running?</span><span class='words_sep'> </span><span class='tstring_content'>thread-suspend</span><span class='words_sep'> </span><span class='tstring_content'>thread-suspend-evt</span><span class='words_sep'>
+    </span><span class='tstring_content'>thread-wait</span><span class='words_sep'> </span><span class='tstring_content'>thread/suspend-to-kill</span><span class='words_sep'> </span><span class='tstring_content'>thread?</span><span class='words_sep'> </span><span class='tstring_content'>time-apply</span><span class='words_sep'>
+    </span><span class='tstring_content'>truncate</span><span class='words_sep'> </span><span class='tstring_content'>unbox</span><span class='words_sep'> </span><span class='tstring_content'>uncaught-exception-handler</span><span class='words_sep'>
+    </span><span class='tstring_content'>use-collection-link-paths</span><span class='words_sep'> </span><span class='tstring_content'>use-compiled-file-paths</span><span class='words_sep'>
+    </span><span class='tstring_content'>use-user-specific-search-paths</span><span class='words_sep'> </span><span class='tstring_content'>values</span><span class='words_sep'>
+    </span><span class='tstring_content'>variable-reference-&gt;empty-namespace</span><span class='words_sep'>
+    </span><span class='tstring_content'>variable-reference-&gt;module-base-phase</span><span class='words_sep'>
+    </span><span class='tstring_content'>variable-reference-&gt;module-declaration-inspector</span><span class='words_sep'>
+    </span><span class='tstring_content'>variable-reference-&gt;module-path-index</span><span class='words_sep'>
+    </span><span class='tstring_content'>variable-reference-&gt;module-source</span><span class='words_sep'>
+    </span><span class='tstring_content'>variable-reference-&gt;namespace</span><span class='words_sep'> </span><span class='tstring_content'>variable-reference-&gt;phase</span><span class='words_sep'>
+    </span><span class='tstring_content'>variable-reference-&gt;resolved-module-path</span><span class='words_sep'>
+    </span><span class='tstring_content'>variable-reference-constant?</span><span class='words_sep'> </span><span class='tstring_content'>variable-reference?</span><span class='words_sep'> </span><span class='tstring_content'>vector</span><span class='words_sep'>
+    </span><span class='tstring_content'>vector-&gt;immutable-vector</span><span class='words_sep'> </span><span class='tstring_content'>vector-&gt;list</span><span class='words_sep'>
+    </span><span class='tstring_content'>vector-&gt;pseudo-random-generator</span><span class='words_sep'>
+    </span><span class='tstring_content'>vector-&gt;pseudo-random-generator!</span><span class='words_sep'> </span><span class='tstring_content'>vector-&gt;values</span><span class='words_sep'> </span><span class='tstring_content'>vector-fill!</span><span class='words_sep'>
+    </span><span class='tstring_content'>vector-immutable</span><span class='words_sep'> </span><span class='tstring_content'>vector-length</span><span class='words_sep'> </span><span class='tstring_content'>vector-ref</span><span class='words_sep'> </span><span class='tstring_content'>vector-set!</span><span class='words_sep'>
+    </span><span class='tstring_content'>vector-set-performance-stats!</span><span class='words_sep'> </span><span class='tstring_content'>vector?</span><span class='words_sep'> </span><span class='tstring_content'>version</span><span class='words_sep'> </span><span class='tstring_content'>void</span><span class='words_sep'> </span><span class='tstring_content'>void?</span><span class='words_sep'>
+    </span><span class='tstring_content'>weak-box-value</span><span class='words_sep'> </span><span class='tstring_content'>weak-box?</span><span class='words_sep'> </span><span class='tstring_content'>will-execute</span><span class='words_sep'> </span><span class='tstring_content'>will-executor?</span><span class='words_sep'>
+    </span><span class='tstring_content'>will-register</span><span class='words_sep'> </span><span class='tstring_content'>will-try-execute</span><span class='words_sep'> </span><span class='tstring_content'>with-input-from-file</span><span class='words_sep'>
+    </span><span class='tstring_content'>with-output-to-file</span><span class='words_sep'> </span><span class='tstring_content'>wrap-evt</span><span class='words_sep'> </span><span class='tstring_content'>write</span><span class='words_sep'> </span><span class='tstring_content'>write-byte</span><span class='words_sep'> </span><span class='tstring_content'>write-bytes</span><span class='words_sep'>
+    </span><span class='tstring_content'>write-bytes-avail</span><span class='words_sep'> </span><span class='tstring_content'>write-bytes-avail*</span><span class='words_sep'> </span><span class='tstring_content'>write-bytes-avail-evt</span><span class='words_sep'>
+    </span><span class='tstring_content'>write-bytes-avail/enable-break</span><span class='words_sep'> </span><span class='tstring_content'>write-char</span><span class='words_sep'> </span><span class='tstring_content'>write-special</span><span class='words_sep'>
+    </span><span class='tstring_content'>write-special-avail*</span><span class='words_sep'> </span><span class='tstring_content'>write-special-evt</span><span class='words_sep'> </span><span class='tstring_content'>write-string</span><span class='words_sep'> </span><span class='tstring_content'>zero?</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="detect?-class_method">
+  
+    .<strong>detect?</strong>(text)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/racket.rb', line 14</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_detect?'>detect?</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_text'>text</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\A#lang\s*(.*?)$</span><span class='regexp_end'>/</span></span>
+  <span class='id identifier rubyid_lang_attr'>lang_attr</span> <span class='op'>=</span> <span class='backref'>$1</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_lang_attr'>lang_attr</span>
+  <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_lang_attr'>lang_attr</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>racket|scribble</span><span class='regexp_end'>/</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="keywords-class_method">
+  
+    .<strong>keywords</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/racket.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>
+  <span class='ivar'>@keywords</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>...</span><span class='words_sep'> </span><span class='tstring_content'>and</span><span class='words_sep'> </span><span class='tstring_content'>begin</span><span class='words_sep'> </span><span class='tstring_content'>begin-for-syntax</span><span class='words_sep'> </span><span class='tstring_content'>begin0</span><span class='words_sep'> </span><span class='tstring_content'>case</span><span class='words_sep'> </span><span class='tstring_content'>case-lambda</span><span class='words_sep'> </span><span class='tstring_content'>cond</span><span class='words_sep'>
+    </span><span class='tstring_content'>datum-&gt;syntax-object</span><span class='words_sep'> </span><span class='tstring_content'>define</span><span class='words_sep'> </span><span class='tstring_content'>define-for-syntax</span><span class='words_sep'> </span><span class='tstring_content'>define-logger</span><span class='words_sep'>
+    </span><span class='tstring_content'>define-struct</span><span class='words_sep'> </span><span class='tstring_content'>define-syntax</span><span class='words_sep'> </span><span class='tstring_content'>define-syntax-rule</span><span class='words_sep'>
+    </span><span class='tstring_content'>define-syntaxes</span><span class='words_sep'> </span><span class='tstring_content'>define-values</span><span class='words_sep'> </span><span class='tstring_content'>define-values-for-syntax</span><span class='words_sep'> </span><span class='tstring_content'>delay</span><span class='words_sep'>
+    </span><span class='tstring_content'>do</span><span class='words_sep'> </span><span class='tstring_content'>expand-path</span><span class='words_sep'> </span><span class='tstring_content'>fluid-let</span><span class='words_sep'> </span><span class='tstring_content'>force</span><span class='words_sep'> </span><span class='tstring_content'>hash-table-copy</span><span class='words_sep'>
+    </span><span class='tstring_content'>hash-table-count</span><span class='words_sep'> </span><span class='tstring_content'>hash-table-for-each</span><span class='words_sep'> </span><span class='tstring_content'>hash-table-get</span><span class='words_sep'>
+    </span><span class='tstring_content'>hash-table-iterate-first</span><span class='words_sep'> </span><span class='tstring_content'>hash-table-iterate-key</span><span class='words_sep'>
+    </span><span class='tstring_content'>hash-table-iterate-next</span><span class='words_sep'> </span><span class='tstring_content'>hash-table-iterate-value</span><span class='words_sep'>
+    </span><span class='tstring_content'>hash-table-map</span><span class='words_sep'> </span><span class='tstring_content'>hash-table-put!</span><span class='words_sep'> </span><span class='tstring_content'>hash-table-remove!</span><span class='words_sep'>
+    </span><span class='tstring_content'>hash-table?</span><span class='words_sep'> </span><span class='tstring_content'>if</span><span class='words_sep'> </span><span class='tstring_content'>lambda</span><span class='words_sep'> </span><span class='tstring_content'>let</span><span class='words_sep'> </span><span class='tstring_content'>let*</span><span class='words_sep'> </span><span class='tstring_content'>let*-values</span><span class='words_sep'> </span><span class='tstring_content'>let-struct</span><span class='words_sep'>
+    </span><span class='tstring_content'>let-syntax</span><span class='words_sep'> </span><span class='tstring_content'>let-syntaxes</span><span class='words_sep'> </span><span class='tstring_content'>let-values</span><span class='words_sep'> </span><span class='tstring_content'>let/cc</span><span class='words_sep'> </span><span class='tstring_content'>let/ec</span><span class='words_sep'> </span><span class='tstring_content'>letrec</span><span class='words_sep'>
+    </span><span class='tstring_content'>letrec-syntax</span><span class='words_sep'> </span><span class='tstring_content'>letrec-syntaxes</span><span class='words_sep'> </span><span class='tstring_content'>letrec-syntaxes+values</span><span class='words_sep'>
+    </span><span class='tstring_content'>letrec-values</span><span class='words_sep'> </span><span class='tstring_content'>list-immutable</span><span class='words_sep'> </span><span class='tstring_content'>make-hash-table</span><span class='words_sep'>
+    </span><span class='tstring_content'>make-immutable-hash-table</span><span class='words_sep'> </span><span class='tstring_content'>make-namespace</span><span class='words_sep'> </span><span class='tstring_content'>module</span><span class='words_sep'> </span><span class='tstring_content'>module*</span><span class='words_sep'>
+    </span><span class='tstring_content'>module-identifier=?</span><span class='words_sep'> </span><span class='tstring_content'>module-label-identifier=?</span><span class='words_sep'>
+    </span><span class='tstring_content'>module-template-identifier=?</span><span class='words_sep'> </span><span class='tstring_content'>module-transformer-identifier=?</span><span class='words_sep'>
+    </span><span class='tstring_content'>namespace-transformer-require</span><span class='words_sep'> </span><span class='tstring_content'>or</span><span class='words_sep'> </span><span class='tstring_content'>parameterize</span><span class='words_sep'> </span><span class='tstring_content'>parameterize*</span><span class='words_sep'>
+    </span><span class='tstring_content'>parameterize-break</span><span class='words_sep'> </span><span class='tstring_content'>promise?</span><span class='words_sep'> </span><span class='tstring_content'>prop:method-arity-error</span><span class='words_sep'> </span><span class='tstring_content'>provide</span><span class='words_sep'>
+    </span><span class='tstring_content'>provide-for-label</span><span class='words_sep'> </span><span class='tstring_content'>provide-for-syntax</span><span class='words_sep'> </span><span class='tstring_content'>quasiquote</span><span class='words_sep'> </span><span class='tstring_content'>quasisyntax</span><span class='words_sep'>
+    </span><span class='tstring_content'>quasisyntax/loc</span><span class='words_sep'> </span><span class='tstring_content'>quote</span><span class='words_sep'> </span><span class='tstring_content'>quote-syntax</span><span class='words_sep'> </span><span class='tstring_content'>quote-syntax/prune</span><span class='words_sep'>
+    </span><span class='tstring_content'>require</span><span class='words_sep'> </span><span class='tstring_content'>require-for-label</span><span class='words_sep'> </span><span class='tstring_content'>require-for-syntax</span><span class='words_sep'>
+    </span><span class='tstring_content'>require-for-template</span><span class='words_sep'> </span><span class='tstring_content'>set!</span><span class='words_sep'> </span><span class='tstring_content'>set!-values</span><span class='words_sep'> </span><span class='tstring_content'>syntax</span><span class='words_sep'> </span><span class='tstring_content'>syntax-case</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-case*</span><span class='words_sep'> </span><span class='tstring_content'>syntax-id-rules</span><span class='words_sep'> </span><span class='tstring_content'>syntax-object-&gt;datum</span><span class='words_sep'>
+    </span><span class='tstring_content'>syntax-rules</span><span class='words_sep'> </span><span class='tstring_content'>syntax/loc</span><span class='words_sep'> </span><span class='tstring_content'>tcp-abandon-port</span><span class='words_sep'> </span><span class='tstring_content'>tcp-accept</span><span class='words_sep'>
+    </span><span class='tstring_content'>tcp-accept-evt</span><span class='words_sep'> </span><span class='tstring_content'>tcp-accept-ready?</span><span class='words_sep'> </span><span class='tstring_content'>tcp-accept/enable-break</span><span class='words_sep'>
+    </span><span class='tstring_content'>tcp-addresses</span><span class='words_sep'> </span><span class='tstring_content'>tcp-close</span><span class='words_sep'> </span><span class='tstring_content'>tcp-connect</span><span class='words_sep'> </span><span class='tstring_content'>tcp-connect/enable-break</span><span class='words_sep'>
+    </span><span class='tstring_content'>tcp-listen</span><span class='words_sep'> </span><span class='tstring_content'>tcp-listener?</span><span class='words_sep'> </span><span class='tstring_content'>tcp-port?</span><span class='words_sep'> </span><span class='tstring_content'>time</span><span class='words_sep'> </span><span class='tstring_content'>transcript-off</span><span class='words_sep'>
+    </span><span class='tstring_content'>transcript-on</span><span class='words_sep'> </span><span class='tstring_content'>udp-addresses</span><span class='words_sep'> </span><span class='tstring_content'>udp-bind!</span><span class='words_sep'> </span><span class='tstring_content'>udp-bound?</span><span class='words_sep'> </span><span class='tstring_content'>udp-close</span><span class='words_sep'>
+    </span><span class='tstring_content'>udp-connect!</span><span class='words_sep'> </span><span class='tstring_content'>udp-connected?</span><span class='words_sep'> </span><span class='tstring_content'>udp-multicast-interface</span><span class='words_sep'>
+    </span><span class='tstring_content'>udp-multicast-join-group!</span><span class='words_sep'> </span><span class='tstring_content'>udp-multicast-leave-group!</span><span class='words_sep'>
+    </span><span class='tstring_content'>udp-multicast-loopback?</span><span class='words_sep'> </span><span class='tstring_content'>udp-multicast-set-interface!</span><span class='words_sep'>
+    </span><span class='tstring_content'>udp-multicast-set-loopback!</span><span class='words_sep'> </span><span class='tstring_content'>udp-multicast-set-ttl!</span><span class='words_sep'>
+    </span><span class='tstring_content'>udp-multicast-ttl</span><span class='words_sep'> </span><span class='tstring_content'>udp-open-socket</span><span class='words_sep'> </span><span class='tstring_content'>udp-receive!</span><span class='words_sep'> </span><span class='tstring_content'>udp-receive!*</span><span class='words_sep'>
+    </span><span class='tstring_content'>udp-receive!-evt</span><span class='words_sep'> </span><span class='tstring_content'>udp-receive!/enable-break</span><span class='words_sep'>
+    </span><span class='tstring_content'>udp-receive-ready-evt</span><span class='words_sep'> </span><span class='tstring_content'>udp-send</span><span class='words_sep'> </span><span class='tstring_content'>udp-send*</span><span class='words_sep'> </span><span class='tstring_content'>udp-send-evt</span><span class='words_sep'>
+    </span><span class='tstring_content'>udp-send-ready-evt</span><span class='words_sep'> </span><span class='tstring_content'>udp-send-to</span><span class='words_sep'> </span><span class='tstring_content'>udp-send-to*</span><span class='words_sep'> </span><span class='tstring_content'>udp-send-to-evt</span><span class='words_sep'>
+    </span><span class='tstring_content'>udp-send-to/enable-break</span><span class='words_sep'> </span><span class='tstring_content'>udp-send/enable-break</span><span class='words_sep'> </span><span class='tstring_content'>udp?</span><span class='words_sep'> </span><span class='tstring_content'>unless</span><span class='words_sep'>
+    </span><span class='tstring_content'>unquote</span><span class='words_sep'> </span><span class='tstring_content'>unquote-splicing</span><span class='words_sep'> </span><span class='tstring_content'>unsyntax</span><span class='words_sep'> </span><span class='tstring_content'>unsyntax-splicing</span><span class='words_sep'> </span><span class='tstring_content'>when</span><span class='words_sep'>
+    </span><span class='tstring_content'>with-continuation-mark</span><span class='words_sep'> </span><span class='tstring_content'>with-handlers</span><span class='words_sep'> </span><span class='tstring_content'>with-handlers*</span><span class='words_sep'>
+    </span><span class='tstring_content'>with-syntax</span><span class='words_sep'> </span><span class='tstring_content'>λ</span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Jul 22 08:49:59 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.20 (ruby-2.6.3).
+</div>
+
+    </div>
+  </body>
+</html>
