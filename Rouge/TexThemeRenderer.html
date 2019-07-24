@@ -391,13 +391,13 @@
       <pre class="lines">
 
 
-3
-4
-5
-6</pre>
+6
+7
+8
+9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/tex_theme_renderer.rb', line 3</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/tex_theme_renderer.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_theme'>theme</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='ivar'>@theme</span> <span class='op'>=</span> <span class='id identifier rubyid_theme'>theme</span>
@@ -430,12 +430,12 @@
       <pre class="lines">
 
 
-94
-95
-96</pre>
+97
+98
+99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/tex_theme_renderer.rb', line 94</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/tex_theme_renderer.rb', line 97</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_camelize'>camelize</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>_(.)</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='backref'>$1</span><span class='period'>.</span><span class='id identifier rubyid_upcase'>upcase</span> <span class='rbrace'>}</span>
@@ -460,19 +460,19 @@
       <pre class="lines">
 
 
-83
-84
-85
 86
 87
 88
 89
 90
 91
-92</pre>
+92
+93
+94
+95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/tex_theme_renderer.rb', line 83</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/tex_theme_renderer.rb', line 86</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_gen_inline'>gen_inline</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
   <span class='comment'># detect inline colors
@@ -504,9 +504,6 @@
       <pre class="lines">
 
 
-67
-68
-69
 70
 71
 72
@@ -518,10 +515,13 @@
 78
 79
 80
-81</pre>
+81
+82
+83
+84</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/tex_theme_renderer.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/tex_theme_renderer.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inline_name'>inline_name</span><span class='lparen'>(</span><span class='id identifier rubyid_color'>color</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_color'>color</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^#(\h+)</span><span class='regexp_end'>/</span></span> <span class='kw'>or</span> <span class='kw'>return</span> <span class='kw'>nil</span>
@@ -558,14 +558,14 @@
       <pre class="lines">
 
 
-98
-99
-100
 101
-102</pre>
+102
+103
+104
+105</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/tex_theme_renderer.rb', line 98</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/tex_theme_renderer.rb', line 101</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_palette_name'>palette_name</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_inline_name'>inline_name</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
@@ -643,9 +643,6 @@ END</tt>)</span>
       <pre class="lines">
 
 
-30
-31
-32
 33
 34
 35
@@ -665,10 +662,13 @@ END</tt>)</span>
 49
 50
 51
-52</pre>
+52
+53
+54
+55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/tex_theme_renderer.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/tex_theme_renderer.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
   <span class='kw'>yield</span> <span class='heredoc_beg'>&lt;&lt;&#39;END&#39;</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>RG</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='ivar'>@prefix</span><span class='rparen'>)</span>
@@ -713,12 +713,12 @@ END</tt>)</span>
       <pre class="lines">
 
 
-108
-109
-110</pre>
+111
+112
+113</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/tex_theme_renderer.rb', line 108</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/tex_theme_renderer.rb', line 111</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_render_blank'>render_blank</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_out'>out</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\\expandafter\\def</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_token_name'>token_name</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>#1{#1}</span><span class='tstring_end'>&quot;</span></span>
@@ -743,13 +743,13 @@ END</tt>)</span>
       <pre class="lines">
 
 
-62
-63
-64
-65</pre>
+65
+66
+67
+68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/tex_theme_renderer.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/tex_theme_renderer.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_render_inline_pallete'>render_inline_pallete</span><span class='lparen'>(</span><span class='id identifier rubyid_style'>style</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_gen_inline'>gen_inline</span><span class='lparen'>(</span><span class='id identifier rubyid_style'>style</span><span class='lbracket'>[</span><span class='symbol'>:fg</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
@@ -775,16 +775,16 @@ END</tt>)</span>
       <pre class="lines">
 
 
-54
-55
-56
 57
 58
 59
-60</pre>
+60
+61
+62
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/tex_theme_renderer.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/tex_theme_renderer.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_render_palette'>render_palette</span><span class='lparen'>(</span><span class='id identifier rubyid_palette'>palette</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_palette'>palette</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_color'>color</span><span class='op'>|</span>
@@ -835,9 +835,6 @@ END</tt>)</span>
       <pre class="lines">
 
 
-112
-113
-114
 115
 116
 117
@@ -849,10 +846,13 @@ END</tt>)</span>
 123
 124
 125
-126</pre>
+126
+127
+128
+129</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/tex_theme_renderer.rb', line 112</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/tex_theme_renderer.rb', line 115</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_render_style'>render_style</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_style'>style</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_out'>out</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\\expandafter\\def</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_token_name'>token_name</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>#1{</span><span class='tstring_end'>&quot;</span></span>
@@ -889,12 +889,12 @@ END</tt>)</span>
       <pre class="lines">
 
 
-104
-105
-106</pre>
+107
+108
+109</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/tex_theme_renderer.rb', line 104</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/tex_theme_renderer.rb', line 107</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_token_name'>token_name</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='rparen'>)</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\\csname </span><span class='embvar'>#</span><span class='ivar'>@prefix</span><span class='tstring_content'>@tok@</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tok'>tok</span><span class='period'>.</span><span class='id identifier rubyid_shortname'>shortname</span><span class='embexpr_end'>}</span><span class='tstring_content'>\\endcsname</span><span class='tstring_end'>&quot;</span></span>
@@ -909,7 +909,7 @@ END</tt>)</span>
 </div>
 
       <div id="footer">
-  Generated on Mon Jul 22 08:50:00 2019 by
+  Generated on Wed Jul 24 09:04:21 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.20 (ruby-2.6.3).
 </div>

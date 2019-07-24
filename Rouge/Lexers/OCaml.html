@@ -69,7 +69,7 @@
   <dl>
     <dt>Inherits:</dt>
     <dd>
-      <span class="inheritName"><span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></span>
+      <span class="inheritName"><span class='object_link'><a href="OCamlCommon.html" title="Rouge::Lexers::OCamlCommon (class)">OCamlCommon</a></span></span>
       
         <ul class="fullTree">
           <li>Object</li>
@@ -77,6 +77,8 @@
             <li class="next"><span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></li>
           
             <li class="next"><span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="OCamlCommon.html" title="Rouge::Lexers::OCamlCommon (class)">OCamlCommon</a></span></li>
           
             <li class="next">Rouge::Lexers::OCaml</li>
           
@@ -157,53 +159,20 @@
 </li>
 
       
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#primitives-class_method" title="primitives (class method)">.<strong>primitives</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#word_operators-class_method" title="word_operators (class method)">.<strong>word_operators</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
     </ul>
   
 
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="OCamlCommon.html" title="Rouge::Lexers::OCamlCommon (class)">OCamlCommon</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="OCamlCommon.html#primitives-class_method" title="Rouge::Lexers::OCamlCommon.primitives (method)">primitives</a></span>, <span class='object_link'><a href="OCamlCommon.html#word_operators-class_method" title="Rouge::Lexers::OCamlCommon.word_operators (method)">word_operators</a></span></p>
 
   
   
@@ -264,87 +233,19 @@
       <pre class="lines">
 
 
-13
-14
 15
 16
 17
 18
-19
-20
-21</pre>
+19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/ocaml.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/ocaml.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>
-  <span class='ivar'>@keywords</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
-    </span><span class='tstring_content'>as</span><span class='words_sep'> </span><span class='tstring_content'>assert</span><span class='words_sep'> </span><span class='tstring_content'>begin</span><span class='words_sep'> </span><span class='tstring_content'>class</span><span class='words_sep'> </span><span class='tstring_content'>constraint</span><span class='words_sep'> </span><span class='tstring_content'>do</span><span class='words_sep'> </span><span class='tstring_content'>done</span><span class='words_sep'> </span><span class='tstring_content'>downto</span><span class='words_sep'> </span><span class='tstring_content'>else</span><span class='words_sep'> </span><span class='tstring_content'>end</span><span class='words_sep'>
-    </span><span class='tstring_content'>exception</span><span class='words_sep'> </span><span class='tstring_content'>external</span><span class='words_sep'> </span><span class='tstring_content'>false</span><span class='words_sep'> </span><span class='tstring_content'>for</span><span class='words_sep'> </span><span class='tstring_content'>fun</span><span class='words_sep'> </span><span class='tstring_content'>function</span><span class='words_sep'> </span><span class='tstring_content'>functor</span><span class='words_sep'> </span><span class='tstring_content'>if</span><span class='words_sep'> </span><span class='tstring_content'>in</span><span class='words_sep'> </span><span class='tstring_content'>include</span><span class='words_sep'>
-    </span><span class='tstring_content'>inherit</span><span class='words_sep'> </span><span class='tstring_content'>initializer</span><span class='words_sep'> </span><span class='tstring_content'>lazy</span><span class='words_sep'> </span><span class='tstring_content'>let</span><span class='words_sep'> </span><span class='tstring_content'>match</span><span class='words_sep'> </span><span class='tstring_content'>method</span><span class='words_sep'> </span><span class='tstring_content'>module</span><span class='words_sep'> </span><span class='tstring_content'>mutable</span><span class='words_sep'> </span><span class='tstring_content'>new</span><span class='words_sep'>
-    </span><span class='tstring_content'>nonrec</span><span class='words_sep'> </span><span class='tstring_content'>object</span><span class='words_sep'> </span><span class='tstring_content'>of</span><span class='words_sep'> </span><span class='tstring_content'>open</span><span class='words_sep'> </span><span class='tstring_content'>private</span><span class='words_sep'> </span><span class='tstring_content'>raise</span><span class='words_sep'> </span><span class='tstring_content'>rec</span><span class='words_sep'> </span><span class='tstring_content'>sig</span><span class='words_sep'> </span><span class='tstring_content'>struct</span><span class='words_sep'> </span><span class='tstring_content'>then</span><span class='words_sep'> </span><span class='tstring_content'>to</span><span class='words_sep'> </span><span class='tstring_content'>true</span><span class='words_sep'>
-    </span><span class='tstring_content'>try</span><span class='words_sep'> </span><span class='tstring_content'>type</span><span class='words_sep'> </span><span class='tstring_content'>val</span><span class='words_sep'> </span><span class='tstring_content'>virtual</span><span class='words_sep'> </span><span class='tstring_content'>when</span><span class='words_sep'> </span><span class='tstring_content'>while</span><span class='words_sep'> </span><span class='tstring_content'>with</span><span class='words_sep'>
-  </span><span class='tstring_end'>)</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="primitives-class_method">
-  
-    .<strong>primitives</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-27
-28
-29</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/ocaml.rb', line 27</span>
-
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_primitives'>primitives</span>
-  <span class='ivar'>@primitives</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>unit</span><span class='words_sep'> </span><span class='tstring_content'>int</span><span class='words_sep'> </span><span class='tstring_content'>float</span><span class='words_sep'> </span><span class='tstring_content'>bool</span><span class='words_sep'> </span><span class='tstring_content'>string</span><span class='words_sep'> </span><span class='tstring_content'>char</span><span class='words_sep'> </span><span class='tstring_content'>list</span><span class='words_sep'> </span><span class='tstring_content'>array</span><span class='tstring_end'>)</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="word_operators-class_method">
-  
-    .<strong>word_operators</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-23
-24
-25</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/ocaml.rb', line 23</span>
-
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_word_operators'>word_operators</span>
-  <span class='ivar'>@word_operators</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>and</span><span class='words_sep'> </span><span class='tstring_content'>asr</span><span class='words_sep'> </span><span class='tstring_content'>land</span><span class='words_sep'> </span><span class='tstring_content'>lor</span><span class='words_sep'> </span><span class='tstring_content'>lsl</span><span class='words_sep'> </span><span class='tstring_content'>lxor</span><span class='words_sep'> </span><span class='tstring_content'>mod</span><span class='words_sep'> </span><span class='tstring_content'>or</span><span class='tstring_end'>)</span></span>
+  <span class='ivar'>@keywords</span> <span class='op'>||=</span> <span class='kw'>super</span> <span class='op'>+</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>match</span><span class='words_sep'> </span><span class='tstring_content'>raise</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -356,7 +257,7 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Jul 22 08:49:58 2019 by
+  Generated on Wed Jul 24 09:04:18 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.20 (ruby-2.6.3).
 </div>
