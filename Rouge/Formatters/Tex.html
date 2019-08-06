@@ -6,7 +6,7 @@
 <title>
   Class: Rouge::Formatters::Tex
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.19
   
 </title>
 
@@ -138,6 +138,9 @@ of a line. see #tag_first for our initial-space strategy</p>
   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>^</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{\textasciicircum}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>|</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{\textbar}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>\\</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{\textbackslash}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>`</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{\textasciigrave}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&#39;</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&#39;{}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&quot;</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&quot;{}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\t</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>{\tab}</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
 <span class='rbrace'>}</span></pre></dd>
       
@@ -181,6 +184,29 @@ of a line. see #tag_first for our initial-space strategy</p>
 
   
     <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#hphantom_tag-instance_method" title="#hphantom_tag (instance method)">#<strong>hphantom_tag</strong>(tok, val) {|&quot;\\hphantom{#{&#39;x&#39; * leading}}&quot;| ... } &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Special handling for leading spaces, since they may be gobbled by a previous command.</p>
+</div></span>
   
 </li>
 
@@ -276,29 +302,6 @@ of a line. see #tag_first for our initial-space strategy</p>
 </li>
 
       
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#tag_first-instance_method" title="#tag_first (instance method)">#<strong>tag_first</strong>(tok, val) {|&quot;\\hphantom{#{&#39;x&#39; * leading}}&quot;| ... } &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>special handling for the first token of a line.</p>
-</div></span>
-  
-</li>
-
-      
     </ul>
   
 
@@ -341,12 +344,12 @@ of a line. see #tag_first for our initial-space strategy</p>
       <pre class="lines">
 
 
-30
-31
-32</pre>
+33
+34
+35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/tex.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/tex.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='ivar'>@prefix</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:prefix</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>RG</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
@@ -378,15 +381,77 @@ of a line. see #tag_first for our initial-space strategy</p>
       <pre class="lines">
 
 
-34
-35
-36</pre>
+37
+38
+39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/tex.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/tex.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_escape_tex'>escape_tex</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#ESCAPE_REGEX-constant" title="Rouge::Formatters::Tex::ESCAPE_REGEX (constant)">ESCAPE_REGEX</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#ESCAPE-constant" title="Rouge::Formatters::Tex::ESCAPE (constant)">ESCAPE</a></span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="hphantom_tag-instance_method">
+  
+    #<strong>hphantom_tag</strong>(tok, val) {|&quot;\\hphantom{#{&#39;x&#39; * leading}}&quot;| ... } &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Special handling for leading spaces, since they may be gobbled
+by a previous command.  We replace all initial spaces with
+\hphantomxxxx, which renders an empty space equal to the size
+of the x&#39;s.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>"\\hphantom{#{'x' * leading}}"</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+74
+75
+76
+77
+78
+79</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/tex.rb', line 74</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_hphantom_tag'>hphantom_tag</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_leading'>leading</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_sub!'>sub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^[ ]+</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_leading'>leading</span> <span class='op'>=</span> <span class='backref'>$&amp;</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='semicolon'>;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
+  <span class='kw'>yield</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\\hphantom{</span><span class='embexpr_beg'>#{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>x</span><span class='tstring_end'>&#39;</span></span> <span class='op'>*</span> <span class='id identifier rubyid_leading'>leading</span><span class='embexpr_end'>}</span><span class='tstring_content'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_leading'>leading</span>
+  <span class='kw'>yield</span> <span class='id identifier rubyid_tag'>tag</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -408,26 +473,18 @@ of a line. see #tag_first for our initial-space strategy</p>
       <pre class="lines">
 
 
-61
-62
-63
 64
 65
 66
 67
-68
-69</pre>
+68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/tex.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/tex.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_render_line'>render_line</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_head'>head</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_rest'>rest</span> <span class='op'>=</span> <span class='id identifier rubyid_line'>line</span>
-  <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_head'>head</span>
-
-  <span class='id identifier rubyid_tag_first'>tag_first</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_head'>head</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_rest'>rest</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span><span class='op'>|</span>
-    <span class='kw'>yield</span> <span class='id identifier rubyid_tag'>tag</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span><span class='op'>|</span>
+    <span class='id identifier rubyid_hphantom_tag'>hphantom_tag</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -472,9 +529,6 @@ of a line. see #tag_first for our initial-space strategy</p>
       <pre class="lines">
 
 
-38
-39
-40
 41
 42
 43
@@ -493,10 +547,13 @@ of a line. see #tag_first for our initial-space strategy</p>
 56
 57
 58
-59</pre>
+59
+60
+61
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/tex.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/tex.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_stream'>stream</span><span class='lparen'>(</span><span class='id identifier rubyid_tokens'>tokens</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
   <span class='comment'># surround the output with \begin{RG*}...\end{RG*}
@@ -540,6 +597,7 @@ of a line. see #tag_first for our initial-space strategy</p>
       <pre class="lines">
 
 
+81
 82
 83
 84
@@ -547,11 +605,10 @@ of a line. see #tag_first for our initial-space strategy</p>
 86
 87
 88
-89
-90</pre>
+89</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/tex.rb', line 82</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/tex.rb', line 81</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tag'>tag</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_escape?'>escape?</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='rparen'>)</span>
@@ -567,76 +624,14 @@ of a line. see #tag_first for our initial-space strategy</p>
 </table>
 </div>
     
-      <div class="method_details ">
-  <h3 class="signature " id="tag_first-instance_method">
-  
-    #<strong>tag_first</strong>(tok, val) {|&quot;\\hphantom{#{&#39;x&#39; * leading}}&quot;| ... } &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>special handling for the first token
-of a line. we replace all initial spaces
-with \hphantomxxxx, which renders an
-empty space equal to the size of the x&#39;s.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Yields:</p>
-<ul class="yield">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>"\\hphantom{#{'x' * leading}}"</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-75
-76
-77
-78
-79
-80</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/tex.rb', line 75</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_tag_first'>tag_first</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_leading'>leading</span> <span class='op'>=</span> <span class='kw'>nil</span>
-  <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_sub!'>sub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^[ ]+</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_leading'>leading</span> <span class='op'>=</span> <span class='backref'>$&amp;</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='semicolon'>;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
-  <span class='kw'>yield</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\\hphantom{</span><span class='embexpr_beg'>#{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>x</span><span class='tstring_end'>&#39;</span></span> <span class='op'>*</span> <span class='id identifier rubyid_leading'>leading</span><span class='embexpr_end'>}</span><span class='tstring_content'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_leading'>leading</span>
-  <span class='kw'>yield</span> <span class='id identifier rubyid_tag'>tag</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
   </div>
 
 </div>
 
       <div id="footer">
-  Generated on Wed Jul 24 09:04:20 2019 by
+  Generated on Wed Aug  7 04:38:47 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 (ruby-2.6.3).
+  0.9.19 (ruby-2.6.3).
 </div>
 
     </div>

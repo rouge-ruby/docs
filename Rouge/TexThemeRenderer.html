@@ -6,7 +6,7 @@
 <title>
   Class: Rouge::TexThemeRenderer
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.19
   
 </title>
 
@@ -849,13 +849,15 @@ END</tt>)</span>
 126
 127
 128
-129</pre>
+129
+130</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/rouge/tex_theme_renderer.rb', line 115</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_render_style'>render_style</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_style'>style</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_out'>out</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\\expandafter\\def</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_token_name'>token_name</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>#1{</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_out'>out</span> <span class='op'>=</span> <span class='const'>String</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_out'>out</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\\expandafter\\def</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_token_name'>token_name</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>#1{</span><span class='tstring_end'>&quot;</span></span>
   <span class='id identifier rubyid_out'>out</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\\fboxsep=0pt\\colorbox{</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_palette_name'>palette_name</span><span class='lparen'>(</span><span class='id identifier rubyid_style'>style</span><span class='lbracket'>[</span><span class='symbol'>:bg</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>}{</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_style'>style</span><span class='lbracket'>[</span><span class='symbol'>:bg</span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_out'>out</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>\\textbf{</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_style'>style</span><span class='lbracket'>[</span><span class='symbol'>:bold</span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_out'>out</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>\\textit{</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_style'>style</span><span class='lbracket'>[</span><span class='symbol'>:italic</span><span class='rbracket'>]</span>
@@ -909,9 +911,9 @@ END</tt>)</span>
 </div>
 
       <div id="footer">
-  Generated on Wed Jul 24 09:04:21 2019 by
+  Generated on Wed Aug  7 04:38:49 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 (ruby-2.6.3).
+  0.9.19 (ruby-2.6.3).
 </div>
 
     </div>

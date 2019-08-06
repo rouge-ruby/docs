@@ -6,7 +6,7 @@
 <title>
   File: README
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.19
   
 </title>
 
@@ -63,15 +63,23 @@
 <a href="https://rubygems.org/gems/rouge"><img src="https://badge.fury.io/rb/rouge.svg" alt="Gem Version"></a>
 <a href="https://rouge-ruby.github.io/docs/"><img src="http://img.shields.io/badge/yard-docs-blue.svg" alt="YARD Docs"></a></p>
 
-<p><a href="http://rouge.jneen.net/">Rouge</a> is a pure-ruby syntax highlighter.  It can highlight 100 different languages, and output HTML or ANSI 256-color text.  Its HTML output is compatible with stylesheets designed for <a href="http://pygments.org/" title="Pygments">pygments</a>.</p>
-
-<p>If you&#39;d like to help out with this project, assign yourself something from the <a href="https://github.com/rouge-ruby/rouge/issues" title="Help Out">issues</a> page, and send me a pull request (even if it&#39;s not done yet!).  Bonus points for feature branches.</p>
+<p><a href="http://rouge.jneen.net/" title="Rouge">Rouge</a> is a pure Ruby syntax highlighter. It can highlight over 100 different
+languages, and output HTML or ANSI 256-color text. Its HTML output is
+compatible with stylesheets designed for <a href="http://pygments.org" title="Pygments">Pygments</a>.</p>
 
 <h2>Usage</h2>
 
-<p>First, take a look at the <a href="http://rouge.jneen.net/">pretty colors</a>.</p>
+<p>Rouge&#39;s most common uses are as a Ruby library, as part of Jekyll and as a
+command line tool.</p>
 
-<pre class="code ruby"><code class="ruby"><span class='comment'># make some nice lexed html
+<h3>Library</h3>
+
+<p>Here&#39;s a quick example of using Rouge as you would any other regular Ruby
+library:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rouge</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='comment'># make some nice lexed html
 </span><span class='id identifier rubyid_source'>source</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/etc/bashrc</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_formatter'>formatter</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Rouge.html" title="Rouge (module)">Rouge</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Rouge/Formatters.html" title="Rouge::Formatters (module)">Formatters</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Rouge/Formatters/HTML.html" title="Rouge::Formatters::HTML (class)">HTML</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Rouge/Formatter.html#initialize-instance_method" title="Rouge::Formatter#initialize (method)">new</a></span></span>
 <span class='id identifier rubyid_lexer'>lexer</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Rouge.html" title="Rouge (module)">Rouge</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Rouge/Lexers.html" title="Rouge::Lexers (module)">Lexers</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Rouge/Lexers/Shell.html" title="Rouge::Lexers::Shell (class)">Shell</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Rouge/Lexer.html#initialize-instance_method" title="Rouge::Lexer#initialize (method)">new</a></span></span>
@@ -83,39 +91,67 @@
 </span><span class='const'><span class='object_link'><a href="Rouge.html" title="Rouge (module)">Rouge</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Rouge/Theme.html" title="Rouge::Theme (class)">Theme</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'><span class='object_link'><a href="Rouge/Theme.html#find-class_method" title="Rouge::Theme.find (method)">find</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>base16.light</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='label'>scope:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>.highlight</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 </code></pre>
 
-<h3>Full options</h3>
+<h3>Jekyll</h3>
 
-<h4>Formatters</h4>
+<p><strong>NOTE</strong>: If you&#39;re using GitHub Pages, you&#39;re stuck with <a href="https://pages.github.com/versions/" title="Version of the dependencies used by GitHub Pages">version
+2.2.1</a> of Rouge. Although GitHub Pages uses an up to date version
+of Jekyll, it locks the version of Rouge. There is <a href="https://github.com/github/pages-gem/issues/601" title="pages-gem Issue #601">an open issue</a> to
+upgrade this to a more current release.</p>
 
-<p>As of Rouge 2.0, you are encouraged to write your own formatter for custom formatting needs.
-Builtin formatters include:</p>
+<p>Rouge is Jekyll&#39;s default syntax highlighter. Out of the box, Rouge will be
+used to highlight text wrapped in the <code>{% highlight %}</code> template tags. The
+<code>{% highlight %}</code> tag provides minimal options: you can specify the language to
+use and whether to enable line numbers or not. More information is available in
+<a href="https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting" title="Code snippet highlighting in the Jekyll documentation">the Jekyll docs</a>.</p>
+
+<h3>Command Line</h3>
+
+<p>Rouge ships with a <code>rougify</code> command which allows you to easily highlight files
+in your terminal:</p>
+
+<pre class="code shell"><code class="shell">$ rougify foo.rb
+$ rougify style monokai.sublime &gt; syntax.css
+</code></pre>
+
+<h2>Configuration</h2>
+
+<h3>Formatters</h3>
+
+<p>Rouge comes with a number of formatters built-in but as of Rouge 2.0, you are
+encouraged to write your own formatter if you need something custom.</p>
+
+<p>The built-in formatters are:</p>
 
 <ul>
-<li><code>Rouge::Formatters::HTML.new</code> - will render your code with standard class names for tokens,
-with no div-wrapping or other bells or whistles.</li>
-<li><code>Rouge::Formatters::HTMLInline.new(theme)</code> - will render your code with no class names, but
-instead inline the styling options into the <code>style=</code> attribute. This is good for emails and
-other systems where CSS support is minimal.</li>
-<li><code>Rouge::Formatters::HTMLLinewise.new(formatter, class: &#39;line-%i&#39;)</code>
-This formatter will split your code into lines, each contained in its own div. The
-<code>class</code> option will be used to add a class name to the div, given the line
-number.</li>
-<li><code>Rouge::Formatters::HTMLLineTable.new(formatter, opts={})</code> will output an HTML table containing
-numbered lines, each contained in its own table-row. Options are:
+<li><p><code>Rouge::Formatters::HTML.new</code> will render your code with standard class names
+for tokens, with no div-wrapping or other bells or whistles.</p></li>
+<li><p><code>Rouge::Formatters::HTMLInline.new(theme)</code> will render your code with no class
+names, but instead inline the styling options into the <code>style=</code> attribute.
+This is good for emails and other systems where CSS support is minimal.</p></li>
+<li><p><code>Rouge::Formatters::HTMLLinewise.new(formatter, class: &#39;line-%i&#39;)</code> will split
+your code into lines, each contained in its own div. The <code>class</code> option will
+be used to add a class name to the div, given the line number.</p></li>
+<li><p><code>Rouge::Formatters::HTMLLineTable.new(formatter, opts={})</code> will output an HTML
+table containing numbered lines, each contained in its own table-row. Options
+are:</p>
 
 <ul>
 <li><code>start_line: 1</code> - the number of the first row</li>
-<li><code>line_id: &#39;line-%i&#39;</code> - a <code>sprintf</code> template for <code>id</code> attribute with current line number</li>
+<li><code>line_id: &#39;line-%i&#39;</code> - a <code>sprintf</code> template for <code>id</code> attribute with
+current line number</li>
 <li><code>line_class: &#39;lineno&#39;</code> - a CSS class for each table-row</li>
 <li><code>table_class: &#39;rouge-line-table&#39;</code> - a CSS class for the table</li>
 <li><code>gutter_class: &#39;rouge-gutter&#39;</code> - a CSS class for the line-number cell</li>
 <li><code>code_class: &#39;rouge-code&#39;</code> - a CSS class for the code cell</li>
 </ul></li>
-<li><code>Rouge::Formatters::HTMLPygments.new(formatter, css_class=&#39;codehilite&#39;)</code>
-wraps the given formatter with div wrappers generally expected by stylesheets designed for
-Pygments.</li>
-<li><code>Rouge::Formatters::HTMLTable.new(formatter, opts={})</code> will output an HTML table containing
-numbered lines. Options are:
+<li><p><code>Rouge::Formatters::HTMLPygments.new(formatter, css_class=&#39;codehilite&#39;)</code> wraps
+the given formatter with div wrappers generally expected by stylesheets
+designed for Pygments.</p></li>
+<li><p><code>Rouge::Formatters::HTMLTable.new(formatter, opts={})</code> will output an HTML
+table containing numbered lines similar to <code>Rouge::Formatters::HTMLLineTable</code>,
+except that the table from this formatter has just a single table-row.
+Therefore, while the table is more DOM-friendly for JavaScript scripting, long
+code lines will mess with the column alignment. Options are:</p>
 
 <ul>
 <li><code>start_line: 1</code> - the number of the first line</li>
@@ -124,135 +160,133 @@ numbered lines. Options are:
 <li><code>gutter_class: &#39;rouge-gutter&#39;</code> - a CSS class for the gutter</li>
 <li><code>code_class: &#39;rouge-code&#39;</code> - a CSS class for the code column</li>
 </ul></li>
-<li><code>Rouge::Formatters::HTMLLegacy.new(opts={})</code> is a backwards-compatibility class intended
-for users of rouge 1.x, with options that were supported then. Options are:
+<li><p><code>Rouge::Formatters::HTMLLegacy.new(opts={})</code> is a backwards-compatibility
+class intended for users of Rouge 1.x, with options that were supported then.
+Options are:</p>
 
 <ul>
 <li><code>inline_theme: nil</code> - use an HTMLInline formatter with the given theme</li>
 <li><code>line_numbers: false</code> - use an HTMLTable formatter</li>
 <li><code>wrap: true</code> - use an HTMLPygments wrapper</li>
-<li><code>css_class: &#39;codehilite&#39;</code> - a CSS class to use for the pygments wrapper</li>
+<li><code>css_class: &#39;codehilite&#39;</code> - a CSS class to use for the Pygments wrapper</li>
 </ul></li>
-<li><code>Rouge::Formatters::Terminal256.new(theme)</code>
-
-<ul>
-<li><code>theme</code> must be an instnce of <code>Rouge::Theme</code>, or a <code>Hash</code> structure with <code>:theme</code> entry</li>
-</ul></li>
+<li><p><code>Rouge::Formatters::Terminal256.new(theme)</code> is a formatter for generating
+highlighted text for use in the terminal. <code>theme</code> must be an instance of
+<code>Rouge::Theme</code>, or a <code>Hash</code> structure with <code>:theme</code> entry.</p></li>
 </ul>
 
-<h4>Lexer options</h4>
+<h3>Lexer Options</h3>
 
-<h5>debug: false</h5>
+<ul>
+<li><p><code>debug: false</code> will print a trace of the lex on stdout.</p></li>
+<li><p><code>parent: &#39;&#39;</code> allows you to specify which language the template is inside.</p></li>
+</ul>
 
-<p>Print a trace of the lex on stdout</p>
+<h3>CSS Options</h3>
 
-<h5>parent: &#39;&#39;</h5>
+<ul>
+<li><code>scope: &#39;.highlight&#39;</code> sets the CSS selector to which styles are applied,
+e.g.:</li>
+</ul>
 
-<p>Allows you to specify which language the template is inside</p>
-
-<h4>CSS theme options</h4>
-
-<h5>scope: &#39;.highlight&#39;</h5>
-
-<p>CSS selector that styles are applied to, e.g. <code>Rouge::Themes::MonokaiSublime.render(scope: &#39;code&#39;)</code></p>
-
-<p>Rouge aims to be simple to extend, and to be a drop-in replacement for pygments, with the same quality of output. Also, Rouge ships with a <code>rougify</code> command which allows you to easily highlight files in your terminal:</p>
-
-<pre class="code bash"><code class="bash">$ rougify foo.rb
-$ rougify style monokai.sublime &gt; syntax.css
+<pre class="code ruby"><code class="ruby">  <span class='const'><span class='object_link'><a href="Rouge.html" title="Rouge (module)">Rouge</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Rouge/Themes.html" title="Rouge::Themes (module)">Themes</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Rouge/Themes/MonokaiSublime.html" title="Rouge::Themes::MonokaiSublime (class)">MonokaiSublime</a></span></span><span class='period'>.</span><span class='id identifier rubyid_render'><span class='object_link'><a href="Rouge/CSSTheme.html#render-instance_method" title="Rouge::CSSTheme#render (method)">render</a></span></span><span class='lparen'>(</span><span class='label'>scope:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>code</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 </code></pre>
 
-<h3>Advantages to pygments.rb</h3>
+<h2>Documentation</h2>
+
+<p>Rouge&#39;s documentation is available at <a href="https://rouge-ruby.github.io/docs" title="Rouge&#39;s official documentation">rouge-ruby.github.io/docs/</a>.</p>
+
+<h2>Requirements</h2>
+
+<h3>Ruby</h3>
+
+<p>Rouge is compatible with all versions of Ruby from 2.0.0 onwards. It has no
+external dependencies.</p>
+
+<h3>Encodings</h3>
+
+<p>Rouge only supports UTF-8 strings. If you&#39;d like to highlight a string with a
+different encoding, please convert it to UTF-8 first.</p>
+
+<h2>Integrations</h2>
 
 <ul>
-<li>No need to <a href="https://github.com/tmm1/pygments.rb">spawn Python processes</a>.</li>
-<li>We&#39;re faster in <a href="https://github.com/rouge-ruby/rouge/pull/41#issuecomment-223751572">almost every measure</a></li>
-</ul>
-
-<h3>Advantages to CodeRay</h3>
+<li>Middleman:
 
 <ul>
-<li>The HTML output from Rouge is fully compatible with stylesheets designed for pygments.</li>
-<li>The lexers are implemented with a dedicated DSL, rather than being hand-coded.</li>
-<li>Rouge supports every language CodeRay does and more.</li>
-</ul>
-
-<h2>You can even use it with Redcarpet</h2>
-
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>redcarpet</span><span class='tstring_end'>&#39;</span></span>
-<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rouge</span><span class='tstring_end'>&#39;</span></span>
-<span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rouge/plugins/redcarpet</span><span class='tstring_end'>&#39;</span></span>
-
-<span class='kw'>class</span> <span class='const'>HTML</span> <span class='op'>&lt;</span> <span class='const'>Redcarpet</span><span class='op'>::</span><span class='const'>Render</span><span class='op'>::</span><span class='const'>HTML</span>
-  <span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="Rouge.html" title="Rouge (module)">Rouge</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Rouge/Plugins.html" title="Rouge::Plugins (module)">Plugins</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Rouge/Plugins/Redcarpet.html" title="Rouge::Plugins::Redcarpet (module)">Redcarpet</a></span></span> <span class='comment'># yep, that&#39;s it.
-</span><span class='kw'>end</span>
-</code></pre>
-
-<p>If you have <code>:fenced_code_blocks</code> enabled, you can specify languages, and even options with CGI syntax, like <code>php?start_inline=1</code>, or <code>erb?parent=javascript</code>.</p>
-
-<h2>Encodings</h2>
-
-<p>Rouge is only for UTF-8 strings.  If you&#39;d like to highlight a string with a different encoding, please convert it to UTF-8 first.</p>
-
-<h2>Other integrations</h2>
-
-<ul>
-<li>Middleman: <a href="https://github.com/middleman/middleman-syntax">middleman-syntax</a> (@bhollis)</li>
-<li>Middleman: <a href="https://github.com/Linuus/middleman-rouge">middleman-rouge</a> (@Linuus)</li>
+<li><a href="https://github.com/middleman/middleman-syntax">middleman-syntax</a> (@bhollis)</li>
+<li><a href="https://github.com/Linuus/middleman-rouge">middleman-rouge</a> (@Linuus)</li>
+</ul></li>
 <li>RDoc: <a href="https://github.com/zzak/rdoc-rouge">rdoc-rouge</a> (@zzak)</li>
-<li>Rouge::Rails: <a href="https://github.com/jacobsimeon/rouge-rails">render code samples in your rails views</a> (@jacobsimeon)</li>
+<li>Rails: <a href="https://github.com/jacobsimeon/rouge-rails">Rouge::Rails</a> (@jacobsimeon)</li>
 </ul>
 
 <h2>Contributing</h2>
 
-<h3>Bug reports</h3>
+<p>We&#39;re always exited to welcome new contributors to Rouge. By it&#39;s nature, a
+syntax highlighter relies for its success on submissions from users of the
+languages being highlighted. You can help Rouge by filing bug reports or
+developing new lexers.</p>
 
-<p>Rouge uses GitHub issues to report bugs. You can <a href="https://github.com/rouge-ruby/rouge/issues/new/choose" title="Issue Template Chooser">choose</a> from one of our templates or create a custom issue. Issues that have not been active for a year are automatically closed by GitHub&#39;s <a href="https://probot.github.io" title="GitHub&#39;s Probot">Probot</a>.</p>
+<h3>Bug Reports</h3>
 
-<h3>Installing Ruby</h3>
+<p>Rouge uses GitHub&#39;s Issues to report bugs. You can <a href="https://github.com/rouge-ruby/rouge/issues/new/choose" title="Choose an issue from the templates">choose</a> from
+one of our templates or create a custom issue. Issues that have not been active
+for a year are automatically closed by GitHub&#39;s <a href="https://probot.github.io" title="Read more about GitHub&#39;s Probot">Probot</a>.</p>
 
-<p>If you&#39;re here to implement a lexer for your awesome language, there&#39;s a good chance you don&#39;t already have a ruby development environment set up.  Follow the <a href="https://github.com/rouge-ruby/rouge/wiki/Setting-up-Ruby">instructions on the wiki</a> to get up and running.  If you have trouble getting set up, let me know - I&#39;m always happy to help.</p>
+<h3>Developing Lexers</h3>
 
-<h3>Run the tests</h3>
+<p><strong>NOTE</strong>: Please don&#39;t submit lexers that are copy-pasted from other files.
+These submission will be rejected and we don&#39;t want you to waste your time.</p>
 
-<p>You can test the core of Rouge simply by running <code>rake</code> (no <code>bundle exec</code> required). You can also run a single test file by
-setting the <code>TEST</code> environment variable to the path of the desired test. For example, to test just the <em><code>ruby</code> lexer</em> which is
-at path, <code>spec/lexers/ruby_spec.rb</code> within the repository, one may simply run the following:</p>
+<p>We want to make it as easy as we can for anyone to contribute a lexer to Rouge.
+To help get you started, we have <a href="https://rouge-ruby.github.io/docs/file.LexerDevelopment.html" title="Rouge&#39;s lexer development guide">a shiny new guide</a> on lexer
+development in the documentation. The best place is to start there.</p>
 
-<pre class="code sh"><code class="sh">TEST=spec/lexers/ruby_spec.rb rake
+<p>If you get stuck and need help, submit a pull request with what you have and
+make it clear in your submission that the lexer isn&#39;t finished yet. We&#39;ll do our
+best to answer any questions you have and sometimes the best way to do that is
+with actual code.</p>
+
+<h3>Testing Rouge</h3>
+
+<p>Once you&#39;ve cloned the repository from GitHub, you can test the core of Rouge
+simply by running <code>rake</code> (no <code>bundle exec</code> required). You can also run a single
+test file by setting the <code>TEST</code> environment variable to the path of the desired
+test. For example, to test just the <em><code>ruby</code> lexer</em> (located at path
+<code>spec/lexers/ruby_spec.rb</code>) simply run the following:</p>
+
+<pre class="code shell"><code class="shell">$ TEST=spec/lexers/ruby_spec.rb rake
 </code></pre>
 
-<p>It&#39;s also set up with <code>guard</code>, if you like.</p>
+<p>To test a lexer visually, run <code>rackup</code> from the top-level working directory and
+you should have a web server running and ready to go. Visit
+<a href="http://localhost:9292">http://localhost:9292</a> to see the full list of Rouge&#39;s lexers.</p>
 
-<p>To test a lexer visually, run <code>rackup</code> from the root and go to <code>localhost:9292/#{some_lexer}</code> where <code>some_lexer</code> is the tag or an alias of a lexer you&#39;d like to test.  If you add <code>?debug=1</code>, helpful debugging info will be printed on stdout.</p>
-
-<h3>API Documentation</h3>
-
-<p>is at <a href="https://rouge-ruby.github.io/docs/">https://rouge-ruby.github.io/docs/</a>.</p>
-
-<h3>Developing lexers</h3>
-
-<p>We have <a href="https://rouge-ruby.github.io/docs/file.LexerDevelopment.html">a guide</a> on lexer development in the documentation but you&#39;ll also learn a lot by reading through the existing lexers. </p>
-
-<p>Please don&#39;t submit lexers that are largely copy-pasted from other files.</p>
+<p>Once you&#39;ve selected a particular lexer, you can add <code>?debug=1</code> to your URL
+string to see a lot of helpful debugging info printed on stdout.</p>
 
 <h2>Versioning</h2>
 
 <p>Rouge uses <a href="http://semver.org/">Semantic Versioning 2.0.0</a>.</p>
 
-<h2>Tips</h2>
+<h2>Maintainers</h2>
 
-<p>I don&#39;t get paid to maintain rouge. If you&#39;ve found this software useful, consider dropping a tip in the <a href="http://cash.me/$jneen">bucket</a>.</p>
+<p>Rouge is largely the result of the hard work of unpaid volunteers. It was
+originally developed by Jeanine Adkisson (@jneen) and is currently maintained by
+Jeanine Adkisson, Drew Blessing (@dblessing), Michael Camilleri (@pyrmont) and
+Goro Fuji (@gfx).</p>
 
 <h2>License</h2>
 
-<p>Rouge is released under the MIT license. Please see the <code>LICENSE</code> file for more information.</p>
+<p>Rouge is released under the MIT license. Please see the <code>LICENSE</code> file for more
+information.</p>
 </div></div>
 
       <div id="footer">
-  Generated on Wed Jul 24 09:04:14 2019 by
+  Generated on Wed Aug  7 04:38:40 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 (ruby-2.6.3).
+  0.9.19 (ruby-2.6.3).
 </div>
 
     </div>
