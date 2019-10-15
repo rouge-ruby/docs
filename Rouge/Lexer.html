@@ -1223,15 +1223,15 @@ tried and each stream consumed.  Try it, it&#39;s pretty useful.</p>
       <pre class="lines">
 
 
-309
-310
-311
 312
 313
-314</pre>
+314
+315
+316
+317</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 309</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 312</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='ivar'>@options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -1276,12 +1276,12 @@ tried and each stream consumed.  Try it, it&#39;s pretty useful.</p>
       <pre class="lines">
 
 
-299
-300
-301</pre>
+302
+303
+304</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 299</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 302</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_options'>options</span>
   <span class='ivar'>@options</span>
@@ -1336,14 +1336,14 @@ tried and each stream consumed.  Try it, it&#39;s pretty useful.</p>
       <pre class="lines">
 
 
-247
-248
-249
 250
-251</pre>
+251
+252
+253
+254</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 247</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 250</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_aliases'>aliases</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_map!'>map!</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_s</span><span class='rparen'>)</span>
@@ -1397,12 +1397,12 @@ tried and each stream consumed.  Try it, it&#39;s pretty useful.</p>
       <pre class="lines">
 
 
-128
-129
-130</pre>
+131
+132
+133</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 128</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 131</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_all'>all</span>
   <span class='ivar'>@all</span> <span class='op'>||=</span> <span class='id identifier rubyid_registry'>registry</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_uniq'>uniq</span>
@@ -1497,12 +1497,12 @@ begin a new lex from the beginning, since there is no state.</p>
       <pre class="lines">
 
 
-202
-203
-204</pre>
+205
+206
+207</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 202</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 205</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_debug_enabled?'>debug_enabled?</span>
   <span class='lparen'>(</span><span class='kw'>defined?</span> <span class='ivar'>@debug_enabled</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='kw'>true</span> <span class='op'>:</span> <span class='kw'>false</span>
@@ -1537,14 +1537,14 @@ begin a new lex from the beginning, since there is no state.</p>
       <pre class="lines">
 
 
-121
-122
-123
 124
-125</pre>
+125
+126
+127
+128</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 121</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 124</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_demo'>demo</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='op'>=</span><span class='symbol'>:absent</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='ivar'>@demo</span> <span class='op'>=</span> <span class='id identifier rubyid_arg'>arg</span> <span class='kw'>unless</span> <span class='id identifier rubyid_arg'>arg</span> <span class='op'>==</span> <span class='symbol'>:absent</span>
@@ -1582,14 +1582,14 @@ this lexer (can be overriden by <span class='object_link'><a href="#demo-class_m
       <pre class="lines">
 
 
-114
-115
-116
 117
-118</pre>
+118
+119
+120
+121</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 114</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 117</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_demo_file'>demo_file</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='op'>=</span><span class='symbol'>:absent</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='ivar'>@demo_file</span> <span class='op'>=</span> <span class='const'>Pathname</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_arg'>arg</span> <span class='op'>==</span> <span class='symbol'>:absent</span>
@@ -1626,16 +1626,16 @@ this lexer (can be overriden by <span class='object_link'><a href="#demo-class_m
       <pre class="lines">
 
 
-96
-97
-98
 99
 100
 101
-102</pre>
+102
+103
+104
+105</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 96</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 99</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_desc'>desc</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='op'>=</span><span class='symbol'>:absent</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_arg'>arg</span> <span class='op'>==</span> <span class='symbol'>:absent</span>
@@ -1712,12 +1712,12 @@ like <span class='object_link'><a href="TextAnalyzer.html#shebang%3F-instance_me
       <pre class="lines">
 
 
-498
-499
-500</pre>
+501
+502
+503</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 498</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 501</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_detect?'>detect?</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
   <span class='kw'>false</span>
@@ -1766,12 +1766,12 @@ singleton class.</p>
       <pre class="lines">
 
 
-208
-209
-210</pre>
+211
+212
+213</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 208</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 211</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_detectable?'>detectable?</span>
   <span class='ivar'>@detectable</span> <span class='op'>||=</span> <span class='id identifier rubyid_methods'>methods</span><span class='lparen'>(</span><span class='kw'>false</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='symbol'>:detect?</span><span class='rparen'>)</span>
@@ -1796,12 +1796,12 @@ singleton class.</p>
       <pre class="lines">
 
 
-198
-199
-200</pre>
+201
+202
+203</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 198</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 201</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_disable_debug!'>disable_debug!</span>
   <span class='id identifier rubyid_remove_instance_variable'>remove_instance_variable</span> <span class='symbol'>:@debug_enabled</span> <span class='kw'>if</span> <span class='kw'>defined?</span> <span class='ivar'>@debug_enabled</span>
@@ -1826,12 +1826,12 @@ singleton class.</p>
       <pre class="lines">
 
 
-194
-195
-196</pre>
+197
+198
+199</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 194</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 197</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_enable_debug!'>enable_debug!</span>
   <span class='ivar'>@debug_enabled</span> <span class='op'>=</span> <span class='kw'>true</span>
@@ -1883,12 +1883,12 @@ manual rule will be specified in Guessers::Disambiguation.</p>
       <pre class="lines">
 
 
-266
-267
-268</pre>
+269
+270
+271</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 266</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 269</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_filenames'>filenames</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_fnames'>fnames</span><span class='rparen'>)</span>
   <span class='lparen'>(</span><span class='ivar'>@filenames</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_concat'>concat</span><span class='lparen'>(</span><span class='id identifier rubyid_fnames'>fnames</span><span class='rparen'>)</span>
@@ -1989,6 +1989,9 @@ and you can pass a second argument of the code to guess by</p>
 <p>Lexer.find_fancy(&#39;guess&#39;, &quot;#!/bin/bash\necho Hello, world&quot;)</p></li>
 </ul>
 
+<p>If the code matches more than one lexer then Guesser::Ambiguous
+  is raised.</p>
+
 <p>This is used in the Redcarpet plugin as well as Rouge&#39;s own
 markdown lexer for highlighting internal code blocks.</p>
 
@@ -2004,9 +2007,6 @@ markdown lexer for highlighting internal code blocks.</p>
       <pre class="lines">
 
 
-55
-56
-57
 58
 59
 60
@@ -2034,10 +2034,13 @@ markdown lexer for highlighting internal code blocks.</p>
 82
 83
 84
-85</pre>
+85
+86
+87
+88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 58</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find_fancy'>find_fancy</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='comma'>,</span> <span class='id identifier rubyid_code'>code</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_additional_options'>additional_options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
 
@@ -2208,9 +2211,6 @@ other hints.</p>
       <pre class="lines">
 
 
-169
-170
-171
 172
 173
 174
@@ -2219,10 +2219,13 @@ other hints.</p>
 177
 178
 179
-180</pre>
+180
+181
+182
+183</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 169</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 172</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_guess'>guess</span><span class='lparen'>(</span><span class='id identifier rubyid_info'>info</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_fallback'>fallback</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_lexers'>lexers</span> <span class='op'>=</span> <span class='id identifier rubyid_guesses'>guesses</span><span class='lparen'>(</span><span class='id identifier rubyid_info'>info</span><span class='rparen'>)</span>
@@ -2256,12 +2259,12 @@ other hints.</p>
       <pre class="lines">
 
 
-186
-187
-188</pre>
+189
+190
+191</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 186</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 189</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_guess_by_filename'>guess_by_filename</span><span class='lparen'>(</span><span class='id identifier rubyid_fname'>fname</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_guess'>guess</span> <span class='symbol'>:filename</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_fname'>fname</span>
@@ -2286,12 +2289,12 @@ other hints.</p>
       <pre class="lines">
 
 
-182
-183
-184</pre>
+185
+186
+187</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 182</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 185</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_guess_by_mimetype'>guess_by_mimetype</span><span class='lparen'>(</span><span class='id identifier rubyid_mt'>mt</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_guess'>guess</span> <span class='symbol'>:mimetype</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_mt'>mt</span>
@@ -2316,12 +2319,12 @@ other hints.</p>
       <pre class="lines">
 
 
-190
-191
-192</pre>
+193
+194
+195</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 190</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 193</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_guess_by_source'>guess_by_source</span><span class='lparen'>(</span><span class='id identifier rubyid_source'>source</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_guess'>guess</span> <span class='symbol'>:source</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_source'>source</span>
@@ -2360,9 +2363,6 @@ to use.</p>
       <pre class="lines">
 
 
-137
-138
-139
 140
 141
 142
@@ -2374,10 +2374,13 @@ to use.</p>
 148
 149
 150
-151</pre>
+151
+152
+153
+154</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 137</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 140</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_guesses'>guesses</span><span class='lparen'>(</span><span class='id identifier rubyid_info'>info</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_mimetype'>mimetype</span><span class='comma'>,</span> <span class='id identifier rubyid_filename'>filename</span><span class='comma'>,</span> <span class='id identifier rubyid_source'>source</span> <span class='op'>=</span> <span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_values_at'>values_at</span><span class='lparen'>(</span><span class='symbol'>:mimetype</span><span class='comma'>,</span> <span class='symbol'>:filename</span><span class='comma'>,</span> <span class='symbol'>:source</span><span class='rparen'>)</span>
@@ -2482,12 +2485,12 @@ new instance.</p>
       <pre class="lines">
 
 
-276
-277
-278</pre>
+279
+280
+281</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 276</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 279</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mimetypes'>mimetypes</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_mts'>mts</span><span class='rparen'>)</span>
   <span class='lparen'>(</span><span class='ivar'>@mimetypes</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_concat'>concat</span><span class='lparen'>(</span><span class='id identifier rubyid_mts'>mts</span><span class='rparen'>)</span>
@@ -2512,12 +2515,12 @@ new instance.</p>
       <pre class="lines">
 
 
-108
-109
-110</pre>
+111
+112
+113</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 108</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 111</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_desc'>desc</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_option_docs'>option_docs</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_desc'>desc</span>
@@ -2542,12 +2545,12 @@ new instance.</p>
       <pre class="lines">
 
 
-104
-105
-106</pre>
+107
+108
+109</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 104</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 107</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_option_docs'>option_docs</span>
   <span class='ivar'>@option_docs</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="InheritableHash.html" title="Rouge::InheritableHash (class)">InheritableHash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="InheritableHash.html#initialize-instance_method" title="Rouge::InheritableHash#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_superclass'>superclass</span><span class='period'>.</span><span class='id identifier rubyid_option_docs'>option_docs</span><span class='rparen'>)</span>
@@ -2596,15 +2599,15 @@ new instance.</p>
       <pre class="lines">
 
 
-231
-232
-233
 234
 235
-236</pre>
+236
+237
+238
+239</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 231</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 234</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tag'>tag</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='ivar'>@tag</span> <span class='kw'>if</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -2642,15 +2645,15 @@ new instance.</p>
       <pre class="lines">
 
 
-88
-89
-90
 91
 92
-93</pre>
+93
+94
+95
+96</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 88</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 91</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_title'>title</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -2684,19 +2687,19 @@ new instance.</p>
       <pre class="lines">
 
 
-316
-317
-318
 319
 320
 321
 322
 323
 324
-325</pre>
+325
+326
+327
+328</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 316</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 319</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_as_bool'>as_bool</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_val'>val</span>
@@ -2728,9 +2731,6 @@ new instance.</p>
       <pre class="lines">
 
 
-344
-345
-346
 347
 348
 349
@@ -2739,10 +2739,13 @@ new instance.</p>
 352
 353
 354
-355</pre>
+355
+356
+357
+358</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 344</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 347</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_as_lexer'>as_lexer</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_as_lexer'>as_lexer</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
@@ -2776,19 +2779,19 @@ new instance.</p>
       <pre class="lines">
 
 
-333
-334
-335
 336
 337
 338
 339
 340
 341
-342</pre>
+342
+343
+344
+345</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 333</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 336</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_as_list'>as_list</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_val'>val</span>
@@ -2820,14 +2823,14 @@ new instance.</p>
       <pre class="lines">
 
 
-327
-328
-329
 330
-331</pre>
+331
+332
+333
+334</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 327</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 330</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_as_string'>as_string</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_as_string'>as_string</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
@@ -2854,18 +2857,18 @@ new instance.</p>
       <pre class="lines">
 
 
-357
-358
-359
 360
 361
 362
 363
 364
-365</pre>
+365
+366
+367
+368</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 357</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 360</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_as_token'>as_token</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_as_token'>as_token</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
@@ -2896,18 +2899,18 @@ new instance.</p>
       <pre class="lines">
 
 
-367
-368
-369
 370
 371
 372
 373
 374
-375</pre>
+375
+376
+377
+378</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 367</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 370</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_bool_option'>bool_option</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_default'>default</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_name_str'>name_str</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
@@ -2948,9 +2951,6 @@ new instance.</p>
       <pre class="lines">
 
 
-452
-453
-454
 455
 456
 457
@@ -2968,10 +2968,13 @@ new instance.</p>
 469
 470
 471
-472</pre>
+472
+473
+474
+475</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 452</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 455</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_continue_lex'>continue_lex</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span><span class='symbol'>:continue_lex</span><span class='comma'>,</span> <span class='id identifier rubyid_string'>string</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -3014,9 +3017,6 @@ new instance.</p>
       <pre class="lines">
 
 
-393
-394
-395
 396
 397
 398
@@ -3030,10 +3030,13 @@ new instance.</p>
 406
 407
 408
-409</pre>
+409
+410
+411
+412</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 393</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 396</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_hash_option'>hash_option</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_defaults'>defaults</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_val_cast'>val_cast</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
@@ -3144,9 +3147,6 @@ an enumerator is returned.</p>
       <pre class="lines">
 
 
-429
-430
-431
 432
 433
 434
@@ -3164,10 +3164,13 @@ an enumerator is returned.</p>
 446
 447
 448
-449</pre>
+449
+450
+451
+452</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 429</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 432</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_lex'>lex</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_opts'>opts</span>
@@ -3210,12 +3213,12 @@ an enumerator is returned.</p>
       <pre class="lines">
 
 
-381
-382
-383</pre>
+384
+385
+386</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 381</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 384</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_lexer_option'>lexer_option</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_default'>default</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_as_lexer'>as_lexer</span><span class='lparen'>(</span><span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_default'>default</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -3240,12 +3243,12 @@ an enumerator is returned.</p>
       <pre class="lines">
 
 
-385
-386
-387</pre>
+388
+389
+390</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 385</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 388</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_list_option'>list_option</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_default'>default</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_as_list'>as_list</span><span class='lparen'>(</span><span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_default'>default</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -3285,11 +3288,11 @@ is a noop.</p>
       <pre class="lines">
 
 
-415
-416</pre>
+418
+419</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 415</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 418</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reset!'>reset!</span>
 <span class='kw'>end</span></pre>
@@ -3347,12 +3350,12 @@ must be implemented.</p>
       <pre class="lines">
 
 
-486
-487
-488</pre>
+489
+490
+491</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 486</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 489</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_stream_tokens'>stream_tokens</span><span class='lparen'>(</span><span class='id identifier rubyid_stream'>stream</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>abstract</span><span class='tstring_end'>&#39;</span></span>
@@ -3377,12 +3380,12 @@ must be implemented.</p>
       <pre class="lines">
 
 
-377
-378
-379</pre>
+380
+381
+382</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 377</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 380</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_string_option'>string_option</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_default'>default</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_as_string'>as_string</span><span class='lparen'>(</span><span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_default'>default</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -3417,12 +3420,12 @@ must be implemented.</p>
       <pre class="lines">
 
 
-475
-476
-477</pre>
+478
+479
+480</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 475</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 478</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tag'>tag</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_tag'>tag</span>
@@ -3447,12 +3450,12 @@ must be implemented.</p>
       <pre class="lines">
 
 
-389
-390
-391</pre>
+392
+393
+394</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 389</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexer.rb', line 392</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_token_option'>token_option</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_default'>default</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_as_token'>as_token</span><span class='lparen'>(</span><span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_default'>default</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -3467,7 +3470,7 @@ must be implemented.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Oct  2 02:50:17 2019 by
+  Generated on Wed Oct 16 01:14:04 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.19 (ruby-2.6.4).
 </div>
