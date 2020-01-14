@@ -6,15 +6,15 @@
 <title>
   Class: Rouge::Lexers::HQL
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.22
   
 </title>
 
-  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Rouge::Lexers::HQL";
   relpath = '../../';
 </script>
@@ -341,11 +341,11 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/rouge/lexers/hql.rb', line 13</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>
-  <span class='comment'># sources:
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>  <span class='comment'># sources:
 </span>  <span class='comment'># https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL
 </span>  <span class='comment'># https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
-</span>  <span class='ivar'>@keywords</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='qwords_beg'>%w(</span><span class='words_sep'>
+</span>
+  <span class='ivar'>@keywords</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='qwords_beg'>%w(</span><span class='words_sep'>
     </span><span class='tstring_content'>ADD</span><span class='words_sep'> </span><span class='tstring_content'>ADMIN</span><span class='words_sep'> </span><span class='tstring_content'>AFTER</span><span class='words_sep'> </span><span class='tstring_content'>ANALYZE</span><span class='words_sep'> </span><span class='tstring_content'>ARCHIVE</span><span class='words_sep'> </span><span class='tstring_content'>ASC</span><span class='words_sep'> </span><span class='tstring_content'>BEFORE</span><span class='words_sep'> </span><span class='tstring_content'>BUCKET</span><span class='words_sep'> </span><span class='tstring_content'>BUCKETS</span><span class='words_sep'> </span><span class='tstring_content'>CASCADE</span><span class='words_sep'>
     </span><span class='tstring_content'>CHANGE</span><span class='words_sep'> </span><span class='tstring_content'>CLUSTER</span><span class='words_sep'> </span><span class='tstring_content'>CLUSTERED</span><span class='words_sep'> </span><span class='tstring_content'>CLUSTERSTATUS</span><span class='words_sep'> </span><span class='tstring_content'>COLLECTION</span><span class='words_sep'> </span><span class='tstring_content'>COLUMNS</span><span class='words_sep'> </span><span class='tstring_content'>COMMENT</span><span class='words_sep'>
     </span><span class='tstring_content'>COMPACT</span><span class='words_sep'> </span><span class='tstring_content'>COMPACTIONS</span><span class='words_sep'> </span><span class='tstring_content'>COMPUTE</span><span class='words_sep'> </span><span class='tstring_content'>CONCATENATE</span><span class='words_sep'> </span><span class='tstring_content'>CONTINUE</span><span class='words_sep'> </span><span class='tstring_content'>DATA</span><span class='words_sep'> </span><span class='tstring_content'>DATABASES</span><span class='words_sep'>
@@ -462,9 +462,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/rouge/lexers/hql.rb', line 101</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords_type'>keywords_type</span>
-  <span class='comment'># source: https://cwiki.apache.org/confluence/display/Hive/LanguageManual+Types
-</span>  <span class='ivar'>@keywords_type</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='qwords_beg'>%w(</span><span class='words_sep'>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords_type'>keywords_type</span>  <span class='comment'># source: https://cwiki.apache.org/confluence/display/Hive/LanguageManual+Types
+</span>
+  <span class='ivar'>@keywords_type</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='qwords_beg'>%w(</span><span class='words_sep'>
       </span><span class='tstring_content'>TINYINT</span><span class='words_sep'> </span><span class='tstring_content'>SMALLINT</span><span class='words_sep'> </span><span class='tstring_content'>INT</span><span class='words_sep'> </span><span class='tstring_content'>INTEGER</span><span class='words_sep'> </span><span class='tstring_content'>BIGINT</span><span class='words_sep'> </span><span class='tstring_content'>FLOAT</span><span class='words_sep'> </span><span class='tstring_content'>DOUBLE</span><span class='words_sep'> </span><span class='tstring_content'>PRECISION</span><span class='words_sep'> </span><span class='tstring_content'>DECIMAL</span><span class='words_sep'> </span><span class='tstring_content'>NUMERIC</span><span class='words_sep'>
       </span><span class='tstring_content'>TIMESTAMP</span><span class='words_sep'> </span><span class='tstring_content'>DATE</span><span class='words_sep'> </span><span class='tstring_content'>INTERVAL</span><span class='words_sep'>
       </span><span class='tstring_content'>STRING</span><span class='words_sep'> </span><span class='tstring_content'>VARCHAR</span><span class='words_sep'> </span><span class='tstring_content'>CHAR</span><span class='words_sep'>
@@ -482,9 +482,9 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Dec 11 03:45:46 2019 by
+  Generated on Wed Jan 15 04:59:57 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 (ruby-2.6.4).
+  0.9.22 (ruby-2.7.0).
 </div>
 
     </div>

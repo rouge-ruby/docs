@@ -6,15 +6,15 @@
 <title>
   Class: Rouge::Lexers::ObjectiveC
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.22
   
 </title>
 
-  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Rouge::Lexers::ObjectiveC";
   relpath = '../../';
 </script>
@@ -91,6 +91,11 @@
 
   
   
+  <dl>
+      <dt>Extended by:</dt>
+      <dd><span class='object_link'><a href="ObjectiveCCommon.html" title="Rouge::Lexers::ObjectiveCCommon (module)">ObjectiveCCommon</a></span></dd>
+  </dl>
+  
   
   
   
@@ -129,83 +134,17 @@
   <p class="inherited"><span class='object_link'><a href="../Lexer.html#options-instance_method" title="Rouge::Lexer#options (method)">#options</a></span></p>
 
 
-  
-    <h2>
-      Class Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
-    </h2>
-
-    <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#at_builtins-class_method" title="at_builtins (class method)">.<strong>at_builtins</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#at_keywords-class_method" title="at_keywords (class method)">.<strong>at_keywords</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
   
   
   
   
   
+  <h2>Method Summary</h2>
   
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#builtins-class_method" title="builtins (class method)">.<strong>builtins</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-    </ul>
-  
-
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="ObjectiveCCommon.html" title="Rouge::Lexers::ObjectiveCCommon (module)">ObjectiveCCommon</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ObjectiveCCommon.html#at_builtins-instance_method" title="Rouge::Lexers::ObjectiveCCommon#at_builtins (method)">at_builtins</a></span>, <span class='object_link'><a href="ObjectiveCCommon.html#at_keywords-instance_method" title="Rouge::Lexers::ObjectiveCCommon#at_keywords (method)">at_keywords</a></span>, <span class='object_link'><a href="ObjectiveCCommon.html#builtins-instance_method" title="Rouge::Lexers::ObjectiveCCommon#builtins (method)">builtins</a></span></p>
 
   
   
@@ -216,7 +155,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="C.html" title="Rouge::Lexers::C (class)">C</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="C.html#keywords-class_method" title="Rouge::Lexers::C.keywords (method)">keywords</a></span>, <span class='object_link'><a href="C.html#keywords_type-class_method" title="Rouge::Lexers::C.keywords_type (method)">keywords_type</a></span>, <span class='object_link'><a href="C.html#reserved-class_method" title="Rouge::Lexers::C.reserved (method)">reserved</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="C.html#builtins-class_method" title="Rouge::Lexers::C.builtins (method)">builtins</a></span>, <span class='object_link'><a href="C.html#keywords-class_method" title="Rouge::Lexers::C.keywords (method)">keywords</a></span>, <span class='object_link'><a href="C.html#keywords_type-class_method" title="Rouge::Lexers::C.keywords_type (method)">keywords_type</a></span>, <span class='object_link'><a href="C.html#reserved-class_method" title="Rouge::Lexers::C.reserved (method)">reserved</a></span></p>
 
   
   
@@ -258,116 +197,12 @@
 </div>
 
 
-  <div id="class_method_details" class="method_details_list">
-    <h2>Class Method Details</h2>
-
-    
-      <div class="method_details first">
-  <h3 class="signature first" id="at_builtins-class_method">
-  
-    .<strong>at_builtins</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-25
-26
-27</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/objective_c.rb', line 25</span>
-
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_at_builtins'>at_builtins</span>
-  <span class='ivar'>@at_builtins</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>true</span><span class='words_sep'> </span><span class='tstring_content'>false</span><span class='words_sep'> </span><span class='tstring_content'>YES</span><span class='words_sep'> </span><span class='tstring_content'>NO</span><span class='tstring_end'>)</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="at_keywords-class_method">
-  
-    .<strong>at_keywords</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-17
-18
-19
-20
-21
-22
-23</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/objective_c.rb', line 17</span>
-
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_at_keywords'>at_keywords</span>
-  <span class='ivar'>@at_keywords</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
-    </span><span class='tstring_content'>selector</span><span class='words_sep'> </span><span class='tstring_content'>private</span><span class='words_sep'> </span><span class='tstring_content'>protected</span><span class='words_sep'> </span><span class='tstring_content'>public</span><span class='words_sep'> </span><span class='tstring_content'>encode</span><span class='words_sep'> </span><span class='tstring_content'>synchronized</span><span class='words_sep'> </span><span class='tstring_content'>try</span><span class='words_sep'>
-    </span><span class='tstring_content'>throw</span><span class='words_sep'> </span><span class='tstring_content'>catch</span><span class='words_sep'> </span><span class='tstring_content'>finally</span><span class='words_sep'> </span><span class='tstring_content'>end</span><span class='words_sep'> </span><span class='tstring_content'>property</span><span class='words_sep'> </span><span class='tstring_content'>synthesize</span><span class='words_sep'> </span><span class='tstring_content'>dynamic</span><span class='words_sep'> </span><span class='tstring_content'>optional</span><span class='words_sep'>
-    </span><span class='tstring_content'>interface</span><span class='words_sep'> </span><span class='tstring_content'>implementation</span><span class='words_sep'> </span><span class='tstring_content'>import</span><span class='words_sep'>
-  </span><span class='tstring_end'>)</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="builtins-class_method">
-  
-    .<strong>builtins</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-29
-30
-31</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/objective_c.rb', line 29</span>
-
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_builtins'>builtins</span>
-  <span class='ivar'>@builtins</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>YES</span><span class='words_sep'> </span><span class='tstring_content'>NO</span><span class='words_sep'> </span><span class='tstring_content'>nil</span><span class='tstring_end'>)</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
-
 </div>
 
       <div id="footer">
-  Generated on Wed Dec 11 03:45:53 2019 by
+  Generated on Wed Jan 15 05:00:04 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 (ruby-2.6.4).
+  0.9.22 (ruby-2.7.0).
 </div>
 
     </div>

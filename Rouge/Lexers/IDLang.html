@@ -6,15 +6,15 @@
 <title>
   Class: Rouge::Lexers::IDLang
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.22
   
 </title>
 
-  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Rouge::Lexers::IDLang";
   relpath = '../../';
 </script>
@@ -400,9 +400,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/rouge/lexers/idlang.rb', line 39</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_decorators'>decorators</span>
-  <span class='comment'># Must not have a comma afterwards
-</span>  <span class='ivar'>@decorators</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_decorators'>decorators</span>  <span class='comment'># Must not have a comma afterwards
+</span>
+  <span class='ivar'>@decorators</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
     </span><span class='tstring_content'>COMPILE_OPT</span><span class='words_sep'>
   </span><span class='tstring_end'>)</span></span>
 <span class='kw'>end</span></pre>
@@ -864,9 +864,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/rouge/lexers/idlang.rb', line 32</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_standalone_statements'>standalone_statements</span>
-  <span class='comment'># Must not have a comma afterwards
-</span>  <span class='ivar'>@standalone_statements</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_standalone_statements'>standalone_statements</span>  <span class='comment'># Must not have a comma afterwards
+</span>
+  <span class='ivar'>@standalone_statements</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
     </span><span class='tstring_content'>COMMON</span><span class='words_sep'> </span><span class='tstring_content'>FORWARD_FUNCTION</span><span class='words_sep'>
   </span><span class='tstring_end'>)</span></span>
 <span class='kw'>end</span></pre>
@@ -880,9 +880,9 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Dec 11 03:45:51 2019 by
+  Generated on Wed Jan 15 05:00:01 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 (ruby-2.6.4).
+  0.9.22 (ruby-2.7.0).
 </div>
 
     </div>

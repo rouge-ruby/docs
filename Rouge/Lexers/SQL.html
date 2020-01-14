@@ -6,15 +6,15 @@
 <title>
   Class: Rouge::Lexers::SQL
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.22
   
 </title>
 
-  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Rouge::Lexers::SQL";
   relpath = '../../';
 </script>
@@ -443,12 +443,12 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/rouge/lexers/sql.rb', line 91</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords_type'>keywords_type</span>
-  <span class='comment'># sources:
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords_type'>keywords_type</span>  <span class='comment'># sources:
 </span>  <span class='comment'># https://dev.mysql.com/doc/refman/5.7/en/numeric-type-overview.html
 </span>  <span class='comment'># https://dev.mysql.com/doc/refman/5.7/en/date-and-time-type-overview.html
 </span>  <span class='comment'># https://dev.mysql.com/doc/refman/5.7/en/string-type-overview.html
-</span>  <span class='ivar'>@keywords_type</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='qwords_beg'>%w(</span><span class='words_sep'>
+</span>
+  <span class='ivar'>@keywords_type</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='qwords_beg'>%w(</span><span class='words_sep'>
       </span><span class='tstring_content'>ZEROFILL</span><span class='words_sep'> </span><span class='tstring_content'>UNSIGNED</span><span class='words_sep'> </span><span class='tstring_content'>SIGNED</span><span class='words_sep'> </span><span class='tstring_content'>SERIAL</span><span class='words_sep'> </span><span class='tstring_content'>BIT</span><span class='words_sep'> </span><span class='tstring_content'>TINYINT</span><span class='words_sep'> </span><span class='tstring_content'>BOOL</span><span class='words_sep'> </span><span class='tstring_content'>BOOLEAN</span><span class='words_sep'> </span><span class='tstring_content'>SMALLINT</span><span class='words_sep'>
       </span><span class='tstring_content'>MEDIUMINT</span><span class='words_sep'> </span><span class='tstring_content'>INT</span><span class='words_sep'> </span><span class='tstring_content'>INTEGER</span><span class='words_sep'> </span><span class='tstring_content'>BIGINT</span><span class='words_sep'> </span><span class='tstring_content'>DECIMAL</span><span class='words_sep'> </span><span class='tstring_content'>DEC</span><span class='words_sep'> </span><span class='tstring_content'>NUMERIC</span><span class='words_sep'> </span><span class='tstring_content'>FIXED</span><span class='words_sep'> </span><span class='tstring_content'>FLOAT</span><span class='words_sep'> </span><span class='tstring_content'>DOUBLE</span><span class='words_sep'>
       </span><span class='tstring_content'>PRECISION</span><span class='words_sep'> </span><span class='tstring_content'>REAL</span><span class='words_sep'>
@@ -468,9 +468,9 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Dec 11 03:45:47 2019 by
+  Generated on Wed Jan 15 04:59:58 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 (ruby-2.6.4).
+  0.9.22 (ruby-2.7.0).
 </div>
 
     </div>

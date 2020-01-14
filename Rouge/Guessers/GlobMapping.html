@@ -6,15 +6,15 @@
 <title>
   Class: Rouge::Guessers::GlobMapping
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.22
   
 </title>
 
-  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Rouge::Guessers::GlobMapping";
   relpath = '../../';
 </script>
@@ -310,7 +310,7 @@ with glob -&gt; lexer name mappings</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a new instance of GlobMapping</p>
+    <p>Returns a new instance of GlobMapping.</p>
 
 
   </div>
@@ -359,7 +359,7 @@ with glob -&gt; lexer name mappings</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the value of attribute filename</p>
+    <p>Returns the value of attribute filename.</p>
 
 
   </div>
@@ -401,7 +401,7 @@ with glob -&gt; lexer name mappings</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the value of attribute glob_map</p>
+    <p>Returns the value of attribute glob_map.</p>
 
 
   </div>
@@ -531,9 +531,9 @@ with glob -&gt; lexer name mappings</p>
 
   <span class='id identifier rubyid_collect_best'>collect_best</span><span class='lparen'>(</span><span class='id identifier rubyid_lexers'>lexers</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_lexer'>lexer</span><span class='op'>|</span>
     <span class='lparen'>(</span><span class='ivar'>@glob_map</span><span class='lbracket'>[</span><span class='id identifier rubyid_lexer'>lexer</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_pattern'>pattern</span><span class='op'>|</span>
-      <span class='kw'>if</span> <span class='id identifier rubyid_test_glob'>test_glob</span><span class='lparen'>(</span><span class='id identifier rubyid_pattern'>pattern</span><span class='comma'>,</span> <span class='id identifier rubyid_basename'>basename</span><span class='rparen'>)</span>
-        <span class='comment'># specificity is better the fewer wildcards there are
-</span>        <span class='op'>-</span><span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[*?\[]</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_test_glob'>test_glob</span><span class='lparen'>(</span><span class='id identifier rubyid_pattern'>pattern</span><span class='comma'>,</span> <span class='id identifier rubyid_basename'>basename</span><span class='rparen'>)</span>        <span class='comment'># specificity is better the fewer wildcards there are
+</span>
+        <span class='op'>-</span><span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[*?\[]</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
       <span class='kw'>end</span>
     <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span><span class='period'>.</span><span class='id identifier rubyid_min'>min</span>
   <span class='kw'>end</span>
@@ -548,9 +548,9 @@ with glob -&gt; lexer name mappings</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Dec 11 03:45:54 2019 by
+  Generated on Wed Jan 15 05:00:04 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 (ruby-2.6.4).
+  0.9.22 (ruby-2.7.0).
 </div>
 
     </div>

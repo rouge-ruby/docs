@@ -6,15 +6,15 @@
 <title>
   Class: Rouge::Formatters::Terminal256
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.22
   
 </title>
 
-  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Rouge::Formatters::Terminal256";
   relpath = '../../';
 </script>
@@ -278,7 +278,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a new instance of Terminal256</p>
+    <p>Returns a new instance of Terminal256.</p>
 
 
   </div>
@@ -493,9 +493,9 @@
       <pre class="code"><span class="info file"># File 'lib/rouge/formatters/terminal256.rb', line 174</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_text_style'>text_style</span>
-  <span class='id identifier rubyid_style'>style</span> <span class='op'>=</span> <span class='id identifier rubyid_theme'>theme</span><span class='period'>.</span><span class='id identifier rubyid_get_style'>get_style</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Token.html" title="Rouge::Token (class)">Token</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Text</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
-  <span class='comment'># don&#39;t highlight text backgrounds
-</span>  <span class='id identifier rubyid_style'>style</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='symbol'>:bg</span>
+  <span class='id identifier rubyid_style'>style</span> <span class='op'>=</span> <span class='id identifier rubyid_theme'>theme</span><span class='period'>.</span><span class='id identifier rubyid_get_style'>get_style</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Token.html" title="Rouge::Token (class)">Token</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Text</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>  <span class='comment'># don&#39;t highlight text backgrounds
+</span>
+  <span class='id identifier rubyid_style'>style</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='symbol'>:bg</span>
   <span class='id identifier rubyid_style'>style</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -508,9 +508,9 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Dec 11 03:45:54 2019 by
+  Generated on Wed Jan 15 05:00:04 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 (ruby-2.6.4).
+  0.9.22 (ruby-2.7.0).
 </div>
 
     </div>
