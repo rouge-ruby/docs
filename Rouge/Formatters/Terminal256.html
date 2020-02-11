@@ -6,7 +6,7 @@
 <title>
   Class: Rouge::Formatters::Terminal256
   
-    &mdash; Documentation by YARD 0.9.22
+    &mdash; Documentation by YARD 0.9.24
   
 </title>
 
@@ -111,13 +111,17 @@
 <div class="tags">
   
 
-</div><h2>Defined Under Namespace</h2>
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="TerminalTruecolor.html" title="Rouge::Formatters::TerminalTruecolor (class)">TerminalTruecolor</a></span></p>
+</div>
+<h2>Defined Under Namespace</h2>
 <p class="children">
   
     
   
     
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Terminal256/EscapeSequence.html" title="Rouge::Formatters::Terminal256::EscapeSequence (class)">EscapeSequence</a></span>
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Terminal256/EscapeSequence.html" title="Rouge::Formatters::Terminal256::EscapeSequence (class)">EscapeSequence</a></span>, <span class='object_link'><a href="Terminal256/Unescape.html" title="Rouge::Formatters::Terminal256::Unescape (class)">Unescape</a></span>
     
   
 </p>
@@ -202,6 +206,28 @@
   
     <span class="summary_desc"><div class='inline'><p>A new instance of Terminal256.</p>
 </div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#make_escape_sequence-instance_method" title="#make_escape_sequence (instance method)">#<strong>make_escape_sequence</strong>(style)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -372,21 +398,21 @@
       <pre class="lines">
 
 
-161
-162
-163
-164
-165
-166</pre>
+173
+174
+175
+176
+177
+178</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/terminal256.rb', line 161</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/terminal256.rb', line 173</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_escape_sequence'>escape_sequence</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_escape?'>escape?</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="Terminal256/Unescape.html" title="Rouge::Formatters::Terminal256::Unescape (class)">Unescape</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Terminal256/Unescape.html#initialize-instance_method" title="Rouge::Formatters::Terminal256::Unescape#initialize (method)">new</a></span></span> <span class='kw'>if</span> <span class='id identifier rubyid_escape?'>escape?</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span>
   <span class='ivar'>@escape_sequences</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
   <span class='ivar'>@escape_sequences</span><span class='lbracket'>[</span><span class='id identifier rubyid_token'>token</span><span class='period'>.</span><span class='id identifier rubyid_qualname'>qualname</span><span class='rbracket'>]</span> <span class='op'>||=</span>
-    <span class='const'><span class='object_link'><a href="Terminal256/EscapeSequence.html" title="Rouge::Formatters::Terminal256::EscapeSequence (class)">EscapeSequence</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Terminal256/EscapeSequence.html#initialize-instance_method" title="Rouge::Formatters::Terminal256::EscapeSequence#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_get_style'>get_style</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_make_escape_sequence'>make_escape_sequence</span><span class='lparen'>(</span><span class='id identifier rubyid_get_style'>get_style</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -408,19 +434,49 @@
       <pre class="lines">
 
 
-168
-169
-170
-171
-172</pre>
+184
+185
+186
+187
+188</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/terminal256.rb', line 168</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/terminal256.rb', line 184</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_style'>get_style</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_text_style'>text_style</span> <span class='kw'>if</span> <span class='id identifier rubyid_token'>token</span><span class='period'>.</span><span class='id identifier rubyid_ancestors'>ancestors</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='const'><span class='object_link'><a href="../Token.html" title="Rouge::Token (class)">Token</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Token/Tokens.html" title="Rouge::Token::Tokens (module)">Tokens</a></span></span><span class='op'>::</span><span class='const'>Text</span>
 
   <span class='id identifier rubyid_theme'>theme</span><span class='period'>.</span><span class='id identifier rubyid_get_own_style'>get_own_style</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_text_style'>text_style</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="make_escape_sequence-instance_method">
+  
+    #<strong>make_escape_sequence</strong>(style)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+180
+181
+182</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/terminal256.rb', line 180</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_make_escape_sequence'>make_escape_sequence</span><span class='lparen'>(</span><span class='id identifier rubyid_style'>style</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="Terminal256/EscapeSequence.html" title="Rouge::Formatters::Terminal256::EscapeSequence (class)">EscapeSequence</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Terminal256/EscapeSequence.html#initialize-instance_method" title="Rouge::Formatters::Terminal256::EscapeSequence#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_style'>style</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -446,20 +502,14 @@
 26
 27
 28
-29
-30
-31
-32</pre>
+29</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/rouge/formatters/terminal256.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_stream'>stream</span><span class='lparen'>(</span><span class='id identifier rubyid_tokens'>tokens</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tokens'>tokens</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='op'>|</span>
-    <span class='id identifier rubyid_escape'>escape</span> <span class='op'>=</span> <span class='id identifier rubyid_escape_sequence'>escape_sequence</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='rparen'>)</span>
-    <span class='kw'>yield</span> <span class='id identifier rubyid_escape'>escape</span><span class='period'>.</span><span class='id identifier rubyid_style_string'>style_string</span>
-    <span class='kw'>yield</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_escape'>escape</span><span class='period'>.</span><span class='id identifier rubyid_reset_string'>reset_string</span><span class='embexpr_end'>}</span><span class='tstring_content'>\n</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_escape'>escape</span><span class='period'>.</span><span class='id identifier rubyid_style_string'>style_string</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-    <span class='kw'>yield</span> <span class='id identifier rubyid_escape'>escape</span><span class='period'>.</span><span class='id identifier rubyid_reset_string'>reset_string</span>
+    <span class='id identifier rubyid_escape_sequence'>escape_sequence</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_stream_value'>stream_value</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -482,15 +532,15 @@
       <pre class="lines">
 
 
-174
-175
-176
-177
-178
-179</pre>
+190
+191
+192
+193
+194
+195</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/terminal256.rb', line 174</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/terminal256.rb', line 190</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_text_style'>text_style</span>
   <span class='id identifier rubyid_style'>style</span> <span class='op'>=</span> <span class='id identifier rubyid_theme'>theme</span><span class='period'>.</span><span class='id identifier rubyid_get_style'>get_style</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Token.html" title="Rouge::Token (class)">Token</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Text</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>  <span class='comment'># don&#39;t highlight text backgrounds
@@ -508,9 +558,9 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Jan 15 05:00:04 2020 by
+  Generated on Wed Feb 12 04:48:31 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.22 (ruby-2.7.0).
+  0.9.24 (ruby-2.7.0).
 </div>
 
     </div>

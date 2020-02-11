@@ -6,7 +6,7 @@
 <title>
   Class: Rouge::CLI
   
-    &mdash; Documentation by YARD 0.9.22
+    &mdash; Documentation by YARD 0.9.24
   
 </title>
 
@@ -325,11 +325,11 @@
       <pre class="lines">
 
 
-86
-87</pre>
+88
+89</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 86</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 88</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -360,8 +360,6 @@
       <pre class="lines">
 
 
-97
-98
 99
 100
 101
@@ -375,10 +373,12 @@
 109
 110
 111
-112</pre>
+112
+113
+114</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 97</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 99</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class_from_arg'>class_from_arg</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_arg'>arg</span>
@@ -438,8 +438,6 @@
       <pre class="lines">
 
 
-38
-39
 40
 41
 42
@@ -455,10 +453,12 @@
 52
 53
 54
-55</pre>
+55
+56
+57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_doc'>doc</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span><span class='symbol'>:doc</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
@@ -520,12 +520,12 @@
       <pre class="lines">
 
 
-89
-90
-91</pre>
+91
+92
+93</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 89</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 91</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_error!'>error!</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='op'>=</span><span class='int'>1</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="CLI/Error.html" title="Rouge::CLI::Error (class)">Error</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="CLI/Error.html#initialize-instance_method" title="Rouge::CLI::Error#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span>
@@ -550,24 +550,24 @@
       <pre class="lines">
 
 
-465
-466
-467
-468
-469
-470
-471
-472
-473
-474
-475
-476
-477
-478
-479</pre>
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 465</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 482</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_normalize_syntax'>normalize_syntax</span><span class='lparen'>(</span><span class='id identifier rubyid_argv'>argv</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_out'>out</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -604,8 +604,6 @@
       <pre class="lines">
 
 
-65
-66
 67
 68
 69
@@ -623,10 +621,12 @@
 81
 82
 83
-84</pre>
+84
+85
+86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 65</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_argv'>argv</span><span class='op'>=</span><span class='const'>ARGV</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_argv'>argv</span> <span class='op'>=</span> <span class='id identifier rubyid_normalize_syntax'>normalize_syntax</span><span class='lparen'>(</span><span class='id identifier rubyid_argv'>argv</span><span class='rparen'>)</span>
@@ -674,12 +674,12 @@
       <pre class="lines">
 
 
-93
-94
-95</pre>
+95
+96
+97</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 93</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 95</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_error!'>error!</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_a'>a</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_error!'>error!</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_a'>a</span><span class='rparen'>)</span>
@@ -694,9 +694,9 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Jan 15 04:59:56 2020 by
+  Generated on Wed Feb 12 04:48:19 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.22 (ruby-2.7.0).
+  0.9.24 (ruby-2.7.0).
 </div>
 
     </div>
