@@ -112,16 +112,6 @@
 
     <dl class="constants">
       
-        <dt id="LNUM-constant" class="">LNUM =
-          
-        </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[0-9]+</span><span class='tstring_end'>&#39;</span></span></pre></dd>
-      
-        <dt id="DNUM-constant" class="">DNUM =
-          
-        </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>([0-9]*&quot;.&quot;[0-9]+)|([0-9]+&quot;.&quot;[0-9]*)</span><span class='tstring_end'>&#39;</span></span></pre></dd>
-      
         <dt id="SPACE-constant" class="">SPACE =
           
         </dt>
@@ -291,7 +281,6 @@
       <pre class="lines">
 
 
-27
 28
 29
 30
@@ -300,10 +289,11 @@
 33
 34
 35
-36</pre>
+36
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/varnish.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/varnish.rb', line 28</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_functions'>functions</span>
   <span class='ivar'>@functions</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w[</span><span class='words_sep'>
@@ -345,20 +335,26 @@
       <pre class="lines">
 
 
+18
+19
 20
 21
 22
 23
 24
-25</pre>
+25
+26</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/varnish.rb', line 20</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/varnish.rb', line 18</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>
   <span class='ivar'>@keywords</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w[</span><span class='words_sep'>
     </span><span class='tstring_content'>vcl</span><span class='words_sep'> </span><span class='tstring_content'>set</span><span class='words_sep'> </span><span class='tstring_content'>unset</span><span class='words_sep'> </span><span class='tstring_content'>include</span><span class='words_sep'> </span><span class='tstring_content'>import</span><span class='words_sep'> </span><span class='tstring_content'>if</span><span class='words_sep'> </span><span class='tstring_content'>else</span><span class='words_sep'> </span><span class='tstring_content'>elseif</span><span class='words_sep'> </span><span class='tstring_content'>elif</span><span class='words_sep'> </span><span class='tstring_content'>elsif</span><span class='words_sep'> </span><span class='tstring_content'>director</span><span class='words_sep'> </span><span class='tstring_content'>probe</span><span class='words_sep'>
     </span><span class='tstring_content'>backend</span><span class='words_sep'> </span><span class='tstring_content'>acl</span><span class='words_sep'>
+
+    </span><span class='tstring_content'>declare</span><span class='words_sep'> </span><span class='tstring_content'>local</span><span class='words_sep'>
+    </span><span class='tstring_content'>BOOL</span><span class='words_sep'> </span><span class='tstring_content'>FLOAT</span><span class='words_sep'> </span><span class='tstring_content'>INTEGER</span><span class='words_sep'> </span><span class='tstring_content'>IP</span><span class='words_sep'> </span><span class='tstring_content'>RTIME</span><span class='words_sep'> </span><span class='tstring_content'>STRING</span><span class='words_sep'> </span><span class='tstring_content'>TIME</span><span class='words_sep'>
   </span><span class='tstring_end'>]</span></span>
 <span class='kw'>end</span></pre>
     </td>
@@ -381,7 +377,6 @@
       <pre class="lines">
 
 
-38
 39
 40
 41
@@ -397,10 +392,11 @@
 51
 52
 53
-54</pre>
+54
+55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/varnish.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/varnish.rb', line 39</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_variables'>variables</span>
   <span class='ivar'>@variables</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w[</span><span class='words_sep'>
@@ -429,7 +425,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Feb 12 04:48:28 2020 by
+  Generated on Wed Mar 11 04:41:43 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.24 (ruby-2.7.0).
 </div>
