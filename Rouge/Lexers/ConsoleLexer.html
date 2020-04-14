@@ -109,7 +109,7 @@ text that would display in a console/terminal. As distinct from the
 line before passing the remainder of the line to the language lexer for
 the shell (by default, the <span class='object_link'><a href="Shell.html" title="Rouge::Lexers::Shell (class)">Shell</a></span> lexer).</p>
 
-<p>The <span class='object_link'><a href="" title="Rouge::Lexers::ConsoleLexer (class)">ConsoleLexer</a></span> class accepts four options:</p>
+<p>The <span class='object_link'><a href="" title="Rouge::Lexers::ConsoleLexer (class)">ConsoleLexer</a></span> class accepts five options:</p>
 
 <ol>
 <li><strong>lang</strong>: the shell language to lex (default: <code>shell</code>);</li>
@@ -117,6 +117,8 @@ the shell (by default, the <span class='object_link'><a href="Shell.html" title=
 <li><strong>prompt</strong>: comma-separated list of strings that indicate the end of a
 prompt (default: <code>$,#,&gt;,;</code>);</li>
 <li><strong>comments</strong>: whether to enable comments.</li>
+<li><strong>error</strong>: comma-separated list of strings that indicate the start of an
+error message</li>
 </ol>
 
 <p>The comments option, if enabled, will lex lines that begin with a <code>#</code> as a
@@ -223,6 +225,28 @@ Some more regular text.</code></pre>
   <span class="summary_signature">
     
       <a href="#end_chars-instance_method" title="#end_chars (instance method)">#<strong>end_chars</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#error_regex-instance_method" title="#error_regex (instance method)">#<strong>error_regex</strong>  &#x21d2; Object </a>
     
 
     
@@ -433,7 +457,7 @@ Some more regular text.</code></pre>
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Lexer.html#aliases-class_method" title="Rouge::Lexer.aliases (method)">aliases</a></span>, <span class='object_link'><a href="../Lexer.html#all-class_method" title="Rouge::Lexer.all (method)">all</a></span>, <span class='object_link'><a href="../Lexer.html#as_bool-instance_method" title="Rouge::Lexer#as_bool (method)">#as_bool</a></span>, <span class='object_link'><a href="../Lexer.html#as_lexer-instance_method" title="Rouge::Lexer#as_lexer (method)">#as_lexer</a></span>, <span class='object_link'><a href="../Lexer.html#as_list-instance_method" title="Rouge::Lexer#as_list (method)">#as_list</a></span>, <span class='object_link'><a href="../Lexer.html#as_string-instance_method" title="Rouge::Lexer#as_string (method)">#as_string</a></span>, <span class='object_link'><a href="../Lexer.html#as_token-instance_method" title="Rouge::Lexer#as_token (method)">#as_token</a></span>, <span class='object_link'><a href="../Lexer.html#bool_option-instance_method" title="Rouge::Lexer#bool_option (method)">#bool_option</a></span>, <span class='object_link'><a href="../Lexer.html#continue_lex-instance_method" title="Rouge::Lexer#continue_lex (method)">#continue_lex</a></span>, <span class='object_link'><a href="../Lexer.html#continue_lex-class_method" title="Rouge::Lexer.continue_lex (method)">continue_lex</a></span>, <span class='object_link'><a href="../Lexer.html#debug_enabled%3F-class_method" title="Rouge::Lexer.debug_enabled? (method)">debug_enabled?</a></span>, <span class='object_link'><a href="../Lexer.html#demo-class_method" title="Rouge::Lexer.demo (method)">demo</a></span>, <span class='object_link'><a href="../Lexer.html#demo_file-class_method" title="Rouge::Lexer.demo_file (method)">demo_file</a></span>, <span class='object_link'><a href="../Lexer.html#desc-class_method" title="Rouge::Lexer.desc (method)">desc</a></span>, <span class='object_link'><a href="../Lexer.html#detect%3F-class_method" title="Rouge::Lexer.detect? (method)">detect?</a></span>, <span class='object_link'><a href="../Lexer.html#detectable%3F-class_method" title="Rouge::Lexer.detectable? (method)">detectable?</a></span>, <span class='object_link'><a href="../Lexer.html#disable_debug!-class_method" title="Rouge::Lexer.disable_debug! (method)">disable_debug!</a></span>, <span class='object_link'><a href="../Lexer.html#enable_debug!-class_method" title="Rouge::Lexer.enable_debug! (method)">enable_debug!</a></span>, <span class='object_link'><a href="../Lexer.html#filenames-class_method" title="Rouge::Lexer.filenames (method)">filenames</a></span>, <span class='object_link'><a href="../Lexer.html#find-class_method" title="Rouge::Lexer.find (method)">find</a></span>, <span class='object_link'><a href="../Lexer.html#find_fancy-class_method" title="Rouge::Lexer.find_fancy (method)">find_fancy</a></span>, <span class='object_link'><a href="../Lexer.html#guess-class_method" title="Rouge::Lexer.guess (method)">guess</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_filename-class_method" title="Rouge::Lexer.guess_by_filename (method)">guess_by_filename</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_mimetype-class_method" title="Rouge::Lexer.guess_by_mimetype (method)">guess_by_mimetype</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_source-class_method" title="Rouge::Lexer.guess_by_source (method)">guess_by_source</a></span>, <span class='object_link'><a href="../Lexer.html#guesses-class_method" title="Rouge::Lexer.guesses (method)">guesses</a></span>, <span class='object_link'><a href="../Lexer.html#hash_option-instance_method" title="Rouge::Lexer#hash_option (method)">#hash_option</a></span>, <span class='object_link'><a href="../Lexer.html#lex-class_method" title="Rouge::Lexer.lex (method)">lex</a></span>, <span class='object_link'><a href="../Lexer.html#lex-instance_method" title="Rouge::Lexer#lex (method)">#lex</a></span>, <span class='object_link'><a href="../Lexer.html#lexer_option-instance_method" title="Rouge::Lexer#lexer_option (method)">#lexer_option</a></span>, <span class='object_link'><a href="../Lexer.html#list_option-instance_method" title="Rouge::Lexer#list_option (method)">#list_option</a></span>, <span class='object_link'><a href="../Lexer.html#mimetypes-class_method" title="Rouge::Lexer.mimetypes (method)">mimetypes</a></span>, <span class='object_link'><a href="../Lexer.html#option-class_method" title="Rouge::Lexer.option (method)">option</a></span>, <span class='object_link'><a href="../Lexer.html#option_docs-class_method" title="Rouge::Lexer.option_docs (method)">option_docs</a></span>, <span class='object_link'><a href="../Lexer.html#reset!-instance_method" title="Rouge::Lexer#reset! (method)">#reset!</a></span>, <span class='object_link'><a href="../Lexer.html#string_option-instance_method" title="Rouge::Lexer#string_option (method)">#string_option</a></span>, <span class='object_link'><a href="../Lexer.html#tag-class_method" title="Rouge::Lexer.tag (method)">tag</a></span>, <span class='object_link'><a href="../Lexer.html#tag-instance_method" title="Rouge::Lexer#tag (method)">#tag</a></span>, <span class='object_link'><a href="../Lexer.html#title-class_method" title="Rouge::Lexer.title (method)">title</a></span>, <span class='object_link'><a href="../Lexer.html#token_option-instance_method" title="Rouge::Lexer#token_option (method)">#token_option</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Lexer.html#aliases-class_method" title="Rouge::Lexer.aliases (method)">aliases</a></span>, <span class='object_link'><a href="../Lexer.html#all-class_method" title="Rouge::Lexer.all (method)">all</a></span>, <span class='object_link'><a href="../Lexer.html#as_bool-instance_method" title="Rouge::Lexer#as_bool (method)">#as_bool</a></span>, <span class='object_link'><a href="../Lexer.html#as_lexer-instance_method" title="Rouge::Lexer#as_lexer (method)">#as_lexer</a></span>, <span class='object_link'><a href="../Lexer.html#as_list-instance_method" title="Rouge::Lexer#as_list (method)">#as_list</a></span>, <span class='object_link'><a href="../Lexer.html#as_string-instance_method" title="Rouge::Lexer#as_string (method)">#as_string</a></span>, <span class='object_link'><a href="../Lexer.html#as_token-instance_method" title="Rouge::Lexer#as_token (method)">#as_token</a></span>, <span class='object_link'><a href="../Lexer.html#bool_option-instance_method" title="Rouge::Lexer#bool_option (method)">#bool_option</a></span>, <span class='object_link'><a href="../Lexer.html#continue_lex-class_method" title="Rouge::Lexer.continue_lex (method)">continue_lex</a></span>, <span class='object_link'><a href="../Lexer.html#continue_lex-instance_method" title="Rouge::Lexer#continue_lex (method)">#continue_lex</a></span>, <span class='object_link'><a href="../Lexer.html#debug_enabled%3F-class_method" title="Rouge::Lexer.debug_enabled? (method)">debug_enabled?</a></span>, <span class='object_link'><a href="../Lexer.html#demo-class_method" title="Rouge::Lexer.demo (method)">demo</a></span>, <span class='object_link'><a href="../Lexer.html#demo_file-class_method" title="Rouge::Lexer.demo_file (method)">demo_file</a></span>, <span class='object_link'><a href="../Lexer.html#desc-class_method" title="Rouge::Lexer.desc (method)">desc</a></span>, <span class='object_link'><a href="../Lexer.html#detect%3F-class_method" title="Rouge::Lexer.detect? (method)">detect?</a></span>, <span class='object_link'><a href="../Lexer.html#detectable%3F-class_method" title="Rouge::Lexer.detectable? (method)">detectable?</a></span>, <span class='object_link'><a href="../Lexer.html#disable_debug!-class_method" title="Rouge::Lexer.disable_debug! (method)">disable_debug!</a></span>, <span class='object_link'><a href="../Lexer.html#enable_debug!-class_method" title="Rouge::Lexer.enable_debug! (method)">enable_debug!</a></span>, <span class='object_link'><a href="../Lexer.html#filenames-class_method" title="Rouge::Lexer.filenames (method)">filenames</a></span>, <span class='object_link'><a href="../Lexer.html#find-class_method" title="Rouge::Lexer.find (method)">find</a></span>, <span class='object_link'><a href="../Lexer.html#find_fancy-class_method" title="Rouge::Lexer.find_fancy (method)">find_fancy</a></span>, <span class='object_link'><a href="../Lexer.html#guess-class_method" title="Rouge::Lexer.guess (method)">guess</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_filename-class_method" title="Rouge::Lexer.guess_by_filename (method)">guess_by_filename</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_mimetype-class_method" title="Rouge::Lexer.guess_by_mimetype (method)">guess_by_mimetype</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_source-class_method" title="Rouge::Lexer.guess_by_source (method)">guess_by_source</a></span>, <span class='object_link'><a href="../Lexer.html#guesses-class_method" title="Rouge::Lexer.guesses (method)">guesses</a></span>, <span class='object_link'><a href="../Lexer.html#hash_option-instance_method" title="Rouge::Lexer#hash_option (method)">#hash_option</a></span>, <span class='object_link'><a href="../Lexer.html#lex-class_method" title="Rouge::Lexer.lex (method)">lex</a></span>, <span class='object_link'><a href="../Lexer.html#lex-instance_method" title="Rouge::Lexer#lex (method)">#lex</a></span>, <span class='object_link'><a href="../Lexer.html#lexer_option-instance_method" title="Rouge::Lexer#lexer_option (method)">#lexer_option</a></span>, <span class='object_link'><a href="../Lexer.html#list_option-instance_method" title="Rouge::Lexer#list_option (method)">#list_option</a></span>, <span class='object_link'><a href="../Lexer.html#mimetypes-class_method" title="Rouge::Lexer.mimetypes (method)">mimetypes</a></span>, <span class='object_link'><a href="../Lexer.html#option-class_method" title="Rouge::Lexer.option (method)">option</a></span>, <span class='object_link'><a href="../Lexer.html#option_docs-class_method" title="Rouge::Lexer.option_docs (method)">option_docs</a></span>, <span class='object_link'><a href="../Lexer.html#reset!-instance_method" title="Rouge::Lexer#reset! (method)">#reset!</a></span>, <span class='object_link'><a href="../Lexer.html#string_option-instance_method" title="Rouge::Lexer#string_option (method)">#string_option</a></span>, <span class='object_link'><a href="../Lexer.html#tag-class_method" title="Rouge::Lexer.tag (method)">tag</a></span>, <span class='object_link'><a href="../Lexer.html#tag-instance_method" title="Rouge::Lexer#tag (method)">#tag</a></span>, <span class='object_link'><a href="../Lexer.html#title-class_method" title="Rouge::Lexer.title (method)">title</a></span>, <span class='object_link'><a href="../Lexer.html#token_option-instance_method" title="Rouge::Lexer#token_option (method)">#token_option</a></span></p>
 
   
   
@@ -473,16 +497,17 @@ Some more regular text.</code></pre>
       <pre class="lines">
 
 
-49
-50
-51
 52
 53
 54
-55</pre>
+55
+56
+57
+58
+59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/console.rb', line 49</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/console.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='rparen'>)</span>
   <span class='kw'>super</span>
@@ -490,6 +515,7 @@ Some more regular text.</code></pre>
   <span class='ivar'>@lang</span> <span class='op'>=</span> <span class='id identifier rubyid_lexer_option'>lexer_option</span><span class='lparen'>(</span><span class='symbol'>:lang</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>shell</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
   <span class='ivar'>@output</span> <span class='op'>=</span> <span class='id identifier rubyid_lexer_option'>lexer_option</span><span class='lparen'>(</span><span class='symbol'>:output</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='const'><span class='object_link'><a href="PlainText.html" title="Rouge::Lexers::PlainText (class)">PlainText</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="PlainText.html#initialize-instance_method" title="Rouge::Lexers::PlainText#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='label'>token:</span> <span class='const'>Generic</span><span class='op'>::</span><span class='const'>Output</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
   <span class='ivar'>@comments</span> <span class='op'>=</span> <span class='id identifier rubyid_bool_option'>bool_option</span><span class='lparen'>(</span><span class='symbol'>:comments</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='symbol'>:guess</span> <span class='rbrace'>}</span>
+  <span class='ivar'>@error</span> <span class='op'>=</span> <span class='id identifier rubyid_list_option'>list_option</span><span class='lparen'>(</span><span class='symbol'>:error</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='kw'>nil</span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -542,17 +568,17 @@ simply &quot;#&quot;, we flag this to on</p>
       <pre class="lines">
 
 
-75
-76
-77
-78
-79
-80
-81
-82</pre>
+63
+64
+65
+66
+67
+68
+69
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/console.rb', line 75</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/console.rb', line 63</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_allow_comments?'>allow_comments?</span>
   <span class='kw'>case</span> <span class='ivar'>@comments</span>
@@ -582,12 +608,12 @@ simply &quot;#&quot;, we flag this to on</p>
       <pre class="lines">
 
 
-122
-123
-124</pre>
+72
+73
+74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/console.rb', line 122</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/console.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_comment_regex'>comment_regex</span>
   <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\A\s*?#</span><span class='regexp_end'>/</span></span>
@@ -612,18 +638,18 @@ simply &quot;#&quot;, we flag this to on</p>
       <pre class="lines">
 
 
-63
-64
-65
-66
-67
-68
-69
-70
-71</pre>
+76
+77
+78
+79
+80
+81
+82
+83
+84</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/console.rb', line 63</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/console.rb', line 76</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_end_chars'>end_chars</span>
   <span class='ivar'>@end_chars</span> <span class='op'>||=</span> <span class='kw'>if</span> <span class='ivar'>@prompt</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
@@ -632,6 +658,40 @@ simply &quot;#&quot;, we flag this to on</p>
     <span class='qwords_beg'>%w(</span><span class='tstring_content'>$</span><span class='words_sep'> </span><span class='tstring_content'>&gt;</span><span class='words_sep'> </span><span class='tstring_content'>;</span><span class='tstring_end'>)</span></span>
   <span class='kw'>else</span>
     <span class='qwords_beg'>%w(</span><span class='tstring_content'>$</span><span class='words_sep'> </span><span class='tstring_content'>#</span><span class='words_sep'> </span><span class='tstring_content'>&gt;</span><span class='words_sep'> </span><span class='tstring_content'>;</span><span class='tstring_end'>)</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="error_regex-instance_method">
+  
+    #<strong>error_regex</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+86
+87
+88
+89
+90</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/console.rb', line 86</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_error_regex'>error_regex</span>
+  <span class='ivar'>@error_regex</span> <span class='op'>||=</span> <span class='kw'>if</span> <span class='ivar'>@error</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
+    <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(?:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@error</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_method'>method</span><span class='lparen'>(</span><span class='symbol'>:escape</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>|</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='regexp_end'>/</span></span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -702,12 +762,12 @@ simply &quot;#&quot;, we flag this to on</p>
       <pre class="lines">
 
 
-118
-119
-120</pre>
+105
+106
+107</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/console.rb', line 118</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/console.rb', line 105</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_line_regex'>line_regex</span>
   <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\\.|[^\\])*?(\n|$)</span><span class='regexp_end'>/m</span></span>
@@ -732,10 +792,6 @@ simply &quot;#&quot;, we flag this to on</p>
       <pre class="lines">
 
 
-105
-106
-107
-108
 109
 110
 111
@@ -743,10 +799,14 @@ simply &quot;#&quot;, we flag this to on</p>
 113
 114
 115
-116</pre>
+116
+117
+118
+119
+120</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/console.rb', line 105</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/console.rb', line 109</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_output_lexer'>output_lexer</span>
   <span class='ivar'>@output_lexer</span> <span class='op'>||=</span> <span class='kw'>case</span> <span class='ivar'>@output</span>
@@ -780,6 +840,18 @@ simply &quot;#&quot;, we flag this to on</p>
       <pre class="lines">
 
 
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
 134
 135
 136
@@ -811,16 +883,10 @@ simply &quot;#&quot;, we flag this to on</p>
 162
 163
 164
-165
-166
-167
-168
-169
-170
-171</pre>
+165</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/console.rb', line 134</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/console.rb', line 122</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_process_line'>process_line</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_output'>output</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_input'>input</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='id identifier rubyid_line_regex'>line_regex</span><span class='rparen'>)</span>
@@ -853,6 +919,12 @@ simply &quot;#&quot;, we flag this to on</p>
     <span class='id identifier rubyid_lang_lexer'>lang_lexer</span><span class='period'>.</span><span class='id identifier rubyid_reset!'>reset!</span>
 
     <span class='kw'>yield</span> <span class='const'>Comment</span><span class='comma'>,</span> <span class='id identifier rubyid_input'>input</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_error_regex'>error_regex</span> <span class='op'>=~</span> <span class='id identifier rubyid_input'>input</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>console: matched error </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_input'>input</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@debug</span>
+    <span class='id identifier rubyid_output_lexer'>output_lexer</span><span class='period'>.</span><span class='id identifier rubyid_reset!'>reset!</span>
+    <span class='id identifier rubyid_lang_lexer'>lang_lexer</span><span class='period'>.</span><span class='id identifier rubyid_reset!'>reset!</span>
+
+    <span class='kw'>yield</span> <span class='const'>Generic</span><span class='op'>::</span><span class='const'>Error</span><span class='comma'>,</span> <span class='id identifier rubyid_input'>input</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
   <span class='kw'>else</span>
     <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>console: matched output </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_input'>input</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@debug</span>
     <span class='id identifier rubyid_lang_lexer'>lang_lexer</span><span class='period'>.</span><span class='id identifier rubyid_reset!'>reset!</span>
@@ -880,16 +952,16 @@ simply &quot;#&quot;, we flag this to on</p>
       <pre class="lines">
 
 
-84
-85
-86
-87
-88
-89
-90</pre>
+167
+168
+169
+170
+171
+172
+173</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/console.rb', line 84</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/console.rb', line 167</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_prompt_prefix_regex'>prompt_prefix_regex</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_allow_comments?'>allow_comments?</span>
@@ -918,14 +990,14 @@ simply &quot;#&quot;, we flag this to on</p>
       <pre class="lines">
 
 
-57
-58
-59
-60
-61</pre>
+175
+176
+177
+178
+179</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/console.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/console.rb', line 175</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_prompt_regex'>prompt_regex</span>
   <span class='ivar'>@prompt_regex</span> <span class='op'>||=</span> <span class='kw'>begin</span>
@@ -952,16 +1024,16 @@ simply &quot;#&quot;, we flag this to on</p>
       <pre class="lines">
 
 
-126
-127
-128
-129
-130
-131
-132</pre>
+181
+182
+183
+184
+185
+186
+187</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/console.rb', line 126</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/console.rb', line 181</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_stream_tokens'>stream_tokens</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_output'>output</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_input'>input</span> <span class='op'>=</span> <span class='const'>StringScanner</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span>
@@ -980,7 +1052,7 @@ simply &quot;#&quot;, we flag this to on</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Mar 11 04:41:43 2020 by
+  Generated on Wed Apr 15 05:47:32 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.24 (ruby-2.7.0).
 </div>

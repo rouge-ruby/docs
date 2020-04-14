@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Rouge::Lexers::Cypher
+  
+    &mdash; Documentation by YARD 0.9.24
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Rouge::Lexers::Cypher";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Rouge.html" title="Rouge (module)">Rouge</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Lexers.html" title="Rouge::Lexers (module)">Lexers</a></span></span>
+     &raquo; 
+    <span class="title">Cypher</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Rouge::Lexers::Cypher
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></li>
+          
+            <li class="next">Rouge::Lexers::Cypher</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/rouge/lexers/cypher.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RegexLexer.html#MAX_NULL_SCANS-constant" title="Rouge::RegexLexer::MAX_NULL_SCANS (constant)">RegexLexer::MAX_NULL_SCANS</a></span></p>
+
+  
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="../Token/Tokens.html" title="Rouge::Token::Tokens (module)">Token::Tokens</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Token/Tokens.html#Num-constant" title="Rouge::Token::Tokens::Num (constant)">Token::Tokens::Num</a></span>, <span class='object_link'><a href="../Token/Tokens.html#Str-constant" title="Rouge::Token::Tokens::Str (constant)">Token::Tokens::Str</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lexer.html#options-instance_method" title="Rouge::Lexer#options (method)">#options</a></span></p>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#functions-class_method" title="functions (class method)">.<strong>functions</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#keywords-class_method" title="keywords (class method)">.<strong>keywords</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#predicates-class_method" title="predicates (class method)">.<strong>predicates</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RegexLexer.html#append-class_method" title="Rouge::RegexLexer.append (method)">append</a></span>, <span class='object_link'><a href="../RegexLexer.html#delegate-instance_method" title="Rouge::RegexLexer#delegate (method)">#delegate</a></span>, <span class='object_link'><a href="../RegexLexer.html#goto-instance_method" title="Rouge::RegexLexer#goto (method)">#goto</a></span>, <span class='object_link'><a href="../RegexLexer.html#group-instance_method" title="Rouge::RegexLexer#group (method)">#group</a></span>, <span class='object_link'><a href="../RegexLexer.html#groups-instance_method" title="Rouge::RegexLexer#groups (method)">#groups</a></span>, <span class='object_link'><a href="../RegexLexer.html#in_state%3F-instance_method" title="Rouge::RegexLexer#in_state? (method)">#in_state?</a></span>, <span class='object_link'><a href="../RegexLexer.html#pop!-instance_method" title="Rouge::RegexLexer#pop! (method)">#pop!</a></span>, <span class='object_link'><a href="../RegexLexer.html#prepend-class_method" title="Rouge::RegexLexer.prepend (method)">prepend</a></span>, <span class='object_link'><a href="../RegexLexer.html#push-instance_method" title="Rouge::RegexLexer#push (method)">#push</a></span>, <span class='object_link'><a href="../RegexLexer.html#recurse-instance_method" title="Rouge::RegexLexer#recurse (method)">#recurse</a></span>, <span class='object_link'><a href="../RegexLexer.html#replace_state-class_method" title="Rouge::RegexLexer.replace_state (method)">replace_state</a></span>, <span class='object_link'><a href="../RegexLexer.html#reset!-instance_method" title="Rouge::RegexLexer#reset! (method)">#reset!</a></span>, <span class='object_link'><a href="../RegexLexer.html#reset_stack-instance_method" title="Rouge::RegexLexer#reset_stack (method)">#reset_stack</a></span>, <span class='object_link'><a href="../RegexLexer.html#stack-instance_method" title="Rouge::RegexLexer#stack (method)">#stack</a></span>, <span class='object_link'><a href="../RegexLexer.html#start-class_method" title="Rouge::RegexLexer.start (method)">start</a></span>, <span class='object_link'><a href="../RegexLexer.html#start_procs-class_method" title="Rouge::RegexLexer.start_procs (method)">start_procs</a></span>, <span class='object_link'><a href="../RegexLexer.html#state-class_method" title="Rouge::RegexLexer.state (method)">state</a></span>, <span class='object_link'><a href="../RegexLexer.html#state-instance_method" title="Rouge::RegexLexer#state (method)">#state</a></span>, <span class='object_link'><a href="../RegexLexer.html#state%3F-instance_method" title="Rouge::RegexLexer#state? (method)">#state?</a></span>, <span class='object_link'><a href="../RegexLexer.html#state_definitions-class_method" title="Rouge::RegexLexer.state_definitions (method)">state_definitions</a></span>, <span class='object_link'><a href="../RegexLexer.html#states-class_method" title="Rouge::RegexLexer.states (method)">states</a></span>, <span class='object_link'><a href="../RegexLexer.html#step-instance_method" title="Rouge::RegexLexer#step (method)">#step</a></span>, <span class='object_link'><a href="../RegexLexer.html#stream_tokens-instance_method" title="Rouge::RegexLexer#stream_tokens (method)">#stream_tokens</a></span>, <span class='object_link'><a href="../RegexLexer.html#token-instance_method" title="Rouge::RegexLexer#token (method)">#token</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lexer.html#aliases-class_method" title="Rouge::Lexer.aliases (method)">aliases</a></span>, <span class='object_link'><a href="../Lexer.html#all-class_method" title="Rouge::Lexer.all (method)">all</a></span>, <span class='object_link'><a href="../Lexer.html#as_bool-instance_method" title="Rouge::Lexer#as_bool (method)">#as_bool</a></span>, <span class='object_link'><a href="../Lexer.html#as_lexer-instance_method" title="Rouge::Lexer#as_lexer (method)">#as_lexer</a></span>, <span class='object_link'><a href="../Lexer.html#as_list-instance_method" title="Rouge::Lexer#as_list (method)">#as_list</a></span>, <span class='object_link'><a href="../Lexer.html#as_string-instance_method" title="Rouge::Lexer#as_string (method)">#as_string</a></span>, <span class='object_link'><a href="../Lexer.html#as_token-instance_method" title="Rouge::Lexer#as_token (method)">#as_token</a></span>, <span class='object_link'><a href="../Lexer.html#bool_option-instance_method" title="Rouge::Lexer#bool_option (method)">#bool_option</a></span>, <span class='object_link'><a href="../Lexer.html#continue_lex-class_method" title="Rouge::Lexer.continue_lex (method)">continue_lex</a></span>, <span class='object_link'><a href="../Lexer.html#continue_lex-instance_method" title="Rouge::Lexer#continue_lex (method)">#continue_lex</a></span>, <span class='object_link'><a href="../Lexer.html#debug_enabled%3F-class_method" title="Rouge::Lexer.debug_enabled? (method)">debug_enabled?</a></span>, <span class='object_link'><a href="../Lexer.html#demo-class_method" title="Rouge::Lexer.demo (method)">demo</a></span>, <span class='object_link'><a href="../Lexer.html#demo_file-class_method" title="Rouge::Lexer.demo_file (method)">demo_file</a></span>, <span class='object_link'><a href="../Lexer.html#desc-class_method" title="Rouge::Lexer.desc (method)">desc</a></span>, <span class='object_link'><a href="../Lexer.html#detect%3F-class_method" title="Rouge::Lexer.detect? (method)">detect?</a></span>, <span class='object_link'><a href="../Lexer.html#detectable%3F-class_method" title="Rouge::Lexer.detectable? (method)">detectable?</a></span>, <span class='object_link'><a href="../Lexer.html#disable_debug!-class_method" title="Rouge::Lexer.disable_debug! (method)">disable_debug!</a></span>, <span class='object_link'><a href="../Lexer.html#enable_debug!-class_method" title="Rouge::Lexer.enable_debug! (method)">enable_debug!</a></span>, <span class='object_link'><a href="../Lexer.html#filenames-class_method" title="Rouge::Lexer.filenames (method)">filenames</a></span>, <span class='object_link'><a href="../Lexer.html#find-class_method" title="Rouge::Lexer.find (method)">find</a></span>, <span class='object_link'><a href="../Lexer.html#find_fancy-class_method" title="Rouge::Lexer.find_fancy (method)">find_fancy</a></span>, <span class='object_link'><a href="../Lexer.html#guess-class_method" title="Rouge::Lexer.guess (method)">guess</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_filename-class_method" title="Rouge::Lexer.guess_by_filename (method)">guess_by_filename</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_mimetype-class_method" title="Rouge::Lexer.guess_by_mimetype (method)">guess_by_mimetype</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_source-class_method" title="Rouge::Lexer.guess_by_source (method)">guess_by_source</a></span>, <span class='object_link'><a href="../Lexer.html#guesses-class_method" title="Rouge::Lexer.guesses (method)">guesses</a></span>, <span class='object_link'><a href="../Lexer.html#hash_option-instance_method" title="Rouge::Lexer#hash_option (method)">#hash_option</a></span>, <span class='object_link'><a href="../Lexer.html#initialize-instance_method" title="Rouge::Lexer#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Lexer.html#lex-class_method" title="Rouge::Lexer.lex (method)">lex</a></span>, <span class='object_link'><a href="../Lexer.html#lex-instance_method" title="Rouge::Lexer#lex (method)">#lex</a></span>, <span class='object_link'><a href="../Lexer.html#lexer_option-instance_method" title="Rouge::Lexer#lexer_option (method)">#lexer_option</a></span>, <span class='object_link'><a href="../Lexer.html#list_option-instance_method" title="Rouge::Lexer#list_option (method)">#list_option</a></span>, <span class='object_link'><a href="../Lexer.html#mimetypes-class_method" title="Rouge::Lexer.mimetypes (method)">mimetypes</a></span>, <span class='object_link'><a href="../Lexer.html#option-class_method" title="Rouge::Lexer.option (method)">option</a></span>, <span class='object_link'><a href="../Lexer.html#option_docs-class_method" title="Rouge::Lexer.option_docs (method)">option_docs</a></span>, <span class='object_link'><a href="../Lexer.html#reset!-instance_method" title="Rouge::Lexer#reset! (method)">#reset!</a></span>, <span class='object_link'><a href="../Lexer.html#stream_tokens-instance_method" title="Rouge::Lexer#stream_tokens (method)">#stream_tokens</a></span>, <span class='object_link'><a href="../Lexer.html#string_option-instance_method" title="Rouge::Lexer#string_option (method)">#string_option</a></span>, <span class='object_link'><a href="../Lexer.html#tag-class_method" title="Rouge::Lexer.tag (method)">tag</a></span>, <span class='object_link'><a href="../Lexer.html#tag-instance_method" title="Rouge::Lexer#tag (method)">#tag</a></span>, <span class='object_link'><a href="../Lexer.html#title-class_method" title="Rouge::Lexer.title (method)">title</a></span>, <span class='object_link'><a href="../Lexer.html#token_option-instance_method" title="Rouge::Lexer#token_option (method)">#token_option</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Token/Tokens.html" title="Rouge::Token::Tokens (module)">Token::Tokens</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Token/Tokens.html#token-class_method" title="Rouge::Token::Tokens.token (method)">token</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Lexer.html#initialize-instance_method" title="Rouge::Lexer#initialize (method)">Rouge::Lexer</a></span></p>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="functions-class_method">
+  
+    .<strong>functions</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/cypher.rb', line 15</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_functions'>functions</span>
+  <span class='ivar'>@functions</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>ABS</span><span class='words_sep'> </span><span class='tstring_content'>ACOS</span><span class='words_sep'> </span><span class='tstring_content'>ALLSHORTESTPATHS</span><span class='words_sep'> </span><span class='tstring_content'>ASIN</span><span class='words_sep'> </span><span class='tstring_content'>ATAN</span><span class='words_sep'> </span><span class='tstring_content'>ATAN2</span><span class='words_sep'> </span><span class='tstring_content'>AVG</span><span class='words_sep'> </span><span class='tstring_content'>CEIL</span><span class='words_sep'> </span><span class='tstring_content'>COALESCE</span><span class='words_sep'> </span><span class='tstring_content'>COLLECT</span><span class='words_sep'>
+    </span><span class='tstring_content'>COS</span><span class='words_sep'> </span><span class='tstring_content'>COT</span><span class='words_sep'> </span><span class='tstring_content'>COUNT</span><span class='words_sep'> </span><span class='tstring_content'>DATE</span><span class='words_sep'> </span><span class='tstring_content'>DEGREES</span><span class='words_sep'> </span><span class='tstring_content'>E</span><span class='words_sep'> </span><span class='tstring_content'>ENDNODE</span><span class='words_sep'> </span><span class='tstring_content'>EXP</span><span class='words_sep'> </span><span class='tstring_content'>EXTRACT</span><span class='words_sep'> </span><span class='tstring_content'>FILTER</span><span class='words_sep'> </span><span class='tstring_content'>FLOOR</span><span class='words_sep'>
+    </span><span class='tstring_content'>HAVERSIN</span><span class='words_sep'> </span><span class='tstring_content'>HEAD</span><span class='words_sep'> </span><span class='tstring_content'>ID</span><span class='words_sep'> </span><span class='tstring_content'>KEYS</span><span class='words_sep'> </span><span class='tstring_content'>LABELS</span><span class='words_sep'> </span><span class='tstring_content'>LAST</span><span class='words_sep'> </span><span class='tstring_content'>LEFT</span><span class='words_sep'> </span><span class='tstring_content'>LENGTH</span><span class='words_sep'> </span><span class='tstring_content'>LOG</span><span class='words_sep'> </span><span class='tstring_content'>LOG10</span><span class='words_sep'> </span><span class='tstring_content'>LOWER</span><span class='words_sep'> </span><span class='tstring_content'>LTRIM</span><span class='words_sep'>
+    </span><span class='tstring_content'>MAX</span><span class='words_sep'> </span><span class='tstring_content'>MIN</span><span class='words_sep'> </span><span class='tstring_content'>NODE</span><span class='words_sep'> </span><span class='tstring_content'>NODES</span><span class='words_sep'> </span><span class='tstring_content'>PERCENTILECONT</span><span class='words_sep'> </span><span class='tstring_content'>PERCENTILEDISC</span><span class='words_sep'> </span><span class='tstring_content'>PI</span><span class='words_sep'> </span><span class='tstring_content'>RADIANS</span><span class='words_sep'> </span><span class='tstring_content'>RAND</span><span class='words_sep'>
+    </span><span class='tstring_content'>RANGE</span><span class='words_sep'> </span><span class='tstring_content'>REDUCE</span><span class='words_sep'> </span><span class='tstring_content'>REL</span><span class='words_sep'> </span><span class='tstring_content'>RELATIONSHIP</span><span class='words_sep'> </span><span class='tstring_content'>RELATIONSHIPS</span><span class='words_sep'> </span><span class='tstring_content'>REPLACE</span><span class='words_sep'> </span><span class='tstring_content'>REVERSE</span><span class='words_sep'> </span><span class='tstring_content'>RIGHT</span><span class='words_sep'>
+    </span><span class='tstring_content'>ROUND</span><span class='words_sep'> </span><span class='tstring_content'>RTRIM</span><span class='words_sep'> </span><span class='tstring_content'>SHORTESTPATH</span><span class='words_sep'> </span><span class='tstring_content'>SIGN</span><span class='words_sep'> </span><span class='tstring_content'>SIN</span><span class='words_sep'> </span><span class='tstring_content'>SIZE</span><span class='words_sep'> </span><span class='tstring_content'>SPLIT</span><span class='words_sep'> </span><span class='tstring_content'>SQRT</span><span class='words_sep'> </span><span class='tstring_content'>STARTNODE</span><span class='words_sep'> </span><span class='tstring_content'>STDEV</span><span class='words_sep'>
+    </span><span class='tstring_content'>STDEVP</span><span class='words_sep'> </span><span class='tstring_content'>STR</span><span class='words_sep'> </span><span class='tstring_content'>SUBSTRING</span><span class='words_sep'> </span><span class='tstring_content'>SUM</span><span class='words_sep'> </span><span class='tstring_content'>TAIL</span><span class='words_sep'> </span><span class='tstring_content'>TAN</span><span class='words_sep'> </span><span class='tstring_content'>TIMESTAMP</span><span class='words_sep'> </span><span class='tstring_content'>TOFLOAT</span><span class='words_sep'> </span><span class='tstring_content'>TOINT</span><span class='words_sep'> </span><span class='tstring_content'>TOINTEGER</span><span class='words_sep'>
+    </span><span class='tstring_content'>TOSTRING</span><span class='words_sep'> </span><span class='tstring_content'>TRIM</span><span class='words_sep'> </span><span class='tstring_content'>TYPE</span><span class='words_sep'> </span><span class='tstring_content'>UPPER</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="keywords-class_method">
+  
+    .<strong>keywords</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/cypher.rb', line 34</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>
+  <span class='ivar'>@keywords</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>AS</span><span class='words_sep'> </span><span class='tstring_content'>ASC</span><span class='words_sep'> </span><span class='tstring_content'>ASCENDING</span><span class='words_sep'> </span><span class='tstring_content'>ASSERT</span><span class='words_sep'> </span><span class='tstring_content'>BY</span><span class='words_sep'> </span><span class='tstring_content'>CASE</span><span class='words_sep'> </span><span class='tstring_content'>COMMIT</span><span class='words_sep'> </span><span class='tstring_content'>CONSTRAINT</span><span class='words_sep'> </span><span class='tstring_content'>CREATE</span><span class='words_sep'> </span><span class='tstring_content'>CSV</span><span class='words_sep'> </span><span class='tstring_content'>CYPHER</span><span class='words_sep'>
+    </span><span class='tstring_content'>DELETE</span><span class='words_sep'> </span><span class='tstring_content'>DESC</span><span class='words_sep'> </span><span class='tstring_content'>DESCENDING</span><span class='words_sep'> </span><span class='tstring_content'>DETACH</span><span class='words_sep'> </span><span class='tstring_content'>DISTINCT</span><span class='words_sep'> </span><span class='tstring_content'>DROP</span><span class='words_sep'> </span><span class='tstring_content'>ELSE</span><span class='words_sep'> </span><span class='tstring_content'>END</span><span class='words_sep'> </span><span class='tstring_content'>ENDS</span><span class='words_sep'> </span><span class='tstring_content'>EXPLAIN</span><span class='words_sep'>
+    </span><span class='tstring_content'>FALSE</span><span class='words_sep'> </span><span class='tstring_content'>FIELDTERMINATOR</span><span class='words_sep'> </span><span class='tstring_content'>FOREACH</span><span class='words_sep'> </span><span class='tstring_content'>FROM</span><span class='words_sep'> </span><span class='tstring_content'>HEADERS</span><span class='words_sep'> </span><span class='tstring_content'>IN</span><span class='words_sep'> </span><span class='tstring_content'>INDEX</span><span class='words_sep'> </span><span class='tstring_content'>IS</span><span class='words_sep'> </span><span class='tstring_content'>JOIN</span><span class='words_sep'> </span><span class='tstring_content'>LIMIT</span><span class='words_sep'>
+    </span><span class='tstring_content'>LOAD</span><span class='words_sep'> </span><span class='tstring_content'>MATCH</span><span class='words_sep'> </span><span class='tstring_content'>MERGE</span><span class='words_sep'> </span><span class='tstring_content'>NULL</span><span class='words_sep'> </span><span class='tstring_content'>ON</span><span class='words_sep'> </span><span class='tstring_content'>OPTIONAL</span><span class='words_sep'> </span><span class='tstring_content'>ORDER</span><span class='words_sep'> </span><span class='tstring_content'>PERIODIC</span><span class='words_sep'> </span><span class='tstring_content'>PROFILE</span><span class='words_sep'> </span><span class='tstring_content'>REMOVE</span><span class='words_sep'>
+    </span><span class='tstring_content'>RETURN</span><span class='words_sep'> </span><span class='tstring_content'>SCAN</span><span class='words_sep'> </span><span class='tstring_content'>SET</span><span class='words_sep'> </span><span class='tstring_content'>SKIP</span><span class='words_sep'> </span><span class='tstring_content'>START</span><span class='words_sep'> </span><span class='tstring_content'>STARTS</span><span class='words_sep'> </span><span class='tstring_content'>THEN</span><span class='words_sep'> </span><span class='tstring_content'>TRUE</span><span class='words_sep'> </span><span class='tstring_content'>UNION</span><span class='words_sep'> </span><span class='tstring_content'>UNIQUE</span><span class='words_sep'> </span><span class='tstring_content'>UNWIND</span><span class='words_sep'> </span><span class='tstring_content'>USING</span><span class='words_sep'>
+    </span><span class='tstring_content'>WHEN</span><span class='words_sep'> </span><span class='tstring_content'>WHERE</span><span class='words_sep'> </span><span class='tstring_content'>WITH</span><span class='words_sep'> </span><span class='tstring_content'>CALL</span><span class='words_sep'> </span><span class='tstring_content'>YIELD</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="predicates-class_method">
+  
+    .<strong>predicates</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30
+31
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/cypher.rb', line 28</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_predicates'>predicates</span>
+  <span class='ivar'>@predicates</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>ALL</span><span class='words_sep'> </span><span class='tstring_content'>AND</span><span class='words_sep'> </span><span class='tstring_content'>ANY</span><span class='words_sep'> </span><span class='tstring_content'>CONTAINS</span><span class='words_sep'> </span><span class='tstring_content'>EXISTS</span><span class='words_sep'> </span><span class='tstring_content'>HAS</span><span class='words_sep'> </span><span class='tstring_content'>IN</span><span class='words_sep'> </span><span class='tstring_content'>NONE</span><span class='words_sep'> </span><span class='tstring_content'>NOT</span><span class='words_sep'> </span><span class='tstring_content'>OR</span><span class='words_sep'> </span><span class='tstring_content'>SINGLE</span><span class='words_sep'> </span><span class='tstring_content'>XOR</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Apr 15 05:47:30 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.24 (ruby-2.7.0).
+</div>
+
+    </div>
+  </body>
+</html>
