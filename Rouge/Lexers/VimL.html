@@ -161,60 +161,6 @@
       
     </ul>
   
-    <h2>
-      Instance Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
-    </h2>
-
-    <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#find_likely_mapping-instance_method" title="#find_likely_mapping (instance method)">#<strong>find_likely_mapping</strong>(mapping, word)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>binary search through the mappings to find the one that&#39;s likely to actually work.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#mapping_contains%3F-instance_method" title="#mapping_contains? (instance method)">#<strong>mapping_contains?</strong>(mapping, word)  &#x21d2; Boolean </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-    </ul>
-  
 
 
   
@@ -285,155 +231,8 @@
       <pre class="code"><span class="info file"># File 'lib/rouge/lexers/viml.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>
-  <span class='id identifier rubyid_load'>load</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Lexers.html" title="Rouge::Lexers (module)">Lexers</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Lexers.html#BASE_DIR-constant" title="Rouge::Lexers::BASE_DIR (constant)">BASE_DIR</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>viml/keywords.rb</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='const'>Kernel</span><span class='op'>::</span><span class='id identifier rubyid_load'>load</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Lexers.html" title="Rouge::Lexers (module)">Lexers</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Lexers.html#BASE_DIR-constant" title="Rouge::Lexers::BASE_DIR (constant)">BASE_DIR</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>viml/keywords.rb</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
-
-  <div id="instance_method_details" class="method_details_list">
-    <h2>Instance Method Details</h2>
-
-    
-      <div class="method_details first">
-  <h3 class="signature first" id="find_likely_mapping-instance_method">
-  
-    #<strong>find_likely_mapping</strong>(mapping, word)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>binary search through the mappings to find the one that&#39;s likely
-to actually work.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/viml.rb', line 76</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_find_likely_mapping'>find_likely_mapping</span><span class='lparen'>(</span><span class='id identifier rubyid_mapping'>mapping</span><span class='comma'>,</span> <span class='id identifier rubyid_word'>word</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_min'>min</span> <span class='op'>=</span> <span class='int'>0</span>
-  <span class='id identifier rubyid_max'>max</span> <span class='op'>=</span> <span class='id identifier rubyid_mapping'>mapping</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
-
-  <span class='kw'>until</span> <span class='id identifier rubyid_max'>max</span> <span class='op'>==</span> <span class='id identifier rubyid_min'>min</span>
-    <span class='id identifier rubyid_mid'>mid</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_max'>max</span> <span class='op'>+</span> <span class='id identifier rubyid_min'>min</span><span class='rparen'>)</span> <span class='op'>/</span> <span class='int'>2</span>
-
-    <span class='id identifier rubyid_cmp'>cmp</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span> <span class='op'>=</span> <span class='id identifier rubyid_mapping'>mapping</span><span class='lbracket'>[</span><span class='id identifier rubyid_mid'>mid</span><span class='rbracket'>]</span>
-
-    <span class='kw'>case</span> <span class='id identifier rubyid_word'>word</span> <span class='op'>&lt;=&gt;</span> <span class='id identifier rubyid_cmp'>cmp</span>
-    <span class='kw'>when</span> <span class='int'>1</span>      <span class='comment'># too low
-</span>
-      <span class='id identifier rubyid_min'>min</span> <span class='op'>=</span> <span class='id identifier rubyid_mid'>mid</span> <span class='op'>+</span> <span class='int'>1</span>
-    <span class='kw'>when</span> <span class='op'>-</span><span class='int'>1</span>      <span class='comment'># too high
-</span>
-      <span class='id identifier rubyid_max'>max</span> <span class='op'>=</span> <span class='id identifier rubyid_mid'>mid</span>
-    <span class='kw'>when</span> <span class='int'>0</span>      <span class='comment'># just right, abort!
-</span>
-      <span class='kw'>return</span> <span class='id identifier rubyid_mapping'>mapping</span><span class='lbracket'>[</span><span class='id identifier rubyid_mid'>mid</span><span class='rbracket'>]</span>
-    <span class='kw'>end</span>
-  <span class='kw'>end</span>
-
-  <span class='id identifier rubyid_mapping'>mapping</span><span class='lbracket'>[</span><span class='id identifier rubyid_max'>max</span> <span class='op'>-</span> <span class='int'>1</span><span class='rbracket'>]</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="mapping_contains?-instance_method">
-  
-    #<strong>mapping_contains?</strong>(mapping, word)  &#x21d2; <tt>Boolean</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-67
-68
-69
-70
-71
-72</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/viml.rb', line 67</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_mapping_contains?'>mapping_contains?</span><span class='lparen'>(</span><span class='id identifier rubyid_mapping'>mapping</span><span class='comma'>,</span> <span class='id identifier rubyid_word'>word</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_shortest'>shortest</span><span class='comma'>,</span> <span class='id identifier rubyid_longest'>longest</span> <span class='op'>=</span> <span class='id identifier rubyid_find_likely_mapping'>find_likely_mapping</span><span class='lparen'>(</span><span class='id identifier rubyid_mapping'>mapping</span><span class='comma'>,</span> <span class='id identifier rubyid_word'>word</span><span class='rparen'>)</span>
-
-  <span class='id identifier rubyid_shortest'>shortest</span> <span class='kw'>and</span> <span class='id identifier rubyid_word'>word</span><span class='period'>.</span><span class='id identifier rubyid_start_with?'>start_with?</span><span class='lparen'>(</span><span class='id identifier rubyid_shortest'>shortest</span><span class='rparen'>)</span> <span class='kw'>and</span>
-  <span class='id identifier rubyid_longest'>longest</span> <span class='kw'>and</span> <span class='id identifier rubyid_longest'>longest</span><span class='period'>.</span><span class='id identifier rubyid_start_with?'>start_with?</span><span class='lparen'>(</span><span class='id identifier rubyid_word'>word</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -445,7 +244,7 @@ to actually work.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Apr 15 05:47:29 2020 by
+  Generated on Wed May 13 02:47:11 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.24 (ruby-2.7.0).
 </div>
