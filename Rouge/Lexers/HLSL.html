@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Rouge::Lexers::HLSL
+  
+    &mdash; Documentation by YARD 0.9.24
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Rouge::Lexers::HLSL";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (H)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Rouge.html" title="Rouge (module)">Rouge</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Lexers.html" title="Rouge::Lexers (module)">Lexers</a></span></span>
+     &raquo; 
+    <span class="title">HLSL</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Rouge::Lexers::HLSL
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="C.html" title="Rouge::Lexers::C (class)">C</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="C.html" title="Rouge::Lexers::C (class)">C</a></span></li>
+          
+            <li class="next">Rouge::Lexers::HLSL</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/rouge/lexers/hlsl.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RegexLexer.html#MAX_NULL_SCANS-constant" title="Rouge::RegexLexer::MAX_NULL_SCANS (constant)">RegexLexer::MAX_NULL_SCANS</a></span></p>
+
+  
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="../Token/Tokens.html" title="Rouge::Token::Tokens (module)">Token::Tokens</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Token/Tokens.html#Num-constant" title="Rouge::Token::Tokens::Num (constant)">Token::Tokens::Num</a></span>, <span class='object_link'><a href="../Token/Tokens.html#Str-constant" title="Rouge::Token::Tokens::Str (constant)">Token::Tokens::Str</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lexer.html#options-instance_method" title="Rouge::Lexer#options (method)">#options</a></span></p>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#builtins-class_method" title="builtins (class method)">.<strong>builtins</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#keywords-class_method" title="keywords (class method)">.<strong>keywords</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#keywords_type-class_method" title="keywords_type (class method)">.<strong>keywords_type</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reserved-class_method" title="reserved (class method)">.<strong>reserved</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RegexLexer.html#append-class_method" title="Rouge::RegexLexer.append (method)">append</a></span>, <span class='object_link'><a href="../RegexLexer.html#delegate-instance_method" title="Rouge::RegexLexer#delegate (method)">#delegate</a></span>, <span class='object_link'><a href="../RegexLexer.html#goto-instance_method" title="Rouge::RegexLexer#goto (method)">#goto</a></span>, <span class='object_link'><a href="../RegexLexer.html#group-instance_method" title="Rouge::RegexLexer#group (method)">#group</a></span>, <span class='object_link'><a href="../RegexLexer.html#groups-instance_method" title="Rouge::RegexLexer#groups (method)">#groups</a></span>, <span class='object_link'><a href="../RegexLexer.html#in_state%3F-instance_method" title="Rouge::RegexLexer#in_state? (method)">#in_state?</a></span>, <span class='object_link'><a href="../RegexLexer.html#pop!-instance_method" title="Rouge::RegexLexer#pop! (method)">#pop!</a></span>, <span class='object_link'><a href="../RegexLexer.html#prepend-class_method" title="Rouge::RegexLexer.prepend (method)">prepend</a></span>, <span class='object_link'><a href="../RegexLexer.html#push-instance_method" title="Rouge::RegexLexer#push (method)">#push</a></span>, <span class='object_link'><a href="../RegexLexer.html#recurse-instance_method" title="Rouge::RegexLexer#recurse (method)">#recurse</a></span>, <span class='object_link'><a href="../RegexLexer.html#replace_state-class_method" title="Rouge::RegexLexer.replace_state (method)">replace_state</a></span>, <span class='object_link'><a href="../RegexLexer.html#reset!-instance_method" title="Rouge::RegexLexer#reset! (method)">#reset!</a></span>, <span class='object_link'><a href="../RegexLexer.html#reset_stack-instance_method" title="Rouge::RegexLexer#reset_stack (method)">#reset_stack</a></span>, <span class='object_link'><a href="../RegexLexer.html#stack-instance_method" title="Rouge::RegexLexer#stack (method)">#stack</a></span>, <span class='object_link'><a href="../RegexLexer.html#start-class_method" title="Rouge::RegexLexer.start (method)">start</a></span>, <span class='object_link'><a href="../RegexLexer.html#start_procs-class_method" title="Rouge::RegexLexer.start_procs (method)">start_procs</a></span>, <span class='object_link'><a href="../RegexLexer.html#state-class_method" title="Rouge::RegexLexer.state (method)">state</a></span>, <span class='object_link'><a href="../RegexLexer.html#state-instance_method" title="Rouge::RegexLexer#state (method)">#state</a></span>, <span class='object_link'><a href="../RegexLexer.html#state%3F-instance_method" title="Rouge::RegexLexer#state? (method)">#state?</a></span>, <span class='object_link'><a href="../RegexLexer.html#state_definitions-class_method" title="Rouge::RegexLexer.state_definitions (method)">state_definitions</a></span>, <span class='object_link'><a href="../RegexLexer.html#states-class_method" title="Rouge::RegexLexer.states (method)">states</a></span>, <span class='object_link'><a href="../RegexLexer.html#step-instance_method" title="Rouge::RegexLexer#step (method)">#step</a></span>, <span class='object_link'><a href="../RegexLexer.html#stream_tokens-instance_method" title="Rouge::RegexLexer#stream_tokens (method)">#stream_tokens</a></span>, <span class='object_link'><a href="../RegexLexer.html#token-instance_method" title="Rouge::RegexLexer#token (method)">#token</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lexer.html#aliases-class_method" title="Rouge::Lexer.aliases (method)">aliases</a></span>, <span class='object_link'><a href="../Lexer.html#all-class_method" title="Rouge::Lexer.all (method)">all</a></span>, <span class='object_link'><a href="../Lexer.html#as_bool-instance_method" title="Rouge::Lexer#as_bool (method)">#as_bool</a></span>, <span class='object_link'><a href="../Lexer.html#as_lexer-instance_method" title="Rouge::Lexer#as_lexer (method)">#as_lexer</a></span>, <span class='object_link'><a href="../Lexer.html#as_list-instance_method" title="Rouge::Lexer#as_list (method)">#as_list</a></span>, <span class='object_link'><a href="../Lexer.html#as_string-instance_method" title="Rouge::Lexer#as_string (method)">#as_string</a></span>, <span class='object_link'><a href="../Lexer.html#as_token-instance_method" title="Rouge::Lexer#as_token (method)">#as_token</a></span>, <span class='object_link'><a href="../Lexer.html#bool_option-instance_method" title="Rouge::Lexer#bool_option (method)">#bool_option</a></span>, <span class='object_link'><a href="../Lexer.html#continue_lex-class_method" title="Rouge::Lexer.continue_lex (method)">continue_lex</a></span>, <span class='object_link'><a href="../Lexer.html#continue_lex-instance_method" title="Rouge::Lexer#continue_lex (method)">#continue_lex</a></span>, <span class='object_link'><a href="../Lexer.html#debug_enabled%3F-class_method" title="Rouge::Lexer.debug_enabled? (method)">debug_enabled?</a></span>, <span class='object_link'><a href="../Lexer.html#demo-class_method" title="Rouge::Lexer.demo (method)">demo</a></span>, <span class='object_link'><a href="../Lexer.html#demo_file-class_method" title="Rouge::Lexer.demo_file (method)">demo_file</a></span>, <span class='object_link'><a href="../Lexer.html#desc-class_method" title="Rouge::Lexer.desc (method)">desc</a></span>, <span class='object_link'><a href="../Lexer.html#detect%3F-class_method" title="Rouge::Lexer.detect? (method)">detect?</a></span>, <span class='object_link'><a href="../Lexer.html#detectable%3F-class_method" title="Rouge::Lexer.detectable? (method)">detectable?</a></span>, <span class='object_link'><a href="../Lexer.html#disable_debug!-class_method" title="Rouge::Lexer.disable_debug! (method)">disable_debug!</a></span>, <span class='object_link'><a href="../Lexer.html#enable_debug!-class_method" title="Rouge::Lexer.enable_debug! (method)">enable_debug!</a></span>, <span class='object_link'><a href="../Lexer.html#filenames-class_method" title="Rouge::Lexer.filenames (method)">filenames</a></span>, <span class='object_link'><a href="../Lexer.html#find-class_method" title="Rouge::Lexer.find (method)">find</a></span>, <span class='object_link'><a href="../Lexer.html#find_fancy-class_method" title="Rouge::Lexer.find_fancy (method)">find_fancy</a></span>, <span class='object_link'><a href="../Lexer.html#guess-class_method" title="Rouge::Lexer.guess (method)">guess</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_filename-class_method" title="Rouge::Lexer.guess_by_filename (method)">guess_by_filename</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_mimetype-class_method" title="Rouge::Lexer.guess_by_mimetype (method)">guess_by_mimetype</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_source-class_method" title="Rouge::Lexer.guess_by_source (method)">guess_by_source</a></span>, <span class='object_link'><a href="../Lexer.html#guesses-class_method" title="Rouge::Lexer.guesses (method)">guesses</a></span>, <span class='object_link'><a href="../Lexer.html#hash_option-instance_method" title="Rouge::Lexer#hash_option (method)">#hash_option</a></span>, <span class='object_link'><a href="../Lexer.html#initialize-instance_method" title="Rouge::Lexer#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Lexer.html#lex-class_method" title="Rouge::Lexer.lex (method)">lex</a></span>, <span class='object_link'><a href="../Lexer.html#lex-instance_method" title="Rouge::Lexer#lex (method)">#lex</a></span>, <span class='object_link'><a href="../Lexer.html#lexer_option-instance_method" title="Rouge::Lexer#lexer_option (method)">#lexer_option</a></span>, <span class='object_link'><a href="../Lexer.html#list_option-instance_method" title="Rouge::Lexer#list_option (method)">#list_option</a></span>, <span class='object_link'><a href="../Lexer.html#mimetypes-class_method" title="Rouge::Lexer.mimetypes (method)">mimetypes</a></span>, <span class='object_link'><a href="../Lexer.html#option-class_method" title="Rouge::Lexer.option (method)">option</a></span>, <span class='object_link'><a href="../Lexer.html#option_docs-class_method" title="Rouge::Lexer.option_docs (method)">option_docs</a></span>, <span class='object_link'><a href="../Lexer.html#reset!-instance_method" title="Rouge::Lexer#reset! (method)">#reset!</a></span>, <span class='object_link'><a href="../Lexer.html#stream_tokens-instance_method" title="Rouge::Lexer#stream_tokens (method)">#stream_tokens</a></span>, <span class='object_link'><a href="../Lexer.html#string_option-instance_method" title="Rouge::Lexer#string_option (method)">#string_option</a></span>, <span class='object_link'><a href="../Lexer.html#tag-class_method" title="Rouge::Lexer.tag (method)">tag</a></span>, <span class='object_link'><a href="../Lexer.html#tag-instance_method" title="Rouge::Lexer#tag (method)">#tag</a></span>, <span class='object_link'><a href="../Lexer.html#title-class_method" title="Rouge::Lexer.title (method)">title</a></span>, <span class='object_link'><a href="../Lexer.html#token_option-instance_method" title="Rouge::Lexer#token_option (method)">#token_option</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Token/Tokens.html" title="Rouge::Token::Tokens (module)">Token::Tokens</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Token/Tokens.html#token-class_method" title="Rouge::Token::Tokens.token (method)">token</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Lexer.html#initialize-instance_method" title="Rouge::Lexer#initialize (method)">Rouge::Lexer</a></span></p>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="builtins-class_method">
+  
+    .<strong>builtins</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/hlsl.rb', line 74</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_builtins'>builtins</span>
+  <span class='ivar'>@builtins</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>abort</span><span class='words_sep'> </span><span class='tstring_content'>abs</span><span class='words_sep'> </span><span class='tstring_content'>acos</span><span class='words_sep'> </span><span class='tstring_content'>all</span><span class='words_sep'> </span><span class='tstring_content'>AllMemoryBarrier</span><span class='words_sep'> </span><span class='tstring_content'>AllMemoryBarrierWithGroupSync</span><span class='words_sep'> </span><span class='tstring_content'>any</span><span class='words_sep'>
+    </span><span class='tstring_content'>AppendStructuredBuffer</span><span class='words_sep'> </span><span class='tstring_content'>asdouble</span><span class='words_sep'> </span><span class='tstring_content'>asfloat</span><span class='words_sep'> </span><span class='tstring_content'>asin</span><span class='words_sep'> </span><span class='tstring_content'>asint</span><span class='words_sep'> </span><span class='tstring_content'>asuint</span><span class='words_sep'> </span><span class='tstring_content'>asuint</span><span class='words_sep'> </span><span class='tstring_content'>atan</span><span class='words_sep'>
+    </span><span class='tstring_content'>atan2</span><span class='words_sep'> </span><span class='tstring_content'>ceil</span><span class='words_sep'> </span><span class='tstring_content'>CheckAccessFullyMapped</span><span class='words_sep'> </span><span class='tstring_content'>clamp</span><span class='words_sep'> </span><span class='tstring_content'>clip</span><span class='words_sep'> </span><span class='tstring_content'>CompileShader</span><span class='words_sep'>
+    </span><span class='tstring_content'>ConsumeStructuredBuffer</span><span class='words_sep'> </span><span class='tstring_content'>cos</span><span class='words_sep'> </span><span class='tstring_content'>cosh</span><span class='words_sep'> </span><span class='tstring_content'>countbits</span><span class='words_sep'> </span><span class='tstring_content'>cross</span><span class='words_sep'> </span><span class='tstring_content'>D3DCOLORtoUBYTE4</span><span class='words_sep'> </span><span class='tstring_content'>ddx</span><span class='words_sep'>
+    </span><span class='tstring_content'>ddx_coarse</span><span class='words_sep'> </span><span class='tstring_content'>ddx_fine</span><span class='words_sep'> </span><span class='tstring_content'>ddy</span><span class='words_sep'> </span><span class='tstring_content'>ddy_coarse</span><span class='words_sep'> </span><span class='tstring_content'>ddy_fine</span><span class='words_sep'> </span><span class='tstring_content'>degrees</span><span class='words_sep'> </span><span class='tstring_content'>determinant</span><span class='words_sep'>
+    </span><span class='tstring_content'>DeviceMemoryBarrier</span><span class='words_sep'> </span><span class='tstring_content'>DeviceMemoryBarrierWithGroupSync</span><span class='words_sep'> </span><span class='tstring_content'>distance</span><span class='words_sep'> </span><span class='tstring_content'>dot</span><span class='words_sep'> </span><span class='tstring_content'>dst</span><span class='words_sep'>
+    </span><span class='tstring_content'>errorf</span><span class='words_sep'> </span><span class='tstring_content'>EvaluateAttributeAtCentroid</span><span class='words_sep'> </span><span class='tstring_content'>EvaluateAttributeAtSample</span><span class='words_sep'>
+    </span><span class='tstring_content'>EvaluateAttributeSnapped</span><span class='words_sep'> </span><span class='tstring_content'>exp</span><span class='words_sep'> </span><span class='tstring_content'>exp2</span><span class='words_sep'> </span><span class='tstring_content'>f16tof32</span><span class='words_sep'> </span><span class='tstring_content'>f32tof16</span><span class='words_sep'> </span><span class='tstring_content'>faceforward</span><span class='words_sep'>
+    </span><span class='tstring_content'>firstbithigh</span><span class='words_sep'> </span><span class='tstring_content'>firstbitlow</span><span class='words_sep'> </span><span class='tstring_content'>floor</span><span class='words_sep'> </span><span class='tstring_content'>fma</span><span class='words_sep'> </span><span class='tstring_content'>fmod</span><span class='words_sep'> </span><span class='tstring_content'>frac</span><span class='words_sep'> </span><span class='tstring_content'>frexp</span><span class='words_sep'> </span><span class='tstring_content'>fwidth</span><span class='words_sep'>
+    </span><span class='tstring_content'>GetRenderTargetSampleCount</span><span class='words_sep'> </span><span class='tstring_content'>GetRenderTargetSamplePosition</span><span class='words_sep'>
+    </span><span class='tstring_content'>GlobalOrderedCountIncrement</span><span class='words_sep'> </span><span class='tstring_content'>GroupMemoryBarrier</span><span class='words_sep'>
+    </span><span class='tstring_content'>GroupMemoryBarrierWithGroupSync</span><span class='words_sep'> </span><span class='tstring_content'>InterlockedAdd</span><span class='words_sep'> </span><span class='tstring_content'>InterlockedAnd</span><span class='words_sep'>
+    </span><span class='tstring_content'>InterlockedCompareExchange</span><span class='words_sep'> </span><span class='tstring_content'>InterlockedCompareStore</span><span class='words_sep'> </span><span class='tstring_content'>InterlockedExchange</span><span class='words_sep'>
+    </span><span class='tstring_content'>InterlockedMax</span><span class='words_sep'> </span><span class='tstring_content'>InterlockedMin</span><span class='words_sep'> </span><span class='tstring_content'>InterlockedOr</span><span class='words_sep'> </span><span class='tstring_content'>InterlockedXor</span><span class='words_sep'> </span><span class='tstring_content'>isfinite</span><span class='words_sep'>
+    </span><span class='tstring_content'>isinf</span><span class='words_sep'> </span><span class='tstring_content'>isnan</span><span class='words_sep'> </span><span class='tstring_content'>ldexp</span><span class='words_sep'> </span><span class='tstring_content'>length</span><span class='words_sep'> </span><span class='tstring_content'>lerp</span><span class='words_sep'> </span><span class='tstring_content'>lit</span><span class='words_sep'> </span><span class='tstring_content'>log</span><span class='words_sep'> </span><span class='tstring_content'>log10</span><span class='words_sep'> </span><span class='tstring_content'>log2</span><span class='words_sep'> </span><span class='tstring_content'>mad</span><span class='words_sep'> </span><span class='tstring_content'>max</span><span class='words_sep'> </span><span class='tstring_content'>min</span><span class='words_sep'> </span><span class='tstring_content'>modf</span><span class='words_sep'>
+    </span><span class='tstring_content'>msad4</span><span class='words_sep'> </span><span class='tstring_content'>mul</span><span class='words_sep'> </span><span class='tstring_content'>noise</span><span class='words_sep'> </span><span class='tstring_content'>normalize</span><span class='words_sep'> </span><span class='tstring_content'>pow</span><span class='words_sep'> </span><span class='tstring_content'>printf</span><span class='words_sep'> </span><span class='tstring_content'>Process2DQuadTessFactorsAvg</span><span class='words_sep'>
+    </span><span class='tstring_content'>Process2DQuadTessFactorsMax</span><span class='words_sep'> </span><span class='tstring_content'>Process2DQuadTessFactorsMin</span><span class='words_sep'>
+    </span><span class='tstring_content'>ProcessIsolineTessFactors</span><span class='words_sep'> </span><span class='tstring_content'>ProcessQuadTessFactorsAvg</span><span class='words_sep'>
+    </span><span class='tstring_content'>ProcessQuadTessFactorsMax</span><span class='words_sep'> </span><span class='tstring_content'>ProcessQuadTessFactorsMin</span><span class='words_sep'>
+    </span><span class='tstring_content'>ProcessTriTessFactorsAvg</span><span class='words_sep'> </span><span class='tstring_content'>ProcessTriTessFactorsMax</span><span class='words_sep'>
+    </span><span class='tstring_content'>ProcessTriTessFactorsMin</span><span class='words_sep'> </span><span class='tstring_content'>QuadReadLaneAt</span><span class='words_sep'> </span><span class='tstring_content'>QuadSwapX</span><span class='words_sep'> </span><span class='tstring_content'>QuadSwapY</span><span class='words_sep'> </span><span class='tstring_content'>radians</span><span class='words_sep'>
+    </span><span class='tstring_content'>rcp</span><span class='words_sep'> </span><span class='tstring_content'>reflect</span><span class='words_sep'> </span><span class='tstring_content'>refract</span><span class='words_sep'> </span><span class='tstring_content'>reversebits</span><span class='words_sep'> </span><span class='tstring_content'>round</span><span class='words_sep'> </span><span class='tstring_content'>rsqrt</span><span class='words_sep'> </span><span class='tstring_content'>saturate</span><span class='words_sep'> </span><span class='tstring_content'>sign</span><span class='words_sep'> </span><span class='tstring_content'>sin</span><span class='words_sep'> </span><span class='tstring_content'>sincos</span><span class='words_sep'>
+    </span><span class='tstring_content'>sinh</span><span class='words_sep'> </span><span class='tstring_content'>smoothstep</span><span class='words_sep'> </span><span class='tstring_content'>sqrt</span><span class='words_sep'> </span><span class='tstring_content'>step</span><span class='words_sep'> </span><span class='tstring_content'>tan</span><span class='words_sep'> </span><span class='tstring_content'>tanh</span><span class='words_sep'> </span><span class='tstring_content'>tex1D</span><span class='words_sep'> </span><span class='tstring_content'>tex1D</span><span class='words_sep'> </span><span class='tstring_content'>tex1Dbias</span><span class='words_sep'> </span><span class='tstring_content'>tex1Dgrad</span><span class='words_sep'>
+    </span><span class='tstring_content'>tex1Dlod</span><span class='words_sep'> </span><span class='tstring_content'>tex1Dproj</span><span class='words_sep'> </span><span class='tstring_content'>tex2D</span><span class='words_sep'> </span><span class='tstring_content'>tex2D</span><span class='words_sep'> </span><span class='tstring_content'>tex2Dbias</span><span class='words_sep'> </span><span class='tstring_content'>tex2Dgrad</span><span class='words_sep'> </span><span class='tstring_content'>tex2Dlod</span><span class='words_sep'> </span><span class='tstring_content'>tex2Dproj</span><span class='words_sep'>
+    </span><span class='tstring_content'>tex3D</span><span class='words_sep'> </span><span class='tstring_content'>tex3D</span><span class='words_sep'> </span><span class='tstring_content'>tex3Dbias</span><span class='words_sep'> </span><span class='tstring_content'>tex3Dgrad</span><span class='words_sep'> </span><span class='tstring_content'>tex3Dlod</span><span class='words_sep'> </span><span class='tstring_content'>tex3Dproj</span><span class='words_sep'> </span><span class='tstring_content'>texCUBE</span><span class='words_sep'> </span><span class='tstring_content'>texCUBE</span><span class='words_sep'>
+    </span><span class='tstring_content'>texCUBEbias</span><span class='words_sep'> </span><span class='tstring_content'>texCUBEgrad</span><span class='words_sep'> </span><span class='tstring_content'>texCUBElod</span><span class='words_sep'> </span><span class='tstring_content'>texCUBEproj</span><span class='words_sep'> </span><span class='tstring_content'>transpose</span><span class='words_sep'> </span><span class='tstring_content'>trunc</span><span class='words_sep'>
+    </span><span class='tstring_content'>WaveAllBitAnd</span><span class='words_sep'> </span><span class='tstring_content'>WaveAllMax</span><span class='words_sep'> </span><span class='tstring_content'>WaveAllMin</span><span class='words_sep'> </span><span class='tstring_content'>WaveAllBitOr</span><span class='words_sep'> </span><span class='tstring_content'>WaveAllBitXor</span><span class='words_sep'>
+    </span><span class='tstring_content'>WaveAllEqual</span><span class='words_sep'> </span><span class='tstring_content'>WaveAllProduct</span><span class='words_sep'> </span><span class='tstring_content'>WaveAllSum</span><span class='words_sep'> </span><span class='tstring_content'>WaveAllTrue</span><span class='words_sep'> </span><span class='tstring_content'>WaveAnyTrue</span><span class='words_sep'>
+    </span><span class='tstring_content'>WaveBallot</span><span class='words_sep'> </span><span class='tstring_content'>WaveGetLaneCount</span><span class='words_sep'> </span><span class='tstring_content'>WaveGetLaneIndex</span><span class='words_sep'> </span><span class='tstring_content'>WaveGetOrderedIndex</span><span class='words_sep'>
+    </span><span class='tstring_content'>WaveIsHelperLane</span><span class='words_sep'> </span><span class='tstring_content'>WaveOnce</span><span class='words_sep'> </span><span class='tstring_content'>WavePrefixProduct</span><span class='words_sep'> </span><span class='tstring_content'>WavePrefixSum</span><span class='words_sep'>
+    </span><span class='tstring_content'>WaveReadFirstLane</span><span class='words_sep'> </span><span class='tstring_content'>WaveReadLaneAt</span><span class='words_sep'>
+
+    </span><span class='tstring_content'>SV_CLIPDISTANCE</span><span class='words_sep'> </span><span class='tstring_content'>SV_CLIPDISTANCE0</span><span class='words_sep'> </span><span class='tstring_content'>SV_CLIPDISTANCE1</span><span class='words_sep'> </span><span class='tstring_content'>SV_CULLDISTANCE</span><span class='words_sep'>
+    </span><span class='tstring_content'>SV_CULLDISTANCE0</span><span class='words_sep'> </span><span class='tstring_content'>SV_CULLDISTANCE1</span><span class='words_sep'> </span><span class='tstring_content'>SV_COVERAGE</span><span class='words_sep'> </span><span class='tstring_content'>SV_DEPTH</span><span class='words_sep'>
+    </span><span class='tstring_content'>SV_DEPTHGREATEREQUAL</span><span class='words_sep'> </span><span class='tstring_content'>SV_DEPTHLESSEQUAL</span><span class='words_sep'> </span><span class='tstring_content'>SV_DISPATCHTHREADID</span><span class='words_sep'>
+    </span><span class='tstring_content'>SV_DOMAINLOCATION</span><span class='words_sep'> </span><span class='tstring_content'>SV_GROUPID</span><span class='words_sep'> </span><span class='tstring_content'>SV_GROUPINDEX</span><span class='words_sep'> </span><span class='tstring_content'>SV_GROUPTHREADID</span><span class='words_sep'>
+    </span><span class='tstring_content'>SV_GSINSTANCEID</span><span class='words_sep'> </span><span class='tstring_content'>SV_INNERCOVERAGE</span><span class='words_sep'> </span><span class='tstring_content'>SV_INSIDETESSFACTOR</span><span class='words_sep'> </span><span class='tstring_content'>SV_INSTANCEID</span><span class='words_sep'>
+    </span><span class='tstring_content'>SV_ISFRONTFACE</span><span class='words_sep'> </span><span class='tstring_content'>SV_OUTPUTCONTROLPOINTID</span><span class='words_sep'> </span><span class='tstring_content'>SV_POSITION</span><span class='words_sep'> </span><span class='tstring_content'>SV_PRIMITIVEID</span><span class='words_sep'>
+    </span><span class='tstring_content'>SV_RENDERTARGETARRAYINDEX</span><span class='words_sep'> </span><span class='tstring_content'>SV_SAMPLEINDEX</span><span class='words_sep'> </span><span class='tstring_content'>SV_STENCILREF</span><span class='words_sep'> </span><span class='tstring_content'>SV_TESSFACTOR</span><span class='words_sep'>
+    </span><span class='tstring_content'>SV_VERTEXID</span><span class='words_sep'> </span><span class='tstring_content'>SV_VIEWPORTARRAYINDEX</span><span class='words_sep'>
+
+    </span><span class='tstring_content'>allow_uav_condition</span><span class='words_sep'> </span><span class='tstring_content'>branch</span><span class='words_sep'> </span><span class='tstring_content'>call</span><span class='words_sep'> </span><span class='tstring_content'>domain</span><span class='words_sep'> </span><span class='tstring_content'>earlydepthstencil</span><span class='words_sep'> </span><span class='tstring_content'>fastopt</span><span class='words_sep'>
+    </span><span class='tstring_content'>flatten</span><span class='words_sep'> </span><span class='tstring_content'>forcecase</span><span class='words_sep'> </span><span class='tstring_content'>instance</span><span class='words_sep'> </span><span class='tstring_content'>loop</span><span class='words_sep'> </span><span class='tstring_content'>maxtessfactor</span><span class='words_sep'> </span><span class='tstring_content'>numthreads</span><span class='words_sep'>
+    </span><span class='tstring_content'>outputcontrolpoints</span><span class='words_sep'> </span><span class='tstring_content'>outputtopology</span><span class='words_sep'> </span><span class='tstring_content'>partitioning</span><span class='words_sep'> </span><span class='tstring_content'>patchconstantfunc</span><span class='words_sep'>
+    </span><span class='tstring_content'>unroll</span><span class='words_sep'>
+
+    </span><span class='tstring_content'>BINORMAL</span><span class='words_sep'> </span><span class='tstring_content'>BINORMAL0</span><span class='words_sep'> </span><span class='tstring_content'>BINORMAL1</span><span class='words_sep'> </span><span class='tstring_content'>BINORMAL2</span><span class='words_sep'> </span><span class='tstring_content'>BINORMAL3</span><span class='words_sep'> </span><span class='tstring_content'>BINORMAL4</span><span class='words_sep'>
+    </span><span class='tstring_content'>BLENDINDICES0</span><span class='words_sep'> </span><span class='tstring_content'>BLENDINDICES1</span><span class='words_sep'> </span><span class='tstring_content'>BLENDINDICES2</span><span class='words_sep'> </span><span class='tstring_content'>BLENDINDICES3</span><span class='words_sep'> </span><span class='tstring_content'>BLENDINDICES4</span><span class='words_sep'>
+    </span><span class='tstring_content'>BLENDWEIGHT0</span><span class='words_sep'> </span><span class='tstring_content'>BLENDWEIGHT1</span><span class='words_sep'> </span><span class='tstring_content'>BLENDWEIGHT2</span><span class='words_sep'> </span><span class='tstring_content'>BLENDWEIGHT3</span><span class='words_sep'> </span><span class='tstring_content'>BLENDWEIGHT4</span><span class='words_sep'> </span><span class='tstring_content'>COLOR</span><span class='words_sep'>
+    </span><span class='tstring_content'>COLOR0</span><span class='words_sep'> </span><span class='tstring_content'>COLOR1</span><span class='words_sep'> </span><span class='tstring_content'>COLOR2</span><span class='words_sep'> </span><span class='tstring_content'>COLOR3</span><span class='words_sep'> </span><span class='tstring_content'>COLOR4</span><span class='words_sep'> </span><span class='tstring_content'>NORMAL</span><span class='words_sep'> </span><span class='tstring_content'>NORMAL0</span><span class='words_sep'> </span><span class='tstring_content'>NORMAL1</span><span class='words_sep'> </span><span class='tstring_content'>NORMAL2</span><span class='words_sep'>
+    </span><span class='tstring_content'>NORMAL3</span><span class='words_sep'> </span><span class='tstring_content'>NORMAL4</span><span class='words_sep'> </span><span class='tstring_content'>POSITION</span><span class='words_sep'> </span><span class='tstring_content'>POSITION0</span><span class='words_sep'> </span><span class='tstring_content'>POSITION1</span><span class='words_sep'> </span><span class='tstring_content'>POSITION2</span><span class='words_sep'> </span><span class='tstring_content'>POSITION3</span><span class='words_sep'>
+    </span><span class='tstring_content'>POSITION4</span><span class='words_sep'> </span><span class='tstring_content'>POSITIONT</span><span class='words_sep'> </span><span class='tstring_content'>PSIZE0</span><span class='words_sep'> </span><span class='tstring_content'>PSIZE1</span><span class='words_sep'> </span><span class='tstring_content'>PSIZE2</span><span class='words_sep'> </span><span class='tstring_content'>PSIZE3</span><span class='words_sep'> </span><span class='tstring_content'>PSIZE4</span><span class='words_sep'> </span><span class='tstring_content'>TANGENT</span><span class='words_sep'>
+    </span><span class='tstring_content'>TANGENT0</span><span class='words_sep'> </span><span class='tstring_content'>TANGENT1</span><span class='words_sep'> </span><span class='tstring_content'>TANGENT2</span><span class='words_sep'> </span><span class='tstring_content'>TANGENT3</span><span class='words_sep'> </span><span class='tstring_content'>TANGENT4</span><span class='words_sep'> </span><span class='tstring_content'>TESSFACTOR0</span><span class='words_sep'> </span><span class='tstring_content'>TESSFACTOR1</span><span class='words_sep'>
+    </span><span class='tstring_content'>TESSFACTOR2</span><span class='words_sep'> </span><span class='tstring_content'>TESSFACTOR3</span><span class='words_sep'> </span><span class='tstring_content'>TESSFACTOR4</span><span class='words_sep'> </span><span class='tstring_content'>TEXCOORD0</span><span class='words_sep'> </span><span class='tstring_content'>TEXCOORD1</span><span class='words_sep'> </span><span class='tstring_content'>TEXCOORD2</span><span class='words_sep'>
+    </span><span class='tstring_content'>TEXCOORD3</span><span class='words_sep'> </span><span class='tstring_content'>TEXCOORD4</span><span class='words_sep'>
+
+    </span><span class='tstring_content'>FOG</span><span class='words_sep'> </span><span class='tstring_content'>PSIZE</span><span class='words_sep'>
+
+    </span><span class='tstring_content'>VFACE</span><span class='words_sep'> </span><span class='tstring_content'>VPOS</span><span class='words_sep'>
+
+    </span><span class='tstring_content'>DEPTH0</span><span class='words_sep'> </span><span class='tstring_content'>DEPTH1</span><span class='words_sep'> </span><span class='tstring_content'>DEPTH2</span><span class='words_sep'> </span><span class='tstring_content'>DEPTH3</span><span class='words_sep'> </span><span class='tstring_content'>DEPTH4</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="keywords-class_method">
+  
+    .<strong>keywords</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/hlsl.rb', line 15</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>
+  <span class='ivar'>@keywords</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>asm</span><span class='words_sep'> </span><span class='tstring_content'>asm_fragment</span><span class='words_sep'> </span><span class='tstring_content'>break</span><span class='words_sep'> </span><span class='tstring_content'>case</span><span class='words_sep'> </span><span class='tstring_content'>cbuffer</span><span class='words_sep'> </span><span class='tstring_content'>centroid</span><span class='words_sep'> </span><span class='tstring_content'>class</span><span class='words_sep'> </span><span class='tstring_content'>column_major</span><span class='words_sep'>
+    </span><span class='tstring_content'>compile</span><span class='words_sep'> </span><span class='tstring_content'>compile_fragment</span><span class='words_sep'> </span><span class='tstring_content'>const</span><span class='words_sep'> </span><span class='tstring_content'>continue</span><span class='words_sep'> </span><span class='tstring_content'>default</span><span class='words_sep'> </span><span class='tstring_content'>discard</span><span class='words_sep'> </span><span class='tstring_content'>do</span><span class='words_sep'> </span><span class='tstring_content'>else</span><span class='words_sep'> </span><span class='tstring_content'>export</span><span class='words_sep'>
+    </span><span class='tstring_content'>extern</span><span class='words_sep'> </span><span class='tstring_content'>for</span><span class='words_sep'> </span><span class='tstring_content'>fxgroup</span><span class='words_sep'> </span><span class='tstring_content'>globallycoherent</span><span class='words_sep'> </span><span class='tstring_content'>groupshared</span><span class='words_sep'> </span><span class='tstring_content'>if</span><span class='words_sep'> </span><span class='tstring_content'>in</span><span class='words_sep'> </span><span class='tstring_content'>inline</span><span class='words_sep'> </span><span class='tstring_content'>inout</span><span class='words_sep'>
+    </span><span class='tstring_content'>interface</span><span class='words_sep'> </span><span class='tstring_content'>line</span><span class='words_sep'> </span><span class='tstring_content'>lineadj</span><span class='words_sep'> </span><span class='tstring_content'>linear</span><span class='words_sep'> </span><span class='tstring_content'>namespace</span><span class='words_sep'> </span><span class='tstring_content'>nointerpolation</span><span class='words_sep'> </span><span class='tstring_content'>noperspective</span><span class='words_sep'>
+    </span><span class='tstring_content'>NULL</span><span class='words_sep'> </span><span class='tstring_content'>out</span><span class='words_sep'> </span><span class='tstring_content'>packoffset</span><span class='words_sep'> </span><span class='tstring_content'>pass</span><span class='words_sep'> </span><span class='tstring_content'>pixelfragment</span><span class='words_sep'> </span><span class='tstring_content'>point</span><span class='words_sep'> </span><span class='tstring_content'>precise</span><span class='words_sep'> </span><span class='tstring_content'>return</span><span class='words_sep'> </span><span class='tstring_content'>register</span><span class='words_sep'>
+    </span><span class='tstring_content'>row_major</span><span class='words_sep'> </span><span class='tstring_content'>sample</span><span class='words_sep'> </span><span class='tstring_content'>sampler</span><span class='words_sep'> </span><span class='tstring_content'>shared</span><span class='words_sep'> </span><span class='tstring_content'>stateblock</span><span class='words_sep'> </span><span class='tstring_content'>stateblock_state</span><span class='words_sep'> </span><span class='tstring_content'>static</span><span class='words_sep'>
+    </span><span class='tstring_content'>struct</span><span class='words_sep'> </span><span class='tstring_content'>switch</span><span class='words_sep'> </span><span class='tstring_content'>tbuffer</span><span class='words_sep'> </span><span class='tstring_content'>technique</span><span class='words_sep'> </span><span class='tstring_content'>technique10</span><span class='words_sep'> </span><span class='tstring_content'>technique11</span><span class='words_sep'> </span><span class='tstring_content'>texture</span><span class='words_sep'>
+    </span><span class='tstring_content'>typedef</span><span class='words_sep'> </span><span class='tstring_content'>triangle</span><span class='words_sep'> </span><span class='tstring_content'>uniform</span><span class='words_sep'> </span><span class='tstring_content'>vertexfragment</span><span class='words_sep'> </span><span class='tstring_content'>volatile</span><span class='words_sep'> </span><span class='tstring_content'>while</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="keywords_type-class_method">
+  
+    .<strong>keywords_type</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/hlsl.rb', line 28</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords_type'>keywords_type</span>
+  <span class='ivar'>@keywords_type</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>dword</span><span class='words_sep'> </span><span class='tstring_content'>matrix</span><span class='words_sep'> </span><span class='tstring_content'>snorm</span><span class='words_sep'> </span><span class='tstring_content'>string</span><span class='words_sep'> </span><span class='tstring_content'>unorm</span><span class='words_sep'> </span><span class='tstring_content'>unsigned</span><span class='words_sep'> </span><span class='tstring_content'>void</span><span class='words_sep'> </span><span class='tstring_content'>vector</span><span class='words_sep'> </span><span class='tstring_content'>BlendState</span><span class='words_sep'> </span><span class='tstring_content'>Buffer</span><span class='words_sep'>
+    </span><span class='tstring_content'>ByteAddressBuffer</span><span class='words_sep'> </span><span class='tstring_content'>ComputeShader</span><span class='words_sep'> </span><span class='tstring_content'>DepthStencilState</span><span class='words_sep'> </span><span class='tstring_content'>DepthStencilView</span><span class='words_sep'>
+    </span><span class='tstring_content'>DomainShader</span><span class='words_sep'> </span><span class='tstring_content'>GeometryShader</span><span class='words_sep'> </span><span class='tstring_content'>HullShader</span><span class='words_sep'> </span><span class='tstring_content'>InputPatch</span><span class='words_sep'> </span><span class='tstring_content'>LineStream</span><span class='words_sep'>
+    </span><span class='tstring_content'>OutputPatch</span><span class='words_sep'> </span><span class='tstring_content'>PixelShader</span><span class='words_sep'> </span><span class='tstring_content'>PointStream</span><span class='words_sep'> </span><span class='tstring_content'>RasterizerState</span><span class='words_sep'> </span><span class='tstring_content'>RenderTargetView</span><span class='words_sep'>
+    </span><span class='tstring_content'>RasterizerOrderedBuffer</span><span class='words_sep'> </span><span class='tstring_content'>RasterizerOrderedByteAddressBuffer</span><span class='words_sep'>
+    </span><span class='tstring_content'>RasterizerOrderedStructuredBuffer</span><span class='words_sep'> </span><span class='tstring_content'>RasterizerOrderedTexture1D</span><span class='words_sep'>
+    </span><span class='tstring_content'>RasterizerOrderedTexture1DArray</span><span class='words_sep'> </span><span class='tstring_content'>RasterizerOrderedTexture2D</span><span class='words_sep'>
+    </span><span class='tstring_content'>RasterizerOrderedTexture2DArray</span><span class='words_sep'> </span><span class='tstring_content'>RasterizerOrderedTexture3D</span><span class='words_sep'> </span><span class='tstring_content'>RWBuffer</span><span class='words_sep'>
+    </span><span class='tstring_content'>RWByteAddressBuffer</span><span class='words_sep'> </span><span class='tstring_content'>RWStructuredBuffer</span><span class='words_sep'> </span><span class='tstring_content'>RWTexture1D</span><span class='words_sep'> </span><span class='tstring_content'>RWTexture1DArray</span><span class='words_sep'>
+    </span><span class='tstring_content'>RWTexture2D</span><span class='words_sep'> </span><span class='tstring_content'>RWTexture2DArray</span><span class='words_sep'> </span><span class='tstring_content'>RWTexture3D</span><span class='words_sep'> </span><span class='tstring_content'>SamplerState</span><span class='words_sep'>
+    </span><span class='tstring_content'>SamplerComparisonState</span><span class='words_sep'> </span><span class='tstring_content'>StructuredBuffer</span><span class='words_sep'> </span><span class='tstring_content'>Texture1D</span><span class='words_sep'> </span><span class='tstring_content'>Texture1DArray</span><span class='words_sep'>
+    </span><span class='tstring_content'>Texture2D</span><span class='words_sep'> </span><span class='tstring_content'>Texture2DArray</span><span class='words_sep'> </span><span class='tstring_content'>Texture2DMS</span><span class='words_sep'> </span><span class='tstring_content'>Texture2DMSArray</span><span class='words_sep'> </span><span class='tstring_content'>Texture3D</span><span class='words_sep'>
+    </span><span class='tstring_content'>TextureCube</span><span class='words_sep'> </span><span class='tstring_content'>TextureCubeArray</span><span class='words_sep'> </span><span class='tstring_content'>TriangleStream</span><span class='words_sep'> </span><span class='tstring_content'>VertexShader</span><span class='words_sep'>
+
+    </span><span class='tstring_content'>bool1</span><span class='words_sep'> </span><span class='tstring_content'>bool2</span><span class='words_sep'> </span><span class='tstring_content'>bool3</span><span class='words_sep'> </span><span class='tstring_content'>bool4</span><span class='words_sep'> </span><span class='tstring_content'>BOOL1</span><span class='words_sep'> </span><span class='tstring_content'>BOOL2</span><span class='words_sep'> </span><span class='tstring_content'>BOOL3</span><span class='words_sep'> </span><span class='tstring_content'>BOOL4</span><span class='words_sep'>
+    </span><span class='tstring_content'>int1</span><span class='words_sep'> </span><span class='tstring_content'>int2</span><span class='words_sep'> </span><span class='tstring_content'>int3</span><span class='words_sep'> </span><span class='tstring_content'>int4</span><span class='words_sep'>
+    </span><span class='tstring_content'>half1</span><span class='words_sep'> </span><span class='tstring_content'>half2</span><span class='words_sep'> </span><span class='tstring_content'>half3</span><span class='words_sep'> </span><span class='tstring_content'>half4</span><span class='words_sep'>
+    </span><span class='tstring_content'>float1</span><span class='words_sep'> </span><span class='tstring_content'>float2</span><span class='words_sep'> </span><span class='tstring_content'>float3</span><span class='words_sep'> </span><span class='tstring_content'>float4</span><span class='words_sep'>
+    </span><span class='tstring_content'>double1</span><span class='words_sep'> </span><span class='tstring_content'>double2</span><span class='words_sep'> </span><span class='tstring_content'>double3</span><span class='words_sep'> </span><span class='tstring_content'>double4</span><span class='words_sep'>
+
+    </span><span class='tstring_content'>bool1x1</span><span class='words_sep'> </span><span class='tstring_content'>bool1x2</span><span class='words_sep'> </span><span class='tstring_content'>bool1x3</span><span class='words_sep'> </span><span class='tstring_content'>bool1x4</span><span class='words_sep'> </span><span class='tstring_content'>bool2x1</span><span class='words_sep'> </span><span class='tstring_content'>bool2x2</span><span class='words_sep'> </span><span class='tstring_content'>bool2x3</span><span class='words_sep'> </span><span class='tstring_content'>bool2x4</span><span class='words_sep'>
+    </span><span class='tstring_content'>bool3x1</span><span class='words_sep'> </span><span class='tstring_content'>bool3x2</span><span class='words_sep'> </span><span class='tstring_content'>bool3x3</span><span class='words_sep'> </span><span class='tstring_content'>bool3x4</span><span class='words_sep'> </span><span class='tstring_content'>bool4x1</span><span class='words_sep'> </span><span class='tstring_content'>bool4x2</span><span class='words_sep'> </span><span class='tstring_content'>bool4x3</span><span class='words_sep'> </span><span class='tstring_content'>bool4x4</span><span class='words_sep'>
+    </span><span class='tstring_content'>BOOL1x1</span><span class='words_sep'> </span><span class='tstring_content'>BOOL1x2</span><span class='words_sep'> </span><span class='tstring_content'>BOOL1x3</span><span class='words_sep'> </span><span class='tstring_content'>BOOL1x4</span><span class='words_sep'> </span><span class='tstring_content'>BOOL2x1</span><span class='words_sep'> </span><span class='tstring_content'>BOOL2x2</span><span class='words_sep'> </span><span class='tstring_content'>BOOL2x3</span><span class='words_sep'> </span><span class='tstring_content'>BOOL2x4</span><span class='words_sep'>
+    </span><span class='tstring_content'>BOOL3x1</span><span class='words_sep'> </span><span class='tstring_content'>BOOL3x2</span><span class='words_sep'> </span><span class='tstring_content'>BOOL3x3</span><span class='words_sep'> </span><span class='tstring_content'>BOOL3x4</span><span class='words_sep'> </span><span class='tstring_content'>BOOL4x1</span><span class='words_sep'> </span><span class='tstring_content'>BOOL4x2</span><span class='words_sep'> </span><span class='tstring_content'>BOOL4x3</span><span class='words_sep'> </span><span class='tstring_content'>BOOL4x4</span><span class='words_sep'>
+    </span><span class='tstring_content'>half1x1</span><span class='words_sep'> </span><span class='tstring_content'>half1x2</span><span class='words_sep'> </span><span class='tstring_content'>half1x3</span><span class='words_sep'> </span><span class='tstring_content'>half1x4</span><span class='words_sep'> </span><span class='tstring_content'>half2x1</span><span class='words_sep'> </span><span class='tstring_content'>half2x2</span><span class='words_sep'> </span><span class='tstring_content'>half2x3</span><span class='words_sep'> </span><span class='tstring_content'>half2x4</span><span class='words_sep'>
+    </span><span class='tstring_content'>half3x1</span><span class='words_sep'> </span><span class='tstring_content'>half3x2</span><span class='words_sep'> </span><span class='tstring_content'>half3x3</span><span class='words_sep'> </span><span class='tstring_content'>half3x4</span><span class='words_sep'> </span><span class='tstring_content'>half4x1</span><span class='words_sep'> </span><span class='tstring_content'>half4x2</span><span class='words_sep'> </span><span class='tstring_content'>half4x3</span><span class='words_sep'> </span><span class='tstring_content'>half4x4</span><span class='words_sep'>
+    </span><span class='tstring_content'>int1x1</span><span class='words_sep'> </span><span class='tstring_content'>int1x2</span><span class='words_sep'> </span><span class='tstring_content'>int1x3</span><span class='words_sep'> </span><span class='tstring_content'>int1x4</span><span class='words_sep'> </span><span class='tstring_content'>int2x1</span><span class='words_sep'> </span><span class='tstring_content'>int2x2</span><span class='words_sep'> </span><span class='tstring_content'>int2x3</span><span class='words_sep'> </span><span class='tstring_content'>int2x4</span><span class='words_sep'>
+    </span><span class='tstring_content'>int3x1</span><span class='words_sep'> </span><span class='tstring_content'>int3x2</span><span class='words_sep'> </span><span class='tstring_content'>int3x3</span><span class='words_sep'> </span><span class='tstring_content'>int3x4</span><span class='words_sep'> </span><span class='tstring_content'>int4x1</span><span class='words_sep'> </span><span class='tstring_content'>int4x2</span><span class='words_sep'> </span><span class='tstring_content'>int4x3</span><span class='words_sep'> </span><span class='tstring_content'>int4x4</span><span class='words_sep'>
+    </span><span class='tstring_content'>float1x1</span><span class='words_sep'> </span><span class='tstring_content'>float1x2</span><span class='words_sep'> </span><span class='tstring_content'>float1x3</span><span class='words_sep'> </span><span class='tstring_content'>float1x4</span><span class='words_sep'> </span><span class='tstring_content'>float2x1</span><span class='words_sep'> </span><span class='tstring_content'>float2x2</span><span class='words_sep'> </span><span class='tstring_content'>float2x3</span><span class='words_sep'> </span><span class='tstring_content'>float2x4</span><span class='words_sep'>
+    </span><span class='tstring_content'>float3x1</span><span class='words_sep'> </span><span class='tstring_content'>float3x2</span><span class='words_sep'> </span><span class='tstring_content'>float3x3</span><span class='words_sep'> </span><span class='tstring_content'>float3x4</span><span class='words_sep'> </span><span class='tstring_content'>float4x1</span><span class='words_sep'> </span><span class='tstring_content'>float4x2</span><span class='words_sep'> </span><span class='tstring_content'>float4x3</span><span class='words_sep'> </span><span class='tstring_content'>float4x4</span><span class='words_sep'>
+    </span><span class='tstring_content'>double1x1</span><span class='words_sep'> </span><span class='tstring_content'>double1x2</span><span class='words_sep'> </span><span class='tstring_content'>double1x3</span><span class='words_sep'> </span><span class='tstring_content'>double1x4</span><span class='words_sep'> </span><span class='tstring_content'>double2x1</span><span class='words_sep'> </span><span class='tstring_content'>double2x2</span><span class='words_sep'> </span><span class='tstring_content'>double2x3</span><span class='words_sep'> </span><span class='tstring_content'>double2x4</span><span class='words_sep'>
+    </span><span class='tstring_content'>double3x1</span><span class='words_sep'> </span><span class='tstring_content'>double3x2</span><span class='words_sep'> </span><span class='tstring_content'>double3x3</span><span class='words_sep'> </span><span class='tstring_content'>double3x4</span><span class='words_sep'> </span><span class='tstring_content'>double4x1</span><span class='words_sep'> </span><span class='tstring_content'>double4x2</span><span class='words_sep'> </span><span class='tstring_content'>double4x3</span><span class='words_sep'> </span><span class='tstring_content'>double4x4</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reserved-class_method">
+  
+    .<strong>reserved</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67
+68
+69
+70
+71
+72</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/hlsl.rb', line 65</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_reserved'>reserved</span>
+  <span class='ivar'>@reserved</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>auto</span><span class='words_sep'> </span><span class='tstring_content'>catch</span><span class='words_sep'> </span><span class='tstring_content'>char</span><span class='words_sep'> </span><span class='tstring_content'>const_cast</span><span class='words_sep'> </span><span class='tstring_content'>delete</span><span class='words_sep'> </span><span class='tstring_content'>dynamic_cast</span><span class='words_sep'> </span><span class='tstring_content'>enum</span><span class='words_sep'> </span><span class='tstring_content'>explicit</span><span class='words_sep'> </span><span class='tstring_content'>friend</span><span class='words_sep'>
+    </span><span class='tstring_content'>goto</span><span class='words_sep'> </span><span class='tstring_content'>long</span><span class='words_sep'> </span><span class='tstring_content'>mutable</span><span class='words_sep'> </span><span class='tstring_content'>new</span><span class='words_sep'> </span><span class='tstring_content'>operator</span><span class='words_sep'> </span><span class='tstring_content'>private</span><span class='words_sep'> </span><span class='tstring_content'>protected</span><span class='words_sep'> </span><span class='tstring_content'>public</span><span class='words_sep'>
+    </span><span class='tstring_content'>reinterpret_cast</span><span class='words_sep'> </span><span class='tstring_content'>short</span><span class='words_sep'> </span><span class='tstring_content'>signed</span><span class='words_sep'> </span><span class='tstring_content'>sizeof</span><span class='words_sep'> </span><span class='tstring_content'>static_cast</span><span class='words_sep'> </span><span class='tstring_content'>template</span><span class='words_sep'> </span><span class='tstring_content'>this</span><span class='words_sep'> </span><span class='tstring_content'>throw</span><span class='words_sep'>
+    </span><span class='tstring_content'>try</span><span class='words_sep'> </span><span class='tstring_content'>typename</span><span class='words_sep'> </span><span class='tstring_content'>union</span><span class='words_sep'> </span><span class='tstring_content'>unsigned</span><span class='words_sep'> </span><span class='tstring_content'>using</span><span class='words_sep'> </span><span class='tstring_content'>virtual</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Jun 10 05:23:57 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.24 (ruby-2.7.0).
+</div>
+
+    </div>
+  </body>
+</html>

@@ -133,61 +133,6 @@
   <p class="inherited"><span class='object_link'><a href="../Lexer.html#options-instance_method" title="Rouge::Lexer#options (method)">#options</a></span></p>
 
 
-  
-    <h2>
-      Instance Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
-    </h2>
-
-    <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#start_embed!-instance_method" title="#start_embed! (instance method)">#<strong>start_embed!</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#tag_token-instance_method" title="#tag_token (instance method)">#<strong>tag_token</strong>(name)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-    </ul>
-  
-
 
   
   
@@ -195,7 +140,7 @@
   
   
   
-  
+  <h2>Method Summary</h2>
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Javascript.html" title="Rouge::Lexers::Javascript (class)">Javascript</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="Javascript.html#builtins-class_method" title="Rouge::Lexers::Javascript.builtins (method)">builtins</a></span>, <span class='object_link'><a href="Javascript.html#constants-class_method" title="Rouge::Lexers::Javascript.constants (method)">constants</a></span>, <span class='object_link'><a href="Javascript.html#declarations-class_method" title="Rouge::Lexers::Javascript.declarations (method)">declarations</a></span>, <span class='object_link'><a href="Javascript.html#detect%3F-class_method" title="Rouge::Lexers::Javascript.detect? (method)">detect?</a></span>, <span class='object_link'><a href="Javascript.html#id_regex-class_method" title="Rouge::Lexers::Javascript.id_regex (method)">id_regex</a></span>, <span class='object_link'><a href="Javascript.html#keywords-class_method" title="Rouge::Lexers::Javascript.keywords (method)">keywords</a></span>, <span class='object_link'><a href="Javascript.html#reserved-class_method" title="Rouge::Lexers::Javascript.reserved (method)">reserved</a></span></p>
@@ -240,82 +185,10 @@
 </div>
 
 
-  <div id="instance_method_details" class="method_details_list">
-    <h2>Instance Method Details</h2>
-
-    
-      <div class="method_details first">
-  <h3 class="signature first" id="start_embed!-instance_method">
-  
-    #<strong>start_embed!</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-18
-19
-20
-21
-22
-23</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/jsx.rb', line 18</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_start_embed!'>start_embed!</span>
-  <span class='ivar'>@embed</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="" title="Rouge::Lexers::JSX (class)">JSX</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Lexer.html#initialize-instance_method" title="Rouge::Lexer#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-  <span class='ivar'>@embed</span><span class='period'>.</span><span class='id identifier rubyid_reset!'>reset!</span>
-  <span class='ivar'>@embed</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='symbol'>:expr_start</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_push'>push</span> <span class='symbol'>:jsx_embed_root</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="tag_token-instance_method">
-  
-    #<strong>tag_token</strong>(name)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-25
-26
-27</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/jsx.rb', line 25</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_tag_token'>tag_token</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_name'>name</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\p{Lower}</span><span class='regexp_end'>/</span></span> <span class='op'>?</span> <span class='const'>Name</span><span class='op'>::</span><span class='const'>Tag</span> <span class='op'>:</span> <span class='const'>Name</span><span class='op'>::</span><span class='const'>Class</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
-
 </div>
 
       <div id="footer">
-  Generated on Wed May 13 02:47:10 2020 by
+  Generated on Wed Jun 10 05:23:55 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.24 (ruby-2.7.0).
 </div>
