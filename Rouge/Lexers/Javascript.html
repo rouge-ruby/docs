@@ -236,7 +236,8 @@ be unhappy, and kittens will cry.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Pseudo-documentation: <a href="https://stackoverflow.com/questions/1661197/what-characters-are-valid-for-javascript-variable-names">https://stackoverflow.com/questions/1661197/what-characters-are-valid-for-javascript-variable-names</a>.</p>
+</div></span>
   
 </li>
 
@@ -370,8 +371,6 @@ be unhappy, and kittens will cry.</p>
       <pre class="lines">
 
 
-125
-126
 127
 128
 129
@@ -383,10 +382,12 @@ be unhappy, and kittens will cry.</p>
 135
 136
 137
-138</pre>
+138
+139
+140</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/javascript.rb', line 125</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/javascript.rb', line 127</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_builtins'>builtins</span>
   <span class='ivar'>@builtins</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
@@ -422,12 +423,12 @@ be unhappy, and kittens will cry.</p>
       <pre class="lines">
 
 
-121
-122
-123</pre>
+123
+124
+125</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/javascript.rb', line 121</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/javascript.rb', line 123</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_constants'>constants</span>
   <span class='ivar'>@constants</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>true</span><span class='words_sep'> </span><span class='tstring_content'>false</span><span class='words_sep'> </span><span class='tstring_content'>null</span><span class='words_sep'> </span><span class='tstring_content'>NaN</span><span class='words_sep'> </span><span class='tstring_content'>Infinity</span><span class='words_sep'> </span><span class='tstring_content'>undefined</span><span class='tstring_end'>)</span></span>
@@ -452,15 +453,15 @@ be unhappy, and kittens will cry.</p>
       <pre class="lines">
 
 
-107
-108
 109
 110
 111
-112</pre>
+112
+113
+114</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/javascript.rb', line 107</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/javascript.rb', line 109</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_declarations'>declarations</span>
   <span class='ivar'>@declarations</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
@@ -484,7 +485,8 @@ be unhappy, and kittens will cry.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
+    <p>Pseudo-documentation: <a href="https://stackoverflow.com/questions/1661197/what-characters-are-valid-for-javascript-variable-names">https://stackoverflow.com/questions/1661197/what-characters-are-valid-for-javascript-variable-names</a></p>
+
 
   </div>
 </div>
@@ -510,14 +512,14 @@ be unhappy, and kittens will cry.</p>
       <pre class="lines">
 
 
-22
-23
 24
 25
-26</pre>
+26
+27
+28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/javascript.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/javascript.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_detect?'>detect?</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='int'>1</span> <span class='kw'>if</span> <span class='id identifier rubyid_text'>text</span><span class='period'>.</span><span class='id identifier rubyid_shebang?'>shebang?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>node</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -544,15 +546,15 @@ be unhappy, and kittens will cry.</p>
       <pre class="lines">
 
 
-140
-141
-142</pre>
+142
+143
+144</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/javascript.rb', line 140</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/javascript.rb', line 142</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_id_regex'>id_regex</span>
-  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[$a-z_][a-z0-9_]*</span><span class='regexp_end'>/io</span></span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[\p{L}\p{Nl}$_][\p{Word}]*</span><span class='regexp_end'>/io</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -574,16 +576,16 @@ be unhappy, and kittens will cry.</p>
       <pre class="lines">
 
 
-99
-100
 101
 102
 103
 104
-105</pre>
+105
+106
+107</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/javascript.rb', line 99</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/javascript.rb', line 101</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>
   <span class='ivar'>@keywords</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
@@ -612,15 +614,15 @@ be unhappy, and kittens will cry.</p>
       <pre class="lines">
 
 
-114
-115
 116
 117
 118
-119</pre>
+119
+120
+121</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/javascript.rb', line 114</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/javascript.rb', line 116</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_reserved'>reserved</span>
   <span class='ivar'>@reserved</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
@@ -638,7 +640,7 @@ be unhappy, and kittens will cry.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Jun 10 05:24:01 2020 by
+  Generated on Wed Jul 15 05:01:51 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.24 (ruby-2.7.0).
 </div>
