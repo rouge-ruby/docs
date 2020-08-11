@@ -389,13 +389,13 @@
       <pre class="lines">
 
 
-31
-32
-33
-34</pre>
+51
+52
+53
+54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/php.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/php.rb', line 51</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_builtins'>builtins</span>
   <span class='const'>Kernel</span><span class='op'>::</span><span class='id identifier rubyid_load'>load</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Lexers.html" title="Rouge::Lexers (module)">Lexers</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Lexers.html#BASE_DIR-constant" title="Rouge::Lexers::BASE_DIR (constant)">BASE_DIR</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>php/keywords.rb</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -443,14 +443,14 @@
       <pre class="lines">
 
 
-86
-87
-88
-89
-90</pre>
+31
+32
+33
+34
+35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/php.rb', line 86</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/php.rb', line 31</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_detect?'>detect?</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_text'>text</span><span class='period'>.</span><span class='id identifier rubyid_shebang?'>shebang?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>php</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -477,48 +477,34 @@
       <pre class="lines">
 
 
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84</pre>
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/php.rb', line 65</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/php.rb', line 37</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>  <span class='comment'># (echo parent ; echo self ; sed -nE &#39;s/&lt;ST_IN_SCRIPTING&gt;&quot;((__)?[[:alpha:]_]+(__)?)&quot;.*/\1/p&#39; zend_language_scanner.l | tr &#39;[A-Z]&#39; &#39;[a-z]&#39;) | sort -u | grep -Fwv -e isset -e unset -e empty -e const -e use -e function -e namespace
-</span>  <span class='comment'># - isset, unset and empty are actually keywords (directly handled by PHP&#39;s lexer but let&#39;s pretend these are functions, you use them like so)
-</span>  <span class='comment'># - self and parent are kind of keywords, they are not handled by PHP&#39;s lexer
-</span>  <span class='comment'># - use, const, namespace and function are handled by specific rules to highlight what&#39;s next to the keyword
-</span>  <span class='comment'># - class is also listed here, in addition to the rule below, to handle anonymous classes
-</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>
   <span class='ivar'>@keywords</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
     </span><span class='tstring_content'>old_function</span><span class='words_sep'> </span><span class='tstring_content'>cfunction</span><span class='words_sep'>
-    </span><span class='tstring_content'>__class__</span><span class='words_sep'> </span><span class='tstring_content'>__dir__</span><span class='words_sep'> </span><span class='tstring_content'>__file__</span><span class='words_sep'> </span><span class='tstring_content'>__function__</span><span class='words_sep'> </span><span class='tstring_content'>__halt_compiler</span><span class='words_sep'>
-    </span><span class='tstring_content'>__line__</span><span class='words_sep'> </span><span class='tstring_content'>__method__</span><span class='words_sep'> </span><span class='tstring_content'>__namespace__</span><span class='words_sep'> </span><span class='tstring_content'>__trait__</span><span class='words_sep'> </span><span class='tstring_content'>abstract</span><span class='words_sep'> </span><span class='tstring_content'>and</span><span class='words_sep'>
-    </span><span class='tstring_content'>array</span><span class='words_sep'> </span><span class='tstring_content'>as</span><span class='words_sep'> </span><span class='tstring_content'>break</span><span class='words_sep'> </span><span class='tstring_content'>callable</span><span class='words_sep'> </span><span class='tstring_content'>case</span><span class='words_sep'> </span><span class='tstring_content'>catch</span><span class='words_sep'> </span><span class='tstring_content'>class</span><span class='words_sep'> </span><span class='tstring_content'>clone</span><span class='words_sep'> </span><span class='tstring_content'>continue</span><span class='words_sep'>
-    </span><span class='tstring_content'>declare</span><span class='words_sep'> </span><span class='tstring_content'>default</span><span class='words_sep'> </span><span class='tstring_content'>die</span><span class='words_sep'> </span><span class='tstring_content'>do</span><span class='words_sep'> </span><span class='tstring_content'>echo</span><span class='words_sep'> </span><span class='tstring_content'>else</span><span class='words_sep'> </span><span class='tstring_content'>elseif</span><span class='words_sep'> </span><span class='tstring_content'>enddeclare</span><span class='words_sep'>
-    </span><span class='tstring_content'>endfor</span><span class='words_sep'> </span><span class='tstring_content'>endforeach</span><span class='words_sep'> </span><span class='tstring_content'>endif</span><span class='words_sep'> </span><span class='tstring_content'>endswitch</span><span class='words_sep'> </span><span class='tstring_content'>endwhile</span><span class='words_sep'> </span><span class='tstring_content'>eval</span><span class='words_sep'> </span><span class='tstring_content'>exit</span><span class='words_sep'>
-    </span><span class='tstring_content'>extends</span><span class='words_sep'> </span><span class='tstring_content'>final</span><span class='words_sep'> </span><span class='tstring_content'>finally</span><span class='words_sep'> </span><span class='tstring_content'>fn</span><span class='words_sep'> </span><span class='tstring_content'>for</span><span class='words_sep'> </span><span class='tstring_content'>foreach</span><span class='words_sep'> </span><span class='tstring_content'>global</span><span class='words_sep'> </span><span class='tstring_content'>goto</span><span class='words_sep'> </span><span class='tstring_content'>if</span><span class='words_sep'>
-    </span><span class='tstring_content'>implements</span><span class='words_sep'> </span><span class='tstring_content'>include</span><span class='words_sep'> </span><span class='tstring_content'>include_once</span><span class='words_sep'> </span><span class='tstring_content'>instanceof</span><span class='words_sep'> </span><span class='tstring_content'>insteadof</span><span class='words_sep'>
-    </span><span class='tstring_content'>interface</span><span class='words_sep'> </span><span class='tstring_content'>list</span><span class='words_sep'> </span><span class='tstring_content'>new</span><span class='words_sep'> </span><span class='tstring_content'>or</span><span class='words_sep'> </span><span class='tstring_content'>parent</span><span class='words_sep'> </span><span class='tstring_content'>print</span><span class='words_sep'> </span><span class='tstring_content'>private</span><span class='words_sep'> </span><span class='tstring_content'>protected</span><span class='words_sep'>
-    </span><span class='tstring_content'>public</span><span class='words_sep'> </span><span class='tstring_content'>require</span><span class='words_sep'> </span><span class='tstring_content'>require_once</span><span class='words_sep'> </span><span class='tstring_content'>return</span><span class='words_sep'> </span><span class='tstring_content'>self</span><span class='words_sep'> </span><span class='tstring_content'>static</span><span class='words_sep'> </span><span class='tstring_content'>switch</span><span class='words_sep'>
-    </span><span class='tstring_content'>throw</span><span class='words_sep'> </span><span class='tstring_content'>trait</span><span class='words_sep'> </span><span class='tstring_content'>try</span><span class='words_sep'> </span><span class='tstring_content'>var</span><span class='words_sep'> </span><span class='tstring_content'>while</span><span class='words_sep'> </span><span class='tstring_content'>xor</span><span class='words_sep'> </span><span class='tstring_content'>yield</span><span class='words_sep'>
+    </span><span class='tstring_content'>__class__</span><span class='words_sep'> </span><span class='tstring_content'>__dir__</span><span class='words_sep'> </span><span class='tstring_content'>__file__</span><span class='words_sep'> </span><span class='tstring_content'>__function__</span><span class='words_sep'> </span><span class='tstring_content'>__halt_compiler</span><span class='words_sep'> </span><span class='tstring_content'>__line__</span><span class='words_sep'>
+    </span><span class='tstring_content'>__method__</span><span class='words_sep'> </span><span class='tstring_content'>__namespace__</span><span class='words_sep'> </span><span class='tstring_content'>__trait__</span><span class='words_sep'> </span><span class='tstring_content'>abstract</span><span class='words_sep'> </span><span class='tstring_content'>and</span><span class='words_sep'> </span><span class='tstring_content'>array</span><span class='words_sep'> </span><span class='tstring_content'>as</span><span class='words_sep'> </span><span class='tstring_content'>break</span><span class='words_sep'> </span><span class='tstring_content'>case</span><span class='words_sep'>
+    </span><span class='tstring_content'>catch</span><span class='words_sep'> </span><span class='tstring_content'>clone</span><span class='words_sep'> </span><span class='tstring_content'>continue</span><span class='words_sep'> </span><span class='tstring_content'>declare</span><span class='words_sep'> </span><span class='tstring_content'>default</span><span class='words_sep'> </span><span class='tstring_content'>die</span><span class='words_sep'> </span><span class='tstring_content'>do</span><span class='words_sep'> </span><span class='tstring_content'>echo</span><span class='words_sep'> </span><span class='tstring_content'>else</span><span class='words_sep'> </span><span class='tstring_content'>elseif</span><span class='words_sep'>
+    </span><span class='tstring_content'>enddeclare</span><span class='words_sep'> </span><span class='tstring_content'>endfor</span><span class='words_sep'> </span><span class='tstring_content'>endforeach</span><span class='words_sep'> </span><span class='tstring_content'>endif</span><span class='words_sep'> </span><span class='tstring_content'>endswitch</span><span class='words_sep'> </span><span class='tstring_content'>endwhile</span><span class='words_sep'> </span><span class='tstring_content'>eval</span><span class='words_sep'> </span><span class='tstring_content'>exit</span><span class='words_sep'>
+    </span><span class='tstring_content'>extends</span><span class='words_sep'> </span><span class='tstring_content'>final</span><span class='words_sep'> </span><span class='tstring_content'>finally</span><span class='words_sep'> </span><span class='tstring_content'>fn</span><span class='words_sep'> </span><span class='tstring_content'>for</span><span class='words_sep'> </span><span class='tstring_content'>foreach</span><span class='words_sep'> </span><span class='tstring_content'>global</span><span class='words_sep'> </span><span class='tstring_content'>goto</span><span class='words_sep'> </span><span class='tstring_content'>if</span><span class='words_sep'> </span><span class='tstring_content'>implements</span><span class='words_sep'>
+    </span><span class='tstring_content'>include</span><span class='words_sep'> </span><span class='tstring_content'>include_once</span><span class='words_sep'> </span><span class='tstring_content'>instanceof</span><span class='words_sep'> </span><span class='tstring_content'>insteadof</span><span class='words_sep'> </span><span class='tstring_content'>isset</span><span class='words_sep'> </span><span class='tstring_content'>list</span><span class='words_sep'> </span><span class='tstring_content'>new</span><span class='words_sep'> </span><span class='tstring_content'>or</span><span class='words_sep'> </span><span class='tstring_content'>parent</span><span class='words_sep'>
+    </span><span class='tstring_content'>print</span><span class='words_sep'> </span><span class='tstring_content'>private</span><span class='words_sep'> </span><span class='tstring_content'>protected</span><span class='words_sep'> </span><span class='tstring_content'>public</span><span class='words_sep'> </span><span class='tstring_content'>require</span><span class='words_sep'> </span><span class='tstring_content'>require_once</span><span class='words_sep'> </span><span class='tstring_content'>return</span><span class='words_sep'> </span><span class='tstring_content'>self</span><span class='words_sep'>
+    </span><span class='tstring_content'>static</span><span class='words_sep'> </span><span class='tstring_content'>switch</span><span class='words_sep'> </span><span class='tstring_content'>throw</span><span class='words_sep'> </span><span class='tstring_content'>try</span><span class='words_sep'> </span><span class='tstring_content'>var</span><span class='words_sep'> </span><span class='tstring_content'>while</span><span class='words_sep'> </span><span class='tstring_content'>xor</span><span class='words_sep'> </span><span class='tstring_content'>yield</span><span class='words_sep'>
   </span><span class='tstring_end'>)</span></span>
 <span class='kw'>end</span></pre>
     </td>
@@ -547,19 +533,19 @@
       <pre class="lines">
 
 
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45</pre>
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/php.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/php.rb', line 56</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_builtins'>builtins</span>
   <span class='kw'>return</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='kw'>unless</span> <span class='ivar'>@funcnamehighlighting</span>
@@ -581,7 +567,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Jul 15 05:01:45 2020 by
+  Generated on Wed Aug 12 03:35:48 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.24 (ruby-2.7.0).
 </div>
