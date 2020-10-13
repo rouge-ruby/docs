@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Rouge::Lexers::Email
+  
+    &mdash; Documentation by YARD 0.9.24
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Rouge::Lexers::Email";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (E)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Rouge.html" title="Rouge (module)">Rouge</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Lexers.html" title="Rouge::Lexers (module)">Lexers</a></span></span>
+     &raquo; 
+    <span class="title">Email</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Rouge::Lexers::Email
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></li>
+          
+            <li class="next">Rouge::Lexers::Email</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/rouge/lexers/email.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RegexLexer.html#MAX_NULL_SCANS-constant" title="Rouge::RegexLexer::MAX_NULL_SCANS (constant)">RegexLexer::MAX_NULL_SCANS</a></span></p>
+
+  
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="../Token/Tokens.html" title="Rouge::Token::Tokens (module)">Token::Tokens</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Token/Tokens.html#Num-constant" title="Rouge::Token::Tokens::Num (constant)">Token::Tokens::Num</a></span>, <span class='object_link'><a href="../Token/Tokens.html#Str-constant" title="Rouge::Token::Tokens::Str (constant)">Token::Tokens::Str</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lexer.html#options-instance_method" title="Rouge::Lexer#options (method)">#options</a></span></p>
+
+
+
+  
+  
+  
+  
+  
+  
+  <h2>Method Summary</h2>
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../RegexLexer.html" title="Rouge::RegexLexer (class)">RegexLexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RegexLexer.html#append-class_method" title="Rouge::RegexLexer.append (method)">append</a></span>, <span class='object_link'><a href="../RegexLexer.html#delegate-instance_method" title="Rouge::RegexLexer#delegate (method)">#delegate</a></span>, <span class='object_link'><a href="../RegexLexer.html#goto-instance_method" title="Rouge::RegexLexer#goto (method)">#goto</a></span>, <span class='object_link'><a href="../RegexLexer.html#group-instance_method" title="Rouge::RegexLexer#group (method)">#group</a></span>, <span class='object_link'><a href="../RegexLexer.html#groups-instance_method" title="Rouge::RegexLexer#groups (method)">#groups</a></span>, <span class='object_link'><a href="../RegexLexer.html#in_state%3F-instance_method" title="Rouge::RegexLexer#in_state? (method)">#in_state?</a></span>, <span class='object_link'><a href="../RegexLexer.html#pop!-instance_method" title="Rouge::RegexLexer#pop! (method)">#pop!</a></span>, <span class='object_link'><a href="../RegexLexer.html#prepend-class_method" title="Rouge::RegexLexer.prepend (method)">prepend</a></span>, <span class='object_link'><a href="../RegexLexer.html#push-instance_method" title="Rouge::RegexLexer#push (method)">#push</a></span>, <span class='object_link'><a href="../RegexLexer.html#recurse-instance_method" title="Rouge::RegexLexer#recurse (method)">#recurse</a></span>, <span class='object_link'><a href="../RegexLexer.html#replace_state-class_method" title="Rouge::RegexLexer.replace_state (method)">replace_state</a></span>, <span class='object_link'><a href="../RegexLexer.html#reset!-instance_method" title="Rouge::RegexLexer#reset! (method)">#reset!</a></span>, <span class='object_link'><a href="../RegexLexer.html#reset_stack-instance_method" title="Rouge::RegexLexer#reset_stack (method)">#reset_stack</a></span>, <span class='object_link'><a href="../RegexLexer.html#stack-instance_method" title="Rouge::RegexLexer#stack (method)">#stack</a></span>, <span class='object_link'><a href="../RegexLexer.html#start-class_method" title="Rouge::RegexLexer.start (method)">start</a></span>, <span class='object_link'><a href="../RegexLexer.html#start_procs-class_method" title="Rouge::RegexLexer.start_procs (method)">start_procs</a></span>, <span class='object_link'><a href="../RegexLexer.html#state-class_method" title="Rouge::RegexLexer.state (method)">state</a></span>, <span class='object_link'><a href="../RegexLexer.html#state-instance_method" title="Rouge::RegexLexer#state (method)">#state</a></span>, <span class='object_link'><a href="../RegexLexer.html#state%3F-instance_method" title="Rouge::RegexLexer#state? (method)">#state?</a></span>, <span class='object_link'><a href="../RegexLexer.html#state_definitions-class_method" title="Rouge::RegexLexer.state_definitions (method)">state_definitions</a></span>, <span class='object_link'><a href="../RegexLexer.html#states-class_method" title="Rouge::RegexLexer.states (method)">states</a></span>, <span class='object_link'><a href="../RegexLexer.html#step-instance_method" title="Rouge::RegexLexer#step (method)">#step</a></span>, <span class='object_link'><a href="../RegexLexer.html#stream_tokens-instance_method" title="Rouge::RegexLexer#stream_tokens (method)">#stream_tokens</a></span>, <span class='object_link'><a href="../RegexLexer.html#token-instance_method" title="Rouge::RegexLexer#token (method)">#token</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Rouge::Lexer</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Lexer.html#aliases-class_method" title="Rouge::Lexer.aliases (method)">aliases</a></span>, <span class='object_link'><a href="../Lexer.html#all-class_method" title="Rouge::Lexer.all (method)">all</a></span>, <span class='object_link'><a href="../Lexer.html#as_bool-instance_method" title="Rouge::Lexer#as_bool (method)">#as_bool</a></span>, <span class='object_link'><a href="../Lexer.html#as_lexer-instance_method" title="Rouge::Lexer#as_lexer (method)">#as_lexer</a></span>, <span class='object_link'><a href="../Lexer.html#as_list-instance_method" title="Rouge::Lexer#as_list (method)">#as_list</a></span>, <span class='object_link'><a href="../Lexer.html#as_string-instance_method" title="Rouge::Lexer#as_string (method)">#as_string</a></span>, <span class='object_link'><a href="../Lexer.html#as_token-instance_method" title="Rouge::Lexer#as_token (method)">#as_token</a></span>, <span class='object_link'><a href="../Lexer.html#bool_option-instance_method" title="Rouge::Lexer#bool_option (method)">#bool_option</a></span>, <span class='object_link'><a href="../Lexer.html#continue_lex-class_method" title="Rouge::Lexer.continue_lex (method)">continue_lex</a></span>, <span class='object_link'><a href="../Lexer.html#continue_lex-instance_method" title="Rouge::Lexer#continue_lex (method)">#continue_lex</a></span>, <span class='object_link'><a href="../Lexer.html#debug_enabled%3F-class_method" title="Rouge::Lexer.debug_enabled? (method)">debug_enabled?</a></span>, <span class='object_link'><a href="../Lexer.html#demo-class_method" title="Rouge::Lexer.demo (method)">demo</a></span>, <span class='object_link'><a href="../Lexer.html#demo_file-class_method" title="Rouge::Lexer.demo_file (method)">demo_file</a></span>, <span class='object_link'><a href="../Lexer.html#desc-class_method" title="Rouge::Lexer.desc (method)">desc</a></span>, <span class='object_link'><a href="../Lexer.html#detect%3F-class_method" title="Rouge::Lexer.detect? (method)">detect?</a></span>, <span class='object_link'><a href="../Lexer.html#detectable%3F-class_method" title="Rouge::Lexer.detectable? (method)">detectable?</a></span>, <span class='object_link'><a href="../Lexer.html#disable_debug!-class_method" title="Rouge::Lexer.disable_debug! (method)">disable_debug!</a></span>, <span class='object_link'><a href="../Lexer.html#enable_debug!-class_method" title="Rouge::Lexer.enable_debug! (method)">enable_debug!</a></span>, <span class='object_link'><a href="../Lexer.html#filenames-class_method" title="Rouge::Lexer.filenames (method)">filenames</a></span>, <span class='object_link'><a href="../Lexer.html#find-class_method" title="Rouge::Lexer.find (method)">find</a></span>, <span class='object_link'><a href="../Lexer.html#find_fancy-class_method" title="Rouge::Lexer.find_fancy (method)">find_fancy</a></span>, <span class='object_link'><a href="../Lexer.html#guess-class_method" title="Rouge::Lexer.guess (method)">guess</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_filename-class_method" title="Rouge::Lexer.guess_by_filename (method)">guess_by_filename</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_mimetype-class_method" title="Rouge::Lexer.guess_by_mimetype (method)">guess_by_mimetype</a></span>, <span class='object_link'><a href="../Lexer.html#guess_by_source-class_method" title="Rouge::Lexer.guess_by_source (method)">guess_by_source</a></span>, <span class='object_link'><a href="../Lexer.html#guesses-class_method" title="Rouge::Lexer.guesses (method)">guesses</a></span>, <span class='object_link'><a href="../Lexer.html#hash_option-instance_method" title="Rouge::Lexer#hash_option (method)">#hash_option</a></span>, <span class='object_link'><a href="../Lexer.html#initialize-instance_method" title="Rouge::Lexer#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Lexer.html#lex-class_method" title="Rouge::Lexer.lex (method)">lex</a></span>, <span class='object_link'><a href="../Lexer.html#lex-instance_method" title="Rouge::Lexer#lex (method)">#lex</a></span>, <span class='object_link'><a href="../Lexer.html#lexer_option-instance_method" title="Rouge::Lexer#lexer_option (method)">#lexer_option</a></span>, <span class='object_link'><a href="../Lexer.html#list_option-instance_method" title="Rouge::Lexer#list_option (method)">#list_option</a></span>, <span class='object_link'><a href="../Lexer.html#lookup_fancy-class_method" title="Rouge::Lexer.lookup_fancy (method)">lookup_fancy</a></span>, <span class='object_link'><a href="../Lexer.html#mimetypes-class_method" title="Rouge::Lexer.mimetypes (method)">mimetypes</a></span>, <span class='object_link'><a href="../Lexer.html#option-class_method" title="Rouge::Lexer.option (method)">option</a></span>, <span class='object_link'><a href="../Lexer.html#option_docs-class_method" title="Rouge::Lexer.option_docs (method)">option_docs</a></span>, <span class='object_link'><a href="../Lexer.html#reset!-instance_method" title="Rouge::Lexer#reset! (method)">#reset!</a></span>, <span class='object_link'><a href="../Lexer.html#stream_tokens-instance_method" title="Rouge::Lexer#stream_tokens (method)">#stream_tokens</a></span>, <span class='object_link'><a href="../Lexer.html#string_option-instance_method" title="Rouge::Lexer#string_option (method)">#string_option</a></span>, <span class='object_link'><a href="../Lexer.html#tag-class_method" title="Rouge::Lexer.tag (method)">tag</a></span>, <span class='object_link'><a href="../Lexer.html#tag-instance_method" title="Rouge::Lexer#tag (method)">#tag</a></span>, <span class='object_link'><a href="../Lexer.html#title-class_method" title="Rouge::Lexer.title (method)">title</a></span>, <span class='object_link'><a href="../Lexer.html#token_option-instance_method" title="Rouge::Lexer#token_option (method)">#token_option</a></span>, <span class='object_link'><a href="../Lexer.html#with-instance_method" title="Rouge::Lexer#with (method)">#with</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Token/Tokens.html" title="Rouge::Token::Tokens (module)">Token::Tokens</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Token/Tokens.html#token-class_method" title="Rouge::Token::Tokens.token (method)">token</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Lexer.html#initialize-instance_method" title="Rouge::Lexer#initialize (method)">Rouge::Lexer</a></span></p>
+  
+</div>
+
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Oct 14 03:53:01 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.24 (ruby-2.7.0).
+</div>
+
+    </div>
+  </body>
+</html>

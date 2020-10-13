@@ -341,13 +341,13 @@
       <pre class="lines">
 
 
-461
-462
-463
-464</pre>
+491
+492
+493
+494</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 461</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 491</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span>
   <span class='ivar'>@input_file</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:input_file</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>-</span><span class='tstring_end'>&#39;</span></span>
@@ -390,12 +390,12 @@
       <pre class="lines">
 
 
-459
-460
-461</pre>
+489
+490
+491</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 459</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 489</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_input_file'>input_file</span>
   <span class='ivar'>@input_file</span>
@@ -432,12 +432,12 @@
       <pre class="lines">
 
 
-459
-460
-461</pre>
+489
+490
+491</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 459</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 489</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_input_source'>input_source</span>
   <span class='ivar'>@input_source</span>
@@ -469,12 +469,12 @@
       <pre class="lines">
 
 
-451
-452
-453</pre>
+481
+482
+483</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 451</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 481</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_desc'>desc</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>guess the languages of file</span><span class='tstring_end'>&quot;</span></span>
@@ -499,12 +499,12 @@
       <pre class="lines">
 
 
-455
-456
-457</pre>
+485
+486
+487</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 455</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 485</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='label'>input_file:</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_shift'>shift</span><span class='rparen'>)</span>
@@ -535,15 +535,15 @@
       <pre class="lines">
 
 
-466
-467
-468
-469
-470
-471</pre>
+496
+497
+498
+499
+500
+501</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 466</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 496</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_lexers'>lexers</span>
   <span class='const'><span class='object_link'><a href="../Lexer.html" title="Rouge::Lexer (class)">Lexer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_guesses'><span class='object_link'><a href="../Lexer.html#guesses-class_method" title="Rouge::Lexer.guesses (method)">guesses</a></span></span><span class='lparen'>(</span>
@@ -571,14 +571,14 @@
       <pre class="lines">
 
 
-473
-474
-475
-476
-477</pre>
+503
+504
+505
+506
+507</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 473</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 503</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span>
   <span class='id identifier rubyid_lexers'>lexers</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_l'>l</span><span class='op'>|</span>
@@ -595,7 +595,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Sep  9 03:52:42 2020 by
+  Generated on Wed Oct 14 03:52:58 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.24 (ruby-2.7.0).
 </div>

@@ -126,6 +126,10 @@ This is good for emails and other systems where CSS support is minimal.</p></li>
 <li><p><code>Rouge::Formatters::HTMLLinewise.new(formatter, class: &#39;line-%i&#39;)</code> will split
 your code into lines, each contained in its own div. The <code>class</code> option will
 be used to add a class name to the div, given the line number.</p></li>
+<li><p><code>Rouge::Formatters::HTMLLineHighlighter.new(formatter, highlight_lines: [3, 5])</code>
+will split your code into lines and wrap the lines specified by the
+<code>highlight_lines</code> option in a span with a class name specified by the
+<code>highlight_line_class</code> option (default: <code>hll</code>).</p></li>
 <li><p><code>Rouge::Formatters::HTMLLineTable.new(formatter, opts={})</code> will output an HTML
 table containing numbered lines, each contained in its own table-row. Options
 are:</p>
@@ -327,7 +331,7 @@ information.</p>
 </div></div>
 
       <div id="footer">
-  Generated on Wed Sep  9 03:52:42 2020 by
+  Generated on Wed Oct 14 03:52:57 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.24 (ruby-2.7.0).
 </div>

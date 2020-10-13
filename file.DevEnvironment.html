@@ -167,13 +167,15 @@ that&#39;s complete, you&#39;re ready to rock.</p>
 <p>Rouge comes with a list of gems it depends upon called a <em>Gemfile</em>. Make sure
 you&#39;re at the top level of your clone of your repository and type:</p>
 
-<pre class="code shell"><code class="shell">bundle install --path vendor
+<pre class="code shell"><code class="shell">bundle config set path &#39;vendor&#39;
+bundle install
 </code></pre>
 
-<p>This command tells Bundler to install the gems in the Gemfile into a directory
-called <code>vendor/</code>. This has one drawback (explained below) but means the gems we
-use for Rouge are isolated from the other gems we may have installed on our
-system. This will be tremendously helpful in avoiding conflicts that arise
+<p>This first command tells Bundler to register the directory <code>vendor/</code> as
+the project-specific install location for dependencies, and the second command
+installs all dependencies. This has one drawback (explained below) but means the
+gems we use for Rouge are isolated from the other gems we may have installed on
+our system. This will be tremendously helpful in avoiding conflicts that arise
 because of the use of incompatible versions of a gem.</p>
 
 <p>The one drawback is that we will need to tell Ruby every time we run our Rouge
@@ -221,7 +223,7 @@ exec rubocop</code>.</p></li>
 </div></div>
 
       <div id="footer">
-  Generated on Wed Sep  9 03:52:42 2020 by
+  Generated on Wed Oct 14 03:52:57 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.24 (ruby-2.7.0).
 </div>

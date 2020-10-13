@@ -109,6 +109,34 @@
       <li class="public ">
   <span class="summary_signature">
     
+      <a href="#name-instance_method" title="#name (instance method)">#<strong>name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute name.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#rules-instance_method" title="#rules (instance method)">#<strong>rules</strong>  &#x21d2; Object </a>
     
 
@@ -159,6 +187,50 @@
   
   
   
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="protected ">
+  <span class="summary_signature">
+    
+      <a href="#close!-instance_method" title="#close! (instance method)">#<strong>close!</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title protected">protected</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="protected ">
+  <span class="summary_signature">
+    
+      <a href="#context_sensitive%3F-instance_method" title="#context_sensitive? (instance method)">#<strong>context_sensitive?</strong>(re)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title protected">protected</span>
   
   
   
@@ -315,21 +387,23 @@
       <pre class="lines">
 
 
-46
-47
-48
-49
-50
-51</pre>
+77
+78
+79
+80
+81
+82
+83</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_defn'>defn</span><span class='rparen'>)</span>
   <span class='ivar'>@name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span>
   <span class='ivar'>@defn</span> <span class='op'>=</span> <span class='id identifier rubyid_defn'>defn</span>
   <span class='ivar'>@rules</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
   <span class='ivar'>@loaded</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='ivar'>@closed</span> <span class='op'>=</span> <span class='kw'>false</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -344,7 +418,49 @@
       
       <span id=""></span>
       <div class="method_details first">
-  <h3 class="signature first" id="rules-instance_method">
+  <h3 class="signature first" id="name-instance_method">
+  
+    #<strong>name</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute name.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 76</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
+  <span class='ivar'>@name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="rules-instance_method">
   
     #<strong>rules</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
   
@@ -368,12 +484,12 @@
       <pre class="lines">
 
 
-45
-46
-47</pre>
+76
+77
+78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 45</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 76</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rules'>rules</span>
   <span class='ivar'>@rules</span>
@@ -405,16 +521,16 @@
       <pre class="lines">
 
 
-69
-70
-71
-72
-73
-74
-75</pre>
+101
+102
+103
+104
+105
+106
+107</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 69</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 101</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_appended'>appended</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_defn'>defn</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_parent_defn'>parent_defn</span> <span class='op'>=</span> <span class='ivar'>@defn</span>
@@ -422,6 +538,100 @@
     <span class='id identifier rubyid_instance_eval'>instance_eval</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_parent_defn'>parent_defn</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_instance_eval'>instance_eval</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_defn'>defn</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="close!-instance_method">
+  
+    #<strong>close!</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(protected)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+188
+189
+190</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 188</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_close!'>close!</span>
+  <span class='ivar'>@closed</span> <span class='op'>=</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="context_sensitive?-instance_method">
+  
+    #<strong>context_sensitive?</strong>(re)  &#x21d2; <tt>Boolean</tt>  <span class="extras">(protected)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+178
+179
+180
+181
+182
+183
+184
+185
+186</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 178</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_context_sensitive?'>context_sensitive?</span><span class='lparen'>(</span><span class='id identifier rubyid_re'>re</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_source'>source</span> <span class='op'>=</span> <span class='id identifier rubyid_re'>re</span><span class='period'>.</span><span class='id identifier rubyid_source'>source</span>
+  <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_source'>source</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[(][?]&lt;?[!=]</span><span class='regexp_end'>/</span></span>
+
+  <span class='comment'># anchors count as lookahead/behind
+</span>  <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_source'>source</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[$^]</span><span class='regexp_end'>/</span></span>
+
+  <span class='kw'>false</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -455,12 +665,12 @@ to the rest of the rules in this state.</p>
       <pre class="lines">
 
 
-140
-141
-142</pre>
+195
+196
+197</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 140</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 195</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mixin'>mixin</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_rules'>rules</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_state'>state</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
@@ -485,16 +695,16 @@ to the rest of the rules in this state.</p>
       <pre class="lines">
 
 
-61
-62
-63
-64
-65
-66
-67</pre>
+93
+94
+95
+96
+97
+98
+99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_prepended'>prepended</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_defn'>defn</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_parent_defn'>parent_defn</span> <span class='op'>=</span> <span class='ivar'>@defn</span>
@@ -604,6 +814,19 @@ argument can be used to access the match groups.</p>
   
 </ul>
 
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="ClosedState.html" title="Rouge::RegexLexer::ClosedState (class)">ClosedState</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -611,53 +834,66 @@ argument can be used to access the match groups.</p>
       <pre class="lines">
 
 
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
 129
 130
 131
 132
 133
 134
-135</pre>
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 97</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 129</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rule'>rule</span><span class='lparen'>(</span><span class='id identifier rubyid_re'>re</span><span class='comma'>,</span> <span class='id identifier rubyid_tok'>tok</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_next_state'>next_state</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_callback'>callback</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ClosedState.html" title="Rouge::RegexLexer::ClosedState (class)">ClosedState</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ClosedState.html#initialize-instance_method" title="Rouge::RegexLexer::ClosedState#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@closed</span>
+
   <span class='kw'>if</span> <span class='id identifier rubyid_tok'>tok</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_callback'>callback</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
     <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>please pass `rule` a token to yield or a callback</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_matches_empty'>matches_empty</span> <span class='op'>=</span> <span class='id identifier rubyid_re'>re</span> <span class='op'>=~</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
 
   <span class='id identifier rubyid_callback'>callback</span> <span class='op'>||=</span> <span class='kw'>case</span> <span class='id identifier rubyid_next_state'>next_state</span>
   <span class='kw'>when</span> <span class='symbol'>:pop!</span>
@@ -682,7 +918,10 @@ argument can be used to access the match groups.</p>
       <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    pushing :</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_state'>state</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@debug</span>
       <span class='ivar'>@stack</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='rparen'>)</span>
     <span class='kw'>end</span>
-  <span class='kw'>when</span> <span class='kw'>nil</span>
+  <span class='kw'>when</span> <span class='kw'>nil</span>    <span class='comment'># cannot use an empty-matching regexp with no predicate
+</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="InvalidRegex.html" title="Rouge::RegexLexer::InvalidRegex (class)">InvalidRegex</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="InvalidRegex.html#initialize-instance_method" title="Rouge::RegexLexer::InvalidRegex#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_re'>re</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_matches_empty'>matches_empty</span>
+
     <span class='id identifier rubyid_proc'>proc</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_stream'>stream</span><span class='op'>|</span>
       <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    yielding: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tok'>tok</span><span class='period'>.</span><span class='id identifier rubyid_qualname'>qualname</span><span class='embexpr_end'>}</span><span class='tstring_content'>, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_stream'>stream</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@debug</span>
       <span class='ivar'>@output_stream</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_stream'>stream</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
@@ -692,6 +931,8 @@ argument can be used to access the match groups.</p>
   <span class='kw'>end</span>
 
   <span class='id identifier rubyid_rules'>rules</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="Rule.html" title="Rouge::RegexLexer::Rule (class)">Rule</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Rule.html#initialize-instance_method" title="Rouge::RegexLexer::Rule#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_re'>re</span><span class='comma'>,</span> <span class='id identifier rubyid_callback'>callback</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_close!'>close!</span> <span class='kw'>if</span> <span class='id identifier rubyid_matches_empty'>matches_empty</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_context_sensitive?'>context_sensitive?</span><span class='lparen'>(</span><span class='id identifier rubyid_re'>re</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -713,16 +954,16 @@ argument can be used to access the match groups.</p>
       <pre class="lines">
 
 
-53
-54
-55
-56
-57
-58
-59</pre>
+85
+86
+87
+88
+89
+90
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 85</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_state'>to_state</span><span class='lparen'>(</span><span class='id identifier rubyid_lexer_class'>lexer_class</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_load!'>load!</span>
@@ -741,7 +982,7 @@ argument can be used to access the match groups.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Sep  9 03:52:46 2020 by
+  Generated on Wed Oct 14 03:53:01 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.24 (ruby-2.7.0).
 </div>
