@@ -252,16 +252,14 @@
 16
 17
 18
-19
-20</pre>
+19</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/rouge/formatters/html_linewise.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_stream'>stream</span><span class='lparen'>(</span><span class='id identifier rubyid_tokens'>tokens</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_lineno'>lineno</span> <span class='op'>=</span> <span class='int'>0</span>
-  <span class='id identifier rubyid_token_lines'>token_lines</span><span class='lparen'>(</span><span class='id identifier rubyid_tokens'>tokens</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_line_tokens'>line_tokens</span><span class='op'>|</span>
-    <span class='kw'>yield</span> <span class='tstring'><span class='tstring_beg'>%(</span><span class='tstring_content'>&lt;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@tag_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> class=&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sprintf'>sprintf</span> <span class='ivar'>@class_format</span><span class='comma'>,</span> <span class='id identifier rubyid_lineno'>lineno</span> <span class='op'>+=</span> <span class='int'>1</span><span class='embexpr_end'>}</span><span class='tstring_content'>&quot;&gt;</span><span class='tstring_end'>)</span></span>
+  <span class='id identifier rubyid_token_lines'>token_lines</span><span class='lparen'>(</span><span class='id identifier rubyid_tokens'>tokens</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_with_index'>with_index</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_line_tokens'>line_tokens</span><span class='comma'>,</span> <span class='id identifier rubyid_lineno'>lineno</span><span class='op'>|</span>
+    <span class='kw'>yield</span> <span class='tstring'><span class='tstring_beg'>%(</span><span class='tstring_content'>&lt;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@tag_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> class=&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sprintf'>sprintf</span> <span class='ivar'>@class_format</span><span class='comma'>,</span> <span class='id identifier rubyid_lineno'>lineno</span><span class='embexpr_end'>}</span><span class='tstring_content'>&quot;&gt;</span><span class='tstring_end'>)</span></span>
     <span class='ivar'>@formatter</span><span class='period'>.</span><span class='id identifier rubyid_stream'>stream</span><span class='lparen'>(</span><span class='id identifier rubyid_line_tokens'>line_tokens</span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_formatted'>formatted</span><span class='op'>|</span> <span class='kw'>yield</span> <span class='id identifier rubyid_formatted'>formatted</span> <span class='rbrace'>}</span>
     <span class='kw'>yield</span> <span class='tstring'><span class='tstring_beg'>%(</span><span class='tstring_content'>\n&lt;/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@tag_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>)</span></span>
   <span class='kw'>end</span>
@@ -276,7 +274,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Oct 14 03:53:06 2020 by
+  Generated on Wed Nov 11 02:38:08 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.24 (ruby-2.7.0).
 </div>
