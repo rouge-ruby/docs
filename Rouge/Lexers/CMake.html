@@ -137,6 +137,7 @@
           
         </dt>
         <dd><pre class="code"><span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w[</span><span class='words_sep'>
+  </span><span class='tstring_content'>add_compile_definitions</span><span class='words_sep'>
   </span><span class='tstring_content'>add_compile_options</span><span class='words_sep'>
   </span><span class='tstring_content'>add_custom_command</span><span class='words_sep'>
   </span><span class='tstring_content'>add_custom_target</span><span class='words_sep'>
@@ -144,6 +145,7 @@
   </span><span class='tstring_content'>add_dependencies</span><span class='words_sep'>
   </span><span class='tstring_content'>add_executable</span><span class='words_sep'>
   </span><span class='tstring_content'>add_library</span><span class='words_sep'>
+  </span><span class='tstring_content'>add_link_options</span><span class='words_sep'>
   </span><span class='tstring_content'>add_subdirectory</span><span class='words_sep'>
   </span><span class='tstring_content'>add_test</span><span class='words_sep'>
   </span><span class='tstring_content'>aux_source_directory</span><span class='words_sep'>
@@ -151,7 +153,9 @@
   </span><span class='tstring_content'>build_command</span><span class='words_sep'>
   </span><span class='tstring_content'>build_name</span><span class='words_sep'>
   </span><span class='tstring_content'>cmake_host_system_information</span><span class='words_sep'>
+  </span><span class='tstring_content'>cmake_language</span><span class='words_sep'>
   </span><span class='tstring_content'>cmake_minimum_required</span><span class='words_sep'>
+  </span><span class='tstring_content'>cmake_parse_arguments</span><span class='words_sep'>
   </span><span class='tstring_content'>cmake_policy</span><span class='words_sep'>
   </span><span class='tstring_content'>configure_file</span><span class='words_sep'>
   </span><span class='tstring_content'>create_test_sourcelist</span><span class='words_sep'>
@@ -189,6 +193,7 @@
   </span><span class='tstring_content'>include</span><span class='words_sep'>
   </span><span class='tstring_content'>include_directories</span><span class='words_sep'>
   </span><span class='tstring_content'>include_external_msproject</span><span class='words_sep'>
+  </span><span class='tstring_content'>include_guard</span><span class='words_sep'>
   </span><span class='tstring_content'>include_regular_expression</span><span class='words_sep'>
   </span><span class='tstring_content'>install</span><span class='words_sep'>
   </span><span class='tstring_content'>install_files</span><span class='words_sep'>
@@ -225,9 +230,14 @@
   </span><span class='tstring_content'>subdir_depends</span><span class='words_sep'>
   </span><span class='tstring_content'>subdirs</span><span class='words_sep'>
   </span><span class='tstring_content'>target_compile_definitions</span><span class='words_sep'>
+  </span><span class='tstring_content'>target_compile_features</span><span class='words_sep'>
   </span><span class='tstring_content'>target_compile_options</span><span class='words_sep'>
   </span><span class='tstring_content'>target_include_directories</span><span class='words_sep'>
+  </span><span class='tstring_content'>target_link_directories</span><span class='words_sep'>
   </span><span class='tstring_content'>target_link_libraries</span><span class='words_sep'>
+  </span><span class='tstring_content'>target_link_options</span><span class='words_sep'>
+  </span><span class='tstring_content'>target_precompile_headers</span><span class='words_sep'>
+  </span><span class='tstring_content'>target_sources</span><span class='words_sep'>
   </span><span class='tstring_content'>try_compile</span><span class='words_sep'>
   </span><span class='tstring_content'>try_run</span><span class='words_sep'>
   </span><span class='tstring_content'>unset</span><span class='words_sep'>
@@ -309,7 +319,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Nov 11 02:38:03 2020 by
+  Generated on Wed Dec  9 04:54:02 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.24 (ruby-2.7.0).
 </div>
