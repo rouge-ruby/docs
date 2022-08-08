@@ -6,7 +6,7 @@
 <title>
   File: Using Docker
   
-    &mdash; Documentation by YARD 0.9.24
+    &mdash; Documentation by YARD 0.9.28
   
 </title>
 
@@ -57,9 +57,9 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'><h1>Using Docker</h1>
+      <div id="content"><div id='filecontents'><h1 id="using-docker">Using Docker</h1>
 
-<p>So you want to help with Rouge development but aren&#39;t too keen on needing to
+<p>Do you want to help with Rouge development but aren&#39;t too keen on needing to
 install Ruby and whatever dependencies are required by Rouge?
 <a href="https://www.docker.com/">Docker</a> to the rescue!</p>
 
@@ -69,7 +69,7 @@ alternative for users who don&#39;t want to install Ruby, it&#39;s also a good c
 for users with an existing installation of Ruby with which they don&#39;t want to
 interfere.</p>
 
-<h2>Prerequisites</h2>
+<h2 id="prerequisites">Prerequisites</h2>
 
 <p>This guide assumes you have Docker and Git installed.</p>
 
@@ -77,22 +77,22 @@ interfere.</p>
 documentation</a>. For a guide on installing Git, take a look at
 <a href="https://help.github.com/en/articles/set-up-git">GitHub&#39;s documentation</a>.</p>
 
-<h2>Installing</h2>
+<h2 id="installing">Installing</h2>
 
-<h3>Downloading Rouge</h3>
+<h3 id="downloading-rouge">Downloading Rouge</h3>
 
 <p>Clone the project first, and navigate into your clone:</p>
 
-<pre class="code bash"><code class="bash">$ git clone https://github.com/rouge-ruby/rouge.git
-$ cd rouge
+<pre class="code bash"><code class="bash">git clone https://github.com/rouge-ruby/rouge.git
+cd rouge
 </code></pre>
 
-<h3>Configuring the Container</h3>
+<h3 id="configuring-the-container">Configuring the Container</h3>
 
 <p>The following line of code sets up Docker with Ruby and Rouge&#39;s development
 dependencies:</p>
 
-<pre class="code bash"><code class="bash">$ docker run -t -v $PWD:/app -v /tmp/vendor:/vendor -w /app -e BUNDLE_PATH=/vendor ruby bundle
+<pre class="code bash"><code class="bash">docker run -t -v $PWD:/app -v /tmp/vendor:/vendor -w /app -e BUNDLE_PATH=/vendor ruby bundle
 </code></pre>
 
 <p>Pretty sweet. Let&#39;s unpack this:</p>
@@ -115,20 +115,20 @@ part of the official library of &quot;base&quot; Docker images.</p></li>
 <li><p><code>bundle</code>: Runs the <code>bundle</code> command within the container.</p></li>
 </ul>
 
-<h2>Executing Commands</h2>
+<h2 id="executing-commands">Executing Commands</h2>
 
-<h3>Running Rake</h3>
+<h3 id="running-rake">Running Rake</h3>
 
 <p>Just replace the <code>bundle</code> command with <code>rake</code>:</p>
 
-<pre class="code bash"><code class="bash">$ docker run -t -v $PWD:/app -v /tmp/vendor:/vendor -w /app -e BUNDLE_PATH=/vendor ruby rake
+<pre class="code bash"><code class="bash">docker run -t -v $PWD:/app -v /tmp/vendor:/vendor -w /app -e BUNDLE_PATH=/vendor ruby rake
 </code></pre>
 
-<h3>Running Rack</h3>
+<h3 id="running-rack">Running Rack</h3>
 
 <p>Similarly, we can run Rack by replacing <code>bundle</code> with <code>rackup</code>:</p>
 
-<pre class="code bash"><code class="bash">$ docker run -t -v $PWD:/app -v /tmp/vendor:/vendor -w /app -e BUNDLE_PATH=/vendor -p 9292:9292 ruby bundle exec rackup --host 0.0.0.0
+<pre class="code bash"><code class="bash">docker run -t -v $PWD:/app -v /tmp/vendor:/vendor -w /app -e BUNDLE_PATH=/vendor -p 9292:9292 ruby bundle exec rackup --host 0.0.0.0
 </code></pre>
 
 <p>The additional command line flags are:</p>
@@ -143,16 +143,16 @@ container and we won&#39;t be able to access the server from the host machine.</
 
 <p>You should be able to visit <a href="http://localhost:9292">http://localhost:9292</a> at this point.</p>
 
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>Now that you&#39;ve got Docker set up, perhaps you&#39;d like to work on
-<a href="file.LexerDevelopment.html" title="a lexer">a lexer</a>?</p>
+a lexer by following our <a href="LexerDevelopment.md">guide</a>.</p>
 </div></div>
 
       <div id="footer">
-  Generated on Wed Dec  9 04:53:58 2020 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.7.0).
+  Generated on Mon Aug  8 11:23:49 2022 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.28 (ruby-2.7.6).
 </div>
 
     </div>

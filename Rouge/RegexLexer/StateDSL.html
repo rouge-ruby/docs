@@ -6,7 +6,7 @@
 <title>
   Class: Rouge::RegexLexer::StateDSL
   
-    &mdash; Documentation by YARD 0.9.24
+    &mdash; Documentation by YARD 0.9.28
   
 </title>
 
@@ -918,9 +918,9 @@ argument can be used to access the match groups.</p>
       <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    pushing :</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_state'>state</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@debug</span>
       <span class='ivar'>@stack</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='rparen'>)</span>
     <span class='kw'>end</span>
-  <span class='kw'>when</span> <span class='kw'>nil</span>    <span class='comment'># cannot use an empty-matching regexp with no predicate
-</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="InvalidRegex.html" title="Rouge::RegexLexer::InvalidRegex (class)">InvalidRegex</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="InvalidRegex.html#initialize-instance_method" title="Rouge::RegexLexer::InvalidRegex#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_re'>re</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_matches_empty'>matches_empty</span>
+  <span class='kw'>when</span> <span class='kw'>nil</span>
+    <span class='comment'># cannot use an empty-matching regexp with no predicate
+</span>    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="InvalidRegex.html" title="Rouge::RegexLexer::InvalidRegex (class)">InvalidRegex</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="InvalidRegex.html#initialize-instance_method" title="Rouge::RegexLexer::InvalidRegex#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_re'>re</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_matches_empty'>matches_empty</span>
 
     <span class='id identifier rubyid_proc'>proc</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_stream'>stream</span><span class='op'>|</span>
       <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    yielding: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tok'>tok</span><span class='period'>.</span><span class='id identifier rubyid_qualname'>qualname</span><span class='embexpr_end'>}</span><span class='tstring_content'>, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_stream'>stream</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@debug</span>
@@ -982,9 +982,9 @@ argument can be used to access the match groups.</p>
 </div>
 
       <div id="footer">
-  Generated on Wed Dec  9 04:54:02 2020 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.7.0).
+  Generated on Mon Aug  8 11:24:02 2022 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.28 (ruby-2.7.6).
 </div>
 
     </div>

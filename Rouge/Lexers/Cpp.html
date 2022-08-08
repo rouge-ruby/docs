@@ -6,7 +6,7 @@
 <title>
   Class: Rouge::Lexers::Cpp
   
-    &mdash; Documentation by YARD 0.9.24
+    &mdash; Documentation by YARD 0.9.28
   
 </title>
 
@@ -291,19 +291,23 @@
 30
 31
 32
-33</pre>
+33
+34
+35</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/rouge/lexers/cpp.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>
   <span class='ivar'>@keywords</span> <span class='op'>||=</span> <span class='kw'>super</span> <span class='op'>+</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='qwords_beg'>%w(</span><span class='words_sep'>
-    </span><span class='tstring_content'>asm</span><span class='words_sep'> </span><span class='tstring_content'>auto</span><span class='words_sep'> </span><span class='tstring_content'>catch</span><span class='words_sep'> </span><span class='tstring_content'>const_cast</span><span class='words_sep'> </span><span class='tstring_content'>delete</span><span class='words_sep'> </span><span class='tstring_content'>dynamic_cast</span><span class='words_sep'> </span><span class='tstring_content'>explicit</span><span class='words_sep'> </span><span class='tstring_content'>export</span><span class='words_sep'> </span><span class='tstring_content'>friend</span><span class='words_sep'>
+    </span><span class='tstring_content'>asm</span><span class='words_sep'> </span><span class='tstring_content'>auto</span><span class='words_sep'> </span><span class='tstring_content'>catch</span><span class='words_sep'> </span><span class='tstring_content'>char8_t</span><span class='words_sep'> </span><span class='tstring_content'>concept</span><span class='words_sep'>
+    </span><span class='tstring_content'>consteval</span><span class='words_sep'> </span><span class='tstring_content'>constexpr</span><span class='words_sep'> </span><span class='tstring_content'>constinit</span><span class='words_sep'> </span><span class='tstring_content'>const_cast</span><span class='words_sep'> </span><span class='tstring_content'>co_await</span><span class='words_sep'> </span><span class='tstring_content'>co_return</span><span class='words_sep'> </span><span class='tstring_content'>co_yield</span><span class='words_sep'>
+    </span><span class='tstring_content'>delete</span><span class='words_sep'> </span><span class='tstring_content'>dynamic_cast</span><span class='words_sep'> </span><span class='tstring_content'>explicit</span><span class='words_sep'> </span><span class='tstring_content'>export</span><span class='words_sep'> </span><span class='tstring_content'>friend</span><span class='words_sep'>
     </span><span class='tstring_content'>mutable</span><span class='words_sep'> </span><span class='tstring_content'>namespace</span><span class='words_sep'> </span><span class='tstring_content'>new</span><span class='words_sep'> </span><span class='tstring_content'>operator</span><span class='words_sep'> </span><span class='tstring_content'>private</span><span class='words_sep'> </span><span class='tstring_content'>protected</span><span class='words_sep'> </span><span class='tstring_content'>public</span><span class='words_sep'>
-    </span><span class='tstring_content'>reinterpret_cast</span><span class='words_sep'> </span><span class='tstring_content'>restrict</span><span class='words_sep'> </span><span class='tstring_content'>size_of</span><span class='words_sep'> </span><span class='tstring_content'>static_cast</span><span class='words_sep'> </span><span class='tstring_content'>this</span><span class='words_sep'> </span><span class='tstring_content'>throw</span><span class='words_sep'> </span><span class='tstring_content'>throws</span><span class='words_sep'>
+    </span><span class='tstring_content'>reinterpret_cast</span><span class='words_sep'> </span><span class='tstring_content'>requires</span><span class='words_sep'> </span><span class='tstring_content'>restrict</span><span class='words_sep'> </span><span class='tstring_content'>size_of</span><span class='words_sep'> </span><span class='tstring_content'>static_cast</span><span class='words_sep'> </span><span class='tstring_content'>this</span><span class='words_sep'> </span><span class='tstring_content'>throw</span><span class='words_sep'> </span><span class='tstring_content'>throws</span><span class='words_sep'>
     </span><span class='tstring_content'>typeid</span><span class='words_sep'> </span><span class='tstring_content'>typename</span><span class='words_sep'> </span><span class='tstring_content'>using</span><span class='words_sep'> </span><span class='tstring_content'>virtual</span><span class='words_sep'> </span><span class='tstring_content'>final</span><span class='words_sep'> </span><span class='tstring_content'>override</span><span class='words_sep'>
 
-    </span><span class='tstring_content'>alignas</span><span class='words_sep'> </span><span class='tstring_content'>alignof</span><span class='words_sep'> </span><span class='tstring_content'>constexpr</span><span class='words_sep'> </span><span class='tstring_content'>decltype</span><span class='words_sep'> </span><span class='tstring_content'>noexcept</span><span class='words_sep'> </span><span class='tstring_content'>static_assert</span><span class='words_sep'>
+    </span><span class='tstring_content'>alignas</span><span class='words_sep'> </span><span class='tstring_content'>alignof</span><span class='words_sep'> </span><span class='tstring_content'>decltype</span><span class='words_sep'> </span><span class='tstring_content'>noexcept</span><span class='words_sep'> </span><span class='tstring_content'>static_assert</span><span class='words_sep'>
     </span><span class='tstring_content'>thread_local</span><span class='words_sep'> </span><span class='tstring_content'>try</span><span class='words_sep'>
   </span><span class='tstring_end'>)</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -327,14 +331,14 @@
       <pre class="lines">
 
 
-35
-36
 37
 38
-39</pre>
+39
+40
+41</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/cpp.rb', line 35</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/cpp.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords_type'>keywords_type</span>
   <span class='ivar'>@keywords_type</span> <span class='op'>||=</span> <span class='kw'>super</span> <span class='op'>+</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='qwords_beg'>%w(</span><span class='words_sep'>
@@ -361,15 +365,15 @@
       <pre class="lines">
 
 
-41
-42
 43
 44
 45
-46</pre>
+46
+47
+48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/cpp.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/cpp.rb', line 43</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_reserved'>reserved</span>
   <span class='ivar'>@reserved</span> <span class='op'>||=</span> <span class='kw'>super</span> <span class='op'>+</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='qwords_beg'>%w(</span><span class='words_sep'>
@@ -387,9 +391,9 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Dec  9 04:53:59 2020 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.7.0).
+  Generated on Mon Aug  8 11:23:52 2022 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.28 (ruby-2.7.6).
 </div>
 
     </div>

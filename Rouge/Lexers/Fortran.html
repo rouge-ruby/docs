@@ -6,7 +6,7 @@
 <title>
   Class: Rouge::Lexers::Fortran
   
-    &mdash; Documentation by YARD 0.9.24
+    &mdash; Documentation by YARD 0.9.28
   
 </title>
 
@@ -385,10 +385,10 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/rouge/lexers/fortran.rb', line 23</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>  <span class='comment'># Special rules for two-word keywords are defined further down.
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>
+  <span class='comment'># Special rules for two-word keywords are defined further down.
 </span>  <span class='comment'># Note: Fortran allows to omit whitespace between certain keywords.
-</span>
-  <span class='ivar'>@keywords</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+</span>  <span class='ivar'>@keywords</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
     </span><span class='tstring_content'>abstract</span><span class='words_sep'> </span><span class='tstring_content'>allocatable</span><span class='words_sep'> </span><span class='tstring_content'>allocate</span><span class='words_sep'> </span><span class='tstring_content'>assign</span><span class='words_sep'> </span><span class='tstring_content'>assignment</span><span class='words_sep'> </span><span class='tstring_content'>associate</span><span class='words_sep'> </span><span class='tstring_content'>asynchronous</span><span class='words_sep'>
     </span><span class='tstring_content'>backspace</span><span class='words_sep'> </span><span class='tstring_content'>bind</span><span class='words_sep'> </span><span class='tstring_content'>block</span><span class='words_sep'> </span><span class='tstring_content'>blockdata</span><span class='words_sep'> </span><span class='tstring_content'>call</span><span class='words_sep'> </span><span class='tstring_content'>case</span><span class='words_sep'> </span><span class='tstring_content'>class</span><span class='words_sep'> </span><span class='tstring_content'>close</span><span class='words_sep'> </span><span class='tstring_content'>codimension</span><span class='words_sep'>
     </span><span class='tstring_content'>common</span><span class='words_sep'> </span><span class='tstring_content'>concurrent</span><span class='words_sep'> </span><span class='tstring_content'>contains</span><span class='words_sep'> </span><span class='tstring_content'>contiguous</span><span class='words_sep'> </span><span class='tstring_content'>continue</span><span class='words_sep'> </span><span class='tstring_content'>critical</span><span class='words_sep'> </span><span class='tstring_content'>cycle</span><span class='words_sep'> </span><span class='tstring_content'>data</span><span class='words_sep'>
@@ -437,10 +437,10 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/rouge/lexers/fortran.rb', line 45</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_types'>types</span>  <span class='comment'># A special rule for the two-word version &quot;double precision&quot; is
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_types'>types</span>
+  <span class='comment'># A special rule for the two-word version &quot;double precision&quot; is
 </span>  <span class='comment'># defined further down.
-</span>
-  <span class='ivar'>@types</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+</span>  <span class='ivar'>@types</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
     </span><span class='tstring_content'>character</span><span class='words_sep'> </span><span class='tstring_content'>complex</span><span class='words_sep'> </span><span class='tstring_content'>doubleprecision</span><span class='words_sep'> </span><span class='tstring_content'>integer</span><span class='words_sep'> </span><span class='tstring_content'>logical</span><span class='words_sep'> </span><span class='tstring_content'>real</span><span class='words_sep'>
   </span><span class='tstring_end'>)</span></span>
 <span class='kw'>end</span></pre>
@@ -454,9 +454,9 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Dec  9 04:54:05 2020 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.7.0).
+  Generated on Mon Aug  8 11:24:10 2022 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.28 (ruby-2.7.6).
 </div>
 
     </div>

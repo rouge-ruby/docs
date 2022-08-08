@@ -6,7 +6,7 @@
 <title>
   File: README
   
-    &mdash; Documentation by YARD 0.9.24
+    &mdash; Documentation by YARD 0.9.28
   
 </title>
 
@@ -57,22 +57,35 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'><h1>Rouge</h1>
+      <div id="content"><div id='filecontents'><h1 id="rouge">Rouge</h1>
 
-<p><a href="https://travis-ci.org/rouge-ruby/rouge"><img src="https://secure.travis-ci.org/rouge-ruby/rouge.svg" alt="Build Status"></a>
+<p><img src="https://github.com/rouge-ruby/rouge/actions/workflows/ruby.yml/badge.svg" alt="Build Status">
 <a href="https://rubygems.org/gems/rouge"><img src="https://badge.fury.io/rb/rouge.svg" alt="Gem Version"></a>
 <a href="https://rouge-ruby.github.io/docs/"><img src="http://img.shields.io/badge/yard-docs-blue.svg" alt="YARD Docs"></a></p>
 
-<p><a href="http://rouge.jneen.net/" title="Rouge">Rouge</a> is a pure Ruby syntax highlighter. It can highlight over 100 different
-languages, and output HTML or ANSI 256-color text. Its HTML output is
-compatible with stylesheets designed for <a href="http://pygments.org" title="Pygments">Pygments</a>.</p>
+<p><a href="http://rouge.jneen.net/" title="Rouge">Rouge</a> is a pure Ruby syntax highlighter. It can highlight
+<a href="docs/Languages.md" title="Languages">over 200 different languages</a>, and output HTML
+or ANSI 256-color text. Its HTML output is compatible with
+stylesheets designed for <a href="http://pygments.org" title="Pygments">Pygments</a>.</p>
 
-<h2>Usage</h2>
+<h2 id="installation">Installation</h2>
+
+<p>In your Gemfile, add:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rouge</span><span class='tstring_end'>&#39;</span></span>
+</code></pre>
+
+<p>or</p>
+
+<pre class="code sh"><code class="sh">gem install rouge
+</code></pre>
+
+<h2 id="usage">Usage</h2>
 
 <p>Rouge&#39;s most common uses are as a Ruby library, as part of Jekyll and as a
 command line tool.</p>
 
-<h3>Library</h3>
+<h3 id="library">Library</h3>
 
 <p>Here&#39;s a quick example of using Rouge as you would any other regular Ruby
 library:</p>
@@ -86,12 +99,12 @@ library:</p>
 <span class='id identifier rubyid_formatter'>formatter</span><span class='period'>.</span><span class='id identifier rubyid_format'>format</span><span class='lparen'>(</span><span class='id identifier rubyid_lexer'>lexer</span><span class='period'>.</span><span class='id identifier rubyid_lex'>lex</span><span class='lparen'>(</span><span class='id identifier rubyid_source'>source</span><span class='rparen'>)</span><span class='rparen'>)</span>
 
 <span class='comment'># Get some CSS
-</span><span class='const'><span class='object_link'><a href="Rouge.html" title="Rouge (module)">Rouge</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Rouge/Themes.html" title="Rouge::Themes (module)">Themes</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Rouge/Themes/Base16.html" title="Rouge::Themes::Base16 (class)">Base16</a></span></span><span class='period'>.</span><span class='id identifier rubyid_mode'><span class='object_link'><a href="Rouge/HasModes.html#mode-instance_method" title="Rouge::HasModes#mode (method)">mode</a></span></span><span class='lparen'>(</span><span class='symbol'>:light</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='label'>scope:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>.highlight</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='comment'># Or use Theme#find with string input
-</span>
-<span class='const'><span class='object_link'><a href="Rouge.html" title="Rouge (module)">Rouge</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Rouge/Theme.html" title="Rouge::Theme (class)">Theme</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'><span class='object_link'><a href="Rouge/Theme.html#find-class_method" title="Rouge::Theme.find (method)">find</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>base16.light</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='label'>scope:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>.highlight</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+</span><span class='const'><span class='object_link'><a href="Rouge.html" title="Rouge (module)">Rouge</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Rouge/Themes.html" title="Rouge::Themes (module)">Themes</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Rouge/Themes/Base16.html" title="Rouge::Themes::Base16 (class)">Base16</a></span></span><span class='period'>.</span><span class='id identifier rubyid_mode'><span class='object_link'><a href="Rouge/HasModes.html#mode-instance_method" title="Rouge::HasModes#mode (method)">mode</a></span></span><span class='lparen'>(</span><span class='symbol'>:light</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='label'>scope:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>.highlight</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='comment'># Or use Theme#find with string input
+</span><span class='const'><span class='object_link'><a href="Rouge.html" title="Rouge (module)">Rouge</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Rouge/Theme.html" title="Rouge::Theme (class)">Theme</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'><span class='object_link'><a href="Rouge/Theme.html#find-class_method" title="Rouge::Theme.find (method)">find</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>base16.light</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='label'>scope:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>.highlight</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 </code></pre>
 
-<h3>Jekyll</h3>
+<h3 id="jekyll">Jekyll</h3>
 
 <p>Rouge is Jekyll&#39;s default syntax highlighter. Out of the box, Rouge will be
 used to highlight text wrapped in the <code>{% highlight %}</code> template tags. The
@@ -99,18 +112,18 @@ used to highlight text wrapped in the <code>{% highlight %}</code> template tags
 use and whether to enable line numbers or not. More information is available in
 <a href="https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting" title="Code snippet highlighting in the Jekyll documentation">the Jekyll docs</a>.</p>
 
-<h3>Command Line</h3>
+<h3 id="command-line">Command Line</h3>
 
 <p>Rouge ships with a <code>rougify</code> command which allows you to easily highlight files
 in your terminal:</p>
 
-<pre class="code shell"><code class="shell">$ rougify foo.rb
-$ rougify style monokai.sublime &gt; syntax.css
+<pre class="code sh"><code class="sh">rougify foo.rb
+rougify style monokai.sublime &gt; syntax.css
 </code></pre>
 
-<h2>Configuration</h2>
+<h2 id="configuration">Configuration</h2>
 
-<h3>Formatters</h3>
+<h3 id="formatters">Formatters</h3>
 
 <p>Rouge comes with a number of formatters built-in but as of Rouge 2.0, you are
 encouraged to write your own formatter if you need something custom.</p>
@@ -174,7 +187,7 @@ highlighted text for use in the terminal. <code>theme</code> must be an instance
 <code>Rouge::Theme</code>, or a <code>Hash</code> structure with <code>:theme</code> entry.</p></li>
 </ul>
 
-<h4>Writing your own HTML formatter</h4>
+<h4 id="writing-your-own-html-formatter">Writing your own HTML formatter</h4>
 
 <p>If the above formatters are not sufficient, and you wish to customize the layout
 of the HTML document, we suggest writing your own HTML formatter. This can be
@@ -222,14 +235,14 @@ methods:</p>
 <span class='kw'>end</span>
 </code></pre>
 
-<h3>Lexer Options</h3>
+<h3 id="lexer-options">Lexer Options</h3>
 
 <ul>
 <li><p><code>debug: false</code> will print a trace of the lex on stdout.</p></li>
 <li><p><code>parent: &#39;&#39;</code> allows you to specify which language the template is inside.</p></li>
 </ul>
 
-<h3>CSS Options</h3>
+<h3 id="css-options">CSS Options</h3>
 
 <ul>
 <li><code>scope: &#39;.highlight&#39;</code> sets the CSS selector to which styles are applied,
@@ -239,23 +252,23 @@ e.g.:</li>
 <pre class="code ruby"><code class="ruby">  <span class='const'><span class='object_link'><a href="Rouge.html" title="Rouge (module)">Rouge</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Rouge/Themes.html" title="Rouge::Themes (module)">Themes</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Rouge/Themes/MonokaiSublime.html" title="Rouge::Themes::MonokaiSublime (class)">MonokaiSublime</a></span></span><span class='period'>.</span><span class='id identifier rubyid_render'><span class='object_link'><a href="Rouge/CSSTheme.html#render-instance_method" title="Rouge::CSSTheme#render (method)">render</a></span></span><span class='lparen'>(</span><span class='label'>scope:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>code</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 </code></pre>
 
-<h2>Documentation</h2>
+<h2 id="documentation">Documentation</h2>
 
 <p>Rouge&#39;s documentation is available at <a href="https://rouge-ruby.github.io/docs" title="Rouge&#39;s official documentation">rouge-ruby.github.io/docs/</a>.</p>
 
-<h2>Requirements</h2>
+<h2 id="requirements">Requirements</h2>
 
-<h3>Ruby</h3>
+<h3 id="ruby">Ruby</h3>
 
 <p>Rouge is compatible with all versions of Ruby from 2.0.0 onwards. It has no
 external dependencies.</p>
 
-<h3>Encodings</h3>
+<h3 id="encodings">Encodings</h3>
 
 <p>Rouge only supports UTF-8 strings. If you&#39;d like to highlight a string with a
 different encoding, please convert it to UTF-8 first.</p>
 
-<h2>Integrations</h2>
+<h2 id="integrations">Integrations</h2>
 
 <ul>
 <li>Middleman:
@@ -268,20 +281,20 @@ different encoding, please convert it to UTF-8 first.</p>
 <li>Rails: <a href="https://github.com/jacobsimeon/rouge-rails">Rouge::Rails</a> (@jacobsimeon)</li>
 </ul>
 
-<h2>Contributing</h2>
+<h2 id="contributing">Contributing</h2>
 
 <p>We&#39;re always excited to welcome new contributors to Rouge. By it&#39;s nature, a
 syntax highlighter relies for its success on submissions from users of the
 languages being highlighted. You can help Rouge by filing bug reports or
 developing new lexers.</p>
 
-<h3>Bug Reports</h3>
+<h3 id="bug-reports">Bug Reports</h3>
 
 <p>Rouge uses GitHub&#39;s Issues to report bugs. You can <a href="https://github.com/rouge-ruby/rouge/issues/new/choose" title="Choose an issue from the templates">choose</a> from
 one of our templates or create a custom issue. Issues that have not been active
 for a year are automatically closed by GitHub&#39;s <a href="https://probot.github.io" title="Read more about GitHub&#39;s Probot">Probot</a>.</p>
 
-<h3>Developing Lexers</h3>
+<h3 id="developing-lexers">Developing Lexers</h3>
 
 <p><strong>NOTE</strong>: Please don&#39;t submit lexers that are copy-pasted from other files.
 These submission will be rejected and we don&#39;t want you to waste your time.</p>
@@ -295,7 +308,7 @@ make it clear in your submission that the lexer isn&#39;t finished yet. We&#39;l
 best to answer any questions you have and sometimes the best way to do that is
 with actual code.</p>
 
-<h3>Testing Rouge</h3>
+<h3 id="testing-rouge">Testing Rouge</h3>
 
 <p>Once you&#39;ve cloned the repository from GitHub, you can test the core of Rouge
 simply by running <code>rake</code> (no <code>bundle exec</code> required). You can also run a single
@@ -303,7 +316,7 @@ test file by setting the <code>TEST</code> environment variable to the path of t
 test. For example, to test just the <em><code>ruby</code> lexer</em> (located at path
 <code>spec/lexers/ruby_spec.rb</code>) simply run the following:</p>
 
-<pre class="code shell"><code class="shell">$ TEST=spec/lexers/ruby_spec.rb rake
+<pre class="code sh"><code class="sh">TEST=spec/lexers/ruby_spec.rb rake
 </code></pre>
 
 <p>To test a lexer visually, run <code>rackup</code> from the top-level working directory and
@@ -313,27 +326,27 @@ you should have a web server running and ready to go. Visit
 <p>Once you&#39;ve selected a particular lexer, you can add <code>?debug=1</code> to your URL
 string to see a lot of helpful debugging info printed on stdout.</p>
 
-<h2>Versioning</h2>
+<h2 id="versioning">Versioning</h2>
 
 <p>Rouge uses <a href="http://semver.org/">Semantic Versioning 2.0.0</a>.</p>
 
-<h2>Maintainers</h2>
+<h2 id="maintainers">Maintainers</h2>
 
 <p>Rouge is largely the result of the hard work of unpaid volunteers. It was
 originally developed by Jeanine Adkisson (@jneen) and is currently maintained by
-Jeanine Adkisson, Drew Blessing (@dblessing), Michael Camilleri (@pyrmont) and
-Goro Fuji (@gfx).</p>
+Jeanine Adkisson, Drew Blessing (@dblessing), Goro Fuji (@gfx) and Tan Le
+(@tancnle).</p>
 
-<h2>License</h2>
+<h2 id="license">License</h2>
 
 <p>Rouge is released under the MIT license. Please see the <code>LICENSE</code> file for more
 information.</p>
 </div></div>
 
       <div id="footer">
-  Generated on Wed Dec  9 04:53:58 2020 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.7.0).
+  Generated on Mon Aug  8 11:23:49 2022 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.28 (ruby-2.7.6).
 </div>
 
     </div>
