@@ -219,14 +219,20 @@
 28
 29
 30
-31</pre>
+31
+32
+33
+34</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/rouge/lexers/typescript/common.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_builtins'>builtins</span>
   <span class='ivar'>@builtins</span> <span class='op'>||=</span> <span class='kw'>super</span> <span class='op'>+</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
-    </span><span class='tstring_content'>Pick</span><span class='words_sep'> </span><span class='tstring_content'>Partial</span><span class='words_sep'> </span><span class='tstring_content'>Readonly</span><span class='words_sep'> </span><span class='tstring_content'>Record</span><span class='words_sep'>
+    </span><span class='tstring_content'>Capitalize</span><span class='words_sep'> </span><span class='tstring_content'>ConstructorParameters</span><span class='words_sep'> </span><span class='tstring_content'>Exclude</span><span class='words_sep'> </span><span class='tstring_content'>Extract</span><span class='words_sep'> </span><span class='tstring_content'>InstanceType</span><span class='words_sep'>
+    </span><span class='tstring_content'>Lowercase</span><span class='words_sep'> </span><span class='tstring_content'>NonNullable</span><span class='words_sep'> </span><span class='tstring_content'>Omit</span><span class='words_sep'> </span><span class='tstring_content'>OmitThisParameter</span><span class='words_sep'> </span><span class='tstring_content'>Parameters</span><span class='words_sep'>
+    </span><span class='tstring_content'>Partial</span><span class='words_sep'> </span><span class='tstring_content'>Pick</span><span class='words_sep'> </span><span class='tstring_content'>Readonly</span><span class='words_sep'> </span><span class='tstring_content'>Record</span><span class='words_sep'> </span><span class='tstring_content'>Required</span><span class='words_sep'>
+    </span><span class='tstring_content'>ReturnType</span><span class='words_sep'> </span><span class='tstring_content'>ThisParameterType</span><span class='words_sep'> </span><span class='tstring_content'>ThisType</span><span class='words_sep'> </span><span class='tstring_content'>Uncapitalize</span><span class='words_sep'> </span><span class='tstring_content'>Uppercase</span><span class='words_sep'>
   </span><span class='tstring_end'>)</span></span>
 <span class='kw'>end</span></pre>
     </td>
@@ -345,7 +351,7 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Aug  8 12:07:09 2022 by
+  Generated on Wed Sep  7 10:17:26 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-2.7.6).
 </div>
