@@ -131,7 +131,12 @@
   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&amp;</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&amp;amp;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&amp;lt;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&amp;gt;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-<span class='rbrace'>}</span></pre></dd>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="ESCAPE_REGEX-constant" class="">ESCAPE_REGEX =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[&amp;&lt;&gt;]</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
       
     </dl>
   
@@ -257,26 +262,24 @@
       <pre class="lines">
 
 
-21
-22
-23
-24
-25
-26
-27
-28
 29
-30</pre>
+30
+31
+32
+33
+34
+35
+36
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/html.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/html.rb', line 29</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_safe_span'>safe_span</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_safe_val'>safe_val</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_tok'>tok</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../Token.html" title="Rouge::Token (class)">Token</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Token/Tokens.html" title="Rouge::Token::Tokens (module)">Tokens</a></span></span><span class='op'>::</span><span class='const'>Text</span>
     <span class='id identifier rubyid_safe_val'>safe_val</span>
   <span class='kw'>else</span>
-    <span class='id identifier rubyid_shortname'>shortname</span> <span class='op'>=</span> <span class='id identifier rubyid_tok'>tok</span><span class='period'>.</span><span class='id identifier rubyid_shortname'>shortname</span> \
-      <span class='kw'>or</span> <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>unknown token: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tok'>tok</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'> for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_safe_val'>safe_val</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_shortname'>shortname</span> <span class='op'>=</span> <span class='id identifier rubyid_tok'>tok</span><span class='period'>.</span><span class='id identifier rubyid_shortname'>shortname</span> <span class='kw'>or</span> <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>unknown token: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tok'>tok</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'> for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_safe_val'>safe_val</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
 
     <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;span class=\&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_shortname'>shortname</span><span class='embexpr_end'>}</span><span class='tstring_content'>\&quot;&gt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_safe_val'>safe_val</span><span class='embexpr_end'>}</span><span class='tstring_content'>&lt;/span&gt;</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
@@ -301,14 +304,14 @@
       <pre class="lines">
 
 
-15
-16
-17
-18
-19</pre>
+23
+24
+25
+26
+27</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/html.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/html.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_span'>span</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_val'>val</span> <span class='kw'>if</span> <span class='id identifier rubyid_escape?'>escape?</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='rparen'>)</span>
@@ -361,12 +364,12 @@
       <pre class="lines">
 
 
-11
-12
-13</pre>
+19
+20
+21</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/html.rb', line 11</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/formatters/html.rb', line 19</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_stream'>stream</span><span class='lparen'>(</span><span class='id identifier rubyid_tokens'>tokens</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tokens'>tokens</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='op'>|</span> <span class='kw'>yield</span> <span class='id identifier rubyid_span'>span</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
@@ -381,9 +384,9 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 10:08:45 2022 by
+  Generated on Sun Feb 12 20:11:14 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.28 (ruby-2.7.6).
+  0.9.28 (ruby-2.7.7).
 </div>
 
     </div>
