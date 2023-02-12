@@ -157,6 +157,248 @@
 </li>
 
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#functions_array-class_method" title="functions_array (class method)">.<strong>functions_array</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#functions_builtin-class_method" title="functions_builtin (class method)">.<strong>functions_builtin</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#functions_matrix-class_method" title="functions_matrix (class method)">.<strong>functions_matrix</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#functions_numeric-class_method" title="functions_numeric (class method)">.<strong>functions_numeric</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#functions_string-class_method" title="functions_string (class method)">.<strong>functions_string</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#functions_string_vector-class_method" title="functions_string_vector (class method)">.<strong>functions_string_vector</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#keywords-class_method" title="keywords (class method)">.<strong>keywords</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#object_attributes-class_method" title="object_attributes (class method)">.<strong>object_attributes</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#objects-class_method" title="objects (class method)">.<strong>objects</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#variables_numeric-class_method" title="variables_numeric (class method)">.<strong>variables_numeric</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#variables_string-class_method" title="variables_string (class method)">.<strong>variables_string</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
     </ul>
   
 
@@ -257,14 +499,504 @@
 </table>
 </div>
     
+      <div class="method_details ">
+  <h3 class="signature " id="functions_array-class_method">
+  
+    .<strong>functions_array</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+63
+64
+65
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/praat.rb', line 63</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_functions_array'>functions_array</span>
+  <span class='ivar'>@functions_array</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>linear#</span><span class='words_sep'> </span><span class='tstring_content'>randomGauss#</span><span class='words_sep'> </span><span class='tstring_content'>randomInteger#</span><span class='words_sep'> </span><span class='tstring_content'>randomUniform#</span><span class='words_sep'> </span><span class='tstring_content'>zero#</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="functions_builtin-class_method">
+  
+    .<strong>functions_builtin</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+83
+84
+85
+86
+87
+88
+89
+90</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/praat.rb', line 83</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_functions_builtin'>functions_builtin</span>
+  <span class='ivar'>@functions_builtin</span> <span class='op'>||=</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_functions_string'>functions_string</span> <span class='op'>|</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_functions_numeric'>functions_numeric</span> <span class='op'>|</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_functions_array'>functions_array</span> <span class='op'>|</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_functions_matrix'>functions_matrix</span> <span class='op'>|</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_functions_string_vector'>functions_string_vector</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="functions_matrix-class_method">
+  
+    .<strong>functions_matrix</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+69
+70
+71
+72
+73
+74
+75</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/praat.rb', line 69</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_functions_matrix'>functions_matrix</span>
+  <span class='ivar'>@functions_matrix</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>linear##</span><span class='words_sep'> </span><span class='tstring_content'>mul##</span><span class='words_sep'> </span><span class='tstring_content'>mul_fast##</span><span class='words_sep'> </span><span class='tstring_content'>mul_metal##</span><span class='words_sep'> </span><span class='tstring_content'>mul_nt##</span><span class='words_sep'> </span><span class='tstring_content'>mul_tn##</span><span class='words_sep'> </span><span class='tstring_content'>mul_tt##</span><span class='words_sep'> </span><span class='tstring_content'>outer##</span><span class='words_sep'> </span><span class='tstring_content'>peaks##</span><span class='words_sep'>
+    </span><span class='tstring_content'>randomGamma##</span><span class='words_sep'> </span><span class='tstring_content'>randomGauss##</span><span class='words_sep'> </span><span class='tstring_content'>randomInteger##</span><span class='words_sep'> </span><span class='tstring_content'>randomUniform##</span><span class='words_sep'> </span><span class='tstring_content'>softmaxPerRow##</span><span class='words_sep'>
+    </span><span class='tstring_content'>solve##</span><span class='words_sep'> </span><span class='tstring_content'>transpose##</span><span class='words_sep'> </span><span class='tstring_content'>zero##</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="functions_numeric-class_method">
+  
+    .<strong>functions_numeric</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/praat.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_functions_numeric'>functions_numeric</span>
+  <span class='ivar'>@functions_numeric</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>abs</span><span class='words_sep'> </span><span class='tstring_content'>appendFile</span><span class='words_sep'> </span><span class='tstring_content'>appendFileLine</span><span class='words_sep'> </span><span class='tstring_content'>appendInfo</span><span class='words_sep'> </span><span class='tstring_content'>appendInfoLine</span><span class='words_sep'> </span><span class='tstring_content'>arccos</span><span class='words_sep'> </span><span class='tstring_content'>arccosh</span><span class='words_sep'>
+    </span><span class='tstring_content'>arcsin</span><span class='words_sep'> </span><span class='tstring_content'>arcsinh</span><span class='words_sep'> </span><span class='tstring_content'>arctan</span><span class='words_sep'> </span><span class='tstring_content'>arctan2</span><span class='words_sep'> </span><span class='tstring_content'>arctanh</span><span class='words_sep'> </span><span class='tstring_content'>barkToHertz</span><span class='words_sep'> </span><span class='tstring_content'>beginPause</span><span class='words_sep'>
+    </span><span class='tstring_content'>beginSendPraat</span><span class='words_sep'> </span><span class='tstring_content'>besselI</span><span class='words_sep'> </span><span class='tstring_content'>besselK</span><span class='words_sep'> </span><span class='tstring_content'>beta</span><span class='words_sep'> </span><span class='tstring_content'>beta2</span><span class='words_sep'> </span><span class='tstring_content'>binomialP</span><span class='words_sep'> </span><span class='tstring_content'>binomialQ</span><span class='words_sep'> </span><span class='tstring_content'>boolean</span><span class='words_sep'>
+    </span><span class='tstring_content'>ceiling</span><span class='words_sep'> </span><span class='tstring_content'>chiSquareP</span><span class='words_sep'> </span><span class='tstring_content'>chiSquareQ</span><span class='words_sep'> </span><span class='tstring_content'>choice</span><span class='words_sep'> </span><span class='tstring_content'>comment</span><span class='words_sep'> </span><span class='tstring_content'>cos</span><span class='words_sep'> </span><span class='tstring_content'>cosh</span><span class='words_sep'> </span><span class='tstring_content'>createDirectory</span><span class='words_sep'>
+    </span><span class='tstring_content'>deleteFile</span><span class='words_sep'> </span><span class='tstring_content'>demoClicked</span><span class='words_sep'> </span><span class='tstring_content'>demoClickedIn</span><span class='words_sep'> </span><span class='tstring_content'>demoCommandKeyPressed</span><span class='words_sep'>
+    </span><span class='tstring_content'>demoExtraControlKeyPressed</span><span class='words_sep'> </span><span class='tstring_content'>demoInput</span><span class='words_sep'> </span><span class='tstring_content'>demoKeyPressed</span><span class='words_sep'>
+    </span><span class='tstring_content'>demoOptionKeyPressed</span><span class='words_sep'> </span><span class='tstring_content'>demoShiftKeyPressed</span><span class='words_sep'> </span><span class='tstring_content'>demoShow</span><span class='words_sep'> </span><span class='tstring_content'>demoWaitForInput</span><span class='words_sep'>
+    </span><span class='tstring_content'>demoWindowTitle</span><span class='words_sep'> </span><span class='tstring_content'>demoX</span><span class='words_sep'> </span><span class='tstring_content'>demoY</span><span class='words_sep'> </span><span class='tstring_content'>differenceLimensToPhon</span><span class='words_sep'> </span><span class='tstring_content'>do</span><span class='words_sep'> </span><span class='tstring_content'>editor</span><span class='words_sep'> </span><span class='tstring_content'>endPause</span><span class='words_sep'>
+    </span><span class='tstring_content'>endSendPraat</span><span class='words_sep'> </span><span class='tstring_content'>endsWith</span><span class='words_sep'> </span><span class='tstring_content'>erb</span><span class='words_sep'> </span><span class='tstring_content'>erbToHertz</span><span class='words_sep'> </span><span class='tstring_content'>erf</span><span class='words_sep'> </span><span class='tstring_content'>erfc</span><span class='words_sep'> </span><span class='tstring_content'>exitScript</span><span class='words_sep'> </span><span class='tstring_content'>exp</span><span class='words_sep'>
+    </span><span class='tstring_content'>extractNumber</span><span class='words_sep'> </span><span class='tstring_content'>fileReadable</span><span class='words_sep'> </span><span class='tstring_content'>fisherP</span><span class='words_sep'> </span><span class='tstring_content'>fisherQ</span><span class='words_sep'> </span><span class='tstring_content'>floor</span><span class='words_sep'> </span><span class='tstring_content'>gaussP</span><span class='words_sep'> </span><span class='tstring_content'>gaussQ</span><span class='words_sep'> </span><span class='tstring_content'>hash</span><span class='words_sep'>
+    </span><span class='tstring_content'>hertzToBark</span><span class='words_sep'> </span><span class='tstring_content'>hertzToErb</span><span class='words_sep'> </span><span class='tstring_content'>hertzToMel</span><span class='words_sep'> </span><span class='tstring_content'>hertzToSemitones</span><span class='words_sep'> </span><span class='tstring_content'>imax</span><span class='words_sep'> </span><span class='tstring_content'>imin</span><span class='words_sep'>
+    </span><span class='tstring_content'>incompleteBeta</span><span class='words_sep'> </span><span class='tstring_content'>incompleteGammaP</span><span class='words_sep'> </span><span class='tstring_content'>index</span><span class='words_sep'> </span><span class='tstring_content'>index_regex</span><span class='words_sep'> </span><span class='tstring_content'>integer</span><span class='words_sep'> </span><span class='tstring_content'>invBinomialP</span><span class='words_sep'>
+    </span><span class='tstring_content'>invBinomialQ</span><span class='words_sep'> </span><span class='tstring_content'>invChiSquareQ</span><span class='words_sep'> </span><span class='tstring_content'>invFisherQ</span><span class='words_sep'> </span><span class='tstring_content'>invGaussQ</span><span class='words_sep'> </span><span class='tstring_content'>invSigmoid</span><span class='words_sep'> </span><span class='tstring_content'>invStudentQ</span><span class='words_sep'>
+    </span><span class='tstring_content'>length</span><span class='words_sep'> </span><span class='tstring_content'>ln</span><span class='words_sep'> </span><span class='tstring_content'>lnBeta</span><span class='words_sep'> </span><span class='tstring_content'>lnGamma</span><span class='words_sep'> </span><span class='tstring_content'>log10</span><span class='words_sep'> </span><span class='tstring_content'>log2</span><span class='words_sep'> </span><span class='tstring_content'>max</span><span class='words_sep'> </span><span class='tstring_content'>melToHertz</span><span class='words_sep'> </span><span class='tstring_content'>min</span><span class='words_sep'> </span><span class='tstring_content'>minusObject</span><span class='words_sep'>
+    </span><span class='tstring_content'>natural</span><span class='words_sep'> </span><span class='tstring_content'>number</span><span class='words_sep'> </span><span class='tstring_content'>numberOfColumns</span><span class='words_sep'> </span><span class='tstring_content'>numberOfRows</span><span class='words_sep'> </span><span class='tstring_content'>numberOfSelected</span><span class='words_sep'>
+    </span><span class='tstring_content'>objectsAreIdentical</span><span class='words_sep'> </span><span class='tstring_content'>option</span><span class='words_sep'> </span><span class='tstring_content'>optionMenu</span><span class='words_sep'> </span><span class='tstring_content'>pauseScript</span><span class='words_sep'>
+    </span><span class='tstring_content'>phonToDifferenceLimens</span><span class='words_sep'> </span><span class='tstring_content'>plusObject</span><span class='words_sep'> </span><span class='tstring_content'>positive</span><span class='words_sep'> </span><span class='tstring_content'>randomBinomial</span><span class='words_sep'> </span><span class='tstring_content'>randomGauss</span><span class='words_sep'>
+    </span><span class='tstring_content'>randomInteger</span><span class='words_sep'> </span><span class='tstring_content'>randomPoisson</span><span class='words_sep'> </span><span class='tstring_content'>randomUniform</span><span class='words_sep'> </span><span class='tstring_content'>real</span><span class='words_sep'> </span><span class='tstring_content'>readFile</span><span class='words_sep'> </span><span class='tstring_content'>removeObject</span><span class='words_sep'>
+    </span><span class='tstring_content'>rindex</span><span class='words_sep'> </span><span class='tstring_content'>rindex_regex</span><span class='words_sep'> </span><span class='tstring_content'>round</span><span class='words_sep'> </span><span class='tstring_content'>runScript</span><span class='words_sep'> </span><span class='tstring_content'>runSystem</span><span class='words_sep'> </span><span class='tstring_content'>runSystem_nocheck</span><span class='words_sep'>
+    </span><span class='tstring_content'>selectObject</span><span class='words_sep'> </span><span class='tstring_content'>selected</span><span class='words_sep'> </span><span class='tstring_content'>semitonesToHertz</span><span class='words_sep'> </span><span class='tstring_content'>sentence</span><span class='words_sep'> </span><span class='tstring_content'>sentencetext</span><span class='words_sep'> </span><span class='tstring_content'>sigmoid</span><span class='words_sep'>
+    </span><span class='tstring_content'>sin</span><span class='words_sep'> </span><span class='tstring_content'>sinc</span><span class='words_sep'> </span><span class='tstring_content'>sincpi</span><span class='words_sep'> </span><span class='tstring_content'>sinh</span><span class='words_sep'> </span><span class='tstring_content'>soundPressureToPhon</span><span class='words_sep'> </span><span class='tstring_content'>sqrt</span><span class='words_sep'> </span><span class='tstring_content'>startsWith</span><span class='words_sep'> </span><span class='tstring_content'>studentP</span><span class='words_sep'>
+    </span><span class='tstring_content'>studentQ</span><span class='words_sep'> </span><span class='tstring_content'>tan</span><span class='words_sep'> </span><span class='tstring_content'>tanh</span><span class='words_sep'> </span><span class='tstring_content'>text</span><span class='words_sep'> </span><span class='tstring_content'>variableExists</span><span class='words_sep'> </span><span class='tstring_content'>word</span><span class='words_sep'> </span><span class='tstring_content'>writeFile</span><span class='words_sep'> </span><span class='tstring_content'>writeFileLine</span><span class='words_sep'>
+    </span><span class='tstring_content'>writeInfo</span><span class='words_sep'> </span><span class='tstring_content'>writeInfoLine</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="functions_string-class_method">
+  
+    .<strong>functions_string</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28
+29
+30
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/praat.rb', line 26</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_functions_string'>functions_string</span>
+  <span class='ivar'>@functions_string</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>backslashTrigraphsToUnicode$</span><span class='words_sep'> </span><span class='tstring_content'>chooseDirectory$</span><span class='words_sep'> </span><span class='tstring_content'>chooseReadFile$</span><span class='words_sep'>
+    </span><span class='tstring_content'>chooseWriteFile$</span><span class='words_sep'> </span><span class='tstring_content'>date$</span><span class='words_sep'> </span><span class='tstring_content'>demoKey$</span><span class='words_sep'> </span><span class='tstring_content'>do$</span><span class='words_sep'> </span><span class='tstring_content'>environment$</span><span class='words_sep'> </span><span class='tstring_content'>extractLine$</span><span class='words_sep'> </span><span class='tstring_content'>extractWord$</span><span class='words_sep'>
+    </span><span class='tstring_content'>fixed$</span><span class='words_sep'> </span><span class='tstring_content'>info$</span><span class='words_sep'> </span><span class='tstring_content'>left$</span><span class='words_sep'> </span><span class='tstring_content'>mid$</span><span class='words_sep'> </span><span class='tstring_content'>percent$</span><span class='words_sep'> </span><span class='tstring_content'>readFile$</span><span class='words_sep'> </span><span class='tstring_content'>replace$</span><span class='words_sep'> </span><span class='tstring_content'>replace_regex$</span><span class='words_sep'> </span><span class='tstring_content'>right$</span><span class='words_sep'>
+    </span><span class='tstring_content'>selected$</span><span class='words_sep'> </span><span class='tstring_content'>string$</span><span class='words_sep'> </span><span class='tstring_content'>unicodeToBackslashTrigraphs$</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="functions_string_vector-class_method">
+  
+    .<strong>functions_string_vector</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+77
+78
+79
+80
+81</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/praat.rb', line 77</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_functions_string_vector'>functions_string_vector</span>
+  <span class='ivar'>@functions_string_vector</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>empty$#</span><span class='words_sep'> </span><span class='tstring_content'>fileNames$#</span><span class='words_sep'> </span><span class='tstring_content'>folderNames$#</span><span class='words_sep'> </span><span class='tstring_content'>readLinesFromFile$#</span><span class='words_sep'> </span><span class='tstring_content'>splitByWhitespace$#</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="keywords-class_method">
+  
+    .<strong>keywords</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20
+21
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/praat.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>
+  <span class='ivar'>@keywords</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>if</span><span class='words_sep'> </span><span class='tstring_content'>then</span><span class='words_sep'> </span><span class='tstring_content'>else</span><span class='words_sep'> </span><span class='tstring_content'>elsif</span><span class='words_sep'> </span><span class='tstring_content'>elif</span><span class='words_sep'> </span><span class='tstring_content'>endif</span><span class='words_sep'> </span><span class='tstring_content'>fi</span><span class='words_sep'> </span><span class='tstring_content'>for</span><span class='words_sep'> </span><span class='tstring_content'>from</span><span class='words_sep'> </span><span class='tstring_content'>to</span><span class='words_sep'> </span><span class='tstring_content'>endfor</span><span class='words_sep'> </span><span class='tstring_content'>endproc</span><span class='words_sep'> </span><span class='tstring_content'>while</span><span class='words_sep'>
+    </span><span class='tstring_content'>endwhile</span><span class='words_sep'> </span><span class='tstring_content'>repeat</span><span class='words_sep'> </span><span class='tstring_content'>until</span><span class='words_sep'> </span><span class='tstring_content'>select</span><span class='words_sep'> </span><span class='tstring_content'>plus</span><span class='words_sep'> </span><span class='tstring_content'>minus</span><span class='words_sep'> </span><span class='tstring_content'>demo</span><span class='words_sep'> </span><span class='tstring_content'>assert</span><span class='words_sep'> </span><span class='tstring_content'>stopwatch</span><span class='words_sep'>
+    </span><span class='tstring_content'>nocheck</span><span class='words_sep'> </span><span class='tstring_content'>nowarn</span><span class='words_sep'> </span><span class='tstring_content'>noprogress</span><span class='words_sep'> </span><span class='tstring_content'>editor</span><span class='words_sep'> </span><span class='tstring_content'>endeditor</span><span class='words_sep'> </span><span class='tstring_content'>clearinfo</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="object_attributes-class_method">
+  
+    .<strong>object_attributes</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+136
+137
+138
+139
+140</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/praat.rb', line 136</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_object_attributes'>object_attributes</span>
+  <span class='ivar'>@object_attributes</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>ncol</span><span class='words_sep'> </span><span class='tstring_content'>nrow</span><span class='words_sep'> </span><span class='tstring_content'>xmin</span><span class='words_sep'> </span><span class='tstring_content'>ymin</span><span class='words_sep'> </span><span class='tstring_content'>xmax</span><span class='words_sep'> </span><span class='tstring_content'>ymax</span><span class='words_sep'> </span><span class='tstring_content'>nx</span><span class='words_sep'> </span><span class='tstring_content'>ny</span><span class='words_sep'> </span><span class='tstring_content'>dx</span><span class='words_sep'> </span><span class='tstring_content'>dy</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="objects-class_method">
+  
+    .<strong>objects</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/praat.rb', line 92</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_objects'>objects</span>
+  <span class='ivar'>@objects</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>Activation</span><span class='words_sep'> </span><span class='tstring_content'>AffineTransform</span><span class='words_sep'> </span><span class='tstring_content'>AmplitudeTier</span><span class='words_sep'> </span><span class='tstring_content'>Art</span><span class='words_sep'> </span><span class='tstring_content'>Artword</span><span class='words_sep'> </span><span class='tstring_content'>Autosegment</span><span class='words_sep'>
+    </span><span class='tstring_content'>BarkFilter</span><span class='words_sep'> </span><span class='tstring_content'>BarkSpectrogram</span><span class='words_sep'> </span><span class='tstring_content'>CCA</span><span class='words_sep'> </span><span class='tstring_content'>Categories</span><span class='words_sep'> </span><span class='tstring_content'>Cepstrogram</span><span class='words_sep'> </span><span class='tstring_content'>Cepstrum</span><span class='words_sep'>
+    </span><span class='tstring_content'>Cepstrumc</span><span class='words_sep'> </span><span class='tstring_content'>ChebyshevSeries</span><span class='words_sep'> </span><span class='tstring_content'>ClassificationTable</span><span class='words_sep'> </span><span class='tstring_content'>Cochleagram</span><span class='words_sep'> </span><span class='tstring_content'>Collection</span><span class='words_sep'>
+    </span><span class='tstring_content'>ComplexSpectrogram</span><span class='words_sep'> </span><span class='tstring_content'>Configuration</span><span class='words_sep'> </span><span class='tstring_content'>Confusion</span><span class='words_sep'> </span><span class='tstring_content'>ContingencyTable</span><span class='words_sep'> </span><span class='tstring_content'>Corpus</span><span class='words_sep'>
+    </span><span class='tstring_content'>Correlation</span><span class='words_sep'> </span><span class='tstring_content'>Covariance</span><span class='words_sep'> </span><span class='tstring_content'>CrossCorrelationTable</span><span class='words_sep'> </span><span class='tstring_content'>CrossCorrelationTableList</span><span class='words_sep'>
+    </span><span class='tstring_content'>CrossCorrelationTables</span><span class='words_sep'> </span><span class='tstring_content'>DTW</span><span class='words_sep'> </span><span class='tstring_content'>DataModeler</span><span class='words_sep'> </span><span class='tstring_content'>Diagonalizer</span><span class='words_sep'> </span><span class='tstring_content'>Discriminant</span><span class='words_sep'>
+    </span><span class='tstring_content'>Dissimilarity</span><span class='words_sep'> </span><span class='tstring_content'>Distance</span><span class='words_sep'> </span><span class='tstring_content'>Distributions</span><span class='words_sep'> </span><span class='tstring_content'>DurationTier</span><span class='words_sep'> </span><span class='tstring_content'>EEG</span><span class='words_sep'> </span><span class='tstring_content'>ERP</span><span class='words_sep'> </span><span class='tstring_content'>ERPTier</span><span class='words_sep'>
+    </span><span class='tstring_content'>EditCostsTable</span><span class='words_sep'> </span><span class='tstring_content'>EditDistanceTable</span><span class='words_sep'> </span><span class='tstring_content'>Eigen</span><span class='words_sep'> </span><span class='tstring_content'>Excitation</span><span class='words_sep'> </span><span class='tstring_content'>Excitations</span><span class='words_sep'>
+    </span><span class='tstring_content'>ExperimentMFC</span><span class='words_sep'> </span><span class='tstring_content'>FFNet</span><span class='words_sep'> </span><span class='tstring_content'>FeatureWeights</span><span class='words_sep'> </span><span class='tstring_content'>FileInMemory</span><span class='words_sep'> </span><span class='tstring_content'>FilesInMemory</span><span class='words_sep'> </span><span class='tstring_content'>Formant</span><span class='words_sep'>
+    </span><span class='tstring_content'>FormantFilter</span><span class='words_sep'> </span><span class='tstring_content'>FormantGrid</span><span class='words_sep'> </span><span class='tstring_content'>FormantModeler</span><span class='words_sep'> </span><span class='tstring_content'>FormantPoint</span><span class='words_sep'> </span><span class='tstring_content'>FormantTier</span><span class='words_sep'>
+    </span><span class='tstring_content'>GaussianMixture</span><span class='words_sep'> </span><span class='tstring_content'>HMM</span><span class='words_sep'> </span><span class='tstring_content'>HMM_Observation</span><span class='words_sep'> </span><span class='tstring_content'>HMM_ObservationSequence</span><span class='words_sep'> </span><span class='tstring_content'>HMM_State</span><span class='words_sep'>
+    </span><span class='tstring_content'>HMM_StateSequence</span><span class='words_sep'> </span><span class='tstring_content'>HMMObservation</span><span class='words_sep'> </span><span class='tstring_content'>HMMObservationSequence</span><span class='words_sep'> </span><span class='tstring_content'>HMMState</span><span class='words_sep'>
+    </span><span class='tstring_content'>HMMStateSequence</span><span class='words_sep'> </span><span class='tstring_content'>Harmonicity</span><span class='words_sep'> </span><span class='tstring_content'>ISpline</span><span class='words_sep'> </span><span class='tstring_content'>Index</span><span class='words_sep'> </span><span class='tstring_content'>Intensity</span><span class='words_sep'> </span><span class='tstring_content'>IntensityTier</span><span class='words_sep'>
+    </span><span class='tstring_content'>IntervalTier</span><span class='words_sep'> </span><span class='tstring_content'>KNN</span><span class='words_sep'> </span><span class='tstring_content'>KlattGrid</span><span class='words_sep'> </span><span class='tstring_content'>KlattTable</span><span class='words_sep'> </span><span class='tstring_content'>LFCC</span><span class='words_sep'> </span><span class='tstring_content'>LPC</span><span class='words_sep'> </span><span class='tstring_content'>Label</span><span class='words_sep'> </span><span class='tstring_content'>LegendreSeries</span><span class='words_sep'>
+    </span><span class='tstring_content'>LinearRegression</span><span class='words_sep'> </span><span class='tstring_content'>LogisticRegression</span><span class='words_sep'> </span><span class='tstring_content'>LongSound</span><span class='words_sep'> </span><span class='tstring_content'>Ltas</span><span class='words_sep'> </span><span class='tstring_content'>MFCC</span><span class='words_sep'> </span><span class='tstring_content'>MSpline</span><span class='words_sep'> </span><span class='tstring_content'>ManPages</span><span class='words_sep'>
+    </span><span class='tstring_content'>Manipulation</span><span class='words_sep'> </span><span class='tstring_content'>Matrix</span><span class='words_sep'> </span><span class='tstring_content'>MelFilter</span><span class='words_sep'> </span><span class='tstring_content'>MelSpectrogram</span><span class='words_sep'> </span><span class='tstring_content'>MixingMatrix</span><span class='words_sep'> </span><span class='tstring_content'>Movie</span><span class='words_sep'> </span><span class='tstring_content'>Network</span><span class='words_sep'>
+    </span><span class='tstring_content'>OTGrammar</span><span class='words_sep'> </span><span class='tstring_content'>OTHistory</span><span class='words_sep'> </span><span class='tstring_content'>OTMulti</span><span class='words_sep'> </span><span class='tstring_content'>PCA</span><span class='words_sep'> </span><span class='tstring_content'>PairDistribution</span><span class='words_sep'> </span><span class='tstring_content'>ParamCurve</span><span class='words_sep'> </span><span class='tstring_content'>Pattern</span><span class='words_sep'>
+    </span><span class='tstring_content'>Permutation</span><span class='words_sep'> </span><span class='tstring_content'>Photo</span><span class='words_sep'> </span><span class='tstring_content'>Pitch</span><span class='words_sep'> </span><span class='tstring_content'>PitchModeler</span><span class='words_sep'> </span><span class='tstring_content'>PitchTier</span><span class='words_sep'> </span><span class='tstring_content'>PointProcess</span><span class='words_sep'> </span><span class='tstring_content'>Polygon</span><span class='words_sep'>
+    </span><span class='tstring_content'>Polynomial</span><span class='words_sep'> </span><span class='tstring_content'>PowerCepstrogram</span><span class='words_sep'> </span><span class='tstring_content'>PowerCepstrum</span><span class='words_sep'> </span><span class='tstring_content'>Procrustes</span><span class='words_sep'> </span><span class='tstring_content'>RealPoint</span><span class='words_sep'> </span><span class='tstring_content'>RealTier</span><span class='words_sep'>
+    </span><span class='tstring_content'>ResultsMFC</span><span class='words_sep'> </span><span class='tstring_content'>Roots</span><span class='words_sep'> </span><span class='tstring_content'>SPINET</span><span class='words_sep'> </span><span class='tstring_content'>SSCP</span><span class='words_sep'> </span><span class='tstring_content'>SVD</span><span class='words_sep'> </span><span class='tstring_content'>Salience</span><span class='words_sep'> </span><span class='tstring_content'>ScalarProduct</span><span class='words_sep'> </span><span class='tstring_content'>Similarity</span><span class='words_sep'>
+    </span><span class='tstring_content'>SimpleString</span><span class='words_sep'> </span><span class='tstring_content'>SortedSetOfString</span><span class='words_sep'> </span><span class='tstring_content'>Sound</span><span class='words_sep'> </span><span class='tstring_content'>Speaker</span><span class='words_sep'> </span><span class='tstring_content'>Spectrogram</span><span class='words_sep'> </span><span class='tstring_content'>Spectrum</span><span class='words_sep'>
+    </span><span class='tstring_content'>SpectrumTier</span><span class='words_sep'> </span><span class='tstring_content'>SpeechSynthesizer</span><span class='words_sep'> </span><span class='tstring_content'>SpellingChecker</span><span class='words_sep'> </span><span class='tstring_content'>Strings</span><span class='words_sep'> </span><span class='tstring_content'>StringsIndex</span><span class='words_sep'>
+    </span><span class='tstring_content'>Table</span><span class='words_sep'> </span><span class='tstring_content'>TableOfReal</span><span class='words_sep'> </span><span class='tstring_content'>TextGrid</span><span class='words_sep'> </span><span class='tstring_content'>TextInterval</span><span class='words_sep'> </span><span class='tstring_content'>TextPoint</span><span class='words_sep'> </span><span class='tstring_content'>TextTier</span><span class='words_sep'> </span><span class='tstring_content'>Tier</span><span class='words_sep'>
+    </span><span class='tstring_content'>Transition</span><span class='words_sep'> </span><span class='tstring_content'>VocalTract</span><span class='words_sep'> </span><span class='tstring_content'>VocalTractTier</span><span class='words_sep'> </span><span class='tstring_content'>Weight</span><span class='words_sep'> </span><span class='tstring_content'>WordList</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="variables_numeric-class_method">
+  
+    .<strong>variables_numeric</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+121
+122
+123
+124
+125
+126</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/praat.rb', line 121</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_variables_numeric'>variables_numeric</span>
+  <span class='ivar'>@variables_numeric</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>all</span><span class='words_sep'> </span><span class='tstring_content'>average</span><span class='words_sep'> </span><span class='tstring_content'>e</span><span class='words_sep'> </span><span class='tstring_content'>left</span><span class='words_sep'> </span><span class='tstring_content'>macintosh</span><span class='words_sep'> </span><span class='tstring_content'>mono</span><span class='words_sep'> </span><span class='tstring_content'>pi</span><span class='words_sep'> </span><span class='tstring_content'>praatVersion</span><span class='words_sep'> </span><span class='tstring_content'>right</span><span class='words_sep'> </span><span class='tstring_content'>stereo</span><span class='words_sep'>
+    </span><span class='tstring_content'>undefined</span><span class='words_sep'> </span><span class='tstring_content'>unix</span><span class='words_sep'> </span><span class='tstring_content'>windows</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="variables_string-class_method">
+  
+    .<strong>variables_string</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+128
+129
+130
+131
+132
+133
+134</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/praat.rb', line 128</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_variables_string'>variables_string</span>
+  <span class='ivar'>@variables_string</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+    </span><span class='tstring_content'>praatVersion$</span><span class='words_sep'> </span><span class='tstring_content'>tab$</span><span class='words_sep'> </span><span class='tstring_content'>shellDirectory$</span><span class='words_sep'> </span><span class='tstring_content'>homeDirectory$</span><span class='words_sep'>
+    </span><span class='tstring_content'>preferencesDirectory$</span><span class='words_sep'> </span><span class='tstring_content'>newline$</span><span class='words_sep'> </span><span class='tstring_content'>temporaryDirectory$</span><span class='words_sep'>
+    </span><span class='tstring_content'>defaultDirectory$</span><span class='words_sep'>
+  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  7 10:08:39 2022 by
+  Generated on Sun Feb 12 20:11:12 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.28 (ruby-2.7.6).
+  0.9.28 (ruby-2.7.7).
 </div>
 
     </div>
