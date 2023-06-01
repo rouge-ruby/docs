@@ -319,11 +319,11 @@
       <pre class="code"><span class="info file"># File 'lib/rouge/lexers/twig.rb', line 18</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>
-  <span class='cvar'>@@keywords</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>as</span><span class='words_sep'> </span><span class='tstring_content'>do</span><span class='words_sep'> </span><span class='tstring_content'>extends</span><span class='words_sep'> </span><span class='tstring_content'>flush</span><span class='words_sep'> </span><span class='tstring_content'>from</span><span class='words_sep'> </span><span class='tstring_content'>import</span><span class='words_sep'> </span><span class='tstring_content'>include</span><span class='words_sep'> </span><span class='tstring_content'>use</span><span class='words_sep'> </span><span class='tstring_content'>else</span><span class='words_sep'> </span><span class='tstring_content'>starts</span><span class='words_sep'>
-                    </span><span class='tstring_content'>ends</span><span class='words_sep'> </span><span class='tstring_content'>with</span><span class='words_sep'> </span><span class='tstring_content'>without</span><span class='words_sep'> </span><span class='tstring_content'>autoescape</span><span class='words_sep'> </span><span class='tstring_content'>endautoescape</span><span class='words_sep'> </span><span class='tstring_content'>block</span><span class='words_sep'>
-                    </span><span class='tstring_content'>endblock</span><span class='words_sep'> </span><span class='tstring_content'>embed</span><span class='words_sep'> </span><span class='tstring_content'>endembed</span><span class='words_sep'> </span><span class='tstring_content'>filter</span><span class='words_sep'> </span><span class='tstring_content'>endfilter</span><span class='words_sep'> </span><span class='tstring_content'>for</span><span class='words_sep'> </span><span class='tstring_content'>endfor</span><span class='words_sep'>
-                    </span><span class='tstring_content'>if</span><span class='words_sep'> </span><span class='tstring_content'>endif</span><span class='words_sep'> </span><span class='tstring_content'>macro</span><span class='words_sep'> </span><span class='tstring_content'>endmacro</span><span class='words_sep'> </span><span class='tstring_content'>sandbox</span><span class='words_sep'> </span><span class='tstring_content'>endsandbox</span><span class='words_sep'> </span><span class='tstring_content'>set</span><span class='words_sep'> </span><span class='tstring_content'>endset</span><span class='words_sep'>
-                    </span><span class='tstring_content'>spaceless</span><span class='words_sep'> </span><span class='tstring_content'>endspaceless</span><span class='tstring_end'>)</span></span>
+  <span class='ivar'>@keywords</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>as</span><span class='words_sep'> </span><span class='tstring_content'>do</span><span class='words_sep'> </span><span class='tstring_content'>extends</span><span class='words_sep'> </span><span class='tstring_content'>flush</span><span class='words_sep'> </span><span class='tstring_content'>from</span><span class='words_sep'> </span><span class='tstring_content'>import</span><span class='words_sep'> </span><span class='tstring_content'>include</span><span class='words_sep'> </span><span class='tstring_content'>use</span><span class='words_sep'> </span><span class='tstring_content'>else</span><span class='words_sep'> </span><span class='tstring_content'>starts</span><span class='words_sep'>
+                   </span><span class='tstring_content'>ends</span><span class='words_sep'> </span><span class='tstring_content'>with</span><span class='words_sep'> </span><span class='tstring_content'>without</span><span class='words_sep'> </span><span class='tstring_content'>autoescape</span><span class='words_sep'> </span><span class='tstring_content'>endautoescape</span><span class='words_sep'> </span><span class='tstring_content'>block</span><span class='words_sep'>
+                   </span><span class='tstring_content'>endblock</span><span class='words_sep'> </span><span class='tstring_content'>embed</span><span class='words_sep'> </span><span class='tstring_content'>endembed</span><span class='words_sep'> </span><span class='tstring_content'>filter</span><span class='words_sep'> </span><span class='tstring_content'>endfilter</span><span class='words_sep'> </span><span class='tstring_content'>for</span><span class='words_sep'> </span><span class='tstring_content'>endfor</span><span class='words_sep'>
+                   </span><span class='tstring_content'>if</span><span class='words_sep'> </span><span class='tstring_content'>endif</span><span class='words_sep'> </span><span class='tstring_content'>macro</span><span class='words_sep'> </span><span class='tstring_content'>endmacro</span><span class='words_sep'> </span><span class='tstring_content'>sandbox</span><span class='words_sep'> </span><span class='tstring_content'>endsandbox</span><span class='words_sep'> </span><span class='tstring_content'>set</span><span class='words_sep'> </span><span class='tstring_content'>endset</span><span class='words_sep'>
+                   </span><span class='tstring_content'>spaceless</span><span class='words_sep'> </span><span class='tstring_content'>endspaceless</span><span class='tstring_end'>)</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -353,7 +353,7 @@
       <pre class="code"><span class="info file"># File 'lib/rouge/lexers/twig.rb', line 31</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_pseudo_keywords'>pseudo_keywords</span>
-  <span class='cvar'>@@pseudo_keywords</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>true</span><span class='words_sep'> </span><span class='tstring_content'>false</span><span class='words_sep'> </span><span class='tstring_content'>none</span><span class='tstring_end'>)</span></span>
+  <span class='ivar'>@pseudo_keywords</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>true</span><span class='words_sep'> </span><span class='tstring_content'>false</span><span class='words_sep'> </span><span class='tstring_content'>none</span><span class='tstring_end'>)</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -384,8 +384,8 @@
       <pre class="code"><span class="info file"># File 'lib/rouge/lexers/twig.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_tests'>tests</span>
-  <span class='cvar'>@@tests</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>constant</span><span class='words_sep'> </span><span class='tstring_content'>defined</span><span class='words_sep'> </span><span class='tstring_content'>divisibleby</span><span class='words_sep'> </span><span class='tstring_content'>empty</span><span class='words_sep'> </span><span class='tstring_content'>even</span><span class='words_sep'> </span><span class='tstring_content'>iterable</span><span class='words_sep'> </span><span class='tstring_content'>null</span><span class='words_sep'> </span><span class='tstring_content'>odd</span><span class='words_sep'>
-                 </span><span class='tstring_content'>sameas</span><span class='tstring_end'>)</span></span>
+  <span class='ivar'>@tests</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>constant</span><span class='words_sep'> </span><span class='tstring_content'>defined</span><span class='words_sep'> </span><span class='tstring_content'>divisibleby</span><span class='words_sep'> </span><span class='tstring_content'>empty</span><span class='words_sep'> </span><span class='tstring_content'>even</span><span class='words_sep'> </span><span class='tstring_content'>iterable</span><span class='words_sep'> </span><span class='tstring_content'>null</span><span class='words_sep'> </span><span class='tstring_content'>odd</span><span class='words_sep'>
+                </span><span class='tstring_content'>sameas</span><span class='tstring_end'>)</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -415,7 +415,7 @@
       <pre class="code"><span class="info file"># File 'lib/rouge/lexers/twig.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_word_operators'>word_operators</span>
-  <span class='cvar'>@@word_operators</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>b-and</span><span class='words_sep'> </span><span class='tstring_content'>b-or</span><span class='words_sep'> </span><span class='tstring_content'>b-xor</span><span class='words_sep'> </span><span class='tstring_content'>is</span><span class='words_sep'> </span><span class='tstring_content'>in</span><span class='words_sep'> </span><span class='tstring_content'>and</span><span class='words_sep'> </span><span class='tstring_content'>or</span><span class='words_sep'> </span><span class='tstring_content'>not</span><span class='tstring_end'>)</span></span>
+  <span class='ivar'>@word_operators</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>b-and</span><span class='words_sep'> </span><span class='tstring_content'>b-or</span><span class='words_sep'> </span><span class='tstring_content'>b-xor</span><span class='words_sep'> </span><span class='tstring_content'>is</span><span class='words_sep'> </span><span class='tstring_content'>in</span><span class='words_sep'> </span><span class='tstring_content'>and</span><span class='words_sep'> </span><span class='tstring_content'>or</span><span class='words_sep'> </span><span class='tstring_content'>not</span><span class='tstring_end'>)</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -427,9 +427,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Feb 12 20:11:11 2023 by
+  Generated on Fri Jun  2 00:13:02 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.28 (ruby-2.7.7).
+  0.9.28 (ruby-3.2.2).
 </div>
 
     </div>
