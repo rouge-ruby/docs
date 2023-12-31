@@ -6,7 +6,7 @@
 <title>
   Class: Rouge::Lexers::IRBLexer
   
-    &mdash; Documentation by YARD 0.9.28
+    &mdash; Documentation by YARD 0.9.34
   
 </title>
 
@@ -302,12 +302,12 @@
       <pre class="lines">
 
 
-29
-30
-31</pre>
+35
+36
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/irb.rb', line 29</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/irb.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_allow_comments?'>allow_comments?</span>
   <span class='kw'>true</span>
@@ -394,13 +394,25 @@
 
 25
 26
-27</pre>
+27
+28
+29
+30
+31
+32
+33</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/rouge/lexers/irb.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_prompt_regex'>prompt_regex</span>
-  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^.*?(irb|pry).*?[&gt;&quot;*]</span><span class='regexp_end'>/</span></span>
+  <span class='tstring'><span class='regexp_beg'>%r(</span><span class='tstring_content'>
+    ^.*?
+    (
+      (irb|pry).*?[&gt;&quot;*] |
+      [&gt;&quot;*]&gt;
+    )
+  </span><span class='regexp_end'>)x</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -412,9 +424,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Jun  2 00:37:20 2023 by
+  Generated on Sun Dec 31 12:26:15 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.28 (ruby-3.2.2).
+  0.9.34 (ruby-3.2.2).
 </div>
 
     </div>
