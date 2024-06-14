@@ -6,7 +6,7 @@
 <title>
   Class: Rouge::Lexers::Lean
   
-    &mdash; Documentation by YARD 0.9.34
+    &mdash; Documentation by YARD 0.9.28
   
 </title>
 
@@ -350,83 +350,83 @@
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>
   <span class='ivar'>@keywords</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
-    </span><span class='tstring_content'>abbreviation</span><span class='words_sep'>
-    </span><span class='tstring_content'>add_rewrite</span><span class='words_sep'>
-    </span><span class='tstring_content'>alias</span><span class='words_sep'>
-    </span><span class='tstring_content'>assume</span><span class='words_sep'>
-    </span><span class='tstring_content'>axiom</span><span class='words_sep'>
-    </span><span class='tstring_content'>begin</span><span class='words_sep'>
-    </span><span class='tstring_content'>by</span><span class='words_sep'>
-    </span><span class='tstring_content'>calc</span><span class='words_sep'>
-    </span><span class='tstring_content'>calc_refl</span><span class='words_sep'>
-    </span><span class='tstring_content'>calc_subst</span><span class='words_sep'>
-    </span><span class='tstring_content'>calc_trans</span><span class='words_sep'>
-    </span><span class='tstring_content'>#check</span><span class='words_sep'>
-    </span><span class='tstring_content'>coercion</span><span class='words_sep'>
-    </span><span class='tstring_content'>conjecture</span><span class='words_sep'>
-    </span><span class='tstring_content'>constant</span><span class='words_sep'>
-    </span><span class='tstring_content'>constants</span><span class='words_sep'>
-    </span><span class='tstring_content'>context</span><span class='words_sep'>
-    </span><span class='tstring_content'>corollary</span><span class='words_sep'>
-    </span><span class='tstring_content'>def</span><span class='words_sep'>
-    </span><span class='tstring_content'>definition</span><span class='words_sep'>
-    </span><span class='tstring_content'>end</span><span class='words_sep'>
-    </span><span class='tstring_content'>#eval</span><span class='words_sep'>
-    </span><span class='tstring_content'>example</span><span class='words_sep'>
-    </span><span class='tstring_content'>export</span><span class='words_sep'>
-    </span><span class='tstring_content'>expose</span><span class='words_sep'>
-    </span><span class='tstring_content'>exposing</span><span class='words_sep'>
-    </span><span class='tstring_content'>exit</span><span class='words_sep'>
-    </span><span class='tstring_content'>extends</span><span class='words_sep'>
-    </span><span class='tstring_content'>from</span><span class='words_sep'>
-    </span><span class='tstring_content'>fun</span><span class='words_sep'>
-    </span><span class='tstring_content'>have</span><span class='words_sep'>
-    </span><span class='tstring_content'>help</span><span class='words_sep'>
-    </span><span class='tstring_content'>hiding</span><span class='words_sep'>
-    </span><span class='tstring_content'>hott</span><span class='words_sep'>
-    </span><span class='tstring_content'>hypothesis</span><span class='words_sep'>
-    </span><span class='tstring_content'>import</span><span class='words_sep'>
-    </span><span class='tstring_content'>include</span><span class='words_sep'>
-    </span><span class='tstring_content'>including</span><span class='words_sep'>
-    </span><span class='tstring_content'>inductive</span><span class='words_sep'>
-    </span><span class='tstring_content'>infix</span><span class='words_sep'>
-    </span><span class='tstring_content'>infixl</span><span class='words_sep'>
-    </span><span class='tstring_content'>infixr</span><span class='words_sep'>
-    </span><span class='tstring_content'>inline</span><span class='words_sep'>
-    </span><span class='tstring_content'>instance</span><span class='words_sep'>
-    </span><span class='tstring_content'>irreducible</span><span class='words_sep'>
-    </span><span class='tstring_content'>lemma</span><span class='words_sep'>
-    </span><span class='tstring_content'>match</span><span class='words_sep'>
-    </span><span class='tstring_content'>namespace</span><span class='words_sep'>
-    </span><span class='tstring_content'>notation</span><span class='words_sep'>
-    </span><span class='tstring_content'>opaque</span><span class='words_sep'>
-    </span><span class='tstring_content'>opaque_hint</span><span class='words_sep'>
-    </span><span class='tstring_content'>open</span><span class='words_sep'>
-    </span><span class='tstring_content'>options</span><span class='words_sep'>
-    </span><span class='tstring_content'>parameter</span><span class='words_sep'>
-    </span><span class='tstring_content'>parameters</span><span class='words_sep'>
-    </span><span class='tstring_content'>postfix</span><span class='words_sep'>
-    </span><span class='tstring_content'>precedence</span><span class='words_sep'>
-    </span><span class='tstring_content'>prefix</span><span class='words_sep'>
-    </span><span class='tstring_content'>#print</span><span class='words_sep'>
-    </span><span class='tstring_content'>private</span><span class='words_sep'>
-    </span><span class='tstring_content'>protected</span><span class='words_sep'>
-    </span><span class='tstring_content'>#reduce</span><span class='words_sep'>
-    </span><span class='tstring_content'>reducible</span><span class='words_sep'>
-    </span><span class='tstring_content'>renaming</span><span class='words_sep'>
-    </span><span class='tstring_content'>repeat</span><span class='words_sep'>
-    </span><span class='tstring_content'>section</span><span class='words_sep'>
-    </span><span class='tstring_content'>set_option</span><span class='words_sep'>
-    </span><span class='tstring_content'>show</span><span class='words_sep'>
-    </span><span class='tstring_content'>tactic_hint</span><span class='words_sep'>
-    </span><span class='tstring_content'>theorem</span><span class='words_sep'>
-    </span><span class='tstring_content'>universe</span><span class='words_sep'>
-    </span><span class='tstring_content'>universes</span><span class='words_sep'>
-    </span><span class='tstring_content'>using</span><span class='words_sep'>
-    </span><span class='tstring_content'>variable</span><span class='words_sep'>
-    </span><span class='tstring_content'>variables</span><span class='words_sep'>
-    </span><span class='tstring_content'>with</span><span class='words_sep'>
-  </span><span class='tstring_end'>)</span></span>
+</span><span class='words_sep'>    </span><span class='tstring_content'>abbreviation</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>add_rewrite</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>alias</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>assume</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>axiom</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>begin</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>by</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>calc</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>calc_refl</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>calc_subst</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>calc_trans</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>#check</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>coercion</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>conjecture</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>constant</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>constants</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>context</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>corollary</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>def</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>definition</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>end</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>#eval</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>example</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>export</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>expose</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>exposing</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>exit</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>extends</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>from</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>fun</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>have</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>help</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>hiding</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>hott</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>hypothesis</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>import</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>include</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>including</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>inductive</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>infix</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>infixl</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>infixr</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>inline</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>instance</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>irreducible</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>lemma</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>match</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>namespace</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>notation</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>opaque</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>opaque_hint</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>open</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>options</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>parameter</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>parameters</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>postfix</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>precedence</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>prefix</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>#print</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>private</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>protected</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>#reduce</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>reducible</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>renaming</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>repeat</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>section</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>set_option</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>show</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>tactic_hint</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>theorem</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>universe</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>universes</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>using</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>variable</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>variables</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>with</span><span class='words_sep'>
+</span><span class='words_sep'>  </span><span class='tstring_end'>)</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -463,12 +463,12 @@
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_operators'>operators</span>
   <span class='ivar'>@operators</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
-    </span><span class='tstring_content'>!=</span><span class='words_sep'> </span><span class='tstring_content'>#</span><span class='words_sep'> </span><span class='tstring_content'>&amp;</span><span class='words_sep'> </span><span class='tstring_content'>&amp;&amp;</span><span class='words_sep'> </span><span class='tstring_content'>\*</span><span class='words_sep'> </span><span class='tstring_content'>\+</span><span class='words_sep'> </span><span class='tstring_content'>-</span><span class='words_sep'> </span><span class='tstring_content'>/</span><span class='words_sep'> </span><span class='tstring_content'>@</span><span class='words_sep'> </span><span class='tstring_content'>!</span><span class='words_sep'> </span><span class='tstring_content'>`</span><span class='words_sep'> </span><span class='tstring_content'>-\.</span><span class='words_sep'> </span><span class='tstring_content'>-&gt;</span><span class='words_sep'>
-    </span><span class='tstring_content'>\.</span><span class='words_sep'> </span><span class='tstring_content'>\.\.</span><span class='words_sep'> </span><span class='tstring_content'>\.\.\.</span><span class='words_sep'> </span><span class='tstring_content'>::</span><span class='words_sep'> </span><span class='tstring_content'>:&gt;</span><span class='words_sep'> </span><span class='tstring_content'>;</span><span class='words_sep'> </span><span class='tstring_content'>;;</span><span class='words_sep'> </span><span class='tstring_content'>&lt;</span><span class='words_sep'>
-    </span><span class='tstring_content'>&lt;-</span><span class='words_sep'> </span><span class='tstring_content'>=</span><span class='words_sep'> </span><span class='tstring_content'>==</span><span class='words_sep'> </span><span class='tstring_content'>&gt;</span><span class='words_sep'> </span><span class='tstring_content'>_</span><span class='words_sep'> </span><span class='tstring_content'>\|</span><span class='words_sep'> </span><span class='tstring_content'>\|\|</span><span class='words_sep'> </span><span class='tstring_content'>~</span><span class='words_sep'> </span><span class='tstring_content'>=&gt;</span><span class='words_sep'> </span><span class='tstring_content'>&lt;=</span><span class='words_sep'> </span><span class='tstring_content'>&gt;=</span><span class='words_sep'>
-    </span><span class='tstring_content'>/\ \/</span><span class='words_sep'> </span><span class='tstring_content'>∀</span><span class='words_sep'> </span><span class='tstring_content'>Π</span><span class='words_sep'> </span><span class='tstring_content'>λ</span><span class='words_sep'> </span><span class='tstring_content'>↔</span><span class='words_sep'> </span><span class='tstring_content'>∧</span><span class='words_sep'> </span><span class='tstring_content'>∨</span><span class='words_sep'> </span><span class='tstring_content'>≠</span><span class='words_sep'> </span><span class='tstring_content'>≤</span><span class='words_sep'> </span><span class='tstring_content'>≥</span><span class='words_sep'> </span><span class='tstring_content'>⊎</span><span class='words_sep'>
-    </span><span class='tstring_content'>¬</span><span class='words_sep'> </span><span class='tstring_content'>⁻¹</span><span class='words_sep'> </span><span class='tstring_content'>⬝</span><span class='words_sep'> </span><span class='tstring_content'>▸</span><span class='words_sep'> </span><span class='tstring_content'>→</span><span class='words_sep'> </span><span class='tstring_content'>∃</span><span class='words_sep'> </span><span class='tstring_content'>ℕ</span><span class='words_sep'> </span><span class='tstring_content'>ℤ</span><span class='words_sep'> </span><span class='tstring_content'>≈</span><span class='words_sep'> </span><span class='tstring_content'>×</span><span class='words_sep'> </span><span class='tstring_content'>⌞</span><span class='words_sep'> </span><span class='tstring_content'>⌟</span><span class='words_sep'> </span><span class='tstring_content'>≡</span><span class='words_sep'> </span><span class='tstring_content'>⟨</span><span class='words_sep'> </span><span class='tstring_content'>⟩</span><span class='words_sep'>
-  </span><span class='tstring_end'>)</span></span>
+</span><span class='words_sep'>    </span><span class='tstring_content'>!=</span><span class='words_sep'> </span><span class='tstring_content'>#</span><span class='words_sep'> </span><span class='tstring_content'>&amp;</span><span class='words_sep'> </span><span class='tstring_content'>&amp;&amp;</span><span class='words_sep'> </span><span class='tstring_content'>\*</span><span class='words_sep'> </span><span class='tstring_content'>\+</span><span class='words_sep'> </span><span class='tstring_content'>-</span><span class='words_sep'> </span><span class='tstring_content'>/</span><span class='words_sep'> </span><span class='tstring_content'>@</span><span class='words_sep'> </span><span class='tstring_content'>!</span><span class='words_sep'> </span><span class='tstring_content'>`</span><span class='words_sep'> </span><span class='tstring_content'>-\.</span><span class='words_sep'> </span><span class='tstring_content'>-&gt;</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>\.</span><span class='words_sep'> </span><span class='tstring_content'>\.\.</span><span class='words_sep'> </span><span class='tstring_content'>\.\.\.</span><span class='words_sep'> </span><span class='tstring_content'>::</span><span class='words_sep'> </span><span class='tstring_content'>:&gt;</span><span class='words_sep'> </span><span class='tstring_content'>;</span><span class='words_sep'> </span><span class='tstring_content'>;;</span><span class='words_sep'> </span><span class='tstring_content'>&lt;</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>&lt;-</span><span class='words_sep'> </span><span class='tstring_content'>=</span><span class='words_sep'> </span><span class='tstring_content'>==</span><span class='words_sep'> </span><span class='tstring_content'>&gt;</span><span class='words_sep'> </span><span class='tstring_content'>_</span><span class='words_sep'> </span><span class='tstring_content'>\|</span><span class='words_sep'> </span><span class='tstring_content'>\|\|</span><span class='words_sep'> </span><span class='tstring_content'>~</span><span class='words_sep'> </span><span class='tstring_content'>=&gt;</span><span class='words_sep'> </span><span class='tstring_content'>&lt;=</span><span class='words_sep'> </span><span class='tstring_content'>&gt;=</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>/\ \/</span><span class='words_sep'> </span><span class='tstring_content'>∀</span><span class='words_sep'> </span><span class='tstring_content'>Π</span><span class='words_sep'> </span><span class='tstring_content'>λ</span><span class='words_sep'> </span><span class='tstring_content'>↔</span><span class='words_sep'> </span><span class='tstring_content'>∧</span><span class='words_sep'> </span><span class='tstring_content'>∨</span><span class='words_sep'> </span><span class='tstring_content'>≠</span><span class='words_sep'> </span><span class='tstring_content'>≤</span><span class='words_sep'> </span><span class='tstring_content'>≥</span><span class='words_sep'> </span><span class='tstring_content'>⊎</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>¬</span><span class='words_sep'> </span><span class='tstring_content'>⁻¹</span><span class='words_sep'> </span><span class='tstring_content'>⬝</span><span class='words_sep'> </span><span class='tstring_content'>▸</span><span class='words_sep'> </span><span class='tstring_content'>→</span><span class='words_sep'> </span><span class='tstring_content'>∃</span><span class='words_sep'> </span><span class='tstring_content'>ℕ</span><span class='words_sep'> </span><span class='tstring_content'>ℤ</span><span class='words_sep'> </span><span class='tstring_content'>≈</span><span class='words_sep'> </span><span class='tstring_content'>×</span><span class='words_sep'> </span><span class='tstring_content'>⌞</span><span class='words_sep'> </span><span class='tstring_content'>⌟</span><span class='words_sep'> </span><span class='tstring_content'>≡</span><span class='words_sep'> </span><span class='tstring_content'>⟨</span><span class='words_sep'> </span><span class='tstring_content'>⟩</span><span class='words_sep'>
+</span><span class='words_sep'>  </span><span class='tstring_end'>)</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -503,10 +503,10 @@
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_types'>types</span>
   <span class='ivar'>@types</span> <span class='op'>||=</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
-    </span><span class='tstring_content'>Sort</span><span class='words_sep'>
-    </span><span class='tstring_content'>Prop</span><span class='words_sep'>
-    </span><span class='tstring_content'>Type</span><span class='words_sep'>
-  </span><span class='tstring_end'>)</span></span>
+</span><span class='words_sep'>    </span><span class='tstring_content'>Sort</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>Prop</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>Type</span><span class='words_sep'>
+</span><span class='words_sep'>  </span><span class='tstring_end'>)</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -518,9 +518,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Dec 31 12:26:17 2023 by
+  Generated on Fri Jun 14 14:16:42 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.2.2).
+  0.9.28 (ruby-3.3.0).
 </div>
 
     </div>

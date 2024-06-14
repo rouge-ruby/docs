@@ -6,7 +6,7 @@
 <title>
   Class: Rouge::CLI
   
-    &mdash; Documentation by YARD 0.9.34
+    &mdash; Documentation by YARD 0.9.28
   
 </title>
 
@@ -176,28 +176,6 @@
   <span class="summary_signature">
     
       <a href="#error!-class_method" title="error! (class method)">.<strong>error!</strong>(msg, status = 1)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#normalize_syntax-class_method" title="normalize_syntax (class method)">.<strong>normalize_syntax</strong>(argv)  &#x21d2; Object </a>
     
 
     
@@ -542,60 +520,6 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="normalize_syntax-class_method">
-  
-    .<strong>normalize_syntax</strong>(argv)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-515
-516
-517
-518
-519
-520
-521
-522
-523
-524
-525
-526
-527
-528
-529</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/cli.rb', line 515</span>
-
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_normalize_syntax'>normalize_syntax</span><span class='lparen'>(</span><span class='id identifier rubyid_argv'>argv</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_out'>out</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_argv'>argv</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_arg'>arg</span><span class='op'>|</span>
-    <span class='kw'>case</span> <span class='id identifier rubyid_arg'>arg</span>
-    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(--\w+)=(.*)$</span><span class='regexp_end'>/</span></span>
-      <span class='id identifier rubyid_out'>out</span> <span class='op'>&lt;&lt;</span> <span class='backref'>$1</span> <span class='op'>&lt;&lt;</span> <span class='backref'>$2</span>
-    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(-\w)(.+)$</span><span class='regexp_end'>/</span></span>
-      <span class='id identifier rubyid_out'>out</span> <span class='op'>&lt;&lt;</span> <span class='backref'>$1</span> <span class='op'>&lt;&lt;</span> <span class='backref'>$2</span>
-    <span class='kw'>else</span>
-      <span class='id identifier rubyid_out'>out</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_arg'>arg</span>
-    <span class='kw'>end</span>
-  <span class='kw'>end</span>
-
-  <span class='id identifier rubyid_out'>out</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
   <h3 class="signature " id="parse-class_method">
   
     .<strong>parse</strong>(argv = ARGV)  &#x21d2; <tt>Object</tt> 
@@ -700,9 +624,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Dec 31 12:26:14 2023 by
+  Generated on Fri Jun 14 14:16:40 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.2.2).
+  0.9.28 (ruby-3.3.0).
 </div>
 
     </div>

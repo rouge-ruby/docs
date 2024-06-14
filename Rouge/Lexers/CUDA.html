@@ -6,7 +6,7 @@
 <title>
   Class: Rouge::Lexers::CUDA
   
-    &mdash; Documentation by YARD 0.9.34
+    &mdash; Documentation by YARD 0.9.28
   
 </title>
 
@@ -280,9 +280,9 @@
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>
   <span class='ivar'>@keywords</span> <span class='op'>||=</span> <span class='kw'>super</span> <span class='op'>+</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='qwords_beg'>%w(</span><span class='words_sep'>
-    </span><span class='tstring_content'>__global__</span><span class='words_sep'> </span><span class='tstring_content'>__device__</span><span class='words_sep'> </span><span class='tstring_content'>__host__</span><span class='words_sep'> </span><span class='tstring_content'>__noinline__</span><span class='words_sep'> </span><span class='tstring_content'>__forceinline__</span><span class='words_sep'>
-    </span><span class='tstring_content'>__constant__</span><span class='words_sep'> </span><span class='tstring_content'>__shared__</span><span class='words_sep'> </span><span class='tstring_content'>__managed__</span><span class='words_sep'> </span><span class='tstring_content'>__restrict__</span><span class='words_sep'>
-  </span><span class='tstring_end'>)</span></span><span class='rparen'>)</span>
+</span><span class='words_sep'>    </span><span class='tstring_content'>__global__</span><span class='words_sep'> </span><span class='tstring_content'>__device__</span><span class='words_sep'> </span><span class='tstring_content'>__host__</span><span class='words_sep'> </span><span class='tstring_content'>__noinline__</span><span class='words_sep'> </span><span class='tstring_content'>__forceinline__</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>__constant__</span><span class='words_sep'> </span><span class='tstring_content'>__shared__</span><span class='words_sep'> </span><span class='tstring_content'>__managed__</span><span class='words_sep'> </span><span class='tstring_content'>__restrict__</span><span class='words_sep'>
+</span><span class='words_sep'>  </span><span class='tstring_end'>)</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -322,15 +322,15 @@
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords_type'>keywords_type</span>
   <span class='ivar'>@keywords_type</span> <span class='op'>||=</span> <span class='kw'>super</span> <span class='op'>+</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='qwords_beg'>%w(</span><span class='words_sep'>
-    </span><span class='tstring_content'>char1</span><span class='words_sep'> </span><span class='tstring_content'>char2</span><span class='words_sep'> </span><span class='tstring_content'>char3</span><span class='words_sep'> </span><span class='tstring_content'>char4</span><span class='words_sep'> </span><span class='tstring_content'>uchar1</span><span class='words_sep'> </span><span class='tstring_content'>uchar2</span><span class='words_sep'> </span><span class='tstring_content'>uchar3</span><span class='words_sep'> </span><span class='tstring_content'>uchar4</span><span class='words_sep'>
-    </span><span class='tstring_content'>short1</span><span class='words_sep'> </span><span class='tstring_content'>short2</span><span class='words_sep'> </span><span class='tstring_content'>short3</span><span class='words_sep'> </span><span class='tstring_content'>short4</span><span class='words_sep'> </span><span class='tstring_content'>ushort1</span><span class='words_sep'> </span><span class='tstring_content'>ushort2</span><span class='words_sep'> </span><span class='tstring_content'>ushort3</span><span class='words_sep'> </span><span class='tstring_content'>ushort4</span><span class='words_sep'>
-    </span><span class='tstring_content'>int1</span><span class='words_sep'> </span><span class='tstring_content'>int2</span><span class='words_sep'> </span><span class='tstring_content'>int3</span><span class='words_sep'> </span><span class='tstring_content'>int4</span><span class='words_sep'> </span><span class='tstring_content'>uint1</span><span class='words_sep'> </span><span class='tstring_content'>uint2</span><span class='words_sep'> </span><span class='tstring_content'>uint3</span><span class='words_sep'> </span><span class='tstring_content'>uint4</span><span class='words_sep'>
-    </span><span class='tstring_content'>long1</span><span class='words_sep'> </span><span class='tstring_content'>long2</span><span class='words_sep'> </span><span class='tstring_content'>long3</span><span class='words_sep'> </span><span class='tstring_content'>long4</span><span class='words_sep'> </span><span class='tstring_content'>ulong1</span><span class='words_sep'> </span><span class='tstring_content'>ulong2</span><span class='words_sep'> </span><span class='tstring_content'>ulong3</span><span class='words_sep'> </span><span class='tstring_content'>ulong4</span><span class='words_sep'>
-    </span><span class='tstring_content'>longlong1</span><span class='words_sep'> </span><span class='tstring_content'>longlong2</span><span class='words_sep'> </span><span class='tstring_content'>longlong3</span><span class='words_sep'> </span><span class='tstring_content'>longlong4</span><span class='words_sep'> 
-    </span><span class='tstring_content'>ulonglong1</span><span class='words_sep'> </span><span class='tstring_content'>ulonglong2</span><span class='words_sep'> </span><span class='tstring_content'>ulonglong3</span><span class='words_sep'> </span><span class='tstring_content'>ulonglong4</span><span class='words_sep'> 
-    </span><span class='tstring_content'>float1</span><span class='words_sep'> </span><span class='tstring_content'>float2</span><span class='words_sep'> </span><span class='tstring_content'>float3</span><span class='words_sep'> </span><span class='tstring_content'>float4</span><span class='words_sep'> </span><span class='tstring_content'>double1</span><span class='words_sep'> </span><span class='tstring_content'>double2</span><span class='words_sep'> </span><span class='tstring_content'>double3</span><span class='words_sep'> </span><span class='tstring_content'>double4</span><span class='words_sep'>
-    </span><span class='tstring_content'>dim3</span><span class='words_sep'>
-  </span><span class='tstring_end'>)</span></span><span class='rparen'>)</span>
+</span><span class='words_sep'>    </span><span class='tstring_content'>char1</span><span class='words_sep'> </span><span class='tstring_content'>char2</span><span class='words_sep'> </span><span class='tstring_content'>char3</span><span class='words_sep'> </span><span class='tstring_content'>char4</span><span class='words_sep'> </span><span class='tstring_content'>uchar1</span><span class='words_sep'> </span><span class='tstring_content'>uchar2</span><span class='words_sep'> </span><span class='tstring_content'>uchar3</span><span class='words_sep'> </span><span class='tstring_content'>uchar4</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>short1</span><span class='words_sep'> </span><span class='tstring_content'>short2</span><span class='words_sep'> </span><span class='tstring_content'>short3</span><span class='words_sep'> </span><span class='tstring_content'>short4</span><span class='words_sep'> </span><span class='tstring_content'>ushort1</span><span class='words_sep'> </span><span class='tstring_content'>ushort2</span><span class='words_sep'> </span><span class='tstring_content'>ushort3</span><span class='words_sep'> </span><span class='tstring_content'>ushort4</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>int1</span><span class='words_sep'> </span><span class='tstring_content'>int2</span><span class='words_sep'> </span><span class='tstring_content'>int3</span><span class='words_sep'> </span><span class='tstring_content'>int4</span><span class='words_sep'> </span><span class='tstring_content'>uint1</span><span class='words_sep'> </span><span class='tstring_content'>uint2</span><span class='words_sep'> </span><span class='tstring_content'>uint3</span><span class='words_sep'> </span><span class='tstring_content'>uint4</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>long1</span><span class='words_sep'> </span><span class='tstring_content'>long2</span><span class='words_sep'> </span><span class='tstring_content'>long3</span><span class='words_sep'> </span><span class='tstring_content'>long4</span><span class='words_sep'> </span><span class='tstring_content'>ulong1</span><span class='words_sep'> </span><span class='tstring_content'>ulong2</span><span class='words_sep'> </span><span class='tstring_content'>ulong3</span><span class='words_sep'> </span><span class='tstring_content'>ulong4</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>longlong1</span><span class='words_sep'> </span><span class='tstring_content'>longlong2</span><span class='words_sep'> </span><span class='tstring_content'>longlong3</span><span class='words_sep'> </span><span class='tstring_content'>longlong4</span><span class='words_sep'> 
+</span><span class='words_sep'>    </span><span class='tstring_content'>ulonglong1</span><span class='words_sep'> </span><span class='tstring_content'>ulonglong2</span><span class='words_sep'> </span><span class='tstring_content'>ulonglong3</span><span class='words_sep'> </span><span class='tstring_content'>ulonglong4</span><span class='words_sep'> 
+</span><span class='words_sep'>    </span><span class='tstring_content'>float1</span><span class='words_sep'> </span><span class='tstring_content'>float2</span><span class='words_sep'> </span><span class='tstring_content'>float3</span><span class='words_sep'> </span><span class='tstring_content'>float4</span><span class='words_sep'> </span><span class='tstring_content'>double1</span><span class='words_sep'> </span><span class='tstring_content'>double2</span><span class='words_sep'> </span><span class='tstring_content'>double3</span><span class='words_sep'> </span><span class='tstring_content'>double4</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>dim3</span><span class='words_sep'>
+</span><span class='words_sep'>  </span><span class='tstring_end'>)</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -342,9 +342,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Dec 31 12:26:16 2023 by
+  Generated on Fri Jun 14 14:16:41 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.2.2).
+  0.9.28 (ruby-3.3.0).
 </div>
 
     </div>

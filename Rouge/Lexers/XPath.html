@@ -6,7 +6,7 @@
 <title>
   Class: Rouge::Lexers::XPath
   
-    &mdash; Documentation by YARD 0.9.34
+    &mdash; Documentation by YARD 0.9.28
   
 </title>
 
@@ -591,10 +591,10 @@
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_axes'>axes</span>
   <span class='ivar'>@axes</span> <span class='op'>||=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_union'>union</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
-    </span><span class='tstring_content'>child</span><span class='words_sep'> </span><span class='tstring_content'>descendant</span><span class='words_sep'> </span><span class='tstring_content'>attribute</span><span class='words_sep'> </span><span class='tstring_content'>self</span><span class='words_sep'> </span><span class='tstring_content'>descendant-or-self</span><span class='words_sep'>
-    </span><span class='tstring_content'>following-sibling</span><span class='words_sep'> </span><span class='tstring_content'>following</span><span class='words_sep'> </span><span class='tstring_content'>namespace</span><span class='words_sep'>
-    </span><span class='tstring_content'>parent</span><span class='words_sep'> </span><span class='tstring_content'>ancestor</span><span class='words_sep'> </span><span class='tstring_content'>preceding-sibling</span><span class='words_sep'> </span><span class='tstring_content'>preceding</span><span class='words_sep'> </span><span class='tstring_content'>ancestor-or-self</span><span class='words_sep'>
-  </span><span class='tstring_end'>)</span></span>
+</span><span class='words_sep'>    </span><span class='tstring_content'>child</span><span class='words_sep'> </span><span class='tstring_content'>descendant</span><span class='words_sep'> </span><span class='tstring_content'>attribute</span><span class='words_sep'> </span><span class='tstring_content'>self</span><span class='words_sep'> </span><span class='tstring_content'>descendant-or-self</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>following-sibling</span><span class='words_sep'> </span><span class='tstring_content'>following</span><span class='words_sep'> </span><span class='tstring_content'>namespace</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>parent</span><span class='words_sep'> </span><span class='tstring_content'>ancestor</span><span class='words_sep'> </span><span class='tstring_content'>preceding-sibling</span><span class='words_sep'> </span><span class='tstring_content'>preceding</span><span class='words_sep'> </span><span class='tstring_content'>ancestor-or-self</span><span class='words_sep'>
+</span><span class='words_sep'>  </span><span class='tstring_end'>)</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -860,9 +860,9 @@
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_kindTest'>kindTest</span>
   <span class='ivar'>@kindTest</span> <span class='op'>||=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_union'>union</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
-    </span><span class='tstring_content'>element</span><span class='words_sep'> </span><span class='tstring_content'>attribute</span><span class='words_sep'> </span><span class='tstring_content'>schema-element</span><span class='words_sep'> </span><span class='tstring_content'>schema-attribute</span><span class='words_sep'>
-    </span><span class='tstring_content'>comment</span><span class='words_sep'> </span><span class='tstring_content'>text</span><span class='words_sep'> </span><span class='tstring_content'>node</span><span class='words_sep'> </span><span class='tstring_content'>document-node</span><span class='words_sep'> </span><span class='tstring_content'>namespace-node</span><span class='words_sep'>
-  </span><span class='tstring_end'>)</span></span>
+</span><span class='words_sep'>    </span><span class='tstring_content'>element</span><span class='words_sep'> </span><span class='tstring_content'>attribute</span><span class='words_sep'> </span><span class='tstring_content'>schema-element</span><span class='words_sep'> </span><span class='tstring_content'>schema-attribute</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>comment</span><span class='words_sep'> </span><span class='tstring_content'>text</span><span class='words_sep'> </span><span class='tstring_content'>node</span><span class='words_sep'> </span><span class='tstring_content'>document-node</span><span class='words_sep'> </span><span class='tstring_content'>namespace-node</span><span class='words_sep'>
+</span><span class='words_sep'>  </span><span class='tstring_end'>)</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1108,11 +1108,11 @@
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_word_operators'>word_operators</span>
   <span class='ivar'>@word_operators</span> <span class='op'>||=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_union'>union</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
-    </span><span class='tstring_content'>and</span><span class='words_sep'> </span><span class='tstring_content'>or</span><span class='words_sep'> </span><span class='tstring_content'>eq</span><span class='words_sep'> </span><span class='tstring_content'>ge</span><span class='words_sep'> </span><span class='tstring_content'>gt</span><span class='words_sep'> </span><span class='tstring_content'>le</span><span class='words_sep'> </span><span class='tstring_content'>lt</span><span class='words_sep'> </span><span class='tstring_content'>ne</span><span class='words_sep'> </span><span class='tstring_content'>is</span><span class='words_sep'>
-    </span><span class='tstring_content'>div</span><span class='words_sep'> </span><span class='tstring_content'>mod</span><span class='words_sep'> </span><span class='tstring_content'>idiv</span><span class='words_sep'>
-    </span><span class='tstring_content'>intersect</span><span class='words_sep'> </span><span class='tstring_content'>except</span><span class='words_sep'> </span><span class='tstring_content'>union</span><span class='words_sep'>
-    </span><span class='tstring_content'>to</span><span class='words_sep'>
-  </span><span class='tstring_end'>)</span></span>
+</span><span class='words_sep'>    </span><span class='tstring_content'>and</span><span class='words_sep'> </span><span class='tstring_content'>or</span><span class='words_sep'> </span><span class='tstring_content'>eq</span><span class='words_sep'> </span><span class='tstring_content'>ge</span><span class='words_sep'> </span><span class='tstring_content'>gt</span><span class='words_sep'> </span><span class='tstring_content'>le</span><span class='words_sep'> </span><span class='tstring_content'>lt</span><span class='words_sep'> </span><span class='tstring_content'>ne</span><span class='words_sep'> </span><span class='tstring_content'>is</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>div</span><span class='words_sep'> </span><span class='tstring_content'>mod</span><span class='words_sep'> </span><span class='tstring_content'>idiv</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>intersect</span><span class='words_sep'> </span><span class='tstring_content'>except</span><span class='words_sep'> </span><span class='tstring_content'>union</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>to</span><span class='words_sep'>
+</span><span class='words_sep'>  </span><span class='tstring_end'>)</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1124,9 +1124,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Dec 31 12:26:19 2023 by
+  Generated on Fri Jun 14 14:16:43 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.2.2).
+  0.9.28 (ruby-3.3.0).
 </div>
 
     </div>

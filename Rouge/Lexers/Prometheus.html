@@ -6,7 +6,7 @@
 <title>
   Class: Rouge::Lexers::Prometheus
   
-    &mdash; Documentation by YARD 0.9.34
+    &mdash; Documentation by YARD 0.9.28
   
 </title>
 
@@ -237,14 +237,14 @@
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_functions'>functions</span>
   <span class='ivar'>@functions</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
-    </span><span class='tstring_content'>abs</span><span class='words_sep'> </span><span class='tstring_content'>absent</span><span class='words_sep'> </span><span class='tstring_content'>ceil</span><span class='words_sep'> </span><span class='tstring_content'>changes</span><span class='words_sep'> </span><span class='tstring_content'>clamp_max</span><span class='words_sep'> </span><span class='tstring_content'>clamp_min</span><span class='words_sep'> </span><span class='tstring_content'>count_scalar</span><span class='words_sep'> </span><span class='tstring_content'>day_of_month</span><span class='words_sep'>
-    </span><span class='tstring_content'>day_of_week</span><span class='words_sep'> </span><span class='tstring_content'>days_in_month</span><span class='words_sep'> </span><span class='tstring_content'>delta</span><span class='words_sep'> </span><span class='tstring_content'>deriv</span><span class='words_sep'> </span><span class='tstring_content'>drop_common_labels</span><span class='words_sep'> </span><span class='tstring_content'>exp</span><span class='words_sep'> </span><span class='tstring_content'>floor</span><span class='words_sep'>
-    </span><span class='tstring_content'>histogram_quantile</span><span class='words_sep'> </span><span class='tstring_content'>holt_winters</span><span class='words_sep'> </span><span class='tstring_content'>hour</span><span class='words_sep'> </span><span class='tstring_content'>idelta</span><span class='words_sep'> </span><span class='tstring_content'>increase</span><span class='words_sep'> </span><span class='tstring_content'>irate</span><span class='words_sep'> </span><span class='tstring_content'>label_replace</span><span class='words_sep'>
-    </span><span class='tstring_content'>ln</span><span class='words_sep'> </span><span class='tstring_content'>log2</span><span class='words_sep'> </span><span class='tstring_content'>log10</span><span class='words_sep'> </span><span class='tstring_content'>month</span><span class='words_sep'> </span><span class='tstring_content'>predict_linear</span><span class='words_sep'> </span><span class='tstring_content'>rate</span><span class='words_sep'> </span><span class='tstring_content'>resets</span><span class='words_sep'> </span><span class='tstring_content'>round</span><span class='words_sep'> </span><span class='tstring_content'>scalar</span><span class='words_sep'> </span><span class='tstring_content'>sort</span><span class='words_sep'>
-    </span><span class='tstring_content'>sort_desc</span><span class='words_sep'> </span><span class='tstring_content'>sqrt</span><span class='words_sep'> </span><span class='tstring_content'>time</span><span class='words_sep'> </span><span class='tstring_content'>vector</span><span class='words_sep'> </span><span class='tstring_content'>year</span><span class='words_sep'> </span><span class='tstring_content'>avg_over_time</span><span class='words_sep'> </span><span class='tstring_content'>min_over_time</span><span class='words_sep'>
-    </span><span class='tstring_content'>max_over_time</span><span class='words_sep'> </span><span class='tstring_content'>sum_over_time</span><span class='words_sep'> </span><span class='tstring_content'>count_over_time</span><span class='words_sep'> </span><span class='tstring_content'>quantile_over_time</span><span class='words_sep'>
-    </span><span class='tstring_content'>stddev_over_time</span><span class='words_sep'> </span><span class='tstring_content'>stdvar_over_time</span><span class='words_sep'>
-  </span><span class='tstring_end'>)</span></span>
+</span><span class='words_sep'>    </span><span class='tstring_content'>abs</span><span class='words_sep'> </span><span class='tstring_content'>absent</span><span class='words_sep'> </span><span class='tstring_content'>ceil</span><span class='words_sep'> </span><span class='tstring_content'>changes</span><span class='words_sep'> </span><span class='tstring_content'>clamp_max</span><span class='words_sep'> </span><span class='tstring_content'>clamp_min</span><span class='words_sep'> </span><span class='tstring_content'>count_scalar</span><span class='words_sep'> </span><span class='tstring_content'>day_of_month</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>day_of_week</span><span class='words_sep'> </span><span class='tstring_content'>days_in_month</span><span class='words_sep'> </span><span class='tstring_content'>delta</span><span class='words_sep'> </span><span class='tstring_content'>deriv</span><span class='words_sep'> </span><span class='tstring_content'>drop_common_labels</span><span class='words_sep'> </span><span class='tstring_content'>exp</span><span class='words_sep'> </span><span class='tstring_content'>floor</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>histogram_quantile</span><span class='words_sep'> </span><span class='tstring_content'>holt_winters</span><span class='words_sep'> </span><span class='tstring_content'>hour</span><span class='words_sep'> </span><span class='tstring_content'>idelta</span><span class='words_sep'> </span><span class='tstring_content'>increase</span><span class='words_sep'> </span><span class='tstring_content'>irate</span><span class='words_sep'> </span><span class='tstring_content'>label_replace</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>ln</span><span class='words_sep'> </span><span class='tstring_content'>log2</span><span class='words_sep'> </span><span class='tstring_content'>log10</span><span class='words_sep'> </span><span class='tstring_content'>month</span><span class='words_sep'> </span><span class='tstring_content'>predict_linear</span><span class='words_sep'> </span><span class='tstring_content'>rate</span><span class='words_sep'> </span><span class='tstring_content'>resets</span><span class='words_sep'> </span><span class='tstring_content'>round</span><span class='words_sep'> </span><span class='tstring_content'>scalar</span><span class='words_sep'> </span><span class='tstring_content'>sort</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>sort_desc</span><span class='words_sep'> </span><span class='tstring_content'>sqrt</span><span class='words_sep'> </span><span class='tstring_content'>time</span><span class='words_sep'> </span><span class='tstring_content'>vector</span><span class='words_sep'> </span><span class='tstring_content'>year</span><span class='words_sep'> </span><span class='tstring_content'>avg_over_time</span><span class='words_sep'> </span><span class='tstring_content'>min_over_time</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>max_over_time</span><span class='words_sep'> </span><span class='tstring_content'>sum_over_time</span><span class='words_sep'> </span><span class='tstring_content'>count_over_time</span><span class='words_sep'> </span><span class='tstring_content'>quantile_over_time</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>stddev_over_time</span><span class='words_sep'> </span><span class='tstring_content'>stdvar_over_time</span><span class='words_sep'>
+</span><span class='words_sep'>  </span><span class='tstring_end'>)</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -256,9 +256,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Dec 31 12:26:22 2023 by
+  Generated on Fri Jun 14 14:16:45 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.2.2).
+  0.9.28 (ruby-3.3.0).
 </div>
 
     </div>
