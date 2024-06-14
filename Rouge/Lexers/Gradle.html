@@ -6,7 +6,7 @@
 <title>
   Class: Rouge::Lexers::Gradle
   
-    &mdash; Documentation by YARD 0.9.34
+    &mdash; Documentation by YARD 0.9.28
   
 </title>
 
@@ -267,9 +267,9 @@
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>
   <span class='ivar'>@keywords</span> <span class='op'>||=</span> <span class='kw'>super</span> <span class='op'>+</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='qwords_beg'>%w(</span><span class='words_sep'>
-    </span><span class='tstring_content'>allprojects</span><span class='words_sep'> </span><span class='tstring_content'>artifacts</span><span class='words_sep'> </span><span class='tstring_content'>buildscript</span><span class='words_sep'> </span><span class='tstring_content'>configuration</span><span class='words_sep'> </span><span class='tstring_content'>dependencies</span><span class='words_sep'>
-    </span><span class='tstring_content'>repositories</span><span class='words_sep'> </span><span class='tstring_content'>sourceSets</span><span class='words_sep'> </span><span class='tstring_content'>subprojects</span><span class='words_sep'> </span><span class='tstring_content'>publishing</span><span class='words_sep'>
-  </span><span class='tstring_end'>)</span></span><span class='rparen'>)</span>
+</span><span class='words_sep'>    </span><span class='tstring_content'>allprojects</span><span class='words_sep'> </span><span class='tstring_content'>artifacts</span><span class='words_sep'> </span><span class='tstring_content'>buildscript</span><span class='words_sep'> </span><span class='tstring_content'>configuration</span><span class='words_sep'> </span><span class='tstring_content'>dependencies</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>repositories</span><span class='words_sep'> </span><span class='tstring_content'>sourceSets</span><span class='words_sep'> </span><span class='tstring_content'>subprojects</span><span class='words_sep'> </span><span class='tstring_content'>publishing</span><span class='words_sep'>
+</span><span class='words_sep'>  </span><span class='tstring_end'>)</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -310,16 +310,16 @@
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_types'>types</span>
   <span class='ivar'>@types</span> <span class='op'>||=</span> <span class='kw'>super</span> <span class='op'>+</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='qwords_beg'>%w(</span><span class='words_sep'>
-    </span><span class='tstring_content'>Project</span><span class='words_sep'> </span><span class='tstring_content'>Task</span><span class='words_sep'> </span><span class='tstring_content'>Gradle</span><span class='words_sep'> </span><span class='tstring_content'>Settings</span><span class='words_sep'> </span><span class='tstring_content'>Script</span><span class='words_sep'> </span><span class='tstring_content'>JavaToolChain</span><span class='words_sep'> </span><span class='tstring_content'>SourceSet</span><span class='words_sep'>
-    </span><span class='tstring_content'>SourceSetOutput</span><span class='words_sep'> </span><span class='tstring_content'>IncrementalTaskInputs</span><span class='words_sep'> </span><span class='tstring_content'>Configuration</span><span class='words_sep'>
-    </span><span class='tstring_content'>ResolutionStrategy</span><span class='words_sep'> </span><span class='tstring_content'>ArtifactResolutionQuery</span><span class='words_sep'> </span><span class='tstring_content'>ComponentSelection</span><span class='words_sep'>
-    </span><span class='tstring_content'>ComponentSelectionRules</span><span class='words_sep'> </span><span class='tstring_content'>ConventionProperty</span><span class='words_sep'> </span><span class='tstring_content'>ExtensionAware</span><span class='words_sep'>
-    </span><span class='tstring_content'>ExtraPropertiesExtension</span><span class='words_sep'> </span><span class='tstring_content'>PublishingExtension</span><span class='words_sep'> </span><span class='tstring_content'>IvyPublication</span><span class='words_sep'>
-    </span><span class='tstring_content'>IvyArtifact</span><span class='words_sep'> </span><span class='tstring_content'>IvyArtifactSet</span><span class='words_sep'> </span><span class='tstring_content'>IvyModuleDescriptorSpec</span><span class='words_sep'>
-    </span><span class='tstring_content'>MavenPublication</span><span class='words_sep'> </span><span class='tstring_content'>MavenArtifact</span><span class='words_sep'> </span><span class='tstring_content'>MavenArtifactSet</span><span class='words_sep'> </span><span class='tstring_content'>MavenPom</span><span class='words_sep'>
-    </span><span class='tstring_content'>PluginDependenciesSpec</span><span class='words_sep'> </span><span class='tstring_content'>PluginDependencySpec</span><span class='words_sep'> </span><span class='tstring_content'>ResourceHandler</span><span class='words_sep'>
-    </span><span class='tstring_content'>TextResourceFactory</span><span class='words_sep'>
-  </span><span class='tstring_end'>)</span></span><span class='rparen'>)</span>
+</span><span class='words_sep'>    </span><span class='tstring_content'>Project</span><span class='words_sep'> </span><span class='tstring_content'>Task</span><span class='words_sep'> </span><span class='tstring_content'>Gradle</span><span class='words_sep'> </span><span class='tstring_content'>Settings</span><span class='words_sep'> </span><span class='tstring_content'>Script</span><span class='words_sep'> </span><span class='tstring_content'>JavaToolChain</span><span class='words_sep'> </span><span class='tstring_content'>SourceSet</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>SourceSetOutput</span><span class='words_sep'> </span><span class='tstring_content'>IncrementalTaskInputs</span><span class='words_sep'> </span><span class='tstring_content'>Configuration</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>ResolutionStrategy</span><span class='words_sep'> </span><span class='tstring_content'>ArtifactResolutionQuery</span><span class='words_sep'> </span><span class='tstring_content'>ComponentSelection</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>ComponentSelectionRules</span><span class='words_sep'> </span><span class='tstring_content'>ConventionProperty</span><span class='words_sep'> </span><span class='tstring_content'>ExtensionAware</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>ExtraPropertiesExtension</span><span class='words_sep'> </span><span class='tstring_content'>PublishingExtension</span><span class='words_sep'> </span><span class='tstring_content'>IvyPublication</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>IvyArtifact</span><span class='words_sep'> </span><span class='tstring_content'>IvyArtifactSet</span><span class='words_sep'> </span><span class='tstring_content'>IvyModuleDescriptorSpec</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>MavenPublication</span><span class='words_sep'> </span><span class='tstring_content'>MavenArtifact</span><span class='words_sep'> </span><span class='tstring_content'>MavenArtifactSet</span><span class='words_sep'> </span><span class='tstring_content'>MavenPom</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>PluginDependenciesSpec</span><span class='words_sep'> </span><span class='tstring_content'>PluginDependencySpec</span><span class='words_sep'> </span><span class='tstring_content'>ResourceHandler</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>TextResourceFactory</span><span class='words_sep'>
+</span><span class='words_sep'>  </span><span class='tstring_end'>)</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -331,9 +331,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Dec 31 12:26:19 2023 by
+  Generated on Fri Jun 14 14:16:43 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.2.2).
+  0.9.28 (ruby-3.3.0).
 </div>
 
     </div>

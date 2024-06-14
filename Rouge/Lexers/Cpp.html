@@ -6,7 +6,7 @@
 <title>
   Class: Rouge::Lexers::Cpp
   
-    &mdash; Documentation by YARD 0.9.34
+    &mdash; Documentation by YARD 0.9.28
   
 </title>
 
@@ -300,16 +300,16 @@
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>
   <span class='ivar'>@keywords</span> <span class='op'>||=</span> <span class='kw'>super</span> <span class='op'>+</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='qwords_beg'>%w(</span><span class='words_sep'>
-    </span><span class='tstring_content'>asm</span><span class='words_sep'> </span><span class='tstring_content'>auto</span><span class='words_sep'> </span><span class='tstring_content'>catch</span><span class='words_sep'> </span><span class='tstring_content'>char8_t</span><span class='words_sep'> </span><span class='tstring_content'>concept</span><span class='words_sep'>
-    </span><span class='tstring_content'>consteval</span><span class='words_sep'> </span><span class='tstring_content'>constexpr</span><span class='words_sep'> </span><span class='tstring_content'>constinit</span><span class='words_sep'> </span><span class='tstring_content'>const_cast</span><span class='words_sep'> </span><span class='tstring_content'>co_await</span><span class='words_sep'> </span><span class='tstring_content'>co_return</span><span class='words_sep'> </span><span class='tstring_content'>co_yield</span><span class='words_sep'>
-    </span><span class='tstring_content'>delete</span><span class='words_sep'> </span><span class='tstring_content'>dynamic_cast</span><span class='words_sep'> </span><span class='tstring_content'>explicit</span><span class='words_sep'> </span><span class='tstring_content'>export</span><span class='words_sep'> </span><span class='tstring_content'>friend</span><span class='words_sep'>
-    </span><span class='tstring_content'>mutable</span><span class='words_sep'> </span><span class='tstring_content'>namespace</span><span class='words_sep'> </span><span class='tstring_content'>new</span><span class='words_sep'> </span><span class='tstring_content'>operator</span><span class='words_sep'> </span><span class='tstring_content'>private</span><span class='words_sep'> </span><span class='tstring_content'>protected</span><span class='words_sep'> </span><span class='tstring_content'>public</span><span class='words_sep'>
-    </span><span class='tstring_content'>reinterpret_cast</span><span class='words_sep'> </span><span class='tstring_content'>requires</span><span class='words_sep'> </span><span class='tstring_content'>restrict</span><span class='words_sep'> </span><span class='tstring_content'>size_of</span><span class='words_sep'> </span><span class='tstring_content'>static_cast</span><span class='words_sep'> </span><span class='tstring_content'>this</span><span class='words_sep'> </span><span class='tstring_content'>throw</span><span class='words_sep'> </span><span class='tstring_content'>throws</span><span class='words_sep'>
-    </span><span class='tstring_content'>typeid</span><span class='words_sep'> </span><span class='tstring_content'>typename</span><span class='words_sep'> </span><span class='tstring_content'>using</span><span class='words_sep'> </span><span class='tstring_content'>virtual</span><span class='words_sep'> </span><span class='tstring_content'>final</span><span class='words_sep'> </span><span class='tstring_content'>override</span><span class='words_sep'>
-
-    </span><span class='tstring_content'>alignas</span><span class='words_sep'> </span><span class='tstring_content'>alignof</span><span class='words_sep'> </span><span class='tstring_content'>decltype</span><span class='words_sep'> </span><span class='tstring_content'>noexcept</span><span class='words_sep'> </span><span class='tstring_content'>static_assert</span><span class='words_sep'>
-    </span><span class='tstring_content'>thread_local</span><span class='words_sep'> </span><span class='tstring_content'>try</span><span class='words_sep'>
-  </span><span class='tstring_end'>)</span></span><span class='rparen'>)</span>
+</span><span class='words_sep'>    </span><span class='tstring_content'>asm</span><span class='words_sep'> </span><span class='tstring_content'>auto</span><span class='words_sep'> </span><span class='tstring_content'>catch</span><span class='words_sep'> </span><span class='tstring_content'>char8_t</span><span class='words_sep'> </span><span class='tstring_content'>concept</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>consteval</span><span class='words_sep'> </span><span class='tstring_content'>constexpr</span><span class='words_sep'> </span><span class='tstring_content'>constinit</span><span class='words_sep'> </span><span class='tstring_content'>const_cast</span><span class='words_sep'> </span><span class='tstring_content'>co_await</span><span class='words_sep'> </span><span class='tstring_content'>co_return</span><span class='words_sep'> </span><span class='tstring_content'>co_yield</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>delete</span><span class='words_sep'> </span><span class='tstring_content'>dynamic_cast</span><span class='words_sep'> </span><span class='tstring_content'>explicit</span><span class='words_sep'> </span><span class='tstring_content'>export</span><span class='words_sep'> </span><span class='tstring_content'>friend</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>mutable</span><span class='words_sep'> </span><span class='tstring_content'>namespace</span><span class='words_sep'> </span><span class='tstring_content'>new</span><span class='words_sep'> </span><span class='tstring_content'>operator</span><span class='words_sep'> </span><span class='tstring_content'>private</span><span class='words_sep'> </span><span class='tstring_content'>protected</span><span class='words_sep'> </span><span class='tstring_content'>public</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>reinterpret_cast</span><span class='words_sep'> </span><span class='tstring_content'>requires</span><span class='words_sep'> </span><span class='tstring_content'>restrict</span><span class='words_sep'> </span><span class='tstring_content'>size_of</span><span class='words_sep'> </span><span class='tstring_content'>static_cast</span><span class='words_sep'> </span><span class='tstring_content'>this</span><span class='words_sep'> </span><span class='tstring_content'>throw</span><span class='words_sep'> </span><span class='tstring_content'>throws</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>typeid</span><span class='words_sep'> </span><span class='tstring_content'>typename</span><span class='words_sep'> </span><span class='tstring_content'>using</span><span class='words_sep'> </span><span class='tstring_content'>virtual</span><span class='words_sep'> </span><span class='tstring_content'>final</span><span class='words_sep'> </span><span class='tstring_content'>override</span><span class='words_sep'> </span><span class='tstring_content'>import</span><span class='words_sep'> </span><span class='tstring_content'>module</span><span class='words_sep'>
+</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>alignas</span><span class='words_sep'> </span><span class='tstring_content'>alignof</span><span class='words_sep'> </span><span class='tstring_content'>decltype</span><span class='words_sep'> </span><span class='tstring_content'>noexcept</span><span class='words_sep'> </span><span class='tstring_content'>static_assert</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>thread_local</span><span class='words_sep'> </span><span class='tstring_content'>try</span><span class='words_sep'>
+</span><span class='words_sep'>  </span><span class='tstring_end'>)</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -342,8 +342,8 @@
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords_type'>keywords_type</span>
   <span class='ivar'>@keywords_type</span> <span class='op'>||=</span> <span class='kw'>super</span> <span class='op'>+</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='qwords_beg'>%w(</span><span class='words_sep'>
-    </span><span class='tstring_content'>bool</span><span class='words_sep'>
-  </span><span class='tstring_end'>)</span></span><span class='rparen'>)</span>
+</span><span class='words_sep'>    </span><span class='tstring_content'>bool</span><span class='words_sep'>
+</span><span class='words_sep'>  </span><span class='tstring_end'>)</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -377,9 +377,9 @@
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_reserved'>reserved</span>
   <span class='ivar'>@reserved</span> <span class='op'>||=</span> <span class='kw'>super</span> <span class='op'>+</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='qwords_beg'>%w(</span><span class='words_sep'>
-    </span><span class='tstring_content'>__virtual_inheritance</span><span class='words_sep'> </span><span class='tstring_content'>__uuidof</span><span class='words_sep'> </span><span class='tstring_content'>__super</span><span class='words_sep'> </span><span class='tstring_content'>__single_inheritance</span><span class='words_sep'>
-    </span><span class='tstring_content'>__multiple_inheritance</span><span class='words_sep'> </span><span class='tstring_content'>__interface</span><span class='words_sep'> </span><span class='tstring_content'>__event</span><span class='words_sep'>
-  </span><span class='tstring_end'>)</span></span><span class='rparen'>)</span>
+</span><span class='words_sep'>    </span><span class='tstring_content'>__virtual_inheritance</span><span class='words_sep'> </span><span class='tstring_content'>__uuidof</span><span class='words_sep'> </span><span class='tstring_content'>__super</span><span class='words_sep'> </span><span class='tstring_content'>__single_inheritance</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>__multiple_inheritance</span><span class='words_sep'> </span><span class='tstring_content'>__interface</span><span class='words_sep'> </span><span class='tstring_content'>__event</span><span class='words_sep'>
+</span><span class='words_sep'>  </span><span class='tstring_end'>)</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -391,9 +391,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Dec 31 12:26:15 2023 by
+  Generated on Fri Jun 14 14:16:40 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.2.2).
+  0.9.28 (ruby-3.3.0).
 </div>
 
     </div>

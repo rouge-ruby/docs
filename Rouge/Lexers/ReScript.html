@@ -6,7 +6,7 @@
 <title>
   Class: Rouge::Lexers::ReScript
   
-    &mdash; Documentation by YARD 0.9.34
+    &mdash; Documentation by YARD 0.9.28
   
 </title>
 
@@ -290,10 +290,10 @@
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>
   <span class='ivar'>@keywords</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='qwords_beg'>%w(</span><span class='words_sep'>
-    </span><span class='tstring_content'>open</span><span class='words_sep'> </span><span class='tstring_content'>let</span><span class='words_sep'> </span><span class='tstring_content'>rec</span><span class='words_sep'> </span><span class='tstring_content'>and</span><span class='words_sep'> </span><span class='tstring_content'>as</span><span class='words_sep'> </span><span class='tstring_content'>exception</span><span class='words_sep'> </span><span class='tstring_content'>assert</span><span class='words_sep'> </span><span class='tstring_content'>lazy</span><span class='words_sep'> </span><span class='tstring_content'>if</span><span class='words_sep'> </span><span class='tstring_content'>else</span><span class='words_sep'>
-    </span><span class='tstring_content'>for</span><span class='words_sep'> </span><span class='tstring_content'>in</span><span class='words_sep'> </span><span class='tstring_content'>to</span><span class='words_sep'> </span><span class='tstring_content'>downto</span><span class='words_sep'> </span><span class='tstring_content'>while</span><span class='words_sep'> </span><span class='tstring_content'>switch</span><span class='words_sep'> </span><span class='tstring_content'>when</span><span class='words_sep'> </span><span class='tstring_content'>external</span><span class='words_sep'> </span><span class='tstring_content'>type</span><span class='words_sep'> </span><span class='tstring_content'>private</span><span class='words_sep'>
-    </span><span class='tstring_content'>mutable</span><span class='words_sep'> </span><span class='tstring_content'>constraint</span><span class='words_sep'> </span><span class='tstring_content'>include</span><span class='words_sep'> </span><span class='tstring_content'>module</span><span class='words_sep'> </span><span class='tstring_content'>of</span><span class='words_sep'> </span><span class='tstring_content'>with</span><span class='words_sep'> </span><span class='tstring_content'>try</span><span class='words_sep'> </span><span class='tstring_content'>import</span><span class='words_sep'> </span><span class='tstring_content'>export</span><span class='words_sep'>
-  </span><span class='tstring_end'>)</span></span><span class='rparen'>)</span>
+</span><span class='words_sep'>    </span><span class='tstring_content'>open</span><span class='words_sep'> </span><span class='tstring_content'>let</span><span class='words_sep'> </span><span class='tstring_content'>rec</span><span class='words_sep'> </span><span class='tstring_content'>and</span><span class='words_sep'> </span><span class='tstring_content'>as</span><span class='words_sep'> </span><span class='tstring_content'>exception</span><span class='words_sep'> </span><span class='tstring_content'>assert</span><span class='words_sep'> </span><span class='tstring_content'>lazy</span><span class='words_sep'> </span><span class='tstring_content'>if</span><span class='words_sep'> </span><span class='tstring_content'>else</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>for</span><span class='words_sep'> </span><span class='tstring_content'>in</span><span class='words_sep'> </span><span class='tstring_content'>to</span><span class='words_sep'> </span><span class='tstring_content'>downto</span><span class='words_sep'> </span><span class='tstring_content'>while</span><span class='words_sep'> </span><span class='tstring_content'>switch</span><span class='words_sep'> </span><span class='tstring_content'>when</span><span class='words_sep'> </span><span class='tstring_content'>external</span><span class='words_sep'> </span><span class='tstring_content'>type</span><span class='words_sep'> </span><span class='tstring_content'>private</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>mutable</span><span class='words_sep'> </span><span class='tstring_content'>constraint</span><span class='words_sep'> </span><span class='tstring_content'>include</span><span class='words_sep'> </span><span class='tstring_content'>module</span><span class='words_sep'> </span><span class='tstring_content'>of</span><span class='words_sep'> </span><span class='tstring_content'>with</span><span class='words_sep'> </span><span class='tstring_content'>try</span><span class='words_sep'> </span><span class='tstring_content'>import</span><span class='words_sep'> </span><span class='tstring_content'>export</span><span class='words_sep'>
+</span><span class='words_sep'>  </span><span class='tstring_end'>)</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -327,9 +327,9 @@
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_types'>types</span>
   <span class='ivar'>@types</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='qwords_beg'>%w(</span><span class='words_sep'>
-    </span><span class='tstring_content'>bool</span><span class='words_sep'> </span><span class='tstring_content'>int</span><span class='words_sep'> </span><span class='tstring_content'>float</span><span class='words_sep'> </span><span class='tstring_content'>char</span><span class='words_sep'> </span><span class='tstring_content'>string</span><span class='words_sep'>
-    </span><span class='tstring_content'>unit</span><span class='words_sep'> </span><span class='tstring_content'>list</span><span class='words_sep'> </span><span class='tstring_content'>array</span><span class='words_sep'> </span><span class='tstring_content'>option</span><span class='words_sep'> </span><span class='tstring_content'>ref</span><span class='words_sep'> </span><span class='tstring_content'>exn</span><span class='words_sep'> </span><span class='tstring_content'>format</span><span class='words_sep'>
-  </span><span class='tstring_end'>)</span></span><span class='rparen'>)</span>
+</span><span class='words_sep'>    </span><span class='tstring_content'>bool</span><span class='words_sep'> </span><span class='tstring_content'>int</span><span class='words_sep'> </span><span class='tstring_content'>float</span><span class='words_sep'> </span><span class='tstring_content'>char</span><span class='words_sep'> </span><span class='tstring_content'>string</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>unit</span><span class='words_sep'> </span><span class='tstring_content'>list</span><span class='words_sep'> </span><span class='tstring_content'>array</span><span class='words_sep'> </span><span class='tstring_content'>option</span><span class='words_sep'> </span><span class='tstring_content'>ref</span><span class='words_sep'> </span><span class='tstring_content'>exn</span><span class='words_sep'> </span><span class='tstring_content'>format</span><span class='words_sep'>
+</span><span class='words_sep'>  </span><span class='tstring_end'>)</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -371,9 +371,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Dec 31 12:26:21 2023 by
+  Generated on Fri Jun 14 14:16:44 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.2.2).
+  0.9.28 (ruby-3.3.0).
 </div>
 
     </div>
