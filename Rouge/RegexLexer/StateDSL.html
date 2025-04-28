@@ -559,12 +559,12 @@
       <pre class="lines">
 
 
-188
-189
-190</pre>
+201
+202
+203</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 188</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 201</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_close!'>close!</span>
   <span class='ivar'>@closed</span> <span class='op'>=</span> <span class='kw'>true</span>
@@ -611,18 +611,18 @@
       <pre class="lines">
 
 
-178
-179
-180
-181
-182
-183
-184
-185
-186</pre>
+191
+192
+193
+194
+195
+196
+197
+198
+199</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 178</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 191</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_context_sensitive?'>context_sensitive?</span><span class='lparen'>(</span><span class='id identifier rubyid_re'>re</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_source'>source</span> <span class='op'>=</span> <span class='id identifier rubyid_re'>re</span><span class='period'>.</span><span class='id identifier rubyid_source'>source</span>
@@ -665,12 +665,12 @@ to the rest of the rules in this state.</p>
       <pre class="lines">
 
 
-195
-196
-197</pre>
+208
+209
+210</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 195</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 208</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mixin'>mixin</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_rules'>rules</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_state'>state</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
@@ -881,7 +881,20 @@ argument can be used to access the match groups.</p>
 173
 174
 175
-176</pre>
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/rouge/regex_lexer.rb', line 129</span>
@@ -925,6 +938,19 @@ argument can be used to access the match groups.</p>
     <span class='id identifier rubyid_proc'>proc</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_stream'>stream</span><span class='op'>|</span>
       <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    yielding: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tok'>tok</span><span class='period'>.</span><span class='id identifier rubyid_qualname'>qualname</span><span class='embexpr_end'>}</span><span class='tstring_content'>, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_stream'>stream</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@debug</span>
       <span class='ivar'>@output_stream</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_stream'>stream</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>when</span> <span class='const'>Array</span>
+    <span class='id identifier rubyid_proc'>proc</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_stream'>stream</span><span class='op'>|</span>
+      <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    yielding: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tok'>tok</span><span class='period'>.</span><span class='id identifier rubyid_qualname'>qualname</span><span class='embexpr_end'>}</span><span class='tstring_content'>, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_stream'>stream</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@debug</span>
+      <span class='ivar'>@output_stream</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_tok'>tok</span><span class='comma'>,</span> <span class='id identifier rubyid_stream'>stream</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='kw'>for</span> <span class='id identifier rubyid_i_next_state'>i_next_state</span> <span class='kw'>in</span> <span class='id identifier rubyid_next_state'>next_state</span> <span class='kw'>do</span>
+        <span class='kw'>next</span> <span class='ivar'>@stack</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span> <span class='kw'>if</span> <span class='id identifier rubyid_i_next_state'>i_next_state</span> <span class='op'>==</span> <span class='symbol'>:pop!</span>
+        <span class='kw'>next</span> <span class='ivar'>@stack</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='ivar'>@stack</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_i_next_state'>i_next_state</span> <span class='op'>==</span> <span class='symbol'>:push</span>
+
+        <span class='id identifier rubyid_state'>state</span> <span class='op'>=</span> <span class='ivar'>@states</span><span class='lbracket'>[</span><span class='id identifier rubyid_i_next_state'>i_next_state</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_get_state'>get_state</span><span class='lparen'>(</span><span class='id identifier rubyid_i_next_state'>i_next_state</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    pushing :</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_state'>state</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@debug</span>
+        <span class='ivar'>@stack</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
     <span class='kw'>end</span>
   <span class='kw'>else</span>
     <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>invalid next state: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_next_state'>next_state</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -982,7 +1008,7 @@ argument can be used to access the match groups.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Sep 20 21:00:17 2024 by
+  Generated on Tue Apr 29 00:06:17 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.3.0).
 </div>
