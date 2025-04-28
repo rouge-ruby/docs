@@ -116,7 +116,7 @@ fork. Select your account and—boom!—you&#39;ve just forked Rouge.</p>
 <p>The next thing to do is to get your fork onto your computer. Git makes this
 easy. In the directory you want to hold your repository, type:</p>
 
-<pre class="code shell"><code class="shell">git clone git@github.com:&lt;your_github_account_name&gt;/rouge.git
+<pre class="code bash"><code class="bash">git clone git@github.com:&lt;your_github_account_name&gt;/rouge.git
 </code></pre>
 
 <p>Git will reach out to GitHub, grab the code and put it in a directory called
@@ -132,7 +132,7 @@ of time developing Rouge, this is something you&#39;ll want to do.</p>
 <p>Fortunately, it&#39;s easy to add additional remote repositories. To add the
 official Rouge repository (with the name <code>upstream</code>), type the following:</p>
 
-<pre class="code shell"><code class="shell">git remote add upstream https://github.com/rouge-ruby/rouge.git
+<pre class="code bash"><code class="bash">git remote add upstream https://github.com/rouge-ruby/rouge.git
 </code></pre>
 
 <p>Now you&#39;ll be able to fetch changes from the official repository and merge them
@@ -156,7 +156,7 @@ install the other dependencies.</p>
 check if you do by typing <code>bundle -v</code> at the command line. If you don&#39;t see the
 version number then you need to install Bundler. To do this, type:</p>
 
-<pre class="code shell"><code class="shell">gem install bundler
+<pre class="code bash"><code class="bash">gem install bundler
 </code></pre>
 
 <p>Ruby&#39;s <code>gem</code> tool will grab the latest Bundler package and install it. Once
@@ -167,7 +167,7 @@ that&#39;s complete, you&#39;re ready to rock.</p>
 <p>Rouge comes with a list of gems it depends upon called a <em>Gemfile</em>. Make sure
 you&#39;re at the top level of your clone of your repository and type:</p>
 
-<pre class="code shell"><code class="shell">bundle config set path &#39;vendor&#39;
+<pre class="code bash"><code class="bash">bundle config set path &#39;vendor&#39;
 bundle install
 </code></pre>
 
@@ -187,7 +187,7 @@ type <code>bundle exec rake</code> rather than just <code>rake</code>.</p>
 
 <p>It&#39;s best to develop in a <em>branch</em>. You can create a branch by typing:</p>
 
-<pre class="code shell"><code class="shell">git checkout -b &lt;name_of_your_branch&gt;
+<pre class="code bash"><code class="bash">git checkout -b &lt;name_of_your_branch&gt;
 </code></pre>
 
 <p>You don&#39;t need to do it this way but Rouge maintainers often use the format
@@ -223,7 +223,7 @@ checking code quality. You can run RuboCop by—you guessed it—typing
 </div></div>
 
       <div id="footer">
-  Generated on Fri Sep 20 21:00:09 2024 by
+  Generated on Tue Apr 29 00:06:14 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.3.0).
 </div>

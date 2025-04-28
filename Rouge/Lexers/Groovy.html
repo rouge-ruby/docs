@@ -312,12 +312,12 @@
       <pre class="lines">
 
 
-38
-39
-40</pre>
+40
+41
+42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/groovy.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/groovy.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_constants'>constants</span>
   <span class='ivar'>@constants</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>true</span><span class='words_sep'> </span><span class='tstring_content'>false</span><span class='words_sep'> </span><span class='tstring_content'>null</span><span class='tstring_end'>)</span></span>
@@ -342,16 +342,16 @@
       <pre class="lines">
 
 
-24
-25
 26
 27
 28
 29
-30</pre>
+30
+31
+32</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/groovy.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/groovy.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_declarations'>declarations</span>
   <span class='ivar'>@declarations</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
@@ -402,15 +402,17 @@
       <pre class="lines">
 
 
-13
 14
-15</pre>
+15
+16
+17</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/groovy.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/groovy.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_detect?'>detect?</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_text'>text</span><span class='period'>.</span><span class='id identifier rubyid_shebang?'>shebang?</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>groovy</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_text'>text</span><span class='period'>.</span><span class='id identifier rubyid_shebang?'>shebang?</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>nextflow</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -432,15 +434,15 @@
       <pre class="lines">
 
 
-17
-18
 19
 20
 21
-22</pre>
+22
+23
+24</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/groovy.rb', line 17</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/groovy.rb', line 19</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span>
   <span class='ivar'>@keywords</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
@@ -468,14 +470,14 @@
       <pre class="lines">
 
 
-32
-33
 34
 35
-36</pre>
+36
+37
+38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/groovy.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/groovy.rb', line 34</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_types'>types</span>
   <span class='ivar'>@types</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
@@ -492,7 +494,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Sep 20 21:00:20 2024 by
+  Generated on Tue Apr 29 00:06:18 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.3.0).
 </div>

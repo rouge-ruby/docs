@@ -138,28 +138,6 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#attributes-class_method" title="attributes (class method)">.<strong>attributes</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#builtins-class_method" title="builtins (class method)">.<strong>builtins</strong>  &#x21d2; Object </a>
     
 
@@ -182,7 +160,51 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#constants-class_method" title="constants (class method)">.<strong>constants</strong>  &#x21d2; Object </a>
+      <a href="#colors-class_method" title="colors (class method)">.<strong>colors</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#functions-class_method" title="functions (class method)">.<strong>functions</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#properties-class_method" title="properties (class method)">.<strong>properties</strong>  &#x21d2; Object </a>
     
 
     
@@ -273,9 +295,259 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="attributes-class_method">
+  <h3 class="signature first" id="builtins-class_method">
   
-    .<strong>attributes</strong>  &#x21d2; <tt>Object</tt> 
+    .<strong>builtins</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/css.rb', line 124</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_builtins'>builtins</span>
+  <span class='ivar'>@builtins</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>above</span><span class='words_sep'> </span><span class='tstring_content'>absolute</span><span class='words_sep'> </span><span class='tstring_content'>accumulate</span><span class='words_sep'> </span><span class='tstring_content'>add</span><span class='words_sep'> </span><span class='tstring_content'>additive</span><span class='words_sep'> </span><span class='tstring_content'>all</span><span class='words_sep'> </span><span class='tstring_content'>alpha</span><span class='words_sep'> </span><span class='tstring_content'>alphabetic</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>alternate</span><span class='words_sep'> </span><span class='tstring_content'>alternate-reverse</span><span class='words_sep'> </span><span class='tstring_content'>always</span><span class='words_sep'> </span><span class='tstring_content'>armenian</span><span class='words_sep'> </span><span class='tstring_content'>aural</span><span class='words_sep'> </span><span class='tstring_content'>auto</span><span class='words_sep'> </span><span class='tstring_content'>auto-fill</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>auto-fit</span><span class='words_sep'> </span><span class='tstring_content'>avoid</span><span class='words_sep'> </span><span class='tstring_content'>backwards</span><span class='words_sep'> </span><span class='tstring_content'>balance</span><span class='words_sep'> </span><span class='tstring_content'>baseline</span><span class='words_sep'> </span><span class='tstring_content'>behind</span><span class='words_sep'> </span><span class='tstring_content'>below</span><span class='words_sep'> </span><span class='tstring_content'>bidi-override</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>blink</span><span class='words_sep'> </span><span class='tstring_content'>block</span><span class='words_sep'> </span><span class='tstring_content'>bold</span><span class='words_sep'> </span><span class='tstring_content'>bolder</span><span class='words_sep'> </span><span class='tstring_content'>border-box</span><span class='words_sep'> </span><span class='tstring_content'>both</span><span class='words_sep'> </span><span class='tstring_content'>bottom</span><span class='words_sep'> </span><span class='tstring_content'>bottom</span><span class='words_sep'> </span><span class='tstring_content'>break-spaces</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>capitalize</span><span class='words_sep'> </span><span class='tstring_content'>center</span><span class='words_sep'> </span><span class='tstring_content'>center-left</span><span class='words_sep'> </span><span class='tstring_content'>center-right</span><span class='words_sep'> </span><span class='tstring_content'>circle</span><span class='words_sep'> </span><span class='tstring_content'>cjk-ideographic</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>close-quote</span><span class='words_sep'> </span><span class='tstring_content'>closest-corner</span><span class='words_sep'> </span><span class='tstring_content'>closest-side</span><span class='words_sep'> </span><span class='tstring_content'>collapse</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>color</span><span class='words_sep'> </span><span class='tstring_content'>color-burn</span><span class='words_sep'> </span><span class='tstring_content'>color-dodge</span><span class='words_sep'> </span><span class='tstring_content'>column</span><span class='words_sep'> </span><span class='tstring_content'>column-reverse</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>condensed</span><span class='words_sep'> </span><span class='tstring_content'>contain</span><span class='words_sep'> </span><span class='tstring_content'>content</span><span class='words_sep'> </span><span class='tstring_content'>content-box</span><span class='words_sep'> </span><span class='tstring_content'>continuous</span><span class='words_sep'> </span><span class='tstring_content'>cover</span><span class='words_sep'> </span><span class='tstring_content'>crop</span><span class='words_sep'> </span><span class='tstring_content'>cross</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>crosshair</span><span class='words_sep'> </span><span class='tstring_content'>cursive</span><span class='words_sep'> </span><span class='tstring_content'>cyclic</span><span class='words_sep'> </span><span class='tstring_content'>darken</span><span class='words_sep'> </span><span class='tstring_content'>dashed</span><span class='words_sep'> </span><span class='tstring_content'>decimal</span><span class='words_sep'> </span><span class='tstring_content'>decimal-leading-zero</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>default</span><span class='words_sep'> </span><span class='tstring_content'>difference</span><span class='words_sep'> </span><span class='tstring_content'>digits</span><span class='words_sep'> </span><span class='tstring_content'>disc</span><span class='words_sep'> </span><span class='tstring_content'>dotted</span><span class='words_sep'> </span><span class='tstring_content'>double</span><span class='words_sep'> </span><span class='tstring_content'>e-resize</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>ease</span><span class='words_sep'> </span><span class='tstring_content'>ease-in</span><span class='words_sep'> </span><span class='tstring_content'>ease-in-out</span><span class='words_sep'> </span><span class='tstring_content'>ease-out</span><span class='words_sep'> </span><span class='tstring_content'>embed</span><span class='words_sep'> </span><span class='tstring_content'>end</span><span class='words_sep'> </span><span class='tstring_content'>exclude</span><span class='words_sep'> </span><span class='tstring_content'>exclusion</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>expanded</span><span class='words_sep'> </span><span class='tstring_content'>extends</span><span class='words_sep'> </span><span class='tstring_content'>extra-condensed</span><span class='words_sep'> </span><span class='tstring_content'>extra-expanded</span><span class='words_sep'> </span><span class='tstring_content'>fantasy</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>farthest-corner</span><span class='words_sep'> </span><span class='tstring_content'>farthest-side</span><span class='words_sep'> </span><span class='tstring_content'>far-left</span><span class='words_sep'> </span><span class='tstring_content'>far-right</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>fast</span><span class='words_sep'> </span><span class='tstring_content'>faster</span><span class='words_sep'> </span><span class='tstring_content'>fill</span><span class='words_sep'> </span><span class='tstring_content'>fixed</span><span class='words_sep'> </span><span class='tstring_content'>flat</span><span class='words_sep'> </span><span class='tstring_content'>flex</span><span class='words_sep'> </span><span class='tstring_content'>flex-end</span><span class='words_sep'> </span><span class='tstring_content'>flex-start</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>forwards</span><span class='words_sep'> </span><span class='tstring_content'>georgian</span><span class='words_sep'> </span><span class='tstring_content'>grid</span><span class='words_sep'> </span><span class='tstring_content'>groove</span><span class='words_sep'> </span><span class='tstring_content'>hard-light</span><span class='words_sep'> </span><span class='tstring_content'>hebrew</span><span class='words_sep'> </span><span class='tstring_content'>help</span><span class='words_sep'> </span><span class='tstring_content'>hidden</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>hide</span><span class='words_sep'> </span><span class='tstring_content'>high</span><span class='words_sep'> </span><span class='tstring_content'>higher</span><span class='words_sep'> </span><span class='tstring_content'>hiragana</span><span class='words_sep'> </span><span class='tstring_content'>hiragana-iroha</span><span class='words_sep'> </span><span class='tstring_content'>horizontal</span><span class='words_sep'> </span><span class='tstring_content'>hue</span><span class='words_sep'> </span><span class='tstring_content'>icon</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>infinite</span><span class='words_sep'> </span><span class='tstring_content'>inherit</span><span class='words_sep'> </span><span class='tstring_content'>inline</span><span class='words_sep'> </span><span class='tstring_content'>inline-block</span><span class='words_sep'> </span><span class='tstring_content'>inline-flex</span><span class='words_sep'> </span><span class='tstring_content'>inline-grid</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>inline-size</span><span class='words_sep'> </span><span class='tstring_content'>inline-table</span><span class='words_sep'> </span><span class='tstring_content'>inset</span><span class='words_sep'> </span><span class='tstring_content'>inside</span><span class='words_sep'> </span><span class='tstring_content'>intersect</span><span class='words_sep'> </span><span class='tstring_content'>isolate</span><span class='words_sep'> </span><span class='tstring_content'>italic</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>justify</span><span class='words_sep'> </span><span class='tstring_content'>katakana</span><span class='words_sep'> </span><span class='tstring_content'>katakana-iroha</span><span class='words_sep'> </span><span class='tstring_content'>landscape</span><span class='words_sep'> </span><span class='tstring_content'>large</span><span class='words_sep'> </span><span class='tstring_content'>larger</span><span class='words_sep'> </span><span class='tstring_content'>left</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>left-side</span><span class='words_sep'> </span><span class='tstring_content'>leftwards</span><span class='words_sep'> </span><span class='tstring_content'>level</span><span class='words_sep'> </span><span class='tstring_content'>lighten</span><span class='words_sep'> </span><span class='tstring_content'>lighter</span><span class='words_sep'> </span><span class='tstring_content'>line-through</span><span class='words_sep'> </span><span class='tstring_content'>linear</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>list-item</span><span class='words_sep'> </span><span class='tstring_content'>loud</span><span class='words_sep'> </span><span class='tstring_content'>low</span><span class='words_sep'> </span><span class='tstring_content'>lower</span><span class='words_sep'> </span><span class='tstring_content'>lower-alpha</span><span class='words_sep'> </span><span class='tstring_content'>lower-greek</span><span class='words_sep'> </span><span class='tstring_content'>lower-roman</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>lowercase</span><span class='words_sep'> </span><span class='tstring_content'>ltr</span><span class='words_sep'> </span><span class='tstring_content'>luminance</span><span class='words_sep'> </span><span class='tstring_content'>luminosity</span><span class='words_sep'> </span><span class='tstring_content'>mandatory</span><span class='words_sep'> </span><span class='tstring_content'>match-source</span><span class='words_sep'> </span><span class='tstring_content'>medium</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>message-box</span><span class='words_sep'> </span><span class='tstring_content'>middle</span><span class='words_sep'> </span><span class='tstring_content'>mix</span><span class='words_sep'> </span><span class='tstring_content'>monospace</span><span class='words_sep'> </span><span class='tstring_content'>multiply</span><span class='words_sep'> </span><span class='tstring_content'>n-resize</span><span class='words_sep'> </span><span class='tstring_content'>narrower</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>ne-resize</span><span class='words_sep'> </span><span class='tstring_content'>no-close-quote</span><span class='words_sep'> </span><span class='tstring_content'>no-open-quote</span><span class='words_sep'> </span><span class='tstring_content'>no-repeat</span><span class='words_sep'> </span><span class='tstring_content'>none</span><span class='words_sep'> </span><span class='tstring_content'>normal</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>nowrap</span><span class='words_sep'> </span><span class='tstring_content'>numeric</span><span class='words_sep'> </span><span class='tstring_content'>nw-resize</span><span class='words_sep'> </span><span class='tstring_content'>oblique</span><span class='words_sep'> </span><span class='tstring_content'>once</span><span class='words_sep'> </span><span class='tstring_content'>open-quote</span><span class='words_sep'> </span><span class='tstring_content'>outset</span><span class='words_sep'> </span><span class='tstring_content'>outside</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>overlay</span><span class='words_sep'> </span><span class='tstring_content'>overline</span><span class='words_sep'> </span><span class='tstring_content'>paused</span><span class='words_sep'> </span><span class='tstring_content'>pointer</span><span class='words_sep'> </span><span class='tstring_content'>portrait</span><span class='words_sep'> </span><span class='tstring_content'>pre</span><span class='words_sep'> </span><span class='tstring_content'>preserve-3d</span><span class='words_sep'> </span><span class='tstring_content'>pre-line</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>pre-wrap</span><span class='words_sep'> </span><span class='tstring_content'>proximity</span><span class='words_sep'> </span><span class='tstring_content'>px</span><span class='words_sep'> </span><span class='tstring_content'>relative</span><span class='words_sep'> </span><span class='tstring_content'>repeat-x</span><span class='words_sep'> </span><span class='tstring_content'>repeat-y</span><span class='words_sep'> </span><span class='tstring_content'>replace</span><span class='words_sep'> </span><span class='tstring_content'>reverse</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>ridge</span><span class='words_sep'> </span><span class='tstring_content'>right</span><span class='words_sep'> </span><span class='tstring_content'>right-side</span><span class='words_sep'> </span><span class='tstring_content'>rightwards</span><span class='words_sep'> </span><span class='tstring_content'>row</span><span class='words_sep'> </span><span class='tstring_content'>row-reverse</span><span class='words_sep'> </span><span class='tstring_content'>rtl</span><span class='words_sep'> </span><span class='tstring_content'>running</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>s-resize</span><span class='words_sep'> </span><span class='tstring_content'>sans-serif</span><span class='words_sep'> </span><span class='tstring_content'>saturation</span><span class='words_sep'> </span><span class='tstring_content'>scale-down</span><span class='words_sep'> </span><span class='tstring_content'>screen</span><span class='words_sep'> </span><span class='tstring_content'>scroll</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>se-resize</span><span class='words_sep'> </span><span class='tstring_content'>semi-condensed</span><span class='words_sep'> </span><span class='tstring_content'>semi-expanded</span><span class='words_sep'> </span><span class='tstring_content'>separate</span><span class='words_sep'> </span><span class='tstring_content'>serif</span><span class='words_sep'> </span><span class='tstring_content'>show</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>sides</span><span class='words_sep'> </span><span class='tstring_content'>silent</span><span class='words_sep'> </span><span class='tstring_content'>size</span><span class='words_sep'> </span><span class='tstring_content'>slow</span><span class='words_sep'> </span><span class='tstring_content'>slower</span><span class='words_sep'> </span><span class='tstring_content'>small-caps</span><span class='words_sep'> </span><span class='tstring_content'>small-caption</span><span class='words_sep'> </span><span class='tstring_content'>smaller</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>smooth</span><span class='words_sep'> </span><span class='tstring_content'>soft</span><span class='words_sep'> </span><span class='tstring_content'>soft-light</span><span class='words_sep'> </span><span class='tstring_content'>solid</span><span class='words_sep'> </span><span class='tstring_content'>space-aroun</span><span class='words_sep'> </span><span class='tstring_content'>space-between</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>space-evenly</span><span class='words_sep'> </span><span class='tstring_content'>span</span><span class='words_sep'> </span><span class='tstring_content'>spell-out</span><span class='words_sep'> </span><span class='tstring_content'>square</span><span class='words_sep'> </span><span class='tstring_content'>start</span><span class='words_sep'> </span><span class='tstring_content'>static</span><span class='words_sep'> </span><span class='tstring_content'>status-bar</span><span class='words_sep'> </span><span class='tstring_content'>sticky</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>stretch</span><span class='words_sep'> </span><span class='tstring_content'>sub</span><span class='words_sep'> </span><span class='tstring_content'>subtract</span><span class='words_sep'> </span><span class='tstring_content'>super</span><span class='words_sep'> </span><span class='tstring_content'>sw-resize</span><span class='words_sep'> </span><span class='tstring_content'>swap</span><span class='words_sep'> </span><span class='tstring_content'>symbolic</span><span class='words_sep'> </span><span class='tstring_content'>table</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>table-caption</span><span class='words_sep'> </span><span class='tstring_content'>table-cell</span><span class='words_sep'> </span><span class='tstring_content'>table-column</span><span class='words_sep'> </span><span class='tstring_content'>table-column-group</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>table-footer-group</span><span class='words_sep'> </span><span class='tstring_content'>table-header-group</span><span class='words_sep'> </span><span class='tstring_content'>table-row</span><span class='words_sep'> </span><span class='tstring_content'>table-row-group</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>text</span><span class='words_sep'> </span><span class='tstring_content'>text-bottom</span><span class='words_sep'> </span><span class='tstring_content'>text-top</span><span class='words_sep'> </span><span class='tstring_content'>thick</span><span class='words_sep'> </span><span class='tstring_content'>thin</span><span class='words_sep'> </span><span class='tstring_content'>top</span><span class='words_sep'> </span><span class='tstring_content'>transparent</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>ultra-condensed</span><span class='words_sep'> </span><span class='tstring_content'>ultra-expanded</span><span class='words_sep'> </span><span class='tstring_content'>underline</span><span class='words_sep'> </span><span class='tstring_content'>upper-alpha</span><span class='words_sep'> </span><span class='tstring_content'>upper-latin</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>upper-roman</span><span class='words_sep'> </span><span class='tstring_content'>uppercase</span><span class='words_sep'> </span><span class='tstring_content'>vertical</span><span class='words_sep'> </span><span class='tstring_content'>visible</span><span class='words_sep'> </span><span class='tstring_content'>w-resize</span><span class='words_sep'> </span><span class='tstring_content'>wait</span><span class='words_sep'> </span><span class='tstring_content'>wider</span><span class='words_sep'> </span><span class='tstring_content'>wrap</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>wrap-reverse</span><span class='words_sep'> </span><span class='tstring_content'>x</span><span class='words_sep'> </span><span class='tstring_content'>x-fast</span><span class='words_sep'> </span><span class='tstring_content'>x-high</span><span class='words_sep'> </span><span class='tstring_content'>x-large</span><span class='words_sep'> </span><span class='tstring_content'>x-loud</span><span class='words_sep'> </span><span class='tstring_content'>x-low</span><span class='words_sep'> </span><span class='tstring_content'>x-small</span><span class='words_sep'> </span><span class='tstring_content'>x-soft</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>xx-large</span><span class='words_sep'> </span><span class='tstring_content'>xx-small</span><span class='words_sep'> </span><span class='tstring_content'>yes</span><span class='words_sep'> </span><span class='tstring_content'>y</span><span class='words_sep'> </span><span class='tstring_content'>z</span><span class='words_sep'>
+</span><span class='words_sep'>  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="colors-class_method">
+  
+    .<strong>colors</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/css.rb', line 170</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_colors'>colors</span>
+  <span class='ivar'>@colors</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>aliceblue</span><span class='words_sep'> </span><span class='tstring_content'>antiquewhite</span><span class='words_sep'> </span><span class='tstring_content'>aqua</span><span class='words_sep'> </span><span class='tstring_content'>aquamarine</span><span class='words_sep'> </span><span class='tstring_content'>azure</span><span class='words_sep'> </span><span class='tstring_content'>beige</span><span class='words_sep'> </span><span class='tstring_content'>bisque</span><span class='words_sep'> </span><span class='tstring_content'>black</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>blanchedalmond</span><span class='words_sep'> </span><span class='tstring_content'>blue</span><span class='words_sep'> </span><span class='tstring_content'>blueviolet</span><span class='words_sep'> </span><span class='tstring_content'>brown</span><span class='words_sep'> </span><span class='tstring_content'>burlywood</span><span class='words_sep'> </span><span class='tstring_content'>cadetblue</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>chartreuse</span><span class='words_sep'> </span><span class='tstring_content'>chocolate</span><span class='words_sep'> </span><span class='tstring_content'>coral</span><span class='words_sep'> </span><span class='tstring_content'>cornflowerblue</span><span class='words_sep'> </span><span class='tstring_content'>cornsilk</span><span class='words_sep'> </span><span class='tstring_content'>crimson</span><span class='words_sep'> </span><span class='tstring_content'>cyan</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>darkblue</span><span class='words_sep'> </span><span class='tstring_content'>darkcyan</span><span class='words_sep'> </span><span class='tstring_content'>darkgoldenrod</span><span class='words_sep'> </span><span class='tstring_content'>darkgray</span><span class='words_sep'> </span><span class='tstring_content'>darkgreen</span><span class='words_sep'> </span><span class='tstring_content'>darkkhaki</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>darkmagenta</span><span class='words_sep'> </span><span class='tstring_content'>darkolivegreen</span><span class='words_sep'> </span><span class='tstring_content'>darkorange</span><span class='words_sep'> </span><span class='tstring_content'>darkorchid</span><span class='words_sep'> </span><span class='tstring_content'>darkred</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>darksalmon</span><span class='words_sep'> </span><span class='tstring_content'>darkseagreen</span><span class='words_sep'> </span><span class='tstring_content'>darkslateblue</span><span class='words_sep'> </span><span class='tstring_content'>darkslategray</span><span class='words_sep'> </span><span class='tstring_content'>darkturquoise</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>darkviolet</span><span class='words_sep'> </span><span class='tstring_content'>deeppink</span><span class='words_sep'> </span><span class='tstring_content'>deepskyblue</span><span class='words_sep'> </span><span class='tstring_content'>dimgray</span><span class='words_sep'> </span><span class='tstring_content'>dodgerblue</span><span class='words_sep'> </span><span class='tstring_content'>firebrick</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>floralwhite</span><span class='words_sep'> </span><span class='tstring_content'>forestgreen</span><span class='words_sep'> </span><span class='tstring_content'>fuchsia</span><span class='words_sep'> </span><span class='tstring_content'>gainsboro</span><span class='words_sep'> </span><span class='tstring_content'>ghostwhite</span><span class='words_sep'> </span><span class='tstring_content'>gold</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>goldenrod</span><span class='words_sep'> </span><span class='tstring_content'>gray</span><span class='words_sep'> </span><span class='tstring_content'>green</span><span class='words_sep'> </span><span class='tstring_content'>greenyellow</span><span class='words_sep'> </span><span class='tstring_content'>honeydew</span><span class='words_sep'> </span><span class='tstring_content'>hotpink</span><span class='words_sep'> </span><span class='tstring_content'>indianred</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>indigo</span><span class='words_sep'> </span><span class='tstring_content'>ivory</span><span class='words_sep'> </span><span class='tstring_content'>khaki</span><span class='words_sep'> </span><span class='tstring_content'>lavender</span><span class='words_sep'> </span><span class='tstring_content'>lavenderblush</span><span class='words_sep'> </span><span class='tstring_content'>lawngreen</span><span class='words_sep'> </span><span class='tstring_content'>lemonchiffon</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>lightblue</span><span class='words_sep'> </span><span class='tstring_content'>lightcoral</span><span class='words_sep'> </span><span class='tstring_content'>lightcyan</span><span class='words_sep'> </span><span class='tstring_content'>lightgoldenrodyellow</span><span class='words_sep'> </span><span class='tstring_content'>lightgreen</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>lightgrey</span><span class='words_sep'> </span><span class='tstring_content'>lightpink</span><span class='words_sep'> </span><span class='tstring_content'>lightsalmon</span><span class='words_sep'> </span><span class='tstring_content'>lightseagreen</span><span class='words_sep'> </span><span class='tstring_content'>lightskyblue</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>lightslategray</span><span class='words_sep'> </span><span class='tstring_content'>lightsteelblue</span><span class='words_sep'> </span><span class='tstring_content'>lightyellow</span><span class='words_sep'> </span><span class='tstring_content'>lime</span><span class='words_sep'> </span><span class='tstring_content'>limegreen</span><span class='words_sep'> </span><span class='tstring_content'>linen</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>magenta</span><span class='words_sep'> </span><span class='tstring_content'>maroon</span><span class='words_sep'> </span><span class='tstring_content'>mediumaquamarine</span><span class='words_sep'> </span><span class='tstring_content'>mediumblue</span><span class='words_sep'> </span><span class='tstring_content'>mediumorchid</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>mediumpurple</span><span class='words_sep'> </span><span class='tstring_content'>mediumseagreen</span><span class='words_sep'> </span><span class='tstring_content'>mediumslateblue</span><span class='words_sep'> </span><span class='tstring_content'>mediumspringgreen</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>mediumturquoise</span><span class='words_sep'> </span><span class='tstring_content'>mediumvioletred</span><span class='words_sep'> </span><span class='tstring_content'>midnightblue</span><span class='words_sep'> </span><span class='tstring_content'>mintcream</span><span class='words_sep'> </span><span class='tstring_content'>mistyrose</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>moccasin</span><span class='words_sep'> </span><span class='tstring_content'>navajowhite</span><span class='words_sep'> </span><span class='tstring_content'>navy</span><span class='words_sep'> </span><span class='tstring_content'>oldlace</span><span class='words_sep'> </span><span class='tstring_content'>olive</span><span class='words_sep'> </span><span class='tstring_content'>olivedrab</span><span class='words_sep'> </span><span class='tstring_content'>orange</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>orangered</span><span class='words_sep'> </span><span class='tstring_content'>orchid</span><span class='words_sep'> </span><span class='tstring_content'>palegoldenrod</span><span class='words_sep'> </span><span class='tstring_content'>palegreen</span><span class='words_sep'> </span><span class='tstring_content'>paleturquoise</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>palevioletred</span><span class='words_sep'> </span><span class='tstring_content'>papayawhip</span><span class='words_sep'> </span><span class='tstring_content'>peachpuff</span><span class='words_sep'> </span><span class='tstring_content'>peru</span><span class='words_sep'> </span><span class='tstring_content'>pink</span><span class='words_sep'> </span><span class='tstring_content'>plum</span><span class='words_sep'> </span><span class='tstring_content'>powderblue</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>purple</span><span class='words_sep'> </span><span class='tstring_content'>red</span><span class='words_sep'> </span><span class='tstring_content'>rosybrown</span><span class='words_sep'> </span><span class='tstring_content'>royalblue</span><span class='words_sep'> </span><span class='tstring_content'>saddlebrown</span><span class='words_sep'> </span><span class='tstring_content'>salmon</span><span class='words_sep'> </span><span class='tstring_content'>sandybrown</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>seagreen</span><span class='words_sep'> </span><span class='tstring_content'>seashell</span><span class='words_sep'> </span><span class='tstring_content'>sienna</span><span class='words_sep'> </span><span class='tstring_content'>silver</span><span class='words_sep'> </span><span class='tstring_content'>skyblue</span><span class='words_sep'> </span><span class='tstring_content'>slateblue</span><span class='words_sep'> </span><span class='tstring_content'>slategray</span><span class='words_sep'> </span><span class='tstring_content'>snow</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>springgreen</span><span class='words_sep'> </span><span class='tstring_content'>steelblue</span><span class='words_sep'> </span><span class='tstring_content'>tan</span><span class='words_sep'> </span><span class='tstring_content'>teal</span><span class='words_sep'> </span><span class='tstring_content'>thistle</span><span class='words_sep'> </span><span class='tstring_content'>tomato</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>turquoise</span><span class='words_sep'> </span><span class='tstring_content'>violet</span><span class='words_sep'> </span><span class='tstring_content'>wheat</span><span class='words_sep'> </span><span class='tstring_content'>white</span><span class='words_sep'> </span><span class='tstring_content'>whitesmoke</span><span class='words_sep'> </span><span class='tstring_content'>yellow</span><span class='words_sep'> </span><span class='tstring_content'>yellowgreen</span><span class='words_sep'>
+</span><span class='words_sep'>  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="functions-class_method">
+  
+    .<strong>functions</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/css.rb', line 198</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_functions'>functions</span>
+  <span class='ivar'>@functions</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>abs</span><span class='words_sep'> </span><span class='tstring_content'>acos</span><span class='words_sep'> </span><span class='tstring_content'>annotation</span><span class='words_sep'> </span><span class='tstring_content'>asin</span><span class='words_sep'> </span><span class='tstring_content'>atan</span><span class='words_sep'> </span><span class='tstring_content'>atan2</span><span class='words_sep'> </span><span class='tstring_content'>attr</span><span class='words_sep'> </span><span class='tstring_content'>blur</span><span class='words_sep'> </span><span class='tstring_content'>brightness</span><span class='words_sep'> </span><span class='tstring_content'>calc</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>character-variant</span><span class='words_sep'> </span><span class='tstring_content'>circle</span><span class='words_sep'> </span><span class='tstring_content'>clamp</span><span class='words_sep'> </span><span class='tstring_content'>color</span><span class='words_sep'> </span><span class='tstring_content'>color-mix</span><span class='words_sep'> </span><span class='tstring_content'>conic-gradient</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>contrast</span><span class='words_sep'> </span><span class='tstring_content'>cos</span><span class='words_sep'> </span><span class='tstring_content'>counter</span><span class='words_sep'> </span><span class='tstring_content'>counters</span><span class='words_sep'> </span><span class='tstring_content'>cubic-bezier</span><span class='words_sep'> </span><span class='tstring_content'>drop-shadow</span><span class='words_sep'> </span><span class='tstring_content'>ellipse</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>env</span><span class='words_sep'> </span><span class='tstring_content'>exp</span><span class='words_sep'> </span><span class='tstring_content'>fit-content</span><span class='words_sep'> </span><span class='tstring_content'>format</span><span class='words_sep'> </span><span class='tstring_content'>grayscale</span><span class='words_sep'> </span><span class='tstring_content'>hsl</span><span class='words_sep'> </span><span class='tstring_content'>hsla</span><span class='words_sep'> </span><span class='tstring_content'>hue-rotate</span><span class='words_sep'> </span><span class='tstring_content'>hwb</span><span class='words_sep'> </span><span class='tstring_content'>hypot</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>image-set</span><span class='words_sep'> </span><span class='tstring_content'>inset</span><span class='words_sep'> </span><span class='tstring_content'>invert</span><span class='words_sep'> </span><span class='tstring_content'>lab</span><span class='words_sep'> </span><span class='tstring_content'>lch</span><span class='words_sep'> </span><span class='tstring_content'>linear</span><span class='words_sep'> </span><span class='tstring_content'>linear-gradient</span><span class='words_sep'> </span><span class='tstring_content'>log</span><span class='words_sep'> </span><span class='tstring_content'>matrix</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>matrix3d</span><span class='words_sep'> </span><span class='tstring_content'>max</span><span class='words_sep'> </span><span class='tstring_content'>min</span><span class='words_sep'> </span><span class='tstring_content'>minmax</span><span class='words_sep'> </span><span class='tstring_content'>mod</span><span class='words_sep'> </span><span class='tstring_content'>oklab</span><span class='words_sep'> </span><span class='tstring_content'>oklch</span><span class='words_sep'> </span><span class='tstring_content'>opacity</span><span class='words_sep'> </span><span class='tstring_content'>ornaments</span><span class='words_sep'> </span><span class='tstring_content'>path</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>perspective</span><span class='words_sep'> </span><span class='tstring_content'>polygon</span><span class='words_sep'> </span><span class='tstring_content'>pow</span><span class='words_sep'> </span><span class='tstring_content'>radial-gradient</span><span class='words_sep'> </span><span class='tstring_content'>ray</span><span class='words_sep'> </span><span class='tstring_content'>rect</span><span class='words_sep'> </span><span class='tstring_content'>rem</span><span class='words_sep'> </span><span class='tstring_content'>repeat</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>repeating-conic-gradient</span><span class='words_sep'> </span><span class='tstring_content'>repeating-linear-gradient</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>repeating-radial-gradient</span><span class='words_sep'> </span><span class='tstring_content'>rgb</span><span class='words_sep'> </span><span class='tstring_content'>rgba</span><span class='words_sep'> </span><span class='tstring_content'>rotate</span><span class='words_sep'> </span><span class='tstring_content'>rotate3d</span><span class='words_sep'> </span><span class='tstring_content'>rotatex</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>rotatey</span><span class='words_sep'> </span><span class='tstring_content'>rotatez</span><span class='words_sep'> </span><span class='tstring_content'>round</span><span class='words_sep'> </span><span class='tstring_content'>saturate</span><span class='words_sep'> </span><span class='tstring_content'>scale</span><span class='words_sep'> </span><span class='tstring_content'>scale3d</span><span class='words_sep'> </span><span class='tstring_content'>scalex</span><span class='words_sep'> </span><span class='tstring_content'>scaley</span><span class='words_sep'> </span><span class='tstring_content'>scalez</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>sepia</span><span class='words_sep'> </span><span class='tstring_content'>sign</span><span class='words_sep'> </span><span class='tstring_content'>sin</span><span class='words_sep'> </span><span class='tstring_content'>skewx</span><span class='words_sep'> </span><span class='tstring_content'>skewy</span><span class='words_sep'> </span><span class='tstring_content'>sqrt</span><span class='words_sep'> </span><span class='tstring_content'>steps</span><span class='words_sep'> </span><span class='tstring_content'>styleset</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>stylistic</span><span class='words_sep'> </span><span class='tstring_content'>swash</span><span class='words_sep'> </span><span class='tstring_content'>tan</span><span class='words_sep'> </span><span class='tstring_content'>translate</span><span class='words_sep'> </span><span class='tstring_content'>translate3d</span><span class='words_sep'> </span><span class='tstring_content'>translatex</span><span class='words_sep'> </span><span class='tstring_content'>translatey</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>translatez</span><span class='words_sep'> </span><span class='tstring_content'>url</span><span class='words_sep'> </span><span class='tstring_content'>var</span><span class='words_sep'> </span><span class='tstring_content'>xywh</span><span class='words_sep'>
+</span><span class='words_sep'>  </span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="properties-class_method">
+  
+    .<strong>properties</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -386,273 +658,117 @@
 115
 116
 117
-118</pre>
+118
+119
+120
+121
+122</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/rouge/lexers/css.rb', line 19</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span>
-  <span class='ivar'>@attributes</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>align-content</span><span class='words_sep'> </span><span class='tstring_content'>align-items</span><span class='words_sep'> </span><span class='tstring_content'>align-self</span><span class='words_sep'> </span><span class='tstring_content'>alignment-adjust</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>alignment-baseline</span><span class='words_sep'> </span><span class='tstring_content'>all</span><span class='words_sep'> </span><span class='tstring_content'>anchor-point</span><span class='words_sep'> </span><span class='tstring_content'>animation</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>animation-delay</span><span class='words_sep'> </span><span class='tstring_content'>animation-direction</span><span class='words_sep'> </span><span class='tstring_content'>animation-duration</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>animation-fill-mode</span><span class='words_sep'> </span><span class='tstring_content'>animation-iteration-count</span><span class='words_sep'> </span><span class='tstring_content'>animation-name</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>animation-play-state</span><span class='words_sep'> </span><span class='tstring_content'>animation-timing-function</span><span class='words_sep'> </span><span class='tstring_content'>appearance</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>azimuth</span><span class='words_sep'> </span><span class='tstring_content'>backface-visibility</span><span class='words_sep'> </span><span class='tstring_content'>background</span><span class='words_sep'> </span><span class='tstring_content'>background-attachment</span><span class='words_sep'>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_properties'>properties</span>
+  <span class='ivar'>@properties</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>additive-symbols</span><span class='words_sep'> </span><span class='tstring_content'>align-content</span><span class='words_sep'> </span><span class='tstring_content'>align-items</span><span class='words_sep'> </span><span class='tstring_content'>align-self</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>alignment-adjust</span><span class='words_sep'> </span><span class='tstring_content'>alignment-baseline</span><span class='words_sep'> </span><span class='tstring_content'>all</span><span class='words_sep'> </span><span class='tstring_content'>anchor-point</span><span class='words_sep'> </span><span class='tstring_content'>animation</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>animation-composition</span><span class='words_sep'> </span><span class='tstring_content'>animation-delay</span><span class='words_sep'> </span><span class='tstring_content'>animation-direction</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>animation-duration</span><span class='words_sep'> </span><span class='tstring_content'>animation-fill-mode</span><span class='words_sep'> </span><span class='tstring_content'>animation-iteration-count</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>animation-name</span><span class='words_sep'> </span><span class='tstring_content'>animation-play-state</span><span class='words_sep'> </span><span class='tstring_content'>animation-timing-function</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>appearance</span><span class='words_sep'> </span><span class='tstring_content'>aspect-ratio</span><span class='words_sep'> </span><span class='tstring_content'>azimuth</span><span class='words_sep'> </span><span class='tstring_content'>backface-visibility</span><span class='words_sep'> </span><span class='tstring_content'>background</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>background-attachment</span><span class='words_sep'> </span><span class='tstring_content'>background-blend-mode</span><span class='words_sep'>
 </span><span class='words_sep'>    </span><span class='tstring_content'>background-clip</span><span class='words_sep'> </span><span class='tstring_content'>background-color</span><span class='words_sep'> </span><span class='tstring_content'>background-image</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>background-origin</span><span class='words_sep'> </span><span class='tstring_content'>background-position</span><span class='words_sep'> </span><span class='tstring_content'>background-repeat</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>background-size</span><span class='words_sep'> </span><span class='tstring_content'>baseline-shift</span><span class='words_sep'> </span><span class='tstring_content'>binding</span><span class='words_sep'> </span><span class='tstring_content'>bleed</span><span class='words_sep'> </span><span class='tstring_content'>bookmark-label</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>bookmark-level</span><span class='words_sep'> </span><span class='tstring_content'>bookmark-state</span><span class='words_sep'> </span><span class='tstring_content'>bookmark-target</span><span class='words_sep'> </span><span class='tstring_content'>border</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>border-bottom</span><span class='words_sep'> </span><span class='tstring_content'>border-bottom-color</span><span class='words_sep'> </span><span class='tstring_content'>border-bottom-left-radius</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>border-bottom-right-radius</span><span class='words_sep'> </span><span class='tstring_content'>border-bottom-style</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>border-bottom-width</span><span class='words_sep'> </span><span class='tstring_content'>border-collapse</span><span class='words_sep'> </span><span class='tstring_content'>border-color</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>border-image</span><span class='words_sep'> </span><span class='tstring_content'>border-image-outset</span><span class='words_sep'> </span><span class='tstring_content'>border-image-repeat</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>background-origin</span><span class='words_sep'> </span><span class='tstring_content'>background-position</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>background-repeat</span><span class='words_sep'> </span><span class='tstring_content'>background-size</span><span class='words_sep'> </span><span class='tstring_content'>baseline-shift</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>binding</span><span class='words_sep'> </span><span class='tstring_content'>bleed</span><span class='words_sep'> </span><span class='tstring_content'>bookmark-label</span><span class='words_sep'> </span><span class='tstring_content'>bookmark-level</span><span class='words_sep'> </span><span class='tstring_content'>bookmark-state</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>bookmark-target</span><span class='words_sep'> </span><span class='tstring_content'>border</span><span class='words_sep'> </span><span class='tstring_content'>border-bottom</span><span class='words_sep'> </span><span class='tstring_content'>border-bottom-color</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>border-bottom-left-radius</span><span class='words_sep'> </span><span class='tstring_content'>border-bottom-right-radius</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>border-bottom-style</span><span class='words_sep'> </span><span class='tstring_content'>border-bottom-width</span><span class='words_sep'> </span><span class='tstring_content'>border-collapse</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>border-color</span><span class='words_sep'> </span><span class='tstring_content'>border-image</span><span class='words_sep'> </span><span class='tstring_content'>border-image-outset</span><span class='words_sep'> </span><span class='tstring_content'>border-image-repeat</span><span class='words_sep'>
 </span><span class='words_sep'>    </span><span class='tstring_content'>border-image-slice</span><span class='words_sep'> </span><span class='tstring_content'>border-image-source</span><span class='words_sep'> </span><span class='tstring_content'>border-image-width</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>border-left</span><span class='words_sep'> </span><span class='tstring_content'>border-left-color</span><span class='words_sep'> </span><span class='tstring_content'>border-left-style</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>border-left-width</span><span class='words_sep'> </span><span class='tstring_content'>border-radius</span><span class='words_sep'> </span><span class='tstring_content'>border-right</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>border-right-color</span><span class='words_sep'> </span><span class='tstring_content'>border-right-style</span><span class='words_sep'> </span><span class='tstring_content'>border-right-width</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>border-spacing</span><span class='words_sep'> </span><span class='tstring_content'>border-style</span><span class='words_sep'> </span><span class='tstring_content'>border-top</span><span class='words_sep'> </span><span class='tstring_content'>border-top-color</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>border-top-left-radius</span><span class='words_sep'> </span><span class='tstring_content'>border-top-right-radius</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>border-top-style</span><span class='words_sep'> </span><span class='tstring_content'>border-top-width</span><span class='words_sep'> </span><span class='tstring_content'>border-width</span><span class='words_sep'> </span><span class='tstring_content'>bottom</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>box-align</span><span class='words_sep'> </span><span class='tstring_content'>box-decoration-break</span><span class='words_sep'> </span><span class='tstring_content'>box-direction</span><span class='words_sep'> </span><span class='tstring_content'>box-flex</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>box-flex-group</span><span class='words_sep'> </span><span class='tstring_content'>box-lines</span><span class='words_sep'> </span><span class='tstring_content'>box-ordinal-group</span><span class='words_sep'> </span><span class='tstring_content'>box-orient</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>box-pack</span><span class='words_sep'> </span><span class='tstring_content'>box-shadow</span><span class='words_sep'> </span><span class='tstring_content'>box-sizing</span><span class='words_sep'> </span><span class='tstring_content'>break-after</span><span class='words_sep'> </span><span class='tstring_content'>break-before</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>break-inside</span><span class='words_sep'> </span><span class='tstring_content'>caption-side</span><span class='words_sep'> </span><span class='tstring_content'>clear</span><span class='words_sep'> </span><span class='tstring_content'>clip</span><span class='words_sep'> </span><span class='tstring_content'>clip-path</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>clip-rule</span><span class='words_sep'> </span><span class='tstring_content'>color</span><span class='words_sep'> </span><span class='tstring_content'>color-profile</span><span class='words_sep'> </span><span class='tstring_content'>columns</span><span class='words_sep'> </span><span class='tstring_content'>column-count</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>border-left</span><span class='words_sep'> </span><span class='tstring_content'>border-left-color</span><span class='words_sep'> </span><span class='tstring_content'>border-left-style</span><span class='words_sep'> </span><span class='tstring_content'>border-left-width</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>border-radius</span><span class='words_sep'> </span><span class='tstring_content'>border-right</span><span class='words_sep'> </span><span class='tstring_content'>border-right-color</span><span class='words_sep'> </span><span class='tstring_content'>border-right-style</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>border-right-width</span><span class='words_sep'> </span><span class='tstring_content'>border-spacing</span><span class='words_sep'> </span><span class='tstring_content'>border-style</span><span class='words_sep'> </span><span class='tstring_content'>border-top</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>border-top-color</span><span class='words_sep'> </span><span class='tstring_content'>border-top-left-radius</span><span class='words_sep'> </span><span class='tstring_content'>border-top-right-radius</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>border-top-style</span><span class='words_sep'> </span><span class='tstring_content'>border-top-width</span><span class='words_sep'> </span><span class='tstring_content'>border-width</span><span class='words_sep'> </span><span class='tstring_content'>bottom</span><span class='words_sep'> </span><span class='tstring_content'>box-align</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>box-decoration-break</span><span class='words_sep'> </span><span class='tstring_content'>box-direction</span><span class='words_sep'> </span><span class='tstring_content'>box-flex</span><span class='words_sep'> </span><span class='tstring_content'>box-flex-group</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>box-lines</span><span class='words_sep'> </span><span class='tstring_content'>box-ordinal-group</span><span class='words_sep'> </span><span class='tstring_content'>box-orient</span><span class='words_sep'> </span><span class='tstring_content'>box-pack</span><span class='words_sep'> </span><span class='tstring_content'>box-shadow</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>box-sizing</span><span class='words_sep'> </span><span class='tstring_content'>break-after</span><span class='words_sep'> </span><span class='tstring_content'>break-before</span><span class='words_sep'> </span><span class='tstring_content'>break-inside</span><span class='words_sep'> </span><span class='tstring_content'>caption-side</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>clear</span><span class='words_sep'> </span><span class='tstring_content'>clip</span><span class='words_sep'> </span><span class='tstring_content'>clip-path</span><span class='words_sep'> </span><span class='tstring_content'>clip-rule</span><span class='words_sep'> </span><span class='tstring_content'>color</span><span class='words_sep'> </span><span class='tstring_content'>color-profile</span><span class='words_sep'> </span><span class='tstring_content'>column-count</span><span class='words_sep'>
 </span><span class='words_sep'>    </span><span class='tstring_content'>column-fill</span><span class='words_sep'> </span><span class='tstring_content'>column-gap</span><span class='words_sep'> </span><span class='tstring_content'>column-rule</span><span class='words_sep'> </span><span class='tstring_content'>column-rule-color</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>column-rule-style</span><span class='words_sep'> </span><span class='tstring_content'>column-rule-width</span><span class='words_sep'> </span><span class='tstring_content'>column-span</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>column-width</span><span class='words_sep'> </span><span class='tstring_content'>content</span><span class='words_sep'> </span><span class='tstring_content'>counter-increment</span><span class='words_sep'> </span><span class='tstring_content'>counter-reset</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>crop</span><span class='words_sep'> </span><span class='tstring_content'>cue</span><span class='words_sep'> </span><span class='tstring_content'>cue-after</span><span class='words_sep'> </span><span class='tstring_content'>cue-before</span><span class='words_sep'> </span><span class='tstring_content'>cursor</span><span class='words_sep'> </span><span class='tstring_content'>direction</span><span class='words_sep'> </span><span class='tstring_content'>display</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>dominant-baseline</span><span class='words_sep'> </span><span class='tstring_content'>drop-initial-after-adjust</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>drop-initial-after-align</span><span class='words_sep'> </span><span class='tstring_content'>drop-initial-before-adjust</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>drop-initial-before-align</span><span class='words_sep'> </span><span class='tstring_content'>drop-initial-size</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>drop-initial-value</span><span class='words_sep'> </span><span class='tstring_content'>elevation</span><span class='words_sep'> </span><span class='tstring_content'>empty-cells</span><span class='words_sep'> </span><span class='tstring_content'>filter</span><span class='words_sep'> </span><span class='tstring_content'>fit</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>fit-position</span><span class='words_sep'> </span><span class='tstring_content'>flex</span><span class='words_sep'> </span><span class='tstring_content'>flex-basis</span><span class='words_sep'> </span><span class='tstring_content'>flex-direction</span><span class='words_sep'> </span><span class='tstring_content'>flex-flow</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>flex-grow</span><span class='words_sep'> </span><span class='tstring_content'>flex-shrink</span><span class='words_sep'> </span><span class='tstring_content'>flex-wrap</span><span class='words_sep'> </span><span class='tstring_content'>float</span><span class='words_sep'> </span><span class='tstring_content'>float-offset</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>font</span><span class='words_sep'> </span><span class='tstring_content'>font-family</span><span class='words_sep'> </span><span class='tstring_content'>font-feature-settings</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>font-kerning</span><span class='words_sep'> </span><span class='tstring_content'>font-language-override</span><span class='words_sep'> </span><span class='tstring_content'>font-size</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>font-size-adjust</span><span class='words_sep'> </span><span class='tstring_content'>font-stretch</span><span class='words_sep'> </span><span class='tstring_content'>font-style</span><span class='words_sep'> </span><span class='tstring_content'>font-synthesis</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>font-variant</span><span class='words_sep'> </span><span class='tstring_content'>font-variant-alternates</span><span class='words_sep'> </span><span class='tstring_content'>font-variant-caps</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>font-variant-east-asian</span><span class='words_sep'> </span><span class='tstring_content'>font-variant-ligatures</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>font-variant-numeric</span><span class='words_sep'> </span><span class='tstring_content'>font-variant-position</span><span class='words_sep'> </span><span class='tstring_content'>font-weight</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>grid-cell</span><span class='words_sep'> </span><span class='tstring_content'>grid-column</span><span class='words_sep'> </span><span class='tstring_content'>grid-column-align</span><span class='words_sep'> </span><span class='tstring_content'>grid-column-sizing</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>grid-column-span</span><span class='words_sep'> </span><span class='tstring_content'>grid-columns</span><span class='words_sep'> </span><span class='tstring_content'>grid-flow</span><span class='words_sep'> </span><span class='tstring_content'>grid-row</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>grid-row-align</span><span class='words_sep'> </span><span class='tstring_content'>grid-row-sizing</span><span class='words_sep'> </span><span class='tstring_content'>grid-row-span</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>grid-rows</span><span class='words_sep'> </span><span class='tstring_content'>grid-template</span><span class='words_sep'> </span><span class='tstring_content'>hanging-punctuation</span><span class='words_sep'> </span><span class='tstring_content'>height</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>hyphenate-after</span><span class='words_sep'> </span><span class='tstring_content'>hyphenate-before</span><span class='words_sep'> </span><span class='tstring_content'>hyphenate-character</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>hyphenate-lines</span><span class='words_sep'> </span><span class='tstring_content'>hyphenate-resource</span><span class='words_sep'> </span><span class='tstring_content'>hyphens</span><span class='words_sep'> </span><span class='tstring_content'>icon</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>image-orientation</span><span class='words_sep'> </span><span class='tstring_content'>image-rendering</span><span class='words_sep'> </span><span class='tstring_content'>image-resolution</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>ime-mode</span><span class='words_sep'> </span><span class='tstring_content'>inline-box-align</span><span class='words_sep'> </span><span class='tstring_content'>justify-content</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>left</span><span class='words_sep'> </span><span class='tstring_content'>letter-spacing</span><span class='words_sep'> </span><span class='tstring_content'>line-break</span><span class='words_sep'> </span><span class='tstring_content'>line-height</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>column-rule-style</span><span class='words_sep'> </span><span class='tstring_content'>column-rule-width</span><span class='words_sep'> </span><span class='tstring_content'>column-span</span><span class='words_sep'> </span><span class='tstring_content'>column-width</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>columns</span><span class='words_sep'> </span><span class='tstring_content'>content</span><span class='words_sep'> </span><span class='tstring_content'>container</span><span class='words_sep'> </span><span class='tstring_content'>container-name</span><span class='words_sep'> </span><span class='tstring_content'>container-type</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>counter-increment</span><span class='words_sep'> </span><span class='tstring_content'>counter-reset</span><span class='words_sep'> </span><span class='tstring_content'>counter-set</span><span class='words_sep'> </span><span class='tstring_content'>crop</span><span class='words_sep'> </span><span class='tstring_content'>cue</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>cue-after</span><span class='words_sep'> </span><span class='tstring_content'>cue-before</span><span class='words_sep'> </span><span class='tstring_content'>cursor</span><span class='words_sep'> </span><span class='tstring_content'>direction</span><span class='words_sep'> </span><span class='tstring_content'>display</span><span class='words_sep'> </span><span class='tstring_content'>dominant-baseline</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>drop-initial-after-adjust</span><span class='words_sep'> </span><span class='tstring_content'>drop-initial-after-align</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>drop-initial-before-adjust</span><span class='words_sep'> </span><span class='tstring_content'>drop-initial-before-align</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>drop-initial-size</span><span class='words_sep'> </span><span class='tstring_content'>drop-initial-value</span><span class='words_sep'> </span><span class='tstring_content'>elevation</span><span class='words_sep'> </span><span class='tstring_content'>empty-cells</span><span class='words_sep'> </span><span class='tstring_content'>fallback</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>filter</span><span class='words_sep'> </span><span class='tstring_content'>fit</span><span class='words_sep'> </span><span class='tstring_content'>fit-position</span><span class='words_sep'> </span><span class='tstring_content'>flex</span><span class='words_sep'> </span><span class='tstring_content'>flex-basis</span><span class='words_sep'> </span><span class='tstring_content'>flex-direction</span><span class='words_sep'> </span><span class='tstring_content'>flex-flow</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>flex-grow</span><span class='words_sep'> </span><span class='tstring_content'>flex-shrink</span><span class='words_sep'> </span><span class='tstring_content'>flex-wrap</span><span class='words_sep'> </span><span class='tstring_content'>float</span><span class='words_sep'> </span><span class='tstring_content'>float-offset</span><span class='words_sep'> </span><span class='tstring_content'>font</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>font-display</span><span class='words_sep'> </span><span class='tstring_content'>font-family</span><span class='words_sep'> </span><span class='tstring_content'>font-feature-settings</span><span class='words_sep'> </span><span class='tstring_content'>font-kerning</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>font-language-override</span><span class='words_sep'> </span><span class='tstring_content'>font-size</span><span class='words_sep'> </span><span class='tstring_content'>font-size-adjust</span><span class='words_sep'> </span><span class='tstring_content'>font-stretch</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>font-style</span><span class='words_sep'> </span><span class='tstring_content'>font-synthesis</span><span class='words_sep'> </span><span class='tstring_content'>font-variant</span><span class='words_sep'> </span><span class='tstring_content'>font-variant-alternates</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>font-variant-caps</span><span class='words_sep'> </span><span class='tstring_content'>font-variant-east-asian</span><span class='words_sep'> </span><span class='tstring_content'>font-variant-ligatures</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>font-variant-numeric</span><span class='words_sep'> </span><span class='tstring_content'>font-variant-position</span><span class='words_sep'> </span><span class='tstring_content'>font-weight</span><span class='words_sep'> </span><span class='tstring_content'>gap</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>grid-area</span><span class='words_sep'> </span><span class='tstring_content'>grid-auto-columns</span><span class='words_sep'> </span><span class='tstring_content'>grid-auto-flow</span><span class='words_sep'> </span><span class='tstring_content'>grid-auto-rows</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>grid-column</span><span class='words_sep'> </span><span class='tstring_content'>grid-column-end</span><span class='words_sep'> </span><span class='tstring_content'>grid-column-start</span><span class='words_sep'> </span><span class='tstring_content'>grid-row</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>grid-row-end</span><span class='words_sep'> </span><span class='tstring_content'>grid-row-start</span><span class='words_sep'> </span><span class='tstring_content'>grid-template</span><span class='words_sep'> </span><span class='tstring_content'>grid-template-areas</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>grid-template-columns</span><span class='words_sep'> </span><span class='tstring_content'>grid-template-rows</span><span class='words_sep'> </span><span class='tstring_content'>hanging-punctuation</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>height</span><span class='words_sep'> </span><span class='tstring_content'>hyphenate-after</span><span class='words_sep'> </span><span class='tstring_content'>hyphenate-before</span><span class='words_sep'> </span><span class='tstring_content'>hyphenate-character</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>hyphenate-lines</span><span class='words_sep'> </span><span class='tstring_content'>hyphenate-resource</span><span class='words_sep'> </span><span class='tstring_content'>hyphens</span><span class='words_sep'> </span><span class='tstring_content'>icon</span><span class='words_sep'> </span><span class='tstring_content'>image-orientation</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>image-rendering</span><span class='words_sep'> </span><span class='tstring_content'>image-resolution</span><span class='words_sep'> </span><span class='tstring_content'>ime-mode</span><span class='words_sep'> </span><span class='tstring_content'>inherits</span><span class='words_sep'> </span><span class='tstring_content'>initial-value</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>inline-box-align</span><span class='words_sep'> </span><span class='tstring_content'>inset</span><span class='words_sep'> </span><span class='tstring_content'>isolation</span><span class='words_sep'> </span><span class='tstring_content'>justify-content</span><span class='words_sep'> </span><span class='tstring_content'>justify-items</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>justify-self</span><span class='words_sep'> </span><span class='tstring_content'>left</span><span class='words_sep'> </span><span class='tstring_content'>letter-spacing</span><span class='words_sep'> </span><span class='tstring_content'>line-break</span><span class='words_sep'> </span><span class='tstring_content'>line-height</span><span class='words_sep'>
 </span><span class='words_sep'>    </span><span class='tstring_content'>line-stacking</span><span class='words_sep'> </span><span class='tstring_content'>line-stacking-ruby</span><span class='words_sep'> </span><span class='tstring_content'>line-stacking-shift</span><span class='words_sep'>
 </span><span class='words_sep'>    </span><span class='tstring_content'>line-stacking-strategy</span><span class='words_sep'> </span><span class='tstring_content'>list-style</span><span class='words_sep'> </span><span class='tstring_content'>list-style-image</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>list-style-position</span><span class='words_sep'> </span><span class='tstring_content'>list-style-type</span><span class='words_sep'> </span><span class='tstring_content'>margin</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>margin-bottom</span><span class='words_sep'> </span><span class='tstring_content'>margin-left</span><span class='words_sep'> </span><span class='tstring_content'>margin-right</span><span class='words_sep'> </span><span class='tstring_content'>margin-top</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>mark</span><span class='words_sep'> </span><span class='tstring_content'>marker-offset</span><span class='words_sep'> </span><span class='tstring_content'>marks</span><span class='words_sep'> </span><span class='tstring_content'>mark-after</span><span class='words_sep'> </span><span class='tstring_content'>mark-before</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>marquee-direction</span><span class='words_sep'> </span><span class='tstring_content'>marquee-loop</span><span class='words_sep'> </span><span class='tstring_content'>marquee-play-count</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>marquee-speed</span><span class='words_sep'> </span><span class='tstring_content'>marquee-style</span><span class='words_sep'> </span><span class='tstring_content'>mask</span><span class='words_sep'> </span><span class='tstring_content'>max-height</span><span class='words_sep'> </span><span class='tstring_content'>max-width</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>min-height</span><span class='words_sep'> </span><span class='tstring_content'>min-width</span><span class='words_sep'> </span><span class='tstring_content'>move-to</span><span class='words_sep'> </span><span class='tstring_content'>nav-down</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>nav-index</span><span class='words_sep'> </span><span class='tstring_content'>nav-left</span><span class='words_sep'> </span><span class='tstring_content'>nav-right</span><span class='words_sep'> </span><span class='tstring_content'>nav-up</span><span class='words_sep'> </span><span class='tstring_content'>object-fit</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>object-position</span><span class='words_sep'> </span><span class='tstring_content'>opacity</span><span class='words_sep'> </span><span class='tstring_content'>order</span><span class='words_sep'> </span><span class='tstring_content'>orphans</span><span class='words_sep'> </span><span class='tstring_content'>outline</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>outline-color</span><span class='words_sep'> </span><span class='tstring_content'>outline-offset</span><span class='words_sep'> </span><span class='tstring_content'>outline-style</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>outline-width</span><span class='words_sep'> </span><span class='tstring_content'>overflow</span><span class='words_sep'> </span><span class='tstring_content'>overflow-style</span><span class='words_sep'> </span><span class='tstring_content'>overflow-wrap</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>overflow-x</span><span class='words_sep'> </span><span class='tstring_content'>overflow-y</span><span class='words_sep'> </span><span class='tstring_content'>padding</span><span class='words_sep'> </span><span class='tstring_content'>padding-bottom</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>padding-left</span><span class='words_sep'> </span><span class='tstring_content'>padding-right</span><span class='words_sep'> </span><span class='tstring_content'>padding-top</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>page</span><span class='words_sep'> </span><span class='tstring_content'>page-break-after</span><span class='words_sep'> </span><span class='tstring_content'>page-break-before</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>page-break-inside</span><span class='words_sep'> </span><span class='tstring_content'>page-policy</span><span class='words_sep'> </span><span class='tstring_content'>pause</span><span class='words_sep'> </span><span class='tstring_content'>pause-after</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>pause-before</span><span class='words_sep'> </span><span class='tstring_content'>perspective</span><span class='words_sep'> </span><span class='tstring_content'>perspective-origin</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>phonemes</span><span class='words_sep'> </span><span class='tstring_content'>pitch</span><span class='words_sep'> </span><span class='tstring_content'>pitch-range</span><span class='words_sep'> </span><span class='tstring_content'>play-during</span><span class='words_sep'> </span><span class='tstring_content'>pointer-events</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>position</span><span class='words_sep'> </span><span class='tstring_content'>presentation-level</span><span class='words_sep'> </span><span class='tstring_content'>punctuation-trim</span><span class='words_sep'> </span><span class='tstring_content'>quotes</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>rendering-intent</span><span class='words_sep'> </span><span class='tstring_content'>resize</span><span class='words_sep'> </span><span class='tstring_content'>rest</span><span class='words_sep'> </span><span class='tstring_content'>rest-after</span><span class='words_sep'> </span><span class='tstring_content'>rest-before</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>richness</span><span class='words_sep'> </span><span class='tstring_content'>right</span><span class='words_sep'> </span><span class='tstring_content'>rotation</span><span class='words_sep'> </span><span class='tstring_content'>rotation-point</span><span class='words_sep'> </span><span class='tstring_content'>ruby-align</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>ruby-overhang</span><span class='words_sep'> </span><span class='tstring_content'>ruby-position</span><span class='words_sep'> </span><span class='tstring_content'>ruby-span</span><span class='words_sep'> </span><span class='tstring_content'>size</span><span class='words_sep'> </span><span class='tstring_content'>speak</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>speak-as</span><span class='words_sep'> </span><span class='tstring_content'>speak-header</span><span class='words_sep'> </span><span class='tstring_content'>speak-numeral</span><span class='words_sep'> </span><span class='tstring_content'>speak-punctuation</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>speech-rate</span><span class='words_sep'> </span><span class='tstring_content'>src</span><span class='words_sep'> </span><span class='tstring_content'>stress</span><span class='words_sep'> </span><span class='tstring_content'>string-set</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>tab-size</span><span class='words_sep'> </span><span class='tstring_content'>table-layout</span><span class='words_sep'> </span><span class='tstring_content'>target</span><span class='words_sep'> </span><span class='tstring_content'>target-name</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>target-new</span><span class='words_sep'> </span><span class='tstring_content'>target-position</span><span class='words_sep'> </span><span class='tstring_content'>text-align</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>text-align-last</span><span class='words_sep'> </span><span class='tstring_content'>text-combine-horizontal</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>text-decoration</span><span class='words_sep'> </span><span class='tstring_content'>text-decoration-color</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>text-decoration-line</span><span class='words_sep'> </span><span class='tstring_content'>text-decoration-skip</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>text-decoration-style</span><span class='words_sep'> </span><span class='tstring_content'>text-emphasis</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>text-emphasis-color</span><span class='words_sep'> </span><span class='tstring_content'>text-emphasis-position</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>text-emphasis-style</span><span class='words_sep'> </span><span class='tstring_content'>text-height</span><span class='words_sep'> </span><span class='tstring_content'>text-indent</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>text-justify</span><span class='words_sep'> </span><span class='tstring_content'>text-orientation</span><span class='words_sep'> </span><span class='tstring_content'>text-outline</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>text-overflow</span><span class='words_sep'> </span><span class='tstring_content'>text-rendering</span><span class='words_sep'> </span><span class='tstring_content'>text-shadow</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>text-space-collapse</span><span class='words_sep'> </span><span class='tstring_content'>text-transform</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>text-underline-position</span><span class='words_sep'> </span><span class='tstring_content'>text-wrap</span><span class='words_sep'> </span><span class='tstring_content'>top</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>transform</span><span class='words_sep'> </span><span class='tstring_content'>transform-origin</span><span class='words_sep'> </span><span class='tstring_content'>transform-style</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>list-style-position</span><span class='words_sep'> </span><span class='tstring_content'>list-style-type</span><span class='words_sep'> </span><span class='tstring_content'>margin</span><span class='words_sep'> </span><span class='tstring_content'>margin-bottom</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>margin-left</span><span class='words_sep'> </span><span class='tstring_content'>margin-right</span><span class='words_sep'> </span><span class='tstring_content'>margin-top</span><span class='words_sep'> </span><span class='tstring_content'>mark</span><span class='words_sep'> </span><span class='tstring_content'>mark-after</span><span class='words_sep'> </span><span class='tstring_content'>mark-before</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>marker-offset</span><span class='words_sep'> </span><span class='tstring_content'>marks</span><span class='words_sep'> </span><span class='tstring_content'>marquee-direction</span><span class='words_sep'> </span><span class='tstring_content'>marquee-loop</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>marquee-play-count</span><span class='words_sep'> </span><span class='tstring_content'>marquee-speed</span><span class='words_sep'> </span><span class='tstring_content'>marquee-style</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>mask</span><span class='words_sep'> </span><span class='tstring_content'>mask-clip</span><span class='words_sep'> </span><span class='tstring_content'>mask-composite</span><span class='words_sep'> </span><span class='tstring_content'>mask-image</span><span class='words_sep'> </span><span class='tstring_content'>mask-mode</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>mask-origin</span><span class='words_sep'> </span><span class='tstring_content'>mask-position</span><span class='words_sep'> </span><span class='tstring_content'>mask-repeat</span><span class='words_sep'> </span><span class='tstring_content'>mask-size</span><span class='words_sep'> </span><span class='tstring_content'>mask-type</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>max-height</span><span class='words_sep'> </span><span class='tstring_content'>max-width</span><span class='words_sep'> </span><span class='tstring_content'>min-height</span><span class='words_sep'> </span><span class='tstring_content'>min-width</span><span class='words_sep'> </span><span class='tstring_content'>mix-blend-mode</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>move-to</span><span class='words_sep'> </span><span class='tstring_content'>nav-down</span><span class='words_sep'> </span><span class='tstring_content'>nav-index</span><span class='words_sep'> </span><span class='tstring_content'>nav-left</span><span class='words_sep'> </span><span class='tstring_content'>nav-right</span><span class='words_sep'> </span><span class='tstring_content'>nav-up</span><span class='words_sep'> </span><span class='tstring_content'>negative</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>object-fit</span><span class='words_sep'> </span><span class='tstring_content'>object-position</span><span class='words_sep'> </span><span class='tstring_content'>offset</span><span class='words_sep'> </span><span class='tstring_content'>offset-anchor</span><span class='words_sep'> </span><span class='tstring_content'>offset-distance</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>offset-path</span><span class='words_sep'> </span><span class='tstring_content'>offset-position</span><span class='words_sep'> </span><span class='tstring_content'>offset-rotate</span><span class='words_sep'> </span><span class='tstring_content'>opacity</span><span class='words_sep'> </span><span class='tstring_content'>order</span><span class='words_sep'> </span><span class='tstring_content'>orphans</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>outline</span><span class='words_sep'> </span><span class='tstring_content'>outline-color</span><span class='words_sep'> </span><span class='tstring_content'>outline-offset</span><span class='words_sep'> </span><span class='tstring_content'>outline-style</span><span class='words_sep'> </span><span class='tstring_content'>outline-width</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>overflow</span><span class='words_sep'> </span><span class='tstring_content'>overflow-style</span><span class='words_sep'> </span><span class='tstring_content'>overflow-wrap</span><span class='words_sep'> </span><span class='tstring_content'>overflow-x</span><span class='words_sep'> </span><span class='tstring_content'>overflow-y</span><span class='words_sep'> </span><span class='tstring_content'>pad</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>padding</span><span class='words_sep'> </span><span class='tstring_content'>padding-bottom</span><span class='words_sep'> </span><span class='tstring_content'>padding-left</span><span class='words_sep'> </span><span class='tstring_content'>padding-right</span><span class='words_sep'> </span><span class='tstring_content'>padding-top</span><span class='words_sep'> </span><span class='tstring_content'>page</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>page-break-after</span><span class='words_sep'> </span><span class='tstring_content'>page-break-before</span><span class='words_sep'> </span><span class='tstring_content'>page-break-inside</span><span class='words_sep'> </span><span class='tstring_content'>page-policy</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>pause</span><span class='words_sep'> </span><span class='tstring_content'>pause-after</span><span class='words_sep'> </span><span class='tstring_content'>pause-before</span><span class='words_sep'> </span><span class='tstring_content'>perspective</span><span class='words_sep'> </span><span class='tstring_content'>perspective-origin</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>phonemes</span><span class='words_sep'> </span><span class='tstring_content'>pitch</span><span class='words_sep'> </span><span class='tstring_content'>pitch-range</span><span class='words_sep'> </span><span class='tstring_content'>place-content</span><span class='words_sep'> </span><span class='tstring_content'>place-items</span><span class='words_sep'> </span><span class='tstring_content'>place-self</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>play-during</span><span class='words_sep'> </span><span class='tstring_content'>pointer-events</span><span class='words_sep'> </span><span class='tstring_content'>position</span><span class='words_sep'> </span><span class='tstring_content'>prefix</span><span class='words_sep'> </span><span class='tstring_content'>presentation-level</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>punctuation-trim</span><span class='words_sep'> </span><span class='tstring_content'>quotes</span><span class='words_sep'> </span><span class='tstring_content'>range</span><span class='words_sep'> </span><span class='tstring_content'>rendering-intent</span><span class='words_sep'> </span><span class='tstring_content'>resize</span><span class='words_sep'> </span><span class='tstring_content'>rest</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>rest-after</span><span class='words_sep'> </span><span class='tstring_content'>rest-before</span><span class='words_sep'> </span><span class='tstring_content'>richness</span><span class='words_sep'> </span><span class='tstring_content'>right</span><span class='words_sep'> </span><span class='tstring_content'>rotate</span><span class='words_sep'> </span><span class='tstring_content'>rotation</span><span class='words_sep'> </span><span class='tstring_content'>rotation-point</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>row-gap</span><span class='words_sep'> </span><span class='tstring_content'>ruby-align</span><span class='words_sep'> </span><span class='tstring_content'>ruby-overhang</span><span class='words_sep'> </span><span class='tstring_content'>ruby-position</span><span class='words_sep'> </span><span class='tstring_content'>ruby-span</span><span class='words_sep'> </span><span class='tstring_content'>scale</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>scroll-behavior</span><span class='words_sep'> </span><span class='tstring_content'>scroll-margin</span><span class='words_sep'> </span><span class='tstring_content'>scroll-margin-block</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>scroll-margin-block-end</span><span class='words_sep'> </span><span class='tstring_content'>scroll-margin-block-start</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>scroll-margin-bottom</span><span class='words_sep'> </span><span class='tstring_content'>scroll-margin-inline</span><span class='words_sep'> </span><span class='tstring_content'>scroll-margin-inline-end</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>scroll-margin-inline-start</span><span class='words_sep'> </span><span class='tstring_content'>scroll-margin-left</span><span class='words_sep'> </span><span class='tstring_content'>scroll-margin-right</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>scroll-margin-top</span><span class='words_sep'> </span><span class='tstring_content'>scroll-padding-top</span><span class='words_sep'> </span><span class='tstring_content'>scroll-padding-right</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>scroll-padding-bottom</span><span class='words_sep'> </span><span class='tstring_content'>scroll-padding-left</span><span class='words_sep'> </span><span class='tstring_content'>scroll-padding</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>scroll-padding-block-end</span><span class='words_sep'> </span><span class='tstring_content'>scroll-padding-block-start</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>scroll-padding-block</span><span class='words_sep'> </span><span class='tstring_content'>scroll-padding-inline-end</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>scroll-padding-inline-start</span><span class='words_sep'> </span><span class='tstring_content'>scroll-padding-inline</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>scroll-snap-type</span><span class='words_sep'> </span><span class='tstring_content'>scroll-snap-align</span><span class='words_sep'> </span><span class='tstring_content'>scroll-snap-stop</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>shape-outside</span><span class='words_sep'> </span><span class='tstring_content'>shape-margin</span><span class='words_sep'> </span><span class='tstring_content'>shape-image-threshold</span><span class='words_sep'> </span><span class='tstring_content'>shape-rendering</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>size</span><span class='words_sep'> </span><span class='tstring_content'>speak</span><span class='words_sep'> </span><span class='tstring_content'>speak-as</span><span class='words_sep'> </span><span class='tstring_content'>speak-header</span><span class='words_sep'> </span><span class='tstring_content'>speak-numeral</span><span class='words_sep'> </span><span class='tstring_content'>speak-punctuation</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>speech-rate</span><span class='words_sep'> </span><span class='tstring_content'>src</span><span class='words_sep'> </span><span class='tstring_content'>stress</span><span class='words_sep'> </span><span class='tstring_content'>string-set</span><span class='words_sep'> </span><span class='tstring_content'>suffix</span><span class='words_sep'> </span><span class='tstring_content'>symbols</span><span class='words_sep'> </span><span class='tstring_content'>syntax</span><span class='words_sep'> </span><span class='tstring_content'>system</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>tab-size</span><span class='words_sep'> </span><span class='tstring_content'>table-layout</span><span class='words_sep'> </span><span class='tstring_content'>target</span><span class='words_sep'> </span><span class='tstring_content'>target-name</span><span class='words_sep'> </span><span class='tstring_content'>target-new</span><span class='words_sep'> </span><span class='tstring_content'>target-position</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>text-align</span><span class='words_sep'> </span><span class='tstring_content'>text-align-last</span><span class='words_sep'> </span><span class='tstring_content'>text-combine-horizontal</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>text-decoration</span><span class='words_sep'> </span><span class='tstring_content'>text-decoration-color</span><span class='words_sep'> </span><span class='tstring_content'>text-decoration-line</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>text-decoration-skip</span><span class='words_sep'> </span><span class='tstring_content'>text-decoration-style</span><span class='words_sep'> </span><span class='tstring_content'>text-emphasis</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>text-emphasis-color</span><span class='words_sep'> </span><span class='tstring_content'>text-emphasis-position</span><span class='words_sep'> </span><span class='tstring_content'>text-emphasis-style</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>text-height</span><span class='words_sep'> </span><span class='tstring_content'>text-indent</span><span class='words_sep'> </span><span class='tstring_content'>text-justify</span><span class='words_sep'> </span><span class='tstring_content'>text-orientation</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>text-outline</span><span class='words_sep'> </span><span class='tstring_content'>text-overflow</span><span class='words_sep'> </span><span class='tstring_content'>text-rendering</span><span class='words_sep'> </span><span class='tstring_content'>text-shadow</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>text-space-collapse</span><span class='words_sep'> </span><span class='tstring_content'>text-transform</span><span class='words_sep'> </span><span class='tstring_content'>text-underline-position</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>text-wrap</span><span class='words_sep'> </span><span class='tstring_content'>top</span><span class='words_sep'> </span><span class='tstring_content'>transform</span><span class='words_sep'> </span><span class='tstring_content'>transform-origin</span><span class='words_sep'> </span><span class='tstring_content'>transform-style</span><span class='words_sep'>
 </span><span class='words_sep'>    </span><span class='tstring_content'>transition</span><span class='words_sep'> </span><span class='tstring_content'>transition-delay</span><span class='words_sep'> </span><span class='tstring_content'>transition-duration</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>transition-property</span><span class='words_sep'> </span><span class='tstring_content'>transition-timing-function</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>unicode-bidi</span><span class='words_sep'> </span><span class='tstring_content'>vertical-align</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>visibility</span><span class='words_sep'> </span><span class='tstring_content'>voice-balance</span><span class='words_sep'> </span><span class='tstring_content'>voice-duration</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>voice-family</span><span class='words_sep'> </span><span class='tstring_content'>voice-pitch</span><span class='words_sep'> </span><span class='tstring_content'>voice-pitch-range</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>voice-range</span><span class='words_sep'> </span><span class='tstring_content'>voice-rate</span><span class='words_sep'> </span><span class='tstring_content'>voice-stress</span><span class='words_sep'> </span><span class='tstring_content'>voice-volume</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>volume</span><span class='words_sep'> </span><span class='tstring_content'>white-space</span><span class='words_sep'> </span><span class='tstring_content'>widows</span><span class='words_sep'> </span><span class='tstring_content'>width</span><span class='words_sep'> </span><span class='tstring_content'>word-break</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>word-spacing</span><span class='words_sep'> </span><span class='tstring_content'>word-wrap</span><span class='words_sep'> </span><span class='tstring_content'>writing-mode</span><span class='words_sep'> </span><span class='tstring_content'>z-index</span><span class='words_sep'>
-</span><span class='words_sep'>  </span><span class='tstring_end'>)</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="builtins-class_method">
-  
-    .<strong>builtins</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/css.rb', line 120</span>
-
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_builtins'>builtins</span>
-  <span class='ivar'>@builtins</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>above</span><span class='words_sep'> </span><span class='tstring_content'>absolute</span><span class='words_sep'> </span><span class='tstring_content'>always</span><span class='words_sep'> </span><span class='tstring_content'>armenian</span><span class='words_sep'> </span><span class='tstring_content'>aural</span><span class='words_sep'> </span><span class='tstring_content'>auto</span><span class='words_sep'> </span><span class='tstring_content'>avoid</span><span class='words_sep'> </span><span class='tstring_content'>left</span><span class='words_sep'> </span><span class='tstring_content'>bottom</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>baseline</span><span class='words_sep'> </span><span class='tstring_content'>behind</span><span class='words_sep'> </span><span class='tstring_content'>below</span><span class='words_sep'> </span><span class='tstring_content'>bidi-override</span><span class='words_sep'> </span><span class='tstring_content'>blink</span><span class='words_sep'> </span><span class='tstring_content'>block</span><span class='words_sep'> </span><span class='tstring_content'>bold</span><span class='words_sep'> </span><span class='tstring_content'>bolder</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>both</span><span class='words_sep'> </span><span class='tstring_content'>bottom</span><span class='words_sep'> </span><span class='tstring_content'>capitalize</span><span class='words_sep'> </span><span class='tstring_content'>center</span><span class='words_sep'> </span><span class='tstring_content'>center-left</span><span class='words_sep'> </span><span class='tstring_content'>center-right</span><span class='words_sep'> </span><span class='tstring_content'>circle</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>cjk-ideographic</span><span class='words_sep'> </span><span class='tstring_content'>close-quote</span><span class='words_sep'> </span><span class='tstring_content'>collapse</span><span class='words_sep'> </span><span class='tstring_content'>condensed</span><span class='words_sep'> </span><span class='tstring_content'>continuous</span><span class='words_sep'> </span><span class='tstring_content'>crop</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>cross</span><span class='words_sep'> </span><span class='tstring_content'>crosshair</span><span class='words_sep'> </span><span class='tstring_content'>cursive</span><span class='words_sep'> </span><span class='tstring_content'>dashed</span><span class='words_sep'> </span><span class='tstring_content'>decimal</span><span class='words_sep'> </span><span class='tstring_content'>decimal-leading-zero</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>default</span><span class='words_sep'> </span><span class='tstring_content'>digits</span><span class='words_sep'> </span><span class='tstring_content'>disc</span><span class='words_sep'> </span><span class='tstring_content'>dotted</span><span class='words_sep'> </span><span class='tstring_content'>double</span><span class='words_sep'> </span><span class='tstring_content'>e-resize</span><span class='words_sep'> </span><span class='tstring_content'>embed</span><span class='words_sep'> </span><span class='tstring_content'>expanded</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>extra-condensed</span><span class='words_sep'> </span><span class='tstring_content'>extra-expanded</span><span class='words_sep'> </span><span class='tstring_content'>fantasy</span><span class='words_sep'> </span><span class='tstring_content'>far-left</span><span class='words_sep'> </span><span class='tstring_content'>far-right</span><span class='words_sep'> </span><span class='tstring_content'>fast</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>faster</span><span class='words_sep'> </span><span class='tstring_content'>fixed</span><span class='words_sep'> </span><span class='tstring_content'>georgian</span><span class='words_sep'> </span><span class='tstring_content'>groove</span><span class='words_sep'> </span><span class='tstring_content'>hebrew</span><span class='words_sep'> </span><span class='tstring_content'>help</span><span class='words_sep'> </span><span class='tstring_content'>hidden</span><span class='words_sep'> </span><span class='tstring_content'>hide</span><span class='words_sep'> </span><span class='tstring_content'>high</span><span class='words_sep'> </span><span class='tstring_content'>higher</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>hiragana</span><span class='words_sep'> </span><span class='tstring_content'>hiragana-iroha</span><span class='words_sep'> </span><span class='tstring_content'>icon</span><span class='words_sep'> </span><span class='tstring_content'>inherit</span><span class='words_sep'> </span><span class='tstring_content'>inline</span><span class='words_sep'> </span><span class='tstring_content'>inline-table</span><span class='words_sep'> </span><span class='tstring_content'>inset</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>inside</span><span class='words_sep'> </span><span class='tstring_content'>invert</span><span class='words_sep'> </span><span class='tstring_content'>italic</span><span class='words_sep'> </span><span class='tstring_content'>justify</span><span class='words_sep'> </span><span class='tstring_content'>katakana</span><span class='words_sep'> </span><span class='tstring_content'>katakana-iroha</span><span class='words_sep'> </span><span class='tstring_content'>landscape</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>large</span><span class='words_sep'> </span><span class='tstring_content'>larger</span><span class='words_sep'> </span><span class='tstring_content'>left</span><span class='words_sep'> </span><span class='tstring_content'>left-side</span><span class='words_sep'> </span><span class='tstring_content'>leftwards</span><span class='words_sep'> </span><span class='tstring_content'>level</span><span class='words_sep'> </span><span class='tstring_content'>lighter</span><span class='words_sep'> </span><span class='tstring_content'>line-through</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>list-item</span><span class='words_sep'> </span><span class='tstring_content'>loud</span><span class='words_sep'> </span><span class='tstring_content'>low</span><span class='words_sep'> </span><span class='tstring_content'>lower</span><span class='words_sep'> </span><span class='tstring_content'>lower-alpha</span><span class='words_sep'> </span><span class='tstring_content'>lower-greek</span><span class='words_sep'> </span><span class='tstring_content'>lower-roman</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>lowercase</span><span class='words_sep'> </span><span class='tstring_content'>ltr</span><span class='words_sep'> </span><span class='tstring_content'>medium</span><span class='words_sep'> </span><span class='tstring_content'>message-box</span><span class='words_sep'> </span><span class='tstring_content'>middle</span><span class='words_sep'> </span><span class='tstring_content'>mix</span><span class='words_sep'> </span><span class='tstring_content'>monospace</span><span class='words_sep'> </span><span class='tstring_content'>n-resize</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>narrower</span><span class='words_sep'> </span><span class='tstring_content'>ne-resize</span><span class='words_sep'> </span><span class='tstring_content'>no-close-quote</span><span class='words_sep'> </span><span class='tstring_content'>no-open-quote</span><span class='words_sep'> </span><span class='tstring_content'>no-repeat</span><span class='words_sep'> </span><span class='tstring_content'>none</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>normal</span><span class='words_sep'> </span><span class='tstring_content'>nowrap</span><span class='words_sep'> </span><span class='tstring_content'>nw-resize</span><span class='words_sep'> </span><span class='tstring_content'>oblique</span><span class='words_sep'> </span><span class='tstring_content'>once</span><span class='words_sep'> </span><span class='tstring_content'>open-quote</span><span class='words_sep'> </span><span class='tstring_content'>outset</span><span class='words_sep'> </span><span class='tstring_content'>outside</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>overline</span><span class='words_sep'> </span><span class='tstring_content'>pointer</span><span class='words_sep'> </span><span class='tstring_content'>portrait</span><span class='words_sep'> </span><span class='tstring_content'>px</span><span class='words_sep'> </span><span class='tstring_content'>relative</span><span class='words_sep'> </span><span class='tstring_content'>repeat</span><span class='words_sep'> </span><span class='tstring_content'>repeat-x</span><span class='words_sep'> </span><span class='tstring_content'>repeat-y</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>rgb</span><span class='words_sep'> </span><span class='tstring_content'>ridge</span><span class='words_sep'> </span><span class='tstring_content'>right</span><span class='words_sep'> </span><span class='tstring_content'>right-side</span><span class='words_sep'> </span><span class='tstring_content'>rightwards</span><span class='words_sep'> </span><span class='tstring_content'>s-resize</span><span class='words_sep'> </span><span class='tstring_content'>sans-serif</span><span class='words_sep'> </span><span class='tstring_content'>scroll</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>se-resize</span><span class='words_sep'> </span><span class='tstring_content'>semi-condensed</span><span class='words_sep'> </span><span class='tstring_content'>semi-expanded</span><span class='words_sep'> </span><span class='tstring_content'>separate</span><span class='words_sep'> </span><span class='tstring_content'>serif</span><span class='words_sep'> </span><span class='tstring_content'>show</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>silent</span><span class='words_sep'> </span><span class='tstring_content'>slow</span><span class='words_sep'> </span><span class='tstring_content'>slower</span><span class='words_sep'> </span><span class='tstring_content'>small-caps</span><span class='words_sep'> </span><span class='tstring_content'>small-caption</span><span class='words_sep'> </span><span class='tstring_content'>smaller</span><span class='words_sep'> </span><span class='tstring_content'>soft</span><span class='words_sep'> </span><span class='tstring_content'>solid</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>spell-out</span><span class='words_sep'> </span><span class='tstring_content'>square</span><span class='words_sep'> </span><span class='tstring_content'>static</span><span class='words_sep'> </span><span class='tstring_content'>status-bar</span><span class='words_sep'> </span><span class='tstring_content'>super</span><span class='words_sep'> </span><span class='tstring_content'>sw-resize</span><span class='words_sep'> </span><span class='tstring_content'>table-caption</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>table-cell</span><span class='words_sep'> </span><span class='tstring_content'>table-column</span><span class='words_sep'> </span><span class='tstring_content'>table-column-group</span><span class='words_sep'> </span><span class='tstring_content'>table-footer-group</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>table-header-group</span><span class='words_sep'> </span><span class='tstring_content'>table-row</span><span class='words_sep'> </span><span class='tstring_content'>table-row-group</span><span class='words_sep'> </span><span class='tstring_content'>text</span><span class='words_sep'> </span><span class='tstring_content'>text-bottom</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>text-top</span><span class='words_sep'> </span><span class='tstring_content'>thick</span><span class='words_sep'> </span><span class='tstring_content'>thin</span><span class='words_sep'> </span><span class='tstring_content'>top</span><span class='words_sep'> </span><span class='tstring_content'>transparent</span><span class='words_sep'> </span><span class='tstring_content'>ultra-condensed</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>ultra-expanded</span><span class='words_sep'> </span><span class='tstring_content'>underline</span><span class='words_sep'> </span><span class='tstring_content'>upper-alpha</span><span class='words_sep'> </span><span class='tstring_content'>upper-latin</span><span class='words_sep'> </span><span class='tstring_content'>upper-roman</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>uppercase</span><span class='words_sep'> </span><span class='tstring_content'>url</span><span class='words_sep'> </span><span class='tstring_content'>visible</span><span class='words_sep'> </span><span class='tstring_content'>w-resize</span><span class='words_sep'> </span><span class='tstring_content'>wait</span><span class='words_sep'> </span><span class='tstring_content'>wider</span><span class='words_sep'> </span><span class='tstring_content'>x-fast</span><span class='words_sep'> </span><span class='tstring_content'>x-high</span><span class='words_sep'> </span><span class='tstring_content'>x-large</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>x-loud</span><span class='words_sep'> </span><span class='tstring_content'>x-low</span><span class='words_sep'> </span><span class='tstring_content'>x-small</span><span class='words_sep'> </span><span class='tstring_content'>x-soft</span><span class='words_sep'> </span><span class='tstring_content'>xx-large</span><span class='words_sep'> </span><span class='tstring_content'>xx-small</span><span class='words_sep'> </span><span class='tstring_content'>yes</span><span class='words_sep'>
-</span><span class='words_sep'>  </span><span class='tstring_end'>)</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="constants-class_method">
-  
-    .<strong>constants</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-151
-152
-153
-154
-155
-156
-157
-158
-159
-160
-161
-162
-163
-164
-165
-166
-167
-168
-169
-170
-171
-172
-173
-174
-175
-176
-177
-178</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/css.rb', line 151</span>
-
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_constants'>constants</span>
-  <span class='ivar'>@constants</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>indigo</span><span class='words_sep'> </span><span class='tstring_content'>gold</span><span class='words_sep'> </span><span class='tstring_content'>firebrick</span><span class='words_sep'> </span><span class='tstring_content'>indianred</span><span class='words_sep'> </span><span class='tstring_content'>yellow</span><span class='words_sep'> </span><span class='tstring_content'>darkolivegreen</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>darkseagreen</span><span class='words_sep'> </span><span class='tstring_content'>mediumvioletred</span><span class='words_sep'> </span><span class='tstring_content'>mediumorchid</span><span class='words_sep'> </span><span class='tstring_content'>chartreuse</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>mediumslateblue</span><span class='words_sep'> </span><span class='tstring_content'>black</span><span class='words_sep'> </span><span class='tstring_content'>springgreen</span><span class='words_sep'> </span><span class='tstring_content'>crimson</span><span class='words_sep'> </span><span class='tstring_content'>lightsalmon</span><span class='words_sep'> </span><span class='tstring_content'>brown</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>turquoise</span><span class='words_sep'> </span><span class='tstring_content'>olivedrab</span><span class='words_sep'> </span><span class='tstring_content'>cyan</span><span class='words_sep'> </span><span class='tstring_content'>silver</span><span class='words_sep'> </span><span class='tstring_content'>skyblue</span><span class='words_sep'> </span><span class='tstring_content'>gray</span><span class='words_sep'> </span><span class='tstring_content'>darkturquoise</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>goldenrod</span><span class='words_sep'> </span><span class='tstring_content'>darkgreen</span><span class='words_sep'> </span><span class='tstring_content'>darkviolet</span><span class='words_sep'> </span><span class='tstring_content'>darkgray</span><span class='words_sep'> </span><span class='tstring_content'>lightpink</span><span class='words_sep'> </span><span class='tstring_content'>teal</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>darkmagenta</span><span class='words_sep'> </span><span class='tstring_content'>lightgoldenrodyellow</span><span class='words_sep'> </span><span class='tstring_content'>lavender</span><span class='words_sep'> </span><span class='tstring_content'>yellowgreen</span><span class='words_sep'> </span><span class='tstring_content'>thistle</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>violet</span><span class='words_sep'> </span><span class='tstring_content'>navy</span><span class='words_sep'> </span><span class='tstring_content'>orchid</span><span class='words_sep'> </span><span class='tstring_content'>blue</span><span class='words_sep'> </span><span class='tstring_content'>ghostwhite</span><span class='words_sep'> </span><span class='tstring_content'>honeydew</span><span class='words_sep'> </span><span class='tstring_content'>cornflowerblue</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>darkblue</span><span class='words_sep'> </span><span class='tstring_content'>darkkhaki</span><span class='words_sep'> </span><span class='tstring_content'>mediumpurple</span><span class='words_sep'> </span><span class='tstring_content'>cornsilk</span><span class='words_sep'> </span><span class='tstring_content'>red</span><span class='words_sep'> </span><span class='tstring_content'>bisque</span><span class='words_sep'> </span><span class='tstring_content'>slategray</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>darkcyan</span><span class='words_sep'> </span><span class='tstring_content'>khaki</span><span class='words_sep'> </span><span class='tstring_content'>wheat</span><span class='words_sep'> </span><span class='tstring_content'>deepskyblue</span><span class='words_sep'> </span><span class='tstring_content'>darkred</span><span class='words_sep'> </span><span class='tstring_content'>steelblue</span><span class='words_sep'> </span><span class='tstring_content'>aliceblue</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>gainsboro</span><span class='words_sep'> </span><span class='tstring_content'>mediumturquoise</span><span class='words_sep'> </span><span class='tstring_content'>floralwhite</span><span class='words_sep'> </span><span class='tstring_content'>coral</span><span class='words_sep'> </span><span class='tstring_content'>purple</span><span class='words_sep'> </span><span class='tstring_content'>lightgrey</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>lightcyan</span><span class='words_sep'> </span><span class='tstring_content'>darksalmon</span><span class='words_sep'> </span><span class='tstring_content'>beige</span><span class='words_sep'> </span><span class='tstring_content'>azure</span><span class='words_sep'> </span><span class='tstring_content'>lightsteelblue</span><span class='words_sep'> </span><span class='tstring_content'>oldlace</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>greenyellow</span><span class='words_sep'> </span><span class='tstring_content'>royalblue</span><span class='words_sep'> </span><span class='tstring_content'>lightseagreen</span><span class='words_sep'> </span><span class='tstring_content'>mistyrose</span><span class='words_sep'> </span><span class='tstring_content'>sienna</span><span class='words_sep'> </span><span class='tstring_content'>lightcoral</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>orangered</span><span class='words_sep'> </span><span class='tstring_content'>navajowhite</span><span class='words_sep'> </span><span class='tstring_content'>lime</span><span class='words_sep'> </span><span class='tstring_content'>palegreen</span><span class='words_sep'> </span><span class='tstring_content'>burlywood</span><span class='words_sep'> </span><span class='tstring_content'>seashell</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>mediumspringgreen</span><span class='words_sep'> </span><span class='tstring_content'>fuchsia</span><span class='words_sep'> </span><span class='tstring_content'>papayawhip</span><span class='words_sep'> </span><span class='tstring_content'>blanchedalmond</span><span class='words_sep'> </span><span class='tstring_content'>peru</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>aquamarine</span><span class='words_sep'> </span><span class='tstring_content'>white</span><span class='words_sep'> </span><span class='tstring_content'>darkslategray</span><span class='words_sep'> </span><span class='tstring_content'>ivory</span><span class='words_sep'> </span><span class='tstring_content'>dodgerblue</span><span class='words_sep'> </span><span class='tstring_content'>lemonchiffon</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>chocolate</span><span class='words_sep'> </span><span class='tstring_content'>orange</span><span class='words_sep'> </span><span class='tstring_content'>forestgreen</span><span class='words_sep'> </span><span class='tstring_content'>slateblue</span><span class='words_sep'> </span><span class='tstring_content'>olive</span><span class='words_sep'> </span><span class='tstring_content'>mintcream</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>antiquewhite</span><span class='words_sep'> </span><span class='tstring_content'>darkorange</span><span class='words_sep'> </span><span class='tstring_content'>cadetblue</span><span class='words_sep'> </span><span class='tstring_content'>moccasin</span><span class='words_sep'> </span><span class='tstring_content'>limegreen</span><span class='words_sep'> </span><span class='tstring_content'>saddlebrown</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>darkslateblue</span><span class='words_sep'> </span><span class='tstring_content'>lightskyblue</span><span class='words_sep'> </span><span class='tstring_content'>deeppink</span><span class='words_sep'> </span><span class='tstring_content'>plum</span><span class='words_sep'> </span><span class='tstring_content'>aqua</span><span class='words_sep'> </span><span class='tstring_content'>darkgoldenrod</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>maroon</span><span class='words_sep'> </span><span class='tstring_content'>sandybrown</span><span class='words_sep'> </span><span class='tstring_content'>magenta</span><span class='words_sep'> </span><span class='tstring_content'>tan</span><span class='words_sep'> </span><span class='tstring_content'>rosybrown</span><span class='words_sep'> </span><span class='tstring_content'>pink</span><span class='words_sep'> </span><span class='tstring_content'>lightblue</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>palevioletred</span><span class='words_sep'> </span><span class='tstring_content'>mediumseagreen</span><span class='words_sep'> </span><span class='tstring_content'>dimgray</span><span class='words_sep'> </span><span class='tstring_content'>powderblue</span><span class='words_sep'> </span><span class='tstring_content'>seagreen</span><span class='words_sep'> </span><span class='tstring_content'>snow</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>mediumblue</span><span class='words_sep'> </span><span class='tstring_content'>midnightblue</span><span class='words_sep'> </span><span class='tstring_content'>paleturquoise</span><span class='words_sep'> </span><span class='tstring_content'>palegoldenrod</span><span class='words_sep'> </span><span class='tstring_content'>whitesmoke</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>darkorchid</span><span class='words_sep'> </span><span class='tstring_content'>salmon</span><span class='words_sep'> </span><span class='tstring_content'>lightslategray</span><span class='words_sep'> </span><span class='tstring_content'>lawngreen</span><span class='words_sep'> </span><span class='tstring_content'>lightgreen</span><span class='words_sep'> </span><span class='tstring_content'>tomato</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>hotpink</span><span class='words_sep'> </span><span class='tstring_content'>lightyellow</span><span class='words_sep'> </span><span class='tstring_content'>lavenderblush</span><span class='words_sep'> </span><span class='tstring_content'>linen</span><span class='words_sep'> </span><span class='tstring_content'>mediumaquamarine</span><span class='words_sep'> </span><span class='tstring_content'>green</span><span class='words_sep'>
-</span><span class='words_sep'>    </span><span class='tstring_content'>blueviolet</span><span class='words_sep'> </span><span class='tstring_content'>peachpuff</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>transition-property</span><span class='words_sep'> </span><span class='tstring_content'>transition-timing-function</span><span class='words_sep'> </span><span class='tstring_content'>translate</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>unicode-bidi</span><span class='words_sep'> </span><span class='tstring_content'>vertical-align</span><span class='words_sep'> </span><span class='tstring_content'>visibility</span><span class='words_sep'> </span><span class='tstring_content'>voice-balance</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>voice-duration</span><span class='words_sep'> </span><span class='tstring_content'>voice-family</span><span class='words_sep'> </span><span class='tstring_content'>voice-pitch</span><span class='words_sep'> </span><span class='tstring_content'>voice-pitch-range</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>voice-range</span><span class='words_sep'> </span><span class='tstring_content'>voice-rate</span><span class='words_sep'> </span><span class='tstring_content'>voice-stress</span><span class='words_sep'> </span><span class='tstring_content'>voice-volume</span><span class='words_sep'> </span><span class='tstring_content'>volume</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>white-space</span><span class='words_sep'> </span><span class='tstring_content'>widows</span><span class='words_sep'> </span><span class='tstring_content'>width</span><span class='words_sep'> </span><span class='tstring_content'>word-break</span><span class='words_sep'> </span><span class='tstring_content'>word-spacing</span><span class='words_sep'> </span><span class='tstring_content'>word-wrap</span><span class='words_sep'>
+</span><span class='words_sep'>    </span><span class='tstring_content'>writing-mode</span><span class='words_sep'> </span><span class='tstring_content'>z-index</span><span class='words_sep'>
 </span><span class='words_sep'>  </span><span class='tstring_end'>)</span></span>
 <span class='kw'>end</span></pre>
     </td>
@@ -685,15 +801,15 @@
       <pre class="lines">
 
 
-181
-182
-183
-184
-185
-186</pre>
+217
+218
+219
+220
+221
+222</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/css.rb', line 181</span>
+      <pre class="code"><span class="info file"># File 'lib/rouge/lexers/css.rb', line 217</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_vendor_prefixes'>vendor_prefixes</span>
   <span class='ivar'>@vendor_prefixes</span> <span class='op'>||=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='qwords_beg'>%w(</span><span class='words_sep'>
@@ -711,7 +827,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Sep 20 21:00:11 2024 by
+  Generated on Tue Apr 29 00:06:15 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.3.0).
 </div>
