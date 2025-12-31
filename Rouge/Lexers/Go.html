@@ -167,6 +167,11 @@
         </dt>
         <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[0-9]</span><span class='regexp_end'>/</span></span></pre></dd>
       
+        <dt id="BINARY_DIGIT-constant" class="">BINARY_DIGIT =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[01]</span><span class='regexp_end'>/</span></span></pre></dd>
+      
         <dt id="OCTAL_DIGIT-constant" class="">OCTAL_DIGIT =
           
         </dt>
@@ -286,22 +291,27 @@
 
 </div>
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[0-9]</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#DECIMAL_DIGIT-constant" title="Rouge::Lexers::Go::DECIMAL_DIGIT (constant)">DECIMAL_DIGIT</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>*</span><span class='regexp_end'>/</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#DECIMAL_DIGIT-constant" title="Rouge::Lexers::Go::DECIMAL_DIGIT (constant)">DECIMAL_DIGIT</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>(?:_?</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#DECIMAL_DIGIT-constant" title="Rouge::Lexers::Go::DECIMAL_DIGIT (constant)">DECIMAL_DIGIT</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>)*</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="BINARY_LIT-constant" class="">BINARY_LIT =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>0[bB]_*</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#BINARY_DIGIT-constant" title="Rouge::Lexers::Go::BINARY_DIGIT (constant)">BINARY_DIGIT</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>(?:_?</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#BINARY_DIGIT-constant" title="Rouge::Lexers::Go::BINARY_DIGIT (constant)">BINARY_DIGIT</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>)*</span><span class='regexp_end'>/</span></span></pre></dd>
       
         <dt id="OCTAL_LIT-constant" class="">OCTAL_LIT =
           
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>0</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#OCTAL_DIGIT-constant" title="Rouge::Lexers::Go::OCTAL_DIGIT (constant)">OCTAL_DIGIT</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>*</span><span class='regexp_end'>/</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>0[oO]?_*</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#OCTAL_DIGIT-constant" title="Rouge::Lexers::Go::OCTAL_DIGIT (constant)">OCTAL_DIGIT</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>(?:_?</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#OCTAL_DIGIT-constant" title="Rouge::Lexers::Go::OCTAL_DIGIT (constant)">OCTAL_DIGIT</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>)*</span><span class='regexp_end'>/</span></span></pre></dd>
       
         <dt id="HEX_LIT-constant" class="">HEX_LIT =
           
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>0[xX]</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#HEX_DIGIT-constant" title="Rouge::Lexers::Go::HEX_DIGIT (constant)">HEX_DIGIT</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>+</span><span class='regexp_end'>/</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>0[xX]_*</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#HEX_DIGIT-constant" title="Rouge::Lexers::Go::HEX_DIGIT (constant)">HEX_DIGIT</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>(?:_?</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#HEX_DIGIT-constant" title="Rouge::Lexers::Go::HEX_DIGIT (constant)">HEX_DIGIT</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>)*</span><span class='regexp_end'>/</span></span></pre></dd>
       
         <dt id="INT_LIT-constant" class="">INT_LIT =
           
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#HEX_LIT-constant" title="Rouge::Lexers::Go::HEX_LIT (constant)">HEX_LIT</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>|</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#DECIMAL_LIT-constant" title="Rouge::Lexers::Go::DECIMAL_LIT (constant)">DECIMAL_LIT</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>|</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#OCTAL_LIT-constant" title="Rouge::Lexers::Go::OCTAL_LIT (constant)">OCTAL_LIT</a></span></span><span class='embexpr_end'>}</span><span class='regexp_end'>/</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#BINARY_LIT-constant" title="Rouge::Lexers::Go::BINARY_LIT (constant)">BINARY_LIT</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>|</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#HEX_LIT-constant" title="Rouge::Lexers::Go::HEX_LIT (constant)">HEX_LIT</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>|</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#OCTAL_LIT-constant" title="Rouge::Lexers::Go::OCTAL_LIT (constant)">OCTAL_LIT</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>|</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#DECIMAL_LIT-constant" title="Rouge::Lexers::Go::DECIMAL_LIT (constant)">DECIMAL_LIT</a></span></span><span class='embexpr_end'>}</span><span class='regexp_end'>/</span></span></pre></dd>
       
         <dt id="DECIMALS-constant" class="">DECIMALS =
           <div class="docstring">
@@ -316,7 +326,7 @@
 
 </div>
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#DECIMAL_DIGIT-constant" title="Rouge::Lexers::Go::DECIMAL_DIGIT (constant)">DECIMAL_DIGIT</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>+</span><span class='regexp_end'>/</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#DECIMAL_DIGIT-constant" title="Rouge::Lexers::Go::DECIMAL_DIGIT (constant)">DECIMAL_DIGIT</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>(?:_?</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#DECIMAL_DIGIT-constant" title="Rouge::Lexers::Go::DECIMAL_DIGIT (constant)">DECIMAL_DIGIT</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>)*</span><span class='regexp_end'>/</span></span></pre></dd>
       
         <dt id="EXPONENT-constant" class="">EXPONENT =
           
@@ -542,7 +552,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Sep 25 11:39:56 2025 by
+  Generated on Wed Dec 31 22:03:17 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.4.4).
 </div>
